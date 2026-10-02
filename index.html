@@ -344,6 +344,8 @@ function LEGAL() {
       body: [`PMAI gives one person access to all courses, chapter assessments, course certificates and the final PMAI certificate offered on the site at the time of purchase, plus any updates we make to them.`, `We guarantee access for at least 24 months from purchase. After that, access continues for as long as we offer the Services. If we ever close the Services, we will give at least 60 days' notice by email so you can complete any course and claim your certificates.`, `Free content (chapter 1 of each course, the guides and the glossary) can be changed or withdrawn at any time.`] },
     { id: "withdraw", h: "Your right of withdrawal (consumers)", plain: "EU and UK consumers can cancel within 14 days only until they start using the paid content. Once you access it, you can no longer cancel.",
       body: [`If you are a consumer in the European Union, the European Economic Area or the United Kingdom, you normally have 14 days to withdraw from an online purchase without giving a reason. PMAI is digital content supplied immediately after payment. Under Article 16(m) of EU Directive 2011/83/EU (in Italy, Article 59(1)(o) of the Consumer Code; in the UK, regulation 37 of the Consumer Contracts Regulations 2013), you lose the right of withdrawal once access to the content begins, provided you gave your express prior consent and acknowledged this. You do this by ticking the separate box at checkout.`, `If you have paid but not yet opened any paid chapter (chapter 2 or later of any course), you can still withdraw within 14 days of purchase. Email ${email} with the words "I withdraw from my contract for PMAI", your name, and the email you paid with. We will refund the full amount within 14 days using the same payment method, at no cost to you.`, `Withdrawal does not apply to business customers.`] },
+    { id: "refund", h: "10-day refund guarantee", plain: "Not happy? Ask for a full refund within 10 days of purchase, as long as you haven't claimed a certificate.",
+      body: [`In addition to any legal rights you have, we offer a voluntary 10-day refund guarantee. If you are not satisfied with PMAI for any reason, you can ask for a full refund within 10 calendar days of your purchase date, even if you have already started the courses.`, `The guarantee applies only if you have not yet claimed any certificate. Once a certificate has been issued in your name, the guarantee no longer applies, because the certificate is the result of the service you paid for.`, `To ask for a refund, email ${email} from the address you paid with, or include it in your message, within the 10 days. You don't need to give a reason. We will refund the full ${P} to your original payment method within 14 days of your request. Your bank may take a few more days to show it.`, `When a refund is made, your access to the paid content ends. The guarantee is limited to one refund per person and does not apply to purchases we reasonably believe are being made repeatedly to obtain the content for free.`] },
     { id: "conformity", h: "If something doesn't work", plain: "If the content is faulty, tell us and we will fix it or, if we can't, refund you as the law requires.",
       body: [`If you are a consumer, the laws of your country may give you rights when digital content is faulty (in the EU, under Directive (EU) 2019/770). If the Content is faulty, for example a chapter won't load or a quiz marks a correct answer wrong, email ${email}. We will fix it within a reasonable time. If we cannot, you are entitled to a price reduction or a refund as provided by law.`] },
     { id: "account", h: "Your access is personal", plain: "Don't share your access. It is linked to your email.",
@@ -1396,7 +1398,7 @@ const CONFIG = {
   address: "30 N Gould St, Suite 38589, Sheridan, WY 82801, USA",
   euVat: "",              // optional: EU VAT (OSS) number once registered
   euRepresentative: "",   // optional: name and address of your GDPR Article 27 EU representative
-  termsVersion: "1.0",
+  termsVersion: "1.1",
   termsUpdated: "2 October 2026",
   currency: "$",
   bundlePrice: 10,             // price of PMAI, the complete certification (all courses)
@@ -1498,8 +1500,8 @@ function askLearner(reason, then) {
   });
 }
 const consentHTML = () => { const n = LEGAL().tnum; return `<div class="stack" style="gap:8px">
-  <label class="consent"><input type="checkbox" class="cbox" id="cTerms"><span>I have read and accept the <a href="#terms" target="_blank">Terms of Sale and Use</a> (version ${esc(CONFIG.termsVersion)}) and have read the <a href="#privacy" target="_blank">Privacy Policy</a>. I understand that I take these courses on my own initiative and at my own risk, that the content is general education and not professional advice, and that certificates are certificates of completion valid for ${CONFIG.validityMonths} months.</span></label>
-  <label class="consent"><input type="checkbox" class="cbox" id="cWithdraw"><span>I expressly request immediate access to the digital content and acknowledge that I will lose my 14-day right of withdrawal once I access paid content (Art. 16(m), EU Directive 2011/83/EU).</span></label>
+  <label class="consent"><input type="checkbox" class="cbox" id="cTerms"><span>I have read and accept the <a href="#terms" target="_blank">Terms of Sale and Use</a> (version ${esc(CONFIG.termsVersion)}) and have read the <a href="#privacy" target="_blank">Privacy Policy</a>. I understand that I take these courses on my own initiative and at my own risk, that the content is general education and not professional advice, that certificates are certificates of completion valid for ${CONFIG.validityMonths} months, and that the 10-day refund guarantee applies only until I claim a certificate.</span></label>
+  <label class="consent"><input type="checkbox" class="cbox" id="cWithdraw"><span>I expressly request immediate access to the digital content and acknowledge that I will lose my 14-day legal right of withdrawal once I access paid content (Art. 16(m), EU Directive 2011/83/EU). This does not affect the 10-day refund guarantee.</span></label>
   <label class="consent"><input type="checkbox" class="cbox" id="cApprove"><span>I have read and specifically accept clauses ${n.warranty} (Warranty), ${n.liability} (Limits on liability), ${n.indemnity} (Responsibility for misuse), ${n.suspend} (Suspension), ${n.update} (Changes to the Terms) and ${n.law} (Governing law and courts), including for the purposes of Articles 1341–1342 of the Italian Civil Code where they apply.</span></label>
   </div>` };
 function wireConsent(box, ids) {
@@ -1615,7 +1617,7 @@ function viewHome() {
     <div class="bundle">
       <div class="stack"><span class="eyebrow" style="color:inherit;opacity:.7">The complete certification · all ${COURSES.length} courses</span><h2 style="font-size:clamp(2.4rem,6vw,3.6rem)">PMAI</h2>
         <p class="muted">All ${COURSES.length} certifications in one programme: ${COURSES.map(c => c.name).join(", ")}. Best value if you're preparing for a PM role or a formal exam.</p></div>
-      <div class="stack" style="align-items:flex-start"><span class="price">${money(CONFIG.bundlePrice)}</span><span class="muted" style="font-size:.9rem">One payment. All courses, quizzes and certificates.</span>
+      <div class="stack" style="align-items:flex-start"><span class="price">${money(CONFIG.bundlePrice)}</span><span class="muted" style="font-size:.9rem">One payment. All courses, quizzes and certificates. 10-day refund guarantee.</span>
         ${owns("all") ? `<div class="row"><span class="chip ok">You have PMAI</span><a class="btn primary" href="#cert-pmai">PMAI certificate</a></div>` : `<button class="btn primary" data-buy="all">Get PMAI for ${money(CONFIG.bundlePrice)}</button>`}</div>
     </div>
   </section>
@@ -1653,7 +1655,7 @@ function viewHome() {
     <details><summary>Why do certificates expire after ${CONFIG.validityMonths} months?</summary><p>${WHY_EXPIRE} To renew, retake the chapter assessments for that certification. Renewal is included with your enrolment.</p></details>
     <details><summary>Can I add the certificate to LinkedIn?</summary><p>Yes. Your certificate page has an "Add to LinkedIn" button that fills in the certification name, ID and verification link.</p></details>
     <details><summary>Who is responsible for how I use the course?</summary><p>You are. You study on your own initiative and at your own risk, and the content is general education rather than professional advice. See our <a href="#terms">Terms of Sale and Use</a> for details.</p></details>
-    <details><summary>Can I get a refund?</summary><p>You can withdraw within 14 days of purchase as long as you haven't opened any paid chapter. Once you access paid content, the right of withdrawal ends, as you agree at checkout. If something doesn't work, we'll fix it or refund you as the law requires. See clauses on withdrawal and conformity in our <a href="#terms">Terms</a>.</p></details>
+    <details><summary>Can I get a refund?</summary><p>Yes. We offer a 10-day refund guarantee: email us within 10 days of purchase for a full refund, for any reason, as long as you haven't claimed a certificate yet. EU and UK customers also keep their legal 14-day right of withdrawal until they open paid content. See the <a href="#terms">Terms</a> for details.</p></details>
     <details><summary>Is this the same as PMP certification?</summary><p>No. These are certificates of completion awarded by the Institute. The content covers topics found in PMI and Scrum frameworks and is useful preparation, but it doesn't replace those credentials.</p></details>
   </section>`;
 }
@@ -1687,7 +1689,7 @@ function viewCourse(id) {
       ${cert ? `<span class="chip mile" style="align-self:flex-start">Certified</span><p>Issued ${fmtDate(cert.issued_at)}. ${certState(cert) === "expired" ? `Expired ${fmtDate(expiryOf(cert))}.` : `Valid until ${fmtDate(expiryOf(cert))}.`}</p><a class="btn primary" href="#cert-${id}">View certificate</a>`
       : o ? `<span class="eyebrow">Your progress</span><div class="price">${d} / ${c.chapters.length} chapters</div><div class="bar"><i style="width:${d / c.chapters.length * 100}%"></i></div>
         ${complete(c) ? `<a class="btn primary" href="#cert-${id}">Claim certificate</a>` : `<a class="btn primary" href="#learn-${id}-${Math.max(0, c.chapters.findIndex((_, i) => !passed(id, i)))}">Continue learning</a>`}`
-      : `<span class="eyebrow">Included in PMAI</span><div class="price">${money(CONFIG.bundlePrice)}</div><p class="muted" style="font-size:.92rem">One PMAI payment unlocks this course and all ${COURSES.length - 1} others, with quizzes and verifiable certificates.</p>
+      : `<span class="eyebrow">Included in PMAI</span><div class="price">${money(CONFIG.bundlePrice)}</div><p class="muted" style="font-size:.92rem">One PMAI payment unlocks this course and all ${COURSES.length - 1} others, with quizzes and verifiable certificates.</p><span class="chip ok" style="align-self:flex-start">10-day refund guarantee</span>
         <button class="btn primary" data-buy="all">Get PMAI</button><a class="btn ghost" href="#learn-${id}-0">Try chapter 1 free</a>`}
     </aside>
   </div>`;
@@ -1776,7 +1778,7 @@ function viewCert(id) {
   if (!complete(c)) return `<div class="stack" style="max-width:560px"><h2>Almost there</h2><p class="muted">You've passed ${doneCount(c)} of ${c.chapters.length} chapters. Pass them all to claim your certificate.</p><a class="btn primary" href="#course-${id}" style="align-self:flex-start">Back to course</a></div>`;
   return `<div class="stack" style="max-width:560px">
     <span class="eyebrow">${id === "pmai" ? "All courses passed" : "All chapters passed"} · score ${scorePct(c)}%</span><h1>Claim your ${id === "pmai" ? "PMAI " : ""}certificate</h1>
-    <p class="muted">Check your name carefully. It's printed exactly as written and recorded with your certificate ID.</p>
+    <p class="muted">Check your name carefully. It's printed exactly as written and recorded with your certificate ID. Claiming your first certificate ends the 10-day refund guarantee.</p>
     <form id="claimForm" class="stack">
       <label class="field">Full name<input id="claimName" type="text" required value="${esc(mem.learner?.name)}"></label>
       <label class="field">Email<input id="claimEmail" type="email" required value="${esc(mem.learner?.email)}"></label>
@@ -1928,7 +1930,7 @@ function viewLegal(kind) {
   const fill = s => String(s).replace(/\{(\w+)\}/g, (m, id) => L.tnum[id] ?? m);
   const missing = !CONFIG.legalName || !CONFIG.stateOfFormation || !CONFIG.address || !CONFIG.contactEmail || CONFIG.contactEmail.includes("example.com");
   const intro = {
-    terms: `<div class="callout"><b>The short version.</b> You pay ${money(CONFIG.bundlePrice)} once for PMAI and get all six courses for at least 24 months. You study on your own initiative and at your own risk; the content is general education, not professional advice. Certificates are our own certificates of completion, valid for ${CONFIG.validityMonths} months. You can cancel within 14 days only until you open paid content. If something is faulty, we fix it or refund you as the law requires. To the extent the law allows, our liability is limited to what you paid. Each clause below starts with a one-line summary; the full text is what applies.</div>`,
+    terms: `<div class="callout"><b>The short version.</b> You pay ${money(CONFIG.bundlePrice)} once for PMAI and get all six courses for at least 24 months. If you're not happy, you can get a full refund within 10 days of purchase, as long as you haven't claimed a certificate. You study on your own initiative and at your own risk; the content is general education, not professional advice. Certificates are our own certificates of completion, valid for ${CONFIG.validityMonths} months. If something is faulty, we fix it or refund you as the law requires. To the extent the law allows, our liability is limited to what you paid. Each clause below starts with a one-line summary; the full text is what applies.</div>`,
     privacy: `<div class="callout"><b>The short version.</b> We keep only your name, email, purchase and certificate records. We use them to give you access and verify certificates. Your name appears in the public register when you claim a certificate; your email never does. No tracking cookies. You can ask to see or delete your data at any time.</div>`,
     notice: ""
   }[kind];
