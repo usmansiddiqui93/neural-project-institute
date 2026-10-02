@@ -1,5 +1,9 @@
 <title>Neural Project Institute</title>
 <meta name="description" content="Online project management certifications with verifiable certificates.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"%3E%3Crect width="64" height="64" rx="14" fill="#17242f"/%3E%3Crect x="10" y="14" width="30" height="9" rx="2.5" fill="#ffffff"/%3E%3Crect x="20" y="28" width="26" height="9" rx="2.5" fill="#4fbf93"/%3E%3Crect x="12" y="42" width="20" height="9" rx="2.5" fill="#ffffff"/%3E%3Cpath d="M47 37.5l8.5 8.5-8.5 8.5-8.5-8.5z" fill="#e3a84a"/%3E%3C/svg%3E">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#17242f">
 <link rel="stylesheet" href="fonts/fonts.css">
 <script src="qrcode.min.js"></script>
 <style>
@@ -1936,7 +1940,7 @@ function viewLegal(kind) {
   const fill = s => String(s).replace(/\{(\w+)\}/g, (m, id) => L.tnum[id] ?? m);
   const missing = !CONFIG.legalName || !CONFIG.stateOfFormation || !CONFIG.address || !CONFIG.contactEmail || CONFIG.contactEmail.includes("example.com");
   const intro = {
-    terms: `<div class="callout"><b>The short version.</b> You pay ${money(CONFIG.bundlePrice)} once for PMAI and get all six courses for at least 24 months. If you're not happy, you can get a full refund within 10 days of purchase, as long as you haven't claimed a certificate. You study on your own initiative and at your own risk; the content is general education, not professional advice. Certificates are our own certificates of completion, valid for ${CONFIG.validityMonths} months. If something is faulty, we fix it or refund you as the law requires. To the extent the law allows, our liability is limited to what you paid. Each clause below starts with a one-line summary; the full text is what applies.</div>`,
+    terms: `<div class="callout"><b>The short version.</b> You pay ${money(CONFIG.bundlePrice)} once for PMAI and get all six courses for at least 24 months. If you're not happy, you can get a full refund within 10 days of purchase, as long as you haven't claimed a certificate. You study on your own initiative and at your own risk; the content is general education, not professional advice. Certificates are our own certificates of completion, valid for ${CONFIG.validityMonths} months. If something is faulty, we fix it or refund you as the law requires. To the extent the law allows, our liability is limited to what you paid.</div>`,
     privacy: `<div class="callout"><b>The short version.</b> We keep only your name, email, purchase and certificate records. We use them to give you access and verify certificates. Your name appears in the public register when you claim a certificate; your email never does. No tracking cookies. You can ask to see or delete your data at any time.</div>`,
     notice: ""
   }[kind];
@@ -1948,7 +1952,6 @@ function viewLegal(kind) {
     ${intro}
     ${kind !== "notice" ? `<nav class="legal-toc no-print" aria-label="Contents"><span class="eyebrow">Contents</span><ol>${list.map((c, i) => `<li><a href="#${kind === "notice" ? "legal" : kind}" data-jump="c-${c.id}">${esc(c.h)}</a></li>`).join("")}</ol></nav>` : ""}
     ${list.map((c, i) => `<section id="c-${c.id}" class="${c.strong ? "strong" : ""}"><h2>${i + 1}. ${esc(c.h)}</h2>
-      <p class="plain"><span>In plain words</span>${esc(c.plain)}</p>
       ${(c.body || []).map(p => p.startsWith("<table") ? p : `<p>${fill(p)}</p>`).join("")}
       ${c.table ? `<div class="table-wrap"><table><thead><tr>${c.table.head.map(h => `<th>${esc(h)}</th>`).join("")}</tr></thead><tbody>${c.table.rows.map(r => `<tr>${r.map(x => `<td style="white-space:normal">${esc(x)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>` : ""}
       ${c.list ? `<ul>${c.list.map(x => `<li>${fill(x)}</li>`).join("")}</ul>` : ""}
