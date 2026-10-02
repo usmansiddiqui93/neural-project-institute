@@ -106,6 +106,12 @@ header.top .wrap { display: flex; align-items: center; justify-content: space-be
 .gloss dt, .gloss dd { padding: 12px 0; border-top: 1px solid var(--line); margin: 0 }
 .gloss dt { font-weight: 600 } .gloss dd { color: var(--muted) }
 @media (max-width: 560px) { .gloss { grid-template-columns: 1fr } .gloss dd { border-top: 0; padding-top: 0 } }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px }
+.tile { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; display: flex; flex-direction: column; gap: 6px }
+.tile b { font: 760 1.8rem/1 var(--f-display); font-variant-numeric: tabular-nums }
+.tile small { color: var(--muted); font-size: .82rem }
+.admin-table { background: var(--surface); border: 1px solid var(--line); border-radius: 10px }
+.admin-table td { vertical-align: middle }
 .consent { display: flex; gap: 12px; align-items: flex-start; font-size: .86rem; line-height: 1.5; color: var(--muted); background: var(--sunk); border-radius: var(--r); padding: 12px 14px; cursor: pointer }
 .consent input { margin-top: 3px; flex: none; width: 18px; height: 18px; accent-color: var(--accent) }
 .consent a { color: var(--accent) }
@@ -1949,6 +1955,79 @@ function viewLegal(kind) {
     </section>`).join("")}
   </div>`;
 }
+
+/* ---------- Admin ---------- */
+let adminData = null, adminTab = "students", adminQ = "";
+const adminKey = { get() { try { return sessionStorage.getItem("npi_admin") || "" } catch { return "" } }, set(v) { try { v ? sessionStorage.setItem("npi_admin", v) : sessionStorage.removeItem("npi_admin") } catch {} } };
+const DEMO_ADMIN = (() => { const d = (n) => new Date(Date.now() - n * 864e5).toISOString(); const ex = (n) => new Date(Date.now() + n * 864e5).toISOString();
+  return { demo: true, generated_at: new Date().toISOString(),
+    purchases: [
+      { email: "maria.rossi@example.com", customer_name: "Maria Rossi", course_id: "all", amount_total: 1000, currency: "usd", stripe_session_id: "cs_demo_1", terms_accepted: true, created_at: d(3), refunded_at: null },
+      { email: "j.chen@example.com", customer_name: "James Chen", course_id: "all", amount_total: 1000, currency: "usd", stripe_session_id: "cs_demo_2", terms_accepted: true, created_at: d(21), refunded_at: null },
+      { email: "a.okafor@example.com", customer_name: "Ada Okafor", course_id: "all", amount_total: 1000, currency: "usd", stripe_session_id: "cs_demo_3", terms_accepted: true, created_at: d(6), refunded_at: d(4) }],
+    certificates: [
+      { code: "NPI-GW-2026-K7M2QX", full_name: "James Chen", email: "j.chen@example.com", course_id: "pmf", course_title: "Groundwork: Project Management Foundations", score: 89, issued_at: d(18), expires_at: ex(162), status: "valid", terms_version: "1.1" },
+      { code: "NPI-FS-2026-P4R8TZ", full_name: "James Chen", email: "j.chen@example.com", course_id: "ai", course_title: "Foresight: AI for Project Managers", score: 100, issued_at: d(10), expires_at: ex(170), status: "valid", terms_version: "1.1" }] } })();
+async function adminLoad() {
+  if (!LIVE) { adminData = DEMO_ADMIN; return }
+  adminData = await rpc("admin_overview", { p_key: adminKey.get() });
+}
+const fmtMoney = (cents, cur) => (cur || "usd").toUpperCase() === "USD" ? "$" + (cents / 100).toFixed(2) : (cents / 100).toFixed(2) + " " + (cur || "").toUpperCase();
+const shortDate = d => d ? new Date(d).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" }) : "";
+function adminStudents() {
+  const by = {};
+  adminData.purchases.forEach(p => { const k = p.email; (by[k] ||= { email: k, name: "", purchases: [], certs: [] }).purchases.push(p); if (p.customer_name) by[k].name = p.customer_name });
+  adminData.certificates.forEach(c => { const k = c.email; (by[k] ||= { email: k, name: "", purchases: [], certs: [] }).certs.push(c); if (!by[k].name) by[k].name = c.full_name });
+  return Object.values(by).map(s => {
+    const paid = s.purchases.filter(p => !p.refunded_at), first = s.purchases.map(p => p.created_at).sort()[0];
+    const daysSince = first ? (Date.now() - new Date(first)) / 864e5 : 99;
+    const valid = s.certs.filter(c => certState(c) === "valid");
+    return { ...s, status: paid.length ? "Active" : s.purchases.length ? "Refunded" : "No purchase", first,
+      refundEligible: paid.length && daysSince <= 10 && !s.certs.length, validCerts: valid.length, pmai: valid.some(c => c.course_id === "pmai") };
+  }).sort((a, b) => (b.first || "").localeCompare(a.first || ""));
+}
+function csvDownload(name, rows) {
+  const csv = rows.map(r => r.map(v => `"${String(v ?? "").replace(/"/g, '""')}"`).join(",")).join("\n");
+  const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([csv], { type: "text/csv" })); a.download = name; document.body.append(a); a.click(); a.remove();
+}
+function viewAdmin() {
+  if (LIVE && !adminKey.get()) return `<div class="stack" style="max-width:460px">
+    <span class="eyebrow">Neural Project Institute · Admin</span><h1>Admin sign-in</h1>
+    <p class="muted">Enter your admin key. It's kept only for this browser tab and cleared when you close it.</p>
+    <form id="adminLogin" class="stack"><label class="field">Admin key<input id="adminKeyIn" type="password" autocomplete="current-password" required></label>
+    <button class="btn primary" type="submit" style="align-self:flex-start">Open dashboard</button><p id="adminErr" class="muted" role="alert"></p></form></div>`;
+  if (!adminData) { adminLoad().then(render).catch(e => { adminKey.set(""); adminData = null; render(); setTimeout(() => { const el = $("#adminErr"); if (el) el.textContent = /admin key/i.test(e.message) ? "That key isn't valid." : e.message }, 0) }); return `<p class="muted">Loading dashboard…</p>` }
+  const P = adminData.purchases, C = adminData.certificates, S = adminStudents();
+  const live = P.filter(p => !p.refunded_at), refunded = P.filter(p => p.refunded_at);
+  const revenue = live.reduce((s, p) => s + (p.amount_total || 0), 0);
+  const cstate = k => C.filter(c => certState(c) === k).length;
+  const q = adminQ.toLowerCase(), hit = o => !q || JSON.stringify(o).toLowerCase().includes(q);
+  const tile = (label, value, note) => `<div class="tile"><span class="eyebrow">${label}</span><b>${value}</b>${note ? `<small>${note}</small>` : ""}</div>`;
+  const chip = (txt, kind) => `<span class="chip ${kind}">${esc(txt)}</span>`;
+  let table = "";
+  if (adminTab === "students") table = `<table><thead><tr><th>Name</th><th>Email</th><th>Purchased</th><th>Status</th><th>Refund window</th><th>Valid certs</th><th>PMAI</th></tr></thead><tbody>
+    ${S.filter(hit).map(s => `<tr><td>${esc(s.name || "—")}</td><td class="mono">${esc(s.email)}</td><td>${shortDate(s.first)}</td><td>${chip(s.status, s.status === "Active" ? "ok" : "bad")}</td>
+      <td>${s.refundEligible ? chip("Eligible", "mile") : `<span class="muted">—</span>`}</td><td class="mono">${s.validCerts}/7</td><td>${s.pmai ? chip("Awarded", "ok") : ""}</td></tr>`).join("") || `<tr><td colspan="7" class="muted">No students yet. They appear here after their first payment.</td></tr>`}</tbody></table>`;
+  if (adminTab === "payments") table = `<table><thead><tr><th>Date</th><th>Name</th><th>Email</th><th>Amount</th><th>Terms accepted</th><th>Status</th><th>Stripe session</th><th></th></tr></thead><tbody>
+    ${P.filter(hit).map(p => `<tr><td>${shortDate(p.created_at)}</td><td>${esc(p.customer_name || "—")}</td><td class="mono">${esc(p.email)}</td><td class="mono">${fmtMoney(p.amount_total || 0, p.currency)}</td>
+      <td>${p.terms_accepted ? chip("Yes", "ok") : chip("Not recorded", "")}</td><td>${p.refunded_at ? chip("Refunded " + shortDate(p.refunded_at), "bad") : chip("Paid", "ok")}</td>
+      <td class="mono" style="font-size:.78rem">${esc(p.stripe_session_id || "")}</td>
+      <td><button class="btn small ghost" data-refund="${esc(p.stripe_session_id)}" data-to="${p.refunded_at ? "0" : "1"}">${p.refunded_at ? "Undo refund" : "Mark refunded"}</button></td></tr>`).join("") || `<tr><td colspan="8" class="muted">No payments yet.</td></tr>`}</tbody></table>`;
+  if (adminTab === "certificates") table = `<table><thead><tr><th>Certificate ID</th><th>Holder</th><th>Email</th><th>Certification</th><th>Score</th><th>Issued</th><th>Valid until</th><th>Status</th><th>Terms</th><th></th></tr></thead><tbody>
+    ${C.filter(hit).map(c => { const st = certState(c); return `<tr><td class="mono"><a href="#verify-${esc(c.code)}">${esc(c.code)}</a></td><td>${esc(c.full_name)}</td><td class="mono">${esc(c.email)}</td><td>${esc(c.course_title)}</td><td class="mono">${c.score}%</td>
+      <td>${shortDate(c.issued_at)}</td><td>${shortDate(expiryOf(c))}</td><td>${chip(st, st === "valid" ? "ok" : "bad")}</td><td class="mono">${esc(c.terms_version || "—")}</td>
+      <td><button class="btn small ghost" data-certstatus="${esc(c.code)}" data-to="${c.status === "revoked" ? "valid" : "revoked"}">${c.status === "revoked" ? "Restore" : "Revoke"}</button></td></tr>` }).join("") || `<tr><td colspan="10" class="muted">No certificates issued yet.</td></tr>`}</tbody></table>`;
+  return `<div class="row" style="justify-content:space-between;margin-bottom:22px"><div class="stack" style="gap:6px"><span class="eyebrow">Neural Project Institute · Admin</span><h1>Dashboard</h1>
+      <span class="muted" style="font-size:.85rem">Updated ${new Date(adminData.generated_at).toLocaleString("en-GB")}</span></div>
+    <div class="row"><button class="btn small" data-adminreload>Refresh</button><button class="btn small ghost" data-adminlock>Lock</button></div></div>
+  ${adminData.demo ? `<div class="result fail" style="margin-bottom:18px"><b>Example data.</b> The preview can't reach your database, so it shows made-up students. On neuralprojectinstitute.com/#admin you'll see real data.</div>` : ""}
+  <div class="tiles">${tile("Revenue", fmtMoney(revenue, "usd"), `${live.length} paid`)}${tile("Students", S.filter(s => s.status === "Active").length, `${S.filter(s => s.refundEligible).length} in refund window`)}${tile("Refunds", refunded.length, refunded.length ? fmtMoney(refunded.reduce((s, p) => s + (p.amount_total || 0), 0), "usd") : "")}${tile("Valid certificates", cstate("valid"), `${cstate("expired")} expired · ${cstate("revoked")} revoked`)}${tile("PMAI awarded", C.filter(c => c.course_id === "pmai" && certState(c) === "valid").length, "")}</div>
+  <div class="row" style="justify-content:space-between;margin:28px 0 12px">
+    <div class="row" role="tablist">${[["students", "Students"], ["payments", "Payments"], ["certificates", "Certificates"]].map(([k, l]) => `<button class="btn small ${adminTab === k ? "primary" : "ghost"}" data-admintab="${k}" role="tab" aria-selected="${adminTab === k}">${l}</button>`).join("")}</div>
+    <div class="row"><input id="adminSearch" type="text" placeholder="Search name, email or ID" value="${esc(adminQ)}" style="min-width:220px"><button class="btn small" data-admincsv>Export CSV</button></div></div>
+  <div class="table-wrap admin-table">${table}</div>
+  <p class="muted" style="font-size:.85rem;margin-top:14px">Refunds: issue the money in Stripe first, then press "Mark refunded" here. That locks the student's paid chapters. Chapter-by-chapter progress is stored on each student's own device, so it doesn't appear here.</p>`;
+}
 const viewNotFound = () => `<h2>Page not found</h2><p style="margin-top:12px"><a href="#home">Go to the homepage</a></p>`;
 
 /* ---------- Router ---------- */
@@ -1965,6 +2044,7 @@ function render() {
   else if (page === "guides") html = viewGuides();
   else if (page === "guide") html = viewGuide(rest.join("-"));
   else if (page === "glossary") html = viewGlossary();
+  else if (page === "admin") html = viewAdmin();
   else if (page === "terms") html = viewLegal("terms");
   else if (page === "privacy") html = viewLegal("privacy");
   else if (page === "legal") html = viewLegal("notice");
@@ -1984,6 +2064,26 @@ function render() {
 document.addEventListener("click", async e => {
   const t = e.target.closest("button, a"); if (!t) return;
   if (t.dataset.buy) { e.preventDefault(); return buy(t.dataset.buy) }
+  if (t.dataset.admintab) { adminTab = t.dataset.admintab; return render() }
+  if (t.hasAttribute("data-adminreload")) { adminData = null; return render() }
+  if (t.hasAttribute("data-adminlock")) { adminKey.set(""); adminData = null; return render() }
+  if (t.hasAttribute("data-admincsv")) {
+    const S = adminStudents(), P = adminData.purchases, C = adminData.certificates, day = new Date().toISOString().slice(0, 10);
+    if (adminTab === "students") csvDownload(`students-${day}.csv`, [["Name", "Email", "First purchase", "Status", "Refund window", "Valid certificates", "PMAI"], ...S.map(s => [s.name, s.email, s.first, s.status, s.refundEligible ? "Eligible" : "", s.validCerts, s.pmai ? "Yes" : ""])]);
+    if (adminTab === "payments") csvDownload(`payments-${day}.csv`, [["Date", "Name", "Email", "Amount", "Currency", "Terms accepted", "Refunded at", "Stripe session"], ...P.map(p => [p.created_at, p.customer_name, p.email, (p.amount_total || 0) / 100, p.currency, p.terms_accepted ? "Yes" : "No", p.refunded_at || "", p.stripe_session_id])]);
+    if (adminTab === "certificates") csvDownload(`certificates-${day}.csv`, [["Certificate ID", "Holder", "Email", "Certification", "Score", "Issued", "Valid until", "Status", "Terms version"], ...C.map(c => [c.code, c.full_name, c.email, c.course_title, c.score, c.issued_at, expiryOf(c).toISOString(), certState(c), c.terms_version || ""])]);
+    return;
+  }
+  if (t.dataset.refund || t.dataset.certstatus) {
+    if (!LIVE) return toast("Example data can't be changed.");
+    t.disabled = true;
+    try {
+      if (t.dataset.refund) { await rpc("admin_set_refunded", { p_key: adminKey.get(), p_session: t.dataset.refund, p_refunded: t.dataset.to === "1" }); toast(t.dataset.to === "1" ? "Marked as refunded. Access removed." : "Refund undone. Access restored.") }
+      else { await rpc("admin_set_certificate_status", { p_key: adminKey.get(), p_code: t.dataset.certstatus, p_status: t.dataset.to }); toast(t.dataset.to === "revoked" ? "Certificate revoked." : "Certificate restored.") }
+      adminData = null; render();
+    } catch (err) { toast(err.message); t.disabled = false }
+    return;
+  }
   if (t.dataset.jump) { e.preventDefault(); return document.getElementById(t.dataset.jump)?.scrollIntoView({ behavior: "smooth" }) }
   if (t.hasAttribute("data-next")) { player.slide++; return render() }
   if (t.hasAttribute("data-prev")) { player.slide--; return render() }
@@ -1999,6 +2099,7 @@ document.addEventListener("click", async e => {
 });
 document.addEventListener("submit", async e => {
   const f = e.target; e.preventDefault();
+  if (f.id === "adminLogin") { adminKey.set($("#adminKeyIn").value.trim()); adminData = null; return render() }
   if (f.id === "homeVerify") { const v = $("#hv").value.trim() || SAMPLE.code; location.hash = "verify-" + v.toUpperCase() }
   if (f.id === "verifyForm") { const v = $("#vcode").value.trim().toUpperCase(); history.replaceState(null, "", "#verify-" + v); lastRoute = "verify-" + v; runVerify(v) }
   if (f.id === "quizForm") {
@@ -2027,6 +2128,7 @@ document.addEventListener("keydown", e => {
   if (e.key === "ArrowLeft" && player.slide > 0) { player.slide--; render() }
 });
 document.addEventListener("input", e => {
+  if (e.target.id === "adminSearch") { adminQ = e.target.value; const pos = e.target.selectionStart; render(); const el = $("#adminSearch"); if (el) { el.focus(); el.setSelectionRange(pos, pos) } return }
   if (e.target.id !== "glossQ") return;
   const q = e.target.value.trim().toLowerCase();
   document.querySelectorAll("#glossList dt").forEach(dt => { const show = !q || dt.dataset.k.includes(q); dt.hidden = !show; dt.nextElementSibling.hidden = !show });
