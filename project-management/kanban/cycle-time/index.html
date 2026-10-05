@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cycle Time in Kanban: Definition, Calculation and How to Reduce It | Neural Project Institute</title>
+<meta name="description" content="What cycle time is, how to calculate it, how to read a cycle time scatterplot, set service level expectations, and practical ways to reduce cycle time.">
+<link rel="canonical" href="https://neuralprojectinstitute.com/project-management/kanban/cycle-time/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Neural Project Institute">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Neural Project Institute">
+<meta property="og:title" content="Cycle Time in Kanban: Definition, Calculation and How to Reduce It | Neural Project Institute">
+<meta property="og:description" content="What cycle time is, how to calculate it, how to read a cycle time scatterplot, set service level expectations, and practical ways to reduce cycle time.">
+<meta property="og:url" content="https://neuralprojectinstitute.com/project-management/kanban/cycle-time/">
+<meta property="og:image" content="https://neuralprojectinstitute.com/icon-512.png">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#17242f">
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/assets/guide.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Cycle Time in Kanban: Definition, Calculation and How to Reduce It", "description": "What cycle time is, how to calculate it, how to read a cycle time scatterplot, set service level expectations, and practical ways to reduce cycle time.", "url": "https://neuralprojectinstitute.com/project-management/kanban/cycle-time/", "mainEntityOfPage": "https://neuralprojectinstitute.com/project-management/kanban/cycle-time/", "datePublished": "2026-10-05", "dateModified": "2026-10-05", "inLanguage": "en", "author": {"@type": "Organization", "@id": "https://neuralprojectinstitute.com/#organization", "name": "Neural Project Institute", "url": "https://neuralprojectinstitute.com/", "logo": {"@type": "ImageObject", "url": "https://neuralprojectinstitute.com/icon-512.png"}}, "publisher": {"@type": "Organization", "@id": "https://neuralprojectinstitute.com/#organization", "name": "Neural Project Institute", "url": "https://neuralprojectinstitute.com/", "logo": {"@type": "ImageObject", "url": "https://neuralprojectinstitute.com/icon-512.png"}}, "image": "https://neuralprojectinstitute.com/icon-512.png", "articleSection": "Kanban", "wordCount": 351}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://neuralprojectinstitute.com/"}, {"@type": "ListItem", "position": 2, "name": "Project Management", "item": "https://neuralprojectinstitute.com/project-management/"}, {"@type": "ListItem", "position": 3, "name": "Kanban", "item": "https://neuralprojectinstitute.com/project-management/kanban/"}, {"@type": "ListItem", "position": 4, "name": "Cycle Time in Kanban"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a good cycle time?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the work. What matters is that cycle time is predictable and trending down over time."}}, {"@type": "Question", "name": "Is cycle time the same as lead time?", "acceptedAnswer": {"@type": "Answer", "text": "No. Lead time usually starts when the request is made; cycle time starts when work begins. See cycle time vs lead time."}}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap">
+  <a class="brand" href="/"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="5" width="13" height="4" rx="1" fill="var(--ink)"/><rect x="6" y="11" width="11" height="4" rx="1" fill="var(--accent)"/><rect x="2" y="17" width="9" height="4" rx="1" fill="var(--ink)"/><path d="M20 15.5l4 4-4 4-4-4z" fill="var(--mile)"/></svg><span><b>Neural Project Institute</b><small>Project management certification for the AI era</small></span></a>
+  <nav class="mainnav" aria-label="Main">
+    <div class="dd">
+      <button class="ddbtn" aria-expanded="false" aria-haspopup="true">Guides <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+      <div class="ddmenu" role="menu">
+        <a role="menuitem" href="/project-management/"><b>Project Management Guide</b><span>Planning, scheduling, risk, budgets and tools</span></a>
+        <a role="menuitem" href="/project-management/agile/"><b>Agile Guide</b><span>Values, practices, roles and scaling</span></a>
+        <a role="menuitem" href="/project-management/scrum/"><b>Scrum Guide</b><span>Accountabilities, events and artifacts</span></a>
+        <a role="menuitem" href="/project-management/kanban/"><b>Kanban Guide</b><span>Boards, WIP limits and flow metrics</span></a>
+      </div>
+    </div>
+    <a href="/about-the-institute/">About</a>
+    <a class="cta" href="/">PMAI Certification</a>
+  </nav>
+</div></header>
+<main id="main" class="wrap">
+<nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/project-management/">Project Management</a></li><li><a href="/project-management/kanban/">Kanban</a></li><li aria-current="page">Cycle Time in Kanban</li></ol></nav>
+<article class="article">
+  <header class="ahead">
+    <p class="eyebrow"><a href="/project-management/kanban/">Kanban guide</a> · Flow and metrics</p>
+    <h1>Cycle Time in Kanban: Definition, Calculation and How to Reduce It</h1>
+    <p class="lead">Cycle time measures how long one work item takes from the moment work starts until it is finished. It is the metric customers care about most: &quot;once you start, how long until I have it?&quot;</p>
+    <div class="byline"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="5" width="13" height="4" rx="1" fill="var(--ink)"/><rect x="6" y="11" width="11" height="4" rx="1" fill="var(--accent)"/><rect x="2" y="17" width="9" height="4" rx="1" fill="var(--ink)"/><path d="M20 15.5l4 4-4 4-4-4z" fill="var(--mile)"/></svg><div><span>By <a href="/about-the-institute/" rel="author">Neural Project Institute</a></span><span>Published <time datetime="2026-10-05">5 October 2026</time> · 3 min read</span></div></div>
+  </header>
+  <section id="key-takeaways" class="takeaways top"><h2>Key takeaways</h2><ul><li>Cycle time is the time from starting an item to finishing it.</li><li>Use percentiles to set service level expectations.</li><li>Lower WIP, smaller items and fewer waits reduce cycle time.</li></ul></section>
+  <div class="agrid">
+    <aside class="toc"><details open><summary>Table of contents</summary><nav aria-label="Table of contents"><ol><li><a href="#key-takeaways">Key takeaways</a></li><li><a href="#definition-and-calculation">Definition and calculation</a></li><li><a href="#reading-a-cycle-time-scatterplot">Reading a cycle time scatterplot</a></li><li><a href="#service-level-expectations">Service level expectations</a></li><li><a href="#how-to-reduce-cycle-time">How to reduce cycle time</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></details></aside>
+    <div class="abody">
+<section id="definition-and-calculation"><h2>Definition and calculation</h2><p><strong>Cycle time = finish date − start date</strong> for a single item. Teams decide exactly where &quot;start&quot; and &quot;finish&quot; are on their board, usually the commitment point and the delivery point, and use the same definition consistently.</p><aside class="tip"><span>Tip</span><p>Example: a card enters In progress on Monday 3 June and reaches Done on Thursday 6 June. Its cycle time is 4 days if you count both start and end days, or 3 days if you count elapsed days. Pick one convention and stick to it.</p></aside></section>
+<section id="reading-a-cycle-time-scatterplot"><h2>Reading a cycle time scatterplot</h2><p>A scatterplot shows one dot per finished item: the date it finished on the horizontal axis and its cycle time on the vertical. Horizontal percentile lines show, for example, that 50% of items finished within 4 days and 85% within 9 days. Outliers high on the chart are worth investigating.</p></section>
+<section id="service-level-expectations"><h2>Service level expectations</h2><p>Teams often use the 85th percentile as a service level expectation: &quot;85% of items are finished within 9 days of starting.&quot; It sets realistic expectations without detailed estimates. See <a href="/project-management/kanban/kanban-planning/">Kanban planning</a>.</p></section>
+<section id="how-to-reduce-cycle-time"><h2>How to reduce cycle time</h2><ul><li><strong>Lower <a href="/project-management/kanban/wip-limits/">WIP limits</a>:</strong> by Little&#x27;s Law, less WIP shortens cycle time.</li><li><strong>Split large items</strong> into smaller ones.</li><li><strong>Remove waiting:</strong> most cycle time is often spent waiting, not working; see <a href="/project-management/kanban/flow-efficiency/">flow efficiency</a>.</li><li><strong>Tackle blockers quickly</strong> and analyse their causes; see <a href="/project-management/kanban/blocker-clustering/">blocker clustering</a>.</li><li><strong>Reduce handoffs</strong> with cross-functional teams.</li><li><strong>Watch aging items</strong> daily with a <a href="/project-management/kanban/wip-aging-chart/">WIP aging chart</a>.</li></ul></section>
+
+<section id="faq"><h2>Frequently asked questions</h2><details class='faq'><summary>What is a good cycle time?</summary><p>It depends on the work. What matters is that cycle time is predictable and trending down over time.</p></details><details class='faq'><summary>Is cycle time the same as lead time?</summary><p>No. Lead time usually starts when the request is made; cycle time starts when work begins. See <a href="/project-management/kanban/cycle-time-vs-lead-time/">cycle time vs lead time</a>.</p></details></section>
+      <aside class="ctabox"><p class="eyebrow">Go further</p><h2>Get certified with PMAI</h2><p>This topic is covered in <b>Baseline: Scope, Schedule &amp; Cost Control</b>, one of six courses in the PMAI certification: assessed chapters and a verifiable certificate for $10.</p><a class="btn" href="/">See the PMAI certification</a></aside>
+      <nav class="pn" aria-label="More in this guide"><a href="/project-management/kanban/kanban-metrics/"><small>Previous</small>Kanban Metrics: The Flow Measures That Matter</a><a class="next" href="/project-management/kanban/cycle-time-vs-lead-time/"><small>Next</small>Cycle Time vs Lead Time: What Is the Difference?</a></nav>
+    </div>
+  </div>
+</article>
+<section class="related"><h2>Related guides</h2><div class="cards"><a class="card" href="/project-management/kanban/cycle-time-vs-lead-time/"><span class="eyebrow">Kanban</span><b>Cycle Time vs Lead Time: What Is the Difference?</b><span>Cycle time vs lead time explained with examples: where each starts and ends, why both matter, how they relate to Little&#x27;s Law, and how to improve them.</span></a><a class="card" href="/project-management/kanban/throughput/"><span class="eyebrow">Kanban</span><b>Throughput in Kanban: How to Measure and Use It</b><span>What throughput means in Kanban, how to measure it, how to forecast delivery dates with throughput and Monte Carlo simulation, and how to improve it.</span></a><a class="card" href="/project-management/kanban/wip-aging-chart/"><span class="eyebrow">Kanban</span><b>WIP Aging Chart: Spot Stuck Work Before It&#x27;s Late</b><span>What a WIP aging chart is, how to read it with cycle time percentiles, and how to use work item age in daily Kanban meetings to prevent delays.</span></a><a class="card" href="/project-management/kanban/flow-efficiency/"><span class="eyebrow">Kanban</span><b>Flow Efficiency: How Much of Lead Time Is Real Work?</b><span>What flow efficiency is, how to calculate it, why it is often surprisingly low, and practical ways to cut waiting time and improve it.</span></a></div></section>
+</main>
+<footer class="foot"><div class="wrap">
+  <div><b>Neural Project Institute</b><p>Free project management guides and the PMAI certification. Operated by Flaunt Weekly LLC, a Wyoming LLC.</p></div>
+  <nav aria-label="Footer"><a href="/project-management/">Project Management guide</a><a href="/project-management/agile/">Agile guide</a><a href="/project-management/scrum/">Scrum guide</a><a href="/project-management/kanban/">Kanban guide</a><a href="/">PMAI certification</a></nav>
+</div></footer>
+<script>
+document.querySelectorAll(".dd").forEach(function (dd) {
+  var b = dd.querySelector(".ddbtn");
+  b.addEventListener("click", function (e) { e.stopPropagation(); var o = dd.classList.toggle("open"); b.setAttribute("aria-expanded", o) });
+  dd.addEventListener("mouseenter", function () { b.setAttribute("aria-expanded", "true") });
+  dd.addEventListener("mouseleave", function () { if (!dd.classList.contains("open")) b.setAttribute("aria-expanded", "false") });
+});
+document.addEventListener("click", function () { document.querySelectorAll(".dd.open").forEach(function (d) { d.classList.remove("open"); d.querySelector(".ddbtn").setAttribute("aria-expanded", "false") }) });
+document.addEventListener("keydown", function (e) { if (e.key === "Escape") document.querySelectorAll(".dd.open").forEach(function (d) { d.classList.remove("open") }) });
+</script>
+</body>
+</html>

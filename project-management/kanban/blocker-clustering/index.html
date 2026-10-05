@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Blocker Clustering: Find the Root Causes of Delays | Neural Project Institute</title>
+<meta name="description" content="How blocker clustering works in Kanban: recording blockers, grouping them by cause, measuring their cost, and fixing the issues that slow your team most.">
+<link rel="canonical" href="https://neuralprojectinstitute.com/project-management/kanban/blocker-clustering/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Neural Project Institute">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Neural Project Institute">
+<meta property="og:title" content="Blocker Clustering: Find the Root Causes of Delays | Neural Project Institute">
+<meta property="og:description" content="How blocker clustering works in Kanban: recording blockers, grouping them by cause, measuring their cost, and fixing the issues that slow your team most.">
+<meta property="og:url" content="https://neuralprojectinstitute.com/project-management/kanban/blocker-clustering/">
+<meta property="og:image" content="https://neuralprojectinstitute.com/icon-512.png">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#17242f">
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/assets/guide.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Blocker Clustering: Find the Root Causes of Delays", "description": "How blocker clustering works in Kanban: recording blockers, grouping them by cause, measuring their cost, and fixing the issues that slow your team most.", "url": "https://neuralprojectinstitute.com/project-management/kanban/blocker-clustering/", "mainEntityOfPage": "https://neuralprojectinstitute.com/project-management/kanban/blocker-clustering/", "datePublished": "2026-10-05", "dateModified": "2026-10-05", "inLanguage": "en", "author": {"@type": "Organization", "@id": "https://neuralprojectinstitute.com/#organization", "name": "Neural Project Institute", "url": "https://neuralprojectinstitute.com/", "logo": {"@type": "ImageObject", "url": "https://neuralprojectinstitute.com/icon-512.png"}}, "publisher": {"@type": "Organization", "@id": "https://neuralprojectinstitute.com/#organization", "name": "Neural Project Institute", "url": "https://neuralprojectinstitute.com/", "logo": {"@type": "ImageObject", "url": "https://neuralprojectinstitute.com/icon-512.png"}}, "image": "https://neuralprojectinstitute.com/icon-512.png", "articleSection": "Kanban", "wordCount": 293}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://neuralprojectinstitute.com/"}, {"@type": "ListItem", "position": 2, "name": "Project Management", "item": "https://neuralprojectinstitute.com/project-management/"}, {"@type": "ListItem", "position": 3, "name": "Kanban", "item": "https://neuralprojectinstitute.com/project-management/kanban/"}, {"@type": "ListItem", "position": 4, "name": "Blocker Clustering"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How long should we collect blocker data?", "acceptedAnswer": {"@type": "Answer", "text": "A few weeks is often enough to see patterns. Continue collecting so you can measure the effect of improvements."}}, {"@type": "Question", "name": "Who should take part in a blocker clustering session?", "acceptedAnswer": {"@type": "Answer", "text": "The team, plus anyone who can help resolve external blockers."}}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap">
+  <a class="brand" href="/"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="5" width="13" height="4" rx="1" fill="var(--ink)"/><rect x="6" y="11" width="11" height="4" rx="1" fill="var(--accent)"/><rect x="2" y="17" width="9" height="4" rx="1" fill="var(--ink)"/><path d="M20 15.5l4 4-4 4-4-4z" fill="var(--mile)"/></svg><span><b>Neural Project Institute</b><small>Project management certification for the AI era</small></span></a>
+  <nav class="mainnav" aria-label="Main">
+    <div class="dd">
+      <button class="ddbtn" aria-expanded="false" aria-haspopup="true">Guides <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+      <div class="ddmenu" role="menu">
+        <a role="menuitem" href="/project-management/"><b>Project Management Guide</b><span>Planning, scheduling, risk, budgets and tools</span></a>
+        <a role="menuitem" href="/project-management/agile/"><b>Agile Guide</b><span>Values, practices, roles and scaling</span></a>
+        <a role="menuitem" href="/project-management/scrum/"><b>Scrum Guide</b><span>Accountabilities, events and artifacts</span></a>
+        <a role="menuitem" href="/project-management/kanban/"><b>Kanban Guide</b><span>Boards, WIP limits and flow metrics</span></a>
+      </div>
+    </div>
+    <a href="/about-the-institute/">About</a>
+    <a class="cta" href="/">PMAI Certification</a>
+  </nav>
+</div></header>
+<main id="main" class="wrap">
+<nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/project-management/">Project Management</a></li><li><a href="/project-management/kanban/">Kanban</a></li><li aria-current="page">Blocker Clustering</li></ol></nav>
+<article class="article">
+  <header class="ahead">
+    <p class="eyebrow"><a href="/project-management/kanban/">Kanban guide</a> · Flow and metrics</p>
+    <h1>Blocker Clustering: Find the Root Causes of Delays</h1>
+    <p class="lead">Every team gets blocked: waiting for approvals, other teams, environments or information. Blocker clustering is a simple technique, popularised in the Kanban community by Klaus Leopold and Troy Magennis, for turning those daily frustrations into data you can act on.</p>
+    <div class="byline"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="5" width="13" height="4" rx="1" fill="var(--ink)"/><rect x="6" y="11" width="11" height="4" rx="1" fill="var(--accent)"/><rect x="2" y="17" width="9" height="4" rx="1" fill="var(--ink)"/><path d="M20 15.5l4 4-4 4-4-4z" fill="var(--mile)"/></svg><div><span>By <a href="/about-the-institute/" rel="author">Neural Project Institute</a></span><span>Published <time datetime="2026-10-05">5 October 2026</time> · 3 min read</span></div></div>
+  </header>
+  <section id="key-takeaways" class="takeaways top"><h2>Key takeaways</h2><ul><li>Record every blocker with its reason and duration.</li><li>Cluster similar blockers and measure their cost in blocked days.</li><li>Fix the biggest clusters first.</li></ul></section>
+  <div class="agrid">
+    <aside class="toc"><details open><summary>Table of contents</summary><nav aria-label="Table of contents"><ol><li><a href="#key-takeaways">Key takeaways</a></li><li><a href="#how-it-works">How it works</a></li><li><a href="#example-clusters">Example clusters</a></li><li><a href="#internal-vs-external-blockers">Internal vs external blockers</a></li><li><a href="#tips">Tips</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></details></aside>
+    <div class="abody">
+<section id="how-it-works"><h2>How it works</h2><ol><li><strong>Mark blockers</strong> on cards as soon as an item can&#x27;t progress, with a short reason and the start date.</li><li><strong>Record when the blocker is removed</strong>, so you know how long it lasted.</li><li><strong>Collect blocker records</strong> over a few weeks.</li><li><strong>Cluster them</strong> in a workshop: group similar blockers into categories, such as waiting for test environments, unclear requirements or external approvals.</li><li><strong>Measure each cluster</strong>: how many blockers and how many blocked days.</li><li><strong>Act on the biggest clusters</strong> with targeted improvements.</li></ol></section>
+<section id="example-clusters"><h2>Example clusters</h2><div class="tw"><table><thead><tr><th>Cluster</th><th>Count</th><th>Blocked days</th><th>Possible action</th></tr></thead><tbody><tr><td>Waiting for test environment</td><td>14</td><td>38</td><td>Automate environment set-up</td></tr><tr><td>Unclear requirements</td><td>9</td><td>21</td><td>Better refinement and acceptance criteria</td></tr><tr><td>External approval</td><td>6</td><td>30</td><td>Agree service levels with the approving team</td></tr></tbody></table></div><p>Illustrative numbers only.</p></section>
+<section id="internal-vs-external-blockers"><h2>Internal vs external blockers</h2><p>Separate blockers your team can fix from those that need other teams or leaders. Internal clusters can be tackled in the next retrospective; external clusters need data to support a conversation with the other party.</p></section>
+<section id="tips"><h2>Tips</h2><ul><li>Make marking blockers quick and blame-free.</li><li>Review clusters monthly.</li><li>Track whether blocked days fall after each improvement.</li><li>Combine with a <a href="/project-management/kanban/cumulative-flow-diagram/">cumulative flow diagram</a> to see the effect on flow.</li></ul></section>
+
+<section id="faq"><h2>Frequently asked questions</h2><details class='faq'><summary>How long should we collect blocker data?</summary><p>A few weeks is often enough to see patterns. Continue collecting so you can measure the effect of improvements.</p></details><details class='faq'><summary>Who should take part in a blocker clustering session?</summary><p>The team, plus anyone who can help resolve external blockers.</p></details></section>
+      <aside class="ctabox"><p class="eyebrow">Go further</p><h2>Get certified with PMAI</h2><p>This topic is covered in <b>Riskline: Risk &amp; Quality Management</b>, one of six courses in the PMAI certification: assessed chapters and a verifiable certificate for $10.</p><a class="btn" href="/">See the PMAI certification</a></aside>
+      <nav class="pn" aria-label="More in this guide"><a href="/project-management/kanban/wip-aging-chart/"><small>Previous</small>WIP Aging Chart: Spot Stuck Work Before It&#x27;s Late</a></nav>
+    </div>
+  </div>
+</article>
+<section class="related"><h2>Related guides</h2><div class="cards"><a class="card" href="/project-management/kanban/flow-efficiency/"><span class="eyebrow">Kanban</span><b>Flow Efficiency: How Much of Lead Time Is Real Work?</b><span>What flow efficiency is, how to calculate it, why it is often surprisingly low, and practical ways to cut waiting time and improve it.</span></a><a class="card" href="/project-management/kanban/kanban-cards/"><span class="eyebrow">Kanban</span><b>Kanban Cards: What to Put on Them and Why</b><span>What a Kanban card is, the information each card should show, how to size work items, blocker markers, and examples of well-designed cards.</span></a><a class="card" href="/project-management/kanban/kanban-metrics/"><span class="eyebrow">Kanban</span><b>Kanban Metrics: The Flow Measures That Matter</b><span>The essential Kanban metrics: WIP, cycle time, lead time, throughput, work item age and flow efficiency, plus the charts that show them.</span></a><a class="card" href="/project-management/kanban/wip-limits/"><span class="eyebrow">Kanban</span><b>WIP Limits in Kanban: How to Set and Use Them</b><span>What work-in-progress (WIP) limits are, why they speed up delivery, how to set your first limits, and what to do when a limit is reached.</span></a></div></section>
+</main>
+<footer class="foot"><div class="wrap">
+  <div><b>Neural Project Institute</b><p>Free project management guides and the PMAI certification. Operated by Flaunt Weekly LLC, a Wyoming LLC.</p></div>
+  <nav aria-label="Footer"><a href="/project-management/">Project Management guide</a><a href="/project-management/agile/">Agile guide</a><a href="/project-management/scrum/">Scrum guide</a><a href="/project-management/kanban/">Kanban guide</a><a href="/">PMAI certification</a></nav>
+</div></footer>
+<script>
+document.querySelectorAll(".dd").forEach(function (dd) {
+  var b = dd.querySelector(".ddbtn");
+  b.addEventListener("click", function (e) { e.stopPropagation(); var o = dd.classList.toggle("open"); b.setAttribute("aria-expanded", o) });
+  dd.addEventListener("mouseenter", function () { b.setAttribute("aria-expanded", "true") });
+  dd.addEventListener("mouseleave", function () { if (!dd.classList.contains("open")) b.setAttribute("aria-expanded", "false") });
+});
+document.addEventListener("click", function () { document.querySelectorAll(".dd.open").forEach(function (d) { d.classList.remove("open"); d.querySelector(".ddbtn").setAttribute("aria-expanded", "false") }) });
+document.addEventListener("keydown", function (e) { if (e.key === "Escape") document.querySelectorAll(".dd.open").forEach(function (d) { d.classList.remove("open") }) });
+</script>
+</body>
+</html>

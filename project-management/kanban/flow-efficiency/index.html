@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Flow Efficiency: How Much of Lead Time Is Real Work? | Neural Project Institute</title>
+<meta name="description" content="What flow efficiency is, how to calculate it, why it is often surprisingly low, and practical ways to cut waiting time and improve it.">
+<link rel="canonical" href="https://neuralprojectinstitute.com/project-management/kanban/flow-efficiency/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Neural Project Institute">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Neural Project Institute">
+<meta property="og:title" content="Flow Efficiency: How Much of Lead Time Is Real Work? | Neural Project Institute">
+<meta property="og:description" content="What flow efficiency is, how to calculate it, why it is often surprisingly low, and practical ways to cut waiting time and improve it.">
+<meta property="og:url" content="https://neuralprojectinstitute.com/project-management/kanban/flow-efficiency/">
+<meta property="og:image" content="https://neuralprojectinstitute.com/icon-512.png">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#17242f">
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/assets/guide.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Flow Efficiency: How Much of Lead Time Is Real Work?", "description": "What flow efficiency is, how to calculate it, why it is often surprisingly low, and practical ways to cut waiting time and improve it.", "url": "https://neuralprojectinstitute.com/project-management/kanban/flow-efficiency/", "mainEntityOfPage": "https://neuralprojectinstitute.com/project-management/kanban/flow-efficiency/", "datePublished": "2026-10-05", "dateModified": "2026-10-05", "inLanguage": "en", "author": {"@type": "Organization", "@id": "https://neuralprojectinstitute.com/#organization", "name": "Neural Project Institute", "url": "https://neuralprojectinstitute.com/", "logo": {"@type": "ImageObject", "url": "https://neuralprojectinstitute.com/icon-512.png"}}, "publisher": {"@type": "Organization", "@id": "https://neuralprojectinstitute.com/#organization", "name": "Neural Project Institute", "url": "https://neuralprojectinstitute.com/", "logo": {"@type": "ImageObject", "url": "https://neuralprojectinstitute.com/icon-512.png"}}, "image": "https://neuralprojectinstitute.com/icon-512.png", "articleSection": "Kanban", "wordCount": 286}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://neuralprojectinstitute.com/"}, {"@type": "ListItem", "position": 2, "name": "Project Management", "item": "https://neuralprojectinstitute.com/project-management/"}, {"@type": "ListItem", "position": 3, "name": "Kanban", "item": "https://neuralprojectinstitute.com/project-management/kanban/"}, {"@type": "ListItem", "position": 4, "name": "Flow Efficiency"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a good flow efficiency?", "acceptedAnswer": {"@type": "Answer", "text": "There is no universal target. Measure your baseline and aim to improve it; many teams find large gains simply by reducing waiting."}}, {"@type": "Question", "name": "Is flow efficiency the same as resource utilisation?", "acceptedAnswer": {"@type": "Answer", "text": "No. Utilisation measures how busy people are; flow efficiency measures how continuously work moves. High utilisation often lowers flow efficiency."}}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap">
+  <a class="brand" href="/"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="5" width="13" height="4" rx="1" fill="var(--ink)"/><rect x="6" y="11" width="11" height="4" rx="1" fill="var(--accent)"/><rect x="2" y="17" width="9" height="4" rx="1" fill="var(--ink)"/><path d="M20 15.5l4 4-4 4-4-4z" fill="var(--mile)"/></svg><span><b>Neural Project Institute</b><small>Project management certification for the AI era</small></span></a>
+  <nav class="mainnav" aria-label="Main">
+    <div class="dd">
+      <button class="ddbtn" aria-expanded="false" aria-haspopup="true">Guides <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+      <div class="ddmenu" role="menu">
+        <a role="menuitem" href="/project-management/"><b>Project Management Guide</b><span>Planning, scheduling, risk, budgets and tools</span></a>
+        <a role="menuitem" href="/project-management/agile/"><b>Agile Guide</b><span>Values, practices, roles and scaling</span></a>
+        <a role="menuitem" href="/project-management/scrum/"><b>Scrum Guide</b><span>Accountabilities, events and artifacts</span></a>
+        <a role="menuitem" href="/project-management/kanban/"><b>Kanban Guide</b><span>Boards, WIP limits and flow metrics</span></a>
+      </div>
+    </div>
+    <a href="/about-the-institute/">About</a>
+    <a class="cta" href="/">PMAI Certification</a>
+  </nav>
+</div></header>
+<main id="main" class="wrap">
+<nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/project-management/">Project Management</a></li><li><a href="/project-management/kanban/">Kanban</a></li><li aria-current="page">Flow Efficiency</li></ol></nav>
+<article class="article">
+  <header class="ahead">
+    <p class="eyebrow"><a href="/project-management/kanban/">Kanban guide</a> · Flow and metrics</p>
+    <h1>Flow Efficiency: How Much of Lead Time Is Real Work?</h1>
+    <p class="lead">Flow efficiency measures how much of the time an item spends in your process is spent actively working on it, rather than waiting. It often reveals that the biggest delays come from queues, not from slow work.</p>
+    <div class="byline"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="5" width="13" height="4" rx="1" fill="var(--ink)"/><rect x="6" y="11" width="11" height="4" rx="1" fill="var(--accent)"/><rect x="2" y="17" width="9" height="4" rx="1" fill="var(--ink)"/><path d="M20 15.5l4 4-4 4-4-4z" fill="var(--mile)"/></svg><div><span>By <a href="/about-the-institute/" rel="author">Neural Project Institute</a></span><span>Published <time datetime="2026-10-05">5 October 2026</time> · 3 min read</span></div></div>
+  </header>
+  <section id="key-takeaways" class="takeaways top"><h2>Key takeaways</h2><ul><li>Flow efficiency is active time divided by total time in process.</li><li>Most delay usually comes from waiting, not working.</li><li>Lower WIP and fewer handoffs improve it.</li></ul></section>
+  <div class="agrid">
+    <aside class="toc"><details open><summary>Table of contents</summary><nav aria-label="Table of contents"><ol><li><a href="#key-takeaways">Key takeaways</a></li><li><a href="#formula">Formula</a></li><li><a href="#why-it-is-often-low">Why it is often low</a></li><li><a href="#how-to-measure-it">How to measure it</a></li><li><a href="#how-to-improve-flow-efficiency">How to improve flow efficiency</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></details></aside>
+    <div class="abody">
+<section id="formula"><h2>Formula</h2><p><strong>Flow efficiency = active work time ÷ total time in process × 100%</strong></p><aside class="tip"><span>Tip</span><p>Example: an item spends 10 days in progress but is actively worked on for 2 of them. Flow efficiency is 2 ÷ 10 = 20%.</p></aside></section>
+<section id="why-it-is-often-low"><h2>Why it is often low</h2><p>In many knowledge-work processes, items spend most of their time waiting: for review, for approval, for another team or for someone to have capacity. Flow efficiency well below 50% is common. That&#x27;s good news, because reducing waiting is often easier than making people work faster.</p></section>
+<section id="how-to-measure-it"><h2>How to measure it</h2><ul><li>Split board columns into &quot;doing&quot; and &quot;done/waiting&quot; sub-columns.</li><li>Mark blocked time on cards.</li><li>Compare time in active columns with total cycle time.</li><li>Sample a set of recent items if your tool can&#x27;t calculate it automatically.</li></ul></section>
+<section id="how-to-improve-flow-efficiency"><h2>How to improve flow efficiency</h2><ul><li>Lower <a href="/project-management/kanban/wip-limits/">WIP limits</a> so items wait less in queues.</li><li>Reduce handoffs between people and teams.</li><li>Agree fast-turnaround policies for reviews and approvals.</li><li>Remove recurring blockers; see <a href="/project-management/kanban/blocker-clustering/">blocker clustering</a>.</li><li>Map the end-to-end process with value stream mapping.</li></ul></section>
+
+<section id="faq"><h2>Frequently asked questions</h2><details class='faq'><summary>What is a good flow efficiency?</summary><p>There is no universal target. Measure your baseline and aim to improve it; many teams find large gains simply by reducing waiting.</p></details><details class='faq'><summary>Is flow efficiency the same as resource utilisation?</summary><p>No. Utilisation measures how busy people are; flow efficiency measures how continuously work moves. High utilisation often lowers flow efficiency.</p></details></section>
+      <aside class="ctabox"><p class="eyebrow">Go further</p><h2>Get certified with PMAI</h2><p>This topic is covered in <b>Baseline: Scope, Schedule &amp; Cost Control</b>, one of six courses in the PMAI certification: assessed chapters and a verifiable certificate for $10.</p><a class="btn" href="/">See the PMAI certification</a></aside>
+      <nav class="pn" aria-label="More in this guide"><a href="/project-management/kanban/cumulative-flow-diagram/"><small>Previous</small>Cumulative Flow Diagram (CFD): How to Read and Use It</a><a class="next" href="/project-management/kanban/wip-aging-chart/"><small>Next</small>WIP Aging Chart: Spot Stuck Work Before It&#x27;s Late</a></nav>
+    </div>
+  </div>
+</article>
+<section class="related"><h2>Related guides</h2><div class="cards"><a class="card" href="/project-management/kanban/cycle-time/"><span class="eyebrow">Kanban</span><b>Cycle Time in Kanban: Definition, Calculation and How to Reduce It</b><span>What cycle time is, how to calculate it, how to read a cycle time scatterplot, set service level expectations, and practical ways to reduce cycle time.</span></a><a class="card" href="/project-management/kanban/wip-limits/"><span class="eyebrow">Kanban</span><b>WIP Limits in Kanban: How to Set and Use Them</b><span>What work-in-progress (WIP) limits are, why they speed up delivery, how to set your first limits, and what to do when a limit is reached.</span></a><a class="card" href="/project-management/kanban/kanban-metrics/"><span class="eyebrow">Kanban</span><b>Kanban Metrics: The Flow Measures That Matter</b><span>The essential Kanban metrics: WIP, cycle time, lead time, throughput, work item age and flow efficiency, plus the charts that show them.</span></a><a class="card" href="/project-management/kanban/cycle-time-vs-lead-time/"><span class="eyebrow">Kanban</span><b>Cycle Time vs Lead Time: What Is the Difference?</b><span>Cycle time vs lead time explained with examples: where each starts and ends, why both matter, how they relate to Little&#x27;s Law, and how to improve them.</span></a></div></section>
+</main>
+<footer class="foot"><div class="wrap">
+  <div><b>Neural Project Institute</b><p>Free project management guides and the PMAI certification. Operated by Flaunt Weekly LLC, a Wyoming LLC.</p></div>
+  <nav aria-label="Footer"><a href="/project-management/">Project Management guide</a><a href="/project-management/agile/">Agile guide</a><a href="/project-management/scrum/">Scrum guide</a><a href="/project-management/kanban/">Kanban guide</a><a href="/">PMAI certification</a></nav>
+</div></footer>
+<script>
+document.querySelectorAll(".dd").forEach(function (dd) {
+  var b = dd.querySelector(".ddbtn");
+  b.addEventListener("click", function (e) { e.stopPropagation(); var o = dd.classList.toggle("open"); b.setAttribute("aria-expanded", o) });
+  dd.addEventListener("mouseenter", function () { b.setAttribute("aria-expanded", "true") });
+  dd.addEventListener("mouseleave", function () { if (!dd.classList.contains("open")) b.setAttribute("aria-expanded", "false") });
+});
+document.addEventListener("click", function () { document.querySelectorAll(".dd.open").forEach(function (d) { d.classList.remove("open"); d.querySelector(".ddbtn").setAttribute("aria-expanded", "false") }) });
+document.addEventListener("keydown", function (e) { if (e.key === "Escape") document.querySelectorAll(".dd.open").forEach(function (d) { d.classList.remove("open") }) });
+</script>
+</body>
+</html>
