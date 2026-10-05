@@ -49,7 +49,9 @@ header.top .wrap { display: flex; align-items: center; justify-content: space-be
 .ddmenu a:first-child { margin-top: 6px } .ddmenu a:last-child { margin-bottom: 6px }
 .ddmenu a b { font: 650 .95rem/1.3 var(--f-display) } .ddmenu a span { font-size: .8rem; color: var(--muted); line-height: 1.35 }
 .ddmenu a:hover b { color: var(--accent) }
-.dd:hover .ddmenu, .dd:focus-within .ddmenu, .dd.open .ddmenu { display: block }
+.dd:hover .ddmenu, .dd:focus-within .ddmenu, .dd.open .ddmenu, .dd.hov .ddmenu { display: block }
+.dd.hov .ddmenu { z-index: 31 }
+nav:has(.dd.hov) .dd:not(.hov):not(.open):not(:focus-within) .ddmenu { display: none }
 footer.foot { border-top: 1px solid var(--line); margin-top: 80px; padding-block: 32px; font-size: .9rem; color: var(--muted) }
 footer.foot .wrap { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap }
 footer.foot p { margin: 6px 0 0; max-width: 46ch }

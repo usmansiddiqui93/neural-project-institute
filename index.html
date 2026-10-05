@@ -159,7 +159,8 @@ nav.main .ddmenu a:hover { background: none }
 .ddmenu a:first-child { margin-top: 6px } .ddmenu a:last-child { margin-bottom: 6px }
 .ddmenu a b { font: 650 .95rem/1.3 var(--f-display) } .ddmenu a span { font-size: .8rem; color: var(--muted); font-weight: 400; line-height: 1.35 }
 .ddmenu a:hover b { color: var(--accent) }
-.dd:hover .ddmenu, .dd:focus-within .ddmenu, .dd.open .ddmenu { display: block }
+.dd:hover .ddmenu, .dd:focus-within .ddmenu, .dd.open .ddmenu, .dd.hov .ddmenu { display: block }
+nav:has(.dd.hov) .dd:not(.hov):not(.open):not(:focus-within) .ddmenu { display: none }
 
 .dd.mega .ddmenu { width: 760px; min-width: 0; left: auto; right: -150px; padding: 8px 0 0 }
 .mega2 { position: relative; z-index: 1; border-radius: 12px; overflow: hidden; margin: 1px }
@@ -2208,4 +2209,23 @@ $("#brandTag").textContent = CONFIG.tagline;
 if (!LIVE) { const b = $("#demoBar"); b.hidden = false; b.textContent = "Preview mode: payments and the certificate database aren't connected yet, so purchases unlock for testing only." }
 render();
 refreshOwned().then(() => { if (location.hash === "#paid") toast(owns("all") || mem.owned.length ? "Payment received. Your course is unlocked." : "Payment is still processing. Refresh in a minute."); render() });
+// Hover intent: menus stay open while the pointer travels diagonally into them,
+// and a neighbouring menu only takes over after the pointer rests on it.
+(function () {
+  if (!window.matchMedia("(hover: hover)").matches) return;
+  var dds = document.querySelectorAll(".dd"), closeT, openT;
+  function openOnly(dd) { dds.forEach(function (o) { o.classList.toggle("hov", o === dd); }); }
+  dds.forEach(function (dd) {
+    dd.addEventListener("mouseenter", function () {
+      clearTimeout(closeT); clearTimeout(openT);
+      var other = document.querySelector(".dd.hov");
+      if (!other || other === dd) openOnly(dd);
+      else openT = setTimeout(function () { openOnly(dd); }, 220);
+    });
+    dd.addEventListener("mouseleave", function () {
+      clearTimeout(openT);
+      closeT = setTimeout(function () { dd.classList.remove("hov"); }, 450);
+    });
+  });
+})();
 </script>
