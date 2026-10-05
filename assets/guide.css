@@ -269,3 +269,10 @@ div.card { cursor: default }
 .lvlbtns { display: flex; gap: 6px; margin-top: auto; padding-top: 8px }
 .lvlbtns .dl { min-width: 0; flex: 1; padding: 7px 8px; gap: 6px; justify-content: center } .lvlbtns .dlic { width: 24px; height: 24px; font-size: .78rem; border-radius: 6px } .lvlbtns .dl b { font-size: .82rem }
 @media (max-width: 860px) { .lvls { grid-template-columns: 1fr } }
+/* Template callout inside guides */
+.tplcallout { display: grid; grid-template-columns: 48px 1fr; gap: 14px; margin: 26px 0; padding: 18px 20px; border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 12px; background: var(--surface) }
+.tcico { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 12px; background: var(--accent); color: #fff; font-size: 1.4rem; font-weight: 700 }
+.tplcallout p { margin: 0 0 6px } .tplcallout .eyebrow { margin-bottom: 2px }
+.tplcallout .tct { font: 700 1.15rem/1.3 var(--f-display) } .tplcallout .tct a { color: var(--ink); text-decoration: none } .tplcallout .tct a:hover { color: var(--accent) }
+.tcbtns { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px }
+@media (max-width: 520px) { .tplcallout { grid-template-columns: 1fr } }
