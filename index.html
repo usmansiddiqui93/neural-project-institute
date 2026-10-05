@@ -1749,7 +1749,7 @@ function viewHome() {
     </div>
   </section>
 
-  <section id="reviews">
+  <section id="reviews" hidden>
     <span class="eyebrow">Learner reviews</span>
     <h2 style="margin-top:10px">What certified learners say</h2>
     <p class="muted" style="max-width:66ch;margin-top:10px">Only learners who hold a verified certificate can leave a review, and each one links to its entry in our public register. We publish positive and critical reviews alike, after a brief check for spam and personal data.</p>
@@ -1919,7 +1919,8 @@ async function loadReviews() {
   const box = $("#reviewsBox"); if (!box) return;
   let rows = [];
   if (LIVE) { try { rows = await rpc("public_reviews_v2", {}) || [] } catch (e) { try { rows = await rpc("public_reviews", {}) || [] } catch (e2) { console.warn(e2) } } }
-  if (!rows.length) { box.innerHTML = `<div class="review-empty"><p><b>Reviews are on their way.</b> We only show reviews from learners who have earned a verified certificate, so this section fills up as our first learners finish their courses. Earned one? Open your certificate page to leave a review.</p></div>`; return }
+  if (!rows.length) { $("#reviews").hidden = true; return; box.innerHTML = `<div class="review-empty"><p><b>Reviews are on their way.</b> We only show reviews from learners who have earned a verified certificate, so this section fills up as our first learners finish their courses. Earned one? Open your certificate page to leave a review.</p></div>`; return }
+  $("#reviews").hidden = false;
   const avg = rows.reduce((a, r) => a + r.rating, 0) / rows.length;
   box.innerHTML = `<div class="review-sum"><b>${avg.toFixed(1)}</b>${stars(Math.round(avg))}<span class="muted">from ${rows.length} verified review${rows.length > 1 ? "s" : ""}</span></div>
     <div class="review-grid">${rows.slice(0, 12).map(r => `<figure class="review">${stars(r.rating)}<blockquote>${esc(r.body)}</blockquote>
