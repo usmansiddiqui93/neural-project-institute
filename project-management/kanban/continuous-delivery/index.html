@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Continuous Delivery: Principles, Pipeline and Benefits | Neural Project Institute</title>
+<meta name="description" content="What continuous delivery is, how a deployment pipeline works, how it differs from continuous integration and deployment, and how it supports Kanban flow.">
+<link rel="canonical" href="https://neuralprojectinstitute.com/project-management/kanban/continuous-delivery/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Neural Project Institute">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Neural Project Institute">
+<meta property="og:title" content="Continuous Delivery: Principles, Pipeline and Benefits | Neural Project Institute">
+<meta property="og:description" content="What continuous delivery is, how a deployment pipeline works, how it differs from continuous integration and deployment, and how it supports Kanban flow.">
+<meta property="og:url" content="https://neuralprojectinstitute.com/project-management/kanban/continuous-delivery/">
+<meta property="og:image" content="https://neuralprojectinstitute.com/icon-512.png">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#17242f">
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/assets/guide.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Continuous Delivery: Principles, Pipeline and Benefits", "description": "What continuous delivery is, how a deployment pipeline works, how it differs from continuous integration and deployment, and how it supports Kanban flow.", "url": "https://neuralprojectinstitute.com/project-management/kanban/continuous-delivery/", "mainEntityOfPage": "https://neuralprojectinstitute.com/project-management/kanban/continuous-delivery/", "datePublished": "2026-10-05", "dateModified": "2026-10-05", "inLanguage": "en", "author": {"@type": "Organization", "@id": "https://neuralprojectinstitute.com/#organization", "name": "Neural Project Institute", "url": "https://neuralprojectinstitute.com/", "logo": {"@type": "ImageObject", "url": "https://neuralprojectinstitute.com/icon-512.png"}}, "publisher": {"@type": "Organization", "@id": "https://neuralprojectinstitute.com/#organization", "name": "Neural Project Institute", "url": "https://neuralprojectinstitute.com/", "logo": {"@type": "ImageObject", "url": "https://neuralprojectinstitute.com/icon-512.png"}}, "image": "https://neuralprojectinstitute.com/icon-512.png", "articleSection": "Kanban", "wordCount": 321}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://neuralprojectinstitute.com/"}, {"@type": "ListItem", "position": 2, "name": "Project Management", "item": "https://neuralprojectinstitute.com/project-management/"}, {"@type": "ListItem", "position": 3, "name": "Kanban", "item": "https://neuralprojectinstitute.com/project-management/kanban/"}, {"@type": "ListItem", "position": 4, "name": "Continuous Delivery"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is continuous delivery only for software?", "acceptedAnswer": {"@type": "Answer", "text": "The term comes from software, but the principle of keeping work always ready to release in small increments applies to content, documentation and other digital products."}}, {"@type": "Question", "name": "Do you need continuous deployment to do continuous delivery?", "acceptedAnswer": {"@type": "Answer", "text": "No. Continuous delivery means you can release at any time; continuous deployment means you do release automatically."}}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap">
+  <a class="brand" href="/"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="5" width="13" height="4" rx="1" fill="var(--ink)"/><rect x="6" y="11" width="11" height="4" rx="1" fill="var(--accent)"/><rect x="2" y="17" width="9" height="4" rx="1" fill="var(--ink)"/><path d="M20 15.5l4 4-4 4-4-4z" fill="var(--mile)"/></svg><span><b>Neural Project Institute</b><small>Project management certification for the AI era</small></span></a>
+  <nav class="mainnav" aria-label="Main">
+    <div class="dd">
+      <button class="ddbtn" aria-expanded="false" aria-haspopup="true">Guides <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+      <div class="ddmenu" role="menu">
+        <a role="menuitem" href="/project-management/"><b>Project Management Guide</b><span>Planning, scheduling, risk, budgets and tools</span></a>
+        <a role="menuitem" href="/project-management/agile/"><b>Agile Guide</b><span>Values, practices, roles and scaling</span></a>
+        <a role="menuitem" href="/project-management/scrum/"><b>Scrum Guide</b><span>Accountabilities, events and artifacts</span></a>
+        <a role="menuitem" href="/project-management/kanban/"><b>Kanban Guide</b><span>Boards, WIP limits and flow metrics</span></a>
+      </div>
+    </div>
+    <a href="/about-the-institute/">About</a>
+    <a class="cta" href="/">PMAI Certification</a>
+  </nav>
+</div></header>
+<main id="main" class="wrap">
+<nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/project-management/">Project Management</a></li><li><a href="/project-management/kanban/">Kanban</a></li><li aria-current="page">Continuous Delivery</li></ol></nav>
+<article class="article">
+  <header class="ahead">
+    <p class="eyebrow"><a href="/project-management/kanban/">Kanban guide</a> · Lean foundations</p>
+    <h1>Continuous Delivery: Principles, Pipeline and Benefits</h1>
+    <p class="lead">Continuous delivery is a software practice in which code is always kept in a releasable state, so new changes can be released to users quickly, safely and at any time. It turns Kanban&#x27;s ideal of small, continuous flow into a technical reality.</p>
+    <div class="byline"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="5" width="13" height="4" rx="1" fill="var(--ink)"/><rect x="6" y="11" width="11" height="4" rx="1" fill="var(--accent)"/><rect x="2" y="17" width="9" height="4" rx="1" fill="var(--ink)"/><path d="M20 15.5l4 4-4 4-4-4z" fill="var(--mile)"/></svg><div><span>By <a href="/about-the-institute/" rel="author">Neural Project Institute</a></span><span>Published <time datetime="2026-10-05">5 October 2026</time> · 3 min read</span></div></div>
+  </header>
+  <section id="key-takeaways" class="takeaways top"><h2>Key takeaways</h2><ul><li>Continuous delivery keeps software always releasable.</li><li>A deployment pipeline automates build, test and release.</li><li>It complements Kanban by removing batch releases.</li></ul></section>
+  <div class="agrid">
+    <aside class="toc"><details open><summary>Table of contents</summary><nav aria-label="Table of contents"><ol><li><a href="#key-takeaways">Key takeaways</a></li><li><a href="#origins">Origins</a></li><li><a href="#ci-vs-continuous-delivery-vs-continuous-deployment">CI vs continuous delivery vs continuous deployment</a></li><li><a href="#the-deployment-pipeline">The deployment pipeline</a></li><li><a href="#benefits">Benefits</a></li><li><a href="#continuous-delivery-and-kanban">Continuous delivery and Kanban</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></details></aside>
+    <div class="abody">
+<section id="origins"><h2>Origins</h2><p>The practice was described in depth by Jez Humble and David Farley in their 2010 book Continuous Delivery. It builds on Agile principles, especially the first: deliver valuable software early and continuously.</p></section>
+<section id="ci-vs-continuous-delivery-vs-continuous-deployment"><h2>CI vs continuous delivery vs continuous deployment</h2><div class="tw"><table><thead><tr><th>Practice</th><th>What it means</th></tr></thead><tbody><tr><td>Continuous integration (CI)</td><td>Developers merge small changes frequently; each merge is built and tested automatically</td></tr><tr><td>Continuous delivery (CD)</td><td>Every change that passes the pipeline could be released; release is a business decision</td></tr><tr><td>Continuous deployment</td><td>Every change that passes the pipeline is released automatically</td></tr></tbody></table></div></section>
+<section id="the-deployment-pipeline"><h2>The deployment pipeline</h2><ol><li><strong>Commit stage:</strong> build the code and run fast automated tests.</li><li><strong>Acceptance stage:</strong> automated functional and integration tests.</li><li><strong>Further testing:</strong> performance, security and exploratory testing.</li><li><strong>Release:</strong> deploy to production, often with feature flags or gradual rollouts.</li><li><strong>Monitor:</strong> watch real usage and errors, and roll back quickly if needed.</li></ol></section>
+<section id="benefits"><h2>Benefits</h2><ul><li>Smaller, lower-risk releases.</li><li>Faster feedback from real users.</li><li>Shorter <a href="/project-management/kanban/cycle-time-vs-lead-time/">lead time</a> from idea to customer.</li><li>Less stressful release days.</li><li>Higher quality through automation.</li></ul></section>
+<section id="continuous-delivery-and-kanban"><h2>Continuous delivery and Kanban</h2><p>Kanban limits work in progress and keeps items small; continuous delivery removes the batch-release step at the end. Together they let each item flow to customers as soon as it is done. See <a href="/project-management/kanban/devops/">DevOps</a>.</p></section>
+
+<section id="faq"><h2>Frequently asked questions</h2><details class='faq'><summary>Is continuous delivery only for software?</summary><p>The term comes from software, but the principle of keeping work always ready to release in small increments applies to content, documentation and other digital products.</p></details><details class='faq'><summary>Do you need continuous deployment to do continuous delivery?</summary><p>No. Continuous delivery means you can release at any time; continuous deployment means you do release automatically.</p></details></section>
+      <aside class="ctabox"><p class="eyebrow">Go further</p><h2>Get certified with PMAI</h2><p>This topic is covered in <b>Sprintcraft: Agile &amp; Scrum Practitioner</b>, one of six courses in the PMAI certification: assessed chapters and a verifiable certificate for $10.</p><a class="btn" href="/">See the PMAI certification</a></aside>
+      <nav class="pn" aria-label="More in this guide"><a href="/project-management/kanban/value-stream-mapping/"><small>Previous</small>Value Stream Mapping: How to Map and Improve Your Process</a><a class="next" href="/project-management/kanban/devops/"><small>Next</small>What Is DevOps? Culture, Practices and Metrics</a></nav>
+    </div>
+  </div>
+</article>
+<section class="related"><h2>Related guides</h2><div class="cards"><a class="card" href="/project-management/kanban/devops/"><span class="eyebrow">Kanban</span><b>What Is DevOps? Culture, Practices and Metrics</b><span>DevOps explained: its origins, the CALMS model, the Three Ways, key practices, DORA metrics, and how DevOps connects to Lean, Agile and Kanban.</span></a><a class="card" href="/project-management/agile/agile-software-development/"><span class="eyebrow">Agile</span><b>How Agile Software Development Works: Practices and Best Practices</b><span>How Agile software development works day to day: user stories, CI/CD, testing, code review and DevOps, plus best practices for high-performing teams.</span></a><a class="card" href="/project-management/kanban/value-stream-mapping/"><span class="eyebrow">Kanban</span><b>Value Stream Mapping: How to Map and Improve Your Process</b><span>A step-by-step guide to value stream mapping: current and future state maps, key metrics like process time and lead time, and how to find waste.</span></a><a class="card" href="/project-management/kanban/lean-kanban/"><span class="eyebrow">Kanban</span><b>Lean Kanban: How Lean Thinking Shapes the Kanban Method</b><span>How Lean principles underpin Kanban: value, flow, pull and continuous improvement, the history of Lean Kanban, and how to apply both together.</span></a></div></section>
+</main>
+<footer class="foot"><div class="wrap">
+  <div><b>Neural Project Institute</b><p>Free project management guides and the PMAI certification. Operated by Flaunt Weekly LLC, a Wyoming LLC.</p></div>
+  <nav aria-label="Footer"><a href="/project-management/">Project Management guide</a><a href="/project-management/agile/">Agile guide</a><a href="/project-management/scrum/">Scrum guide</a><a href="/project-management/kanban/">Kanban guide</a><a href="/">PMAI certification</a></nav>
+</div></footer>
+<script>
+document.querySelectorAll(".dd").forEach(function (dd) {
+  var b = dd.querySelector(".ddbtn");
+  b.addEventListener("click", function (e) { e.stopPropagation(); var o = dd.classList.toggle("open"); b.setAttribute("aria-expanded", o) });
+  dd.addEventListener("mouseenter", function () { b.setAttribute("aria-expanded", "true") });
+  dd.addEventListener("mouseleave", function () { if (!dd.classList.contains("open")) b.setAttribute("aria-expanded", "false") });
+});
+document.addEventListener("click", function () { document.querySelectorAll(".dd.open").forEach(function (d) { d.classList.remove("open"); d.querySelector(".ddbtn").setAttribute("aria-expanded", "false") }) });
+document.addEventListener("keydown", function (e) { if (e.key === "Escape") document.querySelectorAll(".dd.open").forEach(function (d) { d.classList.remove("open") }) });
+</script>
+</body>
+</html>
