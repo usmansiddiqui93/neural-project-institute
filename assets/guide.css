@@ -258,3 +258,14 @@ div.card { cursor: default }
 .ddmenu a.viewmore b::after { content: " →" }
 @media (max-width: 800px) { .dd.tpl .ddmenu { position: fixed; left: 12px; right: 12px; top: 64px; width: auto } }
 @media (max-width: 700px) { .dd.tpl .ddmenu { top: 96px } }
+/* Template levels */
+.dlbox { grid-template-columns: 1fr }
+.lvls { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px }
+.lvl { display: flex; flex-direction: column; gap: 6px; padding: 16px; border: 1px solid var(--line); border-radius: 14px; background: var(--bg) }
+.lvl.lvl-advanced { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent) inset }
+.lvlhead { display: flex; align-items: center; justify-content: space-between; gap: 8px } .lvlhead b { font: 700 1.1rem var(--f-display) }
+.lvlhead em { font-style: normal; font: 600 .68rem var(--f-mono); letter-spacing: .06em; text-transform: uppercase; color: #fff; background: var(--accent); padding: 3px 8px; border-radius: 999px }
+.lvl p { margin: 0; font-size: .9rem } .lvl .lvlmeta { font: 500 .74rem var(--f-mono); color: var(--muted) }
+.lvlbtns { display: flex; gap: 6px; margin-top: auto; padding-top: 8px }
+.lvlbtns .dl { min-width: 0; flex: 1; padding: 7px 8px; gap: 6px; justify-content: center } .lvlbtns .dlic { width: 24px; height: 24px; font-size: .78rem; border-radius: 6px } .lvlbtns .dl b { font-size: .82rem }
+@media (max-width: 860px) { .lvls { grid-template-columns: 1fr } }
