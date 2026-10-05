@@ -160,6 +160,12 @@ nav.main .ddmenu a:hover { background: none }
 .ddmenu a b { font: 650 .95rem/1.3 var(--f-display) } .ddmenu a span { font-size: .8rem; color: var(--muted); font-weight: 400; line-height: 1.35 }
 .ddmenu a:hover b { color: var(--accent) }
 .dd:hover .ddmenu, .dd:focus-within .ddmenu, .dd.open .ddmenu { display: block }
+.dd.mega .ddmenu { min-width: 560px; right: -120px }
+.megagrid { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 4px 16px; padding: 14px 16px }
+.megatop { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 4px }
+nav.main .megagrid a { padding: 6px 8px; margin: 0 !important; font-size: .88rem }
+.megacol { display: flex; flex-direction: column } .megacol .eyebrow { padding: 6px 8px 2px }
+@media (max-width: 700px) { .dd.mega .ddmenu { position: fixed; left: 12px; right: 12px; top: 64px; min-width: 0 } .megagrid, .megatop { grid-template-columns: 1fr } }
 .demo-bar { background: var(--mile-soft); color: var(--ink); font-size: .85rem; text-align: center; padding: 8px 16px; border-bottom: 1px solid var(--line) }
 
 main { padding-block: 40px 80px; min-height: 60vh }
@@ -339,6 +345,14 @@ footer.foot .wrap { display: flex; justify-content: space-between; flex-wrap: wr
           <a role="menuitem" href="/project-management/scrum/"><b>Scrum Guide</b><span>Accountabilities, events and artifacts</span></a>
           <a role="menuitem" href="/project-management/kanban/"><b>Kanban Guide</b><span>Boards, WIP limits and flow metrics</span></a>
         </div></div>
+      <div class="dd mega">
+      <button class="ddbtn" aria-expanded="false" aria-haspopup="true">Tools <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+      <div class="ddmenu" role="menu"><div class="megagrid">
+        <div class="megatop"><a role="menuitem" href="/project-management-tools/"><b>Best project management tools 2026</b><span>Top 10 tools reviewed and ranked</span></a><a role="menuitem" href="/project-management-tools/compare/"><b>Compare tools</b><span>45 head-to-head comparisons</span></a></div>
+        <div class="megacol"><span class="eyebrow">Reviews</span><a role="menuitem" href="/project-management-tools/wrike/">Wrike review</a><a role="menuitem" href="/project-management-tools/monday/">monday.com review</a><a role="menuitem" href="/project-management-tools/asana/">Asana review</a><a role="menuitem" href="/project-management-tools/clickup/">ClickUp review</a><a role="menuitem" href="/project-management-tools/smartsheet/">Smartsheet review</a><a role="menuitem" href="/project-management-tools/jira/">Jira review</a><a role="menuitem" href="/project-management-tools/microsoft-planner/">Microsoft Planner review</a><a role="menuitem" href="/project-management-tools/notion/">Notion review</a><a role="menuitem" href="/project-management-tools/trello/">Trello review</a><a role="menuitem" href="/project-management-tools/basecamp/">Basecamp review</a></div>
+        <div class="megacol"><span class="eyebrow">Alternatives</span><a role="menuitem" href="/project-management-tools/wrike/wrike-alternatives/">Wrike alternatives</a><a role="menuitem" href="/project-management-tools/monday/monday-alternatives/">monday.com alternatives</a><a role="menuitem" href="/project-management-tools/asana/asana-alternatives/">Asana alternatives</a><a role="menuitem" href="/project-management-tools/clickup/clickup-alternatives/">ClickUp alternatives</a><a role="menuitem" href="/project-management-tools/smartsheet/smartsheet-alternatives/">Smartsheet alternatives</a><a role="menuitem" href="/project-management-tools/jira/jira-alternatives/">Jira alternatives</a><a role="menuitem" href="/project-management-tools/microsoft-planner/microsoft-planner-alternatives/">Microsoft Planner alternatives</a><a role="menuitem" href="/project-management-tools/notion/notion-alternatives/">Notion alternatives</a><a role="menuitem" href="/project-management-tools/trello/trello-alternatives/">Trello alternatives</a><a role="menuitem" href="/project-management-tools/basecamp/basecamp-alternatives/">Basecamp alternatives</a></div>
+      </div></div>
+    </div>
       <a href="#verify" class="hide-sm">Verify</a>
       <a href="#dashboard">My learning</a>
     </nav>

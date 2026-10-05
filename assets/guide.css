@@ -140,3 +140,43 @@ details.faq p { margin: 8px 0 0; color: var(--muted) }
 .path .step h3 { font-size: 1.05rem }
 .path .step ol { margin: 6px 0 0; font-size: .92rem; gap: 6px }
 div.card { cursor: default }
+
+/* Tools mega menu */
+.dd.mega .ddmenu { min-width: 560px; left: -140px }
+.megagrid { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 2px 16px; padding: 14px 16px }
+.megatop { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 4px }
+.megagrid a { padding: 6px 8px !important; margin: 0 !important; font-size: .88rem; border-radius: 6px }
+.megagrid a:hover { background: var(--sunk) }
+.megacol { display: flex; flex-direction: column } .megacol .eyebrow { padding: 6px 8px 2px }
+@media (max-width: 700px) { .dd.mega .ddmenu { position: fixed; left: 12px; right: 12px; top: 96px; min-width: 0; max-height: 75vh; overflow: auto } .megagrid, .megatop { grid-template-columns: 1fr } }
+
+/* Tool pages */
+.abody.wide { max-width: 900px }
+.tcard { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 22px; margin-bottom: 18px; display: flex; flex-direction: column; gap: 12px }
+.tcard p { margin: 0 }
+.thead { display: grid; grid-template-columns: auto 1fr auto; gap: 14px; align-items: center }
+.thead h3 { font-size: 1.35rem } .thead h3 a { color: var(--ink); text-decoration: none } .thead h3 a:hover { color: var(--accent) }
+.rank { font: 700 1rem var(--f-mono); background: var(--ink); color: var(--bg); border-radius: 8px; padding: 6px 10px }
+.score { font: 780 1.8rem/1 var(--f-display); color: var(--accent) } .score small { font-size: .9rem; color: var(--muted) }
+.tmeta { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; background: var(--sunk); border-radius: 8px; padding: 12px 14px; font-size: .9rem }
+.tmeta div { display: flex; flex-direction: column; gap: 2px } .tmeta b { font-weight: 500 }
+.pc { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px }
+.pc h4 { margin: 0 0 6px; font: 650 .95rem var(--f-display) }
+.pc ul { margin: 0 } .pc > div:first-child li::marker { color: var(--accent) } .pc > div:last-child li::marker { color: #b3372b }
+.ok { color: var(--accent); font-weight: 600 } .no { color: #b3372b } .part { color: var(--mile) }
+.matrix td, .matrix th { min-width: 90px; font-size: .82rem; text-align: center } .matrix td:first-child, .matrix th:first-child { text-align: left; min-width: 170px; position: sticky; left: 0; background: var(--surface) }
+.kv td:first-child { font-weight: 600; width: 34% }
+.rgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-bottom: 16px }
+.rbox { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px; display: flex; flex-direction: column; gap: 4px }
+.rbox .big { font: 780 2.2rem/1 var(--f-display) } .rbox .big small { font-size: 1rem; color: var(--muted) }
+.rbox ul { font-size: .9rem; margin: 6px 0 } .stars { color: var(--mile); letter-spacing: 2px }
+.bars { display: flex; flex-direction: column; gap: 10px }
+.bar-row { display: grid; grid-template-columns: minmax(150px, 230px) 1fr 52px; gap: 12px; align-items: center; font-size: .92rem }
+.barbg { height: 10px; background: var(--sunk); border-radius: 5px; overflow: hidden } .barbg i { display: block; height: 100%; background: var(--accent) }
+.disclose { font-size: .85rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 14px; margin-top: 24px }
+@media (max-width: 480px) {
+  .mainnav { gap: 0 }
+  .mainnav > a, .ddbtn { padding: 0 8px; font-size: .88rem }
+  .mainnav > a[href="/about-the-institute/"] { display: none }
+  .mainnav > a.cta { margin-left: auto }
+}
