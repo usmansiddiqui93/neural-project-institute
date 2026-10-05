@@ -130,3 +130,13 @@ details.faq p { margin: 8px 0 0; color: var(--muted) }
   .pn { grid-template-columns: 1fr } .pn a.next { grid-column: 1; text-align: left }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto } }
+
+/* Landing hub */
+.row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center }
+.btn.ghost { background: transparent; color: var(--ink); border: 1.5px solid var(--line) }
+.hub.landing h1 { font-size: clamp(2.3rem, 5.4vw, 3.6rem) }
+.path { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 8px }
+.path .step { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px; display: flex; flex-direction: column; gap: 6px }
+.path .step h3 { font-size: 1.05rem }
+.path .step ol { margin: 6px 0 0; font-size: .92rem; gap: 6px }
+div.card { cursor: default }
