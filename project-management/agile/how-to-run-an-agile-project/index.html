@@ -27,8 +27,18 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="top"><div class="wrap">
   <a class="brand" href="/"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="5" width="13" height="4" rx="1" fill="var(--ink)"/><rect x="6" y="11" width="11" height="4" rx="1" fill="var(--accent)"/><rect x="2" y="17" width="9" height="4" rx="1" fill="var(--ink)"/><path d="M20 15.5l4 4-4 4-4-4z" fill="var(--mile)"/></svg><span><b>Neural Project Institute</b><small>Project management certification for the AI era</small></span></a>
-  <nav aria-label="Guides">
-    <a href="/project-management/">Project Management</a><a href="/project-management/agile/">Agile</a><a href="/project-management/scrum/">Scrum</a><a href="/project-management/kanban/">Kanban</a><a class="cta" href="/">PMAI Certification</a>
+  <nav class="mainnav" aria-label="Main">
+    <div class="dd">
+      <button class="ddbtn" aria-expanded="false" aria-haspopup="true">Guides <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+      <div class="ddmenu" role="menu">
+        <a role="menuitem" href="/project-management/"><b>Project Management Guide</b><span>Planning, scheduling, risk, budgets and tools</span></a>
+        <a role="menuitem" href="/project-management/agile/"><b>Agile Guide</b><span>Values, practices, roles and scaling</span></a>
+        <a role="menuitem" href="/project-management/scrum/"><b>Scrum Guide</b><span>Accountabilities, events and artifacts</span></a>
+        <a role="menuitem" href="/project-management/kanban/"><b>Kanban Guide</b><span>Boards, WIP limits and flow metrics</span></a>
+      </div>
+    </div>
+    <a href="/about-the-institute/">About</a>
+    <a class="cta" href="/">PMAI Certification</a>
   </nav>
 </div></header>
 <main id="main" class="wrap">
@@ -40,8 +50,9 @@
     <p class="lead">This guide walks through an Agile project from the first conversation to the final release, with the decisions and artifacts you need at each stage.</p>
     <div class="byline"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="5" width="13" height="4" rx="1" fill="var(--ink)"/><rect x="6" y="11" width="11" height="4" rx="1" fill="var(--accent)"/><rect x="2" y="17" width="9" height="4" rx="1" fill="var(--ink)"/><path d="M20 15.5l4 4-4 4-4-4z" fill="var(--mile)"/></svg><div><span>By <a href="/about-the-institute/" rel="author">Neural Project Institute</a></span><span>Published <time datetime="2026-10-05">5 October 2026</time> · 3 min read</span></div></div>
   </header>
+  <section id="key-takeaways" class="takeaways top"><h2>Key takeaways</h2><ul><li>Start with a vision, a Product Owner and a cross-functional team.</li><li>Build the backlog through story mapping and aim for an MVP.</li><li>Release early, measure and keep stakeholders involved.</li></ul></section>
   <div class="agrid">
-    <aside class="toc"><details open><summary>Table of contents</summary><nav aria-label="Table of contents"><ol><li><a href="#1-define-the-vision">1. Define the vision</a></li><li><a href="#2-form-the-team">2. Form the team</a></li><li><a href="#3-build-the-initial-backlog">3. Build the initial backlog</a></li><li><a href="#4-plan-the-first-release">4. Plan the first release</a></li><li><a href="#5-run-sprints">5. Run sprints</a></li><li><a href="#6-keep-stakeholders-engaged">6. Keep stakeholders engaged</a></li><li><a href="#7-release-and-learn">7. Release and learn</a></li><li><a href="#8-close-or-continue">8. Close or continue</a></li><li><a href="#key-takeaways">Key takeaways</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></details></aside>
+    <aside class="toc"><details open><summary>Table of contents</summary><nav aria-label="Table of contents"><ol><li><a href="#key-takeaways">Key takeaways</a></li><li><a href="#1-define-the-vision">1. Define the vision</a></li><li><a href="#2-form-the-team">2. Form the team</a></li><li><a href="#3-build-the-initial-backlog">3. Build the initial backlog</a></li><li><a href="#4-plan-the-first-release">4. Plan the first release</a></li><li><a href="#5-run-sprints">5. Run sprints</a></li><li><a href="#6-keep-stakeholders-engaged">6. Keep stakeholders engaged</a></li><li><a href="#7-release-and-learn">7. Release and learn</a></li><li><a href="#8-close-or-continue">8. Close or continue</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></details></aside>
     <div class="abody">
 <section id="1-define-the-vision"><h2>1. Define the vision</h2><p>Write a short product vision: who it is for, the problem it solves, and how success will be measured. A simple template: &quot;For [users] who [need], the [product] is a [category] that [benefit]. Unlike [alternative], it [differentiator].&quot;</p></section>
 <section id="2-form-the-team"><h2>2. Form the team</h2><ul><li>Appoint a Product Owner with decision-making authority.</li><li>Assemble a cross-functional <a href="/project-management/agile/what-is-an-agile-team/">team</a> with all the skills needed.</li><li>Appoint a Scrum Master or Agile lead.</li><li>Agree working hours, communication channels and a team agreement.</li></ul></section>
@@ -52,9 +63,8 @@
 <section id="7-release-and-learn"><h2>7. Release and learn</h2><p>Release as soon as the increment is valuable. Measure real usage, collect feedback and feed it back into the backlog.</p></section>
 <section id="8-close-or-continue"><h2>8. Close or continue</h2><p>Many Agile products continue indefinitely with the same team. If the project ends, hold a final retrospective, hand over to operations, close budgets and share lessons learned.</p></section>
 
-<section id="key-takeaways" class="takeaways"><h2>Key takeaways</h2><ul><li>Start with a vision, a Product Owner and a cross-functional team.</li><li>Build the backlog through story mapping and aim for an MVP.</li><li>Release early, measure and keep stakeholders involved.</li></ul></section>
 <section id="faq"><h2>Frequently asked questions</h2><details class='faq'><summary>How do you start an Agile project with no backlog?</summary><p>Run a story-mapping or discovery workshop with users and stakeholders, then write the first set of user stories for the most valuable journey.</p></details><details class='faq'><summary>Who manages an Agile project?</summary><p>Responsibility is shared: the Product Owner owns value and priorities, the team owns delivery, and the Scrum Master or Agile lead owns the process. Some organisations add an <a href="/project-management/agile/agile-project-manager/">Agile project manager</a>.</p></details></section>
-      <aside class="cta"><p class="eyebrow">Go further</p><h2>Get certified with PMAI</h2><p>This topic is covered in <b>Sprintcraft: Agile &amp; Scrum Practitioner</b>, one of six courses in the PMAI certification: assessed chapters and a verifiable certificate for $10.</p><a class="btn" href="/">See the PMAI certification</a></aside>
+      <aside class="ctabox"><p class="eyebrow">Go further</p><h2>Get certified with PMAI</h2><p>This topic is covered in <b>Sprintcraft: Agile &amp; Scrum Practitioner</b>, one of six courses in the PMAI certification: assessed chapters and a verifiable certificate for $10.</p><a class="btn" href="/">See the PMAI certification</a></aside>
       <nav class="pn" aria-label="More in this guide"><a href="/project-management/agile/how-to-implement-agile/"><small>Previous</small>How to Implement Agile: A Step-by-Step Guide</a><a class="next" href="/project-management/agile/how-to-learn-agile-and-get-certified/"><small>Next</small>How to Learn Agile and Get Certified: A Practical Path</a></nav>
     </div>
   </div>
@@ -65,5 +75,15 @@
   <div><b>Neural Project Institute</b><p>Free project management guides and the PMAI certification. Operated by Flaunt Weekly LLC, a Wyoming LLC.</p></div>
   <nav aria-label="Footer"><a href="/project-management/">Project Management guide</a><a href="/project-management/agile/">Agile guide</a><a href="/project-management/scrum/">Scrum guide</a><a href="/project-management/kanban/">Kanban guide</a><a href="/">PMAI certification</a></nav>
 </div></footer>
+<script>
+document.querySelectorAll(".dd").forEach(function (dd) {
+  var b = dd.querySelector(".ddbtn");
+  b.addEventListener("click", function (e) { e.stopPropagation(); var o = dd.classList.toggle("open"); b.setAttribute("aria-expanded", o) });
+  dd.addEventListener("mouseenter", function () { b.setAttribute("aria-expanded", "true") });
+  dd.addEventListener("mouseleave", function () { if (!dd.classList.contains("open")) b.setAttribute("aria-expanded", "false") });
+});
+document.addEventListener("click", function () { document.querySelectorAll(".dd.open").forEach(function (d) { d.classList.remove("open"); d.querySelector(".ddbtn").setAttribute("aria-expanded", "false") }) });
+document.addEventListener("keydown", function (e) { if (e.key === "Escape") document.querySelectorAll(".dd.open").forEach(function (d) { d.classList.remove("open") }) });
+</script>
 </body>
 </html>

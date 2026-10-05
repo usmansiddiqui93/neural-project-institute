@@ -27,8 +27,18 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="top"><div class="wrap">
   <a class="brand" href="/"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="5" width="13" height="4" rx="1" fill="var(--ink)"/><rect x="6" y="11" width="11" height="4" rx="1" fill="var(--accent)"/><rect x="2" y="17" width="9" height="4" rx="1" fill="var(--ink)"/><path d="M20 15.5l4 4-4 4-4-4z" fill="var(--mile)"/></svg><span><b>Neural Project Institute</b><small>Project management certification for the AI era</small></span></a>
-  <nav aria-label="Guides">
-    <a href="/project-management/">Project Management</a><a href="/project-management/agile/">Agile</a><a href="/project-management/scrum/">Scrum</a><a href="/project-management/kanban/">Kanban</a><a class="cta" href="/">PMAI Certification</a>
+  <nav class="mainnav" aria-label="Main">
+    <div class="dd">
+      <button class="ddbtn" aria-expanded="false" aria-haspopup="true">Guides <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+      <div class="ddmenu" role="menu">
+        <a role="menuitem" href="/project-management/"><b>Project Management Guide</b><span>Planning, scheduling, risk, budgets and tools</span></a>
+        <a role="menuitem" href="/project-management/agile/"><b>Agile Guide</b><span>Values, practices, roles and scaling</span></a>
+        <a role="menuitem" href="/project-management/scrum/"><b>Scrum Guide</b><span>Accountabilities, events and artifacts</span></a>
+        <a role="menuitem" href="/project-management/kanban/"><b>Kanban Guide</b><span>Boards, WIP limits and flow metrics</span></a>
+      </div>
+    </div>
+    <a href="/about-the-institute/">About</a>
+    <a class="cta" href="/">PMAI Certification</a>
   </nav>
 </div></header>
 <main id="main" class="wrap">
@@ -40,8 +50,9 @@
     <p class="lead">Velocity is the amount of work an Agile team completes in a sprint, usually measured in story points. A velocity chart plots it sprint by sprint. Used well, it is a simple forecasting tool. Used badly, it becomes a misleading performance target.</p>
     <div class="byline"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="5" width="13" height="4" rx="1" fill="var(--ink)"/><rect x="6" y="11" width="11" height="4" rx="1" fill="var(--accent)"/><rect x="2" y="17" width="9" height="4" rx="1" fill="var(--ink)"/><path d="M20 15.5l4 4-4 4-4-4z" fill="var(--mile)"/></svg><div><span>By <a href="/about-the-institute/" rel="author">Neural Project Institute</a></span><span>Published <time datetime="2026-10-05">5 October 2026</time> · 3 min read</span></div></div>
   </header>
+  <section id="key-takeaways" class="takeaways top"><h2>Key takeaways</h2><ul><li>Velocity is completed story points per sprint.</li><li>Use averages and ranges to forecast, never single numbers.</li><li>Never compare or target velocity between teams.</li></ul></section>
   <div class="agrid">
-    <aside class="toc"><details open><summary>Table of contents</summary><nav aria-label="Table of contents"><ol><li><a href="#what-velocity-measures">What velocity measures</a></li><li><a href="#reading-a-velocity-chart">Reading a velocity chart</a></li><li><a href="#using-velocity-to-plan">Using velocity to plan</a></li><li><a href="#velocity-burndown-and-burnup">Velocity, burndown and burnup</a></li><li><a href="#mistakes-to-avoid">Mistakes to avoid</a></li><li><a href="#key-takeaways">Key takeaways</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></details></aside>
+    <aside class="toc"><details open><summary>Table of contents</summary><nav aria-label="Table of contents"><ol><li><a href="#key-takeaways">Key takeaways</a></li><li><a href="#what-velocity-measures">What velocity measures</a></li><li><a href="#reading-a-velocity-chart">Reading a velocity chart</a></li><li><a href="#using-velocity-to-plan">Using velocity to plan</a></li><li><a href="#velocity-burndown-and-burnup">Velocity, burndown and burnup</a></li><li><a href="#mistakes-to-avoid">Mistakes to avoid</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></details></aside>
     <div class="abody">
 <section id="what-velocity-measures"><h2>What velocity measures</h2><p>Velocity is the sum of the <a href="/project-management/agile/agile-estimation-story-points/">story points</a> of all items that met the <a href="/project-management/agile/definition-of-done/">Definition of Done</a> in a sprint. Partially finished work counts as zero.</p></section>
 <section id="reading-a-velocity-chart"><h2>Reading a velocity chart</h2><p>A velocity chart is usually a bar chart with one or two bars per sprint:</p><ul><li><strong>Committed:</strong> points planned at Sprint Planning.</li><li><strong>Completed:</strong> points actually done.</li></ul><p>Look for trends rather than single sprints. A stable velocity means predictable delivery. Big swings suggest items are too large, the team is often interrupted, or estimates are inconsistent.</p></section>
@@ -49,9 +60,8 @@
 <section id="velocity-burndown-and-burnup"><h2>Velocity, burndown and burnup</h2><div class="tw"><table><thead><tr><th>Chart</th><th>Shows</th><th>Best for</th></tr></thead><tbody><tr><td>Velocity chart</td><td>Points completed per sprint</td><td>Capacity and long-term forecasting</td></tr><tr><td>Sprint burndown</td><td>Work remaining in the current sprint, day by day</td><td>Daily progress within a sprint</td></tr><tr><td>Release burnup</td><td>Completed work and total scope over time</td><td>Showing progress when scope changes</td></tr></tbody></table></div></section>
 <section id="mistakes-to-avoid"><h2>Mistakes to avoid</h2><ul><li>Comparing velocity across teams; points are relative to each team.</li><li>Setting velocity targets, which encourages inflated estimates.</li><li>Counting unfinished work.</li><li>Treating a forecast as a promise.</li></ul></section>
 
-<section id="key-takeaways" class="takeaways"><h2>Key takeaways</h2><ul><li>Velocity is completed story points per sprint.</li><li>Use averages and ranges to forecast, never single numbers.</li><li>Never compare or target velocity between teams.</li></ul></section>
 <section id="faq"><h2>Frequently asked questions</h2><details class='faq'><summary>What is a good velocity?</summary><p>There is no good or bad number. A useful velocity is a stable one, because stability makes forecasting reliable.</p></details><details class='faq'><summary>How many sprints before velocity is reliable?</summary><p>Usually three to five sprints with a stable team.</p></details></section>
-      <aside class="cta"><p class="eyebrow">Go further</p><h2>Get certified with PMAI</h2><p>This topic is covered in <b>Sprintcraft: Agile &amp; Scrum Practitioner</b>, one of six courses in the PMAI certification: assessed chapters and a verifiable certificate for $10.</p><a class="btn" href="/">See the PMAI certification</a></aside>
+      <aside class="ctabox"><p class="eyebrow">Go further</p><h2>Get certified with PMAI</h2><p>This topic is covered in <b>Sprintcraft: Agile &amp; Scrum Practitioner</b>, one of six courses in the PMAI certification: assessed chapters and a verifiable certificate for $10.</p><a class="btn" href="/">See the PMAI certification</a></aside>
       <nav class="pn" aria-label="More in this guide"><a href="/project-management/agile/agile-estimation-story-points/"><small>Previous</small>Agile Estimation: Story Points and the Fibonacci Scale</a><a class="next" href="/project-management/agile/agile-meetings-and-ceremonies/"><small>Next</small>Agile Meetings and Ceremonies: A Practical Guide</a></nav>
     </div>
   </div>
@@ -62,5 +72,15 @@
   <div><b>Neural Project Institute</b><p>Free project management guides and the PMAI certification. Operated by Flaunt Weekly LLC, a Wyoming LLC.</p></div>
   <nav aria-label="Footer"><a href="/project-management/">Project Management guide</a><a href="/project-management/agile/">Agile guide</a><a href="/project-management/scrum/">Scrum guide</a><a href="/project-management/kanban/">Kanban guide</a><a href="/">PMAI certification</a></nav>
 </div></footer>
+<script>
+document.querySelectorAll(".dd").forEach(function (dd) {
+  var b = dd.querySelector(".ddbtn");
+  b.addEventListener("click", function (e) { e.stopPropagation(); var o = dd.classList.toggle("open"); b.setAttribute("aria-expanded", o) });
+  dd.addEventListener("mouseenter", function () { b.setAttribute("aria-expanded", "true") });
+  dd.addEventListener("mouseleave", function () { if (!dd.classList.contains("open")) b.setAttribute("aria-expanded", "false") });
+});
+document.addEventListener("click", function () { document.querySelectorAll(".dd.open").forEach(function (d) { d.classList.remove("open"); d.querySelector(".ddbtn").setAttribute("aria-expanded", "false") }) });
+document.addEventListener("keydown", function (e) { if (e.key === "Escape") document.querySelectorAll(".dd.open").forEach(function (d) { d.classList.remove("open") }) });
+</script>
 </body>
 </html>

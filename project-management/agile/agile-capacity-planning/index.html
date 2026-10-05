@@ -27,8 +27,18 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="top"><div class="wrap">
   <a class="brand" href="/"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="5" width="13" height="4" rx="1" fill="var(--ink)"/><rect x="6" y="11" width="11" height="4" rx="1" fill="var(--accent)"/><rect x="2" y="17" width="9" height="4" rx="1" fill="var(--ink)"/><path d="M20 15.5l4 4-4 4-4-4z" fill="var(--mile)"/></svg><span><b>Neural Project Institute</b><small>Project management certification for the AI era</small></span></a>
-  <nav aria-label="Guides">
-    <a href="/project-management/">Project Management</a><a href="/project-management/agile/">Agile</a><a href="/project-management/scrum/">Scrum</a><a href="/project-management/kanban/">Kanban</a><a class="cta" href="/">PMAI Certification</a>
+  <nav class="mainnav" aria-label="Main">
+    <div class="dd">
+      <button class="ddbtn" aria-expanded="false" aria-haspopup="true">Guides <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+      <div class="ddmenu" role="menu">
+        <a role="menuitem" href="/project-management/"><b>Project Management Guide</b><span>Planning, scheduling, risk, budgets and tools</span></a>
+        <a role="menuitem" href="/project-management/agile/"><b>Agile Guide</b><span>Values, practices, roles and scaling</span></a>
+        <a role="menuitem" href="/project-management/scrum/"><b>Scrum Guide</b><span>Accountabilities, events and artifacts</span></a>
+        <a role="menuitem" href="/project-management/kanban/"><b>Kanban Guide</b><span>Boards, WIP limits and flow metrics</span></a>
+      </div>
+    </div>
+    <a href="/about-the-institute/">About</a>
+    <a class="cta" href="/">PMAI Certification</a>
   </nav>
 </div></header>
 <main id="main" class="wrap">
@@ -40,8 +50,9 @@
     <p class="lead">Capacity planning answers a simple question: how much work can this team realistically take on in the coming sprint or quarter? Getting it right prevents overcommitment, burnout and missed goals.</p>
     <div class="byline"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="5" width="13" height="4" rx="1" fill="var(--ink)"/><rect x="6" y="11" width="11" height="4" rx="1" fill="var(--accent)"/><rect x="2" y="17" width="9" height="4" rx="1" fill="var(--ink)"/><path d="M20 15.5l4 4-4 4-4-4z" fill="var(--mile)"/></svg><div><span>By <a href="/about-the-institute/" rel="author">Neural Project Institute</a></span><span>Published <time datetime="2026-10-05">5 October 2026</time> · 3 min read</span></div></div>
   </header>
+  <section id="key-takeaways" class="takeaways top"><h2>Key takeaways</h2><ul><li>Capacity is available time; velocity is historical output.</li><li>Adjust average velocity by changes in availability.</li><li>Reserve capacity for unplanned work.</li></ul></section>
   <div class="agrid">
-    <aside class="toc"><details open><summary>Table of contents</summary><nav aria-label="Table of contents"><ol><li><a href="#capacity-vs-velocity">Capacity vs velocity</a></li><li><a href="#calculating-sprint-capacity">Calculating sprint capacity</a></li><li><a href="#planning-for-interruptions">Planning for interruptions</a></li><li><a href="#capacity-planning-across-teams">Capacity planning across teams</a></li><li><a href="#common-mistakes">Common mistakes</a></li><li><a href="#key-takeaways">Key takeaways</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></details></aside>
+    <aside class="toc"><details open><summary>Table of contents</summary><nav aria-label="Table of contents"><ol><li><a href="#key-takeaways">Key takeaways</a></li><li><a href="#capacity-vs-velocity">Capacity vs velocity</a></li><li><a href="#calculating-sprint-capacity">Calculating sprint capacity</a></li><li><a href="#planning-for-interruptions">Planning for interruptions</a></li><li><a href="#capacity-planning-across-teams">Capacity planning across teams</a></li><li><a href="#common-mistakes">Common mistakes</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></details></aside>
     <div class="abody">
 <section id="capacity-vs-velocity"><h2>Capacity vs velocity</h2><p><strong>Capacity</strong> is the time the team has available. <strong>Velocity</strong> is how much work it has historically completed in that time. Good planning uses both: velocity as the baseline, adjusted for changes in capacity.</p></section>
 <section id="calculating-sprint-capacity"><h2>Calculating sprint capacity</h2><ol><li>List each team member and their available working days in the sprint, after holidays, training and other commitments.</li><li>Multiply by the hours they can focus on sprint work each day; few people have more than five or six.</li><li>Subtract time reserved for meetings, support and unplanned work.</li><li>Compare total available time with normal capacity, and scale your average velocity accordingly.</li></ol><aside class="tip"><span>Tip</span><p>Example: average velocity is 30 points. Two of five team members are on leave for half the sprint, so capacity is about 80% of normal. Plan for roughly 24 points.</p></aside></section>
@@ -49,9 +60,8 @@
 <section id="capacity-planning-across-teams"><h2>Capacity planning across teams</h2><p>At the portfolio level, capacity is usually expressed as the number of teams or sprints available per quarter. Leaders match demand from the <a href="/project-management/agile/agile-roadmap/">roadmap</a> against this capacity and decide what not to do. In <a href="/project-management/agile/scaled-agile-framework-safe/">SAFe</a>, this happens during <a href="/project-management/agile/pi-planning/">PI Planning</a>.</p></section>
 <section id="common-mistakes"><h2>Common mistakes</h2><ul><li>Planning at 100% of available hours.</li><li>Ignoring holidays and part-time availability.</li><li>Assuming new team members are fully productive from day one.</li><li>Adding people late to speed up a late project, which usually slows it down at first.</li></ul></section>
 
-<section id="key-takeaways" class="takeaways"><h2>Key takeaways</h2><ul><li>Capacity is available time; velocity is historical output.</li><li>Adjust average velocity by changes in availability.</li><li>Reserve capacity for unplanned work.</li></ul></section>
 <section id="faq"><h2>Frequently asked questions</h2><details class='faq'><summary>What is a focus factor?</summary><p>The share of available time a team actually spends on planned sprint work. Many teams find it is between 60% and 80%.</p></details><details class='faq'><summary>Should we plan in hours or story points?</summary><p>Use story points and velocity for what to commit to, and hours or days only to check availability.</p></details></section>
-      <aside class="cta"><p class="eyebrow">Go further</p><h2>Get certified with PMAI</h2><p>This topic is covered in <b>Baseline: Scope, Schedule &amp; Cost Control</b>, one of six courses in the PMAI certification: assessed chapters and a verifiable certificate for $10.</p><a class="btn" href="/">See the PMAI certification</a></aside>
+      <aside class="ctabox"><p class="eyebrow">Go further</p><h2>Get certified with PMAI</h2><p>This topic is covered in <b>Baseline: Scope, Schedule &amp; Cost Control</b>, one of six courses in the PMAI certification: assessed chapters and a verifiable certificate for $10.</p><a class="btn" href="/">See the PMAI certification</a></aside>
       <nav class="pn" aria-label="More in this guide"><a href="/project-management/agile/agile-workflow/"><small>Previous</small>Agile Workflow: How to Design One for Your Team</a><a class="next" href="/project-management/agile/agile-tools-and-techniques/"><small>Next</small>Agile Project Management Tools and Techniques</a></nav>
     </div>
   </div>
@@ -62,5 +72,15 @@
   <div><b>Neural Project Institute</b><p>Free project management guides and the PMAI certification. Operated by Flaunt Weekly LLC, a Wyoming LLC.</p></div>
   <nav aria-label="Footer"><a href="/project-management/">Project Management guide</a><a href="/project-management/agile/">Agile guide</a><a href="/project-management/scrum/">Scrum guide</a><a href="/project-management/kanban/">Kanban guide</a><a href="/">PMAI certification</a></nav>
 </div></footer>
+<script>
+document.querySelectorAll(".dd").forEach(function (dd) {
+  var b = dd.querySelector(".ddbtn");
+  b.addEventListener("click", function (e) { e.stopPropagation(); var o = dd.classList.toggle("open"); b.setAttribute("aria-expanded", o) });
+  dd.addEventListener("mouseenter", function () { b.setAttribute("aria-expanded", "true") });
+  dd.addEventListener("mouseleave", function () { if (!dd.classList.contains("open")) b.setAttribute("aria-expanded", "false") });
+});
+document.addEventListener("click", function () { document.querySelectorAll(".dd.open").forEach(function (d) { d.classList.remove("open"); d.querySelector(".ddbtn").setAttribute("aria-expanded", "false") }) });
+document.addEventListener("keydown", function (e) { if (e.key === "Escape") document.querySelectorAll(".dd.open").forEach(function (d) { d.classList.remove("open") }) });
+</script>
 </body>
 </html>

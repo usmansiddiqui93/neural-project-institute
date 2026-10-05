@@ -27,8 +27,18 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="top"><div class="wrap">
   <a class="brand" href="/"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="5" width="13" height="4" rx="1" fill="var(--ink)"/><rect x="6" y="11" width="11" height="4" rx="1" fill="var(--accent)"/><rect x="2" y="17" width="9" height="4" rx="1" fill="var(--ink)"/><path d="M20 15.5l4 4-4 4-4-4z" fill="var(--mile)"/></svg><span><b>Neural Project Institute</b><small>Project management certification for the AI era</small></span></a>
-  <nav aria-label="Guides">
-    <a href="/project-management/">Project Management</a><a href="/project-management/agile/">Agile</a><a href="/project-management/scrum/">Scrum</a><a href="/project-management/kanban/">Kanban</a><a class="cta" href="/">PMAI Certification</a>
+  <nav class="mainnav" aria-label="Main">
+    <div class="dd">
+      <button class="ddbtn" aria-expanded="false" aria-haspopup="true">Guides <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+      <div class="ddmenu" role="menu">
+        <a role="menuitem" href="/project-management/"><b>Project Management Guide</b><span>Planning, scheduling, risk, budgets and tools</span></a>
+        <a role="menuitem" href="/project-management/agile/"><b>Agile Guide</b><span>Values, practices, roles and scaling</span></a>
+        <a role="menuitem" href="/project-management/scrum/"><b>Scrum Guide</b><span>Accountabilities, events and artifacts</span></a>
+        <a role="menuitem" href="/project-management/kanban/"><b>Kanban Guide</b><span>Boards, WIP limits and flow metrics</span></a>
+      </div>
+    </div>
+    <a href="/about-the-institute/">About</a>
+    <a class="cta" href="/">PMAI Certification</a>
   </nav>
 </div></header>
 <main id="main" class="wrap">
@@ -40,17 +50,17 @@
     <p class="lead">Agile software development is where Agile began. Teams deliver working software in short iterations, supported by engineering practices that keep quality high while requirements change.</p>
     <div class="byline"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="5" width="13" height="4" rx="1" fill="var(--ink)"/><rect x="6" y="11" width="11" height="4" rx="1" fill="var(--accent)"/><rect x="2" y="17" width="9" height="4" rx="1" fill="var(--ink)"/><path d="M20 15.5l4 4-4 4-4-4z" fill="var(--mile)"/></svg><div><span>By <a href="/about-the-institute/" rel="author">Neural Project Institute</a></span><span>Published <time datetime="2026-10-05">5 October 2026</time> · 3 min read</span></div></div>
   </header>
+  <section id="key-takeaways" class="takeaways top"><h2>Key takeaways</h2><ul><li>Agile software teams deliver working software in short iterations.</li><li>TDD, CI/CD, code review and refactoring keep quality high under change.</li><li>DevOps extends Agile into release and operations.</li></ul></section>
   <div class="agrid">
-    <aside class="toc"><details open><summary>Table of contents</summary><nav aria-label="Table of contents"><ol><li><a href="#the-development-cycle">The development cycle</a></li><li><a href="#core-engineering-practices">Core engineering practices</a></li><li><a href="#agile-and-devops">Agile and DevOps</a></li><li><a href="#best-practices">Best practices</a></li><li><a href="#key-takeaways">Key takeaways</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></details></aside>
+    <aside class="toc"><details open><summary>Table of contents</summary><nav aria-label="Table of contents"><ol><li><a href="#key-takeaways">Key takeaways</a></li><li><a href="#the-development-cycle">The development cycle</a></li><li><a href="#core-engineering-practices">Core engineering practices</a></li><li><a href="#agile-and-devops">Agile and DevOps</a></li><li><a href="#best-practices">Best practices</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></details></aside>
     <div class="abody">
 <section id="the-development-cycle"><h2>The development cycle</h2><ol><li>The Product Owner orders a backlog of user stories.</li><li>In <a href="/project-management/agile/agile-meetings-and-ceremonies/">Sprint Planning</a>, developers pick stories and break them into tasks.</li><li>Developers write code and automated tests together.</li><li>Code is reviewed and merged frequently into a shared main branch.</li><li>Continuous integration builds and tests every change automatically.</li><li>Finished stories are demonstrated at the Sprint Review and released, sometimes many times a day.</li></ol><p>See the Agile development life cycle for the wider process.</p></section>
 <section id="core-engineering-practices"><h2>Core engineering practices</h2><div class="tw"><table><thead><tr><th>Practice</th><th>What it is</th><th>Why it matters</th></tr></thead><tbody><tr><td>Test-driven development (TDD)</td><td>Write a failing test, then the code to pass it, then refactor</td><td>Fewer defects, better design</td></tr><tr><td>Continuous integration (CI)</td><td>Merge and test code at least daily</td><td>Integration problems found early</td></tr><tr><td>Continuous delivery (CD)</td><td>Keep software always releasable; automate deployment</td><td>Fast, low-risk releases</td></tr><tr><td>Pair programming</td><td>Two developers share one task</td><td>Quality and knowledge sharing</td></tr><tr><td>Code review</td><td>Another developer checks each change</td><td>Quality and shared ownership</td></tr><tr><td>Refactoring</td><td>Improve code structure without changing behaviour</td><td>Keeps code easy to change</td></tr><tr><td>Trunk-based development</td><td>Short-lived branches merged quickly</td><td>Avoids painful merges</td></tr></tbody></table></div></section>
 <section id="agile-and-devops"><h2>Agile and DevOps</h2><p>DevOps extends Agile beyond development into operations: teams own their software in production, automate infrastructure, monitor real usage and recover quickly from failures. Widely used DevOps measures include deployment frequency, lead time for changes, change failure rate and time to restore service.</p></section>
 <section id="best-practices"><h2>Best practices</h2><ul><li>Keep stories small enough to finish in a few days.</li><li>Make the <a href="/project-management/agile/definition-of-done/">Definition of Done</a> include automated tests.</li><li>Pay down technical debt continuously; reserve capacity each sprint.</li><li>Automate builds, tests and deployments.</li><li>Release small changes often, using feature flags to separate deployment from release.</li><li>Involve users early and measure real usage after release.</li><li>Hold blameless reviews after incidents.</li></ul></section>
 
-<section id="key-takeaways" class="takeaways"><h2>Key takeaways</h2><ul><li>Agile software teams deliver working software in short iterations.</li><li>TDD, CI/CD, code review and refactoring keep quality high under change.</li><li>DevOps extends Agile into release and operations.</li></ul></section>
 <section id="faq"><h2>Frequently asked questions</h2><details class='faq'><summary>What is the difference between Agile and DevOps?</summary><p>Agile focuses on how teams plan and build software iteratively; DevOps extends that collaboration and automation into releasing and running the software.</p></details><details class='faq'><summary>Do Agile teams still write documentation?</summary><p>Yes: enough to help users and future developers, such as clear code, automated tests, API docs and short decision records.</p></details></section>
-      <aside class="cta"><p class="eyebrow">Go further</p><h2>Get certified with PMAI</h2><p>This topic is covered in <b>Sprintcraft: Agile &amp; Scrum Practitioner</b>, one of six courses in the PMAI certification: assessed chapters and a verifiable certificate for $10.</p><a class="btn" href="/">See the PMAI certification</a></aside>
+      <aside class="ctabox"><p class="eyebrow">Go further</p><h2>Get certified with PMAI</h2><p>This topic is covered in <b>Sprintcraft: Agile &amp; Scrum Practitioner</b>, one of six courses in the PMAI certification: assessed chapters and a verifiable certificate for $10.</p><a class="btn" href="/">See the PMAI certification</a></aside>
       <nav class="pn" aria-label="More in this guide"><a href="/project-management/agile/agile-in-construction/"><small>Previous</small>Is Agile Project Management Applicable to Construction?</a><a class="next" href="/project-management/agile/how-to-implement-agile/"><small>Next</small>How to Implement Agile: A Step-by-Step Guide</a></nav>
     </div>
   </div>
@@ -61,5 +71,15 @@
   <div><b>Neural Project Institute</b><p>Free project management guides and the PMAI certification. Operated by Flaunt Weekly LLC, a Wyoming LLC.</p></div>
   <nav aria-label="Footer"><a href="/project-management/">Project Management guide</a><a href="/project-management/agile/">Agile guide</a><a href="/project-management/scrum/">Scrum guide</a><a href="/project-management/kanban/">Kanban guide</a><a href="/">PMAI certification</a></nav>
 </div></footer>
+<script>
+document.querySelectorAll(".dd").forEach(function (dd) {
+  var b = dd.querySelector(".ddbtn");
+  b.addEventListener("click", function (e) { e.stopPropagation(); var o = dd.classList.toggle("open"); b.setAttribute("aria-expanded", o) });
+  dd.addEventListener("mouseenter", function () { b.setAttribute("aria-expanded", "true") });
+  dd.addEventListener("mouseleave", function () { if (!dd.classList.contains("open")) b.setAttribute("aria-expanded", "false") });
+});
+document.addEventListener("click", function () { document.querySelectorAll(".dd.open").forEach(function (d) { d.classList.remove("open"); d.querySelector(".ddbtn").setAttribute("aria-expanded", "false") }) });
+document.addEventListener("keydown", function (e) { if (e.key === "Escape") document.querySelectorAll(".dd.open").forEach(function (d) { d.classList.remove("open") }) });
+</script>
 </body>
 </html>

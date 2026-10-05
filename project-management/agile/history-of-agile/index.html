@@ -27,8 +27,18 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="top"><div class="wrap">
   <a class="brand" href="/"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="5" width="13" height="4" rx="1" fill="var(--ink)"/><rect x="6" y="11" width="11" height="4" rx="1" fill="var(--accent)"/><rect x="2" y="17" width="9" height="4" rx="1" fill="var(--ink)"/><path d="M20 15.5l4 4-4 4-4-4z" fill="var(--mile)"/></svg><span><b>Neural Project Institute</b><small>Project management certification for the AI era</small></span></a>
-  <nav aria-label="Guides">
-    <a href="/project-management/">Project Management</a><a href="/project-management/agile/">Agile</a><a href="/project-management/scrum/">Scrum</a><a href="/project-management/kanban/">Kanban</a><a class="cta" href="/">PMAI Certification</a>
+  <nav class="mainnav" aria-label="Main">
+    <div class="dd">
+      <button class="ddbtn" aria-expanded="false" aria-haspopup="true">Guides <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+      <div class="ddmenu" role="menu">
+        <a role="menuitem" href="/project-management/"><b>Project Management Guide</b><span>Planning, scheduling, risk, budgets and tools</span></a>
+        <a role="menuitem" href="/project-management/agile/"><b>Agile Guide</b><span>Values, practices, roles and scaling</span></a>
+        <a role="menuitem" href="/project-management/scrum/"><b>Scrum Guide</b><span>Accountabilities, events and artifacts</span></a>
+        <a role="menuitem" href="/project-management/kanban/"><b>Kanban Guide</b><span>Boards, WIP limits and flow metrics</span></a>
+      </div>
+    </div>
+    <a href="/about-the-institute/">About</a>
+    <a class="cta" href="/">PMAI Certification</a>
   </nav>
 </div></header>
 <main id="main" class="wrap">
@@ -40,8 +50,9 @@
     <p class="lead">Agile did not appear from nowhere in 2001. The Manifesto gave a name to ideas that engineers and managers had been developing for decades: build in small steps, learn from each one, and let the people closest to the work organise it. This short history explains where those ideas came from and how they spread.</p>
     <div class="byline"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="5" width="13" height="4" rx="1" fill="var(--ink)"/><rect x="6" y="11" width="11" height="4" rx="1" fill="var(--accent)"/><rect x="2" y="17" width="9" height="4" rx="1" fill="var(--ink)"/><path d="M20 15.5l4 4-4 4-4-4z" fill="var(--mile)"/></svg><div><span>By <a href="/about-the-institute/" rel="author">Neural Project Institute</a></span><span>Published <time datetime="2026-10-05">5 October 2026</time> · 3 min read</span></div></div>
   </header>
+  <section id="key-takeaways" class="takeaways top"><h2>Key takeaways</h2><ul><li>Agile names ideas that existed long before 2001: iteration, Lean, empowered teams.</li><li>The 1990s produced Scrum, XP, DSDM, Crystal and FDD.</li><li>Since 2001, Agile has scaled to large organisations and spread beyond software.</li></ul></section>
   <div class="agrid">
-    <aside class="toc"><details open><summary>Table of contents</summary><nav aria-label="Table of contents"><ol><li><a href="#before-agile-iterative-development">Before Agile: iterative development</a></li><li><a href="#lean-manufacturing">Lean manufacturing</a></li><li><a href="#the-1990s-lightweight-methods">The 1990s: lightweight methods</a></li><li><a href="#2001-the-agile-manifesto">2001: the Agile Manifesto</a></li><li><a href="#2000s-and-2010s-from-teams-to-organisations">2000s and 2010s: from teams to organisations</a></li><li><a href="#today-and-what-comes-next">Today and what comes next</a></li><li><a href="#key-takeaways">Key takeaways</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></details></aside>
+    <aside class="toc"><details open><summary>Table of contents</summary><nav aria-label="Table of contents"><ol><li><a href="#key-takeaways">Key takeaways</a></li><li><a href="#before-agile-iterative-development">Before Agile: iterative development</a></li><li><a href="#lean-manufacturing">Lean manufacturing</a></li><li><a href="#the-1990s-lightweight-methods">The 1990s: lightweight methods</a></li><li><a href="#2001-the-agile-manifesto">2001: the Agile Manifesto</a></li><li><a href="#2000s-and-2010s-from-teams-to-organisations">2000s and 2010s: from teams to organisations</a></li><li><a href="#today-and-what-comes-next">Today and what comes next</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></details></aside>
     <div class="abody">
 <section id="before-agile-iterative-development"><h2>Before Agile: iterative development</h2><p>Iterative and incremental development was used on large engineering programmes as early as the 1950s and 1960s. Meanwhile, much of the software industry adopted a sequential model in which requirements, design, coding and testing happened one after another. In 1970 Winston Royce published a paper describing that sequence, and it later became known as the Waterfall model. Ironically, Royce&#x27;s paper warned that a purely sequential approach was risky and recommended iteration and early feedback.</p></section>
 <section id="lean-manufacturing"><h2>Lean manufacturing</h2><p>From the 1950s onwards, Toyota developed what became known as the Toyota Production System and, later, Lean thinking: eliminate waste, pull work only when it is needed, limit work in progress and improve continuously. Kanban boards and the idea of empowered teams that stop the line to fix problems both come from this tradition, and both shaped Agile.</p></section>
@@ -50,9 +61,8 @@
 <section id="2000s-and-2010s-from-teams-to-organisations"><h2>2000s and 2010s: from teams to organisations</h2><ul><li><strong>Scrum spreads</strong> through training and certification, and becomes the most widely used Agile framework. The first official Scrum Guide is published in 2010.</li><li><strong>Kanban for knowledge work</strong> is popularised by David J. Anderson in the late 2000s.</li><li><strong>DevOps and continuous delivery</strong> extend Agile ideas to deployment and operations.</li><li><strong>Scaling frameworks</strong> appear as large organisations adopt Agile: <a href="/project-management/agile/scaled-agile-framework-safe/">SAFe</a> (first released in 2011), <a href="/project-management/agile/large-scale-scrum-less/">LeSS</a>, Disciplined Agile and the <a href="/project-management/agile/squads-tribes-chapters-guilds/">Spotify model</a>.</li><li><strong>Agile spreads beyond software</strong> into <a href="/project-management/agile/agile-marketing/">marketing</a>, HR, finance and government.</li></ul></section>
 <section id="today-and-what-comes-next"><h2>Today and what comes next</h2><p>Most organisations now use some form of Agile or a <a href="/project-management/agile/agile-vs-waterfall/">hybrid</a> of Agile and predictive methods. The current focus is on business agility (making whole organisations adaptable), outcome-based planning, and using AI to speed up planning, reporting and analysis. Read <a href="/project-management/agile/is-agile-the-future-of-project-management/">is Agile the future of project management?</a> for a closer look.</p></section>
 
-<section id="key-takeaways" class="takeaways"><h2>Key takeaways</h2><ul><li>Agile names ideas that existed long before 2001: iteration, Lean, empowered teams.</li><li>The 1990s produced Scrum, XP, DSDM, Crystal and FDD.</li><li>Since 2001, Agile has scaled to large organisations and spread beyond software.</li></ul></section>
 <section id="faq"><h2>Frequently asked questions</h2><details class='faq'><summary>When did Agile start?</summary><p>The term was coined at the Agile Manifesto meeting in February 2001, but the iterative ideas behind it date back to at least the 1950s, and frameworks such as Scrum and XP were in use during the 1990s.</p></details><details class='faq'><summary>Who invented Agile?</summary><p>No single person. Agile was defined by the seventeen authors of the Agile Manifesto, building on earlier work in iterative development, Lean manufacturing and lightweight software methods.</p></details></section>
-      <aside class="cta"><p class="eyebrow">Go further</p><h2>Get certified with PMAI</h2><p>This topic is covered in <b>Sprintcraft: Agile &amp; Scrum Practitioner</b>, one of six courses in the PMAI certification: assessed chapters and a verifiable certificate for $10.</p><a class="btn" href="/">See the PMAI certification</a></aside>
+      <aside class="ctabox"><p class="eyebrow">Go further</p><h2>Get certified with PMAI</h2><p>This topic is covered in <b>Sprintcraft: Agile &amp; Scrum Practitioner</b>, one of six courses in the PMAI certification: assessed chapters and a verifiable certificate for $10.</p><a class="btn" href="/">See the PMAI certification</a></aside>
       <nav class="pn" aria-label="More in this guide"><a href="/project-management/agile/agile-manifesto-values-and-principles/"><small>Previous</small>The Agile Manifesto: 4 Values and 12 Principles Explained</a><a class="next" href="/project-management/agile/why-use-agile-project-management/"><small>Next</small>Why Use Agile Project Management? Benefits and Trade-offs</a></nav>
     </div>
   </div>
@@ -63,5 +73,15 @@
   <div><b>Neural Project Institute</b><p>Free project management guides and the PMAI certification. Operated by Flaunt Weekly LLC, a Wyoming LLC.</p></div>
   <nav aria-label="Footer"><a href="/project-management/">Project Management guide</a><a href="/project-management/agile/">Agile guide</a><a href="/project-management/scrum/">Scrum guide</a><a href="/project-management/kanban/">Kanban guide</a><a href="/">PMAI certification</a></nav>
 </div></footer>
+<script>
+document.querySelectorAll(".dd").forEach(function (dd) {
+  var b = dd.querySelector(".ddbtn");
+  b.addEventListener("click", function (e) { e.stopPropagation(); var o = dd.classList.toggle("open"); b.setAttribute("aria-expanded", o) });
+  dd.addEventListener("mouseenter", function () { b.setAttribute("aria-expanded", "true") });
+  dd.addEventListener("mouseleave", function () { if (!dd.classList.contains("open")) b.setAttribute("aria-expanded", "false") });
+});
+document.addEventListener("click", function () { document.querySelectorAll(".dd.open").forEach(function (d) { d.classList.remove("open"); d.querySelector(".ddbtn").setAttribute("aria-expanded", "false") }) });
+document.addEventListener("keydown", function (e) { if (e.key === "Escape") document.querySelectorAll(".dd.open").forEach(function (d) { d.classList.remove("open") }) });
+</script>
 </body>
 </html>

@@ -27,8 +27,18 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="top"><div class="wrap">
   <a class="brand" href="/"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="5" width="13" height="4" rx="1" fill="var(--ink)"/><rect x="6" y="11" width="11" height="4" rx="1" fill="var(--accent)"/><rect x="2" y="17" width="9" height="4" rx="1" fill="var(--ink)"/><path d="M20 15.5l4 4-4 4-4-4z" fill="var(--mile)"/></svg><span><b>Neural Project Institute</b><small>Project management certification for the AI era</small></span></a>
-  <nav aria-label="Guides">
-    <a href="/project-management/">Project Management</a><a href="/project-management/agile/">Agile</a><a href="/project-management/scrum/">Scrum</a><a href="/project-management/kanban/">Kanban</a><a class="cta" href="/">PMAI Certification</a>
+  <nav class="mainnav" aria-label="Main">
+    <div class="dd">
+      <button class="ddbtn" aria-expanded="false" aria-haspopup="true">Guides <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+      <div class="ddmenu" role="menu">
+        <a role="menuitem" href="/project-management/"><b>Project Management Guide</b><span>Planning, scheduling, risk, budgets and tools</span></a>
+        <a role="menuitem" href="/project-management/agile/"><b>Agile Guide</b><span>Values, practices, roles and scaling</span></a>
+        <a role="menuitem" href="/project-management/scrum/"><b>Scrum Guide</b><span>Accountabilities, events and artifacts</span></a>
+        <a role="menuitem" href="/project-management/kanban/"><b>Kanban Guide</b><span>Boards, WIP limits and flow metrics</span></a>
+      </div>
+    </div>
+    <a href="/about-the-institute/">About</a>
+    <a class="cta" href="/">PMAI Certification</a>
   </nav>
 </div></header>
 <main id="main" class="wrap">
@@ -40,8 +50,9 @@
     <p class="lead">Agile teams measure to learn and improve, not to rank people. The right handful of metrics shows whether the team is delivering value predictably, at good quality, in a sustainable way.</p>
     <div class="byline"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="5" width="13" height="4" rx="1" fill="var(--ink)"/><rect x="6" y="11" width="11" height="4" rx="1" fill="var(--accent)"/><rect x="2" y="17" width="9" height="4" rx="1" fill="var(--ink)"/><path d="M20 15.5l4 4-4 4-4-4z" fill="var(--mile)"/></svg><div><span>By <a href="/about-the-institute/" rel="author">Neural Project Institute</a></span><span>Published <time datetime="2026-10-05">5 October 2026</time> · 3 min read</span></div></div>
   </header>
+  <section id="key-takeaways" class="takeaways top"><h2>Key takeaways</h2><ul><li>Measure delivery, flow, quality, outcomes and team health.</li><li>Use a small set of metrics and watch trends.</li><li>Metrics are for learning, not for ranking teams.</li></ul></section>
   <div class="agrid">
-    <aside class="toc"><details open><summary>Table of contents</summary><nav aria-label="Table of contents"><ol><li><a href="#delivery-and-predictability">Delivery and predictability</a></li><li><a href="#flow">Flow</a></li><li><a href="#quality">Quality</a></li><li><a href="#outcomes-and-value">Outcomes and value</a></li><li><a href="#team-health">Team health</a></li><li><a href="#using-metrics-well">Using metrics well</a></li><li><a href="#key-takeaways">Key takeaways</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></details></aside>
+    <aside class="toc"><details open><summary>Table of contents</summary><nav aria-label="Table of contents"><ol><li><a href="#key-takeaways">Key takeaways</a></li><li><a href="#delivery-and-predictability">Delivery and predictability</a></li><li><a href="#flow">Flow</a></li><li><a href="#quality">Quality</a></li><li><a href="#outcomes-and-value">Outcomes and value</a></li><li><a href="#team-health">Team health</a></li><li><a href="#using-metrics-well">Using metrics well</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></details></aside>
     <div class="abody">
 <section id="delivery-and-predictability"><h2>Delivery and predictability</h2><div class="tw"><table><thead><tr><th>Metric</th><th>What it shows</th></tr></thead><tbody><tr><td><a href="/project-management/agile/agile-velocity-chart/">Velocity</a></td><td>Story points completed per sprint; used for forecasting</td></tr><tr><td>Sprint burndown</td><td>Work remaining in the current sprint</td></tr><tr><td>Release burnup</td><td>Progress towards a release, including scope changes</td></tr><tr><td>Sprint goal success rate</td><td>Share of sprints in which the Sprint Goal was met</td></tr><tr><td>Planned vs completed</td><td>How reliably the team delivers what it plans</td></tr></tbody></table></div></section>
 <section id="flow"><h2>Flow</h2><div class="tw"><table><thead><tr><th>Metric</th><th>What it shows</th></tr></thead><tbody><tr><td>Cycle time</td><td>Time from starting an item to finishing it</td></tr><tr><td>Lead time</td><td>Time from the request to delivery</td></tr><tr><td>Throughput</td><td>Items finished per week</td></tr><tr><td>Work in progress</td><td>Items started but not finished</td></tr><tr><td>Cumulative flow diagram</td><td>Where work piles up in the workflow</td></tr></tbody></table></div></section>
@@ -50,9 +61,8 @@
 <section id="team-health"><h2>Team health</h2><ul><li>Regular team happiness or engagement surveys.</li><li>Overtime and unplanned work.</li><li>Retrospective actions completed.</li></ul></section>
 <section id="using-metrics-well"><h2>Using metrics well</h2><ul><li>Pick a small set: one or two from each group.</li><li>Look at trends, not single data points.</li><li>Discuss metrics in retrospectives, with the team.</li><li>Never compare velocity between teams or use it to rate individuals.</li><li>Pair every speed metric with a quality metric, so one is not improved at the expense of the other.</li></ul><aside class="tip"><span>Tip</span><p>If a metric becomes a target, people will optimise for the number rather than the result. Use metrics as questions, not verdicts.</p></aside></section>
 
-<section id="key-takeaways" class="takeaways"><h2>Key takeaways</h2><ul><li>Measure delivery, flow, quality, outcomes and team health.</li><li>Use a small set of metrics and watch trends.</li><li>Metrics are for learning, not for ranking teams.</li></ul></section>
 <section id="faq"><h2>Frequently asked questions</h2><details class='faq'><summary>What is the most important Agile metric?</summary><p>There isn&#x27;t one. Combine a flow or delivery metric with a quality metric and an outcome metric.</p></details><details class='faq'><summary>What is the difference between lead time and cycle time?</summary><p>Lead time starts when the request is made; cycle time starts when work actually begins. Both end when the item is delivered.</p></details></section>
-      <aside class="cta"><p class="eyebrow">Go further</p><h2>Get certified with PMAI</h2><p>This topic is covered in <b>Baseline: Scope, Schedule &amp; Cost Control</b>, one of six courses in the PMAI certification: assessed chapters and a verifiable certificate for $10.</p><a class="btn" href="/">See the PMAI certification</a></aside>
+      <aside class="ctabox"><p class="eyebrow">Go further</p><h2>Get certified with PMAI</h2><p>This topic is covered in <b>Baseline: Scope, Schedule &amp; Cost Control</b>, one of six courses in the PMAI certification: assessed chapters and a verifiable certificate for $10.</p><a class="btn" href="/">See the PMAI certification</a></aside>
       <nav class="pn" aria-label="More in this guide"><a href="/project-management/agile/agile-swarming/"><small>Previous</small>What Is Agile Swarming? How Teams Finish Work Faster</a><a class="next" href="/project-management/agile/agile-workflow/"><small>Next</small>Agile Workflow: How to Design One for Your Team</a></nav>
     </div>
   </div>
@@ -63,5 +73,15 @@
   <div><b>Neural Project Institute</b><p>Free project management guides and the PMAI certification. Operated by Flaunt Weekly LLC, a Wyoming LLC.</p></div>
   <nav aria-label="Footer"><a href="/project-management/">Project Management guide</a><a href="/project-management/agile/">Agile guide</a><a href="/project-management/scrum/">Scrum guide</a><a href="/project-management/kanban/">Kanban guide</a><a href="/">PMAI certification</a></nav>
 </div></footer>
+<script>
+document.querySelectorAll(".dd").forEach(function (dd) {
+  var b = dd.querySelector(".ddbtn");
+  b.addEventListener("click", function (e) { e.stopPropagation(); var o = dd.classList.toggle("open"); b.setAttribute("aria-expanded", o) });
+  dd.addEventListener("mouseenter", function () { b.setAttribute("aria-expanded", "true") });
+  dd.addEventListener("mouseleave", function () { if (!dd.classList.contains("open")) b.setAttribute("aria-expanded", "false") });
+});
+document.addEventListener("click", function () { document.querySelectorAll(".dd.open").forEach(function (d) { d.classList.remove("open"); d.querySelector(".ddbtn").setAttribute("aria-expanded", "false") }) });
+document.addEventListener("keydown", function (e) { if (e.key === "Escape") document.querySelectorAll(".dd.open").forEach(function (d) { d.classList.remove("open") }) });
+</script>
 </body>
 </html>

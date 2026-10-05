@@ -27,8 +27,18 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="top"><div class="wrap">
   <a class="brand" href="/"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="5" width="13" height="4" rx="1" fill="var(--ink)"/><rect x="6" y="11" width="11" height="4" rx="1" fill="var(--accent)"/><rect x="2" y="17" width="9" height="4" rx="1" fill="var(--ink)"/><path d="M20 15.5l4 4-4 4-4-4z" fill="var(--mile)"/></svg><span><b>Neural Project Institute</b><small>Project management certification for the AI era</small></span></a>
-  <nav aria-label="Guides">
-    <a href="/project-management/">Project Management</a><a href="/project-management/agile/">Agile</a><a href="/project-management/scrum/">Scrum</a><a href="/project-management/kanban/">Kanban</a><a class="cta" href="/">PMAI Certification</a>
+  <nav class="mainnav" aria-label="Main">
+    <div class="dd">
+      <button class="ddbtn" aria-expanded="false" aria-haspopup="true">Guides <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+      <div class="ddmenu" role="menu">
+        <a role="menuitem" href="/project-management/"><b>Project Management Guide</b><span>Planning, scheduling, risk, budgets and tools</span></a>
+        <a role="menuitem" href="/project-management/agile/"><b>Agile Guide</b><span>Values, practices, roles and scaling</span></a>
+        <a role="menuitem" href="/project-management/scrum/"><b>Scrum Guide</b><span>Accountabilities, events and artifacts</span></a>
+        <a role="menuitem" href="/project-management/kanban/"><b>Kanban Guide</b><span>Boards, WIP limits and flow metrics</span></a>
+      </div>
+    </div>
+    <a href="/about-the-institute/">About</a>
+    <a class="cta" href="/">PMAI Certification</a>
   </nav>
 </div></header>
 <main id="main" class="wrap">
@@ -40,8 +50,9 @@
     <p class="lead">A sprint is a short, fixed period, one month or less, in which an Agile team turns a set of backlog items into a usable result. Sprints give Agile teams their heartbeat: a regular rhythm of planning, building, reviewing and improving.</p>
     <div class="byline"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="5" width="13" height="4" rx="1" fill="var(--ink)"/><rect x="6" y="11" width="11" height="4" rx="1" fill="var(--accent)"/><rect x="2" y="17" width="9" height="4" rx="1" fill="var(--ink)"/><path d="M20 15.5l4 4-4 4-4-4z" fill="var(--mile)"/></svg><div><span>By <a href="/about-the-institute/" rel="author">Neural Project Institute</a></span><span>Published <time datetime="2026-10-05">5 October 2026</time> · 3 min read</span></div></div>
   </header>
+  <section id="key-takeaways" class="takeaways top"><h2>Key takeaways</h2><ul><li>A sprint is a fixed time-box of one month or less with one Sprint Goal.</li><li>Two weeks is the most common length.</li><li>Each sprint includes planning, daily coordination, a review and a retrospective.</li></ul></section>
   <div class="agrid">
-    <aside class="toc"><details open><summary>Table of contents</summary><nav aria-label="Table of contents"><ol><li><a href="#sprint-basics">Sprint basics</a></li><li><a href="#choosing-a-sprint-length">Choosing a sprint length</a></li><li><a href="#what-happens-during-a-sprint">What happens during a sprint</a></li><li><a href="#can-the-sprint-change">Can the sprint change?</a></li><li><a href="#tips-for-successful-sprints">Tips for successful sprints</a></li><li><a href="#key-takeaways">Key takeaways</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></details></aside>
+    <aside class="toc"><details open><summary>Table of contents</summary><nav aria-label="Table of contents"><ol><li><a href="#key-takeaways">Key takeaways</a></li><li><a href="#sprint-basics">Sprint basics</a></li><li><a href="#choosing-a-sprint-length">Choosing a sprint length</a></li><li><a href="#what-happens-during-a-sprint">What happens during a sprint</a></li><li><a href="#can-the-sprint-change">Can the sprint change?</a></li><li><a href="#tips-for-successful-sprints">Tips for successful sprints</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></details></aside>
     <div class="abody">
 <section id="sprint-basics"><h2>Sprint basics</h2><ul><li><strong>Fixed length.</strong> Usually one to four weeks; two weeks is most common. The length stays the same from sprint to sprint so the team can learn its pace.</li><li><strong>One goal.</strong> Each sprint has a Sprint Goal, a single objective that gives the work focus.</li><li><strong>A usable result.</strong> By the end, the team produces an Increment that meets the <a href="/project-management/agile/definition-of-done/">Definition of Done</a>.</li><li><strong>Back to back.</strong> A new sprint starts immediately after the previous one ends.</li></ul></section>
 <section id="choosing-a-sprint-length"><h2>Choosing a sprint length</h2><div class="tw"><table><thead><tr><th>Length</th><th>Good for</th><th>Watch out for</th></tr></thead><tbody><tr><td>1 week</td><td>Fast-moving products, quick feedback</td><td>Planning overhead feels high</td></tr><tr><td>2 weeks</td><td>Most teams; balances feedback and overhead</td><td>—</td></tr><tr><td>3–4 weeks</td><td>Complex work that needs longer to show results</td><td>Slower feedback; risk of mini-waterfalls inside the sprint</td></tr></tbody></table></div><p>Pick the shortest length in which the team can deliver something meaningful, and keep it stable for at least several sprints before changing it.</p></section>
@@ -49,9 +60,8 @@
 <section id="can-the-sprint-change"><h2>Can the sprint change?</h2><p>Scope can be clarified and renegotiated with the Product Owner as the team learns more, but changes that would endanger the Sprint Goal are avoided. If the Sprint Goal itself becomes obsolete, for example because the market shifts, only the Product Owner can cancel the sprint. This is rare.</p></section>
 <section id="tips-for-successful-sprints"><h2>Tips for successful sprints</h2><ul><li>Commit to less than you think you can do, especially in early sprints.</li><li>Write a Sprint Goal that describes an outcome, not a list of tasks.</li><li>Keep items small enough to finish within a few days.</li><li>Finish work before starting new work; see <a href="/project-management/agile/agile-swarming/">swarming</a>.</li><li>Track progress daily with a burndown chart or board.</li></ul></section>
 
-<section id="key-takeaways" class="takeaways"><h2>Key takeaways</h2><ul><li>A sprint is a fixed time-box of one month or less with one Sprint Goal.</li><li>Two weeks is the most common length.</li><li>Each sprint includes planning, daily coordination, a review and a retrospective.</li></ul></section>
 <section id="faq"><h2>Frequently asked questions</h2><details class='faq'><summary>What is the difference between a sprint and an iteration?</summary><p>A sprint is Scrum&#x27;s name for an iteration. Other Agile methods use &quot;iteration&quot; for the same idea.</p></details><details class='faq'><summary>What happens to unfinished work at the end of a sprint?</summary><p>It returns to the Product Backlog, where the Product Owner re-orders it. It does not count as done, and it is not automatically carried into the next sprint.</p></details></section>
-      <aside class="cta"><p class="eyebrow">Go further</p><h2>Get certified with PMAI</h2><p>This topic is covered in <b>Sprintcraft: Agile &amp; Scrum Practitioner</b>, one of six courses in the PMAI certification: assessed chapters and a verifiable certificate for $10.</p><a class="btn" href="/">See the PMAI certification</a></aside>
+      <aside class="ctabox"><p class="eyebrow">Go further</p><h2>Get certified with PMAI</h2><p>This topic is covered in <b>Sprintcraft: Agile &amp; Scrum Practitioner</b>, one of six courses in the PMAI certification: assessed chapters and a verifiable certificate for $10.</p><a class="btn" href="/">See the PMAI certification</a></aside>
       <nav class="pn" aria-label="More in this guide"><a href="/project-management/agile/types-of-agile-methodologies/"><small>Previous</small>Types of Agile Methodologies: Scrum, Kanban, XP, Lean and More</a><a class="next" href="/project-management/agile/definition-of-done/"><small>Next</small>Definition of Done in Agile: Meaning, Examples and Checklist</a></nav>
     </div>
   </div>
@@ -62,5 +72,15 @@
   <div><b>Neural Project Institute</b><p>Free project management guides and the PMAI certification. Operated by Flaunt Weekly LLC, a Wyoming LLC.</p></div>
   <nav aria-label="Footer"><a href="/project-management/">Project Management guide</a><a href="/project-management/agile/">Agile guide</a><a href="/project-management/scrum/">Scrum guide</a><a href="/project-management/kanban/">Kanban guide</a><a href="/">PMAI certification</a></nav>
 </div></footer>
+<script>
+document.querySelectorAll(".dd").forEach(function (dd) {
+  var b = dd.querySelector(".ddbtn");
+  b.addEventListener("click", function (e) { e.stopPropagation(); var o = dd.classList.toggle("open"); b.setAttribute("aria-expanded", o) });
+  dd.addEventListener("mouseenter", function () { b.setAttribute("aria-expanded", "true") });
+  dd.addEventListener("mouseleave", function () { if (!dd.classList.contains("open")) b.setAttribute("aria-expanded", "false") });
+});
+document.addEventListener("click", function () { document.querySelectorAll(".dd.open").forEach(function (d) { d.classList.remove("open"); d.querySelector(".ddbtn").setAttribute("aria-expanded", "false") }) });
+document.addEventListener("keydown", function (e) { if (e.key === "Escape") document.querySelectorAll(".dd.open").forEach(function (d) { d.classList.remove("open") }) });
+</script>
 </body>
 </html>

@@ -27,8 +27,18 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="top"><div class="wrap">
   <a class="brand" href="/"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="5" width="13" height="4" rx="1" fill="var(--ink)"/><rect x="6" y="11" width="11" height="4" rx="1" fill="var(--accent)"/><rect x="2" y="17" width="9" height="4" rx="1" fill="var(--ink)"/><path d="M20 15.5l4 4-4 4-4-4z" fill="var(--mile)"/></svg><span><b>Neural Project Institute</b><small>Project management certification for the AI era</small></span></a>
-  <nav aria-label="Guides">
-    <a href="/project-management/">Project Management</a><a href="/project-management/agile/">Agile</a><a href="/project-management/scrum/">Scrum</a><a href="/project-management/kanban/">Kanban</a><a class="cta" href="/">PMAI Certification</a>
+  <nav class="mainnav" aria-label="Main">
+    <div class="dd">
+      <button class="ddbtn" aria-expanded="false" aria-haspopup="true">Guides <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+      <div class="ddmenu" role="menu">
+        <a role="menuitem" href="/project-management/"><b>Project Management Guide</b><span>Planning, scheduling, risk, budgets and tools</span></a>
+        <a role="menuitem" href="/project-management/agile/"><b>Agile Guide</b><span>Values, practices, roles and scaling</span></a>
+        <a role="menuitem" href="/project-management/scrum/"><b>Scrum Guide</b><span>Accountabilities, events and artifacts</span></a>
+        <a role="menuitem" href="/project-management/kanban/"><b>Kanban Guide</b><span>Boards, WIP limits and flow metrics</span></a>
+      </div>
+    </div>
+    <a href="/about-the-institute/">About</a>
+    <a class="cta" href="/">PMAI Certification</a>
   </nav>
 </div></header>
 <main id="main" class="wrap">
@@ -40,8 +50,9 @@
     <p class="lead">In February 2001, seventeen software practitioners met at a ski resort in Snowbird, Utah, and agreed on a short statement they called the Manifesto for Agile Software Development. In fewer than 70 words of values and twelve short principles, it set out the thinking that still guides Agile teams. This guide explains what each part means in practice.</p>
     <div class="byline"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="5" width="13" height="4" rx="1" fill="var(--ink)"/><rect x="6" y="11" width="11" height="4" rx="1" fill="var(--accent)"/><rect x="2" y="17" width="9" height="4" rx="1" fill="var(--ink)"/><path d="M20 15.5l4 4-4 4-4-4z" fill="var(--mile)"/></svg><div><span>By <a href="/about-the-institute/" rel="author">Neural Project Institute</a></span><span>Published <time datetime="2026-10-05">5 October 2026</time> · 3 min read</span></div></div>
   </header>
+  <section id="key-takeaways" class="takeaways top"><h2>Key takeaways</h2><ul><li>Four values rank people, results, collaboration and adaptability above process, documents, contracts and fixed plans.</li><li>Twelve principles turn those values into practical guidance.</li><li>Agile still plans; it plans in layers and keeps plans easy to change.</li></ul></section>
   <div class="agrid">
-    <aside class="toc"><details open><summary>Table of contents</summary><nav aria-label="Table of contents"><ol><li><a href="#the-four-values">The four values</a></li><li><a href="#which-value-matters-most">Which value matters most?</a></li><li><a href="#the-twelve-principles">The twelve principles</a></li><li><a href="#how-the-manifesto-addresses-planning">How the Manifesto addresses planning</a></li><li><a href="#applying-the-manifesto-outside-software">Applying the Manifesto outside software</a></li><li><a href="#key-takeaways">Key takeaways</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></details></aside>
+    <aside class="toc"><details open><summary>Table of contents</summary><nav aria-label="Table of contents"><ol><li><a href="#key-takeaways">Key takeaways</a></li><li><a href="#the-four-values">The four values</a></li><li><a href="#which-value-matters-most">Which value matters most?</a></li><li><a href="#the-twelve-principles">The twelve principles</a></li><li><a href="#how-the-manifesto-addresses-planning">How the Manifesto addresses planning</a></li><li><a href="#applying-the-manifesto-outside-software">Applying the Manifesto outside software</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></details></aside>
     <div class="abody">
 <section id="the-four-values"><h2>The four values</h2><p>The Manifesto states that its authors value the items on the left more than the items on the right. The items on the right still matter; they just come second.</p><div class="tw"><table><thead><tr><th>We value…</th><th>…over</th><th>What it means in practice</th></tr></thead><tbody><tr><td>Individuals and interactions</td><td>Processes and tools</td><td>Talk to each other before reaching for a form or a ticket. Tools should serve the team, not the other way round.</td></tr><tr><td>Working software</td><td>Comprehensive documentation</td><td>Measure progress by results people can use. Write the documentation that is actually needed.</td></tr><tr><td>Customer collaboration</td><td>Contract negotiation</td><td>Work with the customer throughout, rather than relying on a fixed specification signed at the start.</td></tr><tr><td>Responding to change</td><td>Following a plan</td><td>Plans are useful, but when the facts change, the plan should change too.</td></tr></tbody></table></div><aside class="tip"><span>Tip</span><p>A common misreading is that Agile rejects documentation, contracts, processes or plans. It does not. It ranks them below the things they are meant to support.</p></aside></section>
 <section id="which-value-matters-most"><h2>Which value matters most?</h2><p>The Manifesto does not rank its four values against each other, but many practitioners point to <strong>individuals and interactions</strong> as the foundation. Collaboration with customers, delivering working results and responding to change all depend on people communicating well. If a team gets that right, the other values become much easier to live by.</p></section>
@@ -49,9 +60,8 @@
 <section id="how-the-manifesto-addresses-planning"><h2>How the Manifesto addresses planning</h2><p>&quot;Responding to change over following a plan&quot; is often read as &quot;don&#x27;t plan&quot;. In fact, Agile teams plan more often than traditional teams, just at different levels of detail:</p><ul><li><strong>Long range:</strong> a product vision and a <a href="/project-management/agile/agile-roadmap/">roadmap</a> of outcomes, kept deliberately high level.</li><li><strong>Medium range:</strong> <a href="/project-management/agile/agile-release-planning/">release planning</a> that groups backlog items into likely releases.</li><li><strong>Short range:</strong> detailed iteration planning for the next one to four weeks, and a daily plan made at the stand-up.</li></ul><p>The principle is to plan in detail only as far ahead as you can see clearly, and to keep every plan easy to change.</p></section>
 <section id="applying-the-manifesto-outside-software"><h2>Applying the Manifesto outside software</h2><p>Replace &quot;working software&quot; with &quot;working results&quot; and the Manifesto applies to almost any knowledge work. A marketing team delivers campaigns in small tests; an HR team releases a new onboarding process to one department first; a research team shares interim findings instead of waiting for the final report. See <a href="/project-management/agile/agile-marketing/">Agile marketing</a> and <a href="/project-management/agile/agile-for-creative-teams/">Agile for creative teams</a> for examples.</p></section>
 
-<section id="key-takeaways" class="takeaways"><h2>Key takeaways</h2><ul><li>Four values rank people, results, collaboration and adaptability above process, documents, contracts and fixed plans.</li><li>Twelve principles turn those values into practical guidance.</li><li>Agile still plans; it plans in layers and keeps plans easy to change.</li></ul></section>
 <section id="faq"><h2>Frequently asked questions</h2><details class='faq'><summary>Who wrote the Agile Manifesto?</summary><p>Seventeen practitioners, including Kent Beck, Martin Fowler, Ken Schwaber, Jeff Sutherland, Alistair Cockburn and Ward Cunningham, wrote it at Snowbird, Utah, in February 2001.</p></details><details class='faq'><summary>Is the Agile Manifesto still relevant?</summary><p>Yes. The wording is software-focused, but its values describe how most successful knowledge-work teams operate today, and it remains the shared reference point for every Agile framework.</p></details><details class='faq'><summary>Can I reproduce the Manifesto text?</summary><p>The authors allow the Manifesto to be freely copied in any form, but only in its entirety with their notice. The official text is at agilemanifesto.org.</p></details></section>
-      <aside class="cta"><p class="eyebrow">Go further</p><h2>Get certified with PMAI</h2><p>This topic is covered in <b>Sprintcraft: Agile &amp; Scrum Practitioner</b>, one of six courses in the PMAI certification: assessed chapters and a verifiable certificate for $10.</p><a class="btn" href="/">See the PMAI certification</a></aside>
+      <aside class="ctabox"><p class="eyebrow">Go further</p><h2>Get certified with PMAI</h2><p>This topic is covered in <b>Sprintcraft: Agile &amp; Scrum Practitioner</b>, one of six courses in the PMAI certification: assessed chapters and a verifiable certificate for $10.</p><a class="btn" href="/">See the PMAI certification</a></aside>
       <nav class="pn" aria-label="More in this guide"><a href="/project-management/agile/what-is-agile-project-management/"><small>Previous</small>What Is Agile Project Management? A Complete Introduction</a><a class="next" href="/project-management/agile/history-of-agile/"><small>Next</small>When Did Agile Start? A Short History of Agile</a></nav>
     </div>
   </div>
@@ -62,5 +72,15 @@
   <div><b>Neural Project Institute</b><p>Free project management guides and the PMAI certification. Operated by Flaunt Weekly LLC, a Wyoming LLC.</p></div>
   <nav aria-label="Footer"><a href="/project-management/">Project Management guide</a><a href="/project-management/agile/">Agile guide</a><a href="/project-management/scrum/">Scrum guide</a><a href="/project-management/kanban/">Kanban guide</a><a href="/">PMAI certification</a></nav>
 </div></footer>
+<script>
+document.querySelectorAll(".dd").forEach(function (dd) {
+  var b = dd.querySelector(".ddbtn");
+  b.addEventListener("click", function (e) { e.stopPropagation(); var o = dd.classList.toggle("open"); b.setAttribute("aria-expanded", o) });
+  dd.addEventListener("mouseenter", function () { b.setAttribute("aria-expanded", "true") });
+  dd.addEventListener("mouseleave", function () { if (!dd.classList.contains("open")) b.setAttribute("aria-expanded", "false") });
+});
+document.addEventListener("click", function () { document.querySelectorAll(".dd.open").forEach(function (d) { d.classList.remove("open"); d.querySelector(".ddbtn").setAttribute("aria-expanded", "false") }) });
+document.addEventListener("keydown", function (e) { if (e.key === "Escape") document.querySelectorAll(".dd.open").forEach(function (d) { d.classList.remove("open") }) });
+</script>
 </body>
 </html>

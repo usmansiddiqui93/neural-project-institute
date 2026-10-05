@@ -27,8 +27,18 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="top"><div class="wrap">
   <a class="brand" href="/"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="5" width="13" height="4" rx="1" fill="var(--ink)"/><rect x="6" y="11" width="11" height="4" rx="1" fill="var(--accent)"/><rect x="2" y="17" width="9" height="4" rx="1" fill="var(--ink)"/><path d="M20 15.5l4 4-4 4-4-4z" fill="var(--mile)"/></svg><span><b>Neural Project Institute</b><small>Project management certification for the AI era</small></span></a>
-  <nav aria-label="Guides">
-    <a href="/project-management/">Project Management</a><a href="/project-management/agile/">Agile</a><a href="/project-management/scrum/">Scrum</a><a href="/project-management/kanban/">Kanban</a><a class="cta" href="/">PMAI Certification</a>
+  <nav class="mainnav" aria-label="Main">
+    <div class="dd">
+      <button class="ddbtn" aria-expanded="false" aria-haspopup="true">Guides <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+      <div class="ddmenu" role="menu">
+        <a role="menuitem" href="/project-management/"><b>Project Management Guide</b><span>Planning, scheduling, risk, budgets and tools</span></a>
+        <a role="menuitem" href="/project-management/agile/"><b>Agile Guide</b><span>Values, practices, roles and scaling</span></a>
+        <a role="menuitem" href="/project-management/scrum/"><b>Scrum Guide</b><span>Accountabilities, events and artifacts</span></a>
+        <a role="menuitem" href="/project-management/kanban/"><b>Kanban Guide</b><span>Boards, WIP limits and flow metrics</span></a>
+      </div>
+    </div>
+    <a href="/about-the-institute/">About</a>
+    <a class="cta" href="/">PMAI Certification</a>
   </nav>
 </div></header>
 <main id="main" class="wrap">
@@ -40,8 +50,9 @@
     <p class="lead">An Agile team is a small, stable, cross-functional group of people who together have all the skills needed to turn backlog items into finished, usable results. The team, not a manager, decides how to do the work.</p>
     <div class="byline"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="5" width="13" height="4" rx="1" fill="var(--ink)"/><rect x="6" y="11" width="11" height="4" rx="1" fill="var(--accent)"/><rect x="2" y="17" width="9" height="4" rx="1" fill="var(--ink)"/><path d="M20 15.5l4 4-4 4-4-4z" fill="var(--mile)"/></svg><div><span>By <a href="/about-the-institute/" rel="author">Neural Project Institute</a></span><span>Published <time datetime="2026-10-05">5 October 2026</time> · 3 min read</span></div></div>
   </header>
+  <section id="key-takeaways" class="takeaways top"><h2>Key takeaways</h2><ul><li>Agile teams are small, stable, cross-functional and self-managing.</li><li>Core roles are Product Owner, Scrum Master or coach, and Developers.</li><li>Keep teams small to keep communication fast.</li></ul></section>
   <div class="agrid">
-    <aside class="toc"><details open><summary>Table of contents</summary><nav aria-label="Table of contents"><ol><li><a href="#characteristics-of-an-agile-team">Characteristics of an Agile team</a></li><li><a href="#typical-roles">Typical roles</a></li><li><a href="#agile-team-vs-traditional-project-team">Agile team vs traditional project team</a></li><li><a href="#why-size-matters">Why size matters</a></li><li><a href="#building-a-strong-agile-team">Building a strong Agile team</a></li><li><a href="#key-takeaways">Key takeaways</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></details></aside>
+    <aside class="toc"><details open><summary>Table of contents</summary><nav aria-label="Table of contents"><ol><li><a href="#key-takeaways">Key takeaways</a></li><li><a href="#characteristics-of-an-agile-team">Characteristics of an Agile team</a></li><li><a href="#typical-roles">Typical roles</a></li><li><a href="#agile-team-vs-traditional-project-team">Agile team vs traditional project team</a></li><li><a href="#why-size-matters">Why size matters</a></li><li><a href="#building-a-strong-agile-team">Building a strong Agile team</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></details></aside>
     <div class="abody">
 <section id="characteristics-of-an-agile-team"><h2>Characteristics of an Agile team</h2><ul><li><strong>Cross-functional:</strong> it includes every skill needed to deliver, so work doesn&#x27;t wait for handoffs to other departments.</li><li><strong>Self-managing:</strong> the team decides who does what and how.</li><li><strong>Small:</strong> typically ten people or fewer; Scrum recommends ten or fewer in total.</li><li><strong>Stable:</strong> members stay together long enough to learn to work well together.</li><li><strong>Dedicated:</strong> members focus mainly on this team&#x27;s work.</li><li><strong>Accountable together:</strong> the team succeeds or fails as a unit.</li></ul></section>
 <section id="typical-roles"><h2>Typical roles</h2><div class="tw"><table><thead><tr><th>Role</th><th>Responsibility</th></tr></thead><tbody><tr><td>Product Owner</td><td>Maximises value; owns and orders the backlog; represents customers and stakeholders</td></tr><tr><td><a href="/project-management/agile/scrum-master-role/">Scrum Master</a> or Agile coach</td><td>Helps the team use Agile effectively and removes impediments</td></tr><tr><td>Developers / team members</td><td>Plan and do the work; ensure quality; deliver the increment</td></tr></tbody></table></div><p>In Scrum, &quot;Developers&quot; means anyone doing the work, including designers, writers, testers and analysts, not just programmers.</p></section>
@@ -49,9 +60,8 @@
 <section id="why-size-matters"><h2>Why size matters</h2><p>The number of communication channels grows quickly with team size: a team of n people has n(n−1)/2 channels. Five people have 10 channels; ten people have 45. Small teams communicate faster and coordinate more easily. When work needs more people, split into several teams; see <a href="/project-management/agile/scaled-agile-framework-safe/">Scaling Agile</a>.</p></section>
 <section id="building-a-strong-agile-team"><h2>Building a strong Agile team</h2><ul><li>Agree a team charter or working agreement: hours, communication norms, how decisions are made.</li><li>Develop T-shaped skills: deep in one area, able to help in others.</li><li>Protect the team from constant reprioritisation.</li><li>Celebrate team results rather than individual heroics.</li><li>Invest in <a href="/project-management/agile/agile-meetings-and-ceremonies/">retrospectives</a>.</li></ul></section>
 
-<section id="key-takeaways" class="takeaways"><h2>Key takeaways</h2><ul><li>Agile teams are small, stable, cross-functional and self-managing.</li><li>Core roles are Product Owner, Scrum Master or coach, and Developers.</li><li>Keep teams small to keep communication fast.</li></ul></section>
 <section id="faq"><h2>Frequently asked questions</h2><details class='faq'><summary>What is the ideal Agile team size?</summary><p>Most guidance suggests three to ten people. Scrum Teams are typically ten or fewer, including the Product Owner and Scrum Master.</p></details><details class='faq'><summary>Can someone be on several Agile teams?</summary><p>It is possible but costly. Switching between teams reduces focus and slows everyone down, so aim for each person to belong mainly to one team.</p></details></section>
-      <aside class="cta"><p class="eyebrow">Go further</p><h2>Get certified with PMAI</h2><p>This topic is covered in <b>Wayfinder: Leadership &amp; Stakeholder Communication</b>, one of six courses in the PMAI certification: assessed chapters and a verifiable certificate for $10.</p><a class="btn" href="/">See the PMAI certification</a></aside>
+      <aside class="ctabox"><p class="eyebrow">Go further</p><h2>Get certified with PMAI</h2><p>This topic is covered in <b>Wayfinder: Leadership &amp; Stakeholder Communication</b>, one of six courses in the PMAI certification: assessed chapters and a verifiable certificate for $10.</p><a class="btn" href="/">See the PMAI certification</a></aside>
       <nav class="pn" aria-label="More in this guide"><a href="/project-management/agile/agile-tools-and-techniques/"><small>Previous</small>Agile Project Management Tools and Techniques</a><a class="next" href="/project-management/agile/scrum-master-role/"><small>Next</small>What Does a Scrum Master Do? Role, Skills and Responsibilities</a></nav>
     </div>
   </div>
@@ -62,5 +72,15 @@
   <div><b>Neural Project Institute</b><p>Free project management guides and the PMAI certification. Operated by Flaunt Weekly LLC, a Wyoming LLC.</p></div>
   <nav aria-label="Footer"><a href="/project-management/">Project Management guide</a><a href="/project-management/agile/">Agile guide</a><a href="/project-management/scrum/">Scrum guide</a><a href="/project-management/kanban/">Kanban guide</a><a href="/">PMAI certification</a></nav>
 </div></footer>
+<script>
+document.querySelectorAll(".dd").forEach(function (dd) {
+  var b = dd.querySelector(".ddbtn");
+  b.addEventListener("click", function (e) { e.stopPropagation(); var o = dd.classList.toggle("open"); b.setAttribute("aria-expanded", o) });
+  dd.addEventListener("mouseenter", function () { b.setAttribute("aria-expanded", "true") });
+  dd.addEventListener("mouseleave", function () { if (!dd.classList.contains("open")) b.setAttribute("aria-expanded", "false") });
+});
+document.addEventListener("click", function () { document.querySelectorAll(".dd.open").forEach(function (d) { d.classList.remove("open"); d.querySelector(".ddbtn").setAttribute("aria-expanded", "false") }) });
+document.addEventListener("keydown", function (e) { if (e.key === "Escape") document.querySelectorAll(".dd.open").forEach(function (d) { d.classList.remove("open") }) });
+</script>
 </body>
 </html>

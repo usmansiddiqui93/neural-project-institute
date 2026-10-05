@@ -27,8 +27,18 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="top"><div class="wrap">
   <a class="brand" href="/"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="5" width="13" height="4" rx="1" fill="var(--ink)"/><rect x="6" y="11" width="11" height="4" rx="1" fill="var(--accent)"/><rect x="2" y="17" width="9" height="4" rx="1" fill="var(--ink)"/><path d="M20 15.5l4 4-4 4-4-4z" fill="var(--mile)"/></svg><span><b>Neural Project Institute</b><small>Project management certification for the AI era</small></span></a>
-  <nav aria-label="Guides">
-    <a href="/project-management/">Project Management</a><a href="/project-management/agile/">Agile</a><a href="/project-management/scrum/">Scrum</a><a href="/project-management/kanban/">Kanban</a><a class="cta" href="/">PMAI Certification</a>
+  <nav class="mainnav" aria-label="Main">
+    <div class="dd">
+      <button class="ddbtn" aria-expanded="false" aria-haspopup="true">Guides <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+      <div class="ddmenu" role="menu">
+        <a role="menuitem" href="/project-management/"><b>Project Management Guide</b><span>Planning, scheduling, risk, budgets and tools</span></a>
+        <a role="menuitem" href="/project-management/agile/"><b>Agile Guide</b><span>Values, practices, roles and scaling</span></a>
+        <a role="menuitem" href="/project-management/scrum/"><b>Scrum Guide</b><span>Accountabilities, events and artifacts</span></a>
+        <a role="menuitem" href="/project-management/kanban/"><b>Kanban Guide</b><span>Boards, WIP limits and flow metrics</span></a>
+      </div>
+    </div>
+    <a href="/about-the-institute/">About</a>
+    <a class="cta" href="/">PMAI Certification</a>
   </nav>
 </div></header>
 <main id="main" class="wrap">
@@ -40,8 +50,9 @@
     <p class="lead">Agile teams rarely estimate in hours. Instead, they compare pieces of work with each other using relative units called story points, often on a Fibonacci-like scale. This guide explains why, and how to do it well.</p>
     <div class="byline"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="5" width="13" height="4" rx="1" fill="var(--ink)"/><rect x="6" y="11" width="11" height="4" rx="1" fill="var(--accent)"/><rect x="2" y="17" width="9" height="4" rx="1" fill="var(--ink)"/><path d="M20 15.5l4 4-4 4-4-4z" fill="var(--mile)"/></svg><div><span>By <a href="/about-the-institute/" rel="author">Neural Project Institute</a></span><span>Published <time datetime="2026-10-05">5 October 2026</time> · 3 min read</span></div></div>
   </header>
+  <section id="key-takeaways" class="takeaways top"><h2>Key takeaways</h2><ul><li>Story points measure relative size, combining effort, complexity and uncertainty.</li><li>The Fibonacci scale&#x27;s growing gaps reflect growing uncertainty.</li><li>The discussion during estimation is more valuable than the number.</li></ul></section>
   <div class="agrid">
-    <aside class="toc"><details open><summary>Table of contents</summary><nav aria-label="Table of contents"><ol><li><a href="#why-relative-estimation">Why relative estimation?</a></li><li><a href="#the-fibonacci-scale">The Fibonacci scale</a></li><li><a href="#how-to-run-planning-poker">How to run planning poker</a></li><li><a href="#other-estimation-techniques">Other estimation techniques</a></li><li><a href="#using-estimates">Using estimates</a></li><li><a href="#common-mistakes">Common mistakes</a></li><li><a href="#key-takeaways">Key takeaways</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></details></aside>
+    <aside class="toc"><details open><summary>Table of contents</summary><nav aria-label="Table of contents"><ol><li><a href="#key-takeaways">Key takeaways</a></li><li><a href="#why-relative-estimation">Why relative estimation?</a></li><li><a href="#the-fibonacci-scale">The Fibonacci scale</a></li><li><a href="#how-to-run-planning-poker">How to run planning poker</a></li><li><a href="#other-estimation-techniques">Other estimation techniques</a></li><li><a href="#using-estimates">Using estimates</a></li><li><a href="#common-mistakes">Common mistakes</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></details></aside>
     <div class="abody">
 <section id="why-relative-estimation"><h2>Why relative estimation?</h2><p>People are poor at predicting exactly how long work will take, but good at comparing: &quot;this is about twice as big as that.&quot; Relative estimation uses that strength. Story points combine effort, complexity and uncertainty into one number that is only meaningful within the team.</p></section>
 <section id="the-fibonacci-scale"><h2>The Fibonacci scale</h2><p>The Fibonacci sequence is 1, 2, 3, 5, 8, 13, 21, where each number is the sum of the two before it. Many teams use a modified version: 0, ½, 1, 2, 3, 5, 8, 13, 20, 40, 100.</p><p>The gaps grow as the numbers grow, which reflects reality: the bigger the item, the less precise the estimate can be. It also stops pointless debates between, say, 11 and 12.</p><aside class="tip"><span>Tip</span><p>If an item scores 13 or more, it is usually too big to finish in one sprint. Split it before planning.</p></aside></section>
@@ -50,9 +61,8 @@
 <section id="using-estimates"><h2>Using estimates</h2><p>Story points combine with <a href="/project-management/agile/agile-velocity-chart/">velocity</a>, the number of points a team completes per sprint, to forecast how much it can take on and when a release might be ready.</p></section>
 <section id="common-mistakes"><h2>Common mistakes</h2><ul><li>Converting points back into hours.</li><li>Comparing story points or velocity between teams.</li><li>Letting one senior person estimate for everyone.</li><li>Re-estimating finished work to make velocity look better.</li><li>Treating estimates as commitments or deadlines.</li></ul></section>
 
-<section id="key-takeaways" class="takeaways"><h2>Key takeaways</h2><ul><li>Story points measure relative size, combining effort, complexity and uncertainty.</li><li>The Fibonacci scale&#x27;s growing gaps reflect growing uncertainty.</li><li>The discussion during estimation is more valuable than the number.</li></ul></section>
 <section id="faq"><h2>Frequently asked questions</h2><details class='faq'><summary>Why not estimate in hours?</summary><p>Hours invite false precision and depend on who does the work. Relative points are faster to agree and become reliable for forecasting once the team&#x27;s velocity is known.</p></details><details class='faq'><summary>Who estimates in Agile?</summary><p>The people who will do the work. The Product Owner clarifies the item but does not estimate it.</p></details></section>
-      <aside class="cta"><p class="eyebrow">Go further</p><h2>Get certified with PMAI</h2><p>This topic is covered in <b>Sprintcraft: Agile &amp; Scrum Practitioner</b>, one of six courses in the PMAI certification: assessed chapters and a verifiable certificate for $10.</p><a class="btn" href="/">See the PMAI certification</a></aside>
+      <aside class="ctabox"><p class="eyebrow">Go further</p><h2>Get certified with PMAI</h2><p>This topic is covered in <b>Sprintcraft: Agile &amp; Scrum Practitioner</b>, one of six courses in the PMAI certification: assessed chapters and a verifiable certificate for $10.</p><a class="btn" href="/">See the PMAI certification</a></aside>
       <nav class="pn" aria-label="More in this guide"><a href="/project-management/agile/definition-of-done/"><small>Previous</small>Definition of Done in Agile: Meaning, Examples and Checklist</a><a class="next" href="/project-management/agile/agile-velocity-chart/"><small>Next</small>Velocity Charts in Agile: How to Read and Use Them</a></nav>
     </div>
   </div>
@@ -63,5 +73,15 @@
   <div><b>Neural Project Institute</b><p>Free project management guides and the PMAI certification. Operated by Flaunt Weekly LLC, a Wyoming LLC.</p></div>
   <nav aria-label="Footer"><a href="/project-management/">Project Management guide</a><a href="/project-management/agile/">Agile guide</a><a href="/project-management/scrum/">Scrum guide</a><a href="/project-management/kanban/">Kanban guide</a><a href="/">PMAI certification</a></nav>
 </div></footer>
+<script>
+document.querySelectorAll(".dd").forEach(function (dd) {
+  var b = dd.querySelector(".ddbtn");
+  b.addEventListener("click", function (e) { e.stopPropagation(); var o = dd.classList.toggle("open"); b.setAttribute("aria-expanded", o) });
+  dd.addEventListener("mouseenter", function () { b.setAttribute("aria-expanded", "true") });
+  dd.addEventListener("mouseleave", function () { if (!dd.classList.contains("open")) b.setAttribute("aria-expanded", "false") });
+});
+document.addEventListener("click", function () { document.querySelectorAll(".dd.open").forEach(function (d) { d.classList.remove("open"); d.querySelector(".ddbtn").setAttribute("aria-expanded", "false") }) });
+document.addEventListener("keydown", function (e) { if (e.key === "Escape") document.querySelectorAll(".dd.open").forEach(function (d) { d.classList.remove("open") }) });
+</script>
 </body>
 </html>

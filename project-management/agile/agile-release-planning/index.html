@@ -27,8 +27,18 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="top"><div class="wrap">
   <a class="brand" href="/"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="5" width="13" height="4" rx="1" fill="var(--ink)"/><rect x="6" y="11" width="11" height="4" rx="1" fill="var(--accent)"/><rect x="2" y="17" width="9" height="4" rx="1" fill="var(--ink)"/><path d="M20 15.5l4 4-4 4-4-4z" fill="var(--mile)"/></svg><span><b>Neural Project Institute</b><small>Project management certification for the AI era</small></span></a>
-  <nav aria-label="Guides">
-    <a href="/project-management/">Project Management</a><a href="/project-management/agile/">Agile</a><a href="/project-management/scrum/">Scrum</a><a href="/project-management/kanban/">Kanban</a><a class="cta" href="/">PMAI Certification</a>
+  <nav class="mainnav" aria-label="Main">
+    <div class="dd">
+      <button class="ddbtn" aria-expanded="false" aria-haspopup="true">Guides <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+      <div class="ddmenu" role="menu">
+        <a role="menuitem" href="/project-management/"><b>Project Management Guide</b><span>Planning, scheduling, risk, budgets and tools</span></a>
+        <a role="menuitem" href="/project-management/agile/"><b>Agile Guide</b><span>Values, practices, roles and scaling</span></a>
+        <a role="menuitem" href="/project-management/scrum/"><b>Scrum Guide</b><span>Accountabilities, events and artifacts</span></a>
+        <a role="menuitem" href="/project-management/kanban/"><b>Kanban Guide</b><span>Boards, WIP limits and flow metrics</span></a>
+      </div>
+    </div>
+    <a href="/about-the-institute/">About</a>
+    <a class="cta" href="/">PMAI Certification</a>
   </nav>
 </div></header>
 <main id="main" class="wrap">
@@ -40,8 +50,9 @@
     <p class="lead">Release planning answers the question every stakeholder asks: &quot;When will we get it?&quot; In Agile, the answer is a forecast built from real data and updated every sprint, rather than a date fixed at the start.</p>
     <div class="byline"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="5" width="13" height="4" rx="1" fill="var(--ink)"/><rect x="6" y="11" width="11" height="4" rx="1" fill="var(--accent)"/><rect x="2" y="17" width="9" height="4" rx="1" fill="var(--ink)"/><path d="M20 15.5l4 4-4 4-4-4z" fill="var(--mile)"/></svg><div><span>By <a href="/about-the-institute/" rel="author">Neural Project Institute</a></span><span>Published <time datetime="2026-10-05">5 October 2026</time> · 3 min read</span></div></div>
   </header>
+  <section id="key-takeaways" class="takeaways top"><h2>Key takeaways</h2><ul><li>Release plans forecast when a set of backlog items will be ready.</li><li>Fix either date or scope, not both.</li><li>Use velocity ranges and update the forecast every sprint.</li></ul></section>
   <div class="agrid">
-    <aside class="toc"><details open><summary>Table of contents</summary><nav aria-label="Table of contents"><ol><li><a href="#what-a-release-plan-is">What a release plan is</a></li><li><a href="#fixed-date-or-fixed-scope">Fixed date or fixed scope?</a></li><li><a href="#steps-to-build-a-release-plan">Steps to build a release plan</a></li><li><a href="#communicating-release-forecasts">Communicating release forecasts</a></li><li><a href="#release-planning-at-scale">Release planning at scale</a></li><li><a href="#key-takeaways">Key takeaways</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></details></aside>
+    <aside class="toc"><details open><summary>Table of contents</summary><nav aria-label="Table of contents"><ol><li><a href="#key-takeaways">Key takeaways</a></li><li><a href="#what-a-release-plan-is">What a release plan is</a></li><li><a href="#fixed-date-or-fixed-scope">Fixed date or fixed scope?</a></li><li><a href="#steps-to-build-a-release-plan">Steps to build a release plan</a></li><li><a href="#communicating-release-forecasts">Communicating release forecasts</a></li><li><a href="#release-planning-at-scale">Release planning at scale</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></details></aside>
     <div class="abody">
 <section id="what-a-release-plan-is"><h2>What a release plan is</h2><p>A release plan groups backlog items into one or more upcoming releases and forecasts when each is likely to be ready. It sits between the long-term <a href="/project-management/agile/agile-roadmap/">product roadmap</a> and the detailed plan for each <a href="/project-management/agile/what-is-a-sprint/">sprint</a>.</p></section>
 <section id="fixed-date-or-fixed-scope"><h2>Fixed date or fixed scope?</h2><div class="tw"><table><thead><tr><th>Approach</th><th>What is fixed</th><th>What flexes</th><th>Example</th></tr></thead><tbody><tr><td>Fixed date</td><td>Release date</td><td>Scope</td><td>A launch at a trade show</td></tr><tr><td>Fixed scope</td><td>Feature set</td><td>Date</td><td>A minimum set needed to replace an old system</td></tr></tbody></table></div><p>Agile teams avoid fixing both date and scope at once. If both are fixed, quality usually suffers.</p></section>
@@ -49,9 +60,8 @@
 <section id="communicating-release-forecasts"><h2>Communicating release forecasts</h2><ul><li>Give ranges, not single dates: &quot;between mid-May and early June&quot;.</li><li>Show a release burnup chart so stakeholders can see both progress and scope changes.</li><li>Separate must-have items from nice-to-have items, so trade-offs are clear.</li></ul></section>
 <section id="release-planning-at-scale"><h2>Release planning at scale</h2><p>When several teams contribute to one release, they plan together. In <a href="/project-management/agile/scaled-agile-framework-safe/">SAFe</a>, this happens in <a href="/project-management/agile/pi-planning/">PI Planning</a>.</p></section>
 
-<section id="key-takeaways" class="takeaways"><h2>Key takeaways</h2><ul><li>Release plans forecast when a set of backlog items will be ready.</li><li>Fix either date or scope, not both.</li><li>Use velocity ranges and update the forecast every sprint.</li></ul></section>
 <section id="faq"><h2>Frequently asked questions</h2><details class='faq'><summary>How far ahead should a release plan go?</summary><p>Usually one to three releases, or roughly three to six months. Beyond that, a roadmap of outcomes is more useful than a detailed plan.</p></details><details class='faq'><summary>Who owns the release plan?</summary><p>The Product Owner or product manager, working closely with the team and stakeholders.</p></details></section>
-      <aside class="cta"><p class="eyebrow">Go further</p><h2>Get certified with PMAI</h2><p>This topic is covered in <b>Sprintcraft: Agile &amp; Scrum Practitioner</b>, one of six courses in the PMAI certification: assessed chapters and a verifiable certificate for $10.</p><a class="btn" href="/">See the PMAI certification</a></aside>
+      <aside class="ctabox"><p class="eyebrow">Go further</p><h2>Get certified with PMAI</h2><p>This topic is covered in <b>Sprintcraft: Agile &amp; Scrum Practitioner</b>, one of six courses in the PMAI certification: assessed chapters and a verifiable certificate for $10.</p><a class="btn" href="/">See the PMAI certification</a></aside>
       <nav class="pn" aria-label="More in this guide"><a href="/project-management/agile/agile-meetings-and-ceremonies/"><small>Previous</small>Agile Meetings and Ceremonies: A Practical Guide</a><a class="next" href="/project-management/agile/agile-roadmap/"><small>Next</small>What Is an Agile Roadmap? How to Build One</a></nav>
     </div>
   </div>
@@ -62,5 +72,15 @@
   <div><b>Neural Project Institute</b><p>Free project management guides and the PMAI certification. Operated by Flaunt Weekly LLC, a Wyoming LLC.</p></div>
   <nav aria-label="Footer"><a href="/project-management/">Project Management guide</a><a href="/project-management/agile/">Agile guide</a><a href="/project-management/scrum/">Scrum guide</a><a href="/project-management/kanban/">Kanban guide</a><a href="/">PMAI certification</a></nav>
 </div></footer>
+<script>
+document.querySelectorAll(".dd").forEach(function (dd) {
+  var b = dd.querySelector(".ddbtn");
+  b.addEventListener("click", function (e) { e.stopPropagation(); var o = dd.classList.toggle("open"); b.setAttribute("aria-expanded", o) });
+  dd.addEventListener("mouseenter", function () { b.setAttribute("aria-expanded", "true") });
+  dd.addEventListener("mouseleave", function () { if (!dd.classList.contains("open")) b.setAttribute("aria-expanded", "false") });
+});
+document.addEventListener("click", function () { document.querySelectorAll(".dd.open").forEach(function (d) { d.classList.remove("open"); d.querySelector(".ddbtn").setAttribute("aria-expanded", "false") }) });
+document.addEventListener("keydown", function (e) { if (e.key === "Escape") document.querySelectorAll(".dd.open").forEach(function (d) { d.classList.remove("open") }) });
+</script>
 </body>
 </html>

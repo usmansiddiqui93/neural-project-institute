@@ -27,8 +27,18 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="top"><div class="wrap">
   <a class="brand" href="/"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="5" width="13" height="4" rx="1" fill="var(--ink)"/><rect x="6" y="11" width="11" height="4" rx="1" fill="var(--accent)"/><rect x="2" y="17" width="9" height="4" rx="1" fill="var(--ink)"/><path d="M20 15.5l4 4-4 4-4-4z" fill="var(--mile)"/></svg><span><b>Neural Project Institute</b><small>Project management certification for the AI era</small></span></a>
-  <nav aria-label="Guides">
-    <a href="/project-management/">Project Management</a><a href="/project-management/agile/">Agile</a><a href="/project-management/scrum/">Scrum</a><a href="/project-management/kanban/">Kanban</a><a class="cta" href="/">PMAI Certification</a>
+  <nav class="mainnav" aria-label="Main">
+    <div class="dd">
+      <button class="ddbtn" aria-expanded="false" aria-haspopup="true">Guides <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+      <div class="ddmenu" role="menu">
+        <a role="menuitem" href="/project-management/"><b>Project Management Guide</b><span>Planning, scheduling, risk, budgets and tools</span></a>
+        <a role="menuitem" href="/project-management/agile/"><b>Agile Guide</b><span>Values, practices, roles and scaling</span></a>
+        <a role="menuitem" href="/project-management/scrum/"><b>Scrum Guide</b><span>Accountabilities, events and artifacts</span></a>
+        <a role="menuitem" href="/project-management/kanban/"><b>Kanban Guide</b><span>Boards, WIP limits and flow metrics</span></a>
+      </div>
+    </div>
+    <a href="/about-the-institute/">About</a>
+    <a class="cta" href="/">PMAI Certification</a>
   </nav>
 </div></header>
 <main id="main" class="wrap">
@@ -40,8 +50,9 @@
     <p class="lead">The Scaled Agile Framework (SAFe) is the most widely adopted framework for applying Agile across large organisations. It provides roles, events and practices to align many Agile teams around shared goals, while keeping the team-level practices of Scrum and Kanban.</p>
     <div class="byline"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="5" width="13" height="4" rx="1" fill="var(--ink)"/><rect x="6" y="11" width="11" height="4" rx="1" fill="var(--accent)"/><rect x="2" y="17" width="9" height="4" rx="1" fill="var(--ink)"/><path d="M20 15.5l4 4-4 4-4-4z" fill="var(--mile)"/></svg><div><span>By <a href="/about-the-institute/" rel="author">Neural Project Institute</a></span><span>Published <time datetime="2026-10-05">5 October 2026</time> · 3 min read</span></div></div>
   </header>
+  <section id="key-takeaways" class="takeaways top"><h2>Key takeaways</h2><ul><li>SAFe aligns many Agile teams through Agile Release Trains and Program Increments.</li><li>PI Planning and Lean Portfolio Management are its signature practices.</li><li>It is powerful at scale but can become heavy if adopted mechanically.</li></ul></section>
   <div class="agrid">
-    <aside class="toc"><details open><summary>Table of contents</summary><nav aria-label="Table of contents"><ol><li><a href="#where-safe-comes-from">Where SAFe comes from</a></li><li><a href="#core-values">Core values</a></li><li><a href="#the-four-configurations">The four configurations</a></li><li><a href="#key-building-blocks">Key building blocks</a></li><li><a href="#key-roles">Key roles</a></li><li><a href="#benefits-and-criticisms">Benefits and criticisms</a></li><li><a href="#key-takeaways">Key takeaways</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></details></aside>
+    <aside class="toc"><details open><summary>Table of contents</summary><nav aria-label="Table of contents"><ol><li><a href="#key-takeaways">Key takeaways</a></li><li><a href="#where-safe-comes-from">Where SAFe comes from</a></li><li><a href="#core-values">Core values</a></li><li><a href="#the-four-configurations">The four configurations</a></li><li><a href="#key-building-blocks">Key building blocks</a></li><li><a href="#key-roles">Key roles</a></li><li><a href="#benefits-and-criticisms">Benefits and criticisms</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></details></aside>
     <div class="abody">
 <section id="where-safe-comes-from"><h2>Where SAFe comes from</h2><p>SAFe was created by Dean Leffingwell and first released in 2011. It is maintained by Scaled Agile, Inc., which publishes the framework and runs training and certification. It draws on Agile, Lean, systems thinking and DevOps, and it is updated regularly; check the official site for the current version.</p></section>
 <section id="core-values"><h2>Core values</h2><ul><li><strong>Alignment:</strong> everyone understands and works towards the same goals.</li><li><strong>Transparency:</strong> progress, problems and decisions are visible.</li><li><strong>Respect for people:</strong> the people doing the work are trusted and developed.</li><li><strong>Relentless improvement:</strong> the organisation keeps learning and improving.</li></ul></section>
@@ -50,9 +61,8 @@
 <section id="key-roles"><h2>Key roles</h2><div class="tw"><table><thead><tr><th>Role</th><th>Responsibility</th></tr></thead><tbody><tr><td>Release Train Engineer (RTE)</td><td>Servant leader and coach for the ART; facilitates PI Planning</td></tr><tr><td>Product Management</td><td>Owns the ART&#x27;s backlog and vision</td></tr><tr><td>System Architect</td><td>Guides technical direction across teams</td></tr><tr><td>Business Owners</td><td>Key stakeholders accountable for business outcomes</td></tr><tr><td>Product Owner and Scrum Master (team coach)</td><td>Team-level roles, as in Scrum</td></tr></tbody></table></div></section>
 <section id="benefits-and-criticisms"><h2>Benefits and criticisms</h2><p><strong>Benefits reported by adopters</strong> include better alignment between strategy and delivery, more predictable releases, fewer dependency surprises and clearer visibility for leaders.</p><p><strong>Criticisms</strong> include that SAFe can feel heavy and prescriptive, that it may preserve hierarchy under new names, and that large planning events can become theatre if teams lack real autonomy. Alternatives such as <a href="/project-management/agile/large-scale-scrum-less/">LeSS</a> take a lighter approach.</p><aside class="tip"><span>Tip</span><p>Scale only when you need to. If one or two teams can deliver the product, a scaling framework may add more overhead than value.</p></aside></section>
 
-<section id="key-takeaways" class="takeaways"><h2>Key takeaways</h2><ul><li>SAFe aligns many Agile teams through Agile Release Trains and Program Increments.</li><li>PI Planning and Lean Portfolio Management are its signature practices.</li><li>It is powerful at scale but can become heavy if adopted mechanically.</li></ul></section>
 <section id="faq"><h2>Frequently asked questions</h2><details class='faq'><summary>Is SAFe Agile?</summary><p>SAFe is built on Agile and Lean principles, and its teams use Scrum and Kanban. Critics argue some implementations become too process-heavy, so how it is adopted matters a lot.</p></details><details class='faq'><summary>How big must an organisation be for SAFe?</summary><p>SAFe is designed for programmes of roughly 50 or more people working on one solution. Smaller organisations rarely need it.</p></details></section>
-      <aside class="cta"><p class="eyebrow">Go further</p><h2>Get certified with PMAI</h2><p>This topic is covered in <b>Sprintcraft: Agile &amp; Scrum Practitioner</b>, one of six courses in the PMAI certification: assessed chapters and a verifiable certificate for $10.</p><a class="btn" href="/">See the PMAI certification</a></aside>
+      <aside class="ctabox"><p class="eyebrow">Go further</p><h2>Get certified with PMAI</h2><p>This topic is covered in <b>Sprintcraft: Agile &amp; Scrum Practitioner</b>, one of six courses in the PMAI certification: assessed chapters and a verifiable certificate for $10.</p><a class="btn" href="/">See the PMAI certification</a></aside>
       <nav class="pn" aria-label="More in this guide"><a href="/project-management/agile/agile-environment/"><small>Previous</small>What Is an Agile Environment? Culture, Workspace and Tools</a><a class="next" href="/project-management/agile/agile-release-train/"><small>Next</small>What Is an Agile Release Train (ART) in SAFe?</a></nav>
     </div>
   </div>
@@ -63,5 +73,15 @@
   <div><b>Neural Project Institute</b><p>Free project management guides and the PMAI certification. Operated by Flaunt Weekly LLC, a Wyoming LLC.</p></div>
   <nav aria-label="Footer"><a href="/project-management/">Project Management guide</a><a href="/project-management/agile/">Agile guide</a><a href="/project-management/scrum/">Scrum guide</a><a href="/project-management/kanban/">Kanban guide</a><a href="/">PMAI certification</a></nav>
 </div></footer>
+<script>
+document.querySelectorAll(".dd").forEach(function (dd) {
+  var b = dd.querySelector(".ddbtn");
+  b.addEventListener("click", function (e) { e.stopPropagation(); var o = dd.classList.toggle("open"); b.setAttribute("aria-expanded", o) });
+  dd.addEventListener("mouseenter", function () { b.setAttribute("aria-expanded", "true") });
+  dd.addEventListener("mouseleave", function () { if (!dd.classList.contains("open")) b.setAttribute("aria-expanded", "false") });
+});
+document.addEventListener("click", function () { document.querySelectorAll(".dd.open").forEach(function (d) { d.classList.remove("open"); d.querySelector(".ddbtn").setAttribute("aria-expanded", "false") }) });
+document.addEventListener("keydown", function (e) { if (e.key === "Escape") document.querySelectorAll(".dd.open").forEach(function (d) { d.classList.remove("open") }) });
+</script>
 </body>
 </html>

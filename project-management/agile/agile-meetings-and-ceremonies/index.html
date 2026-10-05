@@ -27,8 +27,18 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="top"><div class="wrap">
   <a class="brand" href="/"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="5" width="13" height="4" rx="1" fill="var(--ink)"/><rect x="6" y="11" width="11" height="4" rx="1" fill="var(--accent)"/><rect x="2" y="17" width="9" height="4" rx="1" fill="var(--ink)"/><path d="M20 15.5l4 4-4 4-4-4z" fill="var(--mile)"/></svg><span><b>Neural Project Institute</b><small>Project management certification for the AI era</small></span></a>
-  <nav aria-label="Guides">
-    <a href="/project-management/">Project Management</a><a href="/project-management/agile/">Agile</a><a href="/project-management/scrum/">Scrum</a><a href="/project-management/kanban/">Kanban</a><a class="cta" href="/">PMAI Certification</a>
+  <nav class="mainnav" aria-label="Main">
+    <div class="dd">
+      <button class="ddbtn" aria-expanded="false" aria-haspopup="true">Guides <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+      <div class="ddmenu" role="menu">
+        <a role="menuitem" href="/project-management/"><b>Project Management Guide</b><span>Planning, scheduling, risk, budgets and tools</span></a>
+        <a role="menuitem" href="/project-management/agile/"><b>Agile Guide</b><span>Values, practices, roles and scaling</span></a>
+        <a role="menuitem" href="/project-management/scrum/"><b>Scrum Guide</b><span>Accountabilities, events and artifacts</span></a>
+        <a role="menuitem" href="/project-management/kanban/"><b>Kanban Guide</b><span>Boards, WIP limits and flow metrics</span></a>
+      </div>
+    </div>
+    <a href="/about-the-institute/">About</a>
+    <a class="cta" href="/">PMAI Certification</a>
   </nav>
 </div></header>
 <main id="main" class="wrap">
@@ -40,8 +50,9 @@
     <p class="lead">Agile teams use a small set of recurring meetings, often called ceremonies or events, to plan, coordinate, review and improve. Each has a clear purpose and a strict time-box. Run well, they replace most other meetings.</p>
     <div class="byline"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="5" width="13" height="4" rx="1" fill="var(--ink)"/><rect x="6" y="11" width="11" height="4" rx="1" fill="var(--accent)"/><rect x="2" y="17" width="9" height="4" rx="1" fill="var(--ink)"/><path d="M20 15.5l4 4-4 4-4-4z" fill="var(--mile)"/></svg><div><span>By <a href="/about-the-institute/" rel="author">Neural Project Institute</a></span><span>Published <time datetime="2026-10-05">5 October 2026</time> · 3 min read</span></div></div>
   </header>
+  <section id="key-takeaways" class="takeaways top"><h2>Key takeaways</h2><ul><li>Five core meetings cover planning, coordination, review and improvement.</li><li>Every meeting has a purpose and a time-box.</li><li>Retrospectives should always end with concrete actions.</li></ul></section>
   <div class="agrid">
-    <aside class="toc"><details open><summary>Table of contents</summary><nav aria-label="Table of contents"><ol><li><a href="#overview">Overview</a></li><li><a href="#sprint-planning">Sprint Planning</a></li><li><a href="#daily-scrum-stand-up">Daily Scrum (stand-up)</a></li><li><a href="#backlog-refinement">Backlog refinement</a></li><li><a href="#sprint-review">Sprint Review</a></li><li><a href="#sprint-retrospective">Sprint Retrospective</a></li><li><a href="#keeping-meetings-effective">Keeping meetings effective</a></li><li><a href="#key-takeaways">Key takeaways</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></details></aside>
+    <aside class="toc"><details open><summary>Table of contents</summary><nav aria-label="Table of contents"><ol><li><a href="#key-takeaways">Key takeaways</a></li><li><a href="#overview">Overview</a></li><li><a href="#sprint-planning">Sprint Planning</a></li><li><a href="#daily-scrum-stand-up">Daily Scrum (stand-up)</a></li><li><a href="#backlog-refinement">Backlog refinement</a></li><li><a href="#sprint-review">Sprint Review</a></li><li><a href="#sprint-retrospective">Sprint Retrospective</a></li><li><a href="#keeping-meetings-effective">Keeping meetings effective</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></nav></details></aside>
     <div class="abody">
 <section id="overview"><h2>Overview</h2><div class="tw"><table><thead><tr><th>Meeting</th><th>When</th><th>Time-box (2-week sprint)</th><th>Purpose</th></tr></thead><tbody><tr><td>Sprint Planning</td><td>Start of sprint</td><td>Up to 4 hours</td><td>Agree the Sprint Goal and plan</td></tr><tr><td>Daily Scrum / stand-up</td><td>Every day</td><td>15 minutes</td><td>Coordinate towards the goal</td></tr><tr><td>Backlog refinement</td><td>Ongoing</td><td>Typically a few hours per sprint</td><td>Prepare upcoming items</td></tr><tr><td>Sprint Review</td><td>End of sprint</td><td>Up to 2 hours</td><td>Inspect the result with stakeholders</td></tr><tr><td>Sprint Retrospective</td><td>After the review</td><td>Up to 1.5 hours</td><td>Improve how the team works</td></tr></tbody></table></div><p>Scrum&#x27;s maximums are 8, 4 and 3 hours for planning, review and retrospective in a one-month sprint; shorter sprints usually need proportionally less.</p></section>
 <section id="sprint-planning"><h2>Sprint Planning</h2><p><strong>Inputs:</strong> an ordered, refined Product Backlog, the team&#x27;s recent velocity and availability.</p><ol><li><strong>Why:</strong> the Product Owner proposes how the sprint can add value; the team agrees a Sprint Goal.</li><li><strong>What:</strong> the team selects backlog items it can complete.</li><li><strong>How:</strong> the team breaks items into tasks and plans the first days.</li></ol><p><strong>Output:</strong> a Sprint Backlog and a Sprint Goal everyone understands.</p></section>
@@ -51,9 +62,8 @@
 <section id="sprint-retrospective"><h2>Sprint Retrospective</h2><p>The team reflects on people, processes, tools and its Definition of Done. Simple formats include:</p><ul><li><strong>Start, stop, continue.</strong></li><li><strong>Mad, sad, glad.</strong></li><li><strong>4Ls:</strong> liked, learned, lacked, longed for.</li></ul><p>End with one or two concrete improvements, each with an owner, and check them at the next retrospective.</p></section>
 <section id="keeping-meetings-effective"><h2>Keeping meetings effective</h2><ul><li>Respect the time-boxes.</li><li>Invite only the people needed.</li><li>Keep the same time and place to build a rhythm.</li><li>Cancel status meetings that these events make unnecessary.</li></ul></section>
 
-<section id="key-takeaways" class="takeaways"><h2>Key takeaways</h2><ul><li>Five core meetings cover planning, coordination, review and improvement.</li><li>Every meeting has a purpose and a time-box.</li><li>Retrospectives should always end with concrete actions.</li></ul></section>
 <section id="faq"><h2>Frequently asked questions</h2><details class='faq'><summary>Who attends the Daily Scrum?</summary><p>The people doing the work. The Scrum Master and Product Owner attend if they are actively working on sprint items.</p></details><details class='faq'><summary>Are Agile ceremonies mandatory?</summary><p>In Scrum, all five events are required. Other Agile methods use similar meetings with more flexibility.</p></details></section>
-      <aside class="cta"><p class="eyebrow">Go further</p><h2>Get certified with PMAI</h2><p>This topic is covered in <b>Sprintcraft: Agile &amp; Scrum Practitioner</b>, one of six courses in the PMAI certification: assessed chapters and a verifiable certificate for $10.</p><a class="btn" href="/">See the PMAI certification</a></aside>
+      <aside class="ctabox"><p class="eyebrow">Go further</p><h2>Get certified with PMAI</h2><p>This topic is covered in <b>Sprintcraft: Agile &amp; Scrum Practitioner</b>, one of six courses in the PMAI certification: assessed chapters and a verifiable certificate for $10.</p><a class="btn" href="/">See the PMAI certification</a></aside>
       <nav class="pn" aria-label="More in this guide"><a href="/project-management/agile/agile-velocity-chart/"><small>Previous</small>Velocity Charts in Agile: How to Read and Use Them</a><a class="next" href="/project-management/agile/agile-release-planning/"><small>Next</small>Agile Release Planning: How to Plan Releases in Agile</a></nav>
     </div>
   </div>
@@ -64,5 +74,15 @@
   <div><b>Neural Project Institute</b><p>Free project management guides and the PMAI certification. Operated by Flaunt Weekly LLC, a Wyoming LLC.</p></div>
   <nav aria-label="Footer"><a href="/project-management/">Project Management guide</a><a href="/project-management/agile/">Agile guide</a><a href="/project-management/scrum/">Scrum guide</a><a href="/project-management/kanban/">Kanban guide</a><a href="/">PMAI certification</a></nav>
 </div></footer>
+<script>
+document.querySelectorAll(".dd").forEach(function (dd) {
+  var b = dd.querySelector(".ddbtn");
+  b.addEventListener("click", function (e) { e.stopPropagation(); var o = dd.classList.toggle("open"); b.setAttribute("aria-expanded", o) });
+  dd.addEventListener("mouseenter", function () { b.setAttribute("aria-expanded", "true") });
+  dd.addEventListener("mouseleave", function () { if (!dd.classList.contains("open")) b.setAttribute("aria-expanded", "false") });
+});
+document.addEventListener("click", function () { document.querySelectorAll(".dd.open").forEach(function (d) { d.classList.remove("open"); d.querySelector(".ddbtn").setAttribute("aria-expanded", "false") }) });
+document.addEventListener("keydown", function (e) { if (e.key === "Escape") document.querySelectorAll(".dd.open").forEach(function (d) { d.classList.remove("open") }) });
+</script>
 </body>
 </html>
