@@ -378,6 +378,21 @@ footer.foot .wrap { display: flex; justify-content: space-between; flex-wrap: wr
   body { background: #fff } header.top, footer.foot, .demo-bar, .no-print { display: none !important }
   main { padding: 0 } .cert { box-shadow: none } @page { size: A4 landscape; margin: 0 }
 }
+
+/* Reviews */
+.reviews { margin-top: 20px }
+.review-sum { display: flex; align-items: center; gap: 12px; margin-bottom: 16px } .review-sum b { font: 780 2.2rem/1 var(--f-display) }
+.stars { color: #c98a16; letter-spacing: 2px }
+.review-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px }
+.review { margin: 0; padding: 18px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); display: flex; flex-direction: column; gap: 10px }
+.review blockquote { margin: 0; font-size: .97rem; line-height: 1.6 }
+.review figcaption { display: flex; flex-direction: column; gap: 2px; font-size: .86rem } .review figcaption span { color: var(--muted) }
+.review .verified { color: var(--accent); font-weight: 600; font-size: .8rem; text-decoration: none }
+.review-empty { padding: 20px; border: 1px dashed var(--line); border-radius: 14px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between } .review-empty p { margin: 0 }
+.review-form { margin-top: 26px; padding: 22px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface) }
+.rating { border: 0; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px } .rating legend { font-weight: 600; margin-bottom: 6px; font-size: .9rem }
+.rating label { display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border: 1px solid var(--line); border-radius: 999px; cursor: pointer }
+.rating label:has(input:checked) { border-color: var(--accent); background: var(--sunk) }
 </style>
 
 <div id="demoBar" class="demo-bar" hidden></div>
@@ -515,6 +530,8 @@ function LEGAL() {
       list: [`Purchase and accounting records: for as long as tax and accounting laws require, up to 10 years.`, `Certificates and register entries: 10 years from issue, so employers can verify past certificates, unless you ask us to delete them sooner.`, `Consent records: for as long as the contract lasts plus the period in which legal claims can be brought, up to 10 years.`, `Server logs: kept by our providers for short periods, typically up to 30 days.`] },
     { id: "rights", h: "Your rights", plain: "You can see, correct, delete or take a copy of your data, and you can complain to the Italian data protection authority.",
       body: [`You have the right to access, correct, delete, restrict or object to the processing of your personal data, and the right to data portability. Email ${email}; we will reply within one month. If you live in the EU, EEA or UK and believe we have mishandled your data, you can complain to the data protection authority in your country (in Italy, the Garante per la protezione dei dati personali, www.garanteprivacy.it).`, `Scoring of quizzes is automatic. You can retake any quiz as often as you like, and you can ask a person to review a result by emailing us.`] },
+    { id: "reviews", h: "Reviews", plain: "If you leave a review, we publish it with your chosen display name and a link to your certificate.",
+      body: [`Only holders of a valid certificate can leave a review. If you submit one, we store your rating, review text, display name and certificate ID, and publish them on this website with your certification name and a link to your certificate's register entry, after a brief check for spam, abuse and personal data. We publish positive and critical reviews alike and do not pay for or edit reviews. Your email is used only to confirm you hold the certificate and is never shown. You can ask us to update or remove your review at any time.`] },
     { id: "cookies", h: "Cookies and browser storage", plain: "Analytics cookies only if you accept them; no advertising cookies.",
       body: [`We use Google Analytics (provided by Google Ireland Ltd / Google LLC) to understand how visitors use the site, for example which pages are read. Analytics cookies are set only if you click Accept on the cookie banner; until then, Google Consent Mode keeps analytics storage switched off and only cookieless, aggregated signals may be sent. We do not use advertising cookies, and advertising signals are always denied. Google may process data in the United States under its own safeguards; see Google's privacy policy. You can change your choice at any time with the Cookie settings link in the site footer or by clearing your browser storage. The site also stores course progress, your details and your cookie choice in your browser's local storage, which is strictly necessary to provide the service you asked for.`] },
     { id: "minors", h: "Children", plain: "The Services are for adults.",
@@ -1712,6 +1729,13 @@ function viewHome() {
     </div>
   </section>
 
+  <section id="reviews">
+    <span class="eyebrow">Learner reviews</span>
+    <h2 style="margin-top:10px">What certified learners say</h2>
+    <p class="muted" style="max-width:66ch;margin-top:10px">Only learners who hold a verified certificate can leave a review, and each one links to its entry in our public register. We publish positive and critical reviews alike, after a brief check for spam and personal data.</p>
+    <div id="reviewsBox" class="reviews"><p class="muted">Loading reviews…</p></div>
+  </section>
+
   <section id="catalog">
     <span class="eyebrow">Certifications</span>
     <h2 style="margin-top:10px">Choose your certification</h2>
@@ -1857,6 +1881,31 @@ function drawQR(code) {
   el.innerHTML = ""; new QRCode(el, { text: verifyUrl(code), width: 160, height: 160, colorDark: "#1a2630", colorLight: "#ffffff", correctLevel: QRCode.CorrectLevel.M });
 }
 
+/* ---------- Reviews (verified certificate holders only) ---------- */
+const stars = n => `<span class="stars" aria-label="${n} out of 5">${"★".repeat(n)}${"☆".repeat(5 - n)}</span>`;
+function reviewForm(cert) {
+  return `<section class="review-form no-print" id="leaveReview"><span class="eyebrow">Your review</span><h2 style="margin:8px 0">How was ${esc(cert.course_title)}?</h2>
+    <p class="muted">Your honest review helps other learners. It's shown with your first name and a link to your certificate, after a quick check for spam and personal data. We publish critical reviews too.</p>
+    <form id="reviewForm" class="stack" data-code="${esc(cert.code)}">
+      <fieldset class="rating"><legend>Rating</legend>${[5, 4, 3, 2, 1].map(n => `<label><input type="radio" name="rv" value="${n}" required><span>${stars(n)}</span></label>`).join("")}</fieldset>
+      <label class="field">Your review<textarea id="rvBody" rows="4" minlength="20" maxlength="1200" required placeholder="What did you learn? What could be better?"></textarea></label>
+      <label class="field">Name to display<input id="rvName" type="text" maxlength="40" value="${esc((cert.full_name || "").split(" ")[0])}"></label>
+      <label class="field">Email used for your certificate<input id="rvEmail" type="email" required value="${esc(mem.learner?.email || "")}"></label>
+      <label class="consent"><input type="checkbox" id="rvConsent" required><span>I agree that my review, display name, certification and certificate ID may be published on this website. I wrote this review myself and was not paid for it.</span></label>
+      <button class="btn primary" type="submit" style="align-self:flex-start">Submit review</button>
+    </form></section>`;
+}
+async function loadReviews() {
+  const box = $("#reviewsBox"); if (!box) return;
+  let rows = [];
+  if (LIVE) { try { rows = await rpc("public_reviews", {}) || [] } catch (e) { console.warn(e) } }
+  if (!rows.length) { box.innerHTML = `<div class="review-empty"><p><b>No reviews yet.</b> Reviews appear here as learners earn their certificates. Earned one? Open your certificate page to leave a review.</p><a class="btn" href="#course-pmf">Try a free chapter</a></div>`; return }
+  const avg = rows.reduce((a, r) => a + r.rating, 0) / rows.length;
+  box.innerHTML = `<div class="review-sum"><b>${avg.toFixed(1)}</b>${stars(Math.round(avg))}<span class="muted">from ${rows.length} verified review${rows.length > 1 ? "s" : ""}</span></div>
+    <div class="review-grid">${rows.slice(0, 12).map(r => `<figure class="review">${stars(r.rating)}<blockquote>${esc(r.body)}</blockquote>
+      <figcaption><b>${esc(r.display_name)}</b><span>${esc(r.course_title || "")}</span><a href="#verify-${esc(r.cert_code)}" class="verified">✓ Verified certificate</a></figcaption></figure>`).join("")}</div>`;
+}
+
 function viewCert(id) {
   const c = byId(id); if (!c) return viewNotFound();
   const cert = mem.certs[id];
@@ -1871,7 +1920,7 @@ function viewCert(id) {
       <div class="row no-print"><a class="btn primary" href="${li}" target="_blank" rel="noopener">Add to LinkedIn</a>
         <button class="btn" data-copy="${esc(verifyUrl(cert.code))}">Copy verification link</button>
         ${LIVE ? `<button class="btn ghost" data-print>Print or save as PDF</button>` : ""}
-        <a class="btn ghost" href="#verify-${esc(cert.code)}">See register entry</a>${st === "valid" && ex - new Date() < 31 * 864e5 ? `<button class="btn ghost" data-renew="${id}">Renew now</button>` : ""}</div><p class="muted no-print" style="font-size:.9rem;max-width:70ch">${WHY_EXPIRE}</p></div>`;
+        <a class="btn ghost" href="#verify-${esc(cert.code)}">See register entry</a>${st === "valid" && ex - new Date() < 31 * 864e5 ? `<button class="btn ghost" data-renew="${id}">Renew now</button>` : ""}</div><p class="muted no-print" style="font-size:.9rem;max-width:70ch">${WHY_EXPIRE}</p>${st === "valid" ? reviewForm(cert) : ""}</div>`;
   }
   if (!owns(id)) return `<h2>Enrol to earn this certificate</h2><p class="muted" style="margin:10px 0 18px">Certificates are issued to enrolled learners who pass every chapter.</p><button class="btn primary" data-buy="all">Get PMAI for ${money(CONFIG.bundlePrice)}</button>`;
   if (id === "pmai" && !complete(c)) { const done = COURSES.filter(x => doneCount(x) === x.chapters.length).length;
@@ -2066,6 +2115,7 @@ const DEMO_ADMIN = (() => { const d = (n) => new Date(Date.now() - n * 864e5).to
 async function adminLoad() {
   if (!LIVE) { adminData = DEMO_ADMIN; return }
   adminData = await rpc("admin_overview", { p_key: adminKey.get() });
+  try { adminData.reviews = await rpc("admin_reviews", { p_key: adminKey.get() }) || [] } catch (e) { adminData.reviews = [] }
 }
 const fmtMoney = (cents, cur) => (cur || "usd").toUpperCase() === "USD" ? "$" + (cents / 100).toFixed(2) : (cents / 100).toFixed(2) + " " + (cur || "").toUpperCase();
 const shortDate = d => d ? new Date(d).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" }) : "";
@@ -2103,6 +2153,11 @@ function viewAdmin() {
   if (adminTab === "students") table = `<table><thead><tr><th>Name</th><th>Email</th><th>Purchased</th><th>Status</th><th>Refund window</th><th>Valid certs</th><th>PMAI</th></tr></thead><tbody>
     ${S.filter(hit).map(s => `<tr><td>${esc(s.name || "—")}</td><td class="mono">${esc(s.email)}</td><td>${shortDate(s.first)}</td><td>${chip(s.status, s.status === "Active" ? "ok" : "bad")}</td>
       <td>${s.refundEligible ? chip("Eligible", "mile") : `<span class="muted">—</span>`}</td><td class="mono">${s.validCerts}/7</td><td>${s.pmai ? chip("Awarded", "ok") : ""}</td></tr>`).join("") || `<tr><td colspan="7" class="muted">No students yet. They appear here after their first payment.</td></tr>`}</tbody></table>`;
+  if (adminTab === "reviews") { const R = adminData.reviews || []; table = R.length ? `<table><thead><tr><th>Date</th><th>Name</th><th>Certification</th><th>Rating</th><th>Review</th><th>Status</th><th></th></tr></thead><tbody>
+    ${R.filter(hit).map(r => `<tr><td>${shortDate(r.created_at)}</td><td>${esc(r.display_name)}<br><a class="mono" style="font-size:.75rem" href="#verify-${esc(r.cert_code)}">${esc(r.cert_code)}</a></td><td>${esc(r.course_title || "")}</td><td>${stars(r.rating)}</td><td style="max-width:420px">${esc(r.body)}</td>
+      <td>${chip(r.status, r.status === "approved" ? "ok" : r.status === "rejected" ? "bad" : "mile")}</td>
+      <td><div class="row">${r.status !== "approved" ? `<button class="btn small primary" data-reviewid="${r.id}" data-to="approved">Publish</button>` : ""}${r.status !== "rejected" ? `<button class="btn small ghost" data-reviewid="${r.id}" data-to="rejected">Hide</button>` : ""}</div></td></tr>`).join("")}</tbody></table>` : `<p class="muted" style="padding:16px">No reviews yet. Learners can leave one from their certificate page.</p>`;
+    table = `<p class="muted" style="font-size:.85rem;margin:0 0 10px">Publish every genuine review, positive or critical. Hide only spam, abuse, off-topic text or personal data. Selectively hiding negative reviews is misleading to customers and can breach consumer law.</p>` + table }
   if (adminTab === "payments") table = `<table><thead><tr><th>Date</th><th>Name</th><th>Email</th><th>Amount</th><th>Terms accepted</th><th>Status</th><th>Stripe session</th><th></th></tr></thead><tbody>
     ${P.filter(hit).map(p => `<tr><td>${shortDate(p.created_at)}</td><td>${esc(p.customer_name || "—")}</td><td class="mono">${esc(p.email)}</td><td class="mono">${fmtMoney(p.amount_total || 0, p.currency)}</td>
       <td>${p.terms_accepted ? chip("Yes", "ok") : chip("Not recorded", "")}</td><td>${p.refunded_at ? chip("Refunded " + shortDate(p.refunded_at), "bad") : chip("Paid", "ok")}</td>
@@ -2118,7 +2173,7 @@ function viewAdmin() {
   ${adminData.demo ? `<div class="result fail" style="margin-bottom:18px"><b>Example data.</b> The preview can't reach your database, so it shows made-up students. On neuralprojectinstitute.com/#admin you'll see real data.</div>` : ""}
   <div class="tiles">${tile("Revenue", fmtMoney(revenue, "usd"), `${live.length} paid`)}${tile("Students", S.filter(s => s.status === "Active").length, `${S.filter(s => s.refundEligible).length} in refund window`)}${tile("Refunds", refunded.length, refunded.length ? fmtMoney(refunded.reduce((s, p) => s + (p.amount_total || 0), 0), "usd") : "")}${tile("Valid certificates", cstate("valid"), `${cstate("expired")} expired · ${cstate("revoked")} revoked`)}${tile("PMAI awarded", C.filter(c => c.course_id === "pmai" && certState(c) === "valid").length, "")}</div>
   <div class="row" style="justify-content:space-between;margin:28px 0 12px">
-    <div class="row" role="tablist">${[["students", "Students"], ["payments", "Payments"], ["certificates", "Certificates"]].map(([k, l]) => `<button class="btn small ${adminTab === k ? "primary" : "ghost"}" data-admintab="${k}" role="tab" aria-selected="${adminTab === k}">${l}</button>`).join("")}</div>
+    <div class="row" role="tablist">${[["students", "Students"], ["payments", "Payments"], ["certificates", "Certificates"], ["reviews", "Reviews" + ((adminData.reviews || []).filter(r => r.status === "pending").length ? " (" + adminData.reviews.filter(r => r.status === "pending").length + " new)" : "")]].map(([k, l]) => `<button class="btn small ${adminTab === k ? "primary" : "ghost"}" data-admintab="${k}" role="tab" aria-selected="${adminTab === k}">${l}</button>`).join("")}</div>
     <div class="row"><input id="adminSearch" type="text" placeholder="Search name, email or ID" value="${esc(adminQ)}" style="min-width:220px"><button class="btn small" data-admincsv>Export CSV</button></div></div>
   <div class="table-wrap admin-table">${table}</div>
   <p class="muted" style="font-size:.85rem;margin-top:14px">Refunds: issue the money in Stripe first, then press "Mark refunded" here. That locks the student's paid chapters. Chapter-by-chapter progress is stored on each student's own device, so it doesn't appear here.</p>`;
@@ -2153,6 +2208,7 @@ function render() {
   if (page === "verify" && rest.length) runVerify(rest.join("-"));
   if (page === "cert" && mem.certs[rest[0]]) drawQR(mem.certs[rest[0]].code);
   if (page === "home" && location.hash === "#catalog") $("#catalog")?.scrollIntoView();
+  if (page === "home" || page === "paid") loadReviews();
 }
 
 /* ---------- Events ---------- */
@@ -2171,14 +2227,16 @@ document.addEventListener("click", async e => {
     const S = adminStudents(), P = adminData.purchases, C = adminData.certificates, day = new Date().toISOString().slice(0, 10);
     if (adminTab === "students") csvDownload(`students-${day}.csv`, [["Name", "Email", "First purchase", "Status", "Refund window", "Valid certificates", "PMAI"], ...S.map(s => [s.name, s.email, s.first, s.status, s.refundEligible ? "Eligible" : "", s.validCerts, s.pmai ? "Yes" : ""])]);
     if (adminTab === "payments") csvDownload(`payments-${day}.csv`, [["Date", "Name", "Email", "Amount", "Currency", "Terms accepted", "Refunded at", "Stripe session"], ...P.map(p => [p.created_at, p.customer_name, p.email, (p.amount_total || 0) / 100, p.currency, p.terms_accepted ? "Yes" : "No", p.refunded_at || "", p.stripe_session_id])]);
+    if (adminTab === "reviews") csvDownload(`reviews-${day}.csv`, [["Date", "Name", "Certificate ID", "Certification", "Rating", "Review", "Status"], ...(adminData.reviews || []).map(r => [r.created_at, r.display_name, r.cert_code, r.course_title, r.rating, r.body, r.status])]);
     if (adminTab === "certificates") csvDownload(`certificates-${day}.csv`, [["Certificate ID", "Holder", "Email", "Certification", "Score", "Issued", "Valid until", "Status", "Terms version"], ...C.map(c => [c.code, c.full_name, c.email, c.course_title, c.score, c.issued_at, expiryOf(c).toISOString(), certState(c), c.terms_version || ""])]);
     return;
   }
-  if (t.dataset.refund || t.dataset.certstatus) {
+  if (t.dataset.refund || t.dataset.certstatus || t.dataset.reviewid) {
     if (!LIVE) return toast("Example data can't be changed.");
     t.disabled = true;
     try {
-      if (t.dataset.refund) { await rpc("admin_set_refunded", { p_key: adminKey.get(), p_session: t.dataset.refund, p_refunded: t.dataset.to === "1" }); toast(t.dataset.to === "1" ? "Marked as refunded. Access removed." : "Refund undone. Access restored.") }
+      if (t.dataset.reviewid) { await rpc("admin_set_review_status", { p_key: adminKey.get(), p_id: +t.dataset.reviewid, p_status: t.dataset.to }); toast(t.dataset.to === "approved" ? "Review published." : t.dataset.to === "rejected" ? "Review hidden." : "Review set to pending.") }
+      else if (t.dataset.refund) { await rpc("admin_set_refunded", { p_key: adminKey.get(), p_session: t.dataset.refund, p_refunded: t.dataset.to === "1" }); toast(t.dataset.to === "1" ? "Marked as refunded. Access removed." : "Refund undone. Access restored.") }
       else { await rpc("admin_set_certificate_status", { p_key: adminKey.get(), p_code: t.dataset.certstatus, p_status: t.dataset.to }); toast(t.dataset.to === "revoked" ? "Certificate revoked." : "Certificate restored.") }
       adminData = null; render();
     } catch (err) { toast(err.message); t.disabled = false }
@@ -2211,6 +2269,17 @@ document.addEventListener("submit", async e => {
     const pr = mem.progress[id] || (mem.progress[id] = {}); pr[i] = Math.max(pr[i] ?? 0, score); save();
     if (!mem.learner && score >= CONFIG.passMark && owns(id)) toast("Passed. Add your details under My learning to keep a record.");
     render(); $(".result")?.scrollIntoView({ block: "center" });
+  }
+  if (f.id === "reviewForm") {
+    const r = +(f.querySelector("input[name=rv]:checked")?.value || 0), body = $("#rvBody").value.trim();
+    if (!r) return toast("Choose a star rating.");
+    if (body.length < 20) return toast("Please write at least 20 characters.");
+    if (!$("#rvConsent").checked) return toast("Tick the box to agree to publication.");
+    if (!LIVE) return toast("Reviews can be submitted on neuralprojectinstitute.com.");
+    try { await rpc("submit_review", { p_code: f.dataset.code, p_email: $("#rvEmail").value.trim(), p_rating: r, p_body: body, p_display_name: $("#rvName").value.trim() });
+      f.closest("section").innerHTML = `<span class="eyebrow">Your review</span><h2 style="margin:8px 0">Thank you!</h2><p class="muted">Your review will appear on the homepage after a quick check. You can update it any time by submitting again.</p>`;
+    } catch (err) { toast(/not found/i.test(err.message) ? "That email doesn't match this certificate." : "Couldn't submit your review. Please try again.") }
+    return;
   }
   if (f.id === "claimForm" && !($("#claimConsent").checked && $("#claimPublish").checked)) return toast("Tick both boxes to continue.");
   if (f.id === "claimForm") {
