@@ -393,6 +393,13 @@ footer.foot .wrap { display: flex; justify-content: space-between; flex-wrap: wr
 .rating { border: 0; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px } .rating legend { font-weight: 600; margin-bottom: 6px; font-size: .9rem }
 .rating label { display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border: 1px solid var(--line); border-radius: 999px; cursor: pointer }
 .rating label:has(input:checked) { border-color: var(--accent); background: var(--sunk) }
+
+.trust-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; margin-top: 18px }
+.trust { display: flex; flex-direction: column; gap: 6px; padding: 18px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); color: var(--ink); text-decoration: none }
+.trust:hover { border-color: var(--accent) } .trust b { font: 650 1.02rem var(--f-display) } .trust span { font-size: .9rem; color: var(--muted); line-height: 1.5 }
+.trust b::before { content: "✓ "; color: var(--accent) }
+.incent { color: var(--muted); font-size: .74rem; font-style: italic }
+.grant { gap: 8px; align-items: center; margin: 0 0 12px; padding: 12px; border: 1px dashed var(--line); border-radius: 12px } .grant input { min-width: 180px }
 </style>
 
 <div id="demoBar" class="demo-bar" hidden></div>
@@ -1729,6 +1736,19 @@ function viewHome() {
     </div>
   </section>
 
+  <section id="trust">
+    <span class="eyebrow">Why learners trust the Institute</span>
+    <h2 style="margin-top:10px">See exactly what you get before you pay</h2>
+    <div class="trust-grid">
+      <a class="trust" href="#course-pmf"><b>Try chapter 1 free</b><span>Every course's first chapter, slides and quiz are open to everyone. No sign-up needed.</span></a>
+      <a class="trust" href="#verify-${SAMPLE.code}"><b>See how verification works</b><span>See what an employer sees when they verify a certificate (sample ID ${SAMPLE.code}).</span></a>
+      <a class="trust" href="#terms"><b>10-day refund guarantee</b><span>Full refund within 10 days of purchase, for any reason, as long as you haven't claimed a certificate.</span></a>
+      <a class="trust" href="#verify"><b>Public certificate register</b><span>Every certificate has a unique ID and QR code that anyone can check, so yours can't be faked.</span></a>
+      <a class="trust" href="/project-management/"><b>270+ free guides and 55 templates</b><span>Our project management, Agile, Scrum and Kanban guides and downloadable templates are free to use.</span></a>
+      <a class="trust" href="#about"><b>A registered US company</b><span>Operated by ${esc(CONFIG.legalName)}, ${esc(CONFIG.stateOfFormation)}. Clear terms, privacy policy and a real support inbox.</span></a>
+    </div>
+  </section>
+
   <section id="reviews">
     <span class="eyebrow">Learner reviews</span>
     <h2 style="margin-top:10px">What certified learners say</h2>
@@ -1898,12 +1918,12 @@ function reviewForm(cert) {
 async function loadReviews() {
   const box = $("#reviewsBox"); if (!box) return;
   let rows = [];
-  if (LIVE) { try { rows = await rpc("public_reviews", {}) || [] } catch (e) { console.warn(e) } }
-  if (!rows.length) { box.innerHTML = `<div class="review-empty"><p><b>No reviews yet.</b> Reviews appear here as learners earn their certificates. Earned one? Open your certificate page to leave a review.</p><a class="btn" href="#course-pmf">Try a free chapter</a></div>`; return }
+  if (LIVE) { try { rows = await rpc("public_reviews_v2", {}) || [] } catch (e) { try { rows = await rpc("public_reviews", {}) || [] } catch (e2) { console.warn(e2) } } }
+  if (!rows.length) { box.innerHTML = `<div class="review-empty"><p><b>Reviews are on their way.</b> We only show reviews from learners who have earned a verified certificate, so this section fills up as our first learners finish their courses. Earned one? Open your certificate page to leave a review.</p></div>`; return }
   const avg = rows.reduce((a, r) => a + r.rating, 0) / rows.length;
   box.innerHTML = `<div class="review-sum"><b>${avg.toFixed(1)}</b>${stars(Math.round(avg))}<span class="muted">from ${rows.length} verified review${rows.length > 1 ? "s" : ""}</span></div>
     <div class="review-grid">${rows.slice(0, 12).map(r => `<figure class="review">${stars(r.rating)}<blockquote>${esc(r.body)}</blockquote>
-      <figcaption><b>${esc(r.display_name)}</b><span>${esc(r.course_title || "")}</span><a href="#verify-${esc(r.cert_code)}" class="verified">✓ Verified certificate</a></figcaption></figure>`).join("")}</div>`;
+      <figcaption><b>${esc(r.display_name)}</b><span>${esc(r.course_title || "")}</span><a href="#verify-${esc(r.cert_code)}" class="verified">✓ Verified certificate</a>${r.incentivized ? `<small class="incent">Received free course access in exchange for an honest review</small>` : ""}</figcaption></figure>`).join("")}</div>`;
 }
 
 function viewCert(id) {
@@ -2115,7 +2135,7 @@ const DEMO_ADMIN = (() => { const d = (n) => new Date(Date.now() - n * 864e5).to
 async function adminLoad() {
   if (!LIVE) { adminData = DEMO_ADMIN; return }
   adminData = await rpc("admin_overview", { p_key: adminKey.get() });
-  try { adminData.reviews = await rpc("admin_reviews", { p_key: adminKey.get() }) || [] } catch (e) { adminData.reviews = [] }
+  try { adminData.reviews = await rpc("admin_reviews_v2", { p_key: adminKey.get() }) || [] } catch (e) { try { adminData.reviews = await rpc("admin_reviews", { p_key: adminKey.get() }) || [] } catch (e2) { adminData.reviews = [] } }
 }
 const fmtMoney = (cents, cur) => (cur || "usd").toUpperCase() === "USD" ? "$" + (cents / 100).toFixed(2) : (cents / 100).toFixed(2) + " " + (cur || "").toUpperCase();
 const shortDate = d => d ? new Date(d).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" }) : "";
@@ -2154,10 +2174,11 @@ function viewAdmin() {
     ${S.filter(hit).map(s => `<tr><td>${esc(s.name || "—")}</td><td class="mono">${esc(s.email)}</td><td>${shortDate(s.first)}</td><td>${chip(s.status, s.status === "Active" ? "ok" : "bad")}</td>
       <td>${s.refundEligible ? chip("Eligible", "mile") : `<span class="muted">—</span>`}</td><td class="mono">${s.validCerts}/7</td><td>${s.pmai ? chip("Awarded", "ok") : ""}</td></tr>`).join("") || `<tr><td colspan="7" class="muted">No students yet. They appear here after their first payment.</td></tr>`}</tbody></table>`;
   if (adminTab === "reviews") { const R = adminData.reviews || []; table = R.length ? `<table><thead><tr><th>Date</th><th>Name</th><th>Certification</th><th>Rating</th><th>Review</th><th>Status</th><th></th></tr></thead><tbody>
-    ${R.filter(hit).map(r => `<tr><td>${shortDate(r.created_at)}</td><td>${esc(r.display_name)}<br><a class="mono" style="font-size:.75rem" href="#verify-${esc(r.cert_code)}">${esc(r.cert_code)}</a></td><td>${esc(r.course_title || "")}</td><td>${stars(r.rating)}</td><td style="max-width:420px">${esc(r.body)}</td>
+    ${R.filter(hit).map(r => `<tr><td>${shortDate(r.created_at)}</td><td>${esc(r.display_name)}<br><a class="mono" style="font-size:.75rem" href="#verify-${esc(r.cert_code)}">${esc(r.cert_code)}</a></td><td>${esc(r.course_title || "")}${r.incentivized ? `<br>${chip("Free access", "mile")}` : ""}</td><td>${stars(r.rating)}</td><td style="max-width:420px">${esc(r.body)}</td>
       <td>${chip(r.status, r.status === "approved" ? "ok" : r.status === "rejected" ? "bad" : "mile")}</td>
       <td><div class="row">${r.status !== "approved" ? `<button class="btn small primary" data-reviewid="${r.id}" data-to="approved">Publish</button>` : ""}${r.status !== "rejected" ? `<button class="btn small ghost" data-reviewid="${r.id}" data-to="rejected">Hide</button>` : ""}</div></td></tr>`).join("")}</tbody></table>` : `<p class="muted" style="padding:16px">No reviews yet. Learners can leave one from their certificate page.</p>`;
     table = `<p class="muted" style="font-size:.85rem;margin:0 0 10px">Publish every genuine review, positive or critical. Hide only spam, abuse, off-topic text or personal data. Selectively hiding negative reviews is misleading to customers and can breach consumer law.</p>` + table }
+  const grant = `<form id="grantForm" class="grant row"><b>Early reviewers:</b><input id="grEmail" type="email" placeholder="Email" required><input id="grName" type="text" placeholder="Name (optional)"><button class="btn small primary" type="submit">Grant free PMAI access</button><span class="muted" style="font-size:.8rem">Their reviews are automatically labelled "Received free course access".</span></form>`;
   if (adminTab === "payments") table = `<table><thead><tr><th>Date</th><th>Name</th><th>Email</th><th>Amount</th><th>Terms accepted</th><th>Status</th><th>Stripe session</th><th></th></tr></thead><tbody>
     ${P.filter(hit).map(p => `<tr><td>${shortDate(p.created_at)}</td><td>${esc(p.customer_name || "—")}</td><td class="mono">${esc(p.email)}</td><td class="mono">${fmtMoney(p.amount_total || 0, p.currency)}</td>
       <td>${p.terms_accepted ? chip("Yes", "ok") : chip("Not recorded", "")}</td><td>${p.refunded_at ? chip("Refunded " + shortDate(p.refunded_at), "bad") : chip("Paid", "ok")}</td>
@@ -2175,7 +2196,7 @@ function viewAdmin() {
   <div class="row" style="justify-content:space-between;margin:28px 0 12px">
     <div class="row" role="tablist">${[["students", "Students"], ["payments", "Payments"], ["certificates", "Certificates"], ["reviews", "Reviews" + ((adminData.reviews || []).filter(r => r.status === "pending").length ? " (" + adminData.reviews.filter(r => r.status === "pending").length + " new)" : "")]].map(([k, l]) => `<button class="btn small ${adminTab === k ? "primary" : "ghost"}" data-admintab="${k}" role="tab" aria-selected="${adminTab === k}">${l}</button>`).join("")}</div>
     <div class="row"><input id="adminSearch" type="text" placeholder="Search name, email or ID" value="${esc(adminQ)}" style="min-width:220px"><button class="btn small" data-admincsv>Export CSV</button></div></div>
-  <div class="table-wrap admin-table">${table}</div>
+  ${adminTab === "payments" ? grant : ""}<div class="table-wrap admin-table">${table}</div>
   <p class="muted" style="font-size:.85rem;margin-top:14px">Refunds: issue the money in Stripe first, then press "Mark refunded" here. That locks the student's paid chapters. Chapter-by-chapter progress is stored on each student's own device, so it doesn't appear here.</p>`;
 }
 const viewNotFound = () => `<h2>Page not found</h2><p style="margin-top:12px"><a href="#home">Go to the homepage</a></p>`;
@@ -2269,6 +2290,12 @@ document.addEventListener("submit", async e => {
     const pr = mem.progress[id] || (mem.progress[id] = {}); pr[i] = Math.max(pr[i] ?? 0, score); save();
     if (!mem.learner && score >= CONFIG.passMark && owns(id)) toast("Passed. Add your details under My learning to keep a record.");
     render(); $(".result")?.scrollIntoView({ block: "center" });
+  }
+  if (f.id === "grantForm") {
+    if (!LIVE) return toast("Example data can't be changed.");
+    try { await rpc("admin_grant_access", { p_key: adminKey.get(), p_email: $("#grEmail").value.trim(), p_name: $("#grName").value.trim() }); toast("Free access granted. They can sign in with that email under My learning."); adminData = null; render() }
+    catch (err) { toast(/already/i.test(err.message) ? "That email already has access." : /invalid email/i.test(err.message) ? "Check the email address." : "Couldn't grant access.") }
+    return;
   }
   if (f.id === "reviewForm") {
     const r = +(f.querySelector("input[name=rv]:checked")?.value || 0), body = $("#rvBody").value.trim();
