@@ -4,6 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="google-site-verification" content="_AdWzhJ10ahXAUxsb6ZwgWdUN4Dw6wxh33KsuoEcyF0" />
+<!-- Google tag (gtag.js) with Consent Mode: analytics storage stays off until the visitor accepts -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  (function(){var c=null;try{c=localStorage.getItem('npi_consent')}catch(e){}
+  gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:c==='granted'?'granted':'denied'});})();
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VMPL37VX2R"></script>
+<script>
+  gtag('js', new Date());
+
+  gtag('config', 'G-VMPL37VX2R');
+</script>
+<script src="/assets/consent.js" defer></script>
 <style>body{margin:0}[hidden]{display:none!important}</style>
 <title>Neural Project Institute</title>
 <meta name="description" content="Online project management certifications with verifiable certificates.">
@@ -379,7 +393,7 @@ footer.foot .wrap { display: flex; justify-content: space-between; flex-wrap: wr
   </div>
 </header>
 <main id="app" class="wrap"></main>
-<footer class="foot"><div class="wrap"><span id="footBrand"></span><span><a href="#terms">Terms of Sale</a> · <a href="#privacy">Privacy</a> · <a href="#legal">Legal notice</a> · <a href="#about">About the Institute</a> · <a href="/project-management/">Guides</a> · <a href="#verify">Certificate register</a> · <a href="#courses">All courses</a></span></div></footer>
+<footer class="foot"><div class="wrap"><span id="footBrand"></span><span><a href="#terms">Terms of Sale</a> · <a href="#privacy">Privacy</a> · <a href="#" onclick="npiCookieSettings();return false">Cookie settings</a> · <a href="#legal">Legal notice</a> · <a href="#about">About the Institute</a> · <a href="/project-management/">Guides</a> · <a href="#verify">Certificate register</a> · <a href="#courses">All courses</a></span></div></footer>
 <div id="modalRoot"></div>
 
 <script>
@@ -482,8 +496,8 @@ function LEGAL() {
       list: [`Purchase and accounting records: for as long as tax and accounting laws require, up to 10 years.`, `Certificates and register entries: 10 years from issue, so employers can verify past certificates, unless you ask us to delete them sooner.`, `Consent records: for as long as the contract lasts plus the period in which legal claims can be brought, up to 10 years.`, `Server logs: kept by our providers for short periods, typically up to 30 days.`] },
     { id: "rights", h: "Your rights", plain: "You can see, correct, delete or take a copy of your data, and you can complain to the Italian data protection authority.",
       body: [`You have the right to access, correct, delete, restrict or object to the processing of your personal data, and the right to data portability. Email ${email}; we will reply within one month. If you live in the EU, EEA or UK and believe we have mishandled your data, you can complain to the data protection authority in your country (in Italy, the Garante per la protezione dei dati personali, www.garanteprivacy.it).`, `Scoring of quizzes is automatic. You can retake any quiz as often as you like, and you can ask a person to review a result by emailing us.`] },
-    { id: "cookies", h: "Cookies and browser storage", plain: "No tracking or advertising cookies. We store only what the site needs to work, on your own device.",
-      body: [`We don't use analytics, advertising or tracking cookies. The site stores course progress and your details in your browser's local storage, which is strictly necessary to provide the service you asked for, so no consent banner is required. Fonts and scripts are served from our own website, not from third-party servers. You can clear this storage at any time in your browser settings.`] },
+    { id: "cookies", h: "Cookies and browser storage", plain: "Analytics cookies only if you accept them; no advertising cookies.",
+      body: [`We use Google Analytics (provided by Google Ireland Ltd / Google LLC) to understand how visitors use the site, for example which pages are read. Analytics cookies are set only if you click Accept on the cookie banner; until then, Google Consent Mode keeps analytics storage switched off and only cookieless, aggregated signals may be sent. We do not use advertising cookies, and advertising signals are always denied. Google may process data in the United States under its own safeguards; see Google's privacy policy. You can change your choice at any time with the Cookie settings link in the site footer or by clearing your browser storage. The site also stores course progress, your details and your cookie choice in your browser's local storage, which is strictly necessary to provide the service you asked for.`] },
     { id: "minors", h: "Children", plain: "The Services are for adults.",
       body: [`The Services are intended for people aged 18 and over. We don't knowingly collect data from children.`] },
     { id: "pchanges", h: "Changes to this policy", plain: "We'll update the date at the top when this policy changes.",
@@ -2000,7 +2014,7 @@ function viewLegal(kind) {
   const missing = !CONFIG.legalName || !CONFIG.stateOfFormation || !CONFIG.address || !CONFIG.contactEmail || CONFIG.contactEmail.includes("example.com");
   const intro = {
     terms: `<div class="callout"><b>The short version.</b> You pay ${money(CONFIG.bundlePrice)} once for PMAI and get all six courses for at least 24 months. If you're not happy, you can get a full refund within 10 days of purchase, as long as you haven't claimed a certificate. You study on your own initiative and at your own risk; the content is general education, not professional advice. Certificates are our own certificates of completion, valid for ${CONFIG.validityMonths} months. If something is faulty, we fix it or refund you as the law requires. To the extent the law allows, our liability is limited to what you paid.</div>`,
-    privacy: `<div class="callout"><b>The short version.</b> We keep only your name, email, purchase and certificate records. We use them to give you access and verify certificates. Your name appears in the public register when you claim a certificate; your email never does. No tracking cookies. You can ask to see or delete your data at any time.</div>`,
+    privacy: `<div class="callout"><b>The short version.</b> We keep only your name, email, purchase and certificate records. We use them to give you access and verify certificates. Your name appears in the public register when you claim a certificate; your email never does. Analytics cookies are used only if you accept them. You can ask to see or delete your data at any time.</div>`,
     notice: ""
   }[kind];
   return `<div class="crumbs no-print"><a href="#home">Home</a> / ${titles[kind]}</div>
