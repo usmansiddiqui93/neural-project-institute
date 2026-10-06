@@ -209,7 +209,7 @@ nav:has(.dd.hov) .dd:not(.hov):not(.open):not(:focus-within) .ddmenu { display: 
 .bundle .promo-price b { font-size: 2.6rem; color: inherit } .bundle .promo-price s { color: inherit; opacity: .65 }
 .promo-price em { font: 600 .72rem/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; font-style: normal; padding: 5px 8px; border-radius: 999px; background: var(--mile); color: #1a1408 }
 /* Sign-up */
-.modal .box:has(.signup) { max-width: 600px; max-height: calc(100vh - 32px); overflow: auto }
+.modal .box:has(.signup) { width: min(600px, 100%); max-height: calc(100vh - 32px); overflow: auto }
 .signup { gap: 12px } .signup .two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px }
 .signup .two[hidden], .signup .field[hidden] { display: none }
 .signup select { font: inherit; padding: 11px 12px; border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); color: var(--ink) }
@@ -218,7 +218,7 @@ nav:has(.dd.hov) .dd:not(.hov):not(.open):not(:focus-within) .ddmenu { display: 
 .linkbtn { border: 0; background: none; padding: 0; color: var(--accent); font: inherit; text-decoration: underline; cursor: pointer }
 body:has(#modalRoot .modal) #npi-langbar { display: none }
 /* Claim wizard */
-.modal .box:has(.wizard) { max-width: 560px }
+.modal .box:has(.wizard) { width: min(540px, 100%) }
 .wizard { display: flex; flex-direction: column; gap: 12px }
 .wz-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-bottom: 6px }
 .wz-steps span { font: 600 .68rem/1 var(--f-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); padding-top: 8px; border-top: 3px solid var(--line) }
@@ -265,6 +265,11 @@ body:has(#modalRoot .modal) #npi-langbar { display: none }
 .foot-left { display: flex; flex-direction: column; align-items: flex-start; gap: 10px }
 .foot-li { display: inline-flex; align-items: center; gap: 8px; padding: 7px 12px; border: 1px solid var(--line); border-radius: 999px; color: var(--ink); text-decoration: none; font-weight: 600; font-size: .85rem }
 .foot-li svg { color: #0a66c2 } .foot-li:hover { border-color: #0a66c2; color: #0a66c2 }
+.modal .box:has(.share-box) { width: min(640px, 100%); max-height: calc(100vh - 32px); overflow: auto }
+.share-box { display: flex; flex-direction: column; gap: 12px }
+.share-img { border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--sunk); min-height: 120px; display: grid; place-items: center }
+.share-img img { display: block; width: 100%; height: auto }
+.share-box textarea { width: 100%; font: inherit; font-size: .9rem; padding: 10px; border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); color: var(--ink) }
 /* Templates menu */
 .dd.tpl .ddmenu { width: 440px; left: auto; right: -60px }
 .tplmenu { position: relative; z-index: 1; padding: 14px 14px 12px }
@@ -526,13 +531,13 @@ nav.main .dd.langdd .ddmenu a { flex-direction: row; justify-content: space-betw
       <div class="ddmenu" role="menu"><div class="tplmenu"><span class="eyebrow">Popular templates</span><div class="tplnav"><a role="menuitem" href="/templates/business-plan-template/">Business Plan</a><a role="menuitem" href="/templates/project-plan-template/">Project Plan</a><a role="menuitem" href="/templates/project-proposal-template/">Project Proposal</a><a role="menuitem" href="/templates/content-calendar-template/">Content Calendar</a><a role="menuitem" href="/templates/to-do-list-template/">To-Do List</a><a role="menuitem" href="/templates/business-requirements-document-template/">Business Requirements Document</a><a role="menuitem" href="/templates/project-tracker-template/">Project Tracker</a><a role="menuitem" href="/templates/project-schedule-template/">Project Schedule</a><a role="menuitem" href="/templates/meeting-notes-template/">Meeting Notes</a><a role="menuitem" href="/templates/marketing-campaign-template/">Marketing Campaign Plan</a></div><a role="menuitem" class="viewmore" href="/templates/"><b>View more templates</b><span>55 free templates · Google Sheets, Excel, PDF</span></a></div></div>
     </div>
       <div class="dd langdd" data-hubs='{"de": "/de/projektmanagement/", "es": "/es/gestion-de-proyectos/", "fr": "/fr/gestion-de-projet/", "it": "/it/gestione-dei-progetti/", "ru": "/ru/управление-проектами/", "zh": "/zh/项目管理/", "ja": "/ja/プロジェクト管理/"}'><button class="ddbtn" type="button" aria-expanded="false" aria-haspopup="true" aria-label="Language"><svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M1.5 8h13M8 1.5c2 2 2 11 0 13M8 1.5c-2 2-2 11 0 13" fill="none" stroke="currentColor" stroke-width="1.3"/></svg> EN <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button><div class="ddmenu" role="menu"><a role="menuitem" href="/" hreflang="en" lang="en" aria-current="true"><b>English</b></a><a role="menuitem" href="/de/projektmanagement/" hreflang="de" lang="de"><b>Deutsch</b><span>Guide hub</span></a><a role="menuitem" href="/es/gestion-de-proyectos/" hreflang="es" lang="es"><b>Español</b><span>Guide hub</span></a><a role="menuitem" href="/fr/gestion-de-projet/" hreflang="fr" lang="fr"><b>Français</b><span>Guide hub</span></a><a role="menuitem" href="/it/gestione-dei-progetti/" hreflang="it" lang="it"><b>Italiano</b><span>Guide hub</span></a><a role="menuitem" href="/ru/управление-проектами/" hreflang="ru" lang="ru"><b>Русский</b><span>Guide hub</span></a><a role="menuitem" href="/zh/项目管理/" hreflang="zh" lang="zh"><b>简体中文</b><span>Guide hub</span></a><a role="menuitem" href="/ja/プロジェクト管理/" hreflang="ja" lang="ja"><b>日本語</b><span>Guide hub</span></a></div></div>
-      <a href="#verify" class="hide-sm">Verify</a>
+      <a href="/verify/" class="hide-sm">Verify</a>
       <a href="#dashboard" class="cta">My learning</a>
     </nav>
   </div>
 </header>
 <main id="app" class="wrap"></main>
-<footer class="foot"><div class="wrap"><span class="foot-left"><span id="footBrand"></span><a class="foot-li" href="https://www.linkedin.com/company/neural-project-institute/" target="_blank" rel="noopener me"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg><span>LinkedIn</span></a></span><span><a href="/reviews/">Reviews</a> · <a href="/terms/">Terms of Sale</a> · <a href="/privacy/">Privacy</a> · <a href="#" onclick="npiCookieSettings();return false">Cookie settings</a> · <a href="/legal-notice/">Legal notice</a> · <a href="#about">About the Institute</a> · <a href="/project-management/">Guides</a> · <a href="#verify">Certificate register</a> · <a href="#courses">All courses</a></span></div></footer>
+<footer class="foot"><div class="wrap"><span class="foot-left"><span id="footBrand"></span><a class="foot-li" href="https://www.linkedin.com/company/neural-project-institute/" target="_blank" rel="noopener me"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg><span>LinkedIn</span></a></span><span><a href="/reviews/">Reviews</a> · <a href="/terms/">Terms of Sale</a> · <a href="/privacy/">Privacy</a> · <a href="#" onclick="npiCookieSettings();return false">Cookie settings</a> · <a href="/legal-notice/">Legal notice</a> · <a href="#about">About the Institute</a> · <a href="/project-management/">Guides</a> · <a href="/verify/">Certificate register</a> · <a href="#courses">All courses</a></span></div></footer>
 <div id="modalRoot"></div>
 
 <script>
@@ -1633,7 +1638,7 @@ const CONFIG = {
   showEnrolledFrom: 100,       // the live enrolment counter appears once real enrolments reach this number
   passMark: 2,                 // correct answers needed per 3-question chapter quiz
   siteUrl: "https://neuralprojectinstitute.com/",
-  linkedinOrgId: "",          // numeric ID of the LinkedIn company page: makes "Add to LinkedIn" show the logo
+  linkedinOrgId: "145281978",          // numeric ID of the LinkedIn company page: makes "Add to LinkedIn" show the logo
   supabaseUrl: "https://fzfswpqhrsktvejcnzlt.supabase.co",             // e.g. "https://abcd.supabase.co"
   supabaseKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ6ZnN3cHFocnNrdHZlamNuemx0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTA5NDQ2NjIsImV4cCI6MjEwNjUyMDY2Mn0.h5McYrQFkZNoIUMwqszNjLmpg3pEMxBIwH_tIW7Rh2s",             // the publishable (anon) key
   stripeLinks: { pmf: "", ssc: "", agl: "", rqm: "", lsc: "", ai: "", all: "" }
@@ -1900,9 +1905,9 @@ function viewHome() {
     <h2 style="margin-top:10px">See exactly what you get before you pay</h2>
     <div class="trust-grid">
       <a class="trust" href="#course-pmf"><b>Try chapter 1 free</b><span>Every course's first chapter, slides and quiz are open to everyone. No sign-up needed.</span></a>
-      <a class="trust" href="#verify-${SAMPLE.code}"><b>See how verification works</b><span>See what an employer sees when they verify a certificate (sample ID ${SAMPLE.code}).</span></a>
+      <a class="trust" href="/verify/?id=${SAMPLE.code}"><b>See how verification works</b><span>See what an employer sees when they verify a certificate (sample ID ${SAMPLE.code}).</span></a>
       ${FREE ? `<a class="trust" href="#courses"><b>Free for a limited time</b><span>All six courses, quizzes and certificates at no cost. No card or payment details needed.</span></a>` : `<a class="trust" href="/terms/"><b>10-day refund guarantee</b><span>Full refund within 10 days of purchase, for any reason, as long as you haven't claimed a certificate.</span></a>`}
-      <a class="trust" href="#verify"><b>Public certificate register</b><span>Every certificate has a unique ID and QR code that anyone can check, so yours can't be faked.</span></a>
+      <a class="trust" href="/verify/"><b>Public certificate register</b><span>Every certificate has a unique ID and QR code that anyone can check, so yours can't be faked.</span></a>
       <a class="trust" href="/project-management/"><b>270+ free guides and 55 templates</b><span>Our project management, Agile, Scrum and Kanban guides and downloadable templates are free to use.</span></a>
       <a class="trust" href="#about"><b>A registered US company</b><span>Operated by ${esc(CONFIG.legalName)}, ${esc(CONFIG.stateOfFormation)}. Clear terms, privacy policy and a real support inbox.</span></a>
     </div>
@@ -2055,7 +2060,7 @@ function certHTML(c, sample) {
       </div>
     </div></div>`;
 }
-const verifyUrl = code => (CONFIG.siteUrl || location.origin + location.pathname).replace(/#.*$/, "") + "#verify-" + code;
+const verifyUrl = code => (CONFIG.siteUrl || location.origin + "/").replace(/#.*$/, "").replace(/\/?$/, "/") + "verify/?id=" + encodeURIComponent(code);
 function drawQR(code) {
   const el = $("#qr"); if (!el || typeof QRCode === "undefined") return;
   el.innerHTML = ""; new QRCode(el, { text: verifyUrl(code), width: 160, height: 160, colorDark: "#1a2630", colorLight: "#ffffff", correctLevel: QRCode.CorrectLevel.M });
@@ -2088,7 +2093,7 @@ async function fetchReviews() {
   return reviewCache = rows;
 }
 const reviewCard = r => `<figure class="review">${stars(r.rating)}<blockquote>${esc(r.body)}</blockquote>
-  <figcaption>${reviewer(r)}<span class="rv-course">${esc(r.course_title || "")}</span><a href="#verify-${esc(r.cert_code)}" class="verified">✓ Verified certificate</a>${r.incentivized ? `<small class="incent">Took the course free during our limited-time offer</small>` : ""}</figcaption></figure>`;
+  <figcaption>${reviewer(r)}<span class="rv-course">${esc(r.course_title || "")}</span><a href="/verify/?id=${esc(r.cert_code)}" class="verified">✓ Verified certificate</a>${r.incentivized ? `<small class="incent">Took the course free during our limited-time offer</small>` : ""}</figcaption></figure>`;
 async function loadEnrolled() {
   const el = $("#enrolStat"); if (!el || !LIVE) return;
   try { const n = +(await rpc("enrolment_count", {})); if (n >= CONFIG.showEnrolledFrom) { el.querySelector("b").textContent = n.toLocaleString("en-US"); el.hidden = false } } catch (e) { console.warn(e) }
@@ -2133,9 +2138,44 @@ function linkedInAdd(c, cert) { const d = new Date(cert.issued_at), x = expiryOf
   return `https://www.linkedin.com/profile/add?startTask=CERTIFICATION_NAME&name=${encodeURIComponent(certTitle(c))}&${CONFIG.linkedinOrgId ? "organizationId=" + encodeURIComponent(CONFIG.linkedinOrgId) : "organizationName=" + encodeURIComponent(CONFIG.brand)}&issueYear=${d.getFullYear()}&issueMonth=${d.getMonth() + 1}&expirationYear=${x.getFullYear()}&expirationMonth=${x.getMonth() + 1}&certUrl=${encodeURIComponent(verifyUrl(cert.code))}&certId=${encodeURIComponent(cert.code)}` }
 const reviewed = store.get("reviewed", {});
 function shareText(c, cert) {
-  return `I've just earned the ${certTitle(c)} certificate from the ${CONFIG.brand}! 🎓\n\nIt covers ${c.id === "pmai" ? "all six courses of the complete PMAI certification" : c.short.replace(/\.$/, "").toLowerCase()}, assessed chapter by chapter.\n\nVerify my certificate (ID ${cert.code}): ${verifyUrl(cert.code)}\n\n#ProjectManagement #PMAI #Certification #ContinuousLearning`;
+  return `I've just earned the ${certTitle(c)} certificate from the ${CONFIG.brand}! 🎓\n\nIt covers ${c.id === "pmai" ? "all six courses of the complete PMAI certification" : c.short.replace(/\.$/, "").toLowerCase()}, assessed chapter by chapter.${FREE ? `\n\nAnd I did it completely free: the ${CONFIG.brand} is offering its full PMAI certification free for a limited time. If you work on projects, it's worth a look: ${CONFIG.siteUrl}` : ""}\n\nVerify my certificate (ID ${cert.code}): ${verifyUrl(cert.code)}\n\n#ProjectManagement #PMAI #Certification #ContinuousLearning`;
 }
 const linkedInShare = (c, cert) => "https://www.linkedin.com/feed/?shareActive=true&text=" + encodeURIComponent(shareText(c, cert));
+async function certPng(cert) {
+  if (!window.htmlToImage) await new Promise((ok, no) => { const sc = document.createElement("script"); sc.src = "/html-to-image.js"; sc.onload = ok; sc.onerror = no; document.head.append(sc) });
+  const host = document.createElement("div"); host.style.cssText = "position:fixed;left:-20000px;top:0;width:1600px;pointer-events:none";
+  host.innerHTML = certHTML(cert); document.body.append(host);
+  const q = host.querySelector("#qr"); if (q && typeof QRCode !== "undefined") { q.removeAttribute("id"); new QRCode(q, { text: verifyUrl(cert.code), width: 160, height: 160, colorDark: "#1a2630", colorLight: "#ffffff", correctLevel: QRCode.CorrectLevel.M }) }
+  try { await document.fonts.ready; await new Promise(r => setTimeout(r, 120)); return await htmlToImage.toBlob(host.firstElementChild, { pixelRatio: 1, cacheBust: true, backgroundColor: "#fbfaf6" }) }
+  finally { host.remove() }
+}
+function shareCert(c, cert) {
+  const text = shareText(c, cert), fname = `${cert.code}.png`;
+  modal(`<div class="share-box"><span class="eyebrow">Share on LinkedIn</span><h3>Post your certificate</h3>
+    <div class="share-img" id="shImg"><p class="muted">Preparing your certificate image…</p></div>
+    <label class="field"><span>Post text <span class="muted" style="font-weight:400">· edit it as you like</span></span><textarea id="shText" rows="7">${esc(text)}</textarea></label>
+    <div class="row" id="shBtns"></div>
+    <p class="muted" style="font-size:.85rem" id="shHint"></p></div>`, async (box, close) => {
+    let blob = null, url = "";
+    const btns = box.querySelector("#shBtns"), hint = box.querySelector("#shHint"), txt = () => box.querySelector("#shText").value;
+    const openLi = () => window.open("https://www.linkedin.com/feed/?shareActive=true&text=" + encodeURIComponent(txt()), "_blank", "noopener");
+    const download = () => { if (!url) return; const a = document.createElement("a"); a.href = url; a.download = fname; document.body.append(a); a.click(); a.remove() };
+    try { blob = await certPng(cert) } catch (e) { console.warn(e) }
+    if (blob) { url = URL.createObjectURL(blob); box.querySelector("#shImg").innerHTML = `<img src="${url}" alt="Your certificate">` }
+    else box.querySelector("#shImg").innerHTML = `<p class="muted">We couldn't create the image here. You can still share the post, and LinkedIn will show your verification link.</p>`;
+    const file = blob && new File([blob], fname, { type: "image/png" });
+    const canFiles = file && navigator.canShare && navigator.canShare({ files: [file] });
+    btns.innerHTML = (canFiles ? `<button class="btn primary li-btn" data-sh="native">${LI_ICON}Share with image</button>` : `<button class="btn primary li-btn" data-sh="both">${LI_ICON}Download image &amp; open LinkedIn</button>`)
+      + `${blob ? `<button class="btn" data-sh="dl">Download image</button>` : ""}<button class="btn ghost" data-sh="copy">Copy text</button>`;
+    hint.innerHTML = canFiles ? "Choose LinkedIn in the share menu. Your certificate image and text are attached." : blob ? "LinkedIn opens with your text filled in. Click the <b>photo</b> icon in the post window and add the certificate image you just downloaded." : "";
+    btns.addEventListener("click", async e => { const b = e.target.closest("[data-sh]"); if (!b) return; const a = b.dataset.sh;
+      if (a === "native") { try { await navigator.share({ files: [file], text: txt(), title: certTitle(c) }) } catch (x) { if (x.name !== "AbortError") { download(); openLi() } } }
+      if (a === "both") { download(); setTimeout(openLi, 300) }
+      if (a === "dl") download();
+      if (a === "copy") { try { await navigator.clipboard.writeText(txt()); toast("Post text copied.") } catch { toast("Select the text and copy it.") } }
+    });
+  });
+}
 const LI_ICON = `<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>`;
 const jobLine = l => l.jobTitle && l.company ? `${l.jobTitle}, ${l.company}` : l.jobTitle || (l.university ? `Student, ${l.university}` : l.company || "");
 const STAR = `<svg viewBox="0 0 24 24" width="100%" height="100%" aria-hidden="true"><path d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5L2.5 9.5l6.6-.9z" fill="currentColor"/></svg>`;
@@ -2160,7 +2200,7 @@ function claimWizard(c, then) {
     4: () => `${prog(5)}<div class="wz-done"><svg viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="var(--accent)"/><path d="M14 24.5l7 7 13-14" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       <h3>Your certificate is ready</h3><p class="muted">${W.publish ? "Thank you. Your review is now live on our homepage." : W.rating ? "Thank you for your feedback. Your review stays private." : "Congratulations on passing every chapter."} Show it off where it counts.</p>
       <p class="mono" style="font-size:.9rem">${esc(W.cert.code)}</p><p class="muted" style="font-size:.85rem;margin:-4px 0 4px">Add it to the Licenses &amp; certifications section of your profile, and share a post so your network sees it.</p>
-      <div class="row" style="justify-content:center"><a class="btn primary li-btn" href="${linkedInAdd(c, W.cert)}" target="_blank" rel="noopener">${LI_ICON}Add to profile</a><a class="btn li-share" href="${linkedInShare(c, W.cert)}" target="_blank" rel="noopener">${LI_ICON}Share a post</a>
+      <div class="row" style="justify-content:center"><a class="btn primary li-btn" href="${linkedInAdd(c, W.cert)}" target="_blank" rel="noopener">${LI_ICON}Add to profile</a><button class="btn li-share" data-wz="share">${LI_ICON}Share a post</button>
       <button class="btn ghost" data-wz="view">View certificate</button></div></div>`,
     busy: () => `${prog(4)}<h3>Issuing your certificate…</h3><p class="muted">This takes a second.</p>`,
     err: () => `<h3>Something went wrong</h3><p class="muted" role="alert">${esc(W.err)}</p><div class="row"><button class="btn primary" data-wz="retry">Try again</button><button class="btn ghost" data-close>Close</button></div>`
@@ -2190,6 +2230,7 @@ function claimWizard(c, then) {
       if (a === "retry") return finish();
       if (a === "profile") { close(); return askLearner("Add your LinkedIn profile, then continue.", () => claimWizard(c, then)) }
       if (a === "view") { close(); then && then() }
+      if (a === "share") { close(); then && then(); return shareCert(c, W.cert) }
     });
     root.addEventListener("keydown", e => { if (W.step === 1 && /^[1-5]$/.test(e.key)) { W.rating = +e.key; paint() } });
     paint();
@@ -2207,10 +2248,10 @@ function viewCert(id) {
       : `<div class="row no-print" style="justify-content:space-between"><span class="chip ok">Valid until ${fmtDate(ex)}</span><span class="muted" style="font-size:.88rem">Renew any time in the last month before expiry.</span></div>`;
     return `<div class="crumbs no-print"><a href="${id === "pmai" ? "#courses" : "#course-" + id}">${esc(c.name)}</a> / Certificate</div>
       <div class="cert-shell stack" style="gap:22px">${banner}${certHTML(cert)}
-      <div class="row no-print"><a class="btn primary li-btn" href="${li}" target="_blank" rel="noopener">${LI_ICON}Add to LinkedIn profile</a><a class="btn li-share" href="${linkedInShare(c, cert)}" target="_blank" rel="noopener">${LI_ICON}Share on LinkedIn</a>
+      <div class="row no-print"><a class="btn primary li-btn" href="${li}" target="_blank" rel="noopener">${LI_ICON}Add to LinkedIn profile</a><button class="btn li-share" data-sharecert="${id}">${LI_ICON}Share on LinkedIn</button>
         <button class="btn" data-copy="${esc(verifyUrl(cert.code))}">Copy verification link</button>
         ${LIVE ? `<button class="btn ghost" data-print>Print or save as PDF</button>` : ""}
-        <a class="btn ghost" href="#verify-${esc(cert.code)}">See register entry</a>${st === "valid" && ex - new Date() < 31 * 864e5 ? `<button class="btn ghost" data-renew="${id}">Renew now</button>` : ""}</div><p class="muted no-print" style="font-size:.9rem;max-width:70ch">${WHY_EXPIRE}</p>${st === "valid" && !reviewed[cert.code] ? reviewForm(cert) : ""}</div>`;
+        <a class="btn ghost" href="/verify/?id=${esc(cert.code)}">See register entry</a>${st === "valid" && ex - new Date() < 31 * 864e5 ? `<button class="btn ghost" data-renew="${id}">Renew now</button>` : ""}</div><p class="muted no-print" style="font-size:.9rem;max-width:70ch">${WHY_EXPIRE}</p>${st === "valid" && !reviewed[cert.code] ? reviewForm(cert) : ""}</div>`;
   }
   if (!owns(id)) return `<h2>Enrol to earn this certificate</h2><p class="muted" style="margin:10px 0 18px">Certificates are issued to enrolled learners who pass every chapter.</p><button class="btn primary" data-buy="all">${ctaLabel()}</button>`;
   if (id === "pmai" && !complete(c)) { const done = COURSES.filter(x => doneCount(x) === x.chapters.length).length;
@@ -2301,13 +2342,13 @@ function viewAbout() {
     </div>
     <div class="prose">
       <h2>Certificate policy</h2>
-      <p><b>Verification.</b> Anyone may check a certificate on the <a href="#verify">certificate register</a> using its ID or QR code. The register shows the holder's name, certification, score and date of issue. Email addresses are never shown.</p>
+      <p><b>Verification.</b> Anyone may check a certificate on the <a href="/verify/">certificate register</a> using its ID or QR code. The register shows the holder's name, certification, score and date of issue. Email addresses are never shown.</p>
       <p><b>Validity.</b> ${WHY_EXPIRE} After the expiry date the register shows the certificate as expired. Holders renew by passing the current assessments again, at no extra cost.</p>
       <p><b>Revocation.</b> The Registrar may revoke a certificate obtained dishonestly. A revoked certificate stays in the register and is clearly marked as revoked.</p>
       <p><b>Corrections.</b> To correct a name on a certificate, write to the Office of the Registrar at <span class="mono">${esc(CONFIG.contactEmail)}</span> with your certificate ID.</p>
       <p><b>Recognition.</b> Our certificates are certificates of completion awarded by the ${esc(CONFIG.brand)}. They are independent of, and do not replace, credentials such as PMP or Professional Scrum certifications.</p>
     </div>
-    <div class="verify-band"><div class="stack"><span class="eyebrow">Office of the Registrar</span><h2>Check the register</h2></div><div class="row"><a class="btn primary" href="#verify">Open certificate register</a><a class="btn" href="#courses">See programmes</a></div></div>
+    <div class="verify-band"><div class="stack"><span class="eyebrow">Office of the Registrar</span><h2>Check the register</h2></div><div class="row"><a class="btn primary" href="/verify/">Open certificate register</a><a class="btn" href="#courses">See programmes</a></div></div>
   </div>`;
 }
 
@@ -2447,7 +2488,7 @@ function viewAdmin() {
   if (adminTab === "learners") { const Ls = adminData.learners || []; table = Ls.length ? `<table><thead><tr><th>Joined</th><th>Name</th><th>Email</th><th>Location</th><th>Status</th><th>Role</th><th>University</th><th>LinkedIn</th><th>Certs</th></tr></thead><tbody>
     ${Ls.filter(hit).map(l => `<tr><td>${shortDate(l.created_at)}</td><td>${esc(l.full_name)}</td><td>${esc(l.email)}</td><td>${esc([l.city, l.country].filter(Boolean).join(", "))}</td><td>${esc(l.job_status || "")}</td><td>${esc([l.job_title, l.company].filter(Boolean).join(", "))}</td><td>${esc(l.university || "")}</td><td>${l.linkedin_url ? `<a href="${esc(l.linkedin_url)}" target="_blank" rel="noopener">Profile</a>` : ""}</td><td>${l.certificates}</td></tr>`).join("")}</tbody></table>` : `<p class="muted" style="padding:16px">No learner profiles yet.</p>` }
   if (adminTab === "reviews") { const R = adminData.reviews || []; table = R.length ? `<table><thead><tr><th>Date</th><th>Name</th><th>Certification</th><th>Rating</th><th>Review</th><th>Status</th><th></th></tr></thead><tbody>
-    ${R.filter(hit).map(r => `<tr><td>${shortDate(r.created_at)}</td><td>${esc(r.display_name)}${r.job_line || r.city ? `<br><small class="muted">${esc([r.job_line, [r.city, r.country].filter(Boolean).join(", ")].filter(Boolean).join(" · "))}</small>` : ""}${r.linkedin_url ? ` <a href="${esc(r.linkedin_url)}" target="_blank" rel="noopener">in</a>` : ""}<br><a class="mono" style="font-size:.75rem" href="#verify-${esc(r.cert_code)}">${esc(r.cert_code)}</a></td><td>${esc(r.course_title || "")}${r.incentivized ? `<br>${chip("Free access", "mile")}` : ""}</td><td>${stars(r.rating)}</td><td style="max-width:420px">${esc(r.body)}</td>
+    ${R.filter(hit).map(r => `<tr><td>${shortDate(r.created_at)}</td><td>${esc(r.display_name)}${r.job_line || r.city ? `<br><small class="muted">${esc([r.job_line, [r.city, r.country].filter(Boolean).join(", ")].filter(Boolean).join(" · "))}</small>` : ""}${r.linkedin_url ? ` <a href="${esc(r.linkedin_url)}" target="_blank" rel="noopener">in</a>` : ""}<br><a class="mono" style="font-size:.75rem" href="/verify/?id=${esc(r.cert_code)}">${esc(r.cert_code)}</a></td><td>${esc(r.course_title || "")}${r.incentivized ? `<br>${chip("Free access", "mile")}` : ""}</td><td>${stars(r.rating)}</td><td style="max-width:420px">${esc(r.body)}</td>
       <td>${chip(r.status, r.status === "approved" ? "ok" : r.status === "rejected" ? "bad" : "mile")}</td>
       <td><div class="row">${r.publish_consent === false ? `<span class="muted" style="font-size:.8rem">Private (no consent)</span>` : r.status !== "approved" ? `<button class="btn small primary" data-reviewid="${r.id}" data-to="approved">Publish</button>` : ""}${r.status !== "rejected" ? `<button class="btn small ghost" data-reviewid="${r.id}" data-to="rejected">Hide</button>` : ""}</div></td></tr>`).join("")}</tbody></table>` : `<p class="muted" style="padding:16px">No reviews yet. Learners can leave one from their certificate page.</p>`;
     table = `<p class="muted" style="font-size:.85rem;margin:0 0 10px">Publish every genuine review, positive or critical. Hide only spam, abuse, off-topic text or personal data. Selectively hiding negative reviews is misleading to customers and can breach consumer law.</p>` + table }
@@ -2458,7 +2499,7 @@ function viewAdmin() {
       <td class="mono" style="font-size:.78rem">${esc(p.stripe_session_id || "")}</td>
       <td><button class="btn small ghost" data-refund="${esc(p.stripe_session_id)}" data-to="${p.refunded_at ? "0" : "1"}">${p.refunded_at ? "Undo refund" : "Mark refunded"}</button></td></tr>`).join("") || `<tr><td colspan="8" class="muted">No payments yet.</td></tr>`}</tbody></table>`;
   if (adminTab === "certificates") table = `<table><thead><tr><th>Certificate ID</th><th>Holder</th><th>Email</th><th>Certification</th><th>Score</th><th>Issued</th><th>Valid until</th><th>Status</th><th>Terms</th><th></th></tr></thead><tbody>
-    ${C.filter(hit).map(c => { const st = certState(c); return `<tr><td class="mono"><a href="#verify-${esc(c.code)}">${esc(c.code)}</a></td><td>${esc(c.full_name)}</td><td class="mono">${esc(c.email)}</td><td>${esc(c.course_title)}</td><td class="mono">${c.score}%</td>
+    ${C.filter(hit).map(c => { const st = certState(c); return `<tr><td class="mono"><a href="/verify/?id=${esc(c.code)}">${esc(c.code)}</a></td><td>${esc(c.full_name)}</td><td class="mono">${esc(c.email)}</td><td>${esc(c.course_title)}</td><td class="mono">${c.score}%</td>
       <td>${shortDate(c.issued_at)}</td><td>${shortDate(expiryOf(c))}</td><td>${chip(st, st === "valid" ? "ok" : "bad")}</td><td class="mono">${esc(c.terms_version || "—")}</td>
       <td><button class="btn small ghost" data-certstatus="${esc(c.code)}" data-to="${c.status === "revoked" ? "valid" : "revoked"}">${c.status === "revoked" ? "Restore" : "Revoke"}</button></td></tr>` }).join("") || `<tr><td colspan="10" class="muted">No certificates issued yet.</td></tr>`}</tbody></table>`;
   return `<div class="row" style="justify-content:space-between;margin-bottom:22px"><div class="stack" style="gap:6px"><span class="eyebrow">Neural Project Institute · Admin</span><h1>Dashboard</h1>
@@ -2476,14 +2517,16 @@ const viewNotFound = () => `<h2>Page not found</h2><p style="margin-top:12px"><a
 
 /* ---------- Router ---------- */
 let lastRoute = "";
-const PATHS = { reviews: "/reviews/", terms: "/terms/", privacy: "/privacy/", legal: "/legal-notice/" };
+const PATHS = { verify: "/verify/", reviews: "/reviews/", terms: "/terms/", privacy: "/privacy/", legal: "/legal-notice/" };
 const PATH_ROUTE = Object.fromEntries(Object.entries(PATHS).map(([k, v]) => [v, k]));
 function render() {
   if (location.hash === "#home" || location.hash === "#") { try { history.replaceState(null, "", location.pathname + location.search) } catch {} }
   let h = location.hash.slice(1); if (h === "home") h = "";
   const here = PATH_ROUTE[location.pathname.replace(/\/?(index\.html)?$/, "/")];
-  if (here) { if (h && h.split("-")[0] !== here) { location.replace("/#" + h); return } h = here }
-  else { const pg = h.split("-")[0]; if (PATHS[pg]) { location.replace(PATHS[pg]); return } h = h || "home" }
+  if (here) { if (h && h.split("-")[0] !== here) { location.replace("/#" + h); return }
+    if (h.startsWith("verify-")) { location.replace(PATHS.verify + "?id=" + encodeURIComponent(h.slice(7))); return }
+    const vid = here === "verify" ? new URLSearchParams(location.search).get("id") : ""; h = here + (vid ? "-" + vid : "") }
+  else { const pg = h.split("-")[0]; if (PATHS[pg]) { const id = h.slice(pg.length + 1); location.replace(PATHS[pg] + (pg === "verify" && id ? "?id=" + encodeURIComponent(id) : "")); return } h = h || "home" }
   const [page, ...rest] = h.split("-");
   if (h !== lastRoute) { if (page === "learn") { player = { slide: 0, mode: "slides" }; quizState = null } window.scrollTo(0, 0); lastRoute = h }
   document.querySelectorAll('nav.main a').forEach(a => a.getAttribute("href") === "#" + page ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current"));
@@ -2547,6 +2590,7 @@ document.addEventListener("click", async e => {
     } catch (err) { toast(err.message); t.disabled = false }
     return;
   }
+  if (t.dataset.sharecert) { const id = t.dataset.sharecert; return shareCert(byId(id), mem.certs[id]) }
   if (t.dataset.rvtab) { const id = t.dataset.rvtab; document.querySelectorAll("[data-rvtab]").forEach(b => { const on = b.dataset.rvtab === id; b.classList.toggle("on", on); b.setAttribute("aria-selected", on) });
     try { history.replaceState(null, "", id === "all" ? PATHS.reviews : PATHS.reviews + "?course=" + id) } catch {} return loadAllReviews(id) }
   if (t.dataset.jump) { e.preventDefault(); return document.getElementById(t.dataset.jump)?.scrollIntoView({ behavior: "smooth" }) }
@@ -2566,7 +2610,7 @@ document.addEventListener("submit", async e => {
   const f = e.target; e.preventDefault();
   if (f.id === "adminLogin") { adminKey.set($("#adminKeyIn").value.trim()); adminData = null; return render() }
   if (f.id === "homeVerify") { const v = $("#hv").value.trim() || SAMPLE.code; location.hash = "verify-" + v.toUpperCase() }
-  if (f.id === "verifyForm") { const v = $("#vcode").value.trim().toUpperCase(); history.replaceState(null, "", "#verify-" + v); lastRoute = "verify-" + v; runVerify(v) }
+  if (f.id === "verifyForm") { const v = $("#vcode").value.trim().toUpperCase(); history.replaceState(null, "", PATHS.verify + "?id=" + encodeURIComponent(v)); lastRoute = "verify-" + v; runVerify(v) }
   if (f.id === "quizForm") {
     const [, id, i] = location.hash.slice(1).split("-"); const ch = byId(id).chapters[+i];
     const ans = ch.quiz.map((_, k) => { const x = f.querySelector(`input[name=q${k}]:checked`); return x ? +x.value : null });
