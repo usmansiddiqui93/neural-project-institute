@@ -279,3 +279,6 @@ div.card { cursor: default }
 .ainame { display: inline-flex; align-items: center; gap: 8px }
 .tcard h4 { margin: 4px 0 6px; font: 650 1rem var(--f-display) } .tcard > ul { margin: 0 }
 .tcico { font-size: 1rem }
+/* Language switcher */
+.langs { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 6px 14px; padding-bottom: 14px; margin-bottom: 14px; border-bottom: 1px solid var(--line); font-size: .85rem }
+.langs a { color: var(--muted); text-decoration: none } .langs a:hover { color: var(--accent) } .langs a[aria-current] { color: var(--ink); font-weight: 600 }
