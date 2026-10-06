@@ -282,3 +282,13 @@ div.card { cursor: default }
 /* Language switcher */
 .langs { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 6px 14px; padding-bottom: 14px; margin-bottom: 14px; border-bottom: 1px solid var(--line); font-size: .85rem }
 .langs a { color: var(--muted); text-decoration: none } .langs a:hover { color: var(--accent) } .langs a[aria-current] { color: var(--ink); font-weight: 600 }
+/* Header language menu */
+.dd.langdd .ddbtn { gap: 5px; font-variant-numeric: tabular-nums }
+.dd.langdd .ddmenu { min-width: 220px; left: auto; right: 0 }
+.dd.langdd .ddmenu a { flex-direction: row; justify-content: space-between; align-items: center; padding: 8px 16px }
+.dd.langdd .ddmenu a[aria-current] b { color: var(--accent) }
+@media (max-width: 480px) { .dd.langdd .ddbtn { padding: 0 6px } }
+/* Language suggestion bar */
+#npi-langbar { position: fixed; z-index: 999; left: 16px; right: 16px; top: 74px; max-width: 620px; margin: 0 auto; background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 12px; padding: 12px 14px; display: flex; gap: 10px 14px; align-items: center; flex-wrap: wrap; box-shadow: 0 14px 34px -14px rgba(0,0,0,.35); font: 500 .92rem/1.4 system-ui, sans-serif }
+#npi-langbar p { margin: 0; flex: 1 1 240px } #npi-langbar a.go { background: var(--accent); color: #fff; padding: 7px 12px; border-radius: 8px; text-decoration: none; font-weight: 600 }
+#npi-langbar button { background: none; border: 0; color: var(--muted); cursor: pointer; font: inherit }

@@ -400,6 +400,16 @@ footer.foot .wrap { display: flex; justify-content: space-between; flex-wrap: wr
 .trust b::before { content: "✓ "; color: var(--accent) }
 .incent { color: var(--muted); font-size: .74rem; font-style: italic }
 .grant { gap: 8px; align-items: center; margin: 0 0 12px; padding: 12px; border: 1px dashed var(--line); border-radius: 12px } .grant input { min-width: 180px }
+/* Header language menu */
+.dd.langdd .ddbtn { gap: 5px; font-variant-numeric: tabular-nums }
+.dd.langdd .ddmenu { min-width: 220px; left: auto; right: 0 }
+nav.main .dd.langdd .ddmenu a { flex-direction: row; justify-content: space-between; align-items: center; padding: 8px 16px }
+.dd.langdd .ddmenu a[aria-current] b { color: var(--accent) }
+@media (max-width: 480px) { .dd.langdd .ddbtn { padding: 0 6px } }
+/* Language suggestion bar */
+#npi-langbar { position: fixed; z-index: 999; left: 16px; right: 16px; top: 74px; max-width: 620px; margin: 0 auto; background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 12px; padding: 12px 14px; display: flex; gap: 10px 14px; align-items: center; flex-wrap: wrap; box-shadow: 0 14px 34px -14px rgba(0,0,0,.35); font: 500 .92rem/1.4 system-ui, sans-serif }
+#npi-langbar p { margin: 0; flex: 1 1 240px } #npi-langbar a.go { background: var(--accent); color: #fff; padding: 7px 12px; border-radius: 8px; text-decoration: none; font-weight: 600 }
+#npi-langbar button { background: none; border: 0; color: var(--muted); cursor: pointer; font: inherit }
 </style>
 
 <div id="demoBar" class="demo-bar" hidden></div>
@@ -428,6 +438,7 @@ footer.foot .wrap { display: flex; justify-content: space-between; flex-wrap: wr
       <button class="ddbtn" aria-expanded="false" aria-haspopup="true">Templates <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
       <div class="ddmenu" role="menu"><div class="tplmenu"><span class="eyebrow">Popular templates</span><div class="tplnav"><a role="menuitem" href="/templates/business-plan-template/">Business Plan</a><a role="menuitem" href="/templates/project-plan-template/">Project Plan</a><a role="menuitem" href="/templates/project-proposal-template/">Project Proposal</a><a role="menuitem" href="/templates/content-calendar-template/">Content Calendar</a><a role="menuitem" href="/templates/to-do-list-template/">To-Do List</a><a role="menuitem" href="/templates/business-requirements-document-template/">Business Requirements Document</a><a role="menuitem" href="/templates/project-tracker-template/">Project Tracker</a><a role="menuitem" href="/templates/project-schedule-template/">Project Schedule</a><a role="menuitem" href="/templates/meeting-notes-template/">Meeting Notes</a><a role="menuitem" href="/templates/marketing-campaign-template/">Marketing Campaign Plan</a></div><a role="menuitem" class="viewmore" href="/templates/"><b>View more templates</b><span>55 free templates · Google Sheets, Excel, PDF</span></a></div></div>
     </div>
+      <div class="dd langdd" data-hubs='{"de": "/de/projektmanagement/", "es": "/es/gestion-de-proyectos/", "fr": "/fr/gestion-de-projet/", "it": "/it/gestione-dei-progetti/", "ru": "/ru/управление-проектами/", "zh": "/zh/项目管理/", "ja": "/ja/プロジェクト管理/"}'><button class="ddbtn" type="button" aria-expanded="false" aria-haspopup="true" aria-label="Language"><svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M1.5 8h13M8 1.5c2 2 2 11 0 13M8 1.5c-2 2-2 11 0 13" fill="none" stroke="currentColor" stroke-width="1.3"/></svg> EN <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button><div class="ddmenu" role="menu"><a role="menuitem" href="/" hreflang="en" lang="en" aria-current="true"><b>English</b></a><a role="menuitem" href="/de/projektmanagement/" hreflang="de" lang="de"><b>Deutsch</b><span>Guide hub</span></a><a role="menuitem" href="/es/gestion-de-proyectos/" hreflang="es" lang="es"><b>Español</b><span>Guide hub</span></a><a role="menuitem" href="/fr/gestion-de-projet/" hreflang="fr" lang="fr"><b>Français</b><span>Guide hub</span></a><a role="menuitem" href="/it/gestione-dei-progetti/" hreflang="it" lang="it"><b>Italiano</b><span>Guide hub</span></a><a role="menuitem" href="/ru/управление-проектами/" hreflang="ru" lang="ru"><b>Русский</b><span>Guide hub</span></a><a role="menuitem" href="/zh/项目管理/" hreflang="zh" lang="zh"><b>简体中文</b><span>Guide hub</span></a><a role="menuitem" href="/ja/プロジェクト管理/" hreflang="ja" lang="ja"><b>日本語</b><span>Guide hub</span></a></div></div>
       <a href="#verify" class="hide-sm">Verify</a>
       <a href="#dashboard">My learning</a>
     </nav>
@@ -2358,5 +2369,38 @@ refreshOwned().then(() => { if (location.hash === "#paid") toast(owns("all") || 
       closeT = setTimeout(function () { dd.classList.remove("hov"); }, 450);
     });
   });
+})();
+// Suggest the visitor's own language (browser language first, then time zone). Never redirects automatically.
+(function () {
+  var MSG = {
+    en: ["This page is available in English.", "View in English", "No thanks"],
+    de: ["Diese Seite ist auch auf Deutsch verfügbar.", "Auf Deutsch ansehen", "Nein, danke"],
+    es: ["Esta página está disponible en español.", "Ver en español", "No, gracias"],
+    fr: ["Cette page est disponible en français.", "Voir en français", "Non merci"],
+    it: ["Questa pagina è disponibile in italiano.", "Leggi in italiano", "No, grazie"],
+    ru: ["Эта страница доступна на русском языке.", "Открыть на русском", "Нет, спасибо"],
+    zh: ["本页面提供简体中文版本。", "查看中文版", "不用了"],
+    ja: ["このページは日本語でもご覧いただけます。", "日本語で見る", "閉じる"]
+  };
+  var HUBMSG = { de: "Unsere Leitfäden gibt es auch auf Deutsch.", es: "Nuestras guías también están en español.", fr: "Nos guides existent aussi en français.", it: "Le nostre guide sono disponibili anche in italiano.", ru: "Наши руководства доступны на русском языке.", zh: "我们的指南也提供中文版。", ja: "ガイドは日本語でもご覧いただけます。" };
+  var TZ = { "Europe/Rome": "it", "Europe/Berlin": "de", "Europe/Vienna": "de", "Europe/Zurich": "de", "Europe/Madrid": "es", "America/Mexico_City": "es", "America/Bogota": "es", "America/Lima": "es", "America/Argentina/Buenos_Aires": "es", "America/Santiago": "es", "Europe/Paris": "fr", "Europe/Brussels": "fr", "Europe/Moscow": "ru", "Asia/Yekaterinburg": "ru", "Asia/Novosibirsk": "ru", "Asia/Shanghai": "zh", "Asia/Chongqing": "zh", "Asia/Tokyo": "ja" };
+  var cur = (document.documentElement.lang || "en").slice(0, 2);
+  var pref = null;
+  (navigator.languages || [navigator.language || ""]).some(function (l) { var b = (l || "").slice(0, 2).toLowerCase(); if (MSG[b]) { pref = b; return true } return false });
+  if (!pref || pref === "en") { try { var tz = Intl.DateTimeFormat().resolvedOptions().timeZone; if (TZ[tz]) pref = TZ[tz] } catch (e) {} }
+  if (!pref && cur !== "en") pref = "en";
+  if (!pref || pref === cur) return;
+  try { if (localStorage.getItem("npi_lang_dismiss") === pref) return } catch (e) {}
+  var hl = pref === "zh" ? "zh-Hans" : pref, link = document.querySelector('link[rel="alternate"][hreflang="' + hl + '"]'), url = link && link.getAttribute("href"), text = MSG[pref][0];
+  if (!url) { var dd = document.querySelector(".langdd"); try { url = dd && JSON.parse(dd.getAttribute("data-hubs") || "{}")[pref] } catch (e) {} if (!url) return; text = HUBMSG[pref] || text }
+  function show() {
+    var b = document.createElement("div"); b.id = "npi-langbar"; b.setAttribute("lang", pref); b.setAttribute("role", "region");
+    b.innerHTML = '<p></p><a class="go"></a><button type="button"></button>';
+    b.querySelector("p").textContent = text; var a = b.querySelector("a"); a.href = url; a.textContent = MSG[pref][1];
+    var x = b.querySelector("button"); x.textContent = MSG[pref][2];
+    x.onclick = function () { try { localStorage.setItem("npi_lang_dismiss", pref) } catch (e) {} b.remove() };
+    document.body.appendChild(b);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", show); else show();
 })();
 </script>
