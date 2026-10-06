@@ -1614,7 +1614,7 @@ const CONFIG = {
   bundlePrice: 10,             // price of PMAI, the complete certification (all courses)
   freePromo: true,             // limited-time offer: PMAI is free; sign-up unlocks everything
   regularPrice: 39.99,         // shown struck through during the free offer
-  homeReviewsMin: 10,          // homepage shows complete-course (PMAI) reviews once there are at least this many
+  homeReviewsMin: 10,          // homepage shows all reviews until there are this many PMAI (complete-course) reviews, then PMAI reviews only
   showEnrolledFrom: 100,       // the live enrolment counter appears once real enrolments reach this number
   passMark: 2,                 // correct answers needed per 3-question chapter quiz
   siteUrl: "https://neuralprojectinstitute.com/",
@@ -2101,8 +2101,10 @@ async function loadAllReviews(tab) {
 async function loadReviews() {
   const box = $("#reviewsBox"); if (!box) return;
   let rows = [];
-  rows = (await fetchReviews()).filter(r => r.course_id === "pmai");
-  if (rows.length < CONFIG.homeReviewsMin) rows = [];
+  const allRows = await fetchReviews(), pmai = allRows.filter(r => r.course_id === "pmai");
+  const onlyPmai = pmai.length >= CONFIG.homeReviewsMin;
+  rows = onlyPmai ? pmai : allRows;
+  const hd = $("#reviews h2"); if (hd) hd.textContent = onlyPmai ? "What PMAI graduates say" : "What certified learners say";
   if (!rows.length) { $("#reviews").hidden = true; return; box.innerHTML = `<div class="review-empty"><p><b>Reviews are on their way.</b> We only show reviews from learners who have earned a verified certificate, so this section fills up as our first learners finish their courses. Earned one? Open your certificate page to leave a review.</p></div>`; return }
   $("#reviews").hidden = false;
   const avg = rows.reduce((a, r) => a + r.rating, 0) / rows.length;
