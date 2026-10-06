@@ -22,6 +22,16 @@
 <style>body{margin:0}[hidden]{display:none!important}</style>
 <title>Privacy Policy | Neural Project Institute</title>
 <meta name="description" content="How the Neural Project Institute collects, uses and protects your personal data, your GDPR rights and how to contact us.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Neural Project Institute">
+<meta property="og:url" content="https://neuralprojectinstitute.com/privacy/">
+<meta property="og:title" content="Privacy Policy | Neural Project Institute">
+<meta property="og:description" content="How the Neural Project Institute collects, uses and protects your personal data, your GDPR rights and how to contact us.">
+<meta property="og:image" content="https://neuralprojectinstitute.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://neuralprojectinstitute.com/og-image.jpg">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"%3E%3Crect width="64" height="64" rx="14" fill="#17242f"/%3E%3Crect x="10" y="14" width="30" height="9" rx="2.5" fill="#ffffff"/%3E%3Crect x="20" y="28" width="26" height="9" rx="2.5" fill="#4fbf93"/%3E%3Crect x="12" y="42" width="20" height="9" rx="2.5" fill="#ffffff"/%3E%3Cpath d="M47 37.5l8.5 8.5-8.5 8.5-8.5-8.5z" fill="#e3a84a"/%3E%3C/svg%3E">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -224,6 +234,8 @@ body:has(#modalRoot .modal) #npi-langbar { display: none }
 .wz-done { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 8px 0 }
 .li-btn { background: #0a66c2 !important; border-color: #0a66c2 !important; color: #fff !important; display: inline-flex; gap: 8px; align-items: center }
 .li-btn:hover { background: #004182 !important }
+.li-share { display: inline-flex; gap: 8px; align-items: center; border-color: #0a66c2 !important; color: #0a66c2 !important } .li-share:hover { background: color-mix(in srgb, #0a66c2 8%, transparent) !important }
+.wz-done .row { flex-wrap: wrap; gap: 10px }
 /* Review cards */
 .rv-who { display: flex; gap: 10px; align-items: flex-start }
 .rv-av { flex: none; width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; background: var(--sunk); color: var(--ink); font: 700 .8rem/1 var(--f-display) }
@@ -2117,6 +2129,11 @@ async function loadReviews() {
 function linkedInAdd(c, cert) { const d = new Date(cert.issued_at), x = expiryOf(cert);
   return `https://www.linkedin.com/profile/add?startTask=CERTIFICATION_NAME&name=${encodeURIComponent(certTitle(c))}&${CONFIG.linkedinOrgId ? "organizationId=" + encodeURIComponent(CONFIG.linkedinOrgId) : "organizationName=" + encodeURIComponent(CONFIG.brand)}&issueYear=${d.getFullYear()}&issueMonth=${d.getMonth() + 1}&expirationYear=${x.getFullYear()}&expirationMonth=${x.getMonth() + 1}&certUrl=${encodeURIComponent(verifyUrl(cert.code))}&certId=${encodeURIComponent(cert.code)}` }
 const reviewed = store.get("reviewed", {});
+function shareText(c, cert) {
+  return `I've just earned the ${certTitle(c)} certificate from the ${CONFIG.brand}! 🎓\n\nIt covers ${c.id === "pmai" ? "all six courses of the complete PMAI certification" : c.short.replace(/\.$/, "").toLowerCase()}, assessed chapter by chapter.\n\nVerify my certificate (ID ${cert.code}): ${verifyUrl(cert.code)}\n\n#ProjectManagement #PMAI #Certification #ContinuousLearning`;
+}
+const linkedInShare = (c, cert) => "https://www.linkedin.com/feed/?shareActive=true&text=" + encodeURIComponent(shareText(c, cert));
+const LI_ICON = `<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>`;
 const jobLine = l => l.jobTitle && l.company ? `${l.jobTitle}, ${l.company}` : l.jobTitle || (l.university ? `Student, ${l.university}` : l.company || "");
 const STAR = `<svg viewBox="0 0 24 24" width="100%" height="100%" aria-hidden="true"><path d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5L2.5 9.5l6.6-.9z" fill="currentColor"/></svg>`;
 function claimWizard(c, then) {
@@ -2139,9 +2156,9 @@ function claimWizard(c, then) {
       ${L.linkedin ? "" : `<p class="muted" style="font-size:.85rem">Want your LinkedIn profile shown with it? <button class="linkbtn" data-wz="profile">Add it to your details</button></p>`}`,
     4: () => `${prog(5)}<div class="wz-done"><svg viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="var(--accent)"/><path d="M14 24.5l7 7 13-14" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       <h3>Your certificate is ready</h3><p class="muted">${W.publish ? "Thank you. Your review is now live on our homepage." : W.rating ? "Thank you for your feedback. Your review stays private." : "Congratulations on passing every chapter."} Show it off where it counts.</p>
-      <p class="mono" style="font-size:.9rem">${esc(W.cert.code)}</p>
-      <div class="row" style="justify-content:center"><a class="btn primary li-btn" href="${linkedInAdd(c, W.cert)}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>Add to LinkedIn</a>
-      <button class="btn" data-wz="view">View certificate</button></div></div>`,
+      <p class="mono" style="font-size:.9rem">${esc(W.cert.code)}</p><p class="muted" style="font-size:.85rem;margin:-4px 0 4px">Add it to the Licenses &amp; certifications section of your profile, and share a post so your network sees it.</p>
+      <div class="row" style="justify-content:center"><a class="btn primary li-btn" href="${linkedInAdd(c, W.cert)}" target="_blank" rel="noopener">${LI_ICON}Add to profile</a><a class="btn li-share" href="${linkedInShare(c, W.cert)}" target="_blank" rel="noopener">${LI_ICON}Share a post</a>
+      <button class="btn ghost" data-wz="view">View certificate</button></div></div>`,
     busy: () => `${prog(4)}<h3>Issuing your certificate…</h3><p class="muted">This takes a second.</p>`,
     err: () => `<h3>Something went wrong</h3><p class="muted" role="alert">${esc(W.err)}</p><div class="row"><button class="btn primary" data-wz="retry">Try again</button><button class="btn ghost" data-close>Close</button></div>`
   };
@@ -2187,7 +2204,7 @@ function viewCert(id) {
       : `<div class="row no-print" style="justify-content:space-between"><span class="chip ok">Valid until ${fmtDate(ex)}</span><span class="muted" style="font-size:.88rem">Renew any time in the last month before expiry.</span></div>`;
     return `<div class="crumbs no-print"><a href="${id === "pmai" ? "#courses" : "#course-" + id}">${esc(c.name)}</a> / Certificate</div>
       <div class="cert-shell stack" style="gap:22px">${banner}${certHTML(cert)}
-      <div class="row no-print"><a class="btn primary" href="${li}" target="_blank" rel="noopener">Add to LinkedIn</a>
+      <div class="row no-print"><a class="btn primary li-btn" href="${li}" target="_blank" rel="noopener">${LI_ICON}Add to LinkedIn profile</a><a class="btn li-share" href="${linkedInShare(c, cert)}" target="_blank" rel="noopener">${LI_ICON}Share on LinkedIn</a>
         <button class="btn" data-copy="${esc(verifyUrl(cert.code))}">Copy verification link</button>
         ${LIVE ? `<button class="btn ghost" data-print>Print or save as PDF</button>` : ""}
         <a class="btn ghost" href="#verify-${esc(cert.code)}">See register entry</a>${st === "valid" && ex - new Date() < 31 * 864e5 ? `<button class="btn ghost" data-renew="${id}">Renew now</button>` : ""}</div><p class="muted no-print" style="font-size:.9rem;max-width:70ch">${WHY_EXPIRE}</p>${st === "valid" && !reviewed[cert.code] ? reviewForm(cert) : ""}</div>`;
