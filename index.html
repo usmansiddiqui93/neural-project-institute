@@ -23,11 +23,11 @@
 <title>Neural Project Institute</title>
 <meta name="description" content="Online project management certifications with verifiable certificates.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"%3E%3Crect width="64" height="64" rx="14" fill="#17242f"/%3E%3Crect x="10" y="14" width="30" height="9" rx="2.5" fill="#ffffff"/%3E%3Crect x="20" y="28" width="26" height="9" rx="2.5" fill="#4fbf93"/%3E%3Crect x="12" y="42" width="20" height="9" rx="2.5" fill="#ffffff"/%3E%3Cpath d="M47 37.5l8.5 8.5-8.5 8.5-8.5-8.5z" fill="#e3a84a"/%3E%3C/svg%3E">
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#17242f">
-<link rel="stylesheet" href="fonts/fonts.css">
-<script src="qrcode.min.js"></script>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<script src="/qrcode.min.js"></script>
 <style>
 /* Layout: a planning board. Pages sit on a faint schedule grid; the hero is a live Gantt of the learning path, milestones are diamonds. */
 :root {
@@ -233,23 +233,28 @@ body:has(#modalRoot .modal) #npi-langbar { display: none }
 .rv-li { color: #0a66c2; display: inline-flex } .rv-li:hover { color: #004182 }
 .review .rv-course { color: var(--muted); font-size: .8rem; margin-top: 4px }
 
-/* Cut-price CTA */
-.cta-cut { display: inline-flex; align-items: center; gap: 10px }
-.cta-cut .cc-was { position: relative; text-decoration: none; opacity: .75; font-weight: 500 }
-.cta-cut .cc-was::after { content: ""; position: absolute; left: -3px; right: -3px; top: 50%; height: 2px; background: var(--mile); transform: rotate(-12deg) scaleX(0); transform-origin: left; animation: cutline .5s .4s ease-out forwards }
-@keyframes cutline { to { transform: rotate(-12deg) scaleX(1) } }
-.cta-cut .cc-now { background: var(--mile); color: #1a1408; font: 800 .78rem/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; padding: 5px 8px; border-radius: 6px; animation: freepop .35s .85s ease-out both }
-@keyframes freepop { from { transform: scale(.4); opacity: 0 } 70% { transform: scale(1.12) } to { transform: scale(1); opacity: 1 } }
-[data-buy]:has(.cta-cut) { padding-right: 10px }
-.bundle [data-buy] .cta-cut .cc-now { background: var(--ink); color: var(--mile) }
-.cta-note { font: 500 .78rem/1.4 var(--f-mono); letter-spacing: .04em; color: var(--muted); margin: 10px 0 0 }
-@media (prefers-reduced-motion: reduce) { .cta-cut .cc-was::after { transform: rotate(-12deg) scaleX(1) } }
+/* Ticket CTA */
+[data-buy]:has(.tkt) { padding: 0; overflow: visible; border: 0; background: none !important; box-shadow: none; color: inherit }
+.tkt { display: inline-flex; align-items: stretch; filter: drop-shadow(0 6px 14px rgba(15, 40, 30, .22)); transition: transform .18s ease }
+[data-buy]:hover .tkt { transform: translateY(-2px) }
+.tkt-main, .tkt-stub { --n: 9px; mask: radial-gradient(circle var(--n) at var(--x) 0, #0000 98%, #000) top / 100% 51% no-repeat, radial-gradient(circle var(--n) at var(--x) 100%, #0000 98%, #000) bottom / 100% 51% no-repeat }
+.tkt-main { --x: 100%; display: inline-flex; align-items: center; gap: 10px; padding: 0 18px 0 20px; min-height: 50px; background: var(--accent); color: var(--accent-ink); border-radius: 10px 0 0 10px; font: 650 1rem/1 var(--f-body) }
+.tkt-main svg { flex: none }
+.tkt-stub { --x: 0; position: relative; display: grid; place-items: center; align-content: center; gap: 3px; padding: 0 16px 0 18px; min-width: 92px; background: var(--mile); color: #1a1408; border-radius: 0 10px 10px 0; transform-origin: 0 50%; transition: transform .25s cubic-bezier(.3, 1.6, .5, 1) }
+.tkt-stub::before { content: ""; position: absolute; left: 0; top: 10px; bottom: 10px; border-left: 2px dashed color-mix(in srgb, #1a1408 45%, transparent) }
+[data-buy]:hover .tkt-stub { transform: rotate(5deg) translateX(3px) }
+.tkt-stub small { font: 600 .62rem/1 var(--f-mono); letter-spacing: .1em; text-transform: uppercase; opacity: .7; white-space: nowrap }
+.tkt-stub b { font: 800 1.15rem/1 var(--f-display); letter-spacing: .06em; display: inline-block; animation: stamp .5s .35s cubic-bezier(.2, 1.4, .4, 1) both }
+@keyframes stamp { from { transform: scale(2.2) rotate(-14deg); opacity: 0 } to { transform: scale(1) rotate(-4deg); opacity: 1 } }
+.bundle .tkt-main { background: var(--bg); color: var(--ink) }
+.cta-note { font: 500 .78rem/1.4 var(--f-mono); letter-spacing: .04em; color: var(--muted); margin: 12px 0 0 }
+@media (prefers-reduced-motion: reduce) { .tkt-stub b { animation: none; transform: rotate(-4deg) } }
 .facts [hidden] { display: none !important }
 /* Reviews page */
 .rv-tabs { display: flex; gap: 6px; overflow-x: auto; margin: 26px 0 18px; padding-bottom: 4px; border-bottom: 1px solid var(--line) }
-.rv-tabs a { flex: none; white-space: nowrap; text-decoration: none; color: var(--muted); font-weight: 600; font-size: .9rem; padding: 9px 14px; border-radius: 999px; border: 1px solid transparent }
-.rv-tabs a:hover { color: var(--ink); background: var(--sunk) }
-.rv-tabs a.on { color: var(--bg); background: var(--ink) }
+.rv-tabs button { font: inherit; cursor: pointer; background: none; flex: none; white-space: nowrap; text-decoration: none; color: var(--muted); font-weight: 600; font-size: .9rem; padding: 9px 14px; border-radius: 999px; border: 1px solid transparent }
+.rv-tabs button:hover { color: var(--ink); background: var(--sunk) }
+.rv-tabs button.on { color: var(--bg); background: var(--ink) }
 .rv-tabs .n { font: 500 .75rem var(--f-mono); opacity: .7 }
 /* Templates menu */
 .dd.tpl .ddmenu { width: 440px; left: auto; right: -60px }
@@ -518,7 +523,7 @@ nav.main .dd.langdd .ddmenu a { flex-direction: row; justify-content: space-betw
   </div>
 </header>
 <main id="app" class="wrap"></main>
-<footer class="foot"><div class="wrap"><span id="footBrand"></span><span><a href="#reviews">Reviews</a> · <a href="#terms">Terms of Sale</a> · <a href="#privacy">Privacy</a> · <a href="#" onclick="npiCookieSettings();return false">Cookie settings</a> · <a href="#legal">Legal notice</a> · <a href="#about">About the Institute</a> · <a href="/project-management/">Guides</a> · <a href="#verify">Certificate register</a> · <a href="#courses">All courses</a></span></div></footer>
+<footer class="foot"><div class="wrap"><span id="footBrand"></span><span><a href="/reviews/">Reviews</a> · <a href="/terms/">Terms of Sale</a> · <a href="/privacy/">Privacy</a> · <a href="#" onclick="npiCookieSettings();return false">Cookie settings</a> · <a href="/legal-notice/">Legal notice</a> · <a href="#about">About the Institute</a> · <a href="/project-management/">Guides</a> · <a href="#verify">Certificate register</a> · <a href="#courses">All courses</a></span></div></footer>
 <div id="modalRoot"></div>
 
 <script>
@@ -583,7 +588,7 @@ function LEGAL() {
     { id: "third", h: "Third-party services", plain: "Payments, hosting and LinkedIn sharing are provided by other companies under their own terms.",
       body: [`We use Stripe for payments, Supabase for our database, Netlify for website hosting, and LinkedIn when you choose to add a certificate to your profile. Their own terms and privacy policies apply to your use of their services.`] },
     { id: "privacy", h: "Your personal data", plain: "Our Privacy Policy explains what data we keep and why.",
-      body: [`We process your personal data as described in our <a href="#privacy">Privacy Policy</a>, which forms part of these Terms for information purposes.`] },
+      body: [`We process your personal data as described in our <a href="/privacy/">Privacy Policy</a>, which forms part of these Terms for information purposes.`] },
     { id: "force", h: "Events outside our control", plain: "We aren't responsible for delays caused by events we can't control.",
       body: [`We are not responsible for failure or delay caused by events beyond our reasonable control, such as outages of internet, hosting or payment providers, cyber-attacks, natural disasters or government action. We will tell you and do what we reasonably can to limit the effects.`] },
     { id: "update", h: "Changes to these Terms", plain: "We may update these Terms, but changes won't take away rights you already paid for.",
@@ -1631,7 +1636,7 @@ const app = $("#app");
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const money = n => CONFIG.currency + n;
 const FREE = !!CONFIG.freePromo;
-const ctaLabel = () => FREE ? `<span class="cta-cut"><span class="cc-lbl">Get PMAI</span><s class="cc-was">${money(CONFIG.regularPrice)}</s><span class="cc-now">Free</span></span>` : `Get PMAI for ${money(CONFIG.bundlePrice)}`;
+const ctaLabel = () => FREE ? `<span class="tkt"><span class="tkt-main">Get PMAI<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="tkt-stub" aria-label="was ${money(CONFIG.regularPrice)}, now free"><small>was ${money(CONFIG.regularPrice)}</small><b>FREE</b></span></span>` : `Get PMAI for ${money(CONFIG.bundlePrice)}`;
 const priceHTML = () => FREE ? `<span class="promo-price"><s>${money(CONFIG.regularPrice)}</s><b>Free</b><em>for a limited time</em></span>` : `<span class="price">${money(CONFIG.bundlePrice)}</span>`;
 const byId = id => id === "pmai" ? PMAI : COURSES.find(c => c.id === id);
 const certTitle = c => `${c.name}: ${c.title}`;
@@ -1729,7 +1734,7 @@ function askLearner(reason, then) {
         <label class="field">Company<input id="lfCompany" type="text" maxlength="80" autocomplete="organization" value="${esc(L.company)}"></label></div>
       <label class="field" id="lfUni">University<input id="lfUniversity" type="text" maxlength="100" value="${esc(L.university)}"></label>
       <label class="field"><span>LinkedIn profile <span class="muted" style="font-weight:400">· recommended, shown next to your review</span></span><input id="lfLinkedIn" type="text" inputmode="url" autocapitalize="off" spellcheck="false" maxlength="160" placeholder="https://www.linkedin.com/in/your-name" value="${esc(L.linkedin)}"></label>
-      <label class="consent"><input type="checkbox" id="lfPrivacy" required${L.country ? " checked" : ""}><span>I agree that the ${esc(CONFIG.brand)} stores these details to run my account and certificates, as described in the <a href="#privacy" target="_blank">Privacy Policy</a>. Nothing is published without my separate consent.</span></label>
+      <label class="consent"><input type="checkbox" id="lfPrivacy" required${L.country ? " checked" : ""}><span>I agree that the ${esc(CONFIG.brand)} stores these details to run my account and certificates, as described in the <a href="/privacy/" target="_blank">Privacy Policy</a>. Nothing is published without my separate consent.</span></label>
       <p id="lfErr" class="muted" role="alert"></p>
       <div class="row"><button class="btn primary" type="submit">${FREE && !owns("all") ? "Create account and start" : "Save and continue"}</button><button class="btn ghost" type="button" data-close>Cancel</button></div>
     </form>`, (box, close) => {
@@ -1752,7 +1757,7 @@ function askLearner(reason, then) {
   });
 }
 const consentHTML = () => { const n = LEGAL().tnum; return `<div class="stack" style="gap:8px">
-  <label class="consent"><input type="checkbox" class="cbox" id="cTerms"><span>I have read and accept the <a href="#terms" target="_blank">Terms of Sale and Use</a> (version ${esc(CONFIG.termsVersion)}) and have read the <a href="#privacy" target="_blank">Privacy Policy</a>. I understand that I take these courses on my own initiative and at my own risk, that the content is general education and not professional advice, that certificates are certificates of completion valid for ${CONFIG.validityMonths} months, and that the 10-day refund guarantee applies only until I claim a certificate.</span></label>
+  <label class="consent"><input type="checkbox" class="cbox" id="cTerms"><span>I have read and accept the <a href="/terms/" target="_blank">Terms of Sale and Use</a> (version ${esc(CONFIG.termsVersion)}) and have read the <a href="/privacy/" target="_blank">Privacy Policy</a>. I understand that I take these courses on my own initiative and at my own risk, that the content is general education and not professional advice, that certificates are certificates of completion valid for ${CONFIG.validityMonths} months, and that the 10-day refund guarantee applies only until I claim a certificate.</span></label>
   <label class="consent"><input type="checkbox" class="cbox" id="cWithdraw"><span>I expressly request immediate access to the digital content and acknowledge that I will lose my 14-day legal right of withdrawal once I access paid content (Art. 16(m), EU Directive 2011/83/EU). This does not affect the 10-day refund guarantee.</span></label>
   <label class="consent"><input type="checkbox" class="cbox" id="cApprove"><span>I have read and specifically accept clauses ${n.warranty} (Warranty), ${n.liability} (Limits on liability), ${n.indemnity} (Responsibility for misuse), ${n.suspend} (Suspension), ${n.update} (Changes to the Terms) and ${n.law} (Governing law and courts), including for the purposes of Articles 1341–1342 of the Italian Civil Code where they apply.</span></label>
   </div>` };
@@ -1875,7 +1880,7 @@ function viewHome() {
     <div class="trust-grid">
       <a class="trust" href="#course-pmf"><b>Try chapter 1 free</b><span>Every course's first chapter, slides and quiz are open to everyone. No sign-up needed.</span></a>
       <a class="trust" href="#verify-${SAMPLE.code}"><b>See how verification works</b><span>See what an employer sees when they verify a certificate (sample ID ${SAMPLE.code}).</span></a>
-      ${FREE ? `<a class="trust" href="#courses"><b>Free for a limited time</b><span>All six courses, quizzes and certificates at no cost. No card or payment details needed.</span></a>` : `<a class="trust" href="#terms"><b>10-day refund guarantee</b><span>Full refund within 10 days of purchase, for any reason, as long as you haven't claimed a certificate.</span></a>`}
+      ${FREE ? `<a class="trust" href="#courses"><b>Free for a limited time</b><span>All six courses, quizzes and certificates at no cost. No card or payment details needed.</span></a>` : `<a class="trust" href="/terms/"><b>10-day refund guarantee</b><span>Full refund within 10 days of purchase, for any reason, as long as you haven't claimed a certificate.</span></a>`}
       <a class="trust" href="#verify"><b>Public certificate register</b><span>Every certificate has a unique ID and QR code that anyone can check, so yours can't be faked.</span></a>
       <a class="trust" href="/project-management/"><b>270+ free guides and 55 templates</b><span>Our project management, Agile, Scrum and Kanban guides and downloadable templates are free to use.</span></a>
       <a class="trust" href="#about"><b>A registered US company</b><span>Operated by ${esc(CONFIG.legalName)}, ${esc(CONFIG.stateOfFormation)}. Clear terms, privacy policy and a real support inbox.</span></a>
@@ -1933,9 +1938,9 @@ function viewHome() {
     <details><summary>How does certificate verification work?</summary><p>Every certificate is recorded with a unique ID. Anyone can enter the ID on our Verify page, or scan the QR code, to see the holder's name, the course, the score and the issue date.</p></details>
     <details><summary>Why do certificates expire after ${CONFIG.validityMonths} months?</summary><p>${WHY_EXPIRE} To renew, retake the chapter assessments for that certification. Renewal is included with your enrolment.</p></details>
     <details><summary>Can I add the certificate to LinkedIn?</summary><p>Yes. Your certificate page has an "Add to LinkedIn" button that fills in the certification name, ID and verification link.</p></details>
-    <details><summary>Who is responsible for how I use the course?</summary><p>You are. You study on your own initiative and at your own risk, and the content is general education rather than professional advice. See our <a href="#terms">Terms of Sale and Use</a> for details.</p></details>
+    <details><summary>Who is responsible for how I use the course?</summary><p>You are. You study on your own initiative and at your own risk, and the content is general education rather than professional advice. See our <a href="/terms/">Terms of Sale and Use</a> for details.</p></details>
     ${FREE ? `<details><summary>Is the PMAI certification really free?</summary><p>Yes, for a limited time. The regular price is ${money(CONFIG.regularPrice)}, but while this offer runs you can sign up, take all ${COURSES.length} courses and earn your certificates without paying anything or entering card details. Anyone who signs up during the offer keeps their access.</p></details>` : ""}
-    <details><summary>Can I get a refund?</summary><p>Yes. We offer a 10-day refund guarantee: email us within 10 days of purchase for a full refund, for any reason, as long as you haven't claimed a certificate yet. EU and UK customers also keep their legal 14-day right of withdrawal until they open paid content. See the <a href="#terms">Terms</a> for details.</p></details>
+    <details><summary>Can I get a refund?</summary><p>Yes. We offer a 10-day refund guarantee: email us within 10 days of purchase for a full refund, for any reason, as long as you haven't claimed a certificate yet. EU and UK customers also keep their legal 14-day right of withdrawal until they open paid content. See the <a href="/terms/">Terms</a> for details.</p></details>
     <details><summary>Is this the same as PMP certification?</summary><p>No. These are certificates of completion awarded by the Institute. The content covers topics found in PMI and Scrum frameworks and is useful preparation, but it doesn't replace those credentials.</p></details>
   </section>`;
 }
@@ -2073,7 +2078,7 @@ function viewReviews(tab) {
   return `<div class="crumbs"><a href="#home">Home</a> / Reviews</div>
   <div class="stack" style="gap:10px;max-width:760px"><span class="eyebrow">Learner reviews</span><h1>What our learners say</h1>
     <p class="muted">Every review comes from a learner who passed the assessments and holds a verified certificate. We publish positive and critical reviews alike, and only with the learner's consent.</p></div>
-  <div class="rv-tabs" role="tablist" aria-label="Filter reviews by course">${tabs.map(([id, t]) => `<a role="tab" href="#reviews-${id}" aria-selected="${id === tab}" class="${id === tab ? "on" : ""}" data-rvtab="${id}">${esc(t)}<span class="n" data-count="${id}"></span></a>`).join("")}</div>
+  <div class="rv-tabs" role="tablist" aria-label="Filter reviews by course">${tabs.map(([id, t]) => `<button type="button" role="tab" aria-selected="${id === tab}" class="${id === tab ? "on" : ""}" data-rvtab="${id}">${esc(t)}<span class="n" data-count="${id}"></span></button>`).join("")}</div>
   <div id="rvSummary" class="review-sum" hidden></div>
   <div id="allReviews" class="review-grid"><p class="muted">Loading reviews…</p></div>`;
 }
@@ -2097,7 +2102,7 @@ async function loadReviews() {
   $("#reviews").hidden = false;
   const avg = rows.reduce((a, r) => a + r.rating, 0) / rows.length;
   box.innerHTML = `<div class="review-sum"><b>${avg.toFixed(1)}</b>${stars(Math.round(avg))}<span class="muted">from ${rows.length} verified review${rows.length > 1 ? "s" : ""}</span></div>
-    <div class="review-grid">${rows.slice(0, 12).map(reviewCard).join("")}</div><div class="row" style="margin-top:18px"><a class="btn" href="#reviews">Read all reviews</a></div>`;
+    <div class="review-grid">${rows.slice(0, 12).map(reviewCard).join("")}</div><div class="row" style="margin-top:18px"><a class="btn" href="/reviews/">Read all reviews</a></div>`;
 }
 
 function linkedInAdd(c, cert) { const d = new Date(cert.issued_at), x = expiryOf(cert);
@@ -2189,8 +2194,8 @@ function viewCert(id) {
     <form id="claimForm" class="stack">
       <label class="field">Full name<input id="claimName" type="text" required value="${esc(mem.learner?.name)}"></label>
       <label class="field">Email<input id="claimEmail" type="email" required value="${esc(mem.learner?.email)}"></label>
-      <label class="consent"><input type="checkbox" id="claimConsent"><span>I confirm that I completed the assessments myself, that the name above is my own, and that I accept the <a href="#terms" target="_blank">Terms of Sale and Use</a>, including the rules on certificate validity, honest use and revocation.</span></label>
-      <label class="consent"><input type="checkbox" id="claimPublish"><span>I understand that my name, certification, score, certificate ID and dates will be published in the public certificate register, as explained in the <a href="#privacy" target="_blank">Privacy Policy</a>. My email will not be shown.</span></label>
+      <label class="consent"><input type="checkbox" id="claimConsent"><span>I confirm that I completed the assessments myself, that the name above is my own, and that I accept the <a href="/terms/" target="_blank">Terms of Sale and Use</a>, including the rules on certificate validity, honest use and revocation.</span></label>
+      <label class="consent"><input type="checkbox" id="claimPublish"><span>I understand that my name, certification, score, certificate ID and dates will be published in the public certificate register, as explained in the <a href="/privacy/" target="_blank">Privacy Policy</a>. My email will not be shown.</span></label>
       <button class="btn primary" type="submit" style="align-self:flex-start">Issue my certificate</button>
       <p id="claimErr" class="muted" role="alert"></p>
     </form></div>`;
@@ -2344,10 +2349,10 @@ function viewLegal(kind) {
   return `<div class="crumbs no-print"><a href="#home">Home</a> / ${titles[kind]}</div>
   <div class="legal">
     <div class="stack"><span class="eyebrow">${esc(CONFIG.brand)} · ${kind === "terms" ? "Version " + esc(CONFIG.termsVersion) + " · " : ""}Last updated ${esc(CONFIG.termsUpdated)}</span><h1>${titles[kind]}</h1>
-      <div class="row no-print" style="gap:8px">${["terms", "privacy", "notice"].map(k => `<a class="btn small ${k === kind ? "primary" : "ghost"}" href="#${k === "notice" ? "legal" : k}">${titles[k]}</a>`).join("")}${LIVE ? `<button class="btn small ghost" data-print>Print or save as PDF</button>` : ""}</div></div>
+      <div class="row no-print" style="gap:8px">${["terms", "privacy", "notice"].map(k => `<a class="btn small ${k === kind ? "primary" : "ghost"}" href="${PATHS[k === "notice" ? "legal" : k]}">${titles[k]}</a>`).join("")}${LIVE ? `<button class="btn small ghost" data-print>Print or save as PDF</button>` : ""}</div></div>
     ${missing ? `<div class="result fail no-print"><b>Seller details missing.</b> Add the LLC's legal name, state, address and contact email before taking payments.</div>` : ""}
     ${intro}
-    ${kind !== "notice" ? `<nav class="legal-toc no-print" aria-label="Contents"><span class="eyebrow">Contents</span><ol>${list.map((c, i) => `<li><a href="#${kind === "notice" ? "legal" : kind}" data-jump="c-${c.id}">${esc(c.h)}</a></li>`).join("")}</ol></nav>` : ""}
+    ${kind !== "notice" ? `<nav class="legal-toc no-print" aria-label="Contents"><span class="eyebrow">Contents</span><ol>${list.map((c, i) => `<li><a href="#c-${c.id}" data-jump="c-${c.id}">${esc(c.h)}</a></li>`).join("")}</ol></nav>` : ""}
     ${list.map((c, i) => `<section id="c-${c.id}" class="${c.strong ? "strong" : ""}"><h2>${i + 1}. ${esc(c.h)}</h2>
       ${(c.body || []).map(p => p.startsWith("<table") ? p : `<p>${fill(p)}</p>`).join("")}
       ${c.table ? `<div class="table-wrap"><table><thead><tr>${c.table.head.map(h => `<th>${esc(h)}</th>`).join("")}</tr></thead><tbody>${c.table.rows.map(r => `<tr>${r.map(x => `<td style="white-space:normal">${esc(x)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>` : ""}
@@ -2442,8 +2447,13 @@ const viewNotFound = () => `<h2>Page not found</h2><p style="margin-top:12px"><a
 
 /* ---------- Router ---------- */
 let lastRoute = "";
+const PATHS = { reviews: "/reviews/", terms: "/terms/", privacy: "/privacy/", legal: "/legal-notice/" };
+const PATH_ROUTE = Object.fromEntries(Object.entries(PATHS).map(([k, v]) => [v, k]));
 function render() {
-  const h = (location.hash || "#home").slice(1);
+  let h = location.hash.slice(1);
+  const here = PATH_ROUTE[location.pathname.replace(/\/?(index\.html)?$/, "/")];
+  if (here) { if (h && h.split("-")[0] !== here) { location.replace("/#" + h); return } h = here }
+  else { const pg = h.split("-")[0]; if (PATHS[pg]) { location.replace(PATHS[pg]); return } h = h || "home" }
   const [page, ...rest] = h.split("-");
   if (h !== lastRoute) { if (page === "learn") { player = { slide: 0, mode: "slides" }; quizState = null } window.scrollTo(0, 0); lastRoute = h }
   document.querySelectorAll('nav.main a').forEach(a => a.getAttribute("href") === "#" + page ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current"));
@@ -2463,14 +2473,14 @@ function render() {
   else if (page === "cert") html = viewCert(rest[0]);
   else if (page === "verify") html = viewVerify(rest.join("-"));
   else if (page === "dashboard") html = viewDashboard();
-  else if (page === "reviews") html = viewReviews(rest[0] || "all");
+  else if (page === "reviews") html = viewReviews(new URLSearchParams(location.search).get("course") || "all");
   else html = viewNotFound();
   app.innerHTML = html;
   if (page === "verify" && rest.length) runVerify(rest.join("-"));
   if (page === "cert" && mem.certs[rest[0]]) drawQR(mem.certs[rest[0]].code);
   if (page === "home" && location.hash === "#catalog") $("#catalog")?.scrollIntoView();
   if (page === "home" || page === "paid") { loadReviews(); loadEnrolled() }
-  if (page === "reviews") loadAllReviews(rest[0] || "all");
+  if (page === "reviews") loadAllReviews(new URLSearchParams(location.search).get("course") || "all");
 }
 
 /* ---------- Events ---------- */
@@ -2505,6 +2515,8 @@ document.addEventListener("click", async e => {
     } catch (err) { toast(err.message); t.disabled = false }
     return;
   }
+  if (t.dataset.rvtab) { const id = t.dataset.rvtab; document.querySelectorAll("[data-rvtab]").forEach(b => { const on = b.dataset.rvtab === id; b.classList.toggle("on", on); b.setAttribute("aria-selected", on) });
+    try { history.replaceState(null, "", id === "all" ? PATHS.reviews : PATHS.reviews + "?course=" + id) } catch {} return loadAllReviews(id) }
   if (t.dataset.jump) { e.preventDefault(); return document.getElementById(t.dataset.jump)?.scrollIntoView({ behavior: "smooth" }) }
   if (t.hasAttribute("data-next")) { player.slide++; return render() }
   if (t.hasAttribute("data-prev")) { player.slide--; return render() }
