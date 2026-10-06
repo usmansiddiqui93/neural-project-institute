@@ -232,6 +232,25 @@ body:has(#modalRoot .modal) #npi-langbar { display: none }
 .rv-meta .rv-place::before { content: "⌖ "; opacity: .7 }
 .rv-li { color: #0a66c2; display: inline-flex } .rv-li:hover { color: #004182 }
 .review .rv-course { color: var(--muted); font-size: .8rem; margin-top: 4px }
+
+/* Cut-price CTA */
+.cta-cut { display: inline-flex; align-items: center; gap: 10px }
+.cta-cut .cc-was { position: relative; text-decoration: none; opacity: .75; font-weight: 500 }
+.cta-cut .cc-was::after { content: ""; position: absolute; left: -3px; right: -3px; top: 50%; height: 2px; background: var(--mile); transform: rotate(-12deg) scaleX(0); transform-origin: left; animation: cutline .5s .4s ease-out forwards }
+@keyframes cutline { to { transform: rotate(-12deg) scaleX(1) } }
+.cta-cut .cc-now { background: var(--mile); color: #1a1408; font: 800 .78rem/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; padding: 5px 8px; border-radius: 6px; animation: freepop .35s .85s ease-out both }
+@keyframes freepop { from { transform: scale(.4); opacity: 0 } 70% { transform: scale(1.12) } to { transform: scale(1); opacity: 1 } }
+[data-buy]:has(.cta-cut) { padding-right: 10px }
+.bundle [data-buy] .cta-cut .cc-now { background: var(--ink); color: var(--mile) }
+.cta-note { font: 500 .78rem/1.4 var(--f-mono); letter-spacing: .04em; color: var(--muted); margin: 10px 0 0 }
+@media (prefers-reduced-motion: reduce) { .cta-cut .cc-was::after { transform: rotate(-12deg) scaleX(1) } }
+.facts [hidden] { display: none !important }
+/* Reviews page */
+.rv-tabs { display: flex; gap: 6px; overflow-x: auto; margin: 26px 0 18px; padding-bottom: 4px; border-bottom: 1px solid var(--line) }
+.rv-tabs a { flex: none; white-space: nowrap; text-decoration: none; color: var(--muted); font-weight: 600; font-size: .9rem; padding: 9px 14px; border-radius: 999px; border: 1px solid transparent }
+.rv-tabs a:hover { color: var(--ink); background: var(--sunk) }
+.rv-tabs a.on { color: var(--bg); background: var(--ink) }
+.rv-tabs .n { font: 500 .75rem var(--f-mono); opacity: .7 }
 /* Templates menu */
 .dd.tpl .ddmenu { width: 440px; left: auto; right: -60px }
 .tplmenu { position: relative; z-index: 1; padding: 14px 14px 12px }
@@ -499,7 +518,7 @@ nav.main .dd.langdd .ddmenu a { flex-direction: row; justify-content: space-betw
   </div>
 </header>
 <main id="app" class="wrap"></main>
-<footer class="foot"><div class="wrap"><span id="footBrand"></span><span><a href="#terms">Terms of Sale</a> · <a href="#privacy">Privacy</a> · <a href="#" onclick="npiCookieSettings();return false">Cookie settings</a> · <a href="#legal">Legal notice</a> · <a href="#about">About the Institute</a> · <a href="/project-management/">Guides</a> · <a href="#verify">Certificate register</a> · <a href="#courses">All courses</a></span></div></footer>
+<footer class="foot"><div class="wrap"><span id="footBrand"></span><span><a href="#reviews">Reviews</a> · <a href="#terms">Terms of Sale</a> · <a href="#privacy">Privacy</a> · <a href="#" onclick="npiCookieSettings();return false">Cookie settings</a> · <a href="#legal">Legal notice</a> · <a href="#about">About the Institute</a> · <a href="/project-management/">Guides</a> · <a href="#verify">Certificate register</a> · <a href="#courses">All courses</a></span></div></footer>
 <div id="modalRoot"></div>
 
 <script>
@@ -1596,6 +1615,8 @@ const CONFIG = {
   bundlePrice: 10,             // price of PMAI, the complete certification (all courses)
   freePromo: true,             // limited-time offer: PMAI is free; sign-up unlocks everything
   regularPrice: 39.99,         // shown struck through during the free offer
+  homeReviewsMin: 10,          // homepage shows complete-course (PMAI) reviews once there are at least this many
+  showEnrolledFrom: 100,       // the live enrolment counter appears once real enrolments reach this number
   passMark: 2,                 // correct answers needed per 3-question chapter quiz
   siteUrl: "https://neuralprojectinstitute.com/",
   supabaseUrl: "https://fzfswpqhrsktvejcnzlt.supabase.co",             // e.g. "https://abcd.supabase.co"
@@ -1610,7 +1631,7 @@ const app = $("#app");
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const money = n => CONFIG.currency + n;
 const FREE = !!CONFIG.freePromo;
-const ctaLabel = () => FREE ? "Get PMAI free" : `Get PMAI for ${money(CONFIG.bundlePrice)}`;
+const ctaLabel = () => FREE ? `<span class="cta-cut"><span class="cc-lbl">Get PMAI</span><s class="cc-was">${money(CONFIG.regularPrice)}</s><span class="cc-now">Free</span></span>` : `Get PMAI for ${money(CONFIG.bundlePrice)}`;
 const priceHTML = () => FREE ? `<span class="promo-price"><s>${money(CONFIG.regularPrice)}</s><b>Free</b><em>for a limited time</em></span>` : `<span class="price">${money(CONFIG.bundlePrice)}</span>`;
 const byId = id => id === "pmai" ? PMAI : COURSES.find(c => c.id === id);
 const certTitle = c => `${c.name}: ${c.title}`;
@@ -1822,8 +1843,9 @@ function viewHome() {
       <span class="eyebrow">Neural Project Institute · Est. ${CONFIG.founded}</span>
       <h1>Plan it. Deliver it. Prove it with a certificate anyone can verify.</h1>
       <p class="lede">Six self-paced certifications covering modern project management, from scope and the critical path to Scrum, risk, leadership and AI. Pass each chapter's quiz to earn a certificate per course, then the complete PMAI certification. ${FREE ? `Free for a limited time (regular price ${money(CONFIG.regularPrice)}): sign up and everything is unlocked.` : `One payment of ${money(CONFIG.bundlePrice)} covers everything.`}</p>
-      <div class="row"><button class="btn primary" data-buy="all">${ctaLabel()}</button><a class="btn" href="#courses">Browse the courses</a><a class="btn ghost" href="#course-pmf">Try a free chapter</a></div>
+      <div class="row"><button class="btn primary" data-buy="all">${ctaLabel()}</button><a class="btn" href="#courses">Browse the courses</a>${FREE ? "" : `<a class="btn ghost" href="#course-pmf">Try a free chapter</a>`}</div>${FREE ? `<p class="cta-note">Limited-time offer · no card needed · keep your access after the offer ends</p>` : ""}
       <div class="facts">
+        <div id="enrolStat" hidden><b></b><span>learners enrolled</span></div>
         <div><b>${COURSES.length}</b><span>certifications</span></div>
         <div><b>${COURSES.reduce((s, c) => s + c.chapters.length, 0)}</b><span>chapters</span></div>
         <div><b>${COURSES.reduce((s, c) => s + c.chapters.reduce((t, ch) => t + ch.slides.length, 0), 0)}</b><span>slides</span></div>
@@ -1862,7 +1884,7 @@ function viewHome() {
 
   <section id="reviews" hidden>
     <span class="eyebrow">Learner reviews</span>
-    <h2 style="margin-top:10px">What certified learners say</h2>
+    <h2 style="margin-top:10px">What PMAI graduates say</h2>
     <p class="muted" style="max-width:66ch;margin-top:10px">Only learners who hold a verified certificate can leave a review, and each one links to its entry in our public register. We publish positive and critical reviews alike, after a brief check for spam and personal data.</p>
     <div id="reviewsBox" class="reviews"><p class="muted">Loading reviews…</p></div>
   </section>
@@ -2032,16 +2054,50 @@ function reviewer(r) {
   return `<div class="rv-who"><span class="rv-av" aria-hidden="true">${esc(initials)}</span><div class="rv-meta"><b>${esc(r.display_name)}</b>${li ? `<a class="rv-li" href="${esc(li)}" target="_blank" rel="nofollow ugc noopener" aria-label="${esc(r.display_name)} on LinkedIn"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>` : ""}
     ${r.job_line ? `<span>${esc(r.job_line)}</span>` : ""}${place ? `<span class="rv-place">${esc(place)}</span>` : ""}</div></div>`;
 }
+let reviewCache = null;
+async function fetchReviews() {
+  if (reviewCache) return reviewCache;
+  let rows = [];
+  if (LIVE) { for (const fn of ["public_reviews_v4", "public_reviews_v3"]) { try { rows = await rpc(fn, {}) || []; break } catch (e) { console.warn(e) } } }
+  return reviewCache = rows;
+}
+const reviewCard = r => `<figure class="review">${stars(r.rating)}<blockquote>${esc(r.body)}</blockquote>
+  <figcaption>${reviewer(r)}<span class="rv-course">${esc(r.course_title || "")}</span><a href="#verify-${esc(r.cert_code)}" class="verified">✓ Verified certificate</a>${r.incentivized ? `<small class="incent">Took the course free during our limited-time offer</small>` : ""}</figcaption></figure>`;
+async function loadEnrolled() {
+  const el = $("#enrolStat"); if (!el || !LIVE) return;
+  try { const n = +(await rpc("enrolment_count", {})); if (n >= CONFIG.showEnrolledFrom) { el.querySelector("b").textContent = n.toLocaleString("en-US"); el.hidden = false } } catch (e) { console.warn(e) }
+}
+function viewReviews(tab) {
+  const tabs = [["all", "All reviews"], ["pmai", "PMAI (complete course)"], ...COURSES.map(c => [c.id, c.name])];
+  tab = tabs.some(t => t[0] === tab) ? tab : "all";
+  return `<div class="crumbs"><a href="#home">Home</a> / Reviews</div>
+  <div class="stack" style="gap:10px;max-width:760px"><span class="eyebrow">Learner reviews</span><h1>What our learners say</h1>
+    <p class="muted">Every review comes from a learner who passed the assessments and holds a verified certificate. We publish positive and critical reviews alike, and only with the learner's consent.</p></div>
+  <div class="rv-tabs" role="tablist" aria-label="Filter reviews by course">${tabs.map(([id, t]) => `<a role="tab" href="#reviews-${id}" aria-selected="${id === tab}" class="${id === tab ? "on" : ""}" data-rvtab="${id}">${esc(t)}<span class="n" data-count="${id}"></span></a>`).join("")}</div>
+  <div id="rvSummary" class="review-sum" hidden></div>
+  <div id="allReviews" class="review-grid"><p class="muted">Loading reviews…</p></div>`;
+}
+async function loadAllReviews(tab) {
+  const box = $("#allReviews"); if (!box) return;
+  const rows = await fetchReviews();
+  document.querySelectorAll("[data-count]").forEach(el => { const id = el.dataset.count, n = id === "all" ? rows.length : rows.filter(r => r.course_id === id).length; el.textContent = n ? " " + n : "" });
+  const valid = ["all", "pmai", ...COURSES.map(c => c.id)];
+  tab = valid.includes(tab) ? tab : "all";
+  const R = tab === "all" ? rows : rows.filter(r => r.course_id === tab);
+  const sum = $("#rvSummary");
+  if (R.length) { const avg = R.reduce((a, r) => a + r.rating, 0) / R.length; sum.innerHTML = `<b>${avg.toFixed(1)}</b>${stars(Math.round(avg))}<span class="muted">from ${R.length} verified review${R.length > 1 ? "s" : ""}</span>`; sum.hidden = false }
+  box.innerHTML = R.length ? R.map(reviewCard).join("") : `<div class="review-empty"><p><b>No reviews here yet.</b> Reviews appear as learners finish ${tab === "all" ? "their courses" : tab === "pmai" ? "the complete PMAI certification" : "this course"} and choose to share their experience.</p></div>`;
+}
 async function loadReviews() {
   const box = $("#reviewsBox"); if (!box) return;
   let rows = [];
-  if (LIVE) { for (const fn of ["public_reviews_v3", "public_reviews_v2", "public_reviews"]) { try { rows = await rpc(fn, {}) || []; break } catch (e) { console.warn(e) } } }
+  rows = (await fetchReviews()).filter(r => r.course_id === "pmai");
+  if (rows.length < CONFIG.homeReviewsMin) rows = [];
   if (!rows.length) { $("#reviews").hidden = true; return; box.innerHTML = `<div class="review-empty"><p><b>Reviews are on their way.</b> We only show reviews from learners who have earned a verified certificate, so this section fills up as our first learners finish their courses. Earned one? Open your certificate page to leave a review.</p></div>`; return }
   $("#reviews").hidden = false;
   const avg = rows.reduce((a, r) => a + r.rating, 0) / rows.length;
   box.innerHTML = `<div class="review-sum"><b>${avg.toFixed(1)}</b>${stars(Math.round(avg))}<span class="muted">from ${rows.length} verified review${rows.length > 1 ? "s" : ""}</span></div>
-    <div class="review-grid">${rows.slice(0, 12).map(r => `<figure class="review">${stars(r.rating)}<blockquote>${esc(r.body)}</blockquote>
-      <figcaption>${reviewer(r)}<span class="rv-course">${esc(r.course_title || "")}</span><a href="#verify-${esc(r.cert_code)}" class="verified">✓ Verified certificate</a>${r.incentivized ? `<small class="incent">Took the course free during our limited-time offer</small>` : ""}</figcaption></figure>`).join("")}</div>`;
+    <div class="review-grid">${rows.slice(0, 12).map(reviewCard).join("")}</div><div class="row" style="margin-top:18px"><a class="btn" href="#reviews">Read all reviews</a></div>`;
 }
 
 function linkedInAdd(c, cert) { const d = new Date(cert.issued_at), x = expiryOf(cert);
@@ -2084,7 +2140,7 @@ function claimWizard(c, then) {
         W.cert = W.cert || await issueCert(c, scorePct(c));
         if (W.rating && W.body.trim().length >= 20) {
           if (LIVE) await rpc("submit_review_v3", { p_code: W.cert.code, p_email: L.email, p_rating: W.rating, p_body: W.body.trim(), p_publish: !!W.publish });
-          reviewed[W.cert.code] = W.publish ? "published" : "private"; store.set("reviewed", reviewed);
+          reviewed[W.cert.code] = W.publish ? "published" : "private"; store.set("reviewed", reviewed); reviewCache = null;
         }
         W.step = 4; paint();
       } catch (e) { W.err = /purchase/i.test(e.message) ? "We couldn't find your enrolment for this email. Sign up with the email you used for your courses." : e.message; W.step = "err"; paint() }
@@ -2407,12 +2463,14 @@ function render() {
   else if (page === "cert") html = viewCert(rest[0]);
   else if (page === "verify") html = viewVerify(rest.join("-"));
   else if (page === "dashboard") html = viewDashboard();
+  else if (page === "reviews") html = viewReviews(rest[0] || "all");
   else html = viewNotFound();
   app.innerHTML = html;
   if (page === "verify" && rest.length) runVerify(rest.join("-"));
   if (page === "cert" && mem.certs[rest[0]]) drawQR(mem.certs[rest[0]].code);
   if (page === "home" && location.hash === "#catalog") $("#catalog")?.scrollIntoView();
-  if (page === "home" || page === "paid") loadReviews();
+  if (page === "home" || page === "paid") { loadReviews(); loadEnrolled() }
+  if (page === "reviews") loadAllReviews(rest[0] || "all");
 }
 
 /* ---------- Events ---------- */
@@ -2488,7 +2546,7 @@ document.addEventListener("submit", async e => {
     const pub = $("#rvConsent").checked;
     if (!LIVE) return toast("Reviews can be submitted on neuralprojectinstitute.com.");
     try { await rpc("submit_review_v3", { p_code: f.dataset.code, p_email: mem.learner?.email || "", p_rating: r, p_body: body, p_publish: pub });
-      reviewed[f.dataset.code] = pub ? "published" : "private"; store.set("reviewed", reviewed);
+      reviewed[f.dataset.code] = pub ? "published" : "private"; store.set("reviewed", reviewed); reviewCache = null;
       f.closest("section").innerHTML = `<span class="eyebrow">Your review</span><h2 style="margin:8px 0">Thank you!</h2><p class="muted">${pub ? "Your review is now live on the homepage." : "Your review was saved privately."}</p>`;
     } catch (err) { toast(/not found/i.test(err.message) ? "That email doesn't match this certificate." : "Couldn't submit your review. Please try again.") }
     return;
