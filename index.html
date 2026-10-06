@@ -165,6 +165,19 @@ nav.main { display: flex; gap: 4px; flex-wrap: wrap; justify-content: flex-end }
 nav.main a { color: var(--ink); text-decoration: none; font-weight: 500; font-size: .92rem; padding: 8px 10px; border-radius: var(--r) }
 nav.main a:hover, nav.main a[aria-current="page"] { background: var(--sunk) }
 nav.main { align-items: center }
+/* One-line header */
+header.top .wrap { flex-wrap: nowrap; min-height: 64px }
+.brand { min-width: 0; flex: 0 1 auto } .lockup { min-width: 0 }
+.lockup small { white-space: nowrap; letter-spacing: .05em; font-size: .6rem }
+header.top .wrap { gap: 24px }
+nav.main { flex-wrap: nowrap; gap: 2px; flex: none }
+nav.main > a, nav.main .ddbtn { white-space: nowrap; height: 38px; display: inline-flex; align-items: center; padding: 0 10px }
+nav.main .dd.langdd { margin-left: 4px; padding-left: 6px; border-left: 1px solid var(--line) }
+nav.main > a.cta { background: var(--ink); color: var(--bg); font-weight: 600; margin-left: 8px; border-radius: 999px; padding: 0 16px }
+nav.main > a.cta:hover { background: var(--accent); color: var(--accent-ink, #fff) }
+@media (max-width: 1240px) { .lockup small { display: none } }
+@media (max-width: 1000px) { nav.main > a.hide-sm { display: none } }
+@media (max-width: 760px) { header.top .wrap { flex-wrap: wrap } nav.main { width: 100%; justify-content: space-between; overflow-x: auto } nav.main > a, nav.main .ddbtn { padding: 0 8px; font-size: .88rem } }
 .ddbtn { display: inline-flex; align-items: center; gap: 6px; border: 0; background: none; color: var(--ink); font: 500 .92rem/1 var(--f-body); padding: 8px 10px; border-radius: var(--r); cursor: pointer }
 .ddbtn:hover, .dd.open .ddbtn { background: var(--sunk) }
 .dd { position: relative }
@@ -440,7 +453,7 @@ nav.main .dd.langdd .ddmenu a { flex-direction: row; justify-content: space-betw
     </div>
       <div class="dd langdd" data-hubs='{"de": "/de/projektmanagement/", "es": "/es/gestion-de-proyectos/", "fr": "/fr/gestion-de-projet/", "it": "/it/gestione-dei-progetti/", "ru": "/ru/управление-проектами/", "zh": "/zh/项目管理/", "ja": "/ja/プロジェクト管理/"}'><button class="ddbtn" type="button" aria-expanded="false" aria-haspopup="true" aria-label="Language"><svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M1.5 8h13M8 1.5c2 2 2 11 0 13M8 1.5c-2 2-2 11 0 13" fill="none" stroke="currentColor" stroke-width="1.3"/></svg> EN <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button><div class="ddmenu" role="menu"><a role="menuitem" href="/" hreflang="en" lang="en" aria-current="true"><b>English</b></a><a role="menuitem" href="/de/projektmanagement/" hreflang="de" lang="de"><b>Deutsch</b><span>Guide hub</span></a><a role="menuitem" href="/es/gestion-de-proyectos/" hreflang="es" lang="es"><b>Español</b><span>Guide hub</span></a><a role="menuitem" href="/fr/gestion-de-projet/" hreflang="fr" lang="fr"><b>Français</b><span>Guide hub</span></a><a role="menuitem" href="/it/gestione-dei-progetti/" hreflang="it" lang="it"><b>Italiano</b><span>Guide hub</span></a><a role="menuitem" href="/ru/управление-проектами/" hreflang="ru" lang="ru"><b>Русский</b><span>Guide hub</span></a><a role="menuitem" href="/zh/项目管理/" hreflang="zh" lang="zh"><b>简体中文</b><span>Guide hub</span></a><a role="menuitem" href="/ja/プロジェクト管理/" hreflang="ja" lang="ja"><b>日本語</b><span>Guide hub</span></a></div></div>
       <a href="#verify" class="hide-sm">Verify</a>
-      <a href="#dashboard">My learning</a>
+      <a href="#dashboard" class="cta">My learning</a>
     </nav>
   </div>
 </header>

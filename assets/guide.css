@@ -292,3 +292,11 @@ div.card { cursor: default }
 #npi-langbar { position: fixed; z-index: 999; left: 16px; right: 16px; top: 74px; max-width: 620px; margin: 0 auto; background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 12px; padding: 12px 14px; display: flex; gap: 10px 14px; align-items: center; flex-wrap: wrap; box-shadow: 0 14px 34px -14px rgba(0,0,0,.35); font: 500 .92rem/1.4 system-ui, sans-serif }
 #npi-langbar p { margin: 0; flex: 1 1 240px } #npi-langbar a.go { background: var(--accent); color: #fff; padding: 7px 12px; border-radius: 8px; text-decoration: none; font-weight: 600 }
 #npi-langbar button { background: none; border: 0; color: var(--muted); cursor: pointer; font: inherit }
+
+/* One-line header */
+@media (min-width: 641px) { header.top .wrap { flex-wrap: nowrap } .mainnav { flex: none } .mainnav > a, .ddbtn { white-space: nowrap } }
+.brand { min-width: 0 } .brand small { white-space: nowrap; overflow: hidden; text-overflow: ellipsis }
+@media (max-width: 1240px) { .brand small { display: none } }
+.mainnav .dd.langdd { margin-left: 4px; padding-left: 6px; border-left: 1px solid var(--line) }
+.mainnav > a.cta { border-radius: 999px; padding: 0 16px }
+@media (max-width: 1000px) and (min-width: 641px) { .mainnav > a[href="/about-the-institute/"] { display: none } }
