@@ -487,7 +487,7 @@ nav.main .dd.langdd .ddmenu a { flex-direction: row; justify-content: space-betw
 <div id="demoBar" class="demo-bar" hidden></div>
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#home" aria-label="Home">
+    <a class="brand" href="/" aria-label="Home">
       <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="5" width="13" height="4" rx="1" fill="var(--ink)"/><rect x="6" y="11" width="11" height="4" rx="1" fill="var(--accent)"/><rect x="2" y="17" width="9" height="4" rx="1" fill="var(--ink)"/><path d="M20 15.5l4 4-4 4-4-4z" fill="var(--mile)"/></svg>
       <span class="lockup"><span id="brandName">Neural Project Institute</span><small id="brandTag">Project management certification for the AI era</small></span>
     </a>
@@ -1618,6 +1618,7 @@ const CONFIG = {
   showEnrolledFrom: 100,       // the live enrolment counter appears once real enrolments reach this number
   passMark: 2,                 // correct answers needed per 3-question chapter quiz
   siteUrl: "https://neuralprojectinstitute.com/",
+  linkedinOrgId: "",          // numeric ID of the LinkedIn company page: makes "Add to LinkedIn" show the logo
   supabaseUrl: "https://fzfswpqhrsktvejcnzlt.supabase.co",             // e.g. "https://abcd.supabase.co"
   supabaseKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ6ZnN3cHFocnNrdHZlamNuemx0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTA5NDQ2NjIsImV4cCI6MjEwNjUyMDY2Mn0.h5McYrQFkZNoIUMwqszNjLmpg3pEMxBIwH_tIW7Rh2s",             // the publishable (anon) key
   stripeLinks: { pmf: "", ssc: "", agl: "", rqm: "", lsc: "", ai: "", all: "" }
@@ -1951,7 +1952,7 @@ function viewHome() {
 }
 
 function viewCatalog() {
-  return `<div class="crumbs"><a href="#home">Home</a> / Courses</div>
+  return `<div class="crumbs"><a href="/">Home</a> / Courses</div>
   <span class="eyebrow">Certifications</span><h1 style="margin-top:10px">All courses</h1>
   <div class="grid-courses">${COURSES.map(courseCard).join("")}</div>
   <div class="bundle"><div class="stack"><span class="eyebrow" style="color:inherit;opacity:.7">The complete certification</span><h2>PMAI</h2><p class="muted">All ${COURSES.length} courses and their certificates ${FREE ? `free for a limited time (regular price ${money(CONFIG.regularPrice)})` : `for ${money(CONFIG.bundlePrice)}`}. Pass every course to earn the PMAI certificate.</p></div>
@@ -1968,7 +1969,7 @@ function viewCourse(id) {
       <div><h4>${esc(ch.title)}</h4><small>${ch.slides.length} slides · ${ch.quiz.length}-question quiz</small></div>
       <div class="row">${status}${open ? `<a class="btn small ${ok ? "ghost" : "primary"}" href="#learn-${id}-${i}">${ok ? "Review" : p != null ? "Retake" : "Start"}</a>` : ""}</div></div>`;
   }).join("");
-  return `<div class="crumbs"><a href="#home">Home</a> / <a href="#courses">Courses</a> / ${esc(c.name)}</div>
+  return `<div class="crumbs"><a href="/">Home</a> / <a href="#courses">Courses</a> / ${esc(c.name)}</div>
   <div class="detail">
     <div class="stack" style="gap:28px;min-width:0">
       <div class="stack"><span class="eyebrow">${c.code} · ${c.level} · about ${c.hours} hours</span><h1>${esc(c.name)}</h1><p style="font-size:1.25rem;font-weight:500">${esc(c.title)}</p><p style="font-size:1.05rem" class="muted">${esc(c.short)}</p></div>
@@ -2080,7 +2081,7 @@ async function loadEnrolled() {
 function viewReviews(tab) {
   const tabs = [["all", "All reviews"], ["pmai", "PMAI (complete course)"], ...COURSES.map(c => [c.id, c.name])];
   tab = tabs.some(t => t[0] === tab) ? tab : "all";
-  return `<div class="crumbs"><a href="#home">Home</a> / Reviews</div>
+  return `<div class="crumbs"><a href="/">Home</a> / Reviews</div>
   <div class="stack" style="gap:10px;max-width:760px"><span class="eyebrow">Learner reviews</span><h1>What our learners say</h1>
     <p class="muted">Every review comes from a learner who passed the assessments and holds a verified certificate. We publish positive and critical reviews alike, and only with the learner's consent.</p></div>
   <div class="rv-tabs" role="tablist" aria-label="Filter reviews by course">${tabs.map(([id, t]) => `<button type="button" role="tab" aria-selected="${id === tab}" class="${id === tab ? "on" : ""}" data-rvtab="${id}">${esc(t)}<span class="n" data-count="${id}"></span></button>`).join("")}</div>
@@ -2113,7 +2114,7 @@ async function loadReviews() {
 }
 
 function linkedInAdd(c, cert) { const d = new Date(cert.issued_at), x = expiryOf(cert);
-  return `https://www.linkedin.com/profile/add?startTask=CERTIFICATION_NAME&name=${encodeURIComponent(certTitle(c))}&organizationName=${encodeURIComponent(CONFIG.brand)}&issueYear=${d.getFullYear()}&issueMonth=${d.getMonth() + 1}&expirationYear=${x.getFullYear()}&expirationMonth=${x.getMonth() + 1}&certUrl=${encodeURIComponent(verifyUrl(cert.code))}&certId=${encodeURIComponent(cert.code)}` }
+  return `https://www.linkedin.com/profile/add?startTask=CERTIFICATION_NAME&name=${encodeURIComponent(certTitle(c))}&${CONFIG.linkedinOrgId ? "organizationId=" + encodeURIComponent(CONFIG.linkedinOrgId) : "organizationName=" + encodeURIComponent(CONFIG.brand)}&issueYear=${d.getFullYear()}&issueMonth=${d.getMonth() + 1}&expirationYear=${x.getFullYear()}&expirationMonth=${x.getMonth() + 1}&certUrl=${encodeURIComponent(verifyUrl(cert.code))}&certId=${encodeURIComponent(cert.code)}` }
 const reviewed = store.get("reviewed", {});
 const jobLine = l => l.jobTitle && l.company ? `${l.jobTitle}, ${l.company}` : l.jobTitle || (l.university ? `Student, ${l.university}` : l.company || "");
 const STAR = `<svg viewBox="0 0 24 24" width="100%" height="100%" aria-hidden="true"><path d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5L2.5 9.5l6.6-.9z" fill="currentColor"/></svg>`;
@@ -2209,7 +2210,7 @@ function viewCert(id) {
 }
 
 function viewVerify(code) {
-  return `<div class="crumbs"><a href="#home">Home</a> / Verify</div>
+  return `<div class="crumbs"><a href="/">Home</a> / Verify</div>
   <div class="stack" style="max-width:720px;gap:20px">
     <span class="eyebrow">Office of the Registrar</span><h1>Certificate register</h1>
     <p class="muted">Enter the ID from the bottom left of the certificate. Try the sample ID <button class="btn small ghost" data-fill="${SAMPLE.code}" style="padding:4px 8px">${SAMPLE.code}</button></p>
@@ -2254,7 +2255,7 @@ function viewDashboard() {
 }
 
 function viewAbout() {
-  return `<div class="crumbs"><a href="#home">Home</a> / The Institute</div>
+  return `<div class="crumbs"><a href="/">Home</a> / The Institute</div>
   <div class="stack" style="gap:56px">
     <div class="prose">
       <span class="eyebrow">${esc(CONFIG.brand)} · Est. ${CONFIG.founded}</span>
@@ -2296,7 +2297,7 @@ function guideItem(g) {
 const chapterNo = id => GUIDE_ORDER.indexOf(id) + 1;
 function viewGuides() {
   const chapters = GUIDE_ORDER.map(id => GUIDES.find(g => g.id === id));
-  return `<div class="crumbs"><a href="#home">Home</a> / Guides</div>
+  return `<div class="crumbs"><a href="/">Home</a> / Guides</div>
   <div class="prose"><span class="eyebrow">Free from the ${esc(CONFIG.brand)}</span><h1>The Project Management Guide</h1>
   <p class="muted">A free, complete guide to project management in ${chapters.length} chapters, with a glossary and ${GUIDES.filter(g => g.group).length} quick answers to common questions. Read it in order or jump to what you need.</p>
   <div class="row"><a class="btn primary" href="#guide-${GUIDE_ORDER[0]}">Start with chapter 1</a><a class="btn ghost" href="#glossary">Glossary (${GLOSSARY.length} terms)</a></div></div>
@@ -2307,7 +2308,7 @@ function viewGuides() {
   <div class="verify-band" style="margin-top:64px"><div class="stack"><span class="eyebrow">Get certified</span><h2>Turn the guide into a credential</h2><p class="muted">The PMAI certification covers everything in this guide in depth, with assessed chapters and a verifiable certificate.</p></div><div class="row"><a class="btn primary" href="#courses">See PMAI</a></div></div>`;
 }
 function viewGlossary() {
-  return `<div class="crumbs"><a href="#home">Home</a> / <a href="#guides">Guides</a> / Glossary</div>
+  return `<div class="crumbs"><a href="/">Home</a> / <a href="#guides">Guides</a> / Glossary</div>
   <div class="prose"><span class="eyebrow">The Project Management Guide</span><h1>Project management glossary</h1><p class="muted">${GLOSSARY.length} terms used across this guide and our certifications.</p></div>
   <input id="glossQ" type="text" placeholder="Filter terms, e.g. critical path" aria-label="Filter glossary" style="margin-top:20px;max-width:420px;width:100%">
   <dl class="gloss" id="glossList">${GLOSSARY.map(([k, v]) => `<dt data-k="${esc((k + " " + v).toLowerCase())}">${esc(k)}</dt><dd>${esc(v)}</dd>`).join("")}</dl>`;
@@ -2329,7 +2330,7 @@ function viewGuide(id) {
   }
   const more = g.group ? GUIDES.filter(x => x.group === g.group && x.id !== id).slice(0, 6) : GUIDE_ORDER.filter(x => x !== id).slice(0, 3).map(x => GUIDES.find(y => y.id === x));
   const eyebrow = n ? `Chapter ${n} of ${GUIDE_ORDER.length} · ${g.minutes} min read` : `FAQ · ${g.group}`;
-  return `<div class="crumbs"><a href="#home">Home</a> / <a href="#guides">Guides</a> / ${n ? "Chapter " + n : "FAQ"}</div>
+  return `<div class="crumbs"><a href="/">Home</a> / <a href="#guides">Guides</a> / ${n ? "Chapter " + n : "FAQ"}</div>
   <div class="stack" style="max-width:72ch;margin-bottom:36px"><span class="eyebrow">${esc(eyebrow)}</span><h1 style="font-size:clamp(2rem,4.6vw,3.1rem)">${esc(g.title)}</h1>${n ? `<p class="muted" style="font-size:1.12rem">${esc(g.summary)}</p>` : ""}</div>
   <div class="article">
     <div class="body">${sec}
@@ -2353,7 +2354,7 @@ function viewLegal(kind) {
     privacy: `<div class="callout"><b>The short version.</b> We keep only your name, email, purchase and certificate records. We use them to give you access and verify certificates. Your name appears in the public register when you claim a certificate; your email never does. Analytics cookies are used only if you accept them. You can ask to see or delete your data at any time.</div>`,
     notice: ""
   }[kind];
-  return `<div class="crumbs no-print"><a href="#home">Home</a> / ${titles[kind]}</div>
+  return `<div class="crumbs no-print"><a href="/">Home</a> / ${titles[kind]}</div>
   <div class="legal">
     <div class="stack"><span class="eyebrow">${esc(CONFIG.brand)} · ${kind === "terms" ? "Version " + esc(CONFIG.termsVersion) + " · " : ""}Last updated ${esc(CONFIG.termsUpdated)}</span><h1>${titles[kind]}</h1>
       <div class="row no-print" style="gap:8px">${["terms", "privacy", "notice"].map(k => `<a class="btn small ${k === kind ? "primary" : "ghost"}" href="${PATHS[k === "notice" ? "legal" : k]}">${titles[k]}</a>`).join("")}${LIVE ? `<button class="btn small ghost" data-print>Print or save as PDF</button>` : ""}</div></div>
@@ -2450,14 +2451,15 @@ function viewAdmin() {
   ${adminTab === "payments" ? grant : ""}<div class="table-wrap admin-table">${table}</div>
   <p class="muted" style="font-size:.85rem;margin-top:14px">Refunds: issue the money in Stripe first, then press "Mark refunded" here. That locks the student's paid chapters. Chapter-by-chapter progress is stored on each student's own device, so it doesn't appear here.</p>`;
 }
-const viewNotFound = () => `<h2>Page not found</h2><p style="margin-top:12px"><a href="#home">Go to the homepage</a></p>`;
+const viewNotFound = () => `<h2>Page not found</h2><p style="margin-top:12px"><a href="/">Go to the homepage</a></p>`;
 
 /* ---------- Router ---------- */
 let lastRoute = "";
 const PATHS = { reviews: "/reviews/", terms: "/terms/", privacy: "/privacy/", legal: "/legal-notice/" };
 const PATH_ROUTE = Object.fromEntries(Object.entries(PATHS).map(([k, v]) => [v, k]));
 function render() {
-  let h = location.hash.slice(1);
+  if (location.hash === "#home" || location.hash === "#") { try { history.replaceState(null, "", location.pathname + location.search) } catch {} }
+  let h = location.hash.slice(1); if (h === "home") h = "";
   const here = PATH_ROUTE[location.pathname.replace(/\/?(index\.html)?$/, "/")];
   if (here) { if (h && h.split("-")[0] !== here) { location.replace("/#" + h); return } h = here }
   else { const pg = h.split("-")[0]; if (PATHS[pg]) { location.replace(PATHS[pg]); return } h = h || "home" }
@@ -2499,6 +2501,7 @@ document.addEventListener("click", e => {
 }, true);
 document.addEventListener("click", async e => {
   const t = e.target.closest("button, a"); if (!t) return;
+  if (t.tagName === "A" && t.getAttribute("href") === "/" && location.pathname === "/" && !e.metaKey && !e.ctrlKey && !e.shiftKey) { e.preventDefault(); try { history.pushState(null, "", "/") } catch {} return render() }
   if (t.dataset.buy) { e.preventDefault(); return buy(t.dataset.buy) }
   if (t.dataset.admintab) { adminTab = t.dataset.admintab; return render() }
   if (t.hasAttribute("data-adminreload")) { adminData = null; return render() }
@@ -2595,6 +2598,7 @@ document.addEventListener("input", e => {
   document.querySelectorAll("#glossList dt").forEach(dt => { const show = !q || dt.dataset.k.includes(q); dt.hidden = !show; dt.nextElementSibling.hidden = !show });
 });
 window.addEventListener("hashchange", render);
+window.addEventListener("popstate", () => { if (!location.hash) render() });
 
 /* ---------- Boot ---------- */
 document.title = 'Legal Notice | Neural Project Institute';
