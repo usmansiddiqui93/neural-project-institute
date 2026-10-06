@@ -2105,6 +2105,7 @@ async function loadReviews() {
   const allRows = await fetchReviews(), pmai = allRows.filter(r => r.course_id === "pmai");
   const onlyPmai = pmai.length >= CONFIG.homeReviewsMin;
   rows = onlyPmai ? pmai : allRows;
+  if (!document.body.contains(box) || !$("#reviews")) return;
   const hd = $("#reviews h2"); if (hd) hd.textContent = onlyPmai ? "What PMAI graduates say" : "What certified learners say";
   if (!rows.length) { $("#reviews").hidden = true; return; box.innerHTML = `<div class="review-empty"><p><b>Reviews are on their way.</b> We only show reviews from learners who have earned a verified certificate, so this section fills up as our first learners finish their courses. Earned one? Open your certificate page to leave a review.</p></div>`; return }
   $("#reviews").hidden = false;
