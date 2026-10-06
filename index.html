@@ -191,6 +191,47 @@ nav.main .ddmenu a:hover { background: none }
 .dd:hover .ddmenu, .dd:focus-within .ddmenu, .dd.open .ddmenu, .dd.hov .ddmenu { display: block }
 nav:has(.dd.hov) .dd:not(.hov):not(.open):not(:focus-within) .ddmenu { display: none }
 
+
+/* Free offer */
+.promo-price { display: inline-flex; align-items: baseline; flex-wrap: wrap; gap: 4px 10px }
+.promo-price s { color: var(--muted); font: 600 1.05rem/1 var(--f-display); text-decoration-thickness: 2px }
+.promo-price b { font: 760 2rem/1 var(--f-display); color: var(--accent) }
+.bundle .promo-price b { font-size: 2.6rem; color: inherit } .bundle .promo-price s { color: inherit; opacity: .65 }
+.promo-price em { font: 600 .72rem/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; font-style: normal; padding: 5px 8px; border-radius: 999px; background: var(--mile); color: #1a1408 }
+/* Sign-up */
+.modal .box:has(.signup) { max-width: 600px; max-height: calc(100vh - 32px); overflow: auto }
+.signup { gap: 12px } .signup .two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px }
+.signup .two[hidden], .signup .field[hidden] { display: none }
+.signup select { font: inherit; padding: 11px 12px; border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); color: var(--ink) }
+@media (max-width: 560px) { .signup .two { grid-template-columns: 1fr } }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0) }
+.linkbtn { border: 0; background: none; padding: 0; color: var(--accent); font: inherit; text-decoration: underline; cursor: pointer }
+body:has(#modalRoot .modal) #npi-langbar { display: none }
+/* Claim wizard */
+.modal .box:has(.wizard) { max-width: 560px }
+.wizard { display: flex; flex-direction: column; gap: 12px }
+.wz-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-bottom: 6px }
+.wz-steps span { font: 600 .68rem/1 var(--f-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); padding-top: 8px; border-top: 3px solid var(--line) }
+.wz-steps span.on { color: var(--ink); border-color: var(--accent) } .wz-steps span.done { color: var(--accent); border-color: var(--accent) }
+.wz-stars { display: flex; gap: 8px; margin-top: 4px }
+.wz-stars button { width: 52px; height: 52px; padding: 6px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); color: var(--line); cursor: pointer; transition: transform .12s, color .12s, border-color .12s }
+.wz-stars button:hover { transform: translateY(-2px); border-color: var(--mile) }
+.wz-stars button.on { color: var(--mile); border-color: var(--mile); background: color-mix(in srgb, var(--mile) 12%, var(--surface)) }
+.wz-stars:hover button { color: var(--line) } .wz-stars button:hover, .wz-stars button:has(~ button:hover) { color: var(--mile) }
+.wz-label { font-weight: 600; min-height: 1.4em; margin: 0 }
+.wizard textarea { width: 100%; font: inherit; padding: 12px; border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); color: var(--ink) }
+.wz-preview { background: var(--bg) }
+.wz-done { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 8px 0 }
+.li-btn { background: #0a66c2 !important; border-color: #0a66c2 !important; color: #fff !important; display: inline-flex; gap: 8px; align-items: center }
+.li-btn:hover { background: #004182 !important }
+/* Review cards */
+.rv-who { display: flex; gap: 10px; align-items: flex-start }
+.rv-av { flex: none; width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; background: var(--sunk); color: var(--ink); font: 700 .8rem/1 var(--f-display) }
+.rv-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 6px; min-width: 0 }
+.rv-meta b { font-size: .95rem } .rv-meta span { flex-basis: 100%; color: var(--muted); font-size: .84rem }
+.rv-meta .rv-place::before { content: "⌖ "; opacity: .7 }
+.rv-li { color: #0a66c2; display: inline-flex } .rv-li:hover { color: #004182 }
+.review .rv-course { color: var(--muted); font-size: .8rem; margin-top: 4px }
 /* Templates menu */
 .dd.tpl .ddmenu { width: 440px; left: auto; right: -60px }
 .tplmenu { position: relative; z-index: 1; padding: 14px 14px 12px }
@@ -541,11 +582,12 @@ function LEGAL() {
   const privacy = [
     { id: "ctrl", h: "Who is responsible for your data", plain: "The operator named here is the data controller.",
       body: [`The data controller is:`, identity, `Because we offer the Services to people in the European Union and the United Kingdom, the EU and UK General Data Protection Regulations apply to our processing of their data.`, ...(C.euRepresentative ? [`Our representative in the EU under Article 27 GDPR is: ${esc(C.euRepresentative)}.`] : []), `For any privacy request, email ${email}.`] },
-    { id: "data", h: "What data we collect", plain: "Only what we need: your name, email, purchase and certificate details.",
-      list: [`Identity and contact: the name and email you enter.`, `Purchase: date, amount, currency, Stripe payment reference, and whether you accepted these Terms at checkout. We never receive your card details.`, `Certificates: certificate ID, certification, score, issue and expiry dates, status, and the version of the Terms you accepted when claiming.`, `Consent records: which consent boxes you ticked and when.`, `Technical data: our hosting and database providers record IP addresses and request logs for security.`, `On your own device: course progress, quiz scores and your name and email are stored in your browser's local storage so the site works. This stays on your device; we don't read it.`] },
+    { id: "data", h: "What data we collect", plain: "Your name, email, location, work or study details, optional LinkedIn link, and your purchase and certificate details.",
+      list: [`Identity and contact: the name and email you enter.`, `Profile: the country, city, job status, job title, company or university and (optionally) LinkedIn profile link you give when you sign up. We use them to run your account, understand who our learners are, and, only if you agree, show alongside your review.`, `Purchase: date, amount, currency, Stripe payment reference, and whether you accepted these Terms at checkout. We never receive your card details.`, `Certificates: certificate ID, certification, score, issue and expiry dates, status, and the version of the Terms you accepted when claiming.`, `Consent records: which consent boxes you ticked and when.`, `Technical data: our hosting and database providers record IP addresses and request logs for security.`, `On your own device: course progress, quiz scores and your name and email are stored in your browser's local storage so the site works. This stays on your device; we don't read it.`] },
     { id: "why", h: "Why we use it and on what legal basis", plain: "To deliver what you bought, to meet legal duties, and to keep the site secure.",
       table: { head: ["Purpose", "Legal basis (GDPR)"], rows: [
         ["Giving you access, running assessments, issuing certificates", "Contract, Art. 6(1)(b)"],
+        ["Publishing your review with your name, city, country, role and LinkedIn link", "Consent, Art. 6(1)(a): you can withdraw it at any time by emailing us"],
         ["Publishing certificates in the public register so others can verify them", "Contract, Art. 6(1)(b): verification is part of the certificate service you request"],
         ["Accounting and tax records", "Legal obligation, Art. 6(1)(c)"],
         ["Keeping records of your consents and acceptance of the Terms", "Legal obligation and legitimate interest in proving compliance, Art. 6(1)(c) and (f)"],
@@ -561,8 +603,8 @@ function LEGAL() {
       list: [`Purchase and accounting records: for as long as tax and accounting laws require, up to 10 years.`, `Certificates and register entries: 10 years from issue, so employers can verify past certificates, unless you ask us to delete them sooner.`, `Consent records: for as long as the contract lasts plus the period in which legal claims can be brought, up to 10 years.`, `Server logs: kept by our providers for short periods, typically up to 30 days.`] },
     { id: "rights", h: "Your rights", plain: "You can see, correct, delete or take a copy of your data, and you can complain to the Italian data protection authority.",
       body: [`You have the right to access, correct, delete, restrict or object to the processing of your personal data, and the right to data portability. Email ${email}; we will reply within one month. If you live in the EU, EEA or UK and believe we have mishandled your data, you can complain to the data protection authority in your country (in Italy, the Garante per la protezione dei dati personali, www.garanteprivacy.it).`, `Scoring of quizzes is automatic. You can retake any quiz as often as you like, and you can ask a person to review a result by emailing us.`] },
-    { id: "reviews", h: "Reviews", plain: "If you leave a review, we publish it with your chosen display name and a link to your certificate.",
-      body: [`Only holders of a valid certificate can leave a review. If you submit one, we store your rating, review text, display name and certificate ID, and publish them on this website with your certification name and a link to your certificate's register entry, after a brief check for spam, abuse and personal data. We publish positive and critical reviews alike and do not pay for or edit reviews. Your email is used only to confirm you hold the certificate and is never shown. You can ask us to update or remove your review at any time.`] },
+    { id: "reviews", h: "Reviews", plain: "Your review is published only if you agree, with your name, city, country, role, LinkedIn link (if given) and a link to your certificate.",
+      body: [`Only holders of a valid certificate can leave a review. Before your certificate is issued we invite you to rate the course and write a review; both are optional and skipping them does not affect your certificate. If you submit a review, we store your rating, review text and certificate ID. If you tick or click to agree to publication, we publish it on our homepage with your full name, city, country, job title and company (or university), your LinkedIn profile link if you gave one, your certification name and a link to your certificate's register entry. If you do not agree, the review stays private. Reviews from learners who took the course during a free offer are labelled as such. We may remove reviews that contain spam, abuse or other people's personal data. We publish positive and critical reviews alike and do not pay for or edit reviews. Your email is used only to confirm you hold the certificate and is never shown. You can ask us to update or remove your review at any time.`] },
     { id: "cookies", h: "Cookies and browser storage", plain: "Analytics cookies only if you accept them; no advertising cookies.",
       body: [`We use Google Analytics (provided by Google Ireland Ltd / Google LLC) to understand how visitors use the site, for example which pages are read. Analytics cookies are set only if you click Accept on the cookie banner; until then, Google Consent Mode keeps analytics storage switched off and only cookieless, aggregated signals may be sent. We do not use advertising cookies, and advertising signals are always denied. Google may process data in the United States under its own safeguards; see Google's privacy policy. You can change your choice at any time with the Cookie settings link in the site footer or by clearing your browser storage. The site also stores course progress, your details and your cookie choice in your browser's local storage, which is strictly necessary to provide the service you asked for.`] },
     { id: "minors", h: "Children", plain: "The Services are for adults.",
@@ -1549,9 +1591,11 @@ const CONFIG = {
   euVat: "",              // optional: EU VAT (OSS) number once registered
   euRepresentative: "",   // optional: name and address of your GDPR Article 27 EU representative
   termsVersion: "1.1",
-  termsUpdated: "2 October 2026",
+  termsUpdated: "6 October 2026",
   currency: "$",
   bundlePrice: 10,             // price of PMAI, the complete certification (all courses)
+  freePromo: true,             // limited-time offer: PMAI is free; sign-up unlocks everything
+  regularPrice: 39.99,         // shown struck through during the free offer
   passMark: 2,                 // correct answers needed per 3-question chapter quiz
   siteUrl: "https://neuralprojectinstitute.com/",
   supabaseUrl: "https://fzfswpqhrsktvejcnzlt.supabase.co",             // e.g. "https://abcd.supabase.co"
@@ -1565,6 +1609,9 @@ const $ = (s, r = document) => r.querySelector(s);
 const app = $("#app");
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const money = n => CONFIG.currency + n;
+const FREE = !!CONFIG.freePromo;
+const ctaLabel = () => FREE ? "Get PMAI free" : `Get PMAI for ${money(CONFIG.bundlePrice)}`;
+const priceHTML = () => FREE ? `<span class="promo-price"><s>${money(CONFIG.regularPrice)}</s><b>Free</b><em>for a limited time</em></span>` : `<span class="price">${money(CONFIG.bundlePrice)}</span>`;
 const byId = id => id === "pmai" ? PMAI : COURSES.find(c => c.id === id);
 const certTitle = c => `${c.name}: ${c.title}`;
 const fmtDate = d => new Date(d).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
@@ -1635,17 +1682,51 @@ function modal(html, onMount) {
   onMount && onMount(root.querySelector(".box"), close);
   root.querySelector("input, button")?.focus();
 }
+const JOB_STATUS = [["employed", "Employed"], ["self-employed", "Self-employed / freelance"], ["student", "Student"], ["job-seeking", "Looking for work"], ["other", "Other"]];
+const COUNTRIES = "Afghanistan,Albania,Algeria,Andorra,Angola,Argentina,Armenia,Australia,Austria,Azerbaijan,Bahamas,Bahrain,Bangladesh,Barbados,Belarus,Belgium,Belize,Benin,Bhutan,Bolivia,Bosnia and Herzegovina,Botswana,Brazil,Brunei,Bulgaria,Burkina Faso,Burundi,Cambodia,Cameroon,Canada,Cape Verde,Central African Republic,Chad,Chile,China,Colombia,Comoros,Congo,Costa Rica,Côte d'Ivoire,Croatia,Cuba,Cyprus,Czechia,Democratic Republic of the Congo,Denmark,Djibouti,Dominican Republic,Ecuador,Egypt,El Salvador,Estonia,Eswatini,Ethiopia,Fiji,Finland,France,Gabon,Gambia,Georgia,Germany,Ghana,Greece,Guatemala,Guinea,Guyana,Haiti,Honduras,Hong Kong,Hungary,Iceland,India,Indonesia,Iran,Iraq,Ireland,Israel,Italy,Jamaica,Japan,Jordan,Kazakhstan,Kenya,Kosovo,Kuwait,Kyrgyzstan,Laos,Latvia,Lebanon,Lesotho,Liberia,Libya,Liechtenstein,Lithuania,Luxembourg,Madagascar,Malawi,Malaysia,Maldives,Mali,Malta,Mauritania,Mauritius,Mexico,Moldova,Monaco,Mongolia,Montenegro,Morocco,Mozambique,Myanmar,Namibia,Nepal,Netherlands,New Zealand,Nicaragua,Niger,Nigeria,North Macedonia,Norway,Oman,Pakistan,Palestine,Panama,Papua New Guinea,Paraguay,Peru,Philippines,Poland,Portugal,Qatar,Romania,Russia,Rwanda,Saudi Arabia,Senegal,Serbia,Sierra Leone,Singapore,Slovakia,Slovenia,Somalia,South Africa,South Korea,South Sudan,Spain,Sri Lanka,Sudan,Suriname,Sweden,Switzerland,Syria,Taiwan,Tajikistan,Tanzania,Thailand,Togo,Trinidad and Tobago,Tunisia,Turkey,Turkmenistan,Uganda,Ukraine,United Arab Emirates,United Kingdom,United States,Uruguay,Uzbekistan,Venezuela,Vietnam,Yemen,Zambia,Zimbabwe".split(",");
+const profileDone = l => !!(l && l.name && l.email && l.country && l.city && l.jobStatus);
+const cleanLinkedIn = u => { u = (u || "").trim(); if (!u) return ""; const m = u.match(/^(?:https?:\/\/)?(?:[a-z]{2,3}\.)?linkedin\.com\/in\/([A-Za-z0-9_%\-]{2,100})\/?$/i); return m ? `https://www.linkedin.com/in/${m[1]}/` : null };
+async function saveProfile(l) {
+  if (!LIVE) return;
+  await rpc("register_learner", { p_email: l.email, p_name: l.name, p_country: l.country, p_city: l.city, p_job_status: l.jobStatus, p_job_title: l.jobTitle || null,
+    p_company: l.company || null, p_university: l.university || null, p_linkedin: l.linkedin || null, p_privacy_version: CONFIG.termsVersion, p_free: FREE });
+}
+async function pullProfile() {
+  if (!LIVE || !mem.learner || profileDone(mem.learner)) return;
+  try { const r = (await rpc("learner_profile", { p_email: mem.learner.email }) || [])[0]; if (r) { Object.assign(mem.learner, { name: r.full_name, country: r.country, city: r.city, jobStatus: r.job_status, jobTitle: r.job_title || "", company: r.company || "", university: r.university || "", linkedin: r.linkedin_url || "" }); save() } } catch (e) { console.warn(e) }
+}
 function askLearner(reason, then) {
-  modal(`<h3>Your details</h3><p class="muted">${reason}</p>
-    <form id="lf" class="stack">
-      <label class="field">Full name, as it should appear on your certificate<input id="lfName" type="text" required autocomplete="name" value="${esc(mem.learner?.name)}"></label>
-      <label class="field">Email<input id="lfEmail" type="email" required autocomplete="email" value="${esc(mem.learner?.email)}"></label>
-      <div class="row"><button class="btn primary" type="submit">Continue</button><button class="btn ghost" type="button" data-close>Cancel</button></div>
+  const L = mem.learner || {};
+  modal(`<h3>${FREE ? "Create your free account" : "Your details"}</h3><p class="muted">${reason}</p>
+    <form id="lf" class="stack signup">
+      <label class="field">Full name, as it should appear on your certificate<input id="lfName" type="text" required minlength="2" maxlength="80" autocomplete="name" value="${esc(L.name)}"></label>
+      <label class="field">Email<input id="lfEmail" type="email" required autocomplete="email" value="${esc(L.email)}"></label>
+      <div class="two"><label class="field">Country<input id="lfCountry" type="text" list="countryList" required maxlength="60" autocomplete="country-name" value="${esc(L.country)}"><datalist id="countryList">${COUNTRIES.map(c => `<option value="${esc(c)}">`).join("")}</datalist></label>
+        <label class="field">City<input id="lfCity" type="text" required maxlength="60" autocomplete="address-level2" value="${esc(L.city)}"></label></div>
+      <label class="field">Current status<select id="lfStatus" required><option value="">Choose…</option>${JOB_STATUS.map(([v, t]) => `<option value="${v}"${L.jobStatus === v ? " selected" : ""}>${t}</option>`).join("")}</select></label>
+      <div class="two" id="lfWork"><label class="field">Job title / position<input id="lfTitle" type="text" maxlength="80" autocomplete="organization-title" placeholder="e.g. Project Manager" value="${esc(L.jobTitle)}"></label>
+        <label class="field">Company<input id="lfCompany" type="text" maxlength="80" autocomplete="organization" value="${esc(L.company)}"></label></div>
+      <label class="field" id="lfUni">University<input id="lfUniversity" type="text" maxlength="100" value="${esc(L.university)}"></label>
+      <label class="field"><span>LinkedIn profile <span class="muted" style="font-weight:400">· recommended, shown next to your review</span></span><input id="lfLinkedIn" type="text" inputmode="url" autocapitalize="off" spellcheck="false" maxlength="160" placeholder="https://www.linkedin.com/in/your-name" value="${esc(L.linkedin)}"></label>
+      <label class="consent"><input type="checkbox" id="lfPrivacy" required${L.country ? " checked" : ""}><span>I agree that the ${esc(CONFIG.brand)} stores these details to run my account and certificates, as described in the <a href="#privacy" target="_blank">Privacy Policy</a>. Nothing is published without my separate consent.</span></label>
+      <p id="lfErr" class="muted" role="alert"></p>
+      <div class="row"><button class="btn primary" type="submit">${FREE && !owns("all") ? "Create account and start" : "Save and continue"}</button><button class="btn ghost" type="button" data-close>Cancel</button></div>
     </form>`, (box, close) => {
+    const st = box.querySelector("#lfStatus");
+    const sync = () => { const v = st.value; box.querySelector("#lfWork").hidden = !(v === "employed" || v === "self-employed"); box.querySelector("#lfUni").hidden = v !== "student";
+      box.querySelector("#lfTitle").required = v === "employed" || v === "self-employed"; box.querySelector("#lfUniversity").required = v === "student" };
+    st.addEventListener("change", sync); sync();
     box.querySelector("#lf").addEventListener("submit", async e => {
       e.preventDefault();
-      mem.learner = { name: box.querySelector("#lfName").value.trim(), email: box.querySelector("#lfEmail").value.trim().toLowerCase() };
-      save(); close(); await refreshOwned(); then && then();
+      const v = id => box.querySelector(id).value.trim(), err = box.querySelector("#lfErr");
+      const li = cleanLinkedIn(v("#lfLinkedIn"));
+      if (li === null) { err.textContent = "Enter a LinkedIn profile link like https://www.linkedin.com/in/your-name, or leave it empty."; return }
+      const s2 = v("#lfStatus"), work = s2 === "employed" || s2 === "self-employed";
+      const l = { name: v("#lfName"), email: v("#lfEmail").toLowerCase(), country: v("#lfCountry"), city: v("#lfCity"), jobStatus: s2,
+        jobTitle: work ? v("#lfTitle") : "", company: work ? v("#lfCompany") : "", university: s2 === "student" ? v("#lfUniversity") : "", linkedin: li };
+      const btn = box.querySelector("button[type=submit]"); btn.disabled = true;
+      try { await saveProfile(l) } catch (x) { btn.disabled = false; err.textContent = /linkedin/i.test(x.message) ? "That LinkedIn link doesn't look right." : "Couldn't save your details: " + x.message; return }
+      mem.learner = l; save(); close(); await refreshOwned(); then && then();
     });
   });
 }
@@ -1662,6 +1743,12 @@ function wireConsent(box, ids) {
 }
 function buy(id) {
   id = "all";
+  if (FREE) {
+    const done = () => { if (!LIVE) { mem.owned = [...new Set([...mem.owned, "all"])]; save() }
+      toast(owns("all") ? "You're in. All courses are unlocked." : "Account saved. Unlocking your courses…"); location.hash = "#course-pmf"; render() };
+    return profileDone(mem.learner) ? (owns("all") ? done() : saveProfile(mem.learner).then(refreshOwned).then(done).catch(e => toast(e.message)))
+      : askLearner(`Free for a limited time (regular price ${money(CONFIG.regularPrice)}). Tell us a little about yourself to unlock all ${COURSES.length} courses and your certificates.`, done);
+  }
   const go = () => {
     if (owns(id)) { toast("You already have access."); return render() }
     const link = CONFIG.stripeLinks[id];
@@ -1734,8 +1821,8 @@ function viewHome() {
     <div class="hero-copy">
       <span class="eyebrow">Neural Project Institute · Est. ${CONFIG.founded}</span>
       <h1>Plan it. Deliver it. Prove it with a certificate anyone can verify.</h1>
-      <p class="lede">Six self-paced certifications covering modern project management, from scope and the critical path to Scrum, risk, leadership and AI. Pass each chapter's quiz to earn a certificate per course, then the complete PMAI certification. One payment of ${money(CONFIG.bundlePrice)} covers everything.</p>
-      <div class="row"><button class="btn primary" data-buy="all">Get PMAI for ${money(CONFIG.bundlePrice)}</button><a class="btn" href="#courses">Browse the courses</a><a class="btn ghost" href="#course-pmf">Try a free chapter</a></div>
+      <p class="lede">Six self-paced certifications covering modern project management, from scope and the critical path to Scrum, risk, leadership and AI. Pass each chapter's quiz to earn a certificate per course, then the complete PMAI certification. ${FREE ? `Free for a limited time (regular price ${money(CONFIG.regularPrice)}): sign up and everything is unlocked.` : `One payment of ${money(CONFIG.bundlePrice)} covers everything.`}</p>
+      <div class="row"><button class="btn primary" data-buy="all">${ctaLabel()}</button><a class="btn" href="#courses">Browse the courses</a><a class="btn ghost" href="#course-pmf">Try a free chapter</a></div>
       <div class="facts">
         <div><b>${COURSES.length}</b><span>certifications</span></div>
         <div><b>${COURSES.reduce((s, c) => s + c.chapters.length, 0)}</b><span>chapters</span></div>
@@ -1753,7 +1840,7 @@ function viewHome() {
     <span class="eyebrow">How it works</span>
     <h2 style="margin-top:10px">From first slide to verified certificate</h2>
     <div class="steps">
-      <div class="step"><span class="n">Step 1</span><h3>Enrol</h3><p>Get PMAI for ${money(CONFIG.bundlePrice)} to unlock all ${COURSES.length} courses. Chapter 1 of every course is free to try.</p></div>
+      <div class="step"><span class="n">Step 1</span><h3>Enrol</h3><p>${FREE ? `Sign up free (regular price ${money(CONFIG.regularPrice)}) to unlock all ${COURSES.length} courses.` : `Get PMAI for ${money(CONFIG.bundlePrice)} to unlock all ${COURSES.length} courses.`} Chapter 1 of every course is free to try.</p></div>
       <div class="step"><span class="n">Step 2</span><h3>Learn</h3><p>Work through short slide chapters at your own pace, on any device.</p></div>
       <div class="step"><span class="n">Step 3</span><h3>Pass the quizzes</h3><p>Score ${CONFIG.passMark} of 3 or better on each chapter quiz. Retakes are unlimited.</p></div>
       <div class="step"><span class="n">Step 4</span><h3>Get certified</h3><p>Your certificate gets a unique ID and QR code that employers can check. It stays valid for ${CONFIG.validityMonths} months, then you renew.</p></div>
@@ -1766,7 +1853,7 @@ function viewHome() {
     <div class="trust-grid">
       <a class="trust" href="#course-pmf"><b>Try chapter 1 free</b><span>Every course's first chapter, slides and quiz are open to everyone. No sign-up needed.</span></a>
       <a class="trust" href="#verify-${SAMPLE.code}"><b>See how verification works</b><span>See what an employer sees when they verify a certificate (sample ID ${SAMPLE.code}).</span></a>
-      <a class="trust" href="#terms"><b>10-day refund guarantee</b><span>Full refund within 10 days of purchase, for any reason, as long as you haven't claimed a certificate.</span></a>
+      ${FREE ? `<a class="trust" href="#courses"><b>Free for a limited time</b><span>All six courses, quizzes and certificates at no cost. No card or payment details needed.</span></a>` : `<a class="trust" href="#terms"><b>10-day refund guarantee</b><span>Full refund within 10 days of purchase, for any reason, as long as you haven't claimed a certificate.</span></a>`}
       <a class="trust" href="#verify"><b>Public certificate register</b><span>Every certificate has a unique ID and QR code that anyone can check, so yours can't be faked.</span></a>
       <a class="trust" href="/project-management/"><b>270+ free guides and 55 templates</b><span>Our project management, Agile, Scrum and Kanban guides and downloadable templates are free to use.</span></a>
       <a class="trust" href="#about"><b>A registered US company</b><span>Operated by ${esc(CONFIG.legalName)}, ${esc(CONFIG.stateOfFormation)}. Clear terms, privacy policy and a real support inbox.</span></a>
@@ -1787,8 +1874,8 @@ function viewHome() {
     <div class="bundle">
       <div class="stack"><span class="eyebrow" style="color:inherit;opacity:.7">The complete certification · all ${COURSES.length} courses</span><h2 style="font-size:clamp(2.4rem,6vw,3.6rem)">PMAI</h2>
         <p class="muted">All ${COURSES.length} certifications in one programme: ${COURSES.map(c => c.name).join(", ")}. Best value if you're preparing for a PM role or a formal exam.</p></div>
-      <div class="stack" style="align-items:flex-start"><span class="price">${money(CONFIG.bundlePrice)}</span><span class="muted" style="font-size:.9rem">One payment. All courses, quizzes and certificates. 10-day refund guarantee.</span>
-        ${owns("all") ? `<div class="row"><span class="chip ok">You have PMAI</span><a class="btn primary" href="#cert-pmai">PMAI certificate</a></div>` : `<button class="btn primary" data-buy="all">Get PMAI for ${money(CONFIG.bundlePrice)}</button>`}</div>
+      <div class="stack" style="align-items:flex-start">${priceHTML()}<span class="muted" style="font-size:.9rem">${FREE ? "Sign up to unlock all courses, quizzes and certificates. No payment details needed." : "One payment. All courses, quizzes and certificates. 10-day refund guarantee."}</span>
+        ${owns("all") ? `<div class="row"><span class="chip ok">You have PMAI</span><a class="btn primary" href="#cert-pmai">PMAI certificate</a></div>` : `<button class="btn primary" data-buy="all">${ctaLabel()}</button>`}</div>
     </div>
   </section>
 
@@ -1825,6 +1912,7 @@ function viewHome() {
     <details><summary>Why do certificates expire after ${CONFIG.validityMonths} months?</summary><p>${WHY_EXPIRE} To renew, retake the chapter assessments for that certification. Renewal is included with your enrolment.</p></details>
     <details><summary>Can I add the certificate to LinkedIn?</summary><p>Yes. Your certificate page has an "Add to LinkedIn" button that fills in the certification name, ID and verification link.</p></details>
     <details><summary>Who is responsible for how I use the course?</summary><p>You are. You study on your own initiative and at your own risk, and the content is general education rather than professional advice. See our <a href="#terms">Terms of Sale and Use</a> for details.</p></details>
+    ${FREE ? `<details><summary>Is the PMAI certification really free?</summary><p>Yes, for a limited time. The regular price is ${money(CONFIG.regularPrice)}, but while this offer runs you can sign up, take all ${COURSES.length} courses and earn your certificates without paying anything or entering card details. Anyone who signs up during the offer keeps their access.</p></details>` : ""}
     <details><summary>Can I get a refund?</summary><p>Yes. We offer a 10-day refund guarantee: email us within 10 days of purchase for a full refund, for any reason, as long as you haven't claimed a certificate yet. EU and UK customers also keep their legal 14-day right of withdrawal until they open paid content. See the <a href="#terms">Terms</a> for details.</p></details>
     <details><summary>Is this the same as PMP certification?</summary><p>No. These are certificates of completion awarded by the Institute. The content covers topics found in PMI and Scrum frameworks and is useful preparation, but it doesn't replace those credentials.</p></details>
   </section>`;
@@ -1834,8 +1922,8 @@ function viewCatalog() {
   return `<div class="crumbs"><a href="#home">Home</a> / Courses</div>
   <span class="eyebrow">Certifications</span><h1 style="margin-top:10px">All courses</h1>
   <div class="grid-courses">${COURSES.map(courseCard).join("")}</div>
-  <div class="bundle"><div class="stack"><span class="eyebrow" style="color:inherit;opacity:.7">The complete certification</span><h2>PMAI</h2><p class="muted">All ${COURSES.length} courses and their certificates for ${money(CONFIG.bundlePrice)}. Pass every course to earn the PMAI certificate.</p></div>
-  <div>${owns("all") ? `<a class="btn primary" href="#cert-pmai">PMAI certificate</a>` : `<button class="btn primary" data-buy="all">Get PMAI for ${money(CONFIG.bundlePrice)}</button>`}</div></div>`;
+  <div class="bundle"><div class="stack"><span class="eyebrow" style="color:inherit;opacity:.7">The complete certification</span><h2>PMAI</h2><p class="muted">All ${COURSES.length} courses and their certificates ${FREE ? `free for a limited time (regular price ${money(CONFIG.regularPrice)})` : `for ${money(CONFIG.bundlePrice)}`}. Pass every course to earn the PMAI certificate.</p></div>
+  <div>${owns("all") ? `<a class="btn primary" href="#cert-pmai">PMAI certificate</a>` : `<button class="btn primary" data-buy="all">${ctaLabel()}</button>`}</div></div>`;
 }
 
 function viewCourse(id) {
@@ -1859,7 +1947,7 @@ function viewCourse(id) {
       ${cert ? `<span class="chip mile" style="align-self:flex-start">Certified</span><p>Issued ${fmtDate(cert.issued_at)}. ${certState(cert) === "expired" ? `Expired ${fmtDate(expiryOf(cert))}.` : `Valid until ${fmtDate(expiryOf(cert))}.`}</p><a class="btn primary" href="#cert-${id}">View certificate</a>`
       : o ? `<span class="eyebrow">Your progress</span><div class="price">${d} / ${c.chapters.length} chapters</div><div class="bar"><i style="width:${d / c.chapters.length * 100}%"></i></div>
         ${complete(c) ? `<a class="btn primary" href="#cert-${id}">Claim certificate</a>` : `<a class="btn primary" href="#learn-${id}-${Math.max(0, c.chapters.findIndex((_, i) => !passed(id, i)))}">Continue learning</a>`}`
-      : `<span class="eyebrow">Included in PMAI</span><div class="price">${money(CONFIG.bundlePrice)}</div><p class="muted" style="font-size:.92rem">One PMAI payment unlocks this course and all ${COURSES.length - 1} others, with quizzes and verifiable certificates.</p><span class="chip ok" style="align-self:flex-start">10-day refund guarantee</span>
+      : `<span class="eyebrow">Included in PMAI</span>${FREE ? priceHTML() : `<div class="price">${money(CONFIG.bundlePrice)}</div>`}<p class="muted" style="font-size:.92rem">${FREE ? "Free sign-up" : "One PMAI payment"} unlocks this course and all ${COURSES.length - 1} others, with quizzes and verifiable certificates.</p>${FREE ? "" : `<span class="chip ok" style="align-self:flex-start">10-day refund guarantee</span>`}
         <button class="btn primary" data-buy="all">Get PMAI</button><a class="btn ghost" href="#learn-${id}-0">Try chapter 1 free</a>`}
     </aside>
   </div>`;
@@ -1868,7 +1956,7 @@ function viewCourse(id) {
 let player = { slide: 0, mode: "slides" };
 function viewLearn(id, i) {
   const c = byId(id), ch = c?.chapters[i]; if (!ch) return viewNotFound();
-  if (!canOpen(c, i)) return `<div class="crumbs"><a href="#course-${id}">${esc(c.name)}</a></div><div class="stack" style="max-width:520px"><h2>This chapter is locked</h2><p class="muted">Get PMAI to open all chapters of every course and earn the certificates.</p><div class="row"><button class="btn primary" data-buy="all">Get PMAI for ${money(CONFIG.bundlePrice)}</button><a class="btn ghost" href="#course-${id}">Back to course</a></div></div>`;
+  if (!canOpen(c, i)) return `<div class="crumbs"><a href="#course-${id}">${esc(c.name)}</a></div><div class="stack" style="max-width:520px"><h2>This chapter is locked</h2><p class="muted">Get PMAI to open all chapters of every course and earn the certificates.</p><div class="row"><button class="btn primary" data-buy="all">${ctaLabel()}</button><a class="btn ghost" href="#course-${id}">Back to course</a></div></div>`;
   const head = `<div class="crumbs"><a href="#course-${id}">${esc(c.name)}</a> / Chapter ${i + 1}</div>
     <div class="row" style="justify-content:space-between;margin-bottom:18px"><h2>${esc(ch.title)}</h2><span class="eyebrow">${player.mode === "quiz" ? "Quiz" : `Slide ${player.slide + 1} of ${ch.slides.length}`}</span></div>`;
   if (player.mode === "quiz") return head + viewQuiz(c, i);
@@ -1929,26 +2017,93 @@ function drawQR(code) {
 const stars = n => `<span class="stars" aria-label="${n} out of 5">${"★".repeat(n)}${"☆".repeat(5 - n)}</span>`;
 function reviewForm(cert) {
   return `<section class="review-form no-print" id="leaveReview"><span class="eyebrow">Your review</span><h2 style="margin:8px 0">How was ${esc(cert.course_title)}?</h2>
-    <p class="muted">Your honest review helps other learners. It's shown with your first name and a link to your certificate, after a quick check for spam and personal data. We publish critical reviews too.</p>
+    <p class="muted">Your honest review helps other learners. We publish critical reviews too.</p>
     <form id="reviewForm" class="stack" data-code="${esc(cert.code)}">
       <fieldset class="rating"><legend>Rating</legend>${[5, 4, 3, 2, 1].map(n => `<label><input type="radio" name="rv" value="${n}" required><span>${stars(n)}</span></label>`).join("")}</fieldset>
       <label class="field">Your review<textarea id="rvBody" rows="4" minlength="20" maxlength="1200" required placeholder="What did you learn? What could be better?"></textarea></label>
-      <label class="field">Name to display<input id="rvName" type="text" maxlength="40" value="${esc((cert.full_name || "").split(" ")[0])}"></label>
-      <label class="field">Email used for your certificate<input id="rvEmail" type="email" required value="${esc(mem.learner?.email || "")}"></label>
-      <label class="consent"><input type="checkbox" id="rvConsent" required><span>I agree that my review, display name, certification and certificate ID may be published on this website. I wrote this review myself and was not paid for it.</span></label>
+      <label class="consent"><input type="checkbox" id="rvConsent"><span>Publish my review on the homepage with my name, city, country, role, LinkedIn profile (if given) and certificate link. Leave unticked to keep it private.</span></label>
       <button class="btn primary" type="submit" style="align-self:flex-start">Submit review</button>
     </form></section>`;
+}
+function reviewer(r) {
+  const initials = (r.display_name || "?").split(/\s+/).map(w => w[0]).slice(0, 2).join("").toUpperCase();
+  const place = [r.city, r.country].filter(Boolean).join(", ");
+  const li = r.linkedin_url && /^https:\/\/www\.linkedin\.com\/in\//.test(r.linkedin_url) ? r.linkedin_url : "";
+  return `<div class="rv-who"><span class="rv-av" aria-hidden="true">${esc(initials)}</span><div class="rv-meta"><b>${esc(r.display_name)}</b>${li ? `<a class="rv-li" href="${esc(li)}" target="_blank" rel="nofollow ugc noopener" aria-label="${esc(r.display_name)} on LinkedIn"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>` : ""}
+    ${r.job_line ? `<span>${esc(r.job_line)}</span>` : ""}${place ? `<span class="rv-place">${esc(place)}</span>` : ""}</div></div>`;
 }
 async function loadReviews() {
   const box = $("#reviewsBox"); if (!box) return;
   let rows = [];
-  if (LIVE) { try { rows = await rpc("public_reviews_v2", {}) || [] } catch (e) { try { rows = await rpc("public_reviews", {}) || [] } catch (e2) { console.warn(e2) } } }
+  if (LIVE) { for (const fn of ["public_reviews_v3", "public_reviews_v2", "public_reviews"]) { try { rows = await rpc(fn, {}) || []; break } catch (e) { console.warn(e) } } }
   if (!rows.length) { $("#reviews").hidden = true; return; box.innerHTML = `<div class="review-empty"><p><b>Reviews are on their way.</b> We only show reviews from learners who have earned a verified certificate, so this section fills up as our first learners finish their courses. Earned one? Open your certificate page to leave a review.</p></div>`; return }
   $("#reviews").hidden = false;
   const avg = rows.reduce((a, r) => a + r.rating, 0) / rows.length;
   box.innerHTML = `<div class="review-sum"><b>${avg.toFixed(1)}</b>${stars(Math.round(avg))}<span class="muted">from ${rows.length} verified review${rows.length > 1 ? "s" : ""}</span></div>
     <div class="review-grid">${rows.slice(0, 12).map(r => `<figure class="review">${stars(r.rating)}<blockquote>${esc(r.body)}</blockquote>
-      <figcaption><b>${esc(r.display_name)}</b><span>${esc(r.course_title || "")}</span><a href="#verify-${esc(r.cert_code)}" class="verified">✓ Verified certificate</a>${r.incentivized ? `<small class="incent">Received free course access in exchange for an honest review</small>` : ""}</figcaption></figure>`).join("")}</div>`;
+      <figcaption>${reviewer(r)}<span class="rv-course">${esc(r.course_title || "")}</span><a href="#verify-${esc(r.cert_code)}" class="verified">✓ Verified certificate</a>${r.incentivized ? `<small class="incent">Took the course free during our limited-time offer</small>` : ""}</figcaption></figure>`).join("")}</div>`;
+}
+
+function linkedInAdd(c, cert) { const d = new Date(cert.issued_at), x = expiryOf(cert);
+  return `https://www.linkedin.com/profile/add?startTask=CERTIFICATION_NAME&name=${encodeURIComponent(certTitle(c))}&organizationName=${encodeURIComponent(CONFIG.brand)}&issueYear=${d.getFullYear()}&issueMonth=${d.getMonth() + 1}&expirationYear=${x.getFullYear()}&expirationMonth=${x.getMonth() + 1}&certUrl=${encodeURIComponent(verifyUrl(cert.code))}&certId=${encodeURIComponent(cert.code)}` }
+const reviewed = store.get("reviewed", {});
+const jobLine = l => l.jobTitle && l.company ? `${l.jobTitle}, ${l.company}` : l.jobTitle || (l.university ? `Student, ${l.university}` : l.company || "");
+const STAR = `<svg viewBox="0 0 24 24" width="100%" height="100%" aria-hidden="true"><path d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5L2.5 9.5l6.6-.9z" fill="currentColor"/></svg>`;
+function claimWizard(c, then) {
+  const W = { step: 1, rating: 0, body: "", publish: null, busy: false };
+  const L = mem.learner;
+  const label = ["", "Poor", "Fair", "Good", "Very good", "Excellent"];
+  const prog = n => `<div class="wz-steps" aria-hidden="true">${["Rate us", "Review", "Publish?", "Certificate"].map((t, i) => `<span class="${i + 1 < n ? "done" : i + 1 === n ? "on" : ""}">${t}</span>`).join("")}</div>`;
+  const preview = () => `<figure class="review wz-preview">${stars(W.rating)}<blockquote>${esc(W.body)}</blockquote><figcaption>${reviewer({ display_name: L.name, job_line: jobLine(L), city: L.city, country: L.country, linkedin_url: L.linkedin })}</figcaption></figure>`;
+  const views = {
+    1: () => `${prog(1)}<span class="eyebrow">Step 1 of 3</span><h3>How would you rate ${esc(c.name)}?</h3><p class="muted">Before we issue your certificate, tell us how we did. Every rating helps, including critical ones.</p>
+      <div class="wz-stars" role="radiogroup" aria-label="Rating">${[1, 2, 3, 4, 5].map(n => `<button type="button" role="radio" aria-checked="${W.rating === n}" aria-label="${n} star${n > 1 ? "s" : ""}" data-star="${n}" class="${n <= W.rating ? "on" : ""}">${STAR}</button>`).join("")}</div>
+      <p class="wz-label">${W.rating ? label[W.rating] : "&nbsp;"}</p>
+      <div class="row"><button class="btn primary" data-wz="next"${W.rating ? "" : " disabled"}>Next</button><button class="btn ghost small" data-wz="skip">Skip and get my certificate</button></div>`,
+    2: () => `${prog(2)}<span class="eyebrow">Step 2 of 3</span><h3>Write a short review</h3><p class="muted">What did you learn? What could be better? At least 20 characters.</p>
+      <label class="field"><span class="sr">Your review</span><textarea id="wzBody" rows="5" maxlength="1200" placeholder="The course helped me…">${esc(W.body)}</textarea></label><small class="muted" id="wzCount">${W.body.length}/1200</small>
+      <div class="row"><button class="btn primary" data-wz="next"${W.body.trim().length >= 20 ? "" : " disabled"}>Next</button><button class="btn ghost" data-wz="back">Back</button><button class="btn ghost small" data-wz="skip">Skip</button></div>`,
+    3: () => `${prog(3)}<span class="eyebrow">Step 3 of 3</span><h3>Can we publish your review?</h3><p class="muted">If you agree, it appears on our homepage like this, with your name, city, country, role${L.linkedin ? ", LinkedIn profile" : ""} and star rating, plus a link to your verified certificate. You can ask us to remove it at any time.</p>
+      ${preview()}
+      <div class="row"><button class="btn primary" data-wz="yes">Yes, publish my review</button><button class="btn ghost" data-wz="no">No, keep it private</button></div>
+      ${L.linkedin ? "" : `<p class="muted" style="font-size:.85rem">Want your LinkedIn profile shown with it? <button class="linkbtn" data-wz="profile">Add it to your details</button></p>`}`,
+    4: () => `${prog(5)}<div class="wz-done"><svg viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="var(--accent)"/><path d="M14 24.5l7 7 13-14" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <h3>Your certificate is ready</h3><p class="muted">${W.publish ? "Thank you. Your review is now live on our homepage." : W.rating ? "Thank you for your feedback. Your review stays private." : "Congratulations on passing every chapter."} Show it off where it counts.</p>
+      <p class="mono" style="font-size:.9rem">${esc(W.cert.code)}</p>
+      <div class="row" style="justify-content:center"><a class="btn primary li-btn" href="${linkedInAdd(c, W.cert)}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>Add to LinkedIn</a>
+      <button class="btn" data-wz="view">View certificate</button></div></div>`,
+    busy: () => `${prog(4)}<h3>Issuing your certificate…</h3><p class="muted">This takes a second.</p>`,
+    err: () => `<h3>Something went wrong</h3><p class="muted" role="alert">${esc(W.err)}</p><div class="row"><button class="btn primary" data-wz="retry">Try again</button><button class="btn ghost" data-close>Close</button></div>`
+  };
+  modal(`<div class="wizard" id="wz"></div>`, (box, close) => {
+    const root = box.querySelector("#wz");
+    const paint = () => { root.innerHTML = views[W.step](); const t = root.querySelector("#wzBody"); if (t) { t.focus(); t.addEventListener("input", () => { W.body = t.value; root.querySelector("#wzCount").textContent = t.value.length + "/1200"; root.querySelector("[data-wz=next]").disabled = t.value.trim().length < 20 }) } };
+    const finish = async () => {
+      W.step = "busy"; paint();
+      try {
+        W.cert = W.cert || await issueCert(c, scorePct(c));
+        if (W.rating && W.body.trim().length >= 20) {
+          if (LIVE) await rpc("submit_review_v3", { p_code: W.cert.code, p_email: L.email, p_rating: W.rating, p_body: W.body.trim(), p_publish: !!W.publish });
+          reviewed[W.cert.code] = W.publish ? "published" : "private"; store.set("reviewed", reviewed);
+        }
+        W.step = 4; paint();
+      } catch (e) { W.err = /purchase/i.test(e.message) ? "We couldn't find your enrolment for this email. Sign up with the email you used for your courses." : e.message; W.step = "err"; paint() }
+    };
+    root.addEventListener("click", e => {
+      const b = e.target.closest("[data-star],[data-wz]"); if (!b) return;
+      if (b.dataset.star) { W.rating = +b.dataset.star; return paint() }
+      const a = b.dataset.wz;
+      if (a === "next") { W.step++; return paint() }
+      if (a === "back") { W.step--; return paint() }
+      if (a === "skip") { W.rating = 0; W.body = ""; return finish() }
+      if (a === "yes" || a === "no") { W.publish = a === "yes"; return finish() }
+      if (a === "retry") return finish();
+      if (a === "profile") { close(); return askLearner("Add your LinkedIn profile, then continue.", () => claimWizard(c, then)) }
+      if (a === "view") { close(); then && then() }
+    });
+    root.addEventListener("keydown", e => { if (W.step === 1 && /^[1-5]$/.test(e.key)) { W.rating = +e.key; paint() } });
+    paint();
+  });
 }
 
 function viewCert(id) {
@@ -1956,7 +2111,7 @@ function viewCert(id) {
   const cert = mem.certs[id];
   if (cert) {
     const d = new Date(cert.issued_at);
-    const li = `https://www.linkedin.com/profile/add?startTask=CERTIFICATION_NAME&name=${encodeURIComponent(certTitle(c))}&organizationName=${encodeURIComponent(CONFIG.brand)}&issueYear=${d.getFullYear()}&issueMonth=${d.getMonth() + 1}&expirationYear=${expiryOf(cert).getFullYear()}&expirationMonth=${expiryOf(cert).getMonth() + 1}&certUrl=${encodeURIComponent(verifyUrl(cert.code))}&certId=${encodeURIComponent(cert.code)}`;
+    const li = linkedInAdd(c, cert);
     const ex = expiryOf(cert), st = certState(cert);
     const banner = st === "expired" ? `<div class="result fail no-print"><h3>This certificate expired on ${fmtDate(ex)}</h3><p>${WHY_EXPIRE}</p><div class="row"><button class="btn primary" data-renew="${id}">Renew: retake the assessments</button></div></div>`
       : `<div class="row no-print" style="justify-content:space-between"><span class="chip ok">Valid until ${fmtDate(ex)}</span><span class="muted" style="font-size:.88rem">Renew any time in the last month before expiry.</span></div>`;
@@ -1965,16 +2120,16 @@ function viewCert(id) {
       <div class="row no-print"><a class="btn primary" href="${li}" target="_blank" rel="noopener">Add to LinkedIn</a>
         <button class="btn" data-copy="${esc(verifyUrl(cert.code))}">Copy verification link</button>
         ${LIVE ? `<button class="btn ghost" data-print>Print or save as PDF</button>` : ""}
-        <a class="btn ghost" href="#verify-${esc(cert.code)}">See register entry</a>${st === "valid" && ex - new Date() < 31 * 864e5 ? `<button class="btn ghost" data-renew="${id}">Renew now</button>` : ""}</div><p class="muted no-print" style="font-size:.9rem;max-width:70ch">${WHY_EXPIRE}</p>${st === "valid" ? reviewForm(cert) : ""}</div>`;
+        <a class="btn ghost" href="#verify-${esc(cert.code)}">See register entry</a>${st === "valid" && ex - new Date() < 31 * 864e5 ? `<button class="btn ghost" data-renew="${id}">Renew now</button>` : ""}</div><p class="muted no-print" style="font-size:.9rem;max-width:70ch">${WHY_EXPIRE}</p>${st === "valid" && !reviewed[cert.code] ? reviewForm(cert) : ""}</div>`;
   }
-  if (!owns(id)) return `<h2>Enrol to earn this certificate</h2><p class="muted" style="margin:10px 0 18px">Certificates are issued to enrolled learners who pass every chapter.</p><button class="btn primary" data-buy="all">Get PMAI for ${money(CONFIG.bundlePrice)}</button>`;
+  if (!owns(id)) return `<h2>Enrol to earn this certificate</h2><p class="muted" style="margin:10px 0 18px">Certificates are issued to enrolled learners who pass every chapter.</p><button class="btn primary" data-buy="all">${ctaLabel()}</button>`;
   if (id === "pmai" && !complete(c)) { const done = COURSES.filter(x => doneCount(x) === x.chapters.length).length;
     return `<div class="stack" style="max-width:640px"><span class="eyebrow">The complete certification</span><h1>PMAI certificate</h1><p class="muted">The PMAI certificate is awarded when you pass every chapter of all ${COURSES.length} courses. You've completed ${done} of ${COURSES.length}.</p><div class="bar"><i style="width:${done / COURSES.length * 100}%"></i></div>
       <div class="chapters">${COURSES.map(x => `<div class="chap"><span class="num">${x.code.split("-")[1]}</span><div><h4>${esc(x.name)}</h4><small>${doneCount(x)}/${x.chapters.length} chapters passed</small></div><div class="row">${doneCount(x) === x.chapters.length ? `<span class="chip ok">Complete</span>` : `<a class="btn small primary" href="#course-${x.id}">Continue</a>`}</div></div>`).join("")}</div></div>`; }
   if (!complete(c)) return `<div class="stack" style="max-width:560px"><h2>Almost there</h2><p class="muted">You've passed ${doneCount(c)} of ${c.chapters.length} chapters. Pass them all to claim your certificate.</p><a class="btn primary" href="#course-${id}" style="align-self:flex-start">Back to course</a></div>`;
   return `<div class="stack" style="max-width:560px">
     <span class="eyebrow">${id === "pmai" ? "All courses passed" : "All chapters passed"} · score ${scorePct(c)}%</span><h1>Claim your ${id === "pmai" ? "PMAI " : ""}certificate</h1>
-    <p class="muted">Check your name carefully. It's printed exactly as written and recorded with your certificate ID. Claiming your first certificate ends the 10-day refund guarantee.</p>
+    <p class="muted">Check your name carefully. It's printed exactly as written and recorded with your certificate ID.${FREE ? "" : " Claiming your first certificate ends the 10-day refund guarantee."}</p>
     <form id="claimForm" class="stack">
       <label class="field">Full name<input id="claimName" type="text" required value="${esc(mem.learner?.name)}"></label>
       <label class="field">Email<input id="claimEmail" type="email" required value="${esc(mem.learner?.email)}"></label>
@@ -2013,10 +2168,10 @@ async function runVerify(code) {
 }
 
 function viewDashboard() {
-  if (!mem.learner) return `<div class="stack" style="max-width:520px"><h1>My learning</h1><p class="muted">Add your name and email to track your courses and certificates. Chapter 1 of every course is free without signing up.</p><button class="btn primary" data-learner style="align-self:flex-start">Add my details</button></div>`;
+  if (!mem.learner) return `<div class="stack" style="max-width:520px"><h1>My learning</h1><p class="muted">${FREE ? `Create your free account to unlock all ${COURSES.length} courses and track your certificates.` : "Add your name and email to track your courses and certificates. Chapter 1 of every course is free without signing up."}</p><button class="btn primary" ${FREE ? `data-buy="all"` : "data-learner"} style="align-self:flex-start">${FREE ? "Create free account" : "Add my details"}</button></div>`;
   const mine = COURSES.filter(c => owns(c.id) || prog(c.id)[0] != null);
   const certs = Object.values(mem.certs);
-  return `<div class="row" style="justify-content:space-between;margin-bottom:24px"><div class="stack" style="gap:6px"><span class="eyebrow">My learning</span><h1>${esc(mem.learner.name)}</h1><span class="muted">${esc(mem.learner.email)}</span></div><button class="btn small ghost" data-learner>Edit details</button></div>
+  return `<div class="row" style="justify-content:space-between;margin-bottom:24px"><div class="stack" style="gap:6px"><span class="eyebrow">My learning</span><h1>${esc(mem.learner.name)}</h1><span class="muted">${esc(mem.learner.email)}${mem.learner.city ? " · " + esc(mem.learner.city + ", " + mem.learner.country) : ""}${jobLine(mem.learner) ? " · " + esc(jobLine(mem.learner)) : ""}</span>${profileDone(mem.learner) ? "" : `<span class="chip mile" style="align-self:flex-start">Complete your profile to claim certificates</span>`}</div><button class="btn small ghost" data-learner>Edit details</button></div>
   ${owns("all") ? `<div class="dash-row" style="margin-bottom:14px;border-color:var(--mile)"><div class="stack" style="gap:6px"><span class="eyebrow">The complete certification</span><h3>PMAI</h3></div>
     <div class="stack" style="gap:8px"><span class="mono muted" style="font-size:.85rem">${COURSES.filter(complete).length}/${COURSES.length} courses complete</span><div class="bar"><i style="width:${COURSES.filter(complete).length / COURSES.length * 100}%"></i></div></div>
     <a class="btn small primary" href="#cert-pmai">${mem.certs.pmai ? "Certificate" : complete(PMAI) ? "Claim PMAI" : "View progress"}</a></div>` : ""}
@@ -2044,7 +2199,7 @@ function viewAbout() {
       <div class="table-wrap" style="margin-top:18px"><table><thead><tr><th>Code</th><th>Certification</th><th>Subject</th><th>Level</th><th>Chapters</th></tr></thead><tbody>
       ${COURSES.map(c => `<tr><td class="mono">${c.code}</td><td><a href="#course-${c.id}">${esc(c.name)}</a></td><td>${esc(c.title)}</td><td>${c.level}</td><td class="mono">${c.chapters.length}</td></tr>`).join("")}
       </tbody></table></div>
-      <p class="muted" style="margin-top:12px">Passing all ${COURSES.length} earns the PMAI certificate, the Institute’s complete certification (${money(CONFIG.bundlePrice)}).</p>
+      <p class="muted" style="margin-top:12px">Passing all ${COURSES.length} earns the PMAI certificate, the Institute’s complete certification (${FREE ? "free for a limited time" : money(CONFIG.bundlePrice)}).</p>
     </div>
     <div>
       <h2>How we certify</h2>
@@ -2110,7 +2265,7 @@ function viewGuide(id) {
   <div class="stack" style="max-width:72ch;margin-bottom:36px"><span class="eyebrow">${esc(eyebrow)}</span><h1 style="font-size:clamp(2rem,4.6vw,3.1rem)">${esc(g.title)}</h1>${n ? `<p class="muted" style="font-size:1.12rem">${esc(g.summary)}</p>` : ""}</div>
   <div class="article">
     <div class="body">${sec}
-      <div class="cta-card"><span class="eyebrow">Covered in PMAI · ${c.code}</span><h3>${esc(c.name)}: ${esc(c.title)}</h3><p class="muted">${esc(c.short)} Part of the PMAI certification: all ${COURSES.length} courses for ${money(CONFIG.bundlePrice)}.</p>
+      <div class="cta-card"><span class="eyebrow">Covered in PMAI · ${c.code}</span><h3>${esc(c.name)}: ${esc(c.title)}</h3><p class="muted">${esc(c.short)} Part of the PMAI certification: all ${COURSES.length} courses ${FREE ? "free for a limited time" : `for ${money(CONFIG.bundlePrice)}`}.</p>
         <div class="row"><a class="btn primary" href="#course-${c.id}">View course</a><a class="btn ghost" href="#learn-${c.id}-0">Try chapter 1 free</a></div></div>
       ${nav}
     </div>
@@ -2126,7 +2281,7 @@ function viewLegal(kind) {
   const fill = s => String(s).replace(/\{(\w+)\}/g, (m, id) => L.tnum[id] ?? m);
   const missing = !CONFIG.legalName || !CONFIG.stateOfFormation || !CONFIG.address || !CONFIG.contactEmail || CONFIG.contactEmail.includes("example.com");
   const intro = {
-    terms: `<div class="callout"><b>The short version.</b> You pay ${money(CONFIG.bundlePrice)} once for PMAI and get all six courses for at least 24 months. If you're not happy, you can get a full refund within 10 days of purchase, as long as you haven't claimed a certificate. You study on your own initiative and at your own risk; the content is general education, not professional advice. Certificates are our own certificates of completion, valid for ${CONFIG.validityMonths} months. If something is faulty, we fix it or refund you as the law requires. To the extent the law allows, our liability is limited to what you paid.</div>`,
+    terms: `<div class="callout"><b>The short version.</b> ${FREE ? `PMAI is currently free for a limited time; while the offer runs you pay nothing and` : `You pay ${money(CONFIG.bundlePrice)} once for PMAI and`} get all six courses for at least 24 months. If you're not happy, you can get a full refund within 10 days of purchase, as long as you haven't claimed a certificate. You study on your own initiative and at your own risk; the content is general education, not professional advice. Certificates are our own certificates of completion, valid for ${CONFIG.validityMonths} months. If something is faulty, we fix it or refund you as the law requires. To the extent the law allows, our liability is limited to what you paid.</div>`,
     privacy: `<div class="callout"><b>The short version.</b> We keep only your name, email, purchase and certificate records. We use them to give you access and verify certificates. Your name appears in the public register when you claim a certificate; your email never does. Analytics cookies are used only if you accept them. You can ask to see or delete your data at any time.</div>`,
     notice: ""
   }[kind];
@@ -2160,7 +2315,8 @@ const DEMO_ADMIN = (() => { const d = (n) => new Date(Date.now() - n * 864e5).to
 async function adminLoad() {
   if (!LIVE) { adminData = DEMO_ADMIN; return }
   adminData = await rpc("admin_overview", { p_key: adminKey.get() });
-  try { adminData.reviews = await rpc("admin_reviews_v2", { p_key: adminKey.get() }) || [] } catch (e) { try { adminData.reviews = await rpc("admin_reviews", { p_key: adminKey.get() }) || [] } catch (e2) { adminData.reviews = [] } }
+  try { adminData.learners = await rpc("admin_learners", { p_key: adminKey.get() }) || [] } catch (e) { adminData.learners = [] }
+  try { adminData.reviews = await rpc("admin_reviews_v3", { p_key: adminKey.get() }) || [] } catch (e0) { try { adminData.reviews = await rpc("admin_reviews_v2", { p_key: adminKey.get() }) || [] } catch (e) { try { adminData.reviews = await rpc("admin_reviews", { p_key: adminKey.get() }) || [] } catch (e2) { adminData.reviews = [] } } }
 }
 const fmtMoney = (cents, cur) => (cur || "usd").toUpperCase() === "USD" ? "$" + (cents / 100).toFixed(2) : (cents / 100).toFixed(2) + " " + (cur || "").toUpperCase();
 const shortDate = d => d ? new Date(d).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" }) : "";
@@ -2198,10 +2354,12 @@ function viewAdmin() {
   if (adminTab === "students") table = `<table><thead><tr><th>Name</th><th>Email</th><th>Purchased</th><th>Status</th><th>Refund window</th><th>Valid certs</th><th>PMAI</th></tr></thead><tbody>
     ${S.filter(hit).map(s => `<tr><td>${esc(s.name || "—")}</td><td class="mono">${esc(s.email)}</td><td>${shortDate(s.first)}</td><td>${chip(s.status, s.status === "Active" ? "ok" : "bad")}</td>
       <td>${s.refundEligible ? chip("Eligible", "mile") : `<span class="muted">—</span>`}</td><td class="mono">${s.validCerts}/7</td><td>${s.pmai ? chip("Awarded", "ok") : ""}</td></tr>`).join("") || `<tr><td colspan="7" class="muted">No students yet. They appear here after their first payment.</td></tr>`}</tbody></table>`;
+  if (adminTab === "learners") { const Ls = adminData.learners || []; table = Ls.length ? `<table><thead><tr><th>Joined</th><th>Name</th><th>Email</th><th>Location</th><th>Status</th><th>Role</th><th>University</th><th>LinkedIn</th><th>Certs</th></tr></thead><tbody>
+    ${Ls.filter(hit).map(l => `<tr><td>${shortDate(l.created_at)}</td><td>${esc(l.full_name)}</td><td>${esc(l.email)}</td><td>${esc([l.city, l.country].filter(Boolean).join(", "))}</td><td>${esc(l.job_status || "")}</td><td>${esc([l.job_title, l.company].filter(Boolean).join(", "))}</td><td>${esc(l.university || "")}</td><td>${l.linkedin_url ? `<a href="${esc(l.linkedin_url)}" target="_blank" rel="noopener">Profile</a>` : ""}</td><td>${l.certificates}</td></tr>`).join("")}</tbody></table>` : `<p class="muted" style="padding:16px">No learner profiles yet.</p>` }
   if (adminTab === "reviews") { const R = adminData.reviews || []; table = R.length ? `<table><thead><tr><th>Date</th><th>Name</th><th>Certification</th><th>Rating</th><th>Review</th><th>Status</th><th></th></tr></thead><tbody>
-    ${R.filter(hit).map(r => `<tr><td>${shortDate(r.created_at)}</td><td>${esc(r.display_name)}<br><a class="mono" style="font-size:.75rem" href="#verify-${esc(r.cert_code)}">${esc(r.cert_code)}</a></td><td>${esc(r.course_title || "")}${r.incentivized ? `<br>${chip("Free access", "mile")}` : ""}</td><td>${stars(r.rating)}</td><td style="max-width:420px">${esc(r.body)}</td>
+    ${R.filter(hit).map(r => `<tr><td>${shortDate(r.created_at)}</td><td>${esc(r.display_name)}${r.job_line || r.city ? `<br><small class="muted">${esc([r.job_line, [r.city, r.country].filter(Boolean).join(", ")].filter(Boolean).join(" · "))}</small>` : ""}${r.linkedin_url ? ` <a href="${esc(r.linkedin_url)}" target="_blank" rel="noopener">in</a>` : ""}<br><a class="mono" style="font-size:.75rem" href="#verify-${esc(r.cert_code)}">${esc(r.cert_code)}</a></td><td>${esc(r.course_title || "")}${r.incentivized ? `<br>${chip("Free access", "mile")}` : ""}</td><td>${stars(r.rating)}</td><td style="max-width:420px">${esc(r.body)}</td>
       <td>${chip(r.status, r.status === "approved" ? "ok" : r.status === "rejected" ? "bad" : "mile")}</td>
-      <td><div class="row">${r.status !== "approved" ? `<button class="btn small primary" data-reviewid="${r.id}" data-to="approved">Publish</button>` : ""}${r.status !== "rejected" ? `<button class="btn small ghost" data-reviewid="${r.id}" data-to="rejected">Hide</button>` : ""}</div></td></tr>`).join("")}</tbody></table>` : `<p class="muted" style="padding:16px">No reviews yet. Learners can leave one from their certificate page.</p>`;
+      <td><div class="row">${r.publish_consent === false ? `<span class="muted" style="font-size:.8rem">Private (no consent)</span>` : r.status !== "approved" ? `<button class="btn small primary" data-reviewid="${r.id}" data-to="approved">Publish</button>` : ""}${r.status !== "rejected" ? `<button class="btn small ghost" data-reviewid="${r.id}" data-to="rejected">Hide</button>` : ""}</div></td></tr>`).join("")}</tbody></table>` : `<p class="muted" style="padding:16px">No reviews yet. Learners can leave one from their certificate page.</p>`;
     table = `<p class="muted" style="font-size:.85rem;margin:0 0 10px">Publish every genuine review, positive or critical. Hide only spam, abuse, off-topic text or personal data. Selectively hiding negative reviews is misleading to customers and can breach consumer law.</p>` + table }
   const grant = `<form id="grantForm" class="grant row"><b>Early reviewers:</b><input id="grEmail" type="email" placeholder="Email" required><input id="grName" type="text" placeholder="Name (optional)"><button class="btn small primary" type="submit">Grant free PMAI access</button><span class="muted" style="font-size:.8rem">Their reviews are automatically labelled "Received free course access".</span></form>`;
   if (adminTab === "payments") table = `<table><thead><tr><th>Date</th><th>Name</th><th>Email</th><th>Amount</th><th>Terms accepted</th><th>Status</th><th>Stripe session</th><th></th></tr></thead><tbody>
@@ -2219,7 +2377,7 @@ function viewAdmin() {
   ${adminData.demo ? `<div class="result fail" style="margin-bottom:18px"><b>Example data.</b> The preview can't reach your database, so it shows made-up students. On neuralprojectinstitute.com/#admin you'll see real data.</div>` : ""}
   <div class="tiles">${tile("Revenue", fmtMoney(revenue, "usd"), `${live.length} paid`)}${tile("Students", S.filter(s => s.status === "Active").length, `${S.filter(s => s.refundEligible).length} in refund window`)}${tile("Refunds", refunded.length, refunded.length ? fmtMoney(refunded.reduce((s, p) => s + (p.amount_total || 0), 0), "usd") : "")}${tile("Valid certificates", cstate("valid"), `${cstate("expired")} expired · ${cstate("revoked")} revoked`)}${tile("PMAI awarded", C.filter(c => c.course_id === "pmai" && certState(c) === "valid").length, "")}</div>
   <div class="row" style="justify-content:space-between;margin:28px 0 12px">
-    <div class="row" role="tablist">${[["students", "Students"], ["payments", "Payments"], ["certificates", "Certificates"], ["reviews", "Reviews" + ((adminData.reviews || []).filter(r => r.status === "pending").length ? " (" + adminData.reviews.filter(r => r.status === "pending").length + " new)" : "")]].map(([k, l]) => `<button class="btn small ${adminTab === k ? "primary" : "ghost"}" data-admintab="${k}" role="tab" aria-selected="${adminTab === k}">${l}</button>`).join("")}</div>
+    <div class="row" role="tablist">${[["students", "Students"], ["learners", "Learners" + ((adminData.learners || []).length ? " (" + adminData.learners.length + ")" : "")], ["payments", "Payments"], ["certificates", "Certificates"], ["reviews", "Reviews" + ((adminData.reviews || []).filter(r => r.status === "pending").length ? " (" + adminData.reviews.filter(r => r.status === "pending").length + " new)" : "")]].map(([k, l]) => `<button class="btn small ${adminTab === k ? "primary" : "ghost"}" data-admintab="${k}" role="tab" aria-selected="${adminTab === k}">${l}</button>`).join("")}</div>
     <div class="row"><input id="adminSearch" type="text" placeholder="Search name, email or ID" value="${esc(adminQ)}" style="min-width:220px"><button class="btn small" data-admincsv>Export CSV</button></div></div>
   ${adminTab === "payments" ? grant : ""}<div class="table-wrap admin-table">${table}</div>
   <p class="muted" style="font-size:.85rem;margin-top:14px">Refunds: issue the money in Stripe first, then press "Mark refunded" here. That locks the student's paid chapters. Chapter-by-chapter progress is stored on each student's own device, so it doesn't appear here.</p>`;
@@ -2273,6 +2431,7 @@ document.addEventListener("click", async e => {
     const S = adminStudents(), P = adminData.purchases, C = adminData.certificates, day = new Date().toISOString().slice(0, 10);
     if (adminTab === "students") csvDownload(`students-${day}.csv`, [["Name", "Email", "First purchase", "Status", "Refund window", "Valid certificates", "PMAI"], ...S.map(s => [s.name, s.email, s.first, s.status, s.refundEligible ? "Eligible" : "", s.validCerts, s.pmai ? "Yes" : ""])]);
     if (adminTab === "payments") csvDownload(`payments-${day}.csv`, [["Date", "Name", "Email", "Amount", "Currency", "Terms accepted", "Refunded at", "Stripe session"], ...P.map(p => [p.created_at, p.customer_name, p.email, (p.amount_total || 0) / 100, p.currency, p.terms_accepted ? "Yes" : "No", p.refunded_at || "", p.stripe_session_id])]);
+    if (adminTab === "learners") csvDownload(`learners-${day}.csv`, [["Joined", "Name", "Email", "Country", "City", "Status", "Job title", "Company", "University", "LinkedIn", "Certificates"], ...(adminData.learners || []).map(l => [l.created_at, l.full_name, l.email, l.country, l.city, l.job_status, l.job_title, l.company, l.university, l.linkedin_url, l.certificates])]);
     if (adminTab === "reviews") csvDownload(`reviews-${day}.csv`, [["Date", "Name", "Certificate ID", "Certification", "Rating", "Review", "Status"], ...(adminData.reviews || []).map(r => [r.created_at, r.display_name, r.cert_code, r.course_title, r.rating, r.body, r.status])]);
     if (adminTab === "certificates") csvDownload(`certificates-${day}.csv`, [["Certificate ID", "Holder", "Email", "Certification", "Score", "Issued", "Valid until", "Status", "Terms version"], ...C.map(c => [c.code, c.full_name, c.email, c.course_title, c.score, c.issued_at, expiryOf(c).toISOString(), certState(c), c.terms_version || ""])]);
     return;
@@ -2296,7 +2455,7 @@ document.addEventListener("click", async e => {
   if (t.hasAttribute("data-retake")) { quizState = null; render(); return window.scrollTo(0, 0) }
   if (t.hasAttribute("data-review")) { player = { slide: 0, mode: "slides" }; quizState = null; return render() }
   if (t.dataset.renew) { const rid = t.dataset.renew; if (rid === "pmai") { mem.progress = {}; mem.certs = {}; save(); toast("Assessments reset. Pass all courses again to renew PMAI."); location.hash = "courses"; return } mem.progress[rid] = {}; mem.certs[rid] && (mem.certs[rid].renewing = true); delete mem.certs[rid]; save(); toast("Assessments reset. Pass every chapter again to receive a renewed certificate."); location.hash = "course-" + rid; return }
-  if (t.hasAttribute("data-learner")) return askLearner("Used to link your purchases and certificates.", render);
+  if (t.hasAttribute("data-learner")) return askLearner("Used for your account, certificates and (only if you agree) your published review.", render);
   if (t.hasAttribute("data-print")) return window.print();
   if (t.dataset.fill) { $("#vcode").value = t.dataset.fill; return runVerify(t.dataset.fill) }
   if (t.dataset.copy) { try { await navigator.clipboard.writeText(t.dataset.copy); toast("Verification link copied.") } catch { toast(t.dataset.copy) } }
@@ -2326,20 +2485,23 @@ document.addEventListener("submit", async e => {
     const r = +(f.querySelector("input[name=rv]:checked")?.value || 0), body = $("#rvBody").value.trim();
     if (!r) return toast("Choose a star rating.");
     if (body.length < 20) return toast("Please write at least 20 characters.");
-    if (!$("#rvConsent").checked) return toast("Tick the box to agree to publication.");
+    const pub = $("#rvConsent").checked;
     if (!LIVE) return toast("Reviews can be submitted on neuralprojectinstitute.com.");
-    try { await rpc("submit_review", { p_code: f.dataset.code, p_email: $("#rvEmail").value.trim(), p_rating: r, p_body: body, p_display_name: $("#rvName").value.trim() });
-      f.closest("section").innerHTML = `<span class="eyebrow">Your review</span><h2 style="margin:8px 0">Thank you!</h2><p class="muted">Your review will appear on the homepage after a quick check. You can update it any time by submitting again.</p>`;
+    try { await rpc("submit_review_v3", { p_code: f.dataset.code, p_email: mem.learner?.email || "", p_rating: r, p_body: body, p_publish: pub });
+      reviewed[f.dataset.code] = pub ? "published" : "private"; store.set("reviewed", reviewed);
+      f.closest("section").innerHTML = `<span class="eyebrow">Your review</span><h2 style="margin:8px 0">Thank you!</h2><p class="muted">${pub ? "Your review is now live on the homepage." : "Your review was saved privately."}</p>`;
     } catch (err) { toast(/not found/i.test(err.message) ? "That email doesn't match this certificate." : "Couldn't submit your review. Please try again.") }
     return;
   }
   if (f.id === "claimForm" && !($("#claimConsent").checked && $("#claimPublish").checked)) return toast("Tick both boxes to continue.");
   if (f.id === "claimForm") {
     const id = location.hash.slice(1).split("-")[1], c = byId(id);
-    mem.learner = { name: $("#claimName").value.trim(), email: $("#claimEmail").value.trim().toLowerCase() }; save();
-    const btn = f.querySelector("button"); btn.disabled = true; btn.textContent = "Issuing…";
-    try { await issueCert(c, scorePct(c)); toast("Certificate issued."); render() }
-    catch (err) { $("#claimErr").textContent = err.message.includes("purchase") ? "We couldn't find a purchase for this email. Use the email you paid with." : err.message; btn.disabled = false; btn.textContent = "Issue my certificate" }
+    const prev = mem.learner || {};
+    mem.learner = { ...prev, name: $("#claimName").value.trim(), email: $("#claimEmail").value.trim().toLowerCase() }; save();
+    const start = () => claimWizard(c, render);
+    if (!profileDone(mem.learner)) await pullProfile();
+    if (profileDone(mem.learner)) { if (mem.learner.name !== prev.name || mem.learner.email !== prev.email) { try { await saveProfile(mem.learner) } catch (e) { console.warn(e) } } start() }
+    else askLearner("Complete your profile so we can issue your certificate.", start);
   }
 });
 document.addEventListener("keydown", e => {
@@ -2363,7 +2525,7 @@ $("#footBrand").textContent = "© " + new Date().getFullYear() + " " + CONFIG.br
 $("#brandTag").textContent = CONFIG.tagline;
 if (!LIVE) { const b = $("#demoBar"); b.hidden = false; b.textContent = "Preview mode: payments and the certificate database aren't connected yet, so purchases unlock for testing only." }
 render();
-refreshOwned().then(() => { if (location.hash === "#paid") toast(owns("all") || mem.owned.length ? "Payment received. Your course is unlocked." : "Payment is still processing. Refresh in a minute."); render() });
+pullProfile().then(refreshOwned).then(() => { if (location.hash === "#paid") toast(owns("all") || mem.owned.length ? "Payment received. Your course is unlocked." : "Payment is still processing. Refresh in a minute."); render() });
 // Hover intent: menus stay open while the pointer travels diagonally into them,
 // and a neighbouring menu only takes over after the pointer rests on it.
 (function () {
