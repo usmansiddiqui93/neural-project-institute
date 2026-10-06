@@ -233,22 +233,16 @@ body:has(#modalRoot .modal) #npi-langbar { display: none }
 .rv-li { color: #0a66c2; display: inline-flex } .rv-li:hover { color: #004182 }
 .review .rv-course { color: var(--muted); font-size: .8rem; margin-top: 4px }
 
-/* Ticket CTA */
-[data-buy]:has(.tkt) { padding: 0; overflow: visible; border: 0; background: none !important; box-shadow: none; color: inherit }
-.tkt { display: inline-flex; align-items: stretch; filter: drop-shadow(0 6px 14px rgba(15, 40, 30, .22)); transition: transform .18s ease }
-[data-buy]:hover .tkt { transform: translateY(-2px) }
-.tkt-main, .tkt-stub { --n: 9px; mask: radial-gradient(circle var(--n) at var(--x) 0, #0000 98%, #000) top / 100% 51% no-repeat, radial-gradient(circle var(--n) at var(--x) 100%, #0000 98%, #000) bottom / 100% 51% no-repeat }
-.tkt-main { --x: 100%; display: inline-flex; align-items: center; gap: 10px; padding: 0 18px 0 20px; min-height: 50px; background: var(--accent); color: var(--accent-ink); border-radius: 10px 0 0 10px; font: 650 1rem/1 var(--f-body) }
-.tkt-main svg { flex: none }
-.tkt-stub { --x: 0; position: relative; display: grid; place-items: center; align-content: center; gap: 3px; padding: 0 16px 0 18px; min-width: 92px; background: var(--mile); color: #1a1408; border-radius: 0 10px 10px 0; transform-origin: 0 50%; transition: transform .25s cubic-bezier(.3, 1.6, .5, 1) }
-.tkt-stub::before { content: ""; position: absolute; left: 0; top: 10px; bottom: 10px; border-left: 2px dashed color-mix(in srgb, #1a1408 45%, transparent) }
-[data-buy]:hover .tkt-stub { transform: rotate(5deg) translateX(3px) }
-.tkt-stub small { font: 600 .62rem/1 var(--f-mono); letter-spacing: .1em; text-transform: uppercase; opacity: .7; white-space: nowrap }
-.tkt-stub b { font: 800 1.15rem/1 var(--f-display); letter-spacing: .06em; display: inline-block; animation: stamp .5s .35s cubic-bezier(.2, 1.4, .4, 1) both }
-@keyframes stamp { from { transform: scale(2.2) rotate(-14deg); opacity: 0 } to { transform: scale(1) rotate(-4deg); opacity: 1 } }
-.bundle .tkt-main { background: var(--bg); color: var(--ink) }
+/* Countdown CTA */
+.cdn { display: inline-flex; align-items: center; gap: 6px }
+.cdn-num { display: inline-block; min-width: 4.1ch; text-align: left; font-variant-numeric: tabular-nums; font-weight: 750; transition: color .3s }
+.bundle .cdn-ok { background: var(--ink); color: var(--mile) }
+.cdn-ok { display: inline-grid; place-items: center; width: 20px; height: 20px; border-radius: 50%; background: var(--mile); color: #1a1408; font-size: .72rem; font-weight: 800; transform: scale(0); opacity: 0 }
+.cdn.done .cdn-ok { animation: okpop .4s cubic-bezier(.2, 1.5, .4, 1) forwards }
+@keyframes okpop { to { transform: scale(1); opacity: 1 } }
+[data-buy]:has(.cdn.done) { animation: ctaglow 1.2s ease-out }
+@keyframes ctaglow { 0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--mile) 70%, transparent) } 100% { box-shadow: 0 0 0 14px transparent } }
 .cta-note { font: 500 .78rem/1.4 var(--f-mono); letter-spacing: .04em; color: var(--muted); margin: 12px 0 0 }
-@media (prefers-reduced-motion: reduce) { .tkt-stub b { animation: none; transform: rotate(-4deg) } }
 .facts [hidden] { display: none !important }
 /* Reviews page */
 .rv-tabs { display: flex; gap: 6px; overflow-x: auto; margin: 26px 0 18px; padding-bottom: 4px; border-bottom: 1px solid var(--line) }
@@ -1636,7 +1630,18 @@ const app = $("#app");
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const money = n => CONFIG.currency + n;
 const FREE = !!CONFIG.freePromo;
-const ctaLabel = () => FREE ? `<span class="tkt"><span class="tkt-main">Get PMAI<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="tkt-stub" aria-label="was ${money(CONFIG.regularPrice)}, now free"><small>was ${money(CONFIG.regularPrice)}</small><b>FREE</b></span></span>` : `Get PMAI for ${money(CONFIG.bundlePrice)}`;
+const ctaLabel = () => FREE ? `<span class="cdn" aria-label="Get PMAI for free, regular price ${money(CONFIG.regularPrice)}">Get PMAI for <span class="cdn-num" aria-hidden="true">${money(CONFIG.regularPrice)}</span><span class="cdn-ok" aria-hidden="true">✓</span></span>` : `Get PMAI for ${money(CONFIG.bundlePrice)}`;
+function runCountdowns() {
+  const els = [...document.querySelectorAll(".cdn:not([data-run])")]; if (!els.length) return;
+  const from = CONFIG.regularPrice, fin = el => { el.querySelector(".cdn-num").textContent = CONFIG.currency + "0"; el.classList.add("done") };
+  els.forEach(el => el.dataset.run = "1");
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return els.forEach(fin);
+  setTimeout(() => { const t0 = performance.now(), D = 1100;
+    const step = now => { const k = Math.min(1, (now - t0) / D), v = from * Math.pow(1 - k, 3);
+      els.forEach(el => el.querySelector(".cdn-num").textContent = CONFIG.currency + v.toFixed(2));
+      if (k < 1) requestAnimationFrame(step); else els.forEach(fin) };
+    requestAnimationFrame(step) }, 500);
+}
 const priceHTML = () => FREE ? `<span class="promo-price"><s>${money(CONFIG.regularPrice)}</s><b>Free</b><em>for a limited time</em></span>` : `<span class="price">${money(CONFIG.bundlePrice)}</span>`;
 const byId = id => id === "pmai" ? PMAI : COURSES.find(c => c.id === id);
 const certTitle = c => `${c.name}: ${c.title}`;
@@ -2480,6 +2485,7 @@ function render() {
   if (page === "cert" && mem.certs[rest[0]]) drawQR(mem.certs[rest[0]].code);
   if (page === "home" && location.hash === "#catalog") $("#catalog")?.scrollIntoView();
   if (page === "home" || page === "paid") { loadReviews(); loadEnrolled() }
+  runCountdowns();
   if (page === "reviews") loadAllReviews(new URLSearchParams(location.search).get("course") || "all");
 }
 
