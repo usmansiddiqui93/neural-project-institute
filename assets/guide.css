@@ -300,3 +300,6 @@ div.card { cursor: default }
 .mainnav .dd.langdd { margin-left: 4px; padding-left: 6px; border-left: 1px solid var(--line) }
 .mainnav > a.cta { border-radius: 999px; padding: 0 16px }
 @media (max-width: 1000px) and (min-width: 641px) { .mainnav > a[href="/about-the-institute/"] { display: none } }
+
+.foot-li { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; padding: 7px 12px; border: 1px solid var(--line); border-radius: 999px; color: var(--ink); text-decoration: none; font-weight: 600; font-size: .85rem }
+.foot-li svg { color: #0a66c2 } .foot-li:hover { border-color: #0a66c2; color: #0a66c2 }
