@@ -2189,13 +2189,14 @@ function shareCert(c, cert) {
     if (blob) { url = URL.createObjectURL(blob); box.querySelector("#shImg").innerHTML = `<img src="${url}" alt="Your certificate">` }
     else box.querySelector("#shImg").innerHTML = `<p class="muted">We couldn't create the image here. You can still share the post, and LinkedIn will show your verification link.</p>`;
     const file = blob && new File([blob], fname, { type: "image/png" });
-    const canFiles = file && navigator.canShare && navigator.canShare({ files: [file] });
-    btns.innerHTML = (canFiles ? `<button class="btn primary li-btn" data-sh="native">${LI_ICON}Share with image</button>` : `<button class="btn primary li-btn" data-sh="both">${LI_ICON}Download image &amp; open LinkedIn</button>`)
-      + `${blob ? `<button class="btn" data-sh="dl">Download image</button>` : ""}<button class="btn ghost" data-sh="copy">Copy text</button>`;
-    hint.innerHTML = canFiles ? "Choose LinkedIn in the share menu. Your certificate image and text are attached." : blob ? "LinkedIn opens with your text filled in. Click the <b>photo</b> icon in the post window and add the certificate image you just downloaded." : "";
+    const mobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || (navigator.maxTouchPoints > 1 && matchMedia("(pointer: coarse)").matches);
+    const canFiles = mobile && file && navigator.canShare && navigator.canShare({ files: [file] });
+    btns.innerHTML = (canFiles ? `<button class="btn primary li-btn" data-sh="native">${LI_ICON}Share with image</button>` : `<button class="btn primary li-btn" data-sh="both">${LI_ICON}${blob ? "Open LinkedIn &amp; download image" : "Open LinkedIn"}</button>`)
+      + `${canFiles ? `<button class="btn" data-sh="both">Open LinkedIn instead</button>` : ""}${blob && !canFiles ? `<button class="btn" data-sh="dl">Download image only</button>` : ""}<button class="btn ghost" data-sh="copy">Copy text</button>`;
+    hint.innerHTML = canFiles ? "Choose LinkedIn in the share menu. Your certificate image and text are attached." : blob ? "LinkedIn opens in a new tab with your post text filled in, and your certificate image downloads. In LinkedIn, click the <b>photo / media</b> icon in the post window and add the downloaded image, then press <b>Post</b>." : "LinkedIn opens in a new tab with your post text filled in.";
     btns.addEventListener("click", async e => { const b = e.target.closest("[data-sh]"); if (!b) return; const a = b.dataset.sh;
       if (a === "native") { try { await navigator.share({ files: [file], text: txt(), title: certTitle(c) }) } catch (x) { if (x.name !== "AbortError") { download(); openLi() } } }
-      if (a === "both") { download(); setTimeout(openLi, 300) }
+      if (a === "both") { openLi(); download(); toast("LinkedIn opened in a new tab. Add the downloaded image with the photo icon.") }
       if (a === "dl") download();
       if (a === "copy") { try { await navigator.clipboard.writeText(txt()); toast("Post text copied.") } catch { toast("Select the text and copy it.") } }
     });
