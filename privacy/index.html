@@ -32,6 +32,7 @@
 <meta property="og:image:height" content="627">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://neuralprojectinstitute.com/og-image.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "EducationalOrganization", "@id": "https://neuralprojectinstitute.com/#organization", "name": "Neural Project Institute", "url": "https://neuralprojectinstitute.com/", "logo": {"@type": "ImageObject", "url": "https://neuralprojectinstitute.com/icon-512.png", "width": 512, "height": 512}, "image": "https://neuralprojectinstitute.com/og-image.jpg", "email": "support@neuralprojectinstitute.com", "foundingDate": "2026", "address": {"@type": "PostalAddress", "streetAddress": "30 N Gould St, Suite 38589", "addressLocality": "Sheridan", "addressRegion": "WY", "postalCode": "82801", "addressCountry": "US"}, "parentOrganization": {"@type": "Organization", "name": "Flaunt Weekly LLC"}, "sameAs": ["https://www.linkedin.com/company/neural-project-institute/"]}, {"@type": "WebSite", "@id": "https://neuralprojectinstitute.com/#website", "name": "Neural Project Institute", "url": "https://neuralprojectinstitute.com/", "publisher": {"@id": "https://neuralprojectinstitute.com/#organization"}, "inLanguage": "en"}, {"@type": "WebPage", "@id": "https://neuralprojectinstitute.com/privacy/#webpage", "url": "https://neuralprojectinstitute.com/privacy/", "name": "Privacy Policy | Neural Project Institute", "description": "How the Neural Project Institute collects, uses and protects your personal data, your GDPR rights and how to contact us.", "isPartOf": {"@id": "https://neuralprojectinstitute.com/#website"}, "about": {"@id": "https://neuralprojectinstitute.com/#organization"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://neuralprojectinstitute.com/"}, {"@type": "ListItem", "position": 2, "name": "Privacy Policy", "item": "https://neuralprojectinstitute.com/privacy/"}]}]}</script>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"%3E%3Crect width="64" height="64" rx="14" fill="#17242f"/%3E%3Crect x="10" y="14" width="30" height="9" rx="2.5" fill="#ffffff"/%3E%3Crect x="20" y="28" width="26" height="9" rx="2.5" fill="#4fbf93"/%3E%3Crect x="12" y="42" width="20" height="9" rx="2.5" fill="#ffffff"/%3E%3Cpath d="M47 37.5l8.5 8.5-8.5 8.5-8.5-8.5z" fill="#e3a84a"/%3E%3C/svg%3E">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -2086,6 +2087,25 @@ function reviewer(r) {
     ${r.job_line ? `<span>${esc(r.job_line)}</span>` : ""}${place ? `<span class="rv-place">${esc(place)}</span>` : ""}</div></div>`;
 }
 let reviewCache = null;
+const SITE_URL = "https://neuralprojectinstitute.com";
+function setLD(id, obj) { let el = document.getElementById(id); if (!obj) { el && el.remove(); return }
+  if (!el) { el = document.createElement("script"); el.type = "application/ld+json"; el.id = id; document.head.append(el) } el.textContent = JSON.stringify(obj) }
+function reviewsLD(rows) {
+  if (!rows.length) return setLD("ld-reviews", null);
+  const by = {}; rows.forEach(r => (by[r.course_id || "x"] = by[r.course_id || "x"] || []).push(r));
+  const graph = Object.entries(by).filter(([id]) => byId(id)).map(([id, R]) => { const c = byId(id), avg = R.reduce((a, r) => a + r.rating, 0) / R.length;
+    return { "@type": "Course", "@id": `${SITE_URL}/#course-${id}`, name: id === "pmai" ? "PMAI: Complete Project Management Certification" : certTitle(c),
+      description: id === "pmai" ? "The complete certification: all six Neural Project Institute courses." : c.short, provider: { "@id": `${SITE_URL}/#organization` },
+      aggregateRating: { "@type": "AggregateRating", ratingValue: +avg.toFixed(1), reviewCount: R.length, bestRating: 5, worstRating: 1 },
+      review: R.slice(0, 50).map(r => ({ "@type": "Review", author: { "@type": "Person", name: r.display_name, ...(r.linkedin_url ? { sameAs: r.linkedin_url } : {}) },
+        datePublished: String(r.created_at || "").slice(0, 10), reviewBody: r.body, reviewRating: { "@type": "Rating", ratingValue: r.rating, bestRating: 5, worstRating: 1 } })) } });
+  setLD("ld-reviews", { "@context": "https://schema.org", "@graph": graph });
+}
+function faqLD() {
+  const qs = [...app.querySelectorAll("details")].filter(d => d.querySelector("summary"));
+  setLD("ld-faq", qs.length ? { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: qs.map(d => { const q = d.querySelector("summary").textContent.trim(), a = d.cloneNode(true); a.querySelector("summary").remove();
+    return { "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a.textContent.trim() } } }) } : null);
+}
 async function fetchReviews() {
   if (reviewCache) return reviewCache;
   let rows = [];
@@ -2111,6 +2131,8 @@ function viewReviews(tab) {
 async function loadAllReviews(tab) {
   const box = $("#allReviews"); if (!box) return;
   const rows = await fetchReviews();
+  if (!document.body.contains(box)) return;
+  reviewsLD(rows);
   document.querySelectorAll("[data-count]").forEach(el => { const id = el.dataset.count, n = id === "all" ? rows.length : rows.filter(r => r.course_id === id).length; el.textContent = n ? " " + n : "" });
   const valid = ["all", "pmai", ...COURSES.map(c => c.id)];
   tab = valid.includes(tab) ? tab : "all";
@@ -2126,6 +2148,7 @@ async function loadReviews() {
   const onlyPmai = pmai.length >= CONFIG.homeReviewsMin;
   rows = onlyPmai ? pmai : allRows;
   if (!document.body.contains(box) || !$("#reviews")) return;
+  reviewsLD(rows);
   const hd = $("#reviews h2"); if (hd) hd.textContent = onlyPmai ? "What PMAI graduates say" : "What certified learners say";
   if (!rows.length) { $("#reviews").hidden = true; return; box.innerHTML = `<div class="review-empty"><p><b>Reviews are on their way.</b> We only show reviews from learners who have earned a verified certificate, so this section fills up as our first learners finish their courses. Earned one? Open your certificate page to leave a review.</p></div>`; return }
   $("#reviews").hidden = false;
@@ -2549,6 +2572,8 @@ function render() {
   else if (page === "reviews") html = viewReviews(new URLSearchParams(location.search).get("course") || "all");
   else html = viewNotFound();
   app.innerHTML = html;
+  setLD("ld-reviews", null); setLD("ld-faq", null);
+  if (page === "home") faqLD();
   if (page === "verify" && rest.length) runVerify(rest.join("-"));
   if (page === "cert" && mem.certs[rest[0]]) drawQR(mem.certs[rest[0]].code);
   if (page === "home" && location.hash === "#catalog") $("#catalog")?.scrollIntoView();
