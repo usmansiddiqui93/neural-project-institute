@@ -627,6 +627,7 @@ function LEGAL() {
       table: { head: ["Purpose", "Legal basis (GDPR)"], rows: [
         ["Giving you access, running assessments, issuing certificates", "Contract, Art. 6(1)(b)"],
         ["Publishing your review with your name, city, country, role and LinkedIn link", "Consent, Art. 6(1)(a): you can withdraw it at any time by emailing us"],
+        ["Course emails, such as a one-time reminder if you have not started your course", "Legitimate interest, Art. 6(1)(f), in helping you use the course you signed up for; you can unsubscribe at any time with the link in every email"],
         ["Publishing certificates in the public register so others can verify them", "Contract, Art. 6(1)(b): verification is part of the certificate service you request"],
         ["Accounting and tax records", "Legal obligation, Art. 6(1)(c)"],
         ["Keeping records of your consents and acceptance of the Terms", "Legal obligation and legitimate interest in proving compliance, Art. 6(1)(c) and (f)"],
@@ -635,7 +636,7 @@ function LEGAL() {
     { id: "register", h: "The public certificate register", plain: "Anyone with your certificate ID can see your name, certification, score and dates. Never your email.",
       body: [`When you claim a certificate, the following are published in our register and shown to anyone who enters the certificate ID or scans its QR code: your name, the certification, your score, the certificate ID, the issue and expiry dates, and the status. Your email is never shown. You can ask us to remove a register entry at any time; the certificate then can no longer be verified.`] },
     { id: "share", h: "Who we share it with", plain: "Only the service providers we need. We never sell your data.",
-      list: [`Stripe (payments). Stripe also acts as an independent controller for its own legal obligations.`, `Supabase (database hosting, EU region: Frankfurt, Germany).`, `Netlify (website hosting).`, `LinkedIn, only if you click "Add to LinkedIn".`, `Public authorities, only where the law requires.`], body: [`We don't sell your data or use it for advertising.`] },
+      list: [`Stripe (payments). Stripe also acts as an independent controller for its own legal obligations.`, `Supabase (database hosting, EU region: Frankfurt, Germany).`, `Resend (email delivery), which sends course emails on our behalf.`, `Netlify (website hosting).`, `LinkedIn, only if you click "Add to LinkedIn".`, `Public authorities, only where the law requires.`], body: [`We don't sell your data or use it for advertising.`] },
     { id: "transfer", h: "Transfers outside the EU", plain: "We are a US company, so data goes to the US. Transfers are protected by approved safeguards.",
       body: [`We are a US company, and some of our providers are based in the United States, so your data is transferred to and processed in the US. Our database is hosted in the EU (Frankfurt). Transfers to the US rely on the EU–US Data Privacy Framework where the recipient is certified, or on the European Commission's Standard Contractual Clauses.`] },
     { id: "keep", h: "How long we keep it", plain: "Purchase records for 10 years (tax law); certificates for 10 years unless you ask us to delete them.",
@@ -1763,6 +1764,7 @@ function askLearner(reason, then) {
       <label class="field" id="lfUni">University<input id="lfUniversity" type="text" maxlength="100" value="${esc(L.university)}"></label>
       <label class="field"><span>LinkedIn profile <span class="muted" style="font-weight:400">· recommended, shown next to your review</span></span><input id="lfLinkedIn" type="text" inputmode="url" autocapitalize="off" spellcheck="false" maxlength="160" placeholder="https://www.linkedin.com/in/your-name" value="${esc(L.linkedin)}"></label>
       <label class="consent"><input type="checkbox" id="lfPrivacy" required${L.country ? " checked" : ""}><span>I agree that the ${esc(CONFIG.brand)} stores these details to run my account and certificates, as described in the <a href="/privacy/" target="_blank">Privacy Policy</a>. Nothing is published without my separate consent.</span></label>
+      <p class="muted" style="font-size:.8rem;margin:-4px 0 0">We may email you about your course, for example a one-time reminder if you haven't started. Every email has a one-click unsubscribe link.</p>
       <p id="lfErr" class="muted" role="alert"></p>
       <div class="row"><button class="btn primary" type="submit">${FREE && !owns("all") ? "Create account and start" : "Save and continue"}</button><button class="btn ghost" type="button" data-close>Cancel</button></div>
     </form>`, (box, close) => {
@@ -2010,7 +2012,13 @@ function viewCourse(id) {
 }
 
 let player = { slide: 0, mode: "slides" };
+function logActivity(courseId) {
+  if (!LIVE || !mem.learner?.email) return;
+  try { if (sessionStorage.getItem("npi_act_" + courseId)) return; sessionStorage.setItem("npi_act_" + courseId, "1") } catch {}
+  rpc("log_activity", { p_email: mem.learner.email, p_course_id: courseId }).catch(e => console.warn(e));
+}
 function viewLearn(id, i) {
+  setTimeout(() => logActivity(id), 0);
   const c = byId(id), ch = c?.chapters[i]; if (!ch) return viewNotFound();
   if (!canOpen(c, i)) return `<div class="crumbs"><a href="#course-${id}">${esc(c.name)}</a></div><div class="stack" style="max-width:520px"><h2>This chapter is locked</h2><p class="muted">Get PMAI to open all chapters of every course and earn the certificates.</p><div class="row"><button class="btn primary" data-buy="all">${ctaLabel()}</button><a class="btn ghost" href="#course-${id}">Back to course</a></div></div>`;
   const head = `<div class="crumbs"><a href="#course-${id}">${esc(c.name)}</a> / Chapter ${i + 1}</div>
@@ -2472,7 +2480,7 @@ const DEMO_ADMIN = (() => { const d = (n) => new Date(Date.now() - n * 864e5).to
 async function adminLoad() {
   if (!LIVE) { adminData = DEMO_ADMIN; return }
   adminData = await rpc("admin_overview", { p_key: adminKey.get() });
-  try { adminData.learners = await rpc("admin_learners", { p_key: adminKey.get() }) || [] } catch (e) { adminData.learners = [] }
+  try { adminData.learners = await rpc("admin_learners_v2", { p_key: adminKey.get() }).catch(() => rpc("admin_learners", { p_key: adminKey.get() })) || [] } catch (e) { adminData.learners = [] }
   try { adminData.reviews = await rpc("admin_reviews_v3", { p_key: adminKey.get() }) || [] } catch (e0) { try { adminData.reviews = await rpc("admin_reviews_v2", { p_key: adminKey.get() }) || [] } catch (e) { try { adminData.reviews = await rpc("admin_reviews", { p_key: adminKey.get() }) || [] } catch (e2) { adminData.reviews = [] } } }
 }
 const fmtMoney = (cents, cur) => (cur || "usd").toUpperCase() === "USD" ? "$" + (cents / 100).toFixed(2) : (cents / 100).toFixed(2) + " " + (cur || "").toUpperCase();
@@ -2511,8 +2519,8 @@ function viewAdmin() {
   if (adminTab === "students") table = `<table><thead><tr><th>Name</th><th>Email</th><th>Purchased</th><th>Status</th><th>Refund window</th><th>Valid certs</th><th>PMAI</th></tr></thead><tbody>
     ${S.filter(hit).map(s => `<tr><td>${esc(s.name || "—")}</td><td class="mono">${esc(s.email)}</td><td>${shortDate(s.first)}</td><td>${chip(s.status, s.status === "Active" ? "ok" : "bad")}</td>
       <td>${s.refundEligible ? chip("Eligible", "mile") : `<span class="muted">—</span>`}</td><td class="mono">${s.validCerts}/7</td><td>${s.pmai ? chip("Awarded", "ok") : ""}</td></tr>`).join("") || `<tr><td colspan="7" class="muted">No students yet. They appear here after their first payment.</td></tr>`}</tbody></table>`;
-  if (adminTab === "learners") { const Ls = adminData.learners || []; table = Ls.length ? `<table><thead><tr><th>Joined</th><th>Name</th><th>Email</th><th>Location</th><th>Status</th><th>Role</th><th>University</th><th>LinkedIn</th><th>Certs</th></tr></thead><tbody>
-    ${Ls.filter(hit).map(l => `<tr><td>${shortDate(l.created_at)}</td><td>${esc(l.full_name)}</td><td>${esc(l.email)}</td><td>${esc([l.city, l.country].filter(Boolean).join(", "))}</td><td>${esc(l.job_status || "")}</td><td>${esc([l.job_title, l.company].filter(Boolean).join(", "))}</td><td>${esc(l.university || "")}</td><td>${l.linkedin_url ? `<a href="${esc(l.linkedin_url)}" target="_blank" rel="noopener">Profile</a>` : ""}</td><td>${l.certificates}</td></tr>`).join("")}</tbody></table>` : `<p class="muted" style="padding:16px">No learner profiles yet.</p>` }
+  if (adminTab === "learners") { const Ls = adminData.learners || []; table = Ls.length ? `<table><thead><tr><th>Joined</th><th>Name</th><th>Email</th><th>Location</th><th>Status</th><th>Role</th><th>University</th><th>LinkedIn</th><th>Certs</th><th>Started</th><th>Reminder</th></tr></thead><tbody>
+    ${Ls.filter(hit).map(l => `<tr><td>${shortDate(l.created_at)}</td><td>${esc(l.full_name)}</td><td>${esc(l.email)}</td><td>${esc([l.city, l.country].filter(Boolean).join(", "))}</td><td>${esc(l.job_status || "")}</td><td>${esc([l.job_title, l.company].filter(Boolean).join(", "))}</td><td>${esc(l.university || "")}</td><td>${l.linkedin_url ? `<a href="${esc(l.linkedin_url)}" target="_blank" rel="noopener">Profile</a>` : ""}</td><td>${l.certificates}</td><td>${l.started_at ? shortDate(l.started_at) : `<span class="muted">Not yet</span>`}</td><td>${l.unsubscribed_at ? chip("Unsubscribed", "bad") : l.last_reminder_at ? shortDate(l.last_reminder_at) : ""}</td></tr>`).join("")}</tbody></table>` : `<p class="muted" style="padding:16px">No learner profiles yet.</p>` }
   if (adminTab === "reviews") { const R = adminData.reviews || []; table = R.length ? `<table><thead><tr><th>Date</th><th>Name</th><th>Certification</th><th>Rating</th><th>Review</th><th>Status</th><th></th></tr></thead><tbody>
     ${R.filter(hit).map(r => `<tr><td>${shortDate(r.created_at)}</td><td>${esc(r.display_name)}${r.job_line || r.city ? `<br><small class="muted">${esc([r.job_line, [r.city, r.country].filter(Boolean).join(", ")].filter(Boolean).join(" · "))}</small>` : ""}${r.linkedin_url ? ` <a href="${esc(r.linkedin_url)}" target="_blank" rel="noopener">in</a>` : ""}<br><a class="mono" style="font-size:.75rem" href="/verify/?id=${esc(r.cert_code)}">${esc(r.cert_code)}</a></td><td>${esc(r.course_title || "")}${r.incentivized ? `<br>${chip("Free access", "mile")}` : ""}</td><td>${stars(r.rating)}</td><td style="max-width:420px">${esc(r.body)}</td>
       <td>${chip(r.status, r.status === "approved" ? "ok" : r.status === "rejected" ? "bad" : "mile")}</td>
@@ -2543,7 +2551,7 @@ const viewNotFound = () => `<h2>Page not found</h2><p style="margin-top:12px"><a
 
 /* ---------- Router ---------- */
 let lastRoute = "";
-const PATHS = { verify: "/verify/", reviews: "/reviews/", terms: "/terms/", privacy: "/privacy/", legal: "/legal-notice/" };
+const PATHS = { unsubscribe: "/unsubscribe/", verify: "/verify/", reviews: "/reviews/", terms: "/terms/", privacy: "/privacy/", legal: "/legal-notice/" };
 const PATH_ROUTE = Object.fromEntries(Object.entries(PATHS).map(([k, v]) => [v, k]));
 function render() {
   if (location.hash === "#home" || location.hash === "#") { try { history.replaceState(null, "", location.pathname + location.search) } catch {} }
@@ -2572,6 +2580,7 @@ function render() {
   else if (page === "cert") html = viewCert(rest[0]);
   else if (page === "verify") html = viewVerify(rest.join("-"));
   else if (page === "dashboard") html = viewDashboard();
+  else if (page === "unsubscribe") html = `<div class="stack" style="max-width:560px;gap:14px"><span class="eyebrow">Email preferences</span><h1>Unsubscribe</h1><div id="unsubBox"><p class="muted">Updating your preferences…</p></div></div>`;
   else if (page === "reviews") html = viewReviews(new URLSearchParams(location.search).get("course") || "all");
   else html = viewNotFound();
   app.innerHTML = html;
@@ -2582,6 +2591,11 @@ function render() {
   if (page === "home" && location.hash === "#catalog") $("#catalog")?.scrollIntoView();
   if (page === "home" || page === "paid") { loadReviews(); loadEnrolled() }
   runCountdowns();
+  if (page === "unsubscribe") (async () => { const box = $("#unsubBox"), t = new URLSearchParams(location.search).get("t") || "";
+    if (!/^[0-9a-f-]{36}$/i.test(t)) { box.innerHTML = `<p>This unsubscribe link is incomplete. Please use the link from your email, or write to <a href="mailto:${esc(CONFIG.contactEmail)}">${esc(CONFIG.contactEmail)}</a>.</p>`; return }
+    try { const r = LIVE ? await rpc("unsubscribe_learner", { p_token: t }) : "ok";
+      box.innerHTML = r === "ok" ? `<div class="result pass"><h3>You're unsubscribed</h3><p>We won't send you course reminder emails any more. Your account, courses and certificates are not affected.</p></div><p><a class="btn" href="/">Back to the homepage</a></p>` : `<p>We couldn't find that link. It may already have been used. If you keep getting emails, write to <a href="mailto:${esc(CONFIG.contactEmail)}">${esc(CONFIG.contactEmail)}</a>.</p>` }
+    catch (e) { box.innerHTML = `<p>Something went wrong. Please try again or write to <a href="mailto:${esc(CONFIG.contactEmail)}">${esc(CONFIG.contactEmail)}</a>.</p>` } })();
   if (page === "reviews") loadAllReviews(new URLSearchParams(location.search).get("course") || "all");
 }
 
@@ -2602,7 +2616,7 @@ document.addEventListener("click", async e => {
     const S = adminStudents(), P = adminData.purchases, C = adminData.certificates, day = new Date().toISOString().slice(0, 10);
     if (adminTab === "students") csvDownload(`students-${day}.csv`, [["Name", "Email", "First purchase", "Status", "Refund window", "Valid certificates", "PMAI"], ...S.map(s => [s.name, s.email, s.first, s.status, s.refundEligible ? "Eligible" : "", s.validCerts, s.pmai ? "Yes" : ""])]);
     if (adminTab === "payments") csvDownload(`payments-${day}.csv`, [["Date", "Name", "Email", "Amount", "Currency", "Terms accepted", "Refunded at", "Stripe session"], ...P.map(p => [p.created_at, p.customer_name, p.email, (p.amount_total || 0) / 100, p.currency, p.terms_accepted ? "Yes" : "No", p.refunded_at || "", p.stripe_session_id])]);
-    if (adminTab === "learners") csvDownload(`learners-${day}.csv`, [["Joined", "Name", "Email", "Country", "City", "Status", "Job title", "Company", "University", "LinkedIn", "Certificates"], ...(adminData.learners || []).map(l => [l.created_at, l.full_name, l.email, l.country, l.city, l.job_status, l.job_title, l.company, l.university, l.linkedin_url, l.certificates])]);
+    if (adminTab === "learners") csvDownload(`learners-${day}.csv`, [["Joined", "Name", "Email", "Country", "City", "Status", "Job title", "Company", "University", "LinkedIn", "Certificates", "Started", "Reminder sent", "Unsubscribed"], ...(adminData.learners || []).map(l => [l.created_at, l.full_name, l.email, l.country, l.city, l.job_status, l.job_title, l.company, l.university, l.linkedin_url, l.certificates, l.started_at || "", l.last_reminder_at || "", l.unsubscribed_at || ""])]);
     if (adminTab === "reviews") csvDownload(`reviews-${day}.csv`, [["Date", "Name", "Certificate ID", "Certification", "Rating", "Review", "Status"], ...(adminData.reviews || []).map(r => [r.created_at, r.display_name, r.cert_code, r.course_title, r.rating, r.body, r.status])]);
     if (adminTab === "certificates") csvDownload(`certificates-${day}.csv`, [["Certificate ID", "Holder", "Email", "Certification", "Score", "Issued", "Valid until", "Status", "Terms version"], ...C.map(c => [c.code, c.full_name, c.email, c.course_title, c.score, c.issued_at, expiryOf(c).toISOString(), certState(c), c.terms_version || ""])]);
     return;
@@ -2645,7 +2659,7 @@ document.addEventListener("submit", async e => {
     if (ans.includes(null)) return toast("Answer every question first.");
     const score = ans.filter((a, k) => a === ch.quiz[k].c).length;
     quizState = { ans, score, done: true };
-    const pr = mem.progress[id] || (mem.progress[id] = {}); pr[i] = Math.max(pr[i] ?? 0, score); save();
+    const pr = mem.progress[id] || (mem.progress[id] = {}); pr[i] = Math.max(pr[i] ?? 0, score); save(); logActivity(id);
     if (!mem.learner && score >= CONFIG.passMark && owns(id)) toast("Passed. Add your details under My learning to keep a record.");
     render(); $(".result")?.scrollIntoView({ block: "center" });
   }
