@@ -312,3 +312,6 @@ div.card { cursor: default }
 .tpl-shot { margin: 0 }
 .tpl-shot img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 10px; background: #fff; box-shadow: 0 24px 50px -28px rgba(15, 30, 40, .55), 0 2px 6px -2px rgba(15, 30, 40, .12) }
 @media (max-width: 900px) { .tplhead.has-shot { display: flex; flex-direction: column; align-items: stretch; gap: 0 } .tplhead.has-shot .tplhead-text { display: contents } .tplhead.has-shot .tpl-shot { order: 1; margin: 4px 0 18px } .tplhead.has-shot .tplhead-text > :last-child { order: 2 } }
+
+/* In-article subheadings */
+.abody section > h3 { margin: 30px 0 8px; font-size: 1.22rem; line-height: 1.3; scroll-margin-top: 90px }
