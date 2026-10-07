@@ -323,3 +323,8 @@ div.card { cursor: default }
 .shot .credit { white-space: nowrap; font-size: .8rem } .shot .credit a { color: inherit }
 header.ahead + .shot { max-width: 980px; margin: 4px 0 28px }
 .credit-note { font-size: .8rem; margin-top: 18px }
+/* Review header with screenshot on the side */
+.reviewhead.has-shot { grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); align-items: center }
+.reviewhead .tpl-shot.shot { margin: 0 }
+.reviewhead .tpl-shot.shot img { box-shadow: 0 24px 50px -28px rgba(15, 30, 40, .55) }
+.reviewhead .lead { font-size: 1.05rem }
