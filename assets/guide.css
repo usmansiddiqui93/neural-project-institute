@@ -305,3 +305,9 @@ div.card { cursor: default }
 .foot-li svg { color: #0a66c2 } .foot-li:hover { border-color: #0a66c2; color: #0a66c2 }
 
 .ctabox .pmai-def { margin: -4px 0 8px; font: 500 .74rem/1.4 var(--f-mono); letter-spacing: .06em; text-transform: uppercase; opacity: .75 }
+
+/* Template PDF preview image */
+.tpl-shot { margin: 6px 0 22px; }
+.tpl-shot a { display: block; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: #fff; box-shadow: 0 14px 34px -22px rgba(15, 30, 40, .45); transition: transform .18s ease, box-shadow .18s ease }
+.tpl-shot a:hover { transform: translateY(-2px); box-shadow: 0 20px 40px -22px rgba(15, 30, 40, .55) }
+.tpl-shot img { display: block; width: 100%; height: auto }
