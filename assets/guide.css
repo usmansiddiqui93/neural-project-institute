@@ -328,3 +328,13 @@ header.ahead + .shot { max-width: 980px; margin: 4px 0 28px }
 .reviewhead .tpl-shot.shot { margin: 0 }
 .reviewhead .tpl-shot.shot img { box-shadow: 0 24px 50px -28px rgba(15, 30, 40, .55) }
 .reviewhead .lead { font-size: 1.05rem }
+
+/* Read next box */
+.readnext { margin: 14px 0 22px; padding: 14px 16px 16px; border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 12px; background: var(--surface, #fff); box-shadow: 0 10px 26px -22px rgba(15, 30, 40, .5) }
+.readnext .rn-eye { display: block; font: 600 .7rem/1 var(--f-mono, monospace); letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px }
+.readnext .rn-links { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 8px }
+.readnext a { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 11px 14px; border-radius: 9px; background: var(--sunk, #eef1ee); color: var(--ink); text-decoration: none; transition: background .15s, transform .15s }
+.readnext a b { font-weight: 600; font-size: .95rem; line-height: 1.35 }
+.readnext a i { font-style: normal; color: var(--accent); transition: transform .15s }
+.readnext a:hover { background: color-mix(in srgb, var(--accent) 12%, var(--sunk, #eef1ee)) }
+.readnext a:hover i { transform: translateX(3px) }
