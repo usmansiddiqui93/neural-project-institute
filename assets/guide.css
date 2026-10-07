@@ -338,3 +338,9 @@ header.ahead + .shot { max-width: 980px; margin: 4px 0 28px }
 .readnext a i { font-style: normal; color: var(--accent); transition: transform .15s }
 .readnext a:hover { background: color-mix(in srgb, var(--accent) 12%, var(--sunk, #eef1ee)) }
 .readnext a:hover i { transform: translateX(3px) }
+
+.tplcard.has-thumb { padding: 0 0 14px; overflow: hidden }
+.tplcard.has-thumb > b, .tplcard.has-thumb > span:not(.tplthumb), .tplcard.has-thumb > em { padding: 0 16px }
+.tplthumb { display: block; aspect-ratio: 16/10; overflow: hidden; background: #f4f5f3; border-bottom: 1px solid var(--line); margin-bottom: 6px }
+.tplthumb img { width: 100%; height: 100%; object-fit: cover; object-position: top left; display: block; transition: transform .25s }
+.tplcard.has-thumb:hover .tplthumb img { transform: scale(1.03) }
