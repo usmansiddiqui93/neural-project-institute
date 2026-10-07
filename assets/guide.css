@@ -306,7 +306,9 @@ div.card { cursor: default }
 
 .ctabox .pmai-def { margin: -4px 0 8px; font: 500 .74rem/1.4 var(--f-mono); letter-spacing: .06em; text-transform: uppercase; opacity: .75 }
 
-/* Template PDF preview image */
-.tpl-shot { margin: 6px 0 22px; }
-.tpl-shot img { display: block; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: #fff; box-shadow: 0 14px 34px -22px rgba(15, 30, 40, .45); transition: transform .18s ease, box-shadow .18s ease }
-.tpl-shot img { display: block; width: 100%; height: auto }
+/* Template preview image (above the fold) */
+.tplhead.has-shot { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 44px; align-items: center; max-width: none }
+.tplhead.has-shot h1 { font-size: clamp(2rem, 3.6vw, 3rem) }
+.tpl-shot { margin: 0 }
+.tpl-shot img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 10px; background: #fff; box-shadow: 0 24px 50px -28px rgba(15, 30, 40, .55), 0 2px 6px -2px rgba(15, 30, 40, .12) }
+@media (max-width: 900px) { .tplhead.has-shot { display: flex; flex-direction: column; align-items: stretch; gap: 0 } .tplhead.has-shot .tplhead-text { display: contents } .tplhead.has-shot .tpl-shot { order: 1; margin: 4px 0 18px } .tplhead.has-shot .tplhead-text > :last-child { order: 2 } }
