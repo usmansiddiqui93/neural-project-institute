@@ -1654,8 +1654,10 @@ const $ = (s, r = document) => r.querySelector(s);
 const app = $("#app");
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const money = n => CONFIG.currency + n;
+const REGION = (() => { try { return { "Asia/Karachi": "PK", "Asia/Kolkata": "IN", "Asia/Calcutta": "IN", "Asia/Dhaka": "BD" }[Intl.DateTimeFormat().resolvedOptions().timeZone] || "" } catch { return "" } })();
+const bundleMoney = () => { const lp = (CONFIG.localPrices || {})[REGION]; if (!lp) return money(CONFIG.bundlePrice); try { return new Intl.NumberFormat("en", { style: "currency", currency: lp[0], maximumFractionDigits: 0 }).format(lp[1]) } catch { return lp[0] + " " + lp[1] } };
 const FREE = !!CONFIG.freePromo;
-const ctaLabel = () => FREE ? `<span class="cdn" aria-label="Get PMAI for free, regular price ${money(CONFIG.regularPrice)}">Get PMAI for <span class="cdn-num" aria-hidden="true">${money(CONFIG.regularPrice)}</span><span class="cdn-ok" aria-hidden="true">✓</span></span>` : `Get PMAI for ${money(CONFIG.bundlePrice)}`;
+const ctaLabel = () => FREE ? `<span class="cdn" aria-label="Get PMAI for free, regular price ${money(CONFIG.regularPrice)}">Get PMAI for <span class="cdn-num" aria-hidden="true">${money(CONFIG.regularPrice)}</span><span class="cdn-ok" aria-hidden="true">✓</span></span>` : `Get PMAI for ${bundleMoney()}`;
 function runCountdowns() {
   const els = [...document.querySelectorAll(".cdn:not([data-run])")]; if (!els.length) return;
   const from = CONFIG.regularPrice, fin = el => { el.querySelector(".cdn-num").textContent = CONFIG.currency + "0"; el.classList.add("done") };
@@ -1667,7 +1669,7 @@ function runCountdowns() {
       if (k < 1) requestAnimationFrame(step); else els.forEach(fin) };
     requestAnimationFrame(step) }, 500);
 }
-const priceHTML = () => FREE ? `<span class="promo-price"><s>${money(CONFIG.regularPrice)}</s><b>Free</b><em>for a limited time</em></span>` : `<span class="price">${money(CONFIG.bundlePrice)}</span>`;
+const priceHTML = () => FREE ? `<span class="promo-price"><s>${money(CONFIG.regularPrice)}</s><b>Free</b><em>for a limited time</em></span>` : `<span class="price">${bundleMoney()}</span>`;
 const byId = id => id === "pmai" ? PMAI : COURSES.find(c => c.id === id);
 const certTitle = c => `${c.name}: ${c.title}`;
 const fmtDate = d => new Date(d).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
@@ -1871,9 +1873,9 @@ function buy(id) {
     const link = CONFIG.stripeLinks[id];
     if (LIVE && link) {
       const u = new URL(link); u.searchParams.set("prefilled_email", mem.learner.email); u.searchParams.set("client_reference_id", id);
-      modal(`<h3>Get PMAI: ${money(CONFIG.bundlePrice)}</h3><p class="muted">Checkout opens in a new tab with Stripe. When it's done, come back here and press <b>I've paid</b>. Access is linked to <b>${esc(mem.learner.email)}</b>.</p>
+      modal(`<h3>Get PMAI: ${bundleMoney()}</h3><p class="muted">Checkout opens in a new tab with Stripe. When it's done, come back here and press <b>I've paid</b>. Access is linked to <b>${esc(mem.learner.email)}</b>.</p>
         ${consentHTML()}
-        <div class="row"><a class="btn primary" id="payLink" href="${esc(u.toString())}" target="_blank" rel="noopener">Pay ${money(CONFIG.bundlePrice)} with Stripe</a>
+        <div class="row"><a class="btn primary" id="payLink" href="${esc(u.toString())}" target="_blank" rel="noopener">Pay ${bundleMoney()} with Stripe</a>
         <button class="btn ghost" id="paidBtn">I've paid</button></div>`, (box, close) => {
         wireConsent(box, ["#payLink"]);
         box.querySelector("#payLink").addEventListener("click", e => { if (![...box.querySelectorAll(".cbox")].every(b => b.checked)) { e.preventDefault(); toast("Tick all three boxes to continue.") } });
@@ -1882,7 +1884,7 @@ function buy(id) {
     } else if (LIVE) {
       modal(`<h3>Enrolment opens soon</h3><p class="muted">Online payment for this certification is being set up. Please check back shortly.</p><div class="row"><button class="btn primary" data-close>OK</button></div>`);
     } else {
-      modal(`<h3>Test checkout: PMAI ${money(CONFIG.bundlePrice)}</h3><p class="muted">Payments aren't connected yet, so this unlocks all courses for testing only. On the live site, this button opens real Stripe checkout.</p>
+      modal(`<h3>Test checkout: PMAI ${bundleMoney()}</h3><p class="muted">Payments aren't connected yet, so this unlocks all courses for testing only. On the live site, this button opens real Stripe checkout.</p>
         ${consentHTML()}
         <div class="row"><button class="btn primary" id="mockPay">Unlock for testing</button><button class="btn ghost" data-close>Cancel</button></div>`, (box, close) => {
         wireConsent(box, ["#mockPay"]);
@@ -1938,7 +1940,7 @@ function viewHome() {
     <div class="hero-copy">
       <span class="eyebrow">Neural Project Institute · Est. ${CONFIG.founded}</span>
       <h1>Plan it. Deliver it. Prove it with a certificate anyone can verify.</h1>
-      <p class="lede">Six self-paced certifications covering modern project management, from scope and the critical path to Scrum, risk, leadership and AI. Pass each chapter's quiz to earn a certificate per course, then the complete PMAI (Project Management Artificial Intelligence) certification. ${FREE ? `Free for a limited time (regular price ${money(CONFIG.regularPrice)}): sign up and everything is unlocked.` : `One payment of ${money(CONFIG.bundlePrice)} covers everything.`}</p>
+      <p class="lede">Six self-paced certifications covering modern project management, from scope and the critical path to Scrum, risk, leadership and AI. Pass each chapter's quiz to earn a certificate per course, then the complete PMAI (Project Management Artificial Intelligence) certification. ${FREE ? `Free for a limited time (regular price ${money(CONFIG.regularPrice)}): sign up and everything is unlocked.` : `One payment of ${bundleMoney()} covers everything.`}</p>
       <div class="row"><button class="btn primary" data-buy="all">${ctaLabel()}</button><a class="btn" href="#courses">Browse the courses</a>${FREE ? "" : `<a class="btn ghost" href="#course-pmf">Try a free chapter</a>`}</div>${FREE ? `<p class="cta-note">Limited-time offer · no card needed · keep your access after the offer ends</p>` : ""}
       <div class="facts">
         <div id="enrolStat" hidden><b></b><span>learners enrolled</span></div>
@@ -1958,7 +1960,7 @@ function viewHome() {
     <span class="eyebrow">How it works</span>
     <h2 style="margin-top:10px">From first slide to verified certificate</h2>
     <div class="steps">
-      <div class="step"><span class="n">Step 1</span><h3>Enrol</h3><p>${FREE ? `Sign up free (regular price ${money(CONFIG.regularPrice)}) to unlock all ${COURSES.length} courses.` : `Get PMAI for ${money(CONFIG.bundlePrice)} to unlock all ${COURSES.length} courses.`} Chapter 1 of every course is free to try.</p></div>
+      <div class="step"><span class="n">Step 1</span><h3>Enrol</h3><p>${FREE ? `Sign up free (regular price ${money(CONFIG.regularPrice)}) to unlock all ${COURSES.length} courses.` : `Get PMAI for ${bundleMoney()} to unlock all ${COURSES.length} courses.`} Chapter 1 of every course is free to try.</p></div>
       <div class="step"><span class="n">Step 2</span><h3>Learn</h3><p>Work through short slide chapters at your own pace, on any device.</p></div>
       <div class="step"><span class="n">Step 3</span><h3>Pass the quizzes</h3><p>Score ${CONFIG.passMark} of 3 or better on each chapter quiz. Retakes are unlimited.</p></div>
       <div class="step"><span class="n">Step 4</span><h3>Get certified</h3><p>Your certificate gets a unique ID and QR code that employers can check. It stays valid for ${CONFIG.validityMonths} months, then you renew.</p></div>
@@ -2041,7 +2043,7 @@ function viewCatalog() {
   return `<div class="crumbs"><a href="/">Home</a> / Courses</div>
   <span class="eyebrow">Certifications</span><h1 style="margin-top:10px">All courses</h1>
   <div class="grid-courses">${COURSES.map(courseCard).join("")}</div>
-  <div class="bundle"><div class="stack"><span class="eyebrow" style="color:inherit;opacity:.7">The complete certification</span><h2>PMAI</h2><p class="pmai-full">Project Management Artificial Intelligence</p><p class="muted">All ${COURSES.length} courses and their certificates ${FREE ? `free for a limited time (regular price ${money(CONFIG.regularPrice)})` : `for ${money(CONFIG.bundlePrice)}`}. Pass every course to earn the PMAI certificate.</p></div>
+  <div class="bundle"><div class="stack"><span class="eyebrow" style="color:inherit;opacity:.7">The complete certification</span><h2>PMAI</h2><p class="pmai-full">Project Management Artificial Intelligence</p><p class="muted">All ${COURSES.length} courses and their certificates ${FREE ? `free for a limited time (regular price ${money(CONFIG.regularPrice)})` : `for ${bundleMoney()}`}. Pass every course to earn the PMAI certificate.</p></div>
   <div>${owns("all") ? `<a class="btn primary" href="#cert-pmai">PMAI certificate</a>` : `<button class="btn primary" data-buy="all">${ctaLabel()}</button>`}</div></div>`;
 }
 
@@ -2066,7 +2068,7 @@ function viewCourse(id) {
       ${cert ? `<span class="chip mile" style="align-self:flex-start">Certified</span><p>Issued ${fmtDate(cert.issued_at)}. ${certState(cert) === "expired" ? `Expired ${fmtDate(expiryOf(cert))}.` : `Valid until ${fmtDate(expiryOf(cert))}.`}</p><a class="btn primary" href="#cert-${id}">View certificate</a>`
       : o ? `<span class="eyebrow">Your progress</span><div class="price">${d} / ${c.chapters.length} chapters</div><div class="bar"><i style="width:${d / c.chapters.length * 100}%"></i></div>
         ${complete(c) ? `<a class="btn primary" href="#cert-${id}">Claim certificate</a>` : `<a class="btn primary" href="#learn-${id}-${Math.max(0, c.chapters.findIndex((_, i) => !passed(id, i)))}">Continue learning</a>`}`
-      : `<span class="eyebrow">Included in PMAI</span>${FREE ? priceHTML() : `<div class="price">${money(CONFIG.bundlePrice)}</div>`}<p class="muted" style="font-size:.92rem">${FREE ? "Free sign-up" : "One PMAI payment"} unlocks this course and all ${COURSES.length - 1} others, with quizzes and verifiable certificates.</p>${FREE ? "" : `<span class="chip ok" style="align-self:flex-start">10-day refund guarantee</span>`}
+      : `<span class="eyebrow">Included in PMAI</span>${FREE ? priceHTML() : `<div class="price">${bundleMoney()}</div>`}<p class="muted" style="font-size:.92rem">${FREE ? "Free sign-up" : "One PMAI payment"} unlocks this course and all ${COURSES.length - 1} others, with quizzes and verifiable certificates.</p>${FREE ? "" : `<span class="chip ok" style="align-self:flex-start">10-day refund guarantee</span>`}
         <button class="btn primary" data-buy="all">Get PMAI</button><a class="btn ghost" href="#learn-${id}-0">Try chapter 1 free</a>`}
     </aside>
   </div>`;
@@ -2425,7 +2427,7 @@ function viewAbout() {
       <div class="table-wrap" style="margin-top:18px"><table><thead><tr><th>Code</th><th>Certification</th><th>Subject</th><th>Level</th><th>Chapters</th></tr></thead><tbody>
       ${COURSES.map(c => `<tr><td class="mono">${c.code}</td><td><a href="#course-${c.id}">${esc(c.name)}</a></td><td>${esc(c.title)}</td><td>${c.level}</td><td class="mono">${c.chapters.length}</td></tr>`).join("")}
       </tbody></table></div>
-      <p class="muted" style="margin-top:12px">Passing all ${COURSES.length} earns the PMAI certificate, the Institute’s complete certification (${FREE ? "free for a limited time" : money(CONFIG.bundlePrice)}).</p>
+      <p class="muted" style="margin-top:12px">Passing all ${COURSES.length} earns the PMAI certificate, the Institute’s complete certification (${FREE ? "free for a limited time" : bundleMoney()}).</p>
     </div>
     <div>
       <h2>How we certify</h2>
@@ -2491,7 +2493,7 @@ function viewGuide(id) {
   <div class="stack" style="max-width:72ch;margin-bottom:36px"><span class="eyebrow">${esc(eyebrow)}</span><h1 style="font-size:clamp(2rem,4.6vw,3.1rem)">${esc(g.title)}</h1>${n ? `<p class="muted" style="font-size:1.12rem">${esc(g.summary)}</p>` : ""}</div>
   <div class="article">
     <div class="body">${sec}
-      <div class="cta-card"><span class="eyebrow">Covered in PMAI · ${c.code}</span><h3>${esc(c.name)}: ${esc(c.title)}</h3><p class="muted">${esc(c.short)} Part of the PMAI certification: all ${COURSES.length} courses ${FREE ? "free for a limited time" : `for ${money(CONFIG.bundlePrice)}`}.</p>
+      <div class="cta-card"><span class="eyebrow">Covered in PMAI · ${c.code}</span><h3>${esc(c.name)}: ${esc(c.title)}</h3><p class="muted">${esc(c.short)} Part of the PMAI certification: all ${COURSES.length} courses ${FREE ? "free for a limited time" : `for ${bundleMoney()}`}.</p>
         <div class="row"><a class="btn primary" href="#course-${c.id}">View course</a><a class="btn ghost" href="#learn-${c.id}-0">Try chapter 1 free</a></div></div>
       ${nav}
     </div>
@@ -2507,7 +2509,7 @@ function viewLegal(kind) {
   const fill = s => String(s).replace(/\{(\w+)\}/g, (m, id) => L.tnum[id] ?? m);
   const missing = !CONFIG.legalName || !CONFIG.stateOfFormation || !CONFIG.address || !CONFIG.contactEmail || CONFIG.contactEmail.includes("example.com");
   const intro = {
-    terms: `<div class="callout"><b>The short version.</b> ${FREE ? `PMAI is currently free for a limited time; while the offer runs you pay nothing and` : `You pay ${money(CONFIG.bundlePrice)} once for PMAI and`} get all six courses for at least 24 months. If you're not happy, you can get a full refund within 10 days of purchase, as long as you haven't claimed a certificate. You study on your own initiative and at your own risk; the content is general education, not professional advice. Certificates are our own certificates of completion, valid for ${CONFIG.validityMonths} months. If something is faulty, we fix it or refund you as the law requires. To the extent the law allows, our liability is limited to what you paid.</div>`,
+    terms: `<div class="callout"><b>The short version.</b> ${FREE ? `PMAI is currently free for a limited time; while the offer runs you pay nothing and` : `You pay ${bundleMoney()} once for PMAI and`} get all six courses for at least 24 months. If you're not happy, you can get a full refund within 10 days of purchase, as long as you haven't claimed a certificate. You study on your own initiative and at your own risk; the content is general education, not professional advice. Certificates are our own certificates of completion, valid for ${CONFIG.validityMonths} months. If something is faulty, we fix it or refund you as the law requires. To the extent the law allows, our liability is limited to what you paid.</div>`,
     privacy: `<div class="callout"><b>The short version.</b> We keep only your name, email, purchase and certificate records. We use them to give you access and verify certificates. Your name appears in the public register when you claim a certificate; your email never does. Analytics cookies are used only if you accept them. You can ask to see or delete your data at any time.</div>`,
     notice: ""
   }[kind];
