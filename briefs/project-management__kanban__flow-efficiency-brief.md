@@ -160,7 +160,7 @@ Intro: define flow efficiency in the first sentence (share of an item's time in 
 - Wrike custom statuses and dashboards (our #1), Jira CFD and control charts, dedicated Kanban analytics tools; Kanban board template, workflow template, root cause analysis template.
 
 ## Internal links (planned)
-/project-management/kanban/what-is-kanban/, /project-management/kanban/kanban-metrics/, /project-management/kanban/cycle-time/, /project-management/kanban/cycle-time-vs-lead-time/, /project-management/kanban/throughput/, /project-management/kanban/wip-limits/, /project-management/kanban/cumulative-flow-diagram/, /project-management/kanban/wip-aging-chart/, /project-management/kanban/blocker-clustering/, /project-management/kanban/value-stream-mapping/, /project-management/kanban/theory-of-constraints/, /project-management/kanban/kanban-boards/, /project-management/kanban/lean-kanban/, /project-management/kanban/pull-system-vs-push-system/, /project-management/kanban/kanban-principles/, /project-management/agile/agile-swarming/, /project-management/agile/user-stories/, /project-management/lean-project-management/, /project-management/capacity-planning/, /templates/kanban-board-template/, /templates/workflow-template/, /templates/root-cause-analysis-template/, /project-management-tools/wrike/, /project-management-tools/jira/
+/project-management/kanban/kanban-metrics/, /project-management/kanban/cycle-time/, /project-management/kanban/cycle-time-vs-lead-time/, /project-management/kanban/throughput/, /project-management/kanban/wip-limits/, /project-management/kanban/cumulative-flow-diagram/, /project-management/kanban/wip-aging-chart/, /project-management/kanban/blocker-clustering/, /project-management/kanban/value-stream-mapping/, /project-management/kanban/theory-of-constraints/, /project-management/kanban/kanban-boards/, /project-management/kanban/lean-kanban/, /project-management/kanban/pull-system-vs-push-system/, /project-management/agile/agile-swarming/, /project-management/agile/user-stories/, /project-management/lean-project-management/, /project-management/capacity-planning/, /templates/kanban-board-template/, /templates/workflow-template/, /templates/root-cause-analysis-template/, /project-management-tools/wrike/, /project-management-tools/jira/ (22 links)
 
 ## FAQs (from PAA and related searches)
 1. What is flow efficiency?
@@ -169,13 +169,13 @@ Intro: define flow efficiency in the first sentence (share of an item's time in 
 4. Is flow efficiency the same as resource utilisation?
 5. What is the difference between flow efficiency and cycle time?
 6. Should blocked time count as active time?
-7. Should I use lead time or cycle time to calculate flow efficiency?
-8. Is flow efficiency an official Kanban metric?
-9. What is the difference between flow efficiency and process cycle efficiency?
-10. How do you improve flow efficiency?
-11. Is high flow efficiency always good?
-12. Can you compare flow efficiency between teams?
-13. Does value stream mapping measure flow efficiency?
+7. Is flow efficiency an official Kanban metric?
+8. What is the difference between flow efficiency and process cycle efficiency?
+9. How do you improve flow efficiency?
+10. Can you compare flow efficiency between teams?
+11. Does value stream mapping measure flow efficiency?
+
+(Cycle time vs lead time as denominator and "is high flow efficiency always good" are answered in the body.)
 
 ## Writer notes
 - Label all worked examples as illustrative. Do not present quoted "typical" percentages as research; attribute and flag them as anecdotal.

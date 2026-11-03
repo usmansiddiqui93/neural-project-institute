@@ -108,7 +108,7 @@ Intro: answer the query in the first sentence (Waterfall plans the whole project
 - Not mutually exclusive.
 
 ## H2: Kanban vs Waterfall comparison table
-- 12–14 rows: what it is, planning, structure, scope, change, delivery, roles, cadence, progress measures, documentation, customer involvement, risk, typical tools, best for.
+- 14 rows: what it is, planning, structure, scope, change, delivery, roles, cadence, progress measures, documentation, customer involvement, risk, typical tools, best for.
 
 ## H2: What is Waterfall?
 - Phases, gates, baseline, change control; Royce 1970 nuance; link to Waterfall guide.
@@ -146,10 +146,10 @@ Intro: answer the query in the first sentence (Waterfall plans the whole project
 - 7–8 bullets.
 
 ## H2: Tools and templates for Kanban, Waterfall and hybrid work
-- Wrike (Gantt with critical path and baselines from Team plan, board view even on Free), monday.com, Smartsheet, Jira (boards and CFD; no classic Gantt with critical path and baselines), Trello (simple boards). Templates: Gantt chart, Kanban board, project plan, change request, project schedule.
+- Wrike (Gantt with critical path and baselines from Team plan, board view even on Free), monday.com, Smartsheet, Jira (boards and CFD; no classic Gantt with critical path and baselines), Trello (simple boards, mentioned without link to stay within 25 links). Templates: Gantt chart, Kanban board, project plan, change request, project schedule.
 
 ## Internal links (planned)
-/project-management/waterfall-project-management/, /project-management/kanban/what-is-kanban/, /project-management/kanban/kanban-principles/, /project-management/kanban/kanban-boards/, /project-management/kanban/wip-limits/, /project-management/kanban/kanban-metrics/, /project-management/kanban/cycle-time/, /project-management/kanban/throughput/, /project-management/kanban/cumulative-flow-diagram/, /project-management/kanban/kanban-planning/, /project-management/kanban/kanban-swimlanes/, /project-management/kanban/kanban-vs-scrum/, /project-management/kanban/kanban-vs-agile/, /project-management/scrum/scrum-vs-waterfall/, /project-management/agile/agile-vs-waterfall/, /project-management/project-management-methodologies/, /project-management/project-management-phases/, /project-management/change-control/, /project-management/project-baseline/, /project-management/earned-value-management/, /project-management/gantt-chart/, /project-management/project-milestones/, /project-management/agile/definition-of-done/, /templates/gantt-chart-template/, /templates/kanban-board-template/, /templates/change-request-template/, /project-management-tools/wrike/, /project-management-tools/jira/, /project-management-tools/monday/, /project-management-tools/smartsheet/, /project-management-tools/trello/
+/project-management/waterfall-project-management/, /project-management/kanban/what-is-kanban/, /project-management/kanban/kanban-principles/, /project-management/kanban/kanban-boards/, /project-management/kanban/kanban-planning/, /project-management/kanban/wip-limits/, /project-management/kanban/cycle-time/, /project-management/kanban/throughput/, /project-management/kanban/cumulative-flow-diagram/, /project-management/kanban/kanban-vs-scrum/, /project-management/scrum/scrum-vs-waterfall/, /project-management/agile/agile-vs-waterfall/, /project-management/agile/definition-of-done/, /project-management/change-control/, /project-management/project-baseline/, /project-management/earned-value-management/, /project-management/gantt-chart/, /templates/gantt-chart-template/, /templates/kanban-board-template/, /templates/change-request-template/, /project-management-tools/wrike/, /project-management-tools/monday/, /project-management-tools/smartsheet/, /project-management-tools/jira/ (24 links)
 
 ## FAQs (from PAA and related searches)
 1. What is the difference between Kanban and Waterfall?
@@ -165,7 +165,7 @@ Intro: answer the query in the first sentence (Waterfall plans the whole project
 11. Does Kanban have deadlines?
 12. Which is cheaper?
 13. How do you move from Waterfall to Kanban?
-14. Is Kanban suitable for construction projects?
+14. Can Kanban be used in construction projects?
 
 ## Writer notes
 - Label worked examples as illustrative; no invented adoption statistics.
