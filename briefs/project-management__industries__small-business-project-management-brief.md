@@ -115,6 +115,9 @@ Small business project management made simple: an 8-step process, worked example
 ### H2: Who does what in a small business
 - Roles table; one-page RACI.
 
+### H2: Working with freelancers and suppliers
+- Six numbered habits (brief, written dates and staged payments, lead times, guest access, midway check, contact list).
+
 ### H2: Methods that fit small businesses
 - Table (Kanban, simple Gantt, light Agile, checklists, Lean).
 
@@ -152,9 +155,9 @@ Small business project management made simple: an 8-step process, worked example
 
 ## Internal Links Planned (from en_urls.txt)
 
-Guides: /project-management/project-charter/, /project-management/work-breakdown-structure/, /project-management/raci-matrix/, /project-management/kanban/kanban-boards/, /project-management/gantt-chart/, /project-management/managing-multiple-projects/, /project-management/scope-creep/, /project-management/project-budget/, /project-management/lessons-learned/, /project-management/how-to-choose-project-management-software/, /project-management/kanban/wip-limits/, /project-management/agile/what-is-agile-project-management/.
+Guides: /project-management/project-charter/, /project-management/work-breakdown-structure/, /project-management/raci-matrix/, /project-management/kanban/kanban-boards/, /project-management/gantt-chart/, /project-management/managing-multiple-projects/, /project-management/scope-creep/, /project-management/project-budget/, /project-management/how-to-choose-project-management-software/, /project-management/kanban/wip-limits/, /project-management/agile/what-is-agile-project-management/.
 Templates: /templates/project-plan-template/, /templates/kanban-board-template/, /templates/budget-template/, /templates/project-cost-estimate-template/, /templates/project-proposal-template/, /templates/change-request-template/, /templates/risk-register-template/, /templates/priority-list-template/.
-Tools: /project-management-tools/wrike/, /project-management-tools/trello/, /project-management-tools/basecamp/, /project-management-tools/clickup/, /project-management-tools/monday/ (and Asana, Microsoft Planner in the table if within the 25-link limit).
+Tools: /project-management-tools/wrike/, /project-management-tools/trello/, /project-management-tools/basecamp/, /project-management-tools/clickup/, /project-management-tools/monday/, /project-management-tools/microsoft-planner/ (Asana appears in the price table without a link to stay within 25 links).
 
 ## Writer Notes
 
