@@ -87,7 +87,7 @@ What is business project management; benefits; phases (initiation, planning, exe
 
 ## Meta Description
 
-Business project management explained: types of projects, the business case, prioritisation, phases, roles, benefits realisation, a worked example and tools. (≈155 characters)
+Business project management explained: project types, the business case, prioritisation, phases, roles, benefits realisation, a worked example and tools. (153 characters)
 
 ## Outline (target about 4,000 words)
 
@@ -105,6 +105,9 @@ Intro: definition first; what the guide covers.
 
 ### H2: How to manage a business project step by step
 - 10-step OL.
+
+### H2: What to include in a business case
+- Table of sections (problem, strategic fit, options, costs, benefits, financial return, risks, plan, recommendation) with tips; revisit at each gate.
 
 ### H2: How to prioritise projects against strategy
 - Weighted scoring method, worked table with 4 projects; mandatory projects; capacity limit; OKR template link.
@@ -142,12 +145,12 @@ Intro: definition first; what the guide covers.
 ### H2: Skills and certification for business project managers
 - Skills; PMP (exam updated July 2026: People 33%, Process 41%, Business Environment 26%; eligibility); PRINCE2; PMAI.
 
-### Internal links planned (25, all from en_urls.txt)
+### Internal links planned (24, all from en_urls.txt)
 Guides: project-management-phases, cost-benefit-analysis, return-on-investment, net-present-value, change-control, managing-multiple-projects, project-management-office-pmo, prince2, agile/agile-vs-waterfall, lean-project-management, project-stakeholder-management, resource-allocation, pmp-certification, project-management-tools.
 Templates: business-case, okr, raid-log, change-request, project-tracker.
 Tools: wrike, monday, asana.
 Industries: small-business, enterprise.
-Read-next boxes: cost-benefit analysis, PMO, tool rankings.
+Read-next boxes: cost-benefit analysis, PMO, PRINCE2 / Agile vs Waterfall, tool rankings.
 
 ### FAQs (12)
 1. What is business project management?
