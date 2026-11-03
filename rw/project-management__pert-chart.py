@@ -113,7 +113,7 @@ RW = dict(
                 "a key person off sick, a slow supplier), not disasters, which belong in the "
                 "[risk register](/templates/risk-register-template/).",
                 "**Use history where you have it.** Actual durations from similar past activities are better than "
-                "memory; [expert judgment](/project-management/expert-judgment/) fills the gaps.",
+                "memory; expert judgment fills the gaps.",
                 "**Record assumptions** with each estimate so you can revisit them when conditions change.",
                 "**Challenge narrow ranges.** If O, M and P are almost identical on new work, the team may be "
                 "underestimating uncertainty.",
@@ -407,6 +407,13 @@ RW = dict(
         ("Can PERT be used in Agile?",
          "Not usually as a full network, but three-point estimates are useful for release forecasts and for "
          "communicating uncertainty to stakeholders."),
+        ("What is the difference between PERT and three-point estimating?",
+         "Three-point estimating is the general idea of using optimistic, most likely and pessimistic values. PERT is "
+         "one way of combining them, with the most likely value weighted four times; the triangular average, "
+         "(O + M + P) / 3, is another."),
+        ("What confidence level should I commit to?",
+         "It depends on the cost of being late. Many teams plan internally to the expected duration and commit "
+         "externally to an 80% or 90% date, holding the difference as schedule contingency."),
         ("Who invented PERT?",
          "The US Navy's Special Projects Office developed it in 1958 with Lockheed and Booz Allen Hamilton, to "
          "manage the Polaris missile programme."),
