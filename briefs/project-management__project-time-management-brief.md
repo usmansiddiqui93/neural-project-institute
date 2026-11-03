@@ -116,7 +116,7 @@ Project time management explained: the six processes, estimating and scheduling 
 - H3 for each of six steps: plan schedule management (table of plan contents), define activities, sequence activities (four dependency types), estimate durations (analogous, parametric, three-point; formula), develop the schedule (CPM, resources, compression, baseline), control the schedule (cadence, thresholds, change control).
 
 ### H2: Worked example: scheduling an expense system rollout
-- Illustrative eight-step network with three-point estimates (table), forward/backward pass results (table), critical path and float, PERT standard deviation and a commitment date, Gantt view description.
+- Illustrative eight-activity network with three-point estimates (table), forward/backward pass results (table), critical path and float, PERT standard deviation and a commitment date, Gantt view description.
 
 ### H2: Worked example: controlling the schedule with earned value
 - Old page's numbers (PV $80,000, EV $68,000, week 8 of 20): SV, SV%, SPI, naive forecast; then split the shortfall between critical and non-critical work and show the better forecast and actions.
