@@ -128,15 +128,21 @@ Integrated master plan (IMP) explained: events, accomplishments and criteria, IM
 ### H2: Using an IMP outside defence
 - Lightweight version with example; tools.
 
+### H2: Who does what on an IMP and IMS
+- Roles table: customer programme office, contractor PM, IPT leads, planners, control account managers, systems engineering lead.
+
+### H2: IMP review checklist
+- Numbered pre-submission/approval checks.
+
 ### H2: Benefits and limitations
 
 ### H2: Common IMP and IMS mistakes
 
-### FAQ (12–13)
+### FAQ (13)
 
 ## Internal Links Planned
-- Guides: work-breakdown-structure, work-package, statement-of-work, earned-value-management, project-milestones, project-scheduling, critical-path-method, task-dependencies, leads-and-lags, float-and-slack, project-baseline, monte-carlo-simulation, project-roadmap, program-vs-project-vs-portfolio-management, industries/government-project-management, industries/engineering-project-management, project-risk-management, change-control, gantt-chart
-- Templates: project-schedule-template, work-breakdown-structure-template, gantt-chart-template
+- Guides: work-breakdown-structure, work-package, statement-of-work, earned-value-management, project-milestones, project-scheduling, critical-path-method, task-dependencies, leads-and-lags, float-and-slack, project-baseline, monte-carlo-simulation, project-roadmap, program-vs-project-vs-portfolio-management, industries/government-project-management, industries/engineering-project-management, project-risk-management, change-control
+- Templates: project-schedule-template, work-breakdown-structure-template
 - Tools: wrike, smartsheet, microsoft-planner
 - "Read next" boxes: work breakdown structure, earned value management, critical path method
 
