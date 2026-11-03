@@ -28,8 +28,8 @@ RW = dict(
             "chart shows the likely finish date and how confident you can be in it.",
             "The term is used in two slightly different ways. The **PERT chart** is the picture: boxes or circles "
             "joined by arrows. The **PERT estimate** or PERT analysis is the arithmetic behind it. Most practical "
-            "uses combine both, and the chart is a type of "
-            "[project network diagram](/project-management/project-network-diagram/).",
+            "uses combine both. See our guide to the "
+            "[project network diagram](/project-management/project-network-diagram/) for the general layout.",
             "PERT charts come in two notations:",
             T(
                 ["", "Activity on node (AON)", "Activity on arrow (AOA)"],
@@ -137,6 +137,7 @@ RW = dict(
                 "**Check near-critical paths** and, for important commitments, run a simulation.",
                 "**Set contingency and baseline the schedule,** then update estimates as work progresses.",
             ),
+            "Read our guide to [Monte Carlo simulation](/project-management/monte-carlo-simulation/) before step 9 if you have not run one before.",
         ),
         S(
             "Worked example: launching a customer portal",
