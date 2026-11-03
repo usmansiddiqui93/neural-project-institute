@@ -89,7 +89,7 @@ Content gaps we can fill:
 
 ## Meta Description
 
-Project management software features explained: the essential and advanced features, what good looks like, which plans include them and a scoring checklist. (155 characters)
+Project management software features explained: the essential and advanced features, what good looks like, which plans have them and a scoring checklist. (153 characters)
 
 ## Outline (target 3,600 to 3,900 words including FAQ)
 
@@ -100,8 +100,7 @@ Project management software features explained: the essential and advanced featu
 - Three tiers: core (individual and team work), team coordination, organisation-level (resources, portfolios, governance).
 - Features solve problems; the same feature can be shallow or deep.
 
-### H2: Essential and advanced features at a glance
-- Table: feature, what it does, who needs it, plan tier where it usually appears.
+(An "Essential and advanced features at a glance" table was considered; to stay within 4,000 words, its plan-tier information is folded into the tier table above and the "Where key features start, by plan" table below.)
 
 ### H2: Planning and scheduling features
 - H3 Task management (owners, dates, priorities, subtasks, custom fields, recurring tasks).
@@ -154,17 +153,16 @@ Project management software features explained: the essential and advanced featu
 ### FAQ (12)
 1. What are the key features of project management software?
 2. What are the five most important project management software features?
-3. What is the most important feature?
-4. Which project management software has the most features?
-5. Is a Gantt chart a must-have?
-6. What is workload management?
-7. Is time tracking a must-have?
-8. Are AI features worth paying for?
-9. Which features matter for Agile teams?
-10. Which features matter for agencies?
-11. Do free plans include the essential features?
-12. What security features should I look for?
-13. How do I compare features across tools?
+3. Which project management software has the most features?
+4. Is a Gantt chart a must-have?
+5. What is workload management?
+6. Is time tracking a must-have?
+7. Are AI features worth paying for?
+8. Which features matter for Agile teams?
+9. Which features matter for agencies?
+10. Do free plans include the essential features?
+11. What security features should I look for?
+12. How do I compare features across tools?
 
 ## Internal Links Planned (from en_urls.txt)
 
