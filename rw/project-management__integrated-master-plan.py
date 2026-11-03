@@ -336,6 +336,44 @@ RW = dict(
             "baselines and the critical path for teams already using Microsoft 365.",
         ),
         S(
+            "Who does what on an IMP and IMS",
+            "Because the IMP and IMS span the whole programme, responsibilities need to be clear from the start. A "
+            "typical split on a large contract looks like this:",
+            T(
+                ["Role", "Responsibilities"],
+                ["Customer programme office", "Sets requirements and IMP guidance, evaluates the IMP in the proposal, approves it and runs event reviews"],
+                ["Contractor programme manager", "Owns the IMP, agrees events with the customer and decides when the programme is ready for each event"],
+                ["Integrated product team (IPT) leads", "Write the accomplishments and criteria for their area and plan the tasks beneath them"],
+                ["Planners and schedulers", "Maintain numbering, build and validate the IMS logic, run critical path and schedule risk analysis"],
+                ["Control account managers", "Link IMS tasks to work packages and budgets, and report earned value"],
+                ["Systems engineering lead", "Checks that events and criteria reflect real technical maturity and trace to requirements"],
+            ),
+            "This is a programme-level way of working. If you are unsure where project management ends and programme "
+            "management begins, see our comparison of "
+            "[programme, project and portfolio management](/project-management/program-vs-project-vs-portfolio-management/). "
+            "Our guide to [engineering project management](/project-management/industries/engineering-project-management/) "
+            "covers the design review cycle that most IMP events are built around.",
+        ),
+        S(
+            "IMP review checklist",
+            "Before you submit an IMP, or approve one as the customer, work through these checks:",
+            OL(
+                "**Coverage:** every SOW requirement and WBS element is covered by at least one criterion.",
+                "**Events:** each event is a real decision point, with two or more accomplishments spanning the "
+                "disciplines involved.",
+                "**Criteria:** each criterion is a yes/no test with named evidence (a document, approval, test result "
+                "or delivery) and is not expressed as a percentage.",
+                "**Wording:** IMP items use past participles, every verb is defined in the Event and Action "
+                "Dictionary, and the IMS milestones repeat the IMP wording exactly.",
+                "**Numbering:** IDs follow one scheme, are unique and carry WBS codes.",
+                "**Dates:** any dates in the IMP are marked as information only.",
+                "**Narratives:** process narratives are short and do not commit the contractor to more than the "
+                "contract requires.",
+                "**Schedule link:** every criterion has tasks beneath it in the IMS, and the IMS logic produces a "
+                "credible date for every event.",
+            ),
+        ),
+        S(
             "Benefits and limitations",
             T(
                 ["Benefits", "Limitations"],
