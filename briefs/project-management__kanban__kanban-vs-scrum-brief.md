@@ -174,8 +174,9 @@ Kanban vs Scrum compared: cadence, roles, planning, WIP limits and metrics, the 
 10. Can you change priorities mid-Sprint in Scrum?
 11. Is Jira Kanban or Scrum?
 12. Which is better for small teams?
-13. What is the difference between Kanban, Scrum and Scrumban?
-14. How long does it take to switch from Scrum to Kanban?
+13. How long does it take to switch from Scrum to Kanban?
+
+(Kanban vs Scrum vs Scrumban is answered in the "Using Kanban and Scrum together" section and on the sister page rather than as an FAQ, to avoid duplicating the Scrumban page.)
 
 ## Writer Notes
 

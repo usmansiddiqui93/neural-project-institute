@@ -23,8 +23,8 @@ RW = dict(
     sections=[
         S("Kanban vs Scrum: what is the difference?",
           "**The main difference between Kanban and Scrum is how they organise time.** Scrum divides work into "
-          "fixed-length Sprints, each with a goal, planning, a review and a retrospective, and is run by a Product "
-          "Owner, a Scrum Master and Developers. Kanban has no Sprints and no required roles: work flows continuously "
+          "fixed-length Sprints, each with a goal, planning, a review and a retrospective, and defines three "
+          "accountabilities. Kanban has no Sprints and no required roles: work flows continuously "
           "across a board, and WIP limits control how much is in progress.",
           "Both are Agile in spirit, draw on Lean thinking and rely on transparency and frequent inspection, which "
           "is why teams often mix them. The differences matter most when work is interrupted, when priorities "
@@ -118,8 +118,8 @@ RW = dict(
             ["Improving the process", "Sprint Retrospective, up to 3 hours for a one-month Sprint", "Operations review, risk review and team retrospectives"],
             ["Direction", "Product Goal, managed by the Product Owner", "Strategy review, often quarterly"],
           ),
-          "See [Kanban ceremonies](/project-management/kanban/kanban-ceremonies/) and "
-          "[Scrum ceremonies](/project-management/scrum/scrum-ceremonies/) for agendas and timings.",
+          "Our guides to [Kanban ceremonies](/project-management/kanban/kanban-ceremonies/) and "
+          "[Scrum ceremonies](/project-management/scrum/scrum-ceremonies/) give agendas and timings.",
         ),
         S("Kanban board vs Scrum board",
           "Both boards show cards in columns, so they can look identical. The rules behind them differ:",
@@ -268,8 +268,8 @@ RW = dict(
             "**Agree what happens to Scrum roles.** The Product Owner often keeps ordering work and the Scrum Master often coaches flow; nobody needs a new title.",
             "**Review after six to eight weeks**, comparing cycle time, throughput and interruptions with your Sprint data.",
           ),
-          "If you would rather keep Sprints while you test Kanban practices, a staged hybrid is a gentler route. "
-          "See our guide to [Kanban vs Scrumban](/project-management/kanban/kanban-vs-scrumban/).",
+          "If you would rather keep Sprints while you test Kanban practices, a staged hybrid such as Scrumban is a "
+          "gentler route, covered under using Kanban and Scrum together below.",
         ),
         S("How to move from Kanban to Scrum",
           "Teams move the other way when they start a new product, need clearer goals, or want a regular demo for "

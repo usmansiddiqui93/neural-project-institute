@@ -123,6 +123,8 @@ Kanban vs Scrumban explained: what Scrumban takes from Scrum, how its planning t
 
 **H2: Worked example: moving a Scrum team to Scrumban** (illustrative) Three-stage table and lessons.
 
+**H2: Scrumban beyond software: a marketing example** (illustrative) Content team with sales requests; trigger, board, bottleneck exposed by WIP limit. Link: Agile marketing.
+
 **H2: How to set up Scrumban step by step** OL.
 
 **H2: Is it Kanban or Scrumban? A quick test** Table of practices; nuance about Kanban cadences.
@@ -139,7 +141,7 @@ Kanban vs Scrumban explained: what Scrumban takes from Scrum, how its planning t
 
 ## Internal Links (planned)
 
-/project-management/kanban/kanban-vs-scrum/ (Read next), /project-management/kanban/what-is-kanban/, /project-management/scrum/what-is-scrum/, /project-management/kanban/kanban-principles/, /project-management/kanban/wip-limits/, /project-management/kanban/kanban-swimlanes/, /project-management/kanban/pull-system-vs-push-system/, /project-management/kanban/kanban-planning/, /project-management/kanban/throughput/, /project-management/kanban/cycle-time-vs-lead-time/, /project-management/kanban/wip-aging-chart/, /project-management/kanban/kanban-ceremonies/, /project-management/scrum/sprint-retrospective/, /project-management/scrum/backlog-refinement/, /project-management/agile/definition-of-done/, /project-management/scrum/scrum-story-points/, /project-management/agile/agile-operations-it/, /templates/kanban-board-template/, /templates/sprint-retrospective-template/, /templates/workflow-template/, /project-management-tools/wrike/, /project-management-tools/jira/, /project-management-tools/clickup/.
+/project-management/kanban/kanban-vs-scrum/ (Read next), /project-management/kanban/what-is-kanban/, /project-management/scrum/what-is-scrum/, /project-management/kanban/kanban-principles/, /project-management/kanban/wip-limits/, /project-management/kanban/kanban-swimlanes/, /project-management/kanban/pull-system-vs-push-system/, /project-management/kanban/kanban-planning/, /project-management/kanban/throughput/, /project-management/kanban/cycle-time-vs-lead-time/, /project-management/kanban/wip-aging-chart/, /project-management/kanban/kanban-ceremonies/, /project-management/scrum/sprint-retrospective/, /project-management/scrum/backlog-refinement/, /project-management/agile/definition-of-done/, /project-management/scrum/scrum-story-points/, /project-management/agile/agile-operations-it/, /project-management/agile/agile-marketing/, /templates/kanban-board-template/, /templates/sprint-retrospective-template/, /templates/workflow-template/, /project-management-tools/wrike/, /project-management-tools/jira/, /project-management-tools/clickup/.
 
 ## FAQs
 
@@ -155,7 +157,8 @@ Kanban vs Scrumban explained: what Scrumban takes from Scrum, how its planning t
 10. Is Scrumban agile?
 11. Can a Kanban team move to Scrumban?
 12. Does Scrumban use WIP limits?
-13. Which teams use Scrumban?
+13. How long does it take to move from Scrum to Scrumban?
+14. Which teams use Scrumban?
 
 ## Writer Notes
 
