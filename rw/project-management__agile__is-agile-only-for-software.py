@@ -43,7 +43,7 @@ RW = dict(
                 "**Lean and Kanban came from manufacturing.** Flow, waste reduction, pull systems and visual boards grew out of the Toyota Production System. See our guide to [Lean manufacturing](/project-management/kanban/lean-manufacturing/).",
                 "**Iterative development predates the Manifesto.** Iterative and incremental approaches were used on engineering programmes from the late 1950s, decades before the word Agile was adopted. Our [history of Agile](/project-management/agile/history-of-agile/) gives the full timeline.",
             ),
-            "The 2020 Scrum Guide is explicit about this. Its authors write that Scrum is being adopted \"in many domains holding essentially complex work, beyond software product development where Scrum has its roots\", and that \"we use the word 'developers' in Scrum not to exclude, but to simplify. If you get value from Scrum, consider yourself included.\" The 2020 revision also removed software-specific terminology. See [what is Scrum](/project-management/scrum/what-is-scrum/) for the framework itself.",
+            "The 2020 Scrum Guide is explicit about this. Its authors write that Scrum is being adopted \"in many domains holding essentially complex work, beyond software product development where Scrum has its roots\", and that \"we use the word 'developers' in Scrum not to exclude, but to simplify. If you get value from Scrum, consider yourself included.\" The 2020 revision also removed software-specific terminology. Our guide to [what Scrum is](/project-management/scrum/what-is-scrum/) explains the framework itself.",
         ),
         S(
             "Translating the Agile Manifesto for non-software work",
@@ -90,7 +90,7 @@ RW = dict(
                 ["Construction", "Lean construction and short-interval planning such as the Last Planner System"],
             ),
             H3("Government"),
-            "In the UK, the government's Service Standard, which public services are assessed against, includes point 7, \"Use agile ways of working\", and point 8, \"Iterate and improve frequently\". In the US, the Digital Services Playbook's fourth play is \"Build the service using agile and iterative practices\". These standards are written for digital services, but the teams applying them include policy specialists, content designers, user researchers and operations staff, not only developers. See [government project management](/project-management/industries/government-project-management/).",
+            "In the UK, the government's Service Standard, which public services are assessed against, includes point 7, \"Use agile ways of working\", and point 8, \"Iterate and improve frequently\". In the US, the Digital Services Playbook's fourth play is \"Build the service using agile and iterative practices\". These standards are written for digital services, but the teams applying them include policy specialists, content designers, user researchers and operations staff, not only developers. Our guide to [government project management](/project-management/industries/government-project-management/) covers the wider context.",
             H3("Hardware and manufacturing"),
             "Physical products have long lead times, so teams iterate on what can change quickly: designs, simulations, prototypes and test plans. One frequently cited example is Saab's Gripen fighter programme. According to the book Doing Agile Right (Rigby, Elk and Berez, 2020), as reported by Acquisition Talk, Saab's aeronautics business created more than 100 Agile teams across software, hardware and fuselage, coordinated through a common rhythm of three-week sprints.",
             H3("Marketing"),
@@ -139,7 +139,7 @@ RW = dict(
                 ["Change", "New work can enter whenever capacity frees up", "Changes wait for the next sprint unless urgent", "Change control for the backbone; backlog for the rest"],
                 ["Starting effort", "Low: start with your current process", "Medium: new events and roles", "Medium to high: two ways of planning to align"],
             ),
-            "Kanban is usually the easiest start because you begin with the process you already have and improve it. Scrum works well when a team does project-like work with a clear owner who can set priorities. See [Kanban vs Scrum](/project-management/kanban/kanban-vs-scrum/) for a fuller comparison, and [what is Kanban](/project-management/kanban/what-is-kanban/) if you are new to it.",
+            "Kanban is usually the easiest start because you begin with the process you already have and improve it. Scrum works well when a team does project-like work with a clear owner who can set priorities. Our [Kanban vs Scrum comparison](/project-management/kanban/kanban-vs-scrum/) goes into more depth, and [what is Kanban](/project-management/kanban/what-is-kanban/) covers the basics if you are new to it.",
         ),
         S(
             "Worked example: an HR recruitment team on Kanban",
@@ -244,6 +244,8 @@ RW = dict(
         ("Is Agile used in government?", "Yes. The UK government's Service Standard asks teams to use agile ways of working and iterate frequently, and the US Digital Services Playbook includes building services using agile and iterative practices."),
         ("Can Agile work in manufacturing and hardware development?", "Yes. Teams iterate on designs, simulations and prototypes, while Lean and Kanban are long established on the shop floor. Saab's Gripen programme is a frequently cited example of Agile at scale in hardware."),
         ("What is business agility?", "The ability of a whole organisation, not just its delivery teams, to sense change and respond quickly with new products, services or ways of working, supported by funding, governance and leadership that allow it."),
+        ("Do you need special software to use Agile outside software?", "No. Many teams start with a whiteboard, sticky notes or a shared spreadsheet. Project management tools help once work is shared across locations or teams, because they keep the board, requests and reporting in one place."),
+        ("Is Agile only for small teams?", "No. Agile teams are usually small (the Scrum Guide suggests 10 or fewer people), but larger organisations coordinate many such teams, as Saab does with a common sprint rhythm. Scaling frameworks exist for this, though most non-software teams should start with one team."),
         ("How long does it take a non-software team to adopt Agile?", "A single team can see whether basic practices help within a six- to eight-week pilot. Changing approvals, funding and culture across an organisation takes much longer and works best when built on early team results."),
     ],
 )

@@ -141,7 +141,7 @@ Is Agile only for software? No. See how marketing, HR, finance, government and h
 ### H2: Tools for non-software Agile teams
 - Wrike (#1), monday.com, Asana, Trello, ClickUp; Jira note, consistent with review pages.
 
-### H2 (auto): FAQ (13 questions)
+### H2 (auto): FAQ (15 questions)
 
 1. Is Agile only for software development?
 2. Can Scrum be used for non-software projects?
@@ -155,7 +155,9 @@ Is Agile only for software? No. See how marketing, HR, finance, government and h
 10. Is Agile used in government?
 11. Can Agile work in manufacturing and hardware development?
 12. What is business agility?
-13. How long does it take a non-software team to adopt Agile?
+13. Do you need special software to use Agile outside software?
+14. Is Agile only for small teams?
+15. How long does it take a non-software team to adopt Agile?
 
 ## Internal Links Planned (from en_urls.txt)
 
