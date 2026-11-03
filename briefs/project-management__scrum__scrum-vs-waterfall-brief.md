@@ -119,6 +119,9 @@ Scrum vs Waterfall compared: planning, roles, change, testing and risk, the same
 ### H2: Scrum vs Waterfall comparison table
 - 14–16 rows.
 
+### H2: Pros and cons of Scrum and Waterfall
+- Table: advantages, disadvantages, biggest risk, how to reduce it.
+
 ### H2: The key differences explained
 - H3s: planning; scope, time and cost (iron triangle inverted); delivery and value; roles; change; testing and quality; risk; documentation; stakeholder involvement; measuring progress; contracts and budgets.
 
@@ -149,34 +152,35 @@ Scrum vs Waterfall compared: planning, roles, change, testing and risk, the same
 ### H2: Tools for Scrum, Waterfall and hybrid projects
 - Wrike (Gantt with baselines + boards; good for hybrid), Jira (Scrum software teams), Smartsheet (Gantt/plan-driven), monday.com, ClickUp, Asana; templates.
 
-## Internal Links Planned
+## Internal Links Planned (25, as used in the rewrite)
 
-- /project-management/waterfall-project-management/
-- /project-management/scrum/what-is-scrum/
-- /project-management/agile/agile-vs-waterfall/
-- /project-management/agile/agile-vs-scrum/
-- /project-management/kanban/kanban-vs-waterfall/
-- /project-management/scrum/scrum-team-roles/
-- /project-management/scrum/product-backlog/
-- /project-management/scrum/sprint-review/
-- /project-management/agile/definition-of-done/
-- /project-management/change-control/
-- /project-management/project-baseline/
-- /project-management/gantt-chart/
-- /project-management/project-requirements/
-- /project-management/scope-creep/
-- /project-management/agile/agile-release-planning/
-- /project-management/iterative-and-incremental-development/
-- /project-management/prince2/
-- /project-management/agile/role-of-the-project-plan-in-agile/
-- /project-management/agile/how-to-implement-agile/
-- /project-management/project-management-methodologies/
-- /project-management-tools/wrike/
+- /project-management-tools/clickup/
 - /project-management-tools/jira/
+- /project-management-tools/monday/
 - /project-management-tools/smartsheet/
+- /project-management-tools/wrike/
+- /project-management/agile/agile-release-planning/
+- /project-management/agile/agile-vs-scrum/
+- /project-management/agile/agile-vs-waterfall/
+- /project-management/agile/definition-of-done/
+- /project-management/agile/how-to-implement-agile/
+- /project-management/agile/role-of-the-project-plan-in-agile/
+- /project-management/change-control/
+- /project-management/gantt-chart/
+- /project-management/prince2/
+- /project-management/project-baseline/
+- /project-management/project-charter/
+- /project-management/scrum/product-backlog/
 - /project-management/scrum/scrum-software-tools/
-- /templates/product-backlog-template/
+- /project-management/scrum/scrum-team-roles/
+- /project-management/scrum/sprint-review/
+- /project-management/scrum/what-is-scrum/
+- /project-management/waterfall-project-management/
 - /templates/gantt-chart-template/
+- /templates/product-backlog-template/
+- /templates/sprint-planning-template/
+
+Considered but left out to stay within 25: /project-management/kanban/kanban-vs-waterfall/, /project-management/scope-creep/, /project-management/project-requirements/, /project-management/iterative-and-incremental-development/, /project-management-tools/asana/.
 
 ## FAQs (13)
 
