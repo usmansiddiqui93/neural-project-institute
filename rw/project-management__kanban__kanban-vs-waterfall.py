@@ -47,7 +47,7 @@ RW = dict(
         ),
         S(
             "What is Waterfall?",
-            "Waterfall runs a project through a fixed series of [phases](/project-management/project-management-phases/), typically requirements, design, build, test, deployment and maintenance. Each phase produces approved deliverables that feed the next, and a phase gate lets sponsors check the work before money is committed to the next stage.",
+            "Waterfall runs a project through a fixed series of phases, typically requirements, design, build, test, deployment and maintenance. Each phase produces approved deliverables that feed the next, and a phase gate lets sponsors check the work before money is committed to the next stage.",
             "Scope, schedule and budget are planned in detail at the start and fixed in a [project baseline](/project-management/project-baseline/). Progress is tracked against that baseline, usually with a [Gantt chart](/project-management/gantt-chart/) and milestones, and changes go through formal [change control](/project-management/change-control/).",
             "The model is usually traced to Winston Royce's 1970 paper, which actually warned against a single pass and recommended feedback between phases. In practice, Waterfall's strength is predictability: everyone knows what will be built, when and for how much. Its weakness is late feedback, because users often see the result only near the end, when change is most expensive.",
         ),
@@ -189,9 +189,9 @@ RW = dict(
             "Many organisations need Waterfall's governance (business cases, budgets, phase gates, milestones) but want Kanban's visibility and flow for day-to-day work. A hybrid gives you both.",
             H3("Kanban inside Waterfall phases: step by step"),
             OL(
-                "**Keep the phase plan and milestones.** Leave your Gantt chart, [milestones](/project-management/project-milestones/) and gate reviews in place for sponsors.",
+                "**Keep the phase plan and milestones.** Leave your Gantt chart, milestones and gate reviews in place for sponsors.",
                 "**Turn work packages into cards.** Break each phase's work into items that take days rather than weeks, and put them in the phase backlog.",
-                "**Design the board.** Create columns for how work actually flows within the phase, and use [swimlanes](/project-management/kanban/kanban-swimlanes/) for phases or workstreams if several run at once.",
+                "**Design the board.** Create columns for how work actually flows within the phase, and use swimlanes for phases or workstreams if several run at once.",
                 "**Set WIP limits** on in-progress and review columns so the team finishes work before starting more.",
                 "**Make the gate a column.** Add an \"Awaiting approval\" column and agree a [definition of done](/project-management/agile/definition-of-done/) that matches the gate criteria.",
                 "**Hold a short daily board walk** from right to left, focusing on blocked and ageing items.",
@@ -231,7 +231,7 @@ RW = dict(
                 ["Change", "Change control", "Between sprints, via the Product Backlog", "Any time before work starts"],
                 ["Main measure", "Progress against baseline", "Sprint Goal and increments delivered", "Cycle time and throughput"],
             ),
-            "For the detail, read our comparisons of [Kanban vs Scrum](/project-management/kanban/kanban-vs-scrum/) and [Scrum vs Waterfall](/project-management/scrum/scrum-vs-waterfall/), and our overview of [project management methodologies](/project-management/project-management-methodologies/).",
+            "For the detail, read our comparisons of [Kanban vs Scrum](/project-management/kanban/kanban-vs-scrum/) and [Scrum vs Waterfall](/project-management/scrum/scrum-vs-waterfall/).",
         ),
         S(
             "Common mistakes when comparing or combining them",
@@ -254,7 +254,7 @@ RW = dict(
                 "**monday.com** shows the same board as a Kanban, table, timeline or Gantt view, which suits teams that want visual workflows with milestones; see our [monday.com review](/project-management-tools/monday/).",
                 "**Smartsheet** combines a spreadsheet-style plan and Gantt chart with a board view, which suits plan-driven teams that want to add Kanban; see our [Smartsheet review](/project-management-tools/smartsheet/).",
                 "**Jira** is strong for software Kanban, with WIP limits, cumulative flow diagrams and control charts, though it does not offer a classic Gantt chart with critical path and baselines; see our [Jira review](/project-management-tools/jira/).",
-                "**Trello** is a simple, quick way to start with Kanban boards for small teams; see our [Trello review](/project-management-tools/trello/).",
+                "**Trello** is a simple, quick way to start with Kanban boards for small teams.",
             ),
             "If you want to start on paper or in a spreadsheet, use our free [Gantt chart template](/templates/gantt-chart-template/) for the phase plan and milestones and our [Kanban board template](/templates/kanban-board-template/) for day-to-day work.",
             "Read our guide to [WIP limits](/project-management/kanban/wip-limits/) before you set up your first board, because they are what turn a board into a Kanban system.",
