@@ -173,6 +173,7 @@ Project network diagram explained: AON vs AOA, node notation, dummy activities, 
 - /project-management/resource-leveling/
 - /project-management/monte-carlo-simulation/
 - /project-management/project-baseline/
+- /project-management/hammock-activity/
 - /project-management-tools/wrike/
 - /project-management-tools/clickup/
 - /project-management-tools/smartsheet/
