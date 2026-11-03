@@ -103,7 +103,7 @@ Assistant Project Manager: Duties, Skills and Career Path (56 characters)
 
 ## Meta Description
 
-What an assistant project manager does: duties, skills, salary factors, a sample job description, worked example and a step-by-step path to project manager. (≤155 characters)
+What an assistant project manager does: duties, skills, salary factors, a sample job description, a worked example and a step-by-step path to PM. (145 characters)
 
 ## Recommended Length
 
@@ -122,6 +122,7 @@ What an assistant project manager does: duties, skills, salary factors, a sample
 
 ### H2: Assistant project manager vs project coordinator vs project manager
 - Comparison table: focus, ownership, decision-making, typical tasks, reports to, typical next step.
+- H3: Assistant, junior and associate project managers.
 - Decision rights table: decide alone / recommend / escalate.
 
 ### H2: Assistant project manager duties and responsibilities
@@ -129,6 +130,7 @@ What an assistant project manager does: duties, skills, salary factors, a sample
 
 ### H2: How the role differs by sector
 - Table: construction, IT/software, engineering/manufacturing, agency/creative, public sector.
+- H3: Assistant project managers in construction (vs site manager, project engineer).
 
 ### H2: A typical week
 - Expanded day-by-day table.
@@ -154,6 +156,9 @@ What an assistant project manager does: duties, skills, salary factors, a sample
 ### H2: How to step up from assistant project manager to project manager
 - 12-month plan table; evidence log; PMP experience.
 
+### H2: Your first 30 days as an assistant project manager
+- Week-by-week OL: learn the project, agree role, meet people, take over routines, one improvement, review.
+
 ### H2: CV bullets that show impact
 - Before/after table.
 
@@ -173,7 +178,7 @@ What an assistant project manager does: duties, skills, salary factors, a sample
 - Templates: /templates/raid-log-template/, /templates/project-tracker-template/, /templates/meeting-agenda-template/, /templates/project-schedule-template/
 - Tools: /project-management-tools/wrike/, /project-management-tools/smartsheet/, /project-management-tools/microsoft-planner/
 
-## FAQs (14)
+## FAQs (15)
 
 1. What does an assistant project manager do?
 2. Is assistant project manager an entry-level job?
@@ -188,7 +193,8 @@ What an assistant project manager does: duties, skills, salary factors, a sample
 11. What does an assistant project manager do in construction?
 12. What certification is best for an assistant project manager?
 13. What tools should an assistant project manager learn?
-14. What comes after assistant project manager?
+14. Is assistant project manager a good job?
+15. What comes after assistant project manager?
 
 ## Fact-Checking Notes
 
