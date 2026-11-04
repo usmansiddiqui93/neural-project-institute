@@ -175,7 +175,7 @@ RW = dict(
             ["Internal rate of return (IRR)", "What rate of return does the project earn?", "Yes", "Comparing with a hurdle rate"],
             ["Benefit-cost ratio (BCR)", "How many dollars of benefit per dollar of cost?", "Usually yes (uses present values)", "Public-sector and cost-benefit appraisals"],
           ),
-          "ROI and BCR are closely related: on undiscounted totals, BCR = 1 + ROI (as a decimal). A BCR of 1.18 corresponds to an ROI of 18%. Our [cost-benefit analysis guide](/project-management/cost-benefit-analysis/) shows BCR in a full appraisal.",
+          "ROI and BCR are closely related: on undiscounted totals, BCR = 1 + ROI (as a decimal), so a BCR of 1.18 corresponds to an ROI of 18%. See our [cost-benefit analysis guide](/project-management/cost-benefit-analysis/) for BCR in a full appraisal.",
         ),
         S("What is a good ROI for a project?",
           "There is no single figure that makes an ROI good. Judge it against four things:",
@@ -230,7 +230,7 @@ RW = dict(
         ),
         S("Tools and templates for tracking project ROI",
           "A spreadsheet is enough to calculate ROI, but tracking it is easier when actual costs and time are captured as the work happens. Most project management tools, including monday.com, Asana and ClickUp, let you add budget and cost fields to projects and roll them up in dashboards. [Wrike](/project-management-tools/wrike/), our top-rated tool, suits PMOs that want budget fields, approved timesheets and portfolio dashboards in one place, with budgeting and financial tracking on its Pinnacle plan. [Smartsheet](/project-management-tools/smartsheet/) feels familiar to teams that already model ROI in spreadsheets.",
-          "Whichever tool you use, keep the ROI model in one agreed place, usually the business case, and update it at each stage gate. For planning, budgeting and controlling costs more broadly, see our guide to [project cost management](/project-management/project-cost-management/).",
+          "Whichever tool you use, keep the ROI model in one agreed place, usually the business case, and update it at each stage gate. See our guide to [project cost management](/project-management/project-cost-management/) for planning, budgeting and controlling costs more broadly.",
         ),
     ],
     faq=[
