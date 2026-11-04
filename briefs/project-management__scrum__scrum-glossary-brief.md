@@ -86,7 +86,7 @@ Letter headings A–Z; quick reference tables (pillars, values, events, artifact
 ### Content gaps we can fill
 
 - A Source column on every term (Scrum Guide, practice, Scrum.org, Kanban, XP, scaling, retired).
-- A dated table of retired and renamed terms (2011 forecast, 2011 chickens and pigs, 2013 refinement, 2016 values, 2020 changes).
+- A dated table of retired and renamed terms (2011 forecast, 2013 refinement, 2016 values, 2020 changes; chickens and pigs as an early removal).
 - The Scrum Guide's own mention of burn-downs, burn-ups and cumulative flows as forecasting practices.
 - The 2025 Scrum Guide Expansion Pack, correctly labelled as an optional supplement (not a new Scrum Guide).
 - Worked numbers for confused pairs, and a Sprint walk-through using the terms.
@@ -136,18 +136,15 @@ Intro (lead): what the glossary is, that it follows the 2020 Scrum Guide and lab
 ### Internal links (25)
 Agile glossary, what is Scrum, Scrum team roles, Scrum ceremonies, Scrum artifacts, Scrum principles and values, empiricism, Definition of Done, Product Backlog, Sprint Backlog, Increment, Sprint Planning, Daily Scrum, Sprint Review, Sprint Retrospective, backlog refinement, story points, velocity, Scrum sprint cycle, certification and training, Product Owner, Scrum Master role, Kanban vs Scrum, product backlog template, sprint planning template.
 
-### FAQ (14)
+### FAQ (11, trimmed from 14 to keep within the word budget)
 1. What are the most important Scrum terms for beginners?
 2. What is 3-5-3 in Scrum?
 3. Where are official Scrum terms defined?
 4. What changed in the 2020 Scrum Guide terminology?
 5. Is the Scrum Guide Expansion Pack a new Scrum Guide?
 6. What is a time-box in Scrum?
-7. What does Done mean in Scrum?
-8. What is the difference between the Sprint Goal and the Product Goal?
-9. Are story points and velocity official Scrum terms?
-10. Is the Definition of Ready part of Scrum?
-11. Is "ceremony" an official Scrum term?
-12. What is the difference between a Scrum Master and a project manager?
-13. What does "ordered" mean for the Product Backlog?
-14. Which Scrum terms come up most in PSM I and CSM exams?
+7. What is the difference between the Sprint Goal and the Product Goal?
+8. Are story points and velocity official Scrum terms?
+9. Is the Definition of Ready part of Scrum?
+10. What is the difference between a Scrum Master and a project manager?
+11. Which Scrum terms matter most for PSM I and CSM exams?

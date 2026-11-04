@@ -166,7 +166,7 @@ Project ROI explained: the return on investment formula, a step-by-step method, 
 - Business case, budget, cost estimate, P&L templates; tools that track budgets and time (Wrike, monday.com, Asana, ClickUp, Smartsheet) neutral.
 
 ### FAQ (12–14)
-What is ROI in project management; formula; good ROI; negative ROI; ROI vs NPV; ROI vs IRR; payback alongside ROI; annualised ROI; internal projects; include staff time; when to measure; ROI vs CBA; intangible benefits; ROI vs profit margin.
+What is ROI in project management; formula; good ROI; negative ROI; ROI vs NPV; annualised ROI; internal projects; include staff time; intangible benefits; when to measure; ROI in the PMP exam (11 in the final page; ROI vs IRR, payback and ROI vs CBA are answered in the body).
 
 ## Internal Links (planned, all in en_urls.txt)
 
