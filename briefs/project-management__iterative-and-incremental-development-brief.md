@@ -119,6 +119,9 @@ Intro: define in sentence one (build in usable pieces and improve through repeat
 - H3: In Scrum (Sprint, Increment, Sprint Review, Retrospective; 2020 Scrum Guide facts).
 - H3: Increment then iterate, or iterate then increment.
 
+## H2: What changes for the project manager
+- Table: planning, scope, budget, reporting, risk, governance, quality under predictive vs iterative and incremental; the PM's role; hybrid; tip on reporting delivered value.
+
 ## H2: Worked example: an online booking system
 - Illustrative table across four increments: what is added, what is refined from feedback.
 - Second table: when users first get something usable under big-bang, purely iterative, purely incremental and combined approaches.
@@ -169,6 +172,8 @@ Intro: define in sentence one (build in usable pieces and improve through repeat
 11. Can iterative and incremental development be used outside software?
 12. How old is iterative and incremental development?
 13. Can waterfall projects use iterative development?
+14. Is iterative development the same as Agile? (kept from the old page)
+15. What is a vertical slice?
 
 ## Writer notes
 - Label examples as illustrative. Paraphrase PMI and Larman and Basili; do not quote at length.
