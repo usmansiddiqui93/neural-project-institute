@@ -6,7 +6,7 @@ cd /home/claude/npi
 exec 9>/home/claude/npi/.publish.lock; flock 9
 python3 check.py "$@"
 cd /home/claude/neural-project-institute && git pull -q --rebase origin main
-cd /home/claude/npi && python3 render.py "$@"
+cd /home/claude/npi && python3 render.py "$@" && python3 gen_llms.py
 cd /home/claude/neural-project-institute
 git add -A
 git -c user.name=usmansiddiqui93 -c user.email=usmansiddiqui93@users.noreply.github.com commit -q -m "$MSG
