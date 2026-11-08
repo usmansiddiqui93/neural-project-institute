@@ -4,6 +4,8 @@
 
 Guides are written in British English, cite primary sources (PMI, the Scrum Guide 2020, the Kanban Guide, vendor documentation) and label worked examples as illustrative. Most pages are also available in German, Spanish, French, Italian, Japanese, Russian and Chinese under /de/, /es/, /fr/, /it/, /ja/, /ru/ and /zh/. This file contains the full text of every English page; the index is in [llms.txt](https://neuralprojectinstitute.com/llms.txt).
 
+Translated editions: [Deutsch](https://neuralprojectinstitute.com/de/llms.txt), [Español](https://neuralprojectinstitute.com/es/llms.txt), [Français](https://neuralprojectinstitute.com/fr/llms.txt), [Italiano](https://neuralprojectinstitute.com/it/llms.txt), [日本語](https://neuralprojectinstitute.com/ja/llms.txt), [Русский](https://neuralprojectinstitute.com/ru/llms.txt), [中文](https://neuralprojectinstitute.com/zh/llms.txt).
+
 
 
 

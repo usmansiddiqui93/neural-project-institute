@@ -1,0 +1,341 @@
+# Neural Project Institute (中文)
+
+> Neural Project Institute（neuralprojectinstitute.com）是一个独立的项目管理教育网站，免费提供项目管理、敏捷、Scrum 和看板的详细指南，适用于 Excel、Google 表格和 PDF 的免费模板，项目管理软件的独立评测与对比，以及 PMAI（Project Management Artificial Intelligence）认证。联系邮箱：support@neuralprojectinstitute.com。
+
+本文件列出了中文页面。英文原版位于 https://neuralprojectinstitute.com/llms.txt. 所有中文页面的全文位于 [zh/llms-full.txt](https://neuralprojectinstitute.com/zh/llms-full.txt).
+
+
+## 项目管理指南
+
+- [项目管理完全指南](https://neuralprojectinstitute.com/zh/项目管理/): 完整、免费的项目管理指南：阶段、规划、进度、成本、风险、工具以及敏捷、Scrum 和 Kanban 等方法论。
+- [CAPM 认证：要求、考试、费用与学习计划](https://neuralprojectinstitute.com/zh/项目管理/capm-认证/): CAPM 认证指南：报考资格、23 个培训学时、考试领域和费用、6 周学习计划、实例、CAPM 与 PMP 对比以及续证。
+- [IT 项目经理：角色、技能、职业路径与认证](https://neuralprojectinstitute.com/zh/项目管理/it-项目经理/): IT 项目经理的职责、关键技能、认证、职业路径和薪酬，以及典型的一周、切换示例和入行方法。
+- [PMI PDU 详解：如何获取与申报](https://neuralprojectinstitute.com/zh/项目管理/pdu-详解/): PDU 专业发展单元详解：需要多少 PMI PDU、人才三角、免费获取途径、结转规则以及如何申报。
+- [PERT 图与 PERT 估算：公式与计算示例](https://neuralprojectinstitute.com/zh/项目管理/pert-图与-pert-估算/): 什么是 PERT 图、PERT 公式 (O+4M+P)/6、标准差、带概率的计算示例，以及 PERT、CPM 与甘特图的对比。
+- [PMBOK 与 PRINCE2：关键区别及如何选择](https://neuralprojectinstitute.com/zh/项目管理/pmbok-与-prince2/): 2026 年 PMBOK 与 PRINCE2 对比：标准与方法、PMBOK 8 与 PRINCE2 7、角色、过程、文件、PMP 与 PRINCE2 认证，以及如何选择。
+- [PMP 35 学时：哪些可以计入及 2026 年新规](https://neuralprojectinstitute.com/zh/项目管理/pmp-的-35-个培训学时/): PMP 的 35 个培训学时详解：哪些可以计入、2026 年 12 月 1 日起的现场培训规则、CAPM 豁免，以及如何计算和记录学时（附示例）。
+- [PMP 认证：报考要求、2026 年考试、费用和备考](https://neuralprojectinstitute.com/zh/项目管理/pmp-认证/): 2026 年 PMP 认证指南：报考资格、35 学时及新培训规则、2026 年 7 月新版考试、费用、申请方法、学习计划和续证。
+- [RACI 矩阵（责任分配矩阵）及示例](https://neuralprojectinstitute.com/zh/项目管理/raci-矩阵/): 什么是 RACI 矩阵，负责、批准、咨询和知情分别是什么含义，示例、如何构建，以及 RASCI 等变体。
+- [RAID 日志：含义、示例及创建方法](https://neuralprojectinstitute.com/zh/项目管理/raid-日志/): RAID 日志用于跟踪项目的风险、假设、问题和依赖关系。了解应包含的内容、示例、各列、审查步骤和常见陷阱。
+- [什么是 PMBOK 指南？结构、版本与使用](https://neuralprojectinstitute.com/zh/项目管理/什么是-pmbok-指南/): PMI 的 PMBOK 指南是什么，它如何从过程组和知识领域演变为原则和绩效域，以及如何使用它。
+- [什么是 PMI？项目管理协会详解](https://neuralprojectinstitute.com/zh/项目管理/什么是-pmi/): 什么是 PMI？项目管理协会详解：它做什么、13 项认证、《PMBOK 指南》第 8 版、会员资格以及是否值得加入。
+- [什么是 PRINCE2？原则、实践与流程](https://neuralprojectinstitute.com/zh/项目管理/什么是-prince2/): PRINCE2 详解：七项原则、七项实践和七个流程、关键角色、例外管理、优势与认证。
+- [什么是极限项目管理（XPM）？](https://neuralprojectinstitute.com/zh/项目管理/什么是极限项目管理/): 极限项目管理详解：什么使项目成为极限项目、XPM 方法、关键实践，以及它与传统方法和敏捷方法的区别。
+- [什么是瀑布式项目管理？阶段与优缺点](https://neuralprojectinstitute.com/zh/项目管理/什么是瀑布式项目管理/): 瀑布模型如何运作、其阶段、优缺点、适用场景，以及与敏捷方法的比较。
+- [什么是项目？定义、特征与示例](https://neuralprojectinstitute.com/zh/项目管理/什么是项目/): 什么是项目？清晰的定义、关键特征、项目与运营及任务的区别、项目类型、示例以及项目生命周期。
+- [什么是项目基准？范围、进度与成本](https://neuralprojectinstitute.com/zh/项目管理/什么是项目基准/): 什么是项目基准、范围基准、进度基准和成本基准、如何设定和重新设定基准，以及如何利用基准衡量绩效。
+- [什么是项目章程？模板、示例与技巧](https://neuralprojectinstitute.com/zh/项目管理/什么是项目章程/): 什么是项目章程、为何重要、应包含哪些内容、即用型模板大纲、示例，以及获得批准的技巧。
+- [什么是项目管理？定义、流程与示例](https://neuralprojectinstitute.com/zh/项目管理/什么是项目管理/): 什么是项目管理？清晰的定义、5 个阶段、三重制约、方法、角色、工具，以及可逐步参照的完整示例。
+- [什么是项目风险？类型、示例与风险描述](https://neuralprojectinstitute.com/zh/项目管理/什么是项目风险/): 项目风险详解：定义、威胁与机会、项目风险类型及示例、如何撰写风险描述以及如何及早识别风险。
+- [任务依赖关系：类型、示例及管理方法](https://neuralprojectinstitute.com/zh/项目管理/任务依赖关系/): 任务依赖关系详解：四种类型（FS、SS、FF、SF）、强制性与自由决定依赖、完整示例，以及如何识别和管理依赖关系。
+- [全职当量（FTE）：含义、公式与示例](https://neuralprojectinstitute.com/zh/项目管理/全职当量/): 全职当量（FTE）的含义、FTE 公式、团队和项目的计算示例、如何将工时换算为 FTE 以及常见陷阱。
+- [关键路径法（CPM）：步骤、示例与公式](https://neuralprojectinstitute.com/zh/项目管理/关键路径法/): 分步学习关键路径法：关键公式、包含顺推法与逆推法的完整计算示例、浮动时间、CPM 与 PERT 对比及实用技巧。
+- [关键链与关键路径：区别与示例](https://neuralprojectinstitute.com/zh/项目管理/关键链与关键路径/): 关键链与关键路径详解：主要区别、缓冲及其大小确定、用两种方法排程的实例、发烧图以及各自的适用场景。
+- [关键链项目管理（CCPM）详解](https://neuralprojectinstitute.com/zh/项目管理/关键链项目管理/): 关键链项目管理如何运作：资源受限的进度安排、激进估算、项目缓冲和接驳缓冲，以及缓冲管理。
+- [助理项目经理：职责、技能与职业路径](https://neuralprojectinstitute.com/zh/项目管理/助理项目经理/): 助理项目经理的工作内容、该岗位与项目协调员和项目经理的区别、关键技能、典型一周以及如何晋升为项目经理。
+- [变革管理与变更控制：区别](https://neuralprojectinstitute.com/zh/项目管理/变革管理与变更控制/): 变革管理与变更控制详解：定义、对比表、分步流程、实例以及如何在一个项目中同时运作两者。
+- [项目管理计划：组成部分、步骤与示例](https://neuralprojectinstitute.com/zh/项目管理/如何创建项目管理计划/): 什么是项目管理计划、其子计划与基准、如何通过 10 个步骤制定、计算示例及大纲。
+- [如何成为项目经理：分步职业指南](https://neuralprojectinstitute.com/zh/项目管理/如何成为项目经理/): 进入项目管理领域的实用路径：积累经验、学习基础知识、选择认证、获得第一份工作并发展职业生涯。
+- [如何选择项目管理软件：8 个步骤](https://neuralprojectinstitute.com/zh/项目管理/如何选择项目管理软件/): 8 步选择项目管理软件，附需求检查清单、加权评分矩阵、成本计算实例和试用计划。
+- [完工估算（EAC）：公式与示例](https://neuralprojectinstitute.com/zh/项目管理/完工估算/): 详解完工估算（EAC）：四个 EAC 公式及各自适用场景、ETC、VAC 和 TCPI、计算示例及常见错误。
+- [完工预算（BAC）：定义、公式与示例](https://neuralprojectinstitute.com/zh/项目管理/完工预算/): 挣值管理中完工预算（BAC）的含义、如何计算、它与 EAC 和项目预算的区别，附示例。
+- [工作分解结构（WBS）：示例与创建方法](https://neuralprojectinstitute.com/zh/项目管理/工作分解结构/): 了解什么是工作分解结构（WBS）、100% 规则、层级与工作包，附示例、WBS 词典及分步说明。
+- [工作说明书（SOW）：应包含的内容及示例](https://neuralprojectinstitute.com/zh/项目管理/工作说明书/): 什么是工作说明书（SOW）、应包含哪些内容、主要类型、完整的实例，以及逐步编写可避免争议的 SOW 的方法。
+- [建筑项目经理：职责、技能与职业发展](https://neuralprojectinstitute.com/zh/项目管理/建筑项目经理/): 建筑项目经理在每个阶段的工作、关键技能、资质（CCM、PMP、MCIOB）、职业路径、薪资数据和实例。
+- [快速跟进与赶工：区别与计算示例](https://neuralprojectinstitute.com/zh/项目管理/快速跟进与赶工/): 快速跟进与赶工的区别、赶工成本斜率公式、计算示例、风险，以及如何在两者之间做出选择。
+- [成本偏差（CV）：公式、示例与分析](https://neuralprojectinstitute.com/zh/项目管理/成本偏差/): 成本偏差（CV）详解：CV = EV - AC 公式、CV%、按工作包的实例、阈值、原因、VAC，以及如何应对负 CV。
+- [成本管理计划：应包含的内容、示例和模板](https://neuralprojectinstitute.com/zh/项目管理/成本管理计划/): 什么是成本管理计划、应包含的 12 个部分、完整的填写示例、可复制的模板大纲以及编写步骤。
+- [成本绩效指数（CPI）：公式、示例与含义](https://neuralprojectinstitute.com/zh/项目管理/成本绩效指数/): 成本绩效指数（CPI）详解：CPI = EV / AC 公式、数值含义、累计 CPI 与当期 CPI、EAC 预测及实例。
+- [技术项目经理：角色、技能及区别](https://neuralprojectinstitute.com/zh/项目管理/技术项目经理/): 技术项目经理的工作内容、所需技能、该岗位与 IT 项目经理和工程经理的比较，以及如何入行。
+- [挣值管理（EVM）：公式与计算示例](https://neuralprojectinstitute.com/zh/项目管理/挣值管理/): 挣值管理详解：PV、EV 和 AC，关键公式（CV、SV、CPI、SPI、EAC、ETC、VAC、TCPI）以及带数字的完整计算示例。
+- [服务级别协议（SLA）：含义、模板与示例](https://neuralprojectinstitute.com/zh/项目管理/服务级别协议/): 什么是服务级别协议、涵盖的指标、SLA 与 SLO、OLA 和 KPI 的比较、SLA 模板、正常运行时间计算，以及为项目制定 SLA 的技巧。
+- [吊床活动：定义、示例与使用方法](https://neuralprojectinstitute.com/zh/项目管理/汇总活动/): 什么是吊床活动、其持续时间如何计算、含成本的示例、吊床活动与摘要任务和 LOE 的比较，以及如何在 P6 或 MS Project 中创建。
+- [泳道图：是什么、示例及如何制作](https://neuralprojectinstitute.com/zh/项目管理/泳道图/): 什么是泳道图、何时在项目中使用、如何分步绘制、流程示例、符号，以及绘制清晰图表的技巧。
+- [甘特图：定义、制作方法与示例](https://neuralprojectinstitute.com/zh/项目管理/甘特图/): 什么是甘特图、其组成部分、如何解读以及如何逐步制作，附实例、依赖关系类型、进度跟踪和常见错误。
+- [甘特图软件：功能、主流工具及如何选择](https://neuralprojectinstitute.com/zh/项目管理/甘特图软件/): 甘特图软件的功能、必备特性、主流工具在甘特图规划方面的比较、计算示例以及制作更好甘特图的技巧。
+- [管理多个项目：一套行之有效的实用体系](https://neuralprojectinstitute.com/zh/项目管理/管理多个项目/): 如何同时管理多个项目：一个主视图、确定优先级的评分模型、产能检查、每周例程、委派和工具。
+- [精益与六西格玛（及精益六西格玛）详解](https://neuralprojectinstitute.com/zh/项目管理/精益与六西格玛/): 精益与六西格玛对比：关注点、方法、工具和成果，以及精益六西格玛如何将两者结合、何时使用各自。
+- [精益项目管理：原则与实践](https://neuralprojectinstitute.com/zh/项目管理/精益项目管理/): 精益原则如何应用于项目管理：价值、流动、拉动和减少浪费，适用于项目的实用精益工具，以及精益与敏捷的比较。
+- [综合主计划（IMP）与综合主进度（IMS）](https://neuralprojectinstitute.com/zh/项目管理/综合主计划/): 什么是综合主计划、它与综合主进度的区别、其事件、成就和标准，以及适用场景。
+- [范围蔓延：原因、示例及预防方法](https://neuralprojectinstitute.com/zh/项目管理/范围蔓延/): 范围蔓延详解：含义、成因、预警信号、真实案例，以及在任何项目中预防和控制范围蔓延的分步方法。
+- [资源平衡：定义、步骤与计算示例](https://neuralprojectinstitute.com/zh/项目管理/资源平衡/): 资源平衡详解：定义、与资源平滑的区别、分步方法、附资源直方图的计算示例以及软件使用技巧。
+- [进度偏差（SV）：公式、示例与局限性](https://neuralprojectinstitute.com/zh/项目管理/进度偏差/): 挣值管理中的进度偏差是什么、SV = EV - PV 公式、SV 百分比、挣得进度、计算示例及其局限性。
+- [进度压缩：技术、示例与权衡](https://neuralprojectinstitute.com/zh/项目管理/进度压缩/): 什么是进度压缩、通过计算示例讲解赶工和快速跟进、缩短进度的其他方法、风险与技巧。
+- [迭代与增量开发详解](https://neuralprojectinstitute.com/zh/项目管理/迭代与增量开发详解/): 迭代开发和增量开发的含义、两者的区别、在敏捷中如何协同运作，以及何时应选择它们而非瀑布模型。
+- [问题日志：模板、示例及问题管理方法](https://neuralprojectinstitute.com/zh/项目管理/问题日志/): 什么是问题日志、应包含的列、实例、优先级和升级规则，以及它与风险登记册和 RAID 日志的区别。
+- [项目、项目集与项目组合管理：关键区别](https://neuralprojectinstitute.com/zh/项目管理/项目-项目集与项目组合管理/): 详解项目、项目集与项目组合管理：定义、对比表、角色、示例，以及三个层级如何协同运作。
+- [项目任务和活动：定义与示例](https://neuralprojectinstitute.com/zh/项目管理/项目任务与活动/): 项目任务和活动详解：两者的区别、与工作包的关系、活动属性、活动清单实例以及确定规模的技巧。
+- [净现值（NPV）：公式、示例与用途](https://neuralprojectinstitute.com/zh/项目管理/项目净现值/): 项目净现值（NPV）详解：公式、分步实例、选择折现率、NPV 与 IRR 的比较、Excel 技巧和常见错误。
+- [项目制约因素：三重制约及其他](https://neuralprojectinstitute.com/zh/项目管理/项目制约因素/): 什么是项目制约因素、三重制约及其现代扩展、制约因素示例，以及如何权衡取舍。
+- [项目协调员：角色、职责与职业路径](https://neuralprojectinstitute.com/zh/项目管理/项目协调员/): 项目协调员的工作内容、日常任务、必备技能、该岗位与项目经理的比较，以及如何以此作为进入该行业的途径。
+- [项目可交付成果：定义、类型与示例](https://neuralprojectinstitute.com/zh/项目管理/项目可交付成果/): 什么是项目可交付成果、内部与外部可交付成果、有形与无形可交付成果、示例，以及如何定义和验收。
+- [项目启动文件（PID）：内容与示例](https://neuralprojectinstitute.com/zh/项目管理/项目启动文件/): 什么是项目启动文件（PID）、PRINCE2 7 中规定的内容、如何分步撰写、示例以及 PID 与项目章程的区别。
+- [项目成本效益分析：步骤与示例](https://neuralprojectinstitute.com/zh/项目管理/项目成本效益分析/): 如何对项目进行成本效益分析：识别成本和收益、折现、效益成本比、NPV、计算示例以及常见陷阱。
+- [项目成本管理：过程、步骤与示例](https://neuralprojectinstitute.com/zh/项目管理/项目成本管理/): 项目成本管理详解：四个过程、成本类型、储备、从估算到预测的实例、EVM、敏捷以及常见错误。
+- [项目投资回报率（ROI）：公式与示例](https://neuralprojectinstitute.com/zh/项目管理/项目投资回报率/): 如何计算项目 ROI、哪些计入成本和收益、包括投资回收期在内的计算示例、ROI 与 NPV 的比较以及常见陷阱。
+- [项目收尾：步骤、检查清单与收尾报告模板](https://neuralprojectinstitute.com/zh/项目管理/项目收尾/): 如何正确地结束项目：收尾步骤、项目收尾检查清单、收尾报告模板、移交技巧以及应避免的常见错误。
+- [项目整合管理：过程与示例](https://neuralprojectinstitute.com/zh/项目管理/项目整合管理/): 项目整合管理详解：PMBOK 的 7 个过程、输入和输出、整体变更控制步骤、实例和敏捷建议。
+- [项目时间管理：过程、技术与技巧](https://neuralprojectinstitute.com/zh/项目管理/项目时间管理/): 项目时间管理的含义、进度管理过程、关键技术、计算示例，以及面向项目经理的实用时间管理技巧。
+- [项目时间线：如何创建（附示例）](https://neuralprojectinstitute.com/zh/项目管理/项目时间线/): 了解什么是项目时间线、如何逐步创建、主要类型、带日期的示例详解，以及如何保持其更新。
+- [项目沟通管理：流程与最佳实践](https://neuralprojectinstitute.com/zh/项目管理/项目沟通管理/): 项目沟通管理如何运作：规划、管理和监督沟通、渠道、方法、计算示例以及实用技巧。
+- [项目沟通计划模板（附示例）](https://neuralprojectinstitute.com/zh/项目管理/项目沟通计划模板/): 如何编写项目沟通计划，附即用型沟通矩阵模板、填写完整的示例、分步指导以及常见错误。
+- [项目治理：框架、结构与角色](https://neuralprojectinstitute.com/zh/项目管理/项目治理/): 项目治理详解：框架、结构、角色、决策权、阶段关口与容差，附模板、计算示例及敏捷实践技巧。
+- [项目状态报告：如何撰写（附示例）](https://neuralprojectinstitute.com/zh/项目管理/项目状态报告/): 如何撰写项目状态报告：应包含的内容、RAG 状态规则、分步流程、周报和月报示例以及常见错误。
+- [项目目标：如何编写（附示例）](https://neuralprojectinstitute.com/zh/项目管理/项目目标/): 项目目标详解：定义、类型、SMART 标准、分步方法和 30 多个示例，以及目的与目标的区别和常见错误。
+- [项目相关方管理：识别、分析与参与](https://neuralprojectinstitute.com/zh/项目管理/项目相关方管理/): 谁是项目相关方、如何使用权力/利益方格识别和分析相关方、相关方登记册，以及如何有效引导相关方参与。
+- [项目管理中的 S 曲线：是什么及如何使用](https://neuralprojectinstitute.com/zh/项目管理/项目管理中的-s-曲线/): 项目管理中的 S 曲线是什么、为何累计成本呈 S 形、如何绘制，以及如何解读 PV、EV 和 AC 曲线，附示例。
+- [项目管理中的专家判断：指南与示例](https://neuralprojectinstitute.com/zh/项目管理/项目管理中的专家判断/): 项目管理中的专家判断详解：谁算专家、德尔菲法等技术、7 步流程、实例以及偏差纠正方法。
+- [项目管理中的产能规划：指南与示例](https://neuralprojectinstitute.com/zh/项目管理/项目管理中的产能规划/): 项目管理中的产能规划是什么、如何计算团队产能和需求、弥补差距，以及按月计算的产能示例。
+- [项目管理中的六西格玛是什么？DMAIC 与带级](https://neuralprojectinstitute.com/zh/项目管理/项目管理中的六西格玛是什么/): 六西格玛详解：起源、DMAIC 和 DMADV 方法、带级、关键工具，以及六西格玛项目与其他项目的区别。
+- [项目管理中的关键成功因素（附示例）](https://neuralprojectinstitute.com/zh/项目管理/项目管理中的关键成功因素/): 项目管理中的关键成功因素详解：CSF 的含义、示例、CSF 与 KPI 的区别、类型，以及如何分步识别和跟踪。
+- [项目管理中的变更控制：流程与模板](https://neuralprojectinstitute.com/zh/项目管理/项目管理中的变更控制/): 变更控制流程如何运作，从变更请求到影响分析和审批，附变更请求模板、变更日志、计算示例和技巧。
+- [项目管理中的可行性研究：类型与步骤](https://neuralprojectinstitute.com/zh/项目管理/项目管理中的可行性研究/): 什么是可行性研究、五种可行性类型（技术、经济、法律、运营、进度）、如何开展以及报告涵盖的内容。
+- [项目管理中的工作包是什么？](https://neuralprojectinstitute.com/zh/项目管理/项目管理中的工作包是什么/): 什么是工作包、它在 WBS 中的位置、8/80 规则、工作包描述包含的内容，以及工作包如何与进度计划关联。
+- [工作量估算：技术、公式与示例](https://neuralprojectinstitute.com/zh/项目管理/项目管理中的工作量估算/): 工作量估算详解：工作量与工期的区别、8 种技术、PERT 公式、分步方法以及从小时到天数和成本的实例。
+- [项目管理中的应急计划：模板与示例](https://neuralprojectinstitute.com/zh/项目管理/项目管理中的应急计划/): 什么是应急计划、它与弹回计划和风险减轻的区别、如何分步编写、模板，以及附触发条件的示例。
+- [项目管理中的成本估算：方法与示例](https://neuralprojectinstitute.com/zh/项目管理/项目管理中的成本估算/): 如何估算项目成本：类比估算、参数估算、自下而上估算和三点估算、准确度范围、计算示例以及改进估算的技巧。
+- [项目管理中的成本控制：流程与示例](https://neuralprojectinstitute.com/zh/项目管理/项目管理中的成本控制/): 项目管理中的成本控制详解：月度流程、EVM 和偏差分析、承付成本、预测以及完整的实例。
+- [项目管理中的提前量与滞后量：示例与公式](https://neuralprojectinstitute.com/zh/项目管理/项目管理中的提前量与滞后量/): 项目进度中的提前量和滞后量是什么、它们如何改变依赖关系的时间、带数字的计算示例以及应避免的常见错误。
+- [项目管理中的敏感性分析：指南与示例](https://neuralprojectinstitute.com/zh/项目管理/项目管理中的敏感性分析/): 什么是敏感性分析、如何分步开展、龙卷风图计算示例、它与情景分析和蒙特卡洛模拟的比较，以及实用技巧。
+- [项目管理中的残余风险：含义与示例](https://neuralprojectinstitute.com/zh/项目管理/项目管理中的残余风险/): 项目管理中的残余风险：定义、固有风险、残余风险与次生风险的区别、计算方法及示例，以及何时可以接受。
+- [项目管理中的浮动时间与松弛时间：类型与公式](https://neuralprojectinstitute.com/zh/项目管理/项目管理中的浮动时间与松弛时间/): 什么是浮动时间（松弛时间）、总浮动时间与自由浮动时间、公式、计算示例、负浮动时间与项目浮动时间，以及如何合理利用浮动时间。
+- [项目管理中的经验教训：指南与示例](https://neuralprojectinstitute.com/zh/项目管理/项目管理中的经验教训/): 项目管理中的经验教训：如何收集、如何组织总结会、应提出的问题、登记册模板、示例以及如何真正落实。
+- [项目管理中的蒙特卡洛模拟：计算示例](https://neuralprojectinstitute.com/zh/项目管理/项目管理中的蒙特卡洛模拟/): 蒙特卡洛模拟如何根据区间估算预测项目日期和成本，附分步方法、计算示例、P50 和 P80 结果以及技巧。
+- [项目管理中的资源分配：步骤和示例](https://neuralprojectinstitute.com/zh/项目管理/项目管理中的资源分配/): 项目管理中的资源分配详解：如何为任务分配人员、计算可用性和利用率，附示例详解和常见错误。
+- [项目管理中的配置管理详解](https://neuralprojectinstitute.com/zh/项目管理/项目管理中的配置管理详解/): 什么是配置管理、四项核心活动、配置项和基准、配置登记册模板，以及它与变更控制的关联。
+- [项目管理办公室（PMO）：类型、角色与组建](https://neuralprojectinstitute.com/zh/项目管理/项目管理办公室/): 什么是项目管理办公室（PMO）、支持型、控制型和指令型 PMO、PMO 的角色与服务，以及如何分步组建。
+- [项目管理原则：12 项原则详解](https://neuralprojectinstitute.com/zh/项目管理/项目管理原则/): 项目管理的核心原则，从管家式管理和价值到裁剪、风险和适应性，以及如何在任何方法论中应用它们。
+- [项目管理工具的类型：技术与软件](https://neuralprojectinstitute.com/zh/项目管理/项目管理工具/): 详解项目管理工具的主要类型：计划、进度安排、跟踪、协作、风险和报告工具，附示例与技巧。
+- [项目管理技能：硬技能、软技能及培养方法](https://neuralprojectinstitute.com/zh/项目管理/项目管理技能/): 项目管理技能详解：项目经理所需的硬技能和软技能、熟练度等级、自我评估、90 天计划和简历示例。
+- [项目管理方法论、框架与方法](https://neuralprojectinstitute.com/zh/项目管理/项目管理方法论-框架与方法/): 比较各种项目管理方法论和框架（瀑布、敏捷、Scrum、Kanban、PRINCE2、精益、六西格玛、关键链）以及如何选择。
+- [项目管理的 5 个阶段：步骤与示例](https://neuralprojectinstitute.com/zh/项目管理/项目管理的-5-个阶段/): 项目管理的 5 个阶段详解：每个阶段做什么、关键文件、示例、阶段关口、敏捷阶段和常见错误。
+- [项目管理认证：如何选择](https://neuralprojectinstitute.com/zh/项目管理/项目管理认证/): 对比主要项目管理认证（PMP、CAPM、PRINCE2、PMI-ACP、Scrum、APM 及 AI 类认证）的报考要求、续证方式与选择方法。
+- [什么是项目管理软件？类型与用途](https://neuralprojectinstitute.com/zh/项目管理/项目管理软件/): 什么是项目管理软件、它如何运作、主要类型、功能、好处、成本以及如何设置您的第一个项目，附示例。
+- [项目管理软件功能：必备清单](https://neuralprojectinstitute.com/zh/项目管理/项目管理软件功能/): 项目管理软件的基本功能和高级功能、每项功能的重要性、哪些团队需要它们，以及购买前为工具打分的检查清单。
+- [项目管理过程：五大过程组详解](https://neuralprojectinstitute.com/zh/项目管理/项目管理过程/): 项目管理过程详解：5 大过程组、10 大知识领域、全部 49 个 PMBOK 过程、PMBOK 8 的变化、示例详解及裁剪。
+- [项目经理与项目集经理：主要区别详解](https://neuralprojectinstitute.com/zh/项目管理/项目经理与项目集经理/): 项目经理与项目集经理：范围、目标、时间跨度、相关方和技能有何不同，附计算示例以及如何转向项目集岗位。
+- [项目经理的角色与职责：完全指南](https://neuralprojectinstitute.com/zh/项目管理/项目经理的角色与职责/): 项目经理的角色和职责详解：各阶段的职责、典型的一周、职权、完整示例，以及该角色与其他角色的比较。
+- [项目网络图：类型、示例及绘制方法](https://neuralprojectinstitute.com/zh/项目管理/项目网络图/): 什么是项目网络图、节点法与箭线法、如何分步绘制、计算示例以及如何解读。
+- [项目范围：定义、说明书、示例与步骤](https://neuralprojectinstitute.com/zh/项目管理/项目范围/): 项目范围详解：产品范围与项目范围、如何逐步编写范围说明书、完整示例、范围基准以及敏捷范围。
+- [项目质量管理：规划、保证与控制质量](https://neuralprojectinstitute.com/zh/项目管理/项目质量管理/): 项目质量管理如何运作：规划、保证和控制、质量成本、质量工具、质量计划模板以及计算示例。
+- [项目资源：类型、示例及如何规划](https://neuralprojectinstitute.com/zh/项目管理/项目资源/): 什么是项目资源、主要类型及示例、如何识别、估算和管理资源、资源分解结构（RBS）、资源计划示例以及常见错误。
+- [项目路线图：是什么、示例及如何创建](https://neuralprojectinstitute.com/zh/项目管理/项目路线图/): 什么是项目路线图、应包含哪些内容、它与项目计划和甘特图的区别、完整示例，以及创建路线图的 8 个步骤。
+- [项目管理中的紧前活动与紧后活动](https://neuralprojectinstitute.com/zh/项目管理/项目进度中的紧前活动与紧后活动详解/): 项目管理中的紧前活动与紧后活动详解：定义、四种依赖关系类型、计算示例、MS Project 表示法及常见错误。
+- [项目进度计划：步骤、技术与示例](https://neuralprojectinstitute.com/zh/项目管理/项目进度计划/): 分步学习项目进度计划：进度计划包含哪些内容、CPM 和 PERT 等技术、计算示例、工具及常见错误。
+- [项目采购管理：过程、合同与示例](https://neuralprojectinstitute.com/zh/项目管理/项目采购管理/): 什么是项目采购管理、其过程、合同类型、附计算示例的自制或外购分析、采购文件以及技巧。
+- [项目里程碑：定义、示例及如何设定](https://neuralprojectinstitute.com/zh/项目管理/项目里程碑/): 项目里程碑详解：定义、类型、按项目类型分类的示例、如何设定和措辞、付款里程碑、跟踪及趋势图。
+- [项目需求：高层级需求与技术需求](https://neuralprojectinstitute.com/zh/项目管理/项目需求/): 项目需求的类型（业务、相关方、功能、非功能、技术）、如何收集和记录需求，以及需求跟踪。
+- [项目预测：方法、示例和步骤](https://neuralprojectinstitute.com/zh/项目管理/项目预测/): 项目预测详解：预测最终成本和完工日期的方法（EAC、挣得进度、蒙特卡洛、速度）、示例和步骤。
+- [项目预算：如何编制（附示例）](https://neuralprojectinstitute.com/zh/项目管理/项目预算/): 什么是项目预算、包含哪些内容、如何根据估算和储备分步编制、计算示例以及管理预算的技巧。
+- [项目风险管理：过程、步骤和示例](https://neuralprojectinstitute.com/zh/项目管理/项目风险管理/): 项目风险管理分步指南：规划、识别、评分和应对风险，附概率-影响矩阵、EMV、示例详解和模板。
+- [顺推法与逆推法：分步计算示例](https://neuralprojectinstitute.com/zh/项目管理/顺推法与逆推法/): 如何通过顺推法和逆推法求出最早和最晚日期、浮动时间和关键路径，附公式和完整计算示例。
+- [风险登记册：定义、列、示例和步骤](https://neuralprojectinstitute.com/zh/项目管理/风险登记册/): 什么是风险登记册、应包含哪些列、评分标准、完整示例，以及创建和维护风险登记册的分步流程。
+- [高级项目经理：职责、技能与发展路径](https://neuralprojectinstitute.com/zh/项目管理/高级项目经理/): 高级项目经理与项目经理的不同之处、典型职责、技能、如何获得晋升以及该岗位的后续发展方向。
+- [鱼骨图：步骤、类别与示例](https://neuralprojectinstitute.com/zh/项目管理/鱼骨图/): 什么是鱼骨图（石川图）、应使用哪些类别、如何逐步绘制、项目实例以及如何确认根本原因。
+
+## 敏捷指南
+
+- [敏捷指南](https://neuralprojectinstitute.com/zh/项目管理/敏捷/): 完整、免费的敏捷指南：敏捷宣言、冲刺、估算、角色、SAFe 和 LeSS、软件之外的敏捷，以及如何入门。
+- [IT 运维中的敏捷：运维团队如何应用敏捷和 DevOps](https://neuralprojectinstitute.com/zh/项目管理/敏捷/it-运维中的敏捷/): IT 运维团队如何应用敏捷：处理计划内和计划外工作、运维中的 Kanban、与 DevOps 的联系、指标、示例以及常见错误。
+- [PRINCE2 与敏捷：主要区别及如何结合](https://neuralprojectinstitute.com/zh/项目管理/敏捷/prince2-与敏捷/): PRINCE2 与敏捷在治理、角色、计划和变更方面的区别，各自的适用场景，以及 PRINCE2 Agile 如何将两者结合。
+- [SAFe 中的敏捷发布火车（ART）是什么？](https://neuralprojectinstitute.com/zh/项目管理/敏捷/safe-中的敏捷发布火车/): SAFe 中的敏捷发布火车是什么、其规模、角色和事件、如何规划和交付价值，以及启动第一个 ART 的技巧。
+- [Scrum Master 做什么？角色与职责](https://neuralprojectinstitute.com/zh/项目管理/敏捷/scrum-master-做什么/): Scrum Master 做什么？2020 年版《Scrum 指南》规定的职责、典型的一天、技能、示例以及 Scrum Master 与项目经理的对比。
+- [为什么要采用敏捷项目管理？优势与权衡](https://neuralprojectinstitute.com/zh/项目管理/敏捷/为什么要采用敏捷项目管理/): 敏捷项目管理的真正优势、它有效运作所需的条件，以及预测型方法更合适的情形。
+- [SAFe 中的 PI 计划：议程、步骤与示例](https://neuralprojectinstitute.com/zh/项目管理/敏捷/什么是-pi-计划/): PI 计划详解：SAFe 两天活动中发生的事情、议程、角色、PI 目标、ROAM、信心投票以及一个团队实例。
+- [什么是 SAFe？规模化敏捷框架详解](https://neuralprojectinstitute.com/zh/项目管理/敏捷/什么是-safe/): SAFe 详解：规模化敏捷框架的核心价值观、配置、敏捷发布火车、项目群增量、关键角色、优势与批评。
+- [什么是大规模 Scrum（LeSS）？原则与结构](https://neuralprojectinstitute.com/zh/项目管理/敏捷/什么是大规模-scrum/): 大规模 Scrum（LeSS）详解：多个团队共用一个产品负责人和一个待办事项列表、LeSS 与 LeSS Huge、事件、原则以及它与 SAFe 的比较。
+- [什么是敏捷 PMO？角色及如何转型您的 PMO](https://neuralprojectinstitute.com/zh/项目管理/敏捷/什么是敏捷-pmo/): 敏捷 PMO 与传统项目管理办公室的区别、其关键职责，以及转型现有 PMO 的实用步骤。
+- [什么是敏捷团队？角色、规模与特征](https://neuralprojectinstitute.com/zh/项目管理/敏捷/什么是敏捷团队/): 敏捷团队的构成要素：跨职能技能、自我管理、理想规模、关键角色，以及敏捷团队与传统项目团队的区别。
+- [什么是敏捷环境？文化、工作空间与工具](https://neuralprojectinstitute.com/zh/项目管理/敏捷/什么是敏捷环境/): 敏捷环境是什么样的：帮助敏捷团队蓬勃发展的文化、心理安全、工作空间、工具和领导实践。
+- [什么是敏捷蜂拥？团队如何更快完成工作](https://neuralprojectinstitute.com/zh/项目管理/敏捷/什么是敏捷蜂拥/): 敏捷中蜂拥（Swarming）的含义、何时使用、它如何减少在制品和周期时间，以及给刚开始蜂拥的团队的实用技巧。
+- [什么是敏捷路线图？如何构建](https://neuralprojectinstitute.com/zh/项目管理/敏捷/什么是敏捷路线图/): 什么是敏捷路线图、它与传统计划的区别、主要形式（现在-下一步-以后、基于成果）以及如何构建和维护。
+- [什么是敏捷项目管理？项目经理指南](https://neuralprojectinstitute.com/zh/项目管理/敏捷/什么是敏捷项目管理/): 面向项目经理的敏捷项目管理：角色如何变化、规划、预算与合同、报告、风险、混合方法和工具。
+- [创意团队的敏捷：设计、内容与视频](https://neuralprojectinstitute.com/zh/项目管理/敏捷/创意团队的敏捷/): 设计、内容、视频及其他创意团队如何使用敏捷：处理反馈循环、保护创作时间，以及适合创意工作的看板。
+- [史诗、故事与任务：敏捷工作层级详解](https://neuralprojectinstitute.com/zh/项目管理/敏捷/史诗-故事与任务/): 敏捷中史诗、用户故事和任务的区别：规模、负责人、目的和示例，以及主题和举措在层级中的位置。
+- [如何学习敏捷并获得认证：分步路径](https://neuralprojectinstitute.com/zh/项目管理/敏捷/如何学习敏捷并获得认证/): 如何从零开始学习敏捷：学什么、90 天计划、如何积累经验，以及如何在 PSM、CSM、PMI-ACP、SAFe 和 PRINCE2 Agile 之间做出选择。
+- [如何实施敏捷：分步指南](https://neuralprojectinstitute.com/zh/项目管理/敏捷/如何实施敏捷/): 在团队或组织中实施敏捷的实用分步计划：选择试点、培训、框架、领导层支持以及规模化推广。
+- [如何管理敏捷团队：实用领导力指南](https://neuralprojectinstitute.com/zh/项目管理/敏捷/如何管理敏捷团队/): 如何领导和管理敏捷团队：仆人式领导、在不微观管理的前提下指明方向、处理冲突、远程团队以及应避免的态度。
+- [如何运行敏捷项目：从启动到发布](https://neuralprojectinstitute.com/zh/项目管理/敏捷/如何运行敏捷项目/): 运行敏捷项目的实用演练：愿景、团队组建、待办事项列表、第一个冲刺、评审、向相关方汇报、发布和收尾。
+- [小队、部落、分会与公会：Spotify 模式详解](https://neuralprojectinstitute.com/zh/项目管理/敏捷/小队-部落-分会与公会/): Spotify 模式详解：小队、部落、分会和公会，它们如何平衡自主与一致，以及对效仿该模式的组织的启示。
+- [敏捷与 Scrum：主要区别、示例及适用场景](https://neuralprojectinstitute.com/zh/项目管理/敏捷/敏捷与-scrum/): 敏捷与 Scrum 详解：敏捷是一种思维方式，Scrum 是一个框架。比较角色、事件和规划，查看示例，了解各自的适用场景。
+- [敏捷与瀑布：区别及各自的适用场景](https://neuralprojectinstitute.com/zh/项目管理/敏捷/敏捷与瀑布/): 敏捷与瀑布并列对比：计划、范围、风险、角色和报告，以及选择或结合两者的实用指南。
+- [敏捷中的冲刺是什么？时长、事件与示例](https://neuralprojectinstitute.com/zh/项目管理/敏捷/敏捷中的冲刺是什么/): 敏捷中的冲刺是什么？冲刺如何运作、持续多久、其中的 Scrum 事件、冲刺目标、两周冲刺示例以及应避免的错误。
+- [敏捷中的完成的定义：含义、示例与检查清单](https://neuralprojectinstitute.com/zh/项目管理/敏捷/敏捷中的完成的定义/): 敏捷和 Scrum 中的完成的定义是什么、它与验收标准的区别，以及软件团队和非软件团队的示例。
+- [敏捷速度图：如何解读、构建和使用](https://neuralprojectinstitute.com/zh/项目管理/敏捷/敏捷中的速度图/): 敏捷速度图显示每个冲刺承诺和完成的故事点。了解如何解读和构建速度图、计算速度并预测发布。
+- [敏捷产品经理：角色、技能与示例](https://neuralprojectinstitute.com/zh/项目管理/敏捷/敏捷产品经理/): 敏捷产品经理做什么：职责、技能、产品负责人与产品经理的区别、附实例的优先级排序以及如何获得该职位。
+- [敏捷产能规划：公式、步骤和示例](https://neuralprojectinstitute.com/zh/项目管理/敏捷/敏捷产能规划/): 敏捷产能规划分步指南：冲刺产能公式、专注系数、速度调整、完整示例、发布预测及常见错误。
+- [敏捷仪式：敏捷会议实用指南](https://neuralprojectinstitute.com/zh/项目管理/敏捷/敏捷会议与仪式/): 敏捷仪式详解：冲刺计划会、每日站会、评审会、回顾会和梳理，附议程、时间盒、冲刺日程及实用技巧。
+- [敏捷估算：故事点与斐波那契数列](https://neuralprojectinstitute.com/zh/项目管理/敏捷/敏捷估算/): 敏捷团队如何用故事点进行估算、斐波那契数列为何有效、如何开展计划扑克，以及应避免的常见估算错误。
+- [敏捷发布规划：步骤、示例和模板](https://neuralprojectinstitute.com/zh/项目管理/敏捷/敏捷发布规划/): 敏捷发布规划详解：什么是发布计划、如何逐步制定、基于速度的完整预测示例、燃起图及免费模板。
+- [敏捷只适用于软件吗？如今谁在使用敏捷](https://neuralprojectinstitute.com/zh/项目管理/敏捷/敏捷只适用于软件吗/): 敏捷起源于软件领域，如今已被营销、人力资源、财务、政府、教育和硬件团队广泛采用。了解谁在使用敏捷以及他们如何调整敏捷。
+- [敏捷史诗：是什么、如何编写（附示例）](https://neuralprojectinstitute.com/zh/项目管理/敏捷/敏捷史诗/): 敏捷中的史诗是什么、史诗与主题、特性和用户故事的关系、如何编写和拆分史诗，以及可供参考的示例。
+- [敏捷团队结构：类型、角色及如何选择](https://neuralprojectinstitute.com/zh/项目管理/敏捷/敏捷团队结构/): 主要敏捷团队结构对比：通才型、专才型、特性团队、组件团队和平台团队，以及角色、团队规模和选择方法。
+- [敏捷的历史：始于何时？完整时间线](https://neuralprojectinstitute.com/zh/项目管理/敏捷/敏捷始于何时/): 敏捷的历史：从 20 世纪 50 年代的迭代开发和精益，到 2001 年的《敏捷宣言》、Scrum、规模化框架直至今日，附完整时间线。
+- [敏捷宣言：4 项价值观与 12 条原则详解](https://neuralprojectinstitute.com/zh/项目管理/敏捷/敏捷宣言/): 《敏捷宣言》详解：用通俗语言解读 4 项价值观和 12 条原则，附示例、历史、常见误读及当今的应用方法。
+- [敏捷工作流：如何为团队设计](https://neuralprojectinstitute.com/zh/项目管理/敏捷/敏捷工作流/): 敏捷工作流如何运作、从待办事项列表到完成的典型阶段、如何设计看板列和 WIP 限制，以及不同团队的示例。
+- [敏捷开发生命周期：6 个阶段及示例](https://neuralprojectinstitute.com/zh/项目管理/敏捷/敏捷开发生命周期/): 敏捷开发生命周期详解：6 个阶段、各阶段产出、一次迭代的逐步说明、完整示例以及与 SDLC 的对比。
+- [敏捷思维：是什么、关键特质及如何培养](https://neuralprojectinstitute.com/zh/项目管理/敏捷/敏捷思维/): 敏捷思维的含义、核心特质和行为、它与敏捷宣言的联系、工作中的示例以及培养敏捷思维的实用方法。
+- [敏捷指标与 KPI：衡量什么及为何衡量](https://neuralprojectinstitute.com/zh/项目管理/敏捷/敏捷指标与-kpi/): 真正重要的敏捷指标与 KPI：交付、流动、质量、成果和团队健康，附定义、用途以及应避免的错误。
+- [敏捷方法论的类型：Scrum、Kanban、XP、精益等](https://neuralprojectinstitute.com/zh/项目管理/敏捷/敏捷方法论的类型/): 比较主要的敏捷方法论（Scrum、Kanban、Scrumban、XP、精益、Crystal、DSDM 和 FDD），了解哪种最适合您的团队和工作。
+- [敏捷是项目管理的未来吗？](https://neuralprojectinstitute.com/zh/项目管理/敏捷/敏捷是项目管理的未来吗/): 敏捷是项目管理的未来吗？关于混合方法、AI、业务敏捷性和 PMBOK 第八版的证据、决策指南以及您接下来需要的技能。
+- [敏捷术语表：80 多个敏捷术语通俗释义](https://neuralprojectinstitute.com/zh/项目管理/敏捷/敏捷术语表/): 按字母顺序排列的敏捷术语表，以通俗语言定义了 80 多个术语，从验收标准到 WIP 限制，并附深度指南链接。
+- [敏捷甘特图：如何在敏捷中使用甘特图](https://neuralprojectinstitute.com/zh/项目管理/敏捷/敏捷甘特图/): 如何使用敏捷甘特图：显示哪些内容、如何逐步创建、发布完整示例、如何更新以及应避免的错误。
+- [敏捷营销：定义、示例及入门方法](https://neuralprojectinstitute.com/zh/项目管理/敏捷/敏捷营销/): 敏捷营销详解：宣言的价值观、营销中的 Scrum 与 Kanban 对比、两周冲刺示例、团队配置、指标及入门步骤。
+- [敏捷转型：实用路线图、阶段与陷阱](https://neuralprojectinstitute.com/zh/项目管理/敏捷/敏捷转型/): 什么是敏捷转型、分步路线图、如何衡量进展、涉及的角色以及让组织停滞不前的常见陷阱。
+- [敏捷软件开发如何运作：实践与最佳实践](https://neuralprojectinstitute.com/zh/项目管理/敏捷/敏捷软件开发如何运作/): 敏捷软件开发的日常运作方式：用户故事、CI/CD、测试、代码评审和 DevOps，以及高绩效团队的最佳实践。
+- [敏捷工具与技术：20 个必备方法及示例](https://neuralprojectinstitute.com/zh/项目管理/敏捷/敏捷项目管理工具与技术/): 敏捷工具与技术详解：用户故事、待办事项列表、估算、MoSCoW、看板、燃尽图和回顾会，附示例及工具选择方法。
+- [敏捷项目管理适用于建筑行业吗？](https://neuralprojectinstitute.com/zh/项目管理/敏捷/敏捷项目管理适用于建筑行业吗/): 敏捷和精益理念如何应用于建筑行业：哪些有效、哪些无效、末位计划者体系，以及实用的混合方法。
+- [敏捷项目组合管理：实践、WSJF 与步骤](https://neuralprojectinstitute.com/zh/项目管理/敏捷/敏捷项目组合管理/): 敏捷项目组合管理详解：精益预算、项目组合 Kanban、附实例的 WSJF、指标、角色以及分步启动计划。
+- [敏捷项目经理：角色、技能与职业路径](https://neuralprojectinstitute.com/zh/项目管理/敏捷/敏捷项目经理/): 敏捷项目经理做什么、该角色与 Scrum Master 和传统项目经理有何不同、关键技能、认证以及分步职业路径。
+- [用户故事：如何编写及示例](https://neuralprojectinstitute.com/zh/项目管理/敏捷/用户故事/): 用户故事详解：模板、验收标准、INVEST、拆分技术和实例，并附免费用户故事模板。
+- [项目计划在敏捷开发中的作用](https://neuralprojectinstitute.com/zh/项目管理/敏捷/项目计划在敏捷开发中的作用/): 敏捷项目依然需要计划。了解敏捷项目计划包含哪些内容、敏捷计划的层级，以及如何在没有固定计划的情况下满足治理要求。
+
+## Scrum 指南
+
+- [Scrum 指南：循序渐进学习 Scrum](https://neuralprojectinstitute.com/zh/项目管理/scrum/): 免费实用的 Scrum 指南：Scrum 是什么、3 项职责、5 个事件和 3 个工件、冲刺如何运作，以及 35 篇学习 Scrum 的深度指南。
+- [Scrum of Scrums：如何协调多个 Scrum 团队](https://neuralprojectinstitute.com/zh/项目管理/scrum/scrum-of-scrums/): What a Scrum of Scrums is, who attends, how often it meets, a sample agenda, common pitfalls, and how it fits with Scrum@Scale, LeSS and SAFe.
+- [Scrum 与瀑布：主要区别详解](https://neuralprojectinstitute.com/zh/项目管理/scrum/scrum-与瀑布/): Scrum 与瀑布对比：计划、交付、角色、变更、风险和文档，以及何时使用各自或混合方法的指导。
+- [产品待办事项列表：Scrum 中的定义与管理方法](https://neuralprojectinstitute.com/zh/项目管理/scrum/scrum-中的产品待办事项列表/): 产品待办列表详解：包含什么、由谁负责、如何逐步构建、排序和梳理，以及优先级排序技术和示例。
+- [Scrum 中的产品负责人是什么？角色与必备技能](https://neuralprojectinstitute.com/zh/项目管理/scrum/scrum-中的产品负责人是什么/): Scrum 产品负责人详解：职责、日常活动、必备技能、该角色与产品经理的区别以及常见陷阱。
+- [Scrum 中的仆人式领导：在实践中意味着什么](https://neuralprojectinstitute.com/zh/项目管理/scrum/scrum-中的仆人式领导/): 仆人式领导在 Scrum 中的含义、起源、Scrum Master 和管理者如何践行，以及服务与讨好的区别。
+- [Scrum 中的增量是什么？定义与示例](https://neuralprojectinstitute.com/zh/项目管理/scrum/scrum-中的增量是什么/): Scrum 中的增量是什么、它与完成的定义的关系、每个冲刺能否发布多个增量，以及各行业的示例。
+- [Scrum 中的待办列表梳理：如何开展（附示例）](https://neuralprojectinstitute.com/zh/项目管理/scrum/scrum-中的待办事项列表梳理/): 待办列表梳理详解：《Scrum 指南》的说明、参与者、时长和频率、分步议程、拆分技术和示例。
+- [Scrum 中的技术债：如何发现和管理](https://neuralprojectinstitute.com/zh/项目管理/scrum/scrum-中的技术债/): 什么是技术债、它在 Scrum 团队中如何累积、如何在产品待办事项列表中使其可见，以及偿还技术债的实用策略。
+- [Scrum 中的故事点：是什么以及如何估算](https://neuralprojectinstitute.com/zh/项目管理/scrum/scrum-中的故事点/): 详解 Scrum 中的故事点：衡量什么、如何借助参照故事和计划扑克进行估算、故事点与工时的区别、示例及常见错误。
+- [Scrum 仪式：5 个 Scrum 事件详解](https://neuralprojectinstitute.com/zh/项目管理/scrum/scrum-仪式/): 五个 Scrum 事件（冲刺、冲刺计划会、每日 Scrum、冲刺评审会、回顾会）：目的、参与者、时间盒以及它们如何相互配合。
+- [Scrum 冲刺周期：时长、时间盒与规则](https://neuralprojectinstitute.com/zh/项目管理/scrum/scrum-冲刺周期/): Scrum 冲刺周期如何运作：选择冲刺时长、每天发生什么、变更范围的规则、取消冲刺以及技巧。
+- [Scrum 原则与价值观：经验主义支柱详解](https://neuralprojectinstitute.com/zh/项目管理/scrum/scrum-原则与价值观/): Scrum 的三大支柱（透明、检视、调整）和五项价值观（承诺、专注、开放、尊重、勇气），附示例。
+- [Scrum 技术：补充框架的实践](https://neuralprojectinstitute.com/zh/项目管理/scrum/scrum-技术/): Scrum 团队在框架之外添加的实用技术：用户故事、故事地图、计划扑克、燃尽图、梳理、结对和回顾形式。
+- [Scrum 术语表：70 多个 Scrum 术语通俗释义](https://neuralprojectinstitute.com/zh/项目管理/scrum/scrum-术语表/): 包含 70 多个术语的 Scrum 术语表：职责、事件、工件、承诺和常见实践，每个术语均以通俗语言定义并附链接。
+- [Scrum 的优势：好处与局限](https://neuralprojectinstitute.com/zh/项目管理/scrum/scrum-的优势/): Scrum 框架对团队、客户和组织的主要优势、需要注意的局限，以及 Scrum 最适合的场景。
+- [Scrum 看板：如何设置和使用](https://neuralprojectinstitute.com/zh/项目管理/scrum/scrum-看板/): Scrum 看板如何运作、典型的列、Scrum 卡片上应写什么、实体看板与数字看板，以及它与 Kanban 看板的区别。
+- [Scrum 认证与培训：选项对比](https://neuralprojectinstitute.com/zh/项目管理/scrum/scrum-认证与培训/): 比较 Scrum 认证（PSM、CSM、PSPO、CSPO、SAFe Scrum Master）和培训选项，选择适合您角色和目标的路径。
+- [Scrum 软件工具：应关注什么](https://neuralprojectinstitute.com/zh/项目管理/scrum/scrum-软件工具/): 如何选择 Scrum 软件：待办事项列表、冲刺、看板和报告的必备功能、常用工具以及采用技巧。
+- [What Is Scrum@Scale? Structure, Roles and Cycles](https://neuralprojectinstitute.com/zh/项目管理/scrum/what-is-scrum-scale/): Scrum@Scale explained: Jeff Sutherland's scale-free framework, Scrum of Scrums, Executive Action Team, MetaScrum, the two cycles, and how it compares.
+- [冲刺回顾会：目标、形式与引导技巧](https://neuralprojectinstitute.com/zh/项目管理/scrum/冲刺回顾会/): 如何召开冲刺回顾会：目标、时间盒、五步结构、引导技巧，以及如何确保改进措施真正落地。
+- [冲刺回顾游戏：10 种行之有效的形式](https://neuralprojectinstitute.com/zh/项目管理/scrum/冲刺回顾游戏/): 十种经过验证的冲刺回顾游戏和形式，包括开始-停止-继续、帆船、4L、海星和时间线，以及各自的适用时机。
+- [冲刺评审会：目标、议程与检查清单](https://neuralprojectinstitute.com/zh/项目管理/scrum/冲刺评审会/): 如何在 Scrum 中召开冲刺评审会：目的、参与者、时间盒、示例议程、准备检查清单以及应避免的错误。
+- [冲刺评审会与冲刺回顾会：有什么区别？](https://neuralprojectinstitute.com/zh/项目管理/scrum/冲刺评审会与冲刺回顾会/): 冲刺评审会与回顾会对比：目的、关注点、参与者、输出和顺序，让每个 Scrum 事件各司其职。
+- [如何成为 Scrum Master：技能、步骤与认证](https://neuralprojectinstitute.com/zh/项目管理/scrum/如何成为-scrum-master/): 如何成为 Scrum Master：最有用的 Scrum Master 技能、需要积累的实践经验、认证选择，以及如何获得第一份工作。
+- [每日站会：目的、形式、规则和示例](https://neuralprojectinstitute.com/zh/项目管理/scrum/每日-scrum/): 每日站会详解：目的、15 分钟时间盒和参与者、各种形式的对比、如何逐步开展、示例详解和解决方法。
+
+## 看板指南
+
+- [Kanban 指南](https://neuralprojectinstitute.com/zh/项目管理/kanban/): 完整、免费的 Kanban 指南：原则、看板、卡片、WIP 限制、流动指标、与 Scrum 的对比以及精益基础。
+- [Kanban 与 Scrum：区别及如何选择](https://neuralprojectinstitute.com/zh/项目管理/kanban/kanban-与-scrum/): Kanban 与 Scrum 对比：节奏、角色、计划、变更、指标和看板，以及何时选择其一或将两者结合的指导。
+- [Kanban 与 Scrumban：有什么区别？](https://neuralprojectinstitute.com/zh/项目管理/kanban/kanban-与-scrumban/): Kanban 与 Scrumban 的区别、Scrumban 从 Scrum 和 Kanban 中借鉴了什么，以及团队何时应选择其中之一。
+- [Kanban 与敏捷：区别、重叠及适用场景](https://neuralprojectinstitute.com/zh/项目管理/kanban/kanban-与敏捷/): Kanban 与敏捷详解：敏捷是一种思维方式，Kanban 是践行它的一种流动方法。比较原则、看板和指标，并附实例。
+- [Kanban 与瀑布：主要区别及各自的适用场景](https://neuralprojectinstitute.com/zh/项目管理/kanban/kanban-与瀑布/): Kanban 与瀑布对比：计划、流动、变更、交付和可见性，以及各自适合哪些项目和如何将两者结合的指导。
+- [Kanban 中的 WIP 限制：如何设定和使用](https://neuralprojectinstitute.com/zh/项目管理/kanban/kanban-中的-wip-限制/): 什么是在制品（WIP）限制、它为何能加快交付、如何设定首个限制，以及达到限制时该怎么做。
+- [Kanban 中的吞吐量：如何衡量和使用](https://neuralprojectinstitute.com/zh/项目管理/kanban/kanban-中的吞吐量/): 吞吐量在 Kanban 中的含义、如何衡量、如何利用吞吐量和蒙特卡洛模拟预测交付日期，以及如何提升吞吐量。
+- [Kanban 周期时间：公式、示例及缩短方法](https://neuralprojectinstitute.com/zh/项目管理/kanban/kanban-中的周期时间/): Kanban 中的周期时间是一个事项从开始到完成所需的时间。了解其公式、百分位数、散点图和 SLE，并附实例。
+- [Kanban 会议与节奏：您需要哪些](https://neuralprojectinstitute.com/zh/项目管理/kanban/kanban-会议与节奏/): Kanban 节奏详解：每日 Kanban 会议、补充会议、交付计划会议、服务交付评审、运营评审、风险评审和战略评审。
+- [Kanban 卡片：应写什么及为什么](https://neuralprojectinstitute.com/zh/项目管理/kanban/kanban-卡片/): 什么是 Kanban 卡片、每张卡片应显示的信息、如何确定工作项大小、阻塞标记，以及设计良好的卡片示例。
+- [看板原则与实践：实用指南](https://neuralprojectinstitute.com/zh/项目管理/kanban/kanban-原则与实践详解/): 看板原则与实践详解：四项基础原则、服务交付原则和六项实践，附示例详解。
+- [看板库存管理：双箱系统与公式](https://neuralprojectinstitute.com/zh/项目管理/kanban/kanban-库存管理/): 看板库存管理详解：双箱系统和卡片系统、看板公式及实例、卡片设计、建立步骤、优缺点。
+- [Kanban 指标：真正重要的流动度量](https://neuralprojectinstitute.com/zh/项目管理/kanban/kanban-指标/): 必备的 Kanban 指标：WIP、周期时间、前置时间、吞吐量、工作项年龄和流动效率，以及展示这些指标的图表。
+- [Kanban 泳道：类型、用途与最佳实践](https://neuralprojectinstitute.com/zh/项目管理/kanban/kanban-泳道/): 什么是 Kanban 泳道、常见用法（服务类别、工作类型、团队），以及如何避免看板杂乱。
+- [Kanban 看板：如何设计和使用](https://neuralprojectinstitute.com/zh/项目管理/kanban/kanban-看板/): 什么是 Kanban 看板、其关键组成部分（列、卡片、WIP 限制、泳道）、不同团队的看板示例以及分步设计技巧。
+- [Kanban 计划：如何在没有冲刺的情况下计划和预测](https://neuralprojectinstitute.com/zh/项目管理/kanban/kanban-计划/): Kanban 中的计划如何运作：补充、承诺点、服务水平预期，以及基于吞吐量和周期时间的概率预测。
+- [WIP 老化图：在延误之前发现停滞的工作](https://neuralprojectinstitute.com/zh/项目管理/kanban/wip-老化图/): 什么是 WIP 老化图、如何结合周期时间百分位数解读，以及如何在每日 Kanban 会议中利用工作项年龄防止延误。
+- [个人 Kanban：用两条简单规则管理自己的工作](https://neuralprojectinstitute.com/zh/项目管理/kanban/个人-kanban/): 如何使用个人 Kanban 管理自己的任务：两条规则、简单的看板设置、个人 WIP 限制以及让习惯坚持下去的技巧。
+- [什么是 DevOps？文化、实践与指标](https://neuralprojectinstitute.com/zh/项目管理/kanban/什么是-devops/): DevOps 详解：起源、CALMS 模型、三步工作法、关键实践、DORA 指标，以及 DevOps 与精益、敏捷和 Kanban 的联系。
+- [什么是 Kanban？定义、原则与示例](https://neuralprojectinstitute.com/zh/项目管理/kanban/什么是-kanban/): 什么是 Kanban？了解 Kanban 方法的含义、原则、实践、看板、WIP 限制和流动指标，附示例和分步设置说明。
+- [价值流图：如何绘制并改进您的流程](https://neuralprojectinstitute.com/zh/项目管理/kanban/价值流图/): 价值流图分步指南：现状图和未来状态图、处理时间和前置时间等关键指标，以及如何发现浪费。
+- [准时制（JIT）：运作方式、示例与优缺点](https://neuralprojectinstitute.com/zh/项目管理/kanban/准时制/): 准时制（JIT）详解：拉动、节拍时间和看板如何运作，成本实例，优缺点，JIT 与以防万一的比较，以及 JIT 在项目中的应用。
+- [周期时间与前置时间：有什么区别？](https://neuralprojectinstitute.com/zh/项目管理/kanban/周期时间与前置时间/): 通过示例讲解周期时间与前置时间：各自的起点和终点、两者为何都很重要、它们与利特尔法则的关系以及如何改进。
+- [拉动系统与推动系统：区别与示例](https://neuralprojectinstitute.com/zh/项目管理/kanban/拉动系统与推动系统/): 拉动式系统与推动式系统详解：什么触发工作、WIP 限制如何定义拉动、实例、利特尔法则，以及如何从推动转向拉动。
+- [持续交付：流水线、原则与 Kanban 流动](https://neuralprojectinstitute.com/zh/项目管理/kanban/持续交付/): 持续交付让软件始终处于可发布状态。了解它与 CI 和持续部署的区别，以及流水线、DORA 指标和 Kanban 流动。
+- [流动效率：前置时间中有多少是真正的工作？](https://neuralprojectinstitute.com/zh/项目管理/kanban/流动效率/): 什么是流动效率、如何计算、为何它通常低得惊人，以及减少等待时间、提升流动效率的实用方法。
+- [目视化管理：让工作和问题一目了然](https://neuralprojectinstitute.com/zh/项目管理/kanban/目视化管理/): 什么是目视化管理、其精益根源、看板、安灯和 5S 等工具、项目团队示例，以及有效目视化展示的技巧。
+- [精益 Kanban：精益思想如何塑造 Kanban 方法](https://neuralprojectinstitute.com/zh/项目管理/kanban/精益-kanban/): 精益原则如何支撑 Kanban：价值、流动、拉动和持续改进，精益 Kanban 的历史，以及如何将两者结合应用。
+- [精益生产：原则、浪费与工具](https://neuralprojectinstitute.com/zh/项目管理/kanban/精益生产/): 精益生产详解：丰田起源、七种浪费、5S、看板、JIT 和改善等关键工具，以及对项目团队的启示。
+- [累积流图：如何解读和使用 CFD](https://neuralprojectinstitute.com/zh/项目管理/kanban/累积流图/): 累积流图（CFD）显示各阶段工作随时间的变化。学习如何解读色带、发现瓶颈、估算周期时间，并逐步制作一张 CFD。
+- [约束理论（TOC）：五个聚焦步骤](https://neuralprojectinstitute.com/zh/项目管理/kanban/约束理论/): Eliyahu Goldratt 约束理论详解：瓶颈、五个聚焦步骤、鼓-缓冲-绳，以及如何将 TOC 与 Kanban 结合应用。
+- [阻塞项聚类：如何发现并解决反复出现的延误](https://neuralprojectinstitute.com/zh/项目管理/kanban/阻塞聚类/): 阻塞项聚类按原因对被阻塞的 Kanban 工作进行分组，并以阻塞天数衡量成本。了解操作步骤、实例、优先级矩阵和常见解决方法。
+
+## 行业指南
+
+- [各行业项目管理](https://neuralprojectinstitute.com/zh/项目管理/行业/): 各行业项目管理：建筑、IT、营销、医疗、政府等 30 个行业如何规划项目，附方法、KPI 和工具。
+- [IT 项目管理：阶段、角色、方法与工具](https://neuralprojectinstitute.com/zh/项目管理/行业/it-项目管理/): IT 项目管理详解：从启动到上线后重点支持期的各个阶段、角色、敏捷、瀑布和 ITIL、关键文档、KPI、挑战和软件。
+- [专业服务项目管理：实用指南](https://neuralprojectinstitute.com/zh/项目管理/行业/专业服务项目管理/): 专业服务项目管理详解：项目生命周期、定价模式、利用率与利润率计算、角色、KPI 和 PSA 软件。
+- [人力资源项目管理：示例、阶段、角色与工具](https://neuralprojectinstitute.com/zh/项目管理/行业/人力资源项目管理/): 人力资源项目管理详解：HR 项目示例、分阶段计划、角色、变革管理、KPI，以及适合 HR 团队的模板和软件。
+- [代理机构项目管理：流程、KPI 与示例](https://neuralprojectinstitute.com/zh/项目管理/行业/代理机构项目管理/): 代理机构项目管理详解：从比稿到开票的流程、角色、估算和利用率实例、KPI、范围控制和工具。
+- [企业项目管理（EPM）：指南与示例](https://neuralprojectinstitute.com/zh/项目管理/行业/企业级项目管理/): 企业项目管理（EPM）详解：EPMO 与 PMO、项目组合生命周期、优先级排序和产能示例、治理、KPI 和软件。
+- [企业项目管理：阶段、角色、工具与技巧](https://neuralprojectinstitute.com/zh/项目管理/行业/企业项目管理/): 企业项目管理如何运作：将项目与战略挂钩、商业论证、收益、阶段、角色、方法、文档、KPI 和工具。
+- [创意项目管理：流程、角色和工具](https://neuralprojectinstitute.com/zh/项目管理/行业/创意项目管理/): 创意项目管理详解：7 阶段工作流、角色、修改控制、实例、KPI，以及面向创意团队的模板和软件。
+- [制药项目管理：阶段、角色与工具](https://neuralprojectinstitute.com/zh/项目管理/行业/制药项目管理/): 制药项目管理详解：药物开发阶段、GxP、阶段关口、角色、实例、KPI、模板和软件。
+- [制造业项目管理：NPI、阶段和 KPI](https://neuralprojectinstitute.com/zh/项目管理/行业/制造业项目管理/): 制造业项目管理详解：NPI 和 APQP 阶段、生产线安装、角色、精益和六西格玛、实例、KPI 和软件。
+- [医疗项目管理：阶段、角色和示例](https://neuralprojectinstitute.com/zh/项目管理/行业/医疗项目管理/): 医疗项目管理详解：临床安全、阶段、角色、方法、EHR 上线实例、KPI、模板和软件。
+- [咨询项目管理：阶段、角色和方法](https://neuralprojectinstitute.com/zh/项目管理/行业/咨询项目管理/): 咨询项目管理详解：咨询项目阶段、角色、假设驱动的工作计划、费用构成、范围控制、KPI、模板和工具。
+- [基础设施项目管理：阶段、角色与工具](https://neuralprojectinstitute.com/zh/项目管理/行业/基础设施项目管理/): 基础设施项目管理详解：生命周期、角色、交付模式、合同、附实例的成本和进度控制、KPI 和工具。
+- [室内设计项目管理：阶段、FF&E 与工具](https://neuralprojectinstitute.com/zh/项目管理/行业/室内设计项目管理/): 面向设计工作室的室内设计项目管理：从设计任务书到安装的各个阶段、FF&E 采购、角色、文档、KPI、挑战以及可使用的软件。
+- [小型企业项目管理：方法、工具与技巧](https://neuralprojectinstitute.com/zh/项目管理/行业/小型企业项目管理/): 实用的小型企业项目管理：轻量级阶段、人人身兼数职时的角色分工、简单的方法、模板、KPI 和工具。
+- [工程项目管理：阶段、角色和方法](https://neuralprojectinstitute.com/zh/项目管理/行业/工程项目管理/): 工程项目管理详解：阶段与设计评审、角色、方法、分步流程、实例、KPI 和软件。
+- [建筑设计项目管理：阶段、费用和工具](https://neuralprojectinstitute.com/zh/项目管理/行业/建筑设计项目管理/): 建筑设计项目管理详解：RIBA 和 AIA 阶段、费用和资源控制、角色、实例、KPI、模板和软件。
+- [建筑项目管理：阶段、角色、工具与技巧](https://neuralprojectinstitute.com/zh/项目管理/行业/建筑项目管理/): 建筑项目管理如何运作：从设计前期到竣工收尾的各个阶段、关键角色、合同、方法、文档、KPI 以及可使用的软件。
+- [房地产项目管理：阶段、角色和示例](https://neuralprojectinstitute.com/zh/项目管理/行业/房地产项目管理/): 房地产项目管理详解：开发生命周期、角色、评估实例、KPI、风险，以及面向房地产项目的模板和软件。
+- [政府项目管理：阶段、角色、工具与技巧](https://neuralprojectinstitute.com/zh/项目管理/行业/政府项目管理/): 政府项目管理如何运作：公共问责、采购、资金规则、生命周期阶段、角色、方法、KPI 和软件。
+- [教育项目管理：阶段、角色、工具与技巧](https://neuralprojectinstitute.com/zh/项目管理/行业/教育项目管理/): 中小学和大学的教育项目管理如何运作：学年校历、角色、阶段、方法、文档、KPI、挑战和工具。
+- [法律项目管理：流程、角色、工具与技巧](https://neuralprojectinstitute.com/zh/项目管理/行业/法律项目管理/): 法律项目管理详解：诉讼和交易事务的阶段、角色、预算和收费模式、模板、KPI 以及 LPM 软件。
+- [活动项目管理：阶段、时间线、预算和工具](https://neuralprojectinstitute.com/zh/项目管理/行业/活动项目管理/): 活动项目管理详解：活动生命周期、倒排时间线、预算和活动流程表示例、角色、风险、KPI、模板和软件。
+- [游戏开发项目管理：制作人指南](https://neuralprojectinstitute.com/zh/项目管理/行业/游戏开发项目管理/): 游戏开发项目管理详解：阶段、里程碑、制作人角色、敏捷、排期、预算、过度加班控制、KPI 和工具。
+- [科研项目管理：阶段、角色、工具与技巧](https://neuralprojectinstitute.com/zh/项目管理/行业/科研项目管理/): 科研项目管理如何运作：科研资助、伦理审批、数据管理、阶段、角色、方法、文档、KPI、挑战和工具。
+- [能源项目管理：阶段、角色、控制和工具](https://neuralprojectinstitute.com/zh/项目管理/行业/能源项目管理/): 可再生能源、电力和油气领域的能源项目管理：阶段关口、FEED、EPC 合同、控制、HSE KPI、实例和模板。
+- [营销项目管理：流程、角色和工具](https://neuralprojectinstitute.com/zh/项目管理/行业/营销项目管理/): 营销项目管理详解：营销活动生命周期、角色、倒排计划、产品发布实例、KPI、模板和软件。
+- [视频制作项目管理：完整指南](https://neuralprojectinstitute.com/zh/项目管理/行业/视频制作项目管理/): 视频制作项目管理详解：阶段、角色、预算、进度计划、通告单、审阅轮次、交付规格、KPI 和工具。
+- [软件项目管理：流程、方法与 KPI](https://neuralprojectinstitute.com/zh/项目管理/行业/软件项目管理/): 软件项目管理详解：SDLC、分步流程、敏捷方法、角色、附实例的估算、DORA 指标和工具。
+- [远程项目管理：实践、工具和示例](https://neuralprojectinstitute.com/zh/项目管理/行业/远程项目管理/): 远程项目管理详解：异步沟通、时区、工作约定示例、远程例会仪式、KPI、模板和工具。
+- [非营利组织项目管理：流程、示例和工具](https://neuralprojectinstitute.com/zh/项目管理/行业/非营利组织项目管理/): 非营利组织项目管理详解：分步流程、逻辑框架和预算示例、资助方报告、志愿者、KPI、模板和工具。
+
+## 免费模板
+
+- [55 个免费项目管理模板](https://neuralprojectinstitute.com/zh/模板/): 55 个适用于 Excel、Google Sheets 和 PDF 的免费项目管理模板：项目计划、甘特图、RACI、风险登记册、冲刺和预算。无需注册。
+- [免费 RACI 矩阵模板（Google Sheets、Excel、PDF）](https://neuralprojectinstitute.com/zh/模板/raci-矩阵模板/): 免费 RACI 矩阵模板，用于明确每项任务的负责、批准、咨询和知情人员。可下载 Google Sheets、Excel 或 PDF 版本。
+- [业务需求文档（BRD）模板](https://neuralprojectinstitute.com/zh/模板/业务需求文档/): 免费业务需求文档模板：BRD 概述和需求日志，含 MoSCoW 优先级、验收标准和状态。支持 Sheets、Excel、PDF。
+- [免费内容日历模板，适用于社交媒体、博客和电子邮件](https://neuralprojectinstitute.com/zh/模板/内容日历模板-适用于社交媒体-博客和电子邮件/): 适用于 Google Sheets、Excel 和 PDF 的免费内容日历模板。规划博客、社交媒体和电子邮件内容，包含日期、渠道、负责人、状态和关键词。
+- [免费冲刺计划模板（Google Sheets、Excel、PDF）](https://neuralprojectinstitute.com/zh/模板/冲刺计划模板/): 免费冲刺计划模板，包含冲刺目标、产能、选定的待办事项、故事点、负责人和任务。可下载 Google Sheets、Excel 或 PDF 版本。
+- [变更请求模板（免费表单和变更日志）](https://neuralprojectinstitute.com/zh/模板/变更请求模板与变更日志/): 免费变更请求模板，包含一页纸表单和变更日志：对范围、时间和成本的影响、决定和批准人。支持 Google Sheets、Excel 或 PDF。
+- [免费商业计划书模板（Google Sheets、Excel、PDF）](https://neuralprojectinstitute.com/zh/模板/商业计划书模板/): 免费商业计划书模板，包含引导式章节、一页摘要和 3 年财务预测。可下载 Google Sheets、Excel 或 PDF 版本。
+- [免费商业论证模板，含成本效益汇总（Sheets、Excel、PDF）](https://neuralprojectinstitute.com/zh/模板/商业论证模板-含成本效益汇总/): 免费商业论证模板：问题、方案、成本、收益、ROI、投资回收期、风险和建议。可下载 Google Sheets、Excel 或 PDF 版本。
+- [免费工作包模板，附示例（Excel、Sheets、PDF）](https://neuralprojectinstitute.com/zh/模板/工作包模板-附示例/): 适用于 Excel、Google Sheets 和 PDF 的免费工作包模板：范围、交付物、任务、负责人、工作量、成本、日期、依赖关系和验收标准。
+- [带行动项的会议纪要模板](https://neuralprojectinstitute.com/zh/模板/带行动项的会议纪要模板/): 免费会议纪要模板，包含决定和行动项、负责人、截止日期和状态。可用作正式会议记录。支持 Google Sheets、Excel 或 PDF。
+- [带风险评分的免费风险登记册模板（Excel、Sheets、PDF）](https://neuralprojectinstitute.com/zh/模板/带风险评分的免费风险登记册模板/): 适用于 Excel、Google Sheets 和 PDF 的免费风险登记册模板，自动计算风险评分，包含负责人、应对措施和状态，并附实例。
+- [免费待办事项清单模板（每日与每周），适用于 Sheets、Excel、PDF](https://neuralprojectinstitute.com/zh/模板/待办事项清单模板/): 免费待办事项清单模板，包含优先级、截止日期、类别和状态，另附每周计划表和可打印的检查清单。可下载 Google Sheets、Excel 或 PDF 版本。
+- [免费技能矩阵模板（Excel、Google Sheets、PDF）](https://neuralprojectinstitute.com/zh/模板/技能矩阵模板/): 适用于 Excel、Google Sheets 和 PDF 的免费技能矩阵模板：按 0-4 分为技能评分，查看团队平均值，发现单点故障并规划培训。
+- [免费敏捷项目计划模板，含章程（Excel、Sheets、PDF）](https://neuralprojectinstitute.com/zh/模板/敏捷项目计划模板/): 适用于 Excel、Google Sheets 和 PDF 的免费敏捷项目计划模板：冲刺目标、史诗、故事点、发布和状态，外加敏捷项目章程。
+- [免费沟通计划模板（Excel、Google Sheets、PDF）](https://neuralprojectinstitute.com/zh/模板/沟通计划模板/): 适用于 Excel、Google Sheets 和 PDF 的免费沟通计划模板：受众、内容、渠道、频率、负责人和反馈，附已填写的示例。
+- [免费甘特图模板（Google Sheets、Excel、PDF）](https://neuralprojectinstitute.com/zh/模板/甘特图模板/): 免费甘特图模板：任务、负责人、日期以及可逐周填写的时间线。可下载 Google Sheets、Excel 或可打印的 PDF 版本。
+- [免费竞争对手分析模板（Google Sheets、Excel、PDF）](https://neuralprojectinstitute.com/zh/模板/竞争对手分析模板/): 免费竞争对手分析模板，从产品、定价、受众、优势、劣势和定位等方面比较竞争对手，并附评分。Sheets、Excel、PDF。
+- [免费经验教训模板（Google Sheets、Excel、PDF）](https://neuralprojectinstitute.com/zh/模板/经验教训模板/): 适用于 Excel、Google Sheets 和 PDF 的免费经验教训模板。记录做得好的方面、根本原因和有负责人的建议，附问题和示例。
+- [免费行动计划模板（Google Sheets、Excel、PDF）](https://neuralprojectinstitute.com/zh/模板/行动计划模板/): 适用于 Excel、Google Sheets 和 PDF 的免费行动计划模板。将目标转化为有负责人、日期、资源和衡量标准的行动。附步骤和示例。
+- [适用于 Google Sheets 和 Excel 的免费预算模板（月度）](https://neuralprojectinstitute.com/zh/模板/适用于-google-sheets-和-excel/): 免费预算模板，包含每月计划支出与实际支出、偏差以及项目、团队或个人预算的合计。提供 Google Sheets、Excel 或 PDF 版本。
+- [免费项目成本估算模板（Excel、Google Sheets、PDF）](https://neuralprojectinstitute.com/zh/模板/项目成本估算模板/): 适用于 Excel、Google Sheets 和 PDF 的免费项目成本估算模板：明细行、数量 × 费率、估算类型、应急储备和合计，附示例。
+- [免费项目章程模板（附示例）](https://neuralprojectinstitute.com/zh/模板/项目章程模板/): 免费项目章程模板，包含 14 个引导式部分和一个实例：目标、范围、预算、风险、角色和签批。支持 Sheets、Excel 或 PDF。
+- [免费项目计划模板（附示例）](https://neuralprojectinstitute.com/zh/模板/项目计划模板/): 适用于 Excel、Google Sheets 和 PDF 的免费项目计划模板：阶段、任务、负责人、日期、依赖关系和里程碑，并附分步示例。
+
+## 项目管理软件评测
+
+- [2026 年最佳项目管理工具](https://neuralprojectinstitute.com/zh/项目管理工具/): 2026 年最佳项目管理工具排名：Wrike、monday.com、Asana、ClickUp 等 10 款工具，从功能、价格、免费套餐和用户评分全面对比。
+- [Wrike 2026 年评测：值得使用吗？](https://neuralprojectinstitute.com/zh/项目管理工具/wrike-评测/): 我们的 Wrike 评测涵盖功能、价格、AI 工具、项目管理、优缺点、集成，以及 Wrike 在 2026 年是否值得使用。
+- [2026 年最佳 AI 项目管理工具](https://neuralprojectinstitute.com/zh/项目管理工具/年最佳-ai-项目管理工具/): 2026 年 9 款最佳 AI 项目管理工具：Wrike、monday.com、ClickUp、Asana、Smartsheet、Jira、Notion 等，附 AI 功能和价格。
+- [项目管理工具对比](https://neuralprojectinstitute.com/zh/项目管理工具/项目管理工具对比/): 一对一比较项目管理工具：Wrike、monday.com、Asana、ClickUp、Jira、Trello 等的 45 篇对比，附得分、价格和结论。
+
+## 工具对比
+
+- [Asana 与 ClickUp 对比（2026）：应该选择哪一款？](https://neuralprojectinstitute.com/zh/项目管理工具/asana/asana-与-clickup-对比/): Asana 与 ClickUp 对比：价格、AI 附加组件成本、易用性、甘特图、冲刺、文档、自动化限制、评分，以及 2026 年应选择哪一款。
+- [Asana 与 Notion 对比：2026 年您的团队应该使用哪一款？](https://neuralprojectinstitute.com/zh/项目管理工具/asana/asana-与-notion-对比/): Asana 与 Notion 对比：价格、项目视图、文档、目标、AI、工作量和评分，并就 2026 年哪款工具适合您的团队给出明确建议。
+- [monday.com 与 Asana 对比（2026）：哪个更适合您的团队？](https://neuralprojectinstitute.com/zh/项目管理工具/monday/monday-com-与-asana-对比/): monday.com 与 Asana 对比：价格、席位下限、自动化限制、AI、甘特图、目标和项目组合、评分，以及 2026 年应选择哪一款。
+- [Smartsheet 与 Basecamp：2026 年应该选择哪一个？](https://neuralprojectinstitute.com/zh/项目管理工具/smartsheet/smartsheet-与-basecamp/): Smartsheet 与 Basecamp 比较：价格、甘特图、客户访问、AI、报告和易用性，为您的团队给出明确结论。
+- [Wrike 与 ClickUp 对比：2026 年哪个更好？](https://neuralprojectinstitute.com/zh/项目管理工具/wrike-评测/wrike-与-clickup-对比/): Wrike 与 ClickUp 对比：价格（含 AI 附加组件）、功能、资源管理、冲刺、易用性和评分，以及应该选择哪款工具。
+- [Wrike 与 Microsoft Planner 对比：2026 年应该选择哪一款？](https://neuralprojectinstitute.com/zh/项目管理工具/wrike-评测/wrike-与-microsoft-planner-对比/): Wrike 与 Microsoft Planner 对比：价格、甘特图进度安排、资源、报告、AI 和 Microsoft 365 适配度，以及 2026 年应选择哪款工具。
+- [Wrike 与 monday.com 对比：2026 年哪款工作管理工具胜出？](https://neuralprojectinstitute.com/zh/项目管理工具/wrike-评测/wrike-与-monday-com-对比/): Wrike 与 monday.com 对比：价格和席位规则、甘特图、资源管理、自动化、AI、评分，以及 2026 年哪个平台适合您的团队。
+- [Wrike 与 Notion 对比：哪个更适合项目管理？](https://neuralprojectinstitute.com/zh/项目管理工具/wrike-评测/wrike-与-notion-对比/): Wrike 与 Notion 对比：项目功能、文档、AI、价格、易用性和评分，以及 2026 年您的团队应选择哪一款。
+- [Wrike 与 Smartsheet 对比：2026 年哪个更好？](https://neuralprojectinstitute.com/zh/项目管理工具/wrike-评测/wrike-与-smartsheet-对比/): Wrike 与 Smartsheet 对比：价格、甘特图、资源和项目组合管理、AI、易用性和评分，以及 2026 年应选择哪款工具。
+
+## 工具替代方案
+
+- [2026 年最佳 Basecamp 替代方案](https://neuralprojectinstitute.com/zh/项目管理工具/basecamp/年最佳-basecamp-替代方案/): 比较 2026 年最佳 Basecamp 替代方案，包括 Wrike、monday.com、Asana、ClickUp 和 Trello，附价格、免费套餐、评分和使用场景。
+- [2026 年项目管理领域最佳 Notion 替代方案](https://neuralprojectinstitute.com/zh/项目管理工具/notion/年项目管理领域最佳-notion-替代方案/): 比较项目管理领域最佳的 Notion 替代方案：Wrike、Asana、ClickUp、monday.com 等，附得分、价格、免费套餐和迁移建议。
+- [2026 年最佳 Smartsheet 替代方案](https://neuralprojectinstitute.com/zh/项目管理工具/smartsheet/年最佳-smartsheet-替代方案/): 比较 2026 年最佳 Smartsheet 替代方案，包括 Wrike、monday.com、Asana 和 ClickUp，附价格、免费套餐、评分和使用场景。
+- [2026 年最佳 Trello 替代方案](https://neuralprojectinstitute.com/zh/项目管理工具/trello/年最佳-trello-替代方案/): 比较最佳 Trello 替代方案：Wrike、monday.com、Asana、ClickUp 等，附得分、价格、免费套餐、甘特图功能和迁移建议。
