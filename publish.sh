@@ -5,6 +5,7 @@ MSG="$1"; shift
 cd /home/claude/npi
 exec 9>/home/claude/npi/.publish.lock; flock 9
 python3 check.py "$@"
+python3 gate.py "$@"
 cd /home/claude/neural-project-institute && git pull -q --rebase origin main
 cd /home/claude/npi && python3 render.py "$@" && python3 gen_llms.py
 cd /home/claude/neural-project-institute
