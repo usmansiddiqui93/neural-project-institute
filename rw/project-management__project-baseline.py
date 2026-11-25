@@ -45,7 +45,7 @@ RW = dict(
         ),
         S(
             "Baseline, current plan, forecast and target compared",
-            "Confusing these four terms is the most common reason baseline reports mislead. A schedule tool typically shows several of them side by side.",
+            "Baseline reports often mislead because these four terms are confused. A schedule tool typically shows several of them side by side.",
             T(
                 ["Term", "What it is", "How often it changes", "Who changes it"],
                 ["Baseline", "Approved reference plan used to measure performance", "Only when a change is approved", "Change authority (sponsor, board or delegated PM)"],
@@ -57,7 +57,7 @@ RW = dict(
         ),
         S(
             "How reserves relate to the cost baseline",
-            "Reserves are where most cost baseline errors creep in. The PMI Lexicon distinguishes two kinds:",
+            "Reserves are a frequent source of cost baseline errors. The PMI Lexicon distinguishes two kinds:",
             L(
                 "**Contingency reserve** is \"time or money allocated in the schedule or cost baseline for known risks with active response strategies\". Because it is inside the baseline, the project manager can normally use it within agreed rules without changing the baseline total.",
                 "**Management reserve** is \"time or money that management sets aside in addition to the schedule or cost baseline\" for unforeseen work within scope. It sits outside the baseline, so releasing it increases the cost baseline and needs an approved change.",
@@ -102,7 +102,7 @@ RW = dict(
                 "Legacy data quality is worse than assumed: P = 0.25, I = £40k, so EMV = 0.25 × 40 = £10k.",
             ),
             "Contingency reserve = 20 + 10 = **£30k**. Cost baseline = 290 + 30 = **£320k**. The sponsor's policy sets management reserve at 5% of the cost baseline: 0.05 × 320 = **£16k**. Project budget = 320 + 16 = **£336k**.",
-            "In this example contingency is held as a project-level line and not phased into planned value, so the PV curve totals £290k. Expected value is a reasonable sizing method for a portfolio of independent risks; it does not cover the worst case of a single large risk, which is why management reserve exists.",
+            "In this example contingency is held as a project-level line and not phased into planned value, so the PV curve totals £290k. Expected value is a reasonable sizing method for a portfolio of independent risks, but it does not cover the full impact if one large risk occurs (the integration risk alone could cost £50k against £30k of contingency). Organisations that want more cover size contingency at a higher confidence level, for example from a Monte Carlo analysis. Management reserve is not a top-up for identified risks; it is for unforeseen work.",
             H3("Step 2: fix the schedule baseline"),
             T(
                 ["Milestone", "Baseline date (v1.0)"],
@@ -127,8 +127,8 @@ RW = dict(
             "By the end of March the team had earned about £0.92 of planned value for every £1 scheduled, and £0.88 of earned value for every £1 spent. With a reporting threshold of ±10% (an assumption for this example), the cost variance breaches the threshold and the schedule variance does not. The project manager should analyse the cost variance by work package, decide on corrective action, and update the forecast. None of these measures would exist without a fixed baseline.",
             H3("Step 4: check schedule baseline execution"),
             "Earned value aggregates money; it does not show whether the tasks due to finish actually finished. The **baseline execution index (BEI)**, defined in the US Department of Defense EVM glossary, fills that gap:",
-            "BEI = number of baseline tasks with an actual finish date ÷ number of baseline tasks scheduled to finish on or before the status date. Milestones and level-of-effort tasks are usually excluded; the result is a ratio with no unit.",
-            "In the repairs system schedule, 24 baseline tasks were due to finish by 31 March and 21 tasks have actual finish dates (one of them finished ahead of its baseline date). BEI = 21 ÷ 24 = **0.875**. A value of 1.0 means tasks are completing at the baselined rate. Schedule assessment tools often flag values below 0.95; Elecosoft Powerproject, for example, suggests 1.00 as its pass boundary and 0.95 as its fail boundary. Here BEI agrees with the SPI of 0.92 that work is falling behind, and the three overdue tasks tell the project manager exactly where to look.",
+            "BEI = number of baseline tasks with an actual finish date ÷ number of baseline tasks scheduled to finish on or before the status date. The numerator counts every completed baseline task, including any finished ahead of a baseline date after the status date, so early work can offset late work. Milestones and level-of-effort tasks are usually excluded; the result is a ratio with no unit.",
+            "In the repairs system schedule, 24 baseline tasks were due to finish by 31 March and 21 of them have actual finish dates; no task baselined to finish after 31 March has finished early. BEI = 21 ÷ 24 = **0.875**. A value of 1.0 means tasks are completing at the baselined rate. Schedule assessment tools often flag values below 0.95; Elecosoft Powerproject, for example, suggests 1.00 as its pass boundary and 0.95 as its fail boundary. Here BEI agrees with the SPI of 0.92 that work is falling behind, and the three overdue tasks tell the project manager exactly where to look.",
         ),
         S(
             "Changing a baseline: approved changes, replanning and re-baselining",
@@ -144,7 +144,7 @@ RW = dict(
             "The US Department of Defense EVM glossary separates **internal replanning**, which reorganises remaining work within the authorised scope, budget and contract dates, from **formal reprogramming**, a comprehensive replan whose budget or schedule exceeds the contract. Formal reprogramming produces an **over target baseline (OTB)**, described as \"a new baseline for management when the original objectives cannot be met\", and/or an **over target schedule (OTS)**, a schedule baseline extending beyond contract dates.",
             "The US Government Accountability Office (GAO) Cost Estimating and Assessment Guide states that an over target baseline or schedule \"should rarely be necessary\" and that an OTB \"normally eliminates historical variances\". It also notes that repeated requests suggest severe underlying management problems. The same logic applies outside government work: replan freely within the baseline; re-baseline rarely, formally and visibly.",
             H3("What a quiet re-baseline does to the numbers"),
-            "Suppose that, instead of reporting the March position, someone resets the repairs system baseline so that planned value and budget equal what has been earned and spent.",
+            "Suppose that, instead of reporting the March position, someone resets the repairs system baseline so that the planned value to date and the budgeted value of the completed work both equal the actual cost to date (PV = EV = AC = £121k).",
             T(
                 ["Measure at 31 March", "Against baseline v1.0", "After a quiet re-baseline"],
                 ["SV", "−£9k", "£0k"],
@@ -156,8 +156,8 @@ RW = dict(
             H3("Keeping a baseline log"),
             "Continuing the example, three events occur after the March review:",
             L(
-                "Change request CR-07, adding a mobile app for repair operatives, is approved on 6 April: +£24k (phased into April to June) and +2 weeks to go-live.",
-                "In April the legacy data quality risk occurs. The project manager transfers £10k of contingency into WP3. The cost baseline total does not change.",
+                "Change request CR-07, adding a mobile app for repair operatives, is approved on 6 April: +£24k (phased into April to July) and +2 weeks to go-live.",
+                "In April part of the legacy data quality risk occurs: extra cleansing work costs £10k, and the project manager transfers £10k of contingency into WP3. The cost baseline total does not change.",
                 "In May an unforeseen incompatibility with the association's single sign-on platform, not in the risk register but within scope, needs £8k. The sponsor releases it from management reserve.",
             ),
             T(
@@ -189,7 +189,7 @@ RW = dict(
         S(
             "Baselines in scheduling tools",
             "Scheduling tools store baseline dates, durations, work and cost alongside the current plan and show the difference as a variance field or a second bar on the [Gantt chart](/project-management/gantt-chart/). Microsoft's support documentation for Project Online and Project Server states that you can save up to 11 baseline data sets, including the unnumbered Baseline, which lets you keep v1.0 and later versions in the same file.",
-            "Among the tools we review, Wrike includes baselines from its Team plan, ClickUp offers them on paid plans, Microsoft Planner includes them on Planner and Project Plan 3, and monday.com's Gantt feature page lists them. Basecamp, Trello and Notion do not offer baselines. Whatever the tool, set a naming convention so that a saved baseline is always traceable to the approval that created it.",
+            "Among the tools we review, Wrike includes baselines from its Team plan, ClickUp offers them on paid plans, Microsoft Planner includes them on Planner and Project Plan 3, and monday.com's Gantt feature page lists them. Basecamp, Trello and Notion do not offer baselines natively, and Jira has no built-in baseline tracking. Whatever the tool, set a naming convention so that a saved baseline is always traceable to the approval that created it.",
             "Read [Gantt chart software](/project-management/gantt-chart-software/) for a fuller comparison of scheduling features.",
         ),
         S(

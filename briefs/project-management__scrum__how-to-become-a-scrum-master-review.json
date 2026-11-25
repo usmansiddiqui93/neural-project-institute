@@ -1,0 +1,189 @@
+{
+ "url": "/project-management/scrum/how-to-become-a-scrum-master/",
+ "status": "PUBLISH",
+ "publication_eligible": true,
+ "gates": {
+  "definitions_accurate": true,
+  "framework_requirements_verified": true,
+  "calculations_correct": true,
+  "variables_units_defined": true,
+  "examples_consistent_and_labelled": true,
+  "claims_supported": true,
+  "sources_authentic": true,
+  "educational_value": true,
+  "no_duplicate_intent": true,
+  "internal_links_valid": true,
+  "certification_claims_accurate": true,
+  "disclosures_included": true,
+  "metadata_valid": true,
+  "no_fabricated_experience": true
+ },
+ "scores": {
+  "technical_accuracy_25": 24,
+  "sources_15": 14,
+  "educational_usefulness_15": 14,
+  "examples_10": 9,
+  "information_gain_10": 8,
+  "precision_readability_10": 9,
+  "search_intent_5": 5,
+  "internal_linking_5": 5,
+  "technical_seo_5": 5,
+  "total": 93
+ },
+ "claims_checked": [
+  {
+   "claim": "Scrum Master accountable for establishing Scrum and the Scrum Team's effectiveness; 'true leaders who serve'",
+   "source": "https://scrumguides.org/scrum-guide.html",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Scrum Master services quoted in the duties table (self-management coaching, events positive/productive/timeboxed, causing removal of impediments, Product Backlog techniques, empirical product planning, leading Scrum adoption)",
+   "source": "https://scrumguides.org/scrum-guide.html",
+   "result": "confirmed"
+  },
+  {
+   "claim": "2020 Guide replaced 'Development Team' with 'Developers'",
+   "source": "https://scrumguides.org/scrum-guide.html",
+   "result": "confirmed"
+  },
+  {
+   "claim": "PSM I: US$200 per attempt plus taxes, 80 questions, 60 minutes, 85%, course recommended not required, classes include a free attempt, passwords one attempt/no expiry, lifetime",
+   "source": "https://www.scrum.org/assessments/professional-scrum-master-i-certification",
+   "result": "confirmed"
+  },
+  {
+   "claim": "CSM: 16 hours over 2-3 days; 50 questions, one hour, 37 correct; two attempts within 90 days; US$250-2,495 as of October 2023",
+   "source": "https://www.scrumalliance.org/get-certified/scrum-master-track/certified-scrummaster",
+   "result": "confirmed"
+  },
+  {
+   "claim": "CSM renewal every two years: 20 SEUs + US$100",
+   "source": "https://support.scrumalliance.org/hc/en-us/articles/50926906482843-What-is-the-cost-to-renew-a-certification (confirmed in the certification-and-training review); SEU count not re-fetched",
+   "result": "confirmed"
+  },
+  {
+   "claim": "A-CSM: CSM or Scrum.org PSM I/PSM II plus 12 months Scrum Master experience within past five years",
+   "source": "https://www.scrumalliance.org/get-certified/scrum-master-track/advanced-certified-scrummaster ; https://support.scrumalliance.org/hc/en-us/articles/53987387167003-How-to-add-PSM-from-Scrum-org-as-a-prerequisite-credential-for-A-CSM-and-A-CSD-courses",
+   "result": "confirmed"
+  },
+  {
+   "claim": "CSP-SM: A-CSM plus 24 months within past five years",
+   "source": "https://www.scrumalliance.org/get-certified/scrum-master-track/certified-scrum-professional-scrummaster",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Sprintcraft/PMAI: mentioned once with commercial-interest disclosure, described as course-completion certificate, not a substitute for PSM I or CSM",
+   "source": "site PMAI description (/project-management/agile/scrum-master-role/ CTA)",
+   "result": "confirmed"
+  }
+ ],
+ "calculations_rechecked": [
+  {
+   "item": "Readiness 3+2+1+3+3+2+1+2 = 17; 17/32 = 53.1%; mean 2.125 (2.1)",
+   "result": "correct"
+  },
+  {
+   "item": "After plan 20/32 = 62.5%, no skill below 2",
+   "result": "correct"
+  },
+  {
+   "item": "5 h/week x 12 weeks = 60 h",
+   "result": "correct"
+  },
+  {
+   "item": "CSM 37/50 = 74%; PSM I 85% of 80 = 68",
+   "result": "correct"
+  }
+ ],
+ "changes_made": [
+  "Worked-example learner renamed from Priya to Daniela: /project-management/project-management-skills/ already uses 'Priya, a project coordinator' in a self-assessment worked example.",
+  "Interview scenario 'The team missed its Sprint Goal three Sprints in a row' replaced with 'Stakeholders have stopped attending the Sprint Review', because the missed-Sprint-Goal scenario is the worked example on /project-management/agile/scrum-master-role/.",
+  "First key takeaway (near-verbatim copy of the scrum-master-role takeaway on accountability) replaced with a career-route takeaway.",
+  "Common mistakes: removed 'Becoming the team's administrator' and 'Solving every impediment personally' (near-verbatim duplicates of the scrum-master-role mistakes table); added 'Waiting for a vacancy before practising'.",
+  "Routes section closing paragraph (near-verbatim copy of scrum-master-role's technical-background paragraph) rewritten as background-specific advice.",
+  "FAQ 'Do Scrum Masters need a technical background?' reframed for the career intent and its duplicated sentence removed; FAQ 'Is the Scrum Master a manager?' removed (role intent, near-verbatim duplicate of scrum-master-role FAQ)."
+ ],
+ "statistical_text_measurements": {
+  "url": "/project-management/scrum/how-to-become-a-scrum-master/",
+  "word_count": 3641,
+  "unique_words": 981,
+  "type_token_ratio": 0.2694,
+  "mattr_100": 0.753,
+  "shannon_word_entropy_bits": 8.541,
+  "normalised_entropy": 0.8594,
+  "sentences": 134,
+  "avg_sentence_length": 16.16,
+  "sentence_length_sd": 10.69,
+  "sentence_length_cv": 0.661,
+  "paragraph_length_mean": 38.0,
+  "paragraph_length_sd": 19.2,
+  "bigram_repetition_rate": 0.3253,
+  "trigram_repetition_rate": 0.1143,
+  "top_repeated_4grams": [
+   [
+    "become a scrum master",
+    8
+   ],
+   [
+    "to become a scrum",
+    6
+   ],
+   [
+    "psm i or csm",
+    6
+   ],
+   [
+    "the 2020 scrum guide",
+    5
+   ],
+   [
+    "the scrum master accountability",
+    5
+   ],
+   [
+    "questions in 60 minutes",
+    4
+   ],
+   [
+    "us 200 per attempt",
+    3
+   ],
+   [
+    "the accountability for your",
+    3
+   ]
+  ],
+  "most_common_sentence_openers": [],
+  "formulaic_phrases_found": [],
+  "watch_phrases_counts": {},
+  "most_similar_existing_guides": [
+   [
+    0.731,
+    "/project-management/agile/scrum-master-role/"
+   ],
+   [
+    0.662,
+    "/project-management/scrum/scrum-certification-and-training/"
+   ],
+   [
+    0.594,
+    "/project-management/scrum/scrum-team-roles/"
+   ],
+   [
+    0.579,
+    "/project-management/scrum/scrum-glossary/"
+   ],
+   [
+    0.568,
+    "/project-management/scrum/"
+   ]
+  ],
+  "note": "Descriptive editorial diagnostics only. No AI-detection probability is calculated."
+ },
+ "unresolved_issues": [
+  "Duplication check: similarity fell from 0.745 to 0.731 with /project-management/agile/scrum-master-role/. Intents differ: that page answers 'what does a Scrum Master do' (services, typical day, impediment process, role comparisons); this page is a career route (skills to practise, readiness self-assessment, certification choice, CV, interviews, first 90 days) and links to the role page for the accountability. Both pages carry a PSM I vs CSM table; this is acceptable as a short summary pointing to /project-management/scrum/scrum-certification-and-training/, but the site owner may prefer to trim the role page's table to a link.",
+  "The role page's CSM facts are dated 'checked 25 October 2026' while this page says 25 November 2026; figures agree.",
+  "Live HTML not re-rendered or published by this review."
+ ],
+ "reviewer_note": "Automated review by an AI reviewer; not a human professional review."
+}

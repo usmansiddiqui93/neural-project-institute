@@ -1,0 +1,347 @@
+{
+ "url": "/project-management/industries/it-project-management/",
+ "proposed_status": "PUBLISH",
+ "article_type": "industry methodology guide (update of existing page)",
+ "language": "en-GB",
+ "learning_level": "intermediate",
+ "primary_keyword": "IT project management",
+ "secondary_keywords": [
+  "IT project management phases",
+  "IT project life cycle",
+  "IT project management methodologies",
+  "IT project management KPIs",
+  "ITIL and project management",
+  "data migration plan",
+  "cutover plan",
+  "rollback plan",
+  "go/no-go decision",
+  "hypercare",
+  "user acceptance testing",
+  "change success rate",
+  "SaaS implementation project",
+  "IT project roles",
+  "IT project management tools",
+  "hybrid IT project",
+  "DPIA for IT projects",
+  "IT project management examples"
+ ],
+ "search_intent": "methodology / definition with how-to elements",
+ "h1": "IT Project Management: Phases, Methods, Roles and KPIs",
+ "seo_title": "IT Project Management: Phases, Methods, Roles and KPIs",
+ "meta_description": "IT project management explained: phases, delivery approaches, ITIL, roles, data migration and cutover with worked examples, KPIs, templates and tools.",
+ "excerpt": "How IT projects are planned and delivered into live service: life cycle, delivery approaches, ITIL practices, roles, IT-specific workstreams, a CRM replacement worked example with migration and cutover calculations, and KPIs.",
+ "parent_topic_cluster": "Industries (/project-management/industries/)",
+ "prerequisite_guides": [
+  "/project-management/what-is-project-management/",
+  "/project-management/project-charter/"
+ ],
+ "related_articles": [
+  "/project-management/it-project-manager/",
+  "/project-management/industries/software-project-management/",
+  "/project-management/agile/agile-operations-it/",
+  "/project-management/kanban/devops/",
+  "/project-management/technical-project-manager/"
+ ],
+ "learning_objectives": [
+  "Explain what distinguishes IT project management from general project management",
+  "Choose a predictive, adaptive or hybrid approach for a given type of IT work",
+  "Describe how ITIL 4 practices interact with an IT project",
+  "Set migration rehearsal thresholds and use rehearsal measurements to plan a cutover",
+  "Calculate the latest go/no-go time and backward trigger points for a cutover window",
+  "Calculate and interpret post-go-live KPIs such as change success rate, adoption and licence utilisation"
+ ],
+ "internal_links": [
+  "/project-management-tools/",
+  "/project-management-tools/jira/",
+  "/project-management-tools/wrike/",
+  "/project-management/agile/agile-operations-it/",
+  "/project-management/agile/what-is-agile-project-management/",
+  "/project-management/change-management-vs-change-control/",
+  "/project-management/cost-benefit-analysis/",
+  "/project-management/forward-and-backward-pass/",
+  "/project-management/industries/software-project-management/",
+  "/project-management/it-project-manager/",
+  "/project-management/kanban/devops/",
+  "/project-management/lessons-learned/",
+  "/project-management/project-charter/",
+  "/project-management/risk-register/",
+  "/project-management/service-level-agreement-sla/",
+  "/templates/business-case-template/",
+  "/templates/business-requirements-document-template/",
+  "/templates/change-request-template/",
+  "/templates/communication-plan-template/",
+  "/templates/project-charter-template/",
+  "/templates/project-plan-template/",
+  "/templates/raci-matrix-template/",
+  "/templates/raid-log-template/",
+  "/templates/release-plan-template/"
+ ],
+ "relevant_templates": [
+  "/templates/business-case-template/",
+  "/templates/project-charter-template/",
+  "/templates/business-requirements-document-template/",
+  "/templates/project-plan-template/",
+  "/templates/raid-log-template/",
+  "/templates/raci-matrix-template/",
+  "/templates/change-request-template/",
+  "/templates/release-plan-template/",
+  "/templates/communication-plan-template/"
+ ],
+ "related_npi_course": "None mentioned in body (page PMAI box unchanged)",
+ "external_references": [
+  {
+   "title": "ITSM.tools: ITIL 4 Management Practices Explained (full list and purposes)",
+   "url": "https://itsm.tools/34-itil-4-management-practices/",
+   "inspected": true,
+   "what_it_supports": "Names and purposes of change enablement, release management, deployment management, service validation and testing, service level management; project and portfolio management as ITIL 4 general management practices (secondary source; PeopleCert practice guides paywalled)"
+  },
+  {
+   "title": "PeopleCert: ITIL (Version 5) explained",
+   "url": "https://peoplecert.org/news-and-announcements/itil-version-5-explained",
+   "inspected": false,
+   "what_it_supports": "Phased release of ITIL (Version 5), ITIL 4 still available; statement carried over from the reviewed /agile/agile-operations-it/ page for consistency, not re-opened in this session"
+  },
+  {
+   "title": "GOV.UK Service Manual: How the discovery phase works (updated 21 June 2021)",
+   "url": "https://www.gov.uk/service-manual/phases/discovery",
+   "inspected": true,
+   "what_it_supports": "Discovery purpose; around 4 to 8 weeks typical; do not start building in discovery; leads to alpha"
+  },
+  {
+   "title": "GOV.UK Service Manual: How the beta phase works (updated 19 Feb 2021)",
+   "url": "https://www.gov.uk/service-manual/phases/beta",
+   "inspected": true,
+   "what_it_supports": "Private and public beta; keep legacy service running until live; assessment before live"
+  },
+  {
+   "title": "ICO: When do we need to do a DPIA? (13 Oct 2025)",
+   "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/accountability-and-governance/data-protection-impact-assessments-dpias/when-do-we-need-to-do-a-dpia",
+   "inspected": true,
+   "what_it_supports": "Article 35(1): DPIA prior to processing likely to result in high risk, in particular using new technologies; do one if unsure; guidance under review due to the Data (Use and Access) Act"
+  },
+  {
+   "title": "Asana: IT project management",
+   "url": "https://asana.com/resources/it-project-management",
+   "inspected": true,
+   "what_it_supports": "SERP coverage and gap analysis only"
+  },
+  {
+   "title": "Atlassian: IT project management",
+   "url": "https://www.atlassian.com/work-management/project-management/it-project-management",
+   "inspected": true,
+   "what_it_supports": "SERP coverage and gap analysis only"
+  },
+  {
+   "title": "NPI Wrike review and Jira review",
+   "url": "/project-management-tools/wrike/ ; /project-management-tools/jira/",
+   "inspected": true,
+   "what_it_supports": "Wrike #1 (9.4), request forms, Gantt, resource planning, two-way sync with Jira and GitHub; Jira #6 (8.6), no classic Gantt with critical path and baselines"
+  }
+ ],
+ "formulas": [
+  {
+   "formula": "Reject rate = rejected records / extracted records x 100%",
+   "variables": "record counts",
+   "verified_by": "python",
+   "inputs": "37,000; 6,100; 840 of 1,200,000",
+   "result": "3.08%; 0.51%; 0.07%"
+  },
+  {
+   "formula": "Reconciliation: loaded + rejected = extracted",
+   "variables": "record counts",
+   "verified_by": "python",
+   "inputs": "1,199,160 + 840",
+   "result": "1,200,000"
+  },
+  {
+   "formula": "Manual fix days = rejects x minutes per record / 60 / (stewards x productive hours per day)",
+   "variables": "records, minutes, hours",
+   "verified_by": "python",
+   "inputs": "840 x 4 / 60 / (4 x 6)",
+   "result": "56 h; 2.33 working days (3 scheduled)"
+  },
+  {
+   "formula": "Load rate = records / load hours; load time = records / rate",
+   "variables": "records per hour; hours",
+   "verified_by": "python",
+   "inputs": "1,200,000 / 9.5; 1,230,000 / 126,316; x 1.3 contingency",
+   "result": "126,316 per hour; 9.74 h; 12.66 h (shown 12.7)"
+  },
+  {
+   "formula": "Latest go/no-go = window end - rehearsed rollback duration - safety margin",
+   "variables": "clock times and hours",
+   "verified_by": "python (datetime)",
+   "inputs": "Mon 07:00 - 6 h - 2 h; window Fri 18:00-Mon 07:00",
+   "result": "Sun 23:00; window 61 h"
+  },
+  {
+   "formula": "Cutover timeline (forward pass) and buffer",
+   "variables": "hours",
+   "verified_by": "python (datetime)",
+   "inputs": "3 + 12.7 + 4 + 3 + 5",
+   "result": "27.7 h, finish Sat 21:42, buffer 25.3 h before go/no-go"
+  },
+  {
+   "formula": "Latest load finish (backward pass) = go/no-go - downstream durations",
+   "variables": "hours",
+   "verified_by": "python",
+   "inputs": "Sun 23:00 - (4 + 3 + 5)",
+   "result": "Sun 11:00"
+  },
+  {
+   "formula": "Forecast remaining time = remaining records / actual rate",
+   "variables": "records, records per hour",
+   "verified_by": "python",
+   "inputs": "(1,230,000 - 380,000) / (380,000 / 4)",
+   "result": "8.95 h; finish about Sat 09:57"
+  },
+  {
+   "formula": "Change success rate = successful changes / total changes x 100%",
+   "variables": "counts",
+   "verified_by": "python",
+   "inputs": "45 / 48",
+   "result": "93.75%"
+  },
+  {
+   "formula": "Adoption = active users / licensed users x 100%; unused licence cost = unused x price x 12",
+   "variables": "users; GBP per user per month",
+   "verified_by": "python",
+   "inputs": "132/150; 18 x 65 x 12",
+   "result": "88%; GBP 14,040 a year"
+  },
+  {
+   "formula": "Tickets per user per week",
+   "variables": "tickets, users",
+   "verified_by": "python",
+   "inputs": "230,140,75,38 / 150",
+   "result": "1.53, 0.93, 0.50, 0.25"
+  }
+ ],
+ "formula_verification_output": "trial1 37000 rate 3.083% loaded 1163000\ntrial2 6100 rate 0.508% loaded 1193900\ndress 840 rate 0.070% loaded 1199160\nthreshold 0.1% = 1200.0\nfix minutes 3360 hours 56.0\nteam hours/day 24 days 2.3333333333333335\nrate/h 126315.78947368421\nprod records 1230000.0\nload h 9.737499999999999\nload with 30% contingency 12.65875\nweekday start Friday end Monday\nwindow h 61.0\nlatest go/no-go Sunday 23:00 hour 53.0\nfreeze & final extract 3 Fri 18:00 -> Fri 21:00\nload (incl. 30% contingency) 12.7 Fri 21:00 -> Sat 09:42\nreconcile 4 Sat 09:42 -> Sat 13:42\nswitch integrations & smoke test 3 Sat 13:42 -> Sat 16:42\nbusiness verification 5 Sat 16:42 -> Sat 21:42\nplanned total h 27.7 finish Sat 21:42\nbuffer before go/no-go h 25.3\nlatest load finish Sun 11:00\nlatest load start w/o contingency Sun 01:15\nchange success 93.75\nadoption 88.0\nunused licence cost 14040\ntickets per user [1.53, 0.93, 0.5, 0.25]\nmid-load forecast: 380000/4=95000/h; remaining 850000/95000=8.947h; Sat 01:00+8.947h=Sat 09:57; 15 min beyond planned 09:42 (incl. 30% contingency); buffer 25.3-0.25=25.05h\n",
+ "worked_examples": [
+  {
+   "title": "CRM replacement: migration rehearsals, cutover window and latest go/no-go, mid-cutover forecast, post-go-live KPIs",
+   "illustrative": true
+  }
+ ],
+ "statistical_text_measurements": {
+  "url": "/project-management/industries/it-project-management/",
+  "word_count": 4761,
+  "unique_words": 1167,
+  "type_token_ratio": 0.2451,
+  "mattr_100": 0.7386,
+  "shannon_word_entropy_bits": 8.814,
+  "normalised_entropy": 0.8651,
+  "sentences": 147,
+  "avg_sentence_length": 20.96,
+  "sentence_length_sd": 12.55,
+  "sentence_length_cv": 0.599,
+  "paragraph_length_mean": 46.7,
+  "paragraph_length_sd": 27.7,
+  "bigram_repetition_rate": 0.3422,
+  "trigram_repetition_rate": 0.1133,
+  "top_repeated_4grams": [
+   [
+    "latest go no-go time",
+    5
+   ],
+   [
+    "security and data protection",
+    5
+   ],
+   [
+    "it project management is",
+    4
+   ],
+   [
+    "the latest go no-go",
+    4
+   ],
+   [
+    "it project management it",
+    4
+   ],
+   [
+    "1 200 000 1",
+    4
+   ],
+   [
+    "project management is the",
+    3
+   ],
+   [
+    "it project manager guide",
+    3
+   ]
+  ],
+  "most_common_sentence_openers": [
+   [
+    "the project",
+    6
+   ],
+   [
+    "it project",
+    4
+   ],
+   [
+    "for the",
+    3
+   ]
+  ],
+  "formulaic_phrases_found": [],
+  "watch_phrases_counts": {},
+  "most_similar_existing_guides": [
+   [
+    0.536,
+    "/project-management/it-project-manager/"
+   ],
+   [
+    0.381,
+    "/project-management/waterfall-project-management/"
+   ],
+   [
+    0.374,
+    "/project-management/industries/business-project-management/"
+   ],
+   [
+    0.35,
+    "/project-management/project-integration-management/"
+   ],
+   [
+    0.341,
+    "/project-management/industries/software-project-management/"
+   ]
+  ],
+  "note": "Descriptive editorial diagnostics only. No AI-detection probability is calculated."
+ },
+ "self_assessment": {
+  "technical_accuracy_25": 23,
+  "sources_15": 12,
+  "educational_usefulness_15": 14,
+  "examples_10": 9,
+  "information_gain_10": 9,
+  "precision_readability_10": 9,
+  "search_intent_5": 5,
+  "internal_linking_5": 5,
+  "technical_seo_5": 4,
+  "total": 90
+ },
+ "required_disclosures": [
+  "Worked example labelled illustrative/invented",
+  "ITIL 4 terms used with note that ITIL (Version 5) is being introduced in phases",
+  "ICO note that DPIA guidance is under review",
+  "No PMAI course mentioned in body"
+ ],
+ "unverified_claims": [
+  "ITIL 4 practice purposes verified via ITSM.tools (secondary); PeopleCert practice guides not inspected (paywalled)",
+  "PeopleCert ITIL (Version 5) status carried over from the reviewed agile-operations-it page; not re-opened in this session",
+  "PMBOK Guide distinguishing predictive, adaptive and hybrid development approaches: from general knowledge of PMBOK 7th/8th editions; the 8th edition text was not inspected",
+  "Statements that hybrid is a frequent approach for packaged implementations and that environment shortages commonly slip test cycles are practitioner judgement, not sourced",
+  "Change success rate definition is common practice, not a defined ITIL formula"
+ ],
+ "unresolved_issues": [
+  "Word count about 4,750 including tables and FAQ, above the usual 2,500-4,000 range; driven by the worked example and workstream tables",
+  "Most similar existing guide is /project-management/it-project-manager/ (0.536); intents differ (discipline vs role) and the worked examples differ (CRM migration calculations vs 40-application cloud migration waves), with a cross-link to its runbook",
+  "Live page's PMAI box and templates box left as they are"
+ ]
+}

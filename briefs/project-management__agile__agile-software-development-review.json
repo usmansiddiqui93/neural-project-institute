@@ -1,0 +1,230 @@
+{
+ "url": "/project-management/agile/agile-software-development/",
+ "status": "PUBLISH",
+ "publication_eligible": true,
+ "gates": {
+  "definitions_accurate": true,
+  "framework_requirements_verified": true,
+  "calculations_correct": true,
+  "variables_units_defined": true,
+  "examples_consistent_and_labelled": true,
+  "claims_supported": true,
+  "sources_authentic": true,
+  "educational_value": true,
+  "no_duplicate_intent": true,
+  "internal_links_valid": true,
+  "certification_claims_accurate": true,
+  "disclosures_included": true,
+  "metadata_valid": true,
+  "no_fabricated_experience": true
+ },
+ "scores": {
+  "technical_accuracy_25": 24,
+  "sources_15": 14,
+  "educational_usefulness_15": 14,
+  "examples_10": 9,
+  "information_gain_10": 9,
+  "precision_readability_10": 9,
+  "search_intent_5": 5,
+  "internal_linking_5": 5,
+  "technical_seo_5": 5,
+  "total": 94
+ },
+ "claims_checked": [
+  {
+   "claim": "Five DORA metrics, grouped throughput (change lead time, deployment frequency, failed deployment recovery time) and instability (change fail rate, deployment rework rate); definitions as paraphrased; guide last updated January 2026",
+   "source": "https://dora.dev/guides/dora-metrics/",
+   "result": "confirmed"
+  },
+  {
+   "claim": "MTTR/time to restore service renamed and narrowed to failed deployment recovery time in 2023; deployment rework rate added and metrics regrouped in 2024",
+   "source": "https://dora.dev/guides/dora-metrics/history/",
+   "result": "confirmed"
+  },
+  {
+   "claim": "DORA metrics consistent with the site's DevOps page (five metrics, same groups, Jan 2026 guide, 2023/2024 history) and Agile metrics/continuous delivery pages",
+   "source": "/project-management/kanban/devops/",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Trunk-based development: three or fewer active branches, branches lasting no more than a few hours, merge to trunk at least daily, no code freezes or integration phases; broken build fixed first or reverted",
+   "source": "https://dora.dev/capabilities/trunk-based-development/",
+   "result": "corrected"
+  },
+  {
+   "claim": "Automated test feedback in under ten minutes locally and in CI; do not tolerate flaky tests; failures should indicate a real defect",
+   "source": "https://dora.dev/capabilities/test-automation/",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Fowler CI article updated Jan 2024; merge at least daily with automated build including tests; developed by Kent Beck as part of XP in the 1990s; CI server on feature branches is not CI",
+   "source": "https://martinfowler.com/articles/continuousIntegration.html",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Cohn's test automation pyramid in Succeeding with Agile (2009); end-to-end UI tests brittle, expensive to write, slow; ice-cream cone",
+   "source": "https://martinfowler.com/bliki/TestPyramid.html",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Ham Vocke's two rules: tests at different granularity; fewer tests the higher the level",
+   "source": "https://martinfowler.com/articles/practical-test-pyramid.html",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Release toggles 'should generally not stick around much longer than a week or two' (Pete Hodgson)",
+   "source": "https://martinfowler.com/articles/feature-toggles.html",
+   "result": "confirmed"
+  },
+  {
+   "claim": "DORA 2025 State of AI-assisted Software Development: nearly 5,000 technology professionals; AI amplifies strengths and dysfunctions",
+   "source": "https://cloud.google.com/blog/products/ai-machine-learning/announcing-the-2025-dora-report",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Agile Manifesto principles quoted (deliver working software frequently; working software primary measure of progress; continuous attention to technical excellence)",
+   "source": "https://agilemanifesto.org/principles.html",
+   "result": "confirmed"
+  },
+  {
+   "claim": "2020 Scrum Guide: multiple Increments within a Sprint; Sprint Review never a gate to releasing value; DoD definition; 'various processes, techniques and methods can be employed'",
+   "source": "https://scrumguides.org/scrum-guide.html",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Extreme Programming Explained 1st ed. 1999, 2nd ed. with Cynthia Andres 2004",
+   "source": "bibliographic fact (Addison-Wesley editions 1999 and 2004)",
+   "result": "confirmed"
+  },
+  {
+   "claim": "US-01 password reset story and acceptance criterion exist in the site's user story template",
+   "source": "/templates/user-story-template/",
+   "result": "confirmed"
+  }
+ ],
+ "calculations_rechecked": [
+  {
+   "item": "Cone suite 6 + 225 + 10,000 = 10,231 s (170.5 min, 2.84 h), 700 tests",
+   "result": "correct"
+  },
+  {
+   "item": "Pyramid suite 48 + 300 + 1,000 = 1,348 s (22.5 min), 2,625 tests",
+   "result": "correct"
+  },
+  {
+   "item": "Ratios: 3.75x tests, 7.59x faster; E2E 97.7% of cone run time",
+   "result": "correct"
+  },
+  {
+   "item": "Commit stage 348 s = 5.8 min; acceptance stage 1,000/4 = 250 s; full pipeline 598 s (9.97 min)",
+   "result": "correct"
+  },
+  {
+   "item": "Cone with 4 runners 6 + 225 + 2,500 = 2,731 s (45.5 min)",
+   "result": "correct"
+  },
+  {
+   "item": "Daily load: cone 10 x 2.84 h = 28.4 h; pyramid commit stage 10 x 5.8 = 58 min; added full-pipeline 10 x 598 s = 99.7 min",
+   "result": "correct"
+  }
+ ],
+ "changes_made": [
+  "Trunk-based development paragraph: broken-build rule aligned with DORA (revert if it cannot be fixed within a few minutes) and review guidance attributed to DORA (synchronous review, track approval time).",
+  "Worked example step 3: added the pyramid team's full-pipeline daily load (about 100 minutes) so the comparison with the cone's full serial run is like-for-like."
+ ],
+ "statistical_text_measurements": {
+  "url": "/project-management/agile/agile-software-development/",
+  "word_count": 4417,
+  "unique_words": 1162,
+  "type_token_ratio": 0.2631,
+  "mattr_100": 0.7542,
+  "shannon_word_entropy_bits": 8.791,
+  "normalised_entropy": 0.8634,
+  "sentences": 185,
+  "avg_sentence_length": 19.0,
+  "sentence_length_sd": 10.82,
+  "sentence_length_cv": 0.57,
+  "paragraph_length_mean": 39.5,
+  "paragraph_length_sd": 22.8,
+  "bigram_repetition_rate": 0.3118,
+  "trigram_repetition_rate": 0.0949,
+  "top_repeated_4grams": [
+   [
+    "the 2020 scrum guide",
+    4
+   ],
+   [
+    "agile software development is",
+    3
+   ],
+   [
+    "failed deployment recovery time",
+    3
+   ],
+   [
+    "is agile software development",
+    3
+   ],
+   [
+    "main branch at least",
+    3
+   ],
+   [
+    "the definition of done",
+    3
+   ],
+   [
+    "in an agile team",
+    3
+   ],
+   [
+    "building software in small",
+    2
+   ]
+  ],
+  "most_common_sentence_openers": [
+   [
+    "agile software",
+    4
+   ],
+   [
+    "for the",
+    4
+   ],
+   [
+    "the 2020",
+    3
+   ]
+  ],
+  "formulaic_phrases_found": [],
+  "watch_phrases_counts": {},
+  "most_similar_existing_guides": [
+   [
+    0.597,
+    "/project-management/kanban/continuous-delivery/"
+   ],
+   [
+    0.487,
+    "/project-management/industries/software-project-management/"
+   ],
+   [
+    0.448,
+    "/project-management/kanban/devops/"
+   ],
+   [
+    0.416,
+    "/project-management/agile/agile-methodology/"
+   ],
+   [
+    0.398,
+    "/project-management/agile/agile-glossary/"
+   ]
+  ],
+  "note": "Descriptive editorial diagnostics only. No AI-detection probability is calculated."
+ },
+ "unresolved_issues": [
+  "Highest similarity 0.597 with /project-management/kanban/continuous-delivery/; intents differ (whole engineering practice set vs CD pipeline) and no examples are reused, but CI/CD/DORA explanations overlap and are cross-linked rather than repeated in depth.",
+  "llms.txt still lists the old title/description for this URL; update the inventory when the rewrite is published."
+ ],
+ "reviewer_note": "Automated review by an AI reviewer; not a human professional review."
+}

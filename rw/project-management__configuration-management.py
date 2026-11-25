@@ -26,7 +26,7 @@ RW = dict(
             L(
                 "**It is not only version control.** Version control stores successive versions of files. Configuration management also decides which items to control, records how they relate, reports their status and audits them.",
                 "**It is not the same as change control.** The two depend on each other but answer different questions (see the comparison below).",
-                "**It is not only for software.** The discipline came from defence and aerospace engineering and applies to drawings, specifications, contracts, plans, physical assets and data, in construction and engineering as much as in IT.",
+                "**It is not only for software.** It applies to drawings, specifications, contracts, plans, physical assets and data, and is long established in defence, aerospace, construction and manufacturing as well as in IT.",
             ),
         ),
         S(
@@ -73,9 +73,9 @@ RW = dict(
             H3("3. Control"),
             "Control ensures that a CI changes only through an agreed route and that every approved change produces a new, identified version. The guidance from Northern Ireland's Department of Finance puts the core rule simply: \"only one person should have the ability to update a controlled item\" at any one time, with items checked out for update and checked back in when work is complete. Before baselining, owners can revise drafts freely; after baselining, changes need a decision from the right authority through change control.",
             H3("4. Status accounting"),
-            "Status accounting is the record-keeping and reporting side. ISO 10007 describes it as the \"formalized recording and reporting of configuration information\", including the status of proposed changes and the implementation of approved ones. In practice it answers: which version of each item is current, which are under change, which change requests affect which items, and what was in each release. PRINCE2 calls the equivalent report a product status account.",
+            "Status accounting is the record-keeping and reporting side. ISO 10007 describes it as the \"formalized recording and reporting of configuration information\", including the status of proposed changes and the implementation of approved ones. In practice it answers: which version of each item is current, which are under change, which change requests affect which items, and what was in each release. Earlier PRINCE2 editions call the equivalent report a product status account.",
             H3("5. Verification and audit"),
-            "Verification checks that each CI and its record agree, and that the delivered product matches its approved baseline. Audits typically happen before a baseline is set, before a release or handover, and at [project closure](/project-management/project-closure/).",
+            "Verification confirms two things: each CI agrees with its record, and the product being handed over is the configuration that was approved. Audits typically happen before a baseline is set, before a release or handover, and at [project closure](/project-management/project-closure/).",
         ),
         S(
             "Functional and physical configuration audits",
@@ -120,7 +120,7 @@ RW = dict(
                 ["CI-010", "Solution design", "Document", "1.2", "Baselined", "Solution architect", "CI-003, CI-014"],
                 ["CI-014", "Contractor scheduling interface", "Software", "1.1.2", "Baselined", "Integration lead", "CI-010, CI-030"],
                 ["CI-030", "System test plan", "Document", "1.1", "Baselined", "Test lead", "CI-003, CI-014, CI-031"],
-                ["CI-031", "User acceptance test scripts", "Document", "1.0", "In review", "Test lead", "CI-003, CI-030"],
+                ["CI-031", "User acceptance test scripts", "Document", "1.0", "Baselined", "Test lead", "CI-003, CI-030"],
                 ["CI-040", "Operative training pack", "Document", "0.4", "Draft", "Training lead", "CI-003"],
             ),
             H3("Step 2: trace the impact of CR-07"),
@@ -136,11 +136,11 @@ RW = dict(
                 ["Draft", "7", "15.2%"],
                 ["Total", "46", "100%"],
             ),
-            "Share of register = count ÷ 46 × 100. For example, 28 ÷ 46 × 100 = 60.9%. The five items \"under change\" are the baselined CIs that CR-07 has reopened; CI-031 and CI-040 were not yet baselined, so their status (in review and draft) is unchanged. The two new items will be added to the register when their first versions are created. The figure the project manager watches is the movement of items from \"under change\" back to \"baselined\": any item still open near the release date puts the go-live at risk.",
+            "Share of register = count ÷ 46 × 100. For example, 28 ÷ 46 × 100 = 60.9%. The five items \"under change\" are the baselined CIs that CR-07 has reopened (CI-003, CI-010, CI-014, CI-030 and CI-031); CI-040 was still a draft, so its status is unchanged. The two new items will be added to the register when their first versions are created. The figure the project manager watches is the movement of items from \"under change\" back to \"baselined\": any item still open near the release date puts the go-live at risk.",
             H3("Step 4: audit the release before go-live"),
             "Release R1.0 contains 21 release-critical CIs. The pre-release physical audit compares each deployed or issued item with its record. Nineteen match; two do not:",
             L(
-                "The contractor scheduling interface is deployed at version 1.1.3, but the register shows 1.1.2. A hotfix was released without updating the record or passing through change control.",
+                "The contractor scheduling interface is deployed at version 1.2.1, but the register shows 1.2.0, the version created for CR-07. A hotfix was released without updating the record or passing through change control.",
                 "The user acceptance test scripts were executed at v1.1, but there is no approval record for v1.1.",
             ),
             "Audit conformance = matching CIs ÷ CIs audited × 100 = 19 ÷ 21 × 100 = **90.5%**. The percentage is useful for trend reporting across releases, but it is not a pass mark. For release-critical items the go-live criterion should be zero unresolved discrepancies. The project manager logs both findings in the [issue log](/project-management/issue-log/), has the interface hotfix assessed retrospectively (and regression-tested if needed), obtains the missing approval, updates the records and re-audits the two items before go-live.",
@@ -202,7 +202,7 @@ RW = dict(
         ),
     ],
     faq=[
-        ("What is configuration management in project management?", "It is the discipline of identifying a project's products and documents as configuration items, controlling changes to them, recording their versions and status, and verifying that the delivered product matches its approved configuration."),
+        ("What is configuration management in project management?", "It is the discipline of identifying a project's products and documents as configuration items, controlling changes to them, recording their versions and status, and checking before handover that what is delivered is what was approved."),
         ("What is a configuration item?", "Any product, component or document placed under configuration control, such as a specification, drawing, software module, test plan or server build. Each has a unique identifier, a version and a record of its relationships."),
         ("What are the activities of configuration management?", "Planning, identification, control (change control), status accounting, and verification and audit. Some sources list four, treating planning as a preliminary step."),
         ("What is the difference between configuration management and change control?", "Change control decides whether a proposed change should be made. Configuration management identifies every item the change affects, controls their new versions, and verifies that the approved change was applied consistently."),
@@ -211,6 +211,6 @@ RW = dict(
         ("What is configuration status accounting?", "The recording and reporting of configuration information: current versions, items under change, the status of change requests, and the contents of each release."),
         ("Who is responsible for configuration management on a project?", "The project manager is accountable. Day-to-day work is usually done by a configuration manager, librarian or project support office, with item owners updating their own items through the agreed process."),
         ("Which standard covers configuration management?", "ISO 10007:2017 gives guidance on configuration management in quality management. SAE EIA-649 is widely used in defence and aerospace, and PMI publishes a Practice Standard for Project Configuration Management."),
-        ("Is configuration management only for software projects?", "No. It started in defence and aerospace engineering and is used wherever versions of designs, documents or products must be controlled, including construction, manufacturing and regulated industries."),
+        ("Is configuration management only for software projects?", "No. It is used wherever versions of designs, documents or products must be controlled, including defence, aerospace, construction, manufacturing and other regulated industries."),
     ],
 )

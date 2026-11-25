@@ -62,9 +62,9 @@
    "result": "confirmed"
   },
   {
-   "claim": "PSM class: free attempt; second attempt free if taken within 14 days and score below 85%",
-   "source": "https://www.scrum.org/PSM",
-   "result": "confirmed"
+   "claim": "PSM class: free attempt; second attempt at no extra cost if the first is taken within 14 days of receiving the password and scores below 85%",
+   "source": "https://www.scrum.org/courses/professional-scrum-master-training (rechecked 25 Nov 2026: 'PSM class participants who attempt the PSM I assessment within 14 days of receiving their free password and do not score at least 85% will be granted a 2nd attempt at no additional cost'; not stated on the PSM I assessment page)",
+   "result": "corrected"
   },
   {
    "claim": "Scrum.org count (1 Nov 2026): 778,506 PSM I; 279,802 PSPO I; over 1.2 million total",
@@ -72,9 +72,9 @@
    "result": "confirmed"
   },
   {
-   "claim": "CSM test: 50 questions, 60 minutes, 37 correct (74%), two attempts within 90 days, then $25; 13 languages",
-   "source": "https://support.scrumalliance.org/hc/en-us/articles/208753776-What-to-expect-from-the-Certified-ScrumMaster-CSM-test",
-   "result": "confirmed"
+   "claim": "CSM test: 50 questions, 60 minutes, 37 correct (74%); two free attempts within 90 calendar days of the welcome email, then US$25 per attempt; 13 languages",
+   "source": "https://support.scrumalliance.org/hc/en-us/articles/208753326-Can-I-retake-the-CSM-test-if-I-score-poorly- (rechecked 25 Nov 2026: 'After two attempts and/or 90 calendar days, you'll be prompted to pay 25 USD for each attempt'); https://support.scrumalliance.org/hc/en-us/articles/208753776-What-to-expect-from-the-Certified-ScrumMaster-CSM-test",
+   "result": "corrected"
   },
   {
    "claim": "Scrum Alliance renewal fees $100/$175/$250 by highest level, paid once; new certification course renews others",
@@ -95,6 +95,11 @@
    "claim": "PMI-ACP eligibility: secondary degree, 21 contact hours, 12 months general project experience in 5 years (PMP/PgMP satisfies), 8 months agile in 3 years",
    "source": "https://www.pmi.org/-/media/pmi/documents/public/pdf/certifications/certification_framework_final.pdf (matched in search; pmi.org pages returned 403)",
    "result": "unverifiable"
+  },
+  {
+   "claim": "PMAI/Sprintcraft mention in 'ICAgile and PMAI' section lacked commercial-interest disclosure and course-completion status (framework §24-25)",
+   "source": "/home/claude/npi/FRAMEWORK.md §24, §25; REVIEW_BRIEF.md check 5",
+   "result": "corrected"
   }
  ],
  "calculations_rechecked": [
@@ -115,24 +120,27 @@
   "At-a-glance table, SAFe Scrum Master renewal cell: 'Annual: $195 + 24 CEUs every two years' -> 'Annual: $195 (Foundational tier) + 12 CEUs'.",
   "SAFe Scrum Master renewal bullet: removed '24 continuing education units over each two-year cycle'; now states $195/year Foundational tier renewing all Foundational SAFe certifications, 12 CEUs for Foundational certifications such as SSM, carry-forward of extra CEUs and possible audit.",
   "SAFe section: 'SAFe Scrum Master certification' -> 'SAFe Scrum Master (SSM) certification' to align naming with the SAFe page (course name AI-Empowered SAFe Scrum Master and 80% pass mark already matched and were confirmed).",
-  "Verification TIP: added '(SAFe figures rechecked on 25 November 2026)'."
+  "Verification TIP: added '(SAFe figures rechecked on 25 November 2026)'.",
+  "Recheck 25 Nov 2026 - PSM I course bullet: 'if you take it within 14 days and score below 85% you get a second attempt free' -> 'if you use it within 14 days of receiving the password and score below 85%, Scrum.org grants a second attempt at no extra cost' (claim confirmed on Scrum.org's PSM course page; wording made precise about the 14-day start point).",
+  "Recheck 25 Nov 2026 - CSM attempts bullet: now states two attempts within 90 calendar days of receiving Scrum Alliance's welcome email, then US$25 for each further attempt (claim confirmed on Scrum Alliance support; start point corrected from 'of the course').",
+  "Recheck 25 Nov 2026 - 'ICAgile and PMAI' paragraph: 'Our own PMAI certification' -> 'Neural Project Institute's own PMAI programme'; added 'We have a commercial interest in it' and that its certificate is a course-completion certificate from this institute, not a Scrum.org, Scrum Alliance or ICAgile credential."
  ],
  "statistical_text_measurements": {
   "url": "/project-management/scrum/scrum-certification-and-training/",
-  "word_count": 4011,
-  "unique_words": 884,
-  "type_token_ratio": 0.2204,
-  "mattr_100": 0.7168,
-  "shannon_word_entropy_bits": 8.377,
-  "normalised_entropy": 0.8559,
-  "sentences": 172,
-  "avg_sentence_length": 15.59,
-  "sentence_length_sd": 8.86,
-  "sentence_length_cv": 0.568,
-  "paragraph_length_mean": 30.5,
-  "paragraph_length_sd": 19.3,
-  "bigram_repetition_rate": 0.4042,
-  "trigram_repetition_rate": 0.1716,
+  "word_count": 4058,
+  "unique_words": 896,
+  "type_token_ratio": 0.2208,
+  "mattr_100": 0.7177,
+  "shannon_word_entropy_bits": 8.391,
+  "normalised_entropy": 0.8555,
+  "sentences": 173,
+  "avg_sentence_length": 15.77,
+  "sentence_length_sd": 9.04,
+  "sentence_length_cv": 0.573,
+  "paragraph_length_mean": 31.0,
+  "paragraph_length_sd": 20.1,
+  "bigram_repetition_rate": 0.4018,
+  "trigram_repetition_rate": 0.1714,
   "top_repeated_4grams": [
    [
     "psm i or csm",
@@ -201,15 +209,15 @@
     "/project-management/scrum/scrum-glossary/"
    ],
    [
-    0.495,
+    0.493,
     "/project-management/agile/scrum-master-role/"
    ],
    [
-    0.473,
+    0.472,
     "/project-management/scrum/"
    ],
    [
-    0.46,
+    0.458,
     "/project-management/agile/agile-vs-scrum/"
    ]
   ],
@@ -218,7 +226,7 @@
  "unresolved_issues": [
   "Scaled Agile's CEU article does not state the CEU period explicitly; 'carried forward to the following year' implies an annual cycle, so the page states 12 CEUs without asserting a period.",
   "PMI-ACP eligibility and Scrum Alliance SEU counts were not re-fetched from the primary pages (pmi.org 403; SEU page not fetched); they match the writer's 4 Nov 2026 check and PMI's framework PDF listing.",
-  "Live HTML still shows the old SAFe renewal wording until re-rendered and published (not done, per instruction)."
+  "Live HTML (already published) still shows the previous wording, including the undisclosed Sprintcraft mention, until re-rendered and republished; not done by this review."
  ],
  "reviewer_note": "Automated review by an AI reviewer; not a human professional review."
 }

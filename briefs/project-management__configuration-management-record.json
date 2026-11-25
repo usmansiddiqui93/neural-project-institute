@@ -1,0 +1,333 @@
+{
+ "url": "/project-management/configuration-management/",
+ "proposed_status": "PUBLISH",
+ "article_type": "definition and methodology guide with worked example",
+ "language": "en-GB",
+ "learning_level": "intermediate",
+ "primary_keyword": "configuration management in project management",
+ "secondary_keywords": [
+  "configuration management",
+  "configuration item",
+  "configuration item record",
+  "configuration baseline",
+  "configuration management plan",
+  "configuration identification",
+  "configuration control",
+  "configuration status accounting",
+  "configuration audit",
+  "functional configuration audit",
+  "physical configuration audit",
+  "configuration management vs change control",
+  "version control vs configuration management",
+  "configuration control board",
+  "ISO 10007",
+  "configuration management in Agile",
+  "product status account"
+ ],
+ "search_intent": "Definition and methodology (what configuration management is and how to run it on a project), with how-to sub-intent",
+ "h1": "Configuration Management in Project Management Explained",
+ "seo_title": "Configuration Management in Project Management Explained",
+ "meta_description": "Configuration management explained: configuration items, the five activities, audits, baselines, how it differs from change control, with a worked example.",
+ "excerpt": "What configuration management is, the five activities mapped across ISO 10007, APM, PMI and NASA, functional and physical audits, configuration vs project baselines, how CM differs from change and version control, and a calculated worked example following one change.",
+ "parent_topic_cluster": "Risk, quality and control (change control and integration): /project-management/change-control/, /project-management/project-integration-management/",
+ "prerequisite_guides": [
+  "/project-management/change-control/",
+  "/project-management/project-baseline/",
+  "/project-management/work-breakdown-structure/"
+ ],
+ "related_articles": [
+  "/project-management/change-management-vs-change-control/",
+  "/project-management/project-quality-management/",
+  "/project-management/kanban/devops/",
+  "/project-management/kanban/continuous-delivery/",
+  "/project-management/project-closure/"
+ ],
+ "learning_objectives": [
+  "Define configuration management and distinguish it from change control, version control and ITIL service configuration management",
+  "Name the five CM activities and map them across ISO 10007:2017, APM, PMI and NASA",
+  "Select configuration items and version schemes and record their relationships",
+  "Explain functional and physical configuration audits and their project equivalents",
+  "Distinguish configuration baselines from project baselines",
+  "Trace a change's impact through a configuration register and interpret status and audit results"
+ ],
+ "internal_links": [
+  "/project-management/agile/definition-of-done/",
+  "/project-management/change-control/",
+  "/project-management/change-management-vs-change-control/",
+  "/project-management/industries/construction-project-management/",
+  "/project-management/issue-log/",
+  "/project-management/kanban/continuous-delivery/",
+  "/project-management/kanban/devops/",
+  "/project-management/prince2/",
+  "/project-management/project-baseline/",
+  "/project-management/project-closure/",
+  "/project-management/project-deliverables/",
+  "/project-management/project-management-office-pmo/",
+  "/project-management/project-management-plan/",
+  "/project-management/project-quality-management/",
+  "/project-management/work-breakdown-structure/",
+  "/templates/business-requirements-document-template/",
+  "/templates/project-deliverables-template/"
+ ],
+ "relevant_templates": [
+  "/templates/change-request-template/",
+  "/templates/project-deliverables-template/",
+  "/templates/business-requirements-document-template/"
+ ],
+ "related_npi_course": "Riskline: Risk and Quality Management (named in the page's existing PMAI box only; not mentioned in the body)",
+ "external_references": [
+  {
+   "title": "ISO 10007:2017 catalogue page",
+   "url": "https://www.iso.org/standard/70400.html",
+   "inspected": true,
+   "what_it_supports": "Title, edition 3, March 2017, confirmed 2023, revision under development"
+  },
+  {
+   "title": "ISO 10007:2017 preview (BSI edition via ANSI webstore)",
+   "url": "https://webstore.ansi.org/preview-pages/BSI/preview_30341507.pdf",
+   "inspected": true,
+   "what_it_supports": "Clause structure 5.2–5.6, Annex A CM plan, definitions of configuration item, configuration baseline, configuration status accounting, introduction wording"
+  },
+  {
+   "title": "APM: What is configuration management?",
+   "url": "https://apm.org.uk/resources/what-is-project-management/what-is-configuration-management/",
+   "inspected": true,
+   "what_it_supports": "Definition (attributed by APM to BoK 8th edition) and five activities"
+  },
+  {
+   "title": "PMI Lexicon of Project Management Terms v4.0 (2024)",
+   "url": "https://www.coloradocollege.edu/offices/its/pmi-lexicon-pm-terms-compressed.pdf",
+   "inspected": true,
+   "what_it_supports": "Configuration management system definition"
+  },
+  {
+   "title": "PMI Practice Standard for Project Configuration Management (2007), O'Reilly listing",
+   "url": "https://www.oreilly.com/library/view/practice-standard-for/9781935589952/",
+   "inspected": true,
+   "what_it_supports": "Chapter names only (book text not read)"
+  },
+  {
+   "title": "NASA Systems Engineering Handbook 6.5 Configuration Management",
+   "url": "https://www.nasa.gov/seh/6-5-configuration-management",
+   "inspected": true,
+   "what_it_supports": "Five elements, functional/allocated/product/as-deployed baselines, SAE/EIA 649B quote"
+  },
+  {
+   "title": "MIL-HDBK-61A section 8 (mirror at product-lifecycle-management.com)",
+   "url": "https://product-lifecycle-management.com/mil-hdbk-61a-8-2.htm",
+   "inspected": true,
+   "what_it_supports": "FCA and PCA purposes"
+  },
+  {
+   "title": "DAU Adaptive Acquisition Framework: Physical Configuration Audit",
+   "url": "https://aaf.dau.edu/aaf/mca/pca/",
+   "inspected": true,
+   "what_it_supports": "PCA establishes final product baseline; later changes via formal engineering change action"
+  },
+  {
+   "title": "Department of Finance NI: Programme and project configuration management (updated 3 Oct 2024)",
+   "url": "https://www.finance-ni.gov.uk/articles/programme-and-project-configuration-management",
+   "inspected": true,
+   "what_it_supports": "Single-updater rule, check-out/check-in, roles"
+  },
+  {
+   "title": "SEBoK: Configuration Management",
+   "url": "https://sebokwiki.org/wiki/Configuration_Management",
+   "inspected": true,
+   "what_it_supports": "CCB composition and pitfalls (background; informed the mistakes list)"
+  },
+  {
+   "title": "Semantic Versioning 2.0.0",
+   "url": "https://semver.org/",
+   "inspected": true,
+   "what_it_supports": "MAJOR/MINOR/PATCH rules"
+  },
+  {
+   "title": "prince2.wiki: Change / issues (PRINCE2 7 aligned)",
+   "url": "https://prince2.wiki/theme/change",
+   "inspected": true,
+   "what_it_supports": "Issue management approach covers identification, control, status accounting and verification; product register; change authority and budget (secondary)"
+  },
+  {
+   "title": "Knowledge Train: PRINCE2 management products",
+   "url": "https://www.knowledgetrain.co.uk/project-management/prince2-management-products",
+   "inspected": true,
+   "what_it_supports": "Issue management approach is a baseline management product; product register definition (secondary)"
+  },
+  {
+   "title": "The 2020 Scrum Guide",
+   "url": "https://scrumguides.org/scrum-guide.html",
+   "inspected": true,
+   "what_it_supports": "Does not mention configuration management"
+  },
+  {
+   "title": "Wrike: What is configuration management in project management?",
+   "url": "https://www.wrike.com/project-management-guide/faq/what-is-configuration-management-in-project-management/",
+   "inspected": true,
+   "what_it_supports": "SERP gap analysis only; not cited"
+  }
+ ],
+ "formulas": [
+  {
+   "formula": "Share of register = count ÷ total CIs × 100",
+   "variables": "counts of CIs; result %",
+   "verified_by": "python",
+   "inputs": "28, 5, 6, 7 of 46",
+   "result": "60.9%, 10.9%, 13.0%, 15.2%"
+  },
+  {
+   "formula": "Items affected = existing CIs revised + new CIs",
+   "variables": "counts",
+   "verified_by": "python",
+   "inputs": "6 + 2; 46 + 2",
+   "result": "8 affected; register 48"
+  },
+  {
+   "formula": "Audit conformance = matching CIs ÷ CIs audited × 100",
+   "variables": "counts; %",
+   "verified_by": "python",
+   "inputs": "19 / 21",
+   "result": "90.5%"
+  },
+  {
+   "formula": "Traceability coverage = requirements traced to passed tests ÷ requirements in baseline × 100",
+   "variables": "counts; %",
+   "verified_by": "python",
+   "inputs": "62 / 64",
+   "result": "96.9%"
+  }
+ ],
+ "worked_examples": [
+  {
+   "title": "One change (CR-07, mobile app) through the configuration of a housing association repairs system replacement: register, impact trace, status account, release audit, traceability",
+   "illustrative": true
+  }
+ ],
+ "statistical_text_measurements": {
+  "url": "/project-management/configuration-management/",
+  "word_count": 3758,
+  "unique_words": 918,
+  "type_token_ratio": 0.2443,
+  "mattr_100": 0.7107,
+  "shannon_word_entropy_bits": 8.362,
+  "normalised_entropy": 0.8496,
+  "sentences": 147,
+  "avg_sentence_length": 18.02,
+  "sentence_length_sd": 9.61,
+  "sentence_length_cv": 0.533,
+  "paragraph_length_mean": 37.8,
+  "paragraph_length_sd": 21.2,
+  "bigram_repetition_rate": 0.3532,
+  "trigram_repetition_rate": 0.1158,
+  "top_repeated_4grams": [
+   [
+    "a project's products and",
+    3
+   ],
+   [
+    "nasa's systems engineering handbook",
+    3
+   ],
+   [
+    "status accounting and verification",
+    3
+   ],
+   [
+    "accounting and verification and",
+    3
+   ],
+   [
+    "configuration management planning configuration",
+    3
+   ],
+   [
+    "configuration identification configuration identification",
+    3
+   ],
+   [
+    "is the discipline of",
+    2
+   ],
+   [
+    "the discipline of identifying",
+    2
+   ]
+  ],
+  "most_common_sentence_openers": [
+   [
+    "configuration management",
+    5
+   ],
+   [
+    "iso 10007",
+    4
+   ],
+   [
+    "it is",
+    4
+   ],
+   [
+    "the two",
+    4
+   ],
+   [
+    "the project",
+    4
+   ]
+  ],
+  "formulaic_phrases_found": [],
+  "watch_phrases_counts": {},
+  "most_similar_existing_guides": [
+   [
+    0.307,
+    "/project-management/change-management-vs-change-control/"
+   ],
+   [
+    0.274,
+    "/project-management/project-management-plan/"
+   ],
+   [
+    0.265,
+    "/project-management/project-integration-management/"
+   ],
+   [
+    0.264,
+    "/project-management/industries/engineering-project-management/"
+   ],
+   [
+    0.242,
+    "/project-management/change-control/"
+   ]
+  ],
+  "note": "Descriptive editorial diagnostics only. No AI-detection probability is calculated."
+ },
+ "self_assessment": {
+  "technical_accuracy_25": 23,
+  "sources_15": 13,
+  "educational_usefulness_15": 14,
+  "examples_10": 9,
+  "information_gain_10": 9,
+  "precision_readability_10": 9,
+  "search_intent_5": 5,
+  "internal_linking_5": 5,
+  "technical_seo_5": 5,
+  "total": 92
+ },
+ "required_disclosures": [
+  "Worked example labelled illustrative and hypothetical",
+  "PRINCE2 7 summary attributed to training-provider sources with a note to check the official manual",
+  "No PMAI promotion in the body"
+ ],
+ "unverified_claims": [
+  "APM attributes its definition to the APM Body of Knowledge 8th edition; the BoK itself was not opened and the edition attribution is APM's",
+  "PRINCE2 7 details (issue management approach covering identification, control, status accounting and verification; product register) come from secondary training-provider summaries; the official manual was not accessed",
+  "PMI Practice Standard for Project Configuration Management (2007): only the publisher listing and chapter names were seen",
+  "SAE EIA-649 (current revision C) described only as widely used in defence and aerospace; the standard text was not accessed",
+  "ITIL 4 service configuration management practice and CMDB described in general terms; no ITIL publication was opened",
+  "Statement that configuration records for IT components often transfer into a CMDB at project end is general practice, not sourced"
+ ],
+ "unresolved_issues": [
+  "No configuration register template exists on the site; the page suggests adapting the project deliverables template (adding version and location columns) and says so explicitly",
+  "Live page heading 'Configuration register template' implied a template; the rewrite removes that implication"
+ ]
+}

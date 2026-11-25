@@ -1,0 +1,194 @@
+{
+ "url": "/project-management/fast-tracking-vs-crashing/",
+ "status": "PUBLISH",
+ "publication_eligible": true,
+ "gates": {
+  "definitions_accurate": true,
+  "framework_requirements_verified": true,
+  "calculations_correct": true,
+  "variables_units_defined": true,
+  "examples_consistent_and_labelled": true,
+  "claims_supported": true,
+  "sources_authentic": true,
+  "educational_value": true,
+  "no_duplicate_intent": true,
+  "internal_links_valid": true,
+  "certification_claims_accurate": true,
+  "disclosures_included": true,
+  "metadata_valid": true,
+  "no_fabricated_experience": true
+ },
+ "scores": {
+  "technical_accuracy_25": 24,
+  "sources_15": 13,
+  "educational_usefulness_15": 14,
+  "examples_10": 10,
+  "information_gain_10": 9,
+  "precision_readability_10": 9,
+  "search_intent_5": 5,
+  "internal_linking_5": 5,
+  "technical_seo_5": 5,
+  "total": 94
+ },
+ "claims_checked": [
+  {
+   "claim": "PMI Lexicon v4.0 (2024) definitions of crashing, fast tracking and schedule compression ('used to shorten the schedule duration without reducing the project scope')",
+   "source": "https://www.coloradocollege.edu/offices/its/pmi-lexicon-pm-terms-compressed.pdf",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Krishnan, Eppinger and Whitney, Management Science 1997 (43(4):437-451): overlapping can speed development but without careful management can increase effort/cost and reduce quality; framework for when overlap is appropriate",
+   "source": "https://ideas.repec.org/a/inm/ormnsc/v43y1997i4p437-451.html",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Toste-Karayan, PMI Global Congress 2005 (Asia Pacific): communication, handoffs, securing resources, protecting quality testing time",
+   "source": "https://www.pmi.org/learning/library/managing-crashed-fastracked-shorten-interval-project-7603",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Brooks, The Mythical Man-Month (1975): 'adding manpower to a late software project makes it later'",
+   "source": "bibliographic fact; same quotation on /project-management/schedule-compression/",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Four dependency attributes (mandatory/discretionary, internal/external)",
+   "source": "/project-management/task-dependencies/",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Intent distinct from /project-management/schedule-compression/ (similarity 0.741 after edits): that page is the compression method with indirect costs and least-cost duration on a website relaunch example (80k, 58 to 52 days); this page is the head-to-head comparison and risk-adjusted choice (EMV, worst case, break-even probability) on a separate ICT-suite example. No example, figures or crash-slope illustration reused.",
+   "source": "/project-management/schedule-compression/",
+   "result": "confirmed"
+  }
+ ],
+ "calculations_rechecked": [
+  {
+   "item": "Crash cost slopes A ,000, B ,000, C ,000, D ,500 per day",
+   "result": "correct"
+  },
+  {
+   "item": "Paths A-B-D-F 14 days, A-C-E-F 10 days (4 days float); doing nothing 3 x ,500 = ,500",
+   "result": "correct"
+  },
+  {
+   "item": "Crash only: D -2 (,000) + B -1 (,000) = ,000, paths 11/10",
+   "result": "correct"
+  },
+  {
+   "item": "Fast track FS-3d: D starts day 5, finishes day 9, handover day 11; float on A-C-E-F 1 day",
+   "result": "correct"
+  },
+  {
+   "item": "Blend: D crashed to 4 days (,500) + FS-2d: D starts day 6, finishes day 9, handover day 11",
+   "result": "correct"
+  },
+  {
+   "item": "EMV: fast track 0.40 x ,000 = ,600, worst case ,000; blend ,500 + 0.15 x ,500 = ,175, worst case ,000; savings vs ,500: ,500 / ,900 / ,325",
+   "result": "correct"
+  },
+  {
+   "item": "Break-even P: ,000 / ,000 = 0.556 (56%); ,500 / ,500 = 0.778 (78%)",
+   "result": "correct"
+  },
+  {
+   "item": "Interpretation that fast track's 40% outcome is 'worse than doing nothing'",
+   "result": "corrected"
+  }
+ ],
+ "changes_made": [
+  "Interpretation: replaced 'which is worse than doing nothing' with the precise comparison (,000 is ,500 more than doing nothing at ,500, although the suite opens one day sooner).",
+  "Removed the FAQ 'What is the crash point of an activity?', which duplicated the same FAQ on /project-management/schedule-compression/; the term remains defined in the body."
+ ],
+ "statistical_text_measurements": {
+  "url": "/project-management/fast-tracking-vs-crashing/",
+  "word_count": 3436,
+  "unique_words": 816,
+  "type_token_ratio": 0.2375,
+  "mattr_100": 0.6986,
+  "shannon_word_entropy_bits": 8.336,
+  "normalised_entropy": 0.8619,
+  "sentences": 146,
+  "avg_sentence_length": 18.18,
+  "sentence_length_sd": 9.46,
+  "sentence_length_cv": 0.52,
+  "paragraph_length_mean": 36.4,
+  "paragraph_length_sd": 21.3,
+  "bigram_repetition_rate": 0.3849,
+  "trigram_repetition_rate": 0.1249,
+  "top_repeated_4grams": [
+   [
+    "at the end of",
+    5
+   ],
+   [
+    "the end of day",
+    5
+   ],
+   [
+    "fast tracking and crashing",
+    4
+   ],
+   [
+    "finishes at the end",
+    4
+   ],
+   [
+    "mandatory dependencies such as",
+    3
+   ],
+   [
+    "crash d by 1",
+    3
+   ],
+   [
+    "at the same time",
+    3
+   ],
+   [
+    "at the price of",
+    2
+   ]
+  ],
+  "most_common_sentence_openers": [
+   [
+    "fast tracking",
+    6
+   ],
+   [
+    "expected total",
+    4
+   ]
+  ],
+  "formulaic_phrases_found": [],
+  "watch_phrases_counts": {},
+  "most_similar_existing_guides": [
+   [
+    0.741,
+    "/project-management/schedule-compression/"
+   ],
+   [
+    0.328,
+    "/project-management/project-time-management/"
+   ],
+   [
+    0.307,
+    "/project-management/project-scheduling/"
+   ],
+   [
+    0.306,
+    "/project-management/cost-control/"
+   ],
+   [
+    0.298,
+    "/project-management/schedule-variance/"
+   ]
+  ],
+  "note": "Descriptive editorial diagnostics only. No AI-detection probability is calculated."
+ },
+ "unresolved_issues": [
+  "Similarity with /project-management/schedule-compression/ remains high (0.741) because both pages define the same two techniques and share the crash cost slope formula and Brooks quotation; intents and examples differ and the pages cross-link, so no action required, but monitor for cannibalisation of 'crashing vs fast tracking' queries.",
+  "PMI Lexicon was read from a third-party-hosted copy (Colorado College), not from pmi.org."
+ ],
+ "reviewer_note": "Automated review by an AI reviewer; not a human professional review."
+}

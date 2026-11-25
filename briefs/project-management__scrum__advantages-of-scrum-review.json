@@ -1,0 +1,259 @@
+{
+ "url": "/project-management/scrum/advantages-of-scrum/",
+ "status": "PUBLISH",
+ "publication_eligible": true,
+ "gates": {
+  "definitions_accurate": true,
+  "framework_requirements_verified": true,
+  "calculations_correct": true,
+  "variables_units_defined": true,
+  "examples_consistent_and_labelled": true,
+  "claims_supported": true,
+  "sources_authentic": true,
+  "educational_value": true,
+  "no_duplicate_intent": true,
+  "internal_links_valid": true,
+  "certification_claims_accurate": true,
+  "disclosures_included": true,
+  "metadata_valid": true,
+  "no_fabricated_experience": true
+ },
+ "scores": {
+  "technical_accuracy_25": 24,
+  "sources_15": 14,
+  "educational_usefulness_15": 14,
+  "examples_10": 9,
+  "information_gain_10": 9,
+  "precision_readability_10": 9,
+  "search_intent_5": 5,
+  "internal_linking_5": 5,
+  "technical_seo_5": 5,
+  "total": 94
+ },
+ "claims_checked": [
+  {
+   "claim": "Scrum definition: lightweight framework ... adaptive solutions for complex problems",
+   "source": "https://scrumguides.org/scrum-guide.html",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Shorter Sprints generate more learning cycles and limit risk of cost and effort to a smaller time frame",
+   "source": "https://scrumguides.org/scrum-guide.html",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Sprints enable predictability by inspection and adaptation toward a Product Goal at least every calendar month",
+   "source": "https://scrumguides.org/scrum-guide.html",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Quality does not decrease during the Sprint",
+   "source": "https://scrumguides.org/scrum-guide.html",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Scrum makes visible the relative efficacy of current management, environment and work techniques",
+   "source": "https://scrumguides.org/scrum-guide.html",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Scrum is purposefully incomplete",
+   "source": "https://scrumguides.org/scrum-guide.html",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Multiple Increments may be created within a Sprint; Sprint Review is not a gate to releasing value",
+   "source": "https://scrumguides.org/scrum-guide.html",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Those wanting to change the Product Backlog must convince the Product Owner",
+   "source": "https://scrumguides.org/scrum-guide.html",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Implementing only parts of Scrum is possible, but the result is not Scrum",
+   "source": "https://scrumguides.org/scrum-guide.html",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Scrum Team typically 10 or fewer people",
+   "source": "https://scrumguides.org/scrum-guide.html",
+   "result": "confirmed"
+  },
+  {
+   "claim": "'The Guide describes a single team' (limitations table)",
+   "source": "https://scrumguides.org/scrum-guide.html (Guide advises reorganising into multiple cohesive Scrum Teams sharing Product Goal, Product Backlog and Product Owner)",
+   "result": "corrected"
+  },
+  {
+   "claim": "One-month maximum timeboxes 8h/4h/3h, Daily Scrum 15 min; halving for two-week Sprints labelled common practice",
+   "source": "https://scrumguides.org/scrum-guide.html",
+   "result": "confirmed"
+  },
+  {
+   "claim": "2017 Guide: refinement usually consumes no more than 10% of Development Team capacity; removed in 2020",
+   "source": "https://scrumguides.org/docs/scrumguide/v2017/2017-Scrum-Guide-US.pdf",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Verwijs and Russo (2023), ACM TOSEM 32(3): 13 case studies; 4,940 respondents in 1,978 teams",
+   "source": "https://vbn.aau.dk/ws/portalfiles/portal/766875248/3571849.pdf",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Effectiveness = stakeholder satisfaction and team morale; five factors",
+   "source": "https://vbn.aau.dk/ws/portalfiles/portal/766875248/3571849.pdf",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Stakeholder concern largest direct effect (beta .513), responsiveness significant direct effect (beta .402)",
+   "source": "https://vbn.aau.dk/ws/portalfiles/portal/766875248/3571849.pdf",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Management support works only indirectly; 'management support in itself will not make teams more effective'",
+   "source": "https://vbn.aau.dk/ws/portalfiles/portal/766875248/3571849.pdf",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Limitations: cross-sectional, team-member-rated outcomes, voluntary sample, software teams",
+   "source": "https://vbn.aau.dk/ws/portalfiles/portal/766875248/3571849.pdf",
+   "result": "confirmed"
+  },
+  {
+   "claim": "'Most articles on Scrum's advantages cite no evidence'",
+   "source": "none (unsupported generalisation)",
+   "result": "removed"
+  },
+  {
+   "claim": "'Many teams report higher ownership as a result'",
+   "source": "none; replaced with reference to team autonomy as a factor in https://vbn.aau.dk/ws/portalfiles/portal/766875248/3571849.pdf",
+   "result": "removed"
+  }
+ ],
+ "calculations_rechecked": [
+  {
+   "item": "C = 7 x 4,000 = 28,000 GBP/week; B = 28,000 x 24 = 672,000 GBP",
+   "result": "correct"
+  },
+  {
+   "item": "E = C x I for I = 1, 2, 4, 20: 28,000 (4.2%), 56,000 (8.3%), 112,000 (16.7%), 560,000 (83.3%)",
+   "result": "correct"
+  },
+  {
+   "item": "Event hours 4 + 2 + 1.5 + 10 x 0.25 = 10 h; 10/75 = 13.3%",
+   "result": "correct"
+  },
+  {
+   "item": "Hourly 4,000/37.5 = 106.67; event cost 10 x 7 x 106.67 = 7,467/Sprint; x12 = 89,600 = 13.3% of budget",
+   "result": "correct"
+  },
+  {
+   "item": "Refinement 10% of 75 h = 7.5 h",
+   "result": "correct"
+  },
+  {
+   "item": "Sprint Goal success 9/12 = 75%",
+   "result": "correct"
+  }
+ ],
+ "changes_made": [
+  "Removed unsupported generalisation 'Most articles on Scrum's advantages cite no evidence'; research section now opens 'Claims about Scrum's benefits are easier to make than to test.'",
+  "Advantage 7: replaced unsourced 'Many teams report higher ownership as a result' with a pointer to team autonomy as one of the five factors in the Verwijs and Russo study.",
+  "Worked example scenario changed from 'a customer self-service portal' to 'an online appointment-booking system for a chain of dental clinics' to avoid echoing the 7-person self-service-portal example on /project-management/scrum/increment-in-scrum/ (figures unchanged).",
+  "Limitations table, 'Coordination across many teams': 'The Guide describes a single team' corrected to state that beyond sharing one Product Goal, Product Backlog and Product Owner, the Guide says little about coordinating teams."
+ ],
+ "statistical_text_measurements": {
+  "url": "/project-management/scrum/advantages-of-scrum/",
+  "word_count": 3979,
+  "unique_words": 960,
+  "type_token_ratio": 0.2413,
+  "mattr_100": 0.7441,
+  "shannon_word_entropy_bits": 8.515,
+  "normalised_entropy": 0.8595,
+  "sentences": 160,
+  "avg_sentence_length": 17.41,
+  "sentence_length_sd": 9.47,
+  "sentence_length_cv": 0.544,
+  "paragraph_length_mean": 42.2,
+  "paragraph_length_sd": 20.1,
+  "bigram_repetition_rate": 0.3632,
+  "trigram_repetition_rate": 0.1348,
+  "top_repeated_4grams": [
+   [
+    "the definition of done",
+    8
+   ],
+   [
+    "meet the definition of",
+    4
+   ],
+   [
+    "the main advantages of",
+    3
+   ],
+   [
+    "main advantages of scrum",
+    3
+   ],
+   [
+    "one month or less",
+    3
+   ],
+   [
+    "the 2020 scrum guide",
+    3
+   ],
+   [
+    "an empowered product owner",
+    3
+   ],
+   [
+    "a definition of done",
+    3
+   ]
+  ],
+  "most_common_sentence_openers": [
+   [
+    "the scrum",
+    4
+   ],
+   [
+    "a team",
+    3
+   ]
+  ],
+  "formulaic_phrases_found": [],
+  "watch_phrases_counts": {},
+  "most_similar_existing_guides": [
+   [
+    0.679,
+    "/project-management/scrum/what-is-scrum/"
+   ],
+   [
+    0.625,
+    "/project-management/agile/agile-vs-scrum/"
+   ],
+   [
+    0.619,
+    "/project-management/scrum/"
+   ],
+   [
+    0.615,
+    "/project-management/scrum/scrum-glossary/"
+   ],
+   [
+    0.609,
+    "/project-management/scrum/scrum-process-and-phases/"
+   ]
+  ],
+  "note": "Descriptive editorial diagnostics only. No AI-detection probability is calculated."
+ },
+ "unresolved_issues": [
+  "Duplication check: similarity 0.679 with /project-management/scrum/what-is-scrum/ is shared Scrum vocabulary. Intent differs: what-is-scrum explains the framework and has a six-row benefits/limitations summary ending 'Read next Advantages of Scrum'; this page covers mechanism, preconditions, evidence, cost and a fit checklist. Its 'When Scrum's advantages outweigh its costs' table overlaps in theme with what-is-scrum's 'When to use Scrum' table but is framed by lost advantages, not situations. No reused examples found.",
+  "'Zombie Scrum' is presented as an informal term without a citation (acceptable as 'sometimes called').",
+  "Live HTML not re-rendered or published by this review."
+ ],
+ "reviewer_note": "Automated review by an AI reviewer; not a human professional review."
+}
