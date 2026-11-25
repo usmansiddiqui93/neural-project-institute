@@ -1,0 +1,253 @@
+{
+ "url": "/project-management/fast-tracking-vs-crashing/",
+ "proposed_status": "PUBLISH",
+ "article_type": "comparison with worked example and formulas",
+ "language": "en-GB",
+ "learning_level": "intermediate",
+ "primary_keyword": "fast tracking vs crashing",
+ "secondary_keywords": [
+  "crashing vs fast tracking",
+  "schedule compression techniques",
+  "crash cost slope",
+  "crashing in project management",
+  "fast tracking in project management",
+  "fast tracking example",
+  "crashing example",
+  "crash point",
+  "discretionary dependency",
+  "lead in scheduling",
+  "rework risk",
+  "expected monetary value rework",
+  "which is better crashing or fast tracking",
+  "PMP fast tracking and crashing",
+  "critical path compression",
+  "overlapping activities"
+ ],
+ "search_intent": "Comparison (difference and which to use), with worked example and formula intent",
+ "h1": "Fast Tracking vs Crashing: Differences and Worked Example",
+ "seo_title": "Fast Tracking vs Crashing: Differences and Worked Example",
+ "meta_description": "Fast tracking vs crashing compared: definitions, crash cost slope, a worked example with risk-adjusted cost, break-even rework probability and how to choose.",
+ "excerpt": "Fast tracking and crashing compared: PMI definitions, a side-by-side table, how each works, the crash cost slope, and an illustrative six-activity ICT refurbishment example that compares crash-only, fast-track-only and blended options on expected and worst-case cost, with break-even rework probabilities and a probability-impact screen for choosing.",
+ "parent_topic_cluster": "/project-management/schedule-compression/ (project scheduling cluster)",
+ "prerequisite_guides": [
+  "/project-management/critical-path-method/",
+  "/project-management/task-dependencies/",
+  "/project-management/leads-and-lags/",
+  "/project-management/schedule-compression/"
+ ],
+ "related_articles": [
+  "/project-management/float-and-slack/",
+  "/project-management/forward-and-backward-pass/",
+  "/project-management/resource-leveling/",
+  "/project-management/monte-carlo-simulation/",
+  "/project-management/risk-register/",
+  "/project-management/change-control/",
+  "/project-management/project-baseline/"
+ ],
+ "learning_objectives": [
+  "Define fast tracking, crashing and schedule compression per the PMI Lexicon",
+  "Compare the techniques on cost, risk, predictability, reversibility, resources and float",
+  "Calculate crash cost slopes and crash the critical path cheapest-first",
+  "Cost fast-tracking risk with EMV and compare options on expected and worst-case cost",
+  "Compute a break-even rework probability and use it to test the decision",
+  "Record and approve the chosen option through the risk register, change control and baseline"
+ ],
+ "internal_links": [
+  "/project-management/agile/agile-swarming/",
+  "/project-management/change-control/",
+  "/project-management/critical-path-method/",
+  "/project-management/float-and-slack/",
+  "/project-management/forward-and-backward-pass/",
+  "/project-management/leads-and-lags/",
+  "/project-management/monte-carlo-simulation/",
+  "/project-management/project-baseline/",
+  "/project-management/resource-leveling/",
+  "/project-management/risk-register/",
+  "/project-management/schedule-compression/",
+  "/project-management/task-dependencies/",
+  "/templates/change-request-template/",
+  "/templates/critical-path-template/",
+  "/templates/risk-register-template/"
+ ],
+ "relevant_templates": [
+  "/templates/critical-path-template/",
+  "/templates/risk-register-template/",
+  "/templates/change-request-template/"
+ ],
+ "related_npi_course": null,
+ "external_references": [
+  {
+   "title": "PMI Lexicon of Project Management Terms, version 4.0 (2024)",
+   "url": "https://www.coloradocollege.edu/offices/its/pmi-lexicon-pm-terms-compressed.pdf",
+   "inspected": true,
+   "what_it_supports": "Definitions of crashing, fast tracking and schedule compression (copy of the PMI document hosted by Colorado College; pmi.org original not opened)"
+  },
+  {
+   "title": "Krishnan, Eppinger & Whitney (1997), A Model-Based Framework to Overlap Product Development Activities, Management Science 43(4):437-451",
+   "url": "https://ideas.repec.org/a/inm/ormnsc/v43y1997i4p437-451.html",
+   "inspected": true,
+   "what_it_supports": "Overlap can speed development but may increase effort and cost and reduce quality; framework identifies conditions for overlap (abstract only)"
+  },
+  {
+   "title": "Toste-Karayan (2005), Mission possible: effectively managing a crashed and fast-tracked shorten interval project, PMI Global Congress Asia Pacific",
+   "url": "https://www.pmi.org/learning/library/managing-crashed-fastracked-shorten-interval-project-7603",
+   "inspected": true,
+   "what_it_supports": "Fast tracking can lead to rework and increases risk; communication, handoffs, resources, protecting testing time"
+  },
+  {
+   "title": "Asana, Fast tracking vs crashing (SERP review)",
+   "url": "https://asana.com/resources/fast-tracking-vs-crashing",
+   "inspected": true,
+   "what_it_supports": "SERP coverage and gaps only; nothing cited"
+  }
+ ],
+ "formulas": [
+  {
+   "formula": "Crash cost slope = (crash cost − normal cost) ÷ (normal duration − crash duration)",
+   "variables": "costs in $; durations in working days; result $/day",
+   "verified_by": "python",
+   "inputs": "A 6,000→9,000, 3→2; B 8,000→10,000, 4→3; C 4,500→5,500, 3→2; D 10,000→13,000, 5→3",
+   "result": "A $3,000/day; B $2,000/day; C $1,000/day; D $1,500/day (max 2 days)"
+  },
+  {
+   "formula": "Path length = sum of durations; forward pass with FS-lead on B→D",
+   "variables": "working days",
+   "verified_by": "python",
+   "inputs": "A3 B4 C3 D5 E2 F2",
+   "result": "A-B-D-F 14, A-C-E-F 10; crash D2+B1 → 11 for $5,000; FS-3d → D starts day 5, finish 11; crash D1 + FS-2d → D starts day 6, finish 11; float on A-C-E-F 4 → 1"
+  },
+  {
+   "formula": "EMV of rework = P × (rework cost + delay days × daily late cost); expected total = direct cost + EMV",
+   "variables": "P decimal; costs $; delay days working days; late cost $2,500/day",
+   "verified_by": "python",
+   "inputs": "FT: 0.40, $4,000, 2 days; blend: 0.15, $2,000, 1 day + $1,500 crash",
+   "result": "Crash $5,000/$5,000; FT EMV $3,600, worst $9,000; blend $2,175, worst $6,000; do nothing $7,500; savings $2,500/$3,900/$5,325"
+  },
+  {
+   "formula": "Break-even P = (crash-only cost − blend direct cost) ÷ rework impact",
+   "variables": "$; P decimal",
+   "verified_by": "python",
+   "inputs": "FT: 5,000 ÷ 9,000; blend: 3,500 ÷ 4,500",
+   "result": "0.556 (56%); 0.778 (78%)"
+  }
+ ],
+ "worked_examples": [
+  {
+   "title": "Refurbishing a school ICT suite before term starts: crash only, fast track only, blended option, EMV and break-even",
+   "illustrative": true
+  }
+ ],
+ "calculation_script_output": "slopes A 3000 B 2000 C 1000 D 1500 (max 2) | base ABDF 14 ACEF 10 | do nothing 7500 | crash only finish 11 cost 5000; steps 13/1500, 12/3000, 11/5000, 10/8000 | FT lead2 Dstart 5 (end-of-day convention = starts day 6) finish 12; FT lead3 Dstart 4 (starts day 5) finish 11 | mixed finish 11 | crash EMV 0 total 5000 worst 5000 | ft3 impact 9000 EMV 3600 worst 9000 | mixed impact 4500 EMV 675 total 2175 worst 6000 | breakeven ft3 0.5556 mixed 0.7778 | savings 2500 / 3900 / 5325",
+ "statistical_text_measurements": {
+  "url": "/project-management/fast-tracking-vs-crashing/",
+  "word_count": 3458,
+  "unique_words": 817,
+  "type_token_ratio": 0.2363,
+  "mattr_100": 0.6989,
+  "shannon_word_entropy_bits": 8.337,
+  "normalised_entropy": 0.8618,
+  "sentences": 148,
+  "avg_sentence_length": 18.03,
+  "sentence_length_sd": 9.38,
+  "sentence_length_cv": 0.52,
+  "paragraph_length_mean": 36.1,
+  "paragraph_length_sd": 21.1,
+  "bigram_repetition_rate": 0.3902,
+  "trigram_repetition_rate": 0.1305,
+  "top_repeated_4grams": [
+   [
+    "at the end of",
+    5
+   ],
+   [
+    "the end of day",
+    5
+   ],
+   [
+    "fast tracking and crashing",
+    4
+   ],
+   [
+    "finishes at the end",
+    4
+   ],
+   [
+    "mandatory dependencies such as",
+    3
+   ],
+   [
+    "crash d by 1",
+    3
+   ],
+   [
+    "at the same time",
+    3
+   ],
+   [
+    "at the price of",
+    2
+   ]
+  ],
+  "most_common_sentence_openers": [
+   [
+    "fast tracking",
+    6
+   ],
+   [
+    "expected total",
+    4
+   ]
+  ],
+  "formulaic_phrases_found": [],
+  "watch_phrases_counts": {},
+  "most_similar_existing_guides": [
+   [
+    0.744,
+    "/project-management/schedule-compression/"
+   ],
+   [
+    0.33,
+    "/project-management/project-time-management/"
+   ],
+   [
+    0.309,
+    "/project-management/project-scheduling/"
+   ],
+   [
+    0.304,
+    "/project-management/cost-control/"
+   ],
+   [
+    0.298,
+    "/project-management/schedule-variance/"
+   ]
+  ],
+  "note": "Descriptive editorial diagnostics only. No AI-detection probability is calculated."
+ },
+ "self_assessment": {
+  "technical_accuracy_25": 24,
+  "sources_15": 12,
+  "educational_usefulness_15": 14,
+  "examples_10": 10,
+  "information_gain_10": 9,
+  "precision_readability_10": 9,
+  "search_intent_5": 5,
+  "internal_linking_5": 5,
+  "technical_seo_5": 5,
+  "total": 93
+ },
+ "required_disclosures": [
+  "Worked example labelled illustrative; probabilities and costs stated as hypothetical estimates",
+  "No PMAI course mentioned in the body; Wrike not mentioned (no tool claim)"
+ ],
+ "unverified_claims": [
+  "Brooks's 1975 quotation is used as on /project-management/schedule-compression/; the book was not inspected (attribution widely documented)",
+  "PMI Lexicon read from a third-party-hosted copy (Colorado College), not from pmi.org directly",
+  "Krishnan et al. (1997): abstract only; full paper not read",
+  "'Merge bias' described generically, consistent with /project-management/monte-carlo-simulation/"
+ ],
+ "unresolved_issues": [
+  "TF-IDF similarity 0.745 with parent /project-management/schedule-compression/ (shared scheduling vocabulary). Intent differs (comparison/decision vs full compression method); that page already links here as the detailed comparison 'with a second worked example' and describes it as a six-activity network, which this page keeps. Its website-relaunch example, least-cost-duration analysis, choice table and Agile section are not repeated (linked instead)",
+  "Live page used an office-move example; replaced with a new ICT-suite scenario to avoid confusion with the office fit-out network on /project-management/leads-and-lags/"
+ ]
+}
