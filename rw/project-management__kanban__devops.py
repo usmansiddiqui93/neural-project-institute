@@ -7,7 +7,7 @@ RW = dict(
     desc="DevOps explained: what it is, where it came from, CALMS and the Three Ways, core practices, the five DORA metrics with a worked example, and what PMs do.",
     intro=(
         "DevOps is a way of working in which the people who build software and the people who run it share responsibility for getting changes to users quickly and keeping the service reliable. "
-        "It combines a culture of shared ownership with Lean flow, automation and fast feedback, and it is usually measured with DORA's five software delivery metrics. "
+        "It combines a culture of shared ownership with Lean flow, automation and fast feedback, and its delivery performance is most often measured with DORA's five software delivery metrics. "
         "This guide explains the principles behind DevOps, the practices that put them into effect, how to calculate the metrics from a deployment log, and what DevOps changes for project managers."
     ),
     takeaways=[
@@ -15,7 +15,7 @@ RW = dict(
         "CALMS (Culture, Automation, Lean, Measurement, Sharing) and Gene Kim's Three Ways (flow, feedback, continual learning) are the two most common summaries of its principles.",
         "DORA now measures software delivery with five metrics: change lead time, deployment frequency and failed deployment recovery time (throughput), plus change fail rate and deployment rework rate (instability). Lists of four metrics with \"time to restore service\" are out of date.",
         "DORA's research finds that speed and stability tend to improve together. Use the metrics to track one service's improvement over time, not as targets or to rank teams.",
-        "For project managers, DevOps shifts control from large release gates and change boards towards small batches, automated checks and peer review, which DORA's 2019 research linked to better delivery performance.",
+        "For project managers, DevOps shifts control from large release gates and change boards towards small batches, automated checks and peer review, the approach DORA's research associates with better delivery performance.",
     ],
     sections=[
         S(
@@ -44,7 +44,6 @@ RW = dict(
                 ["2014 onwards", "The DORA research programme begins measuring software delivery performance through annual surveys", "DevOps gains an evidence base and a shared set of metrics"],
                 ["2023–2024", "DORA renames and narrows its recovery metric and adds a fifth metric, deployment rework rate", "Current measurement guidance uses five metrics"],
             ),
-            "Many articles still list four DORA metrics, including \"time to restore service\". That reflects the model before 2023, not the one DORA publishes today, which is explained in the measurement section below.",
         ),
         S(
             "DevOps principles: CALMS and the Three Ways",
@@ -118,7 +117,7 @@ RW = dict(
                 ["Deployment rework rate", "Instability", "Share of deployments that are unplanned and result from an incident in production", "Percentage of deployments"],
             ),
             H3("Why older articles list four metrics"),
-            "DORA's history of its metrics, published on dora.dev in January 2026, explains the changes. The research began in 2014 with deployment frequency, lead time, mean time to recover (MTTR) and change fail rate, and by 2015 these had settled into the familiar \"four keys\". In 2023 MTTR, also called time to restore service, was renamed **failed deployment recovery time** and narrowed to failures caused by a change to production; the old measure mixed in outages with external causes, such as a data centre failure, that say nothing about delivery. In 2024 DORA added **deployment rework rate** and regrouped the five metrics into throughput and instability.",
+            "DORA's history of its metrics, published on dora.dev in January 2026, explains the changes. The research began in 2014 with four candidate measures: deployment frequency, lead time, mean time to recover (MTTR) and change fail rate. By 2015 all four were in use, split into throughput and stability groups, and they later became known as the \"four keys\". In 2023 MTTR, also called time to restore service, was renamed **failed deployment recovery time** and narrowed to failures caused by a change to production; the old measure mixed in outages with external causes, such as a data centre failure, that say nothing about delivery. In 2024 DORA added **deployment rework rate** and regrouped the five metrics into throughput and instability.",
             "DORA also measures reliability (formerly availability), but treats it as a measure of operational performance rather than a sixth delivery metric. Its own history page notes that the 2021 report wrongly called reliability the fifth metric.",
             H3("How to read the metrics"),
             L(
@@ -127,7 +126,7 @@ RW = dict(
                 "**Compare a service with its own past, not with other teams.** DORA advises using the metrics to track improvement over time rather than to rank teams, and notes that comparing very different applications can mislead.",
                 "**Never set a single metric as a target.** A team told to raise deployment frequency can split deployments artificially. Read the throughput and instability groups together, so that one cannot improve at the other's expense unnoticed.",
             ),
-            "DORA metrics are one category in a wider measurement set. Read our guide to [Agile metrics and KPIs](/project-management/agile/agile-metrics-and-kpis/) for how they combine with flow, quality, value and team health measures.",
+            "DORA metrics are one category in a wider measurement set that also includes flow, quality, value and team health measures.",
         ),
         S(
             "Worked example: calculating DORA metrics from a deployment log",
@@ -151,7 +150,7 @@ RW = dict(
                 "**Mean** for comparison: 675 ÷ 20 = 33.75 hours, pulled upwards by the 120-hour change.",
             ),
             H3("Step 3: change fail rate and deployment rework rate"),
-            "Three deployments needed immediate intervention: two were rolled back and one was fixed by a hotfix. Two deployments were unplanned: the hotfix itself, and an urgent fix for a production incident that users reported.",
+            "Three deployments needed immediate intervention: two were rolled back and one was fixed by a hotfix. Two deployments were unplanned: the hotfix itself, and an urgent fix for a production incident that users reported, caused by a long-standing defect rather than by any of this period's deployments.",
             L(
                 "**Change fail rate = failed deployments ÷ total deployments × 100** = 3 ÷ 20 × 100 = **15%**.",
                 "**Deployment rework rate = unplanned deployments caused by production incidents ÷ total deployments × 100** = 2 ÷ 20 × 100 = **10%**.",
@@ -183,13 +182,12 @@ RW = dict(
                 "**Make the improvement work visible.** Put it on the team's [Kanban board](/project-management/kanban/kanban-boards/) alongside feature work, with capacity reserved for it.",
                 "**Check progress and repeat.** Recalculate the metrics, discuss them in a [retrospective](/project-management/scrum/sprint-retrospective/), and move to the next constraint.",
             ),
-            "Expect improvement to be gradual. Moving from quarterly to weekly releases usually requires changes to architecture, testing and approval policies, each of which takes time to adopt.",
         ),
         S(
             "What DevOps changes for project managers",
             "DevOps does not remove the need for planning, risk management or stakeholder communication, but it changes where control sits.",
             H3("Change approval"),
-            "Many organisations route every production change through a change advisory board (CAB). DORA's 2019 research found that heavyweight external approval, such as a CAB or senior-manager sign-off, was associated with worse software delivery performance and gave no evidence of lower change fail rates. Its recommendation is to approve changes through peer review during development, recorded in the team's tools, supported by automated testing and monitoring. The CAB's role shifts towards coordinating across teams and deciding business trade-offs. Our guide to [change control](/project-management/change-control/) explains how to separate scope and contract changes, which still need formal decisions, from routine technical changes.",
+            "Many organisations route every production change through a change advisory board (CAB). DORA's research found that heavyweight external approval, such as a CAB or senior-manager sign-off, was associated with worse software delivery performance, and found no evidence that it lowered change fail rates. Its 2019 report concluded that approval works best through peer review during development, recorded in the team's tools, supported by automated testing and monitoring. The CAB's role shifts towards coordinating across teams and deciding business trade-offs. Our guide to [change control](/project-management/change-control/) explains how to separate scope and contract changes, which still need formal decisions, from routine technical changes.",
             H3("Release and delivery planning"),
             "When deployment is routine, release becomes a business decision about when users should see a feature, often controlled with feature flags. Plans shift from fixed release dates for large bundles to forecasts based on [throughput](/project-management/kanban/throughput/) and a [release plan](/templates/release-plan-template/) that is revised as data arrives. Deploying and releasing are no longer the same event.",
             H3("Risk and reporting"),
@@ -208,12 +206,10 @@ RW = dict(
         ),
         S(
             "Limitations and when DevOps is harder to apply",
-            "DevOps principles apply widely, but some contexts limit how far the practices can go:",
+            "DevOps principles apply widely, but some contexts limit how far the practices can go. The [continuous delivery](/project-management/kanban/continuous-delivery/) guide shows how teams adapt pipelines to regulated, embedded and legacy settings; the points below concern DevOps as a whole.",
             L(
-                "**Regulated or safety-critical software**, such as medical devices or avionics, may require formal verification and release certification. Continuous integration, test automation and infrastructure as code still help, even when production releases remain infrequent. DORA cautions against using regulation as a blanket excuse not to improve.",
-                "**Embedded and hardware products** cannot always be updated in the field, so deployment frequency means something different. Measure delivery to a test rig or staged rollout instead.",
-                "**Tightly coupled legacy systems** often force coordinated releases. Here the first DevOps investment is architectural: decoupling components so that teams can deploy independently.",
-                "**Small teams with little operational load** may gain more from basic version control, automated testing and a simple pipeline than from a full platform or SRE practice.",
+                "**Regulated or safety-critical software** may require formal verification and release certification, so production releases stay infrequent. Shared ownership, automation and fast feedback still apply before release, and DORA lists \"using industry as a shield against improving\" as a pitfall.",
+                "**Small teams with little operational load** may gain more from version control, automated testing and a simple pipeline than from a platform team or an SRE practice.",
                 "**Non-software projects** can borrow the ideas (small batches, fast feedback, blameless learning) but not the DORA metrics, which are defined for software deployments.",
             ),
         ),
@@ -223,9 +219,8 @@ RW = dict(
                 "**Creating a separate \"DevOps team\" between development and operations.** This adds a third silo and another hand-off. A platform team that offers self-service tools is different from a team that performs deployments on others' behalf.",
                 "**Buying tools before changing ownership.** A pipeline that ends at a manual sign-off three days later has automated the fast part of the process.",
                 "**Automating a broken process.** Remove unnecessary steps and approvals first, then automate what remains.",
-                "**Using DORA metrics as targets or league tables.** This invites gaming, such as splitting deployments, and discourages honest reporting of failures.",
-                "**Measuring only speed.** Tracking deployment frequency without change fail rate and deployment rework rate hides instability.",
-                "**Using out-of-date definitions.** \"Time to restore service\" counted every outage; failed deployment recovery time counts only failures caused by changes. Mixing the two makes trends meaningless.",
+                "**Using DORA metrics as targets or league tables, or tracking speed alone.** Both invite gaming and hide instability, as explained under how to read the metrics.",
+                "**Mixing old and new definitions.** \"Time to restore service\" also counted outages with external causes; failed deployment recovery time counts only failures caused by a change. A trend that switches definition part-way is not comparable.",
                 "**Blaming individuals after incidents.** People stop reporting near misses, and the organisation loses the information it needs to learn. Capture what you learn with a [lessons learned](/project-management/lessons-learned/) process.",
             ),
             "DORA metrics cover only the stretch from commit to production. See our guide to [Kanban metrics](/project-management/kanban/kanban-metrics/) for the flow measures that cover the rest of the journey.",
@@ -233,7 +228,7 @@ RW = dict(
     ],
     faq=[
         ("What is DevOps in simple terms?", "DevOps is a way of working in which the people who build software and the people who run it share responsibility for releasing changes quickly and keeping the service reliable, using small batches, automation and fast feedback."),
-        ("Is DevOps a role or a culture?", "Primarily a culture and set of practices. Many organisations also employ DevOps engineers who build pipelines, automation and monitoring, but hiring one does not make a team DevOps on its own."),
+        ("Is DevOps a role or a culture?", "Primarily a culture and set of practices. Many organisations also employ DevOps engineers, who usually build and maintain deployment pipelines, infrastructure automation and monitoring, but hiring one does not make a team DevOps on its own."),
         ("When did DevOps start?", "The term spread after Patrick Debois organised the first devopsdays conference in Ghent, Belgium, on 30–31 October 2009. The underlying ideas grew from Agile and Lean practice in the preceding years."),
         ("What does CALMS stand for in DevOps?", "Culture, Automation, Lean, Measurement and Sharing. It extends the earlier CAMS acronym; Jez Humble is generally credited with adding Lean."),
         ("What are the Three Ways of DevOps?", "Gene Kim's three principles: flow and systems thinking from development to the customer, amplified feedback loops from production back to development, and a culture of continual experimentation and learning."),
@@ -242,7 +237,6 @@ RW = dict(
         ("Is DevOps part of Agile?", "DevOps extends Agile ideas beyond development into release and operations. Agile shortens the loop for building software; DevOps shortens the loop for getting it safely to users and learning from how it behaves."),
         ("What is the difference between DevOps and continuous delivery?", "Continuous delivery is a specific engineering practice that keeps software always releasable. DevOps is the broader culture and set of practices, of which continuous delivery is a central part."),
         ("How is DevOps different from SRE?", "Site reliability engineering is Google's approach to running services with software engineering, service level objectives and error budgets. Google's SRE Workbook presents it as one concrete way of implementing DevOps principles."),
-        ("What does a DevOps engineer do?", "A DevOps engineer usually builds and maintains deployment pipelines, infrastructure automation and monitoring, and helps development and operations staff share tools and practices."),
         ("What is a blameless post-incident review?", "A review after an incident that asks what in the system allowed the problem to happen, rather than who caused it, so that people share information openly and the team can fix the underlying causes."),
     ],
 )

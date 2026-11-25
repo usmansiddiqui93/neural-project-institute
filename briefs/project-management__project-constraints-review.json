@@ -1,0 +1,240 @@
+{
+ "url": "/project-management/project-constraints/",
+ "status": "PUBLISH",
+ "publication_eligible": true,
+ "gates": {
+  "definitions_accurate": true,
+  "framework_requirements_verified": true,
+  "calculations_correct": true,
+  "variables_units_defined": true,
+  "examples_consistent_and_labelled": true,
+  "claims_supported": true,
+  "sources_authentic": true,
+  "educational_value": true,
+  "no_duplicate_intent": true,
+  "internal_links_valid": true,
+  "certification_claims_accurate": true,
+  "disclosures_included": true,
+  "metadata_valid": true,
+  "no_fabricated_experience": true
+ },
+ "scores": {
+  "technical_accuracy_25": 24,
+  "sources_15": 13,
+  "educational_usefulness_15": 14,
+  "examples_10": 10,
+  "information_gain_10": 9,
+  "precision_readability_10": 9,
+  "search_intent_5": 5,
+  "internal_linking_5": 5,
+  "technical_seo_5": 4,
+  "total": 93
+ },
+ "claims_checked": [
+  {
+   "claim": "PMI Lexicon v4.0 defines constraint as 'a limiting factor that affects the execution of a portfolio, program, project, or process'",
+   "source": "https://www.coloradocollege.edu/offices/its/pmi-lexicon-pm-terms-compressed.pdf",
+   "result": "confirmed"
+  },
+  {
+   "claim": "PMI Lexicon definitions of assumption, risk, issue, dependency",
+   "source": "https://www.coloradocollege.edu/offices/its/pmi-lexicon-pm-terms-compressed.pdf",
+   "result": "corrected (assumption wording aligned: 'a factor in the planning process...')"
+  },
+  {
+   "claim": "APM credits founding member Dr Martin Barnes with the time/cost/quality triangle ('Barnes triangle', iron triangle)",
+   "source": "https://www.apm.org.uk/news/a-tribute-to-apm-founder-dr-martin-barnes-cbe/",
+   "result": "confirmed (wording changed from 'one of its founders' to 'one of its founding members')"
+  },
+  {
+   "claim": "Pollack, Helm and Adler (2018): 45 years of literature; time and cost consistent; quality contested",
+   "source": "https://emerald.com/insight/content/doi/10.1108/IJMPB-09-2017-0107/full/html",
+   "result": "corrected (article said authors disagree about vertices generally; abstract says time and cost consistent, status of quality contested)"
+  },
+  {
+   "claim": "Naybour (APM blog, 17 Nov 2017): time/cost/scope as success criteria; true constraints such as exam-time works near schools and SSSI",
+   "source": "https://www.apm.org.uk/blog/project-constraints-are-we-using-the-wrong-terminology/",
+   "result": "corrected (source refers to heavy demolition equipment during exams, not a generic 'noise limit'; SSSI work may be forbidden or limited)"
+  },
+  {
+   "claim": "Wiegers: five dimensions; constraint/driver/degree of freedom; slip test; not all can be constraints or drivers",
+   "source": "https://www.modernanalyst.com/Resources/Articles/tabid/115/ID/5361/Rethinking-the-Triple-Constraint-Five-Project-Dimensions.aspx",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Siegelaub (PMI Global Congress 2007): six constraints time, cost, scope, quality, benefits, risk; PRINCE2 tolerances",
+   "source": "https://www.pmi.org/learning/library/six-constraints-enhanced-model-project-control-7294",
+   "result": "confirmed"
+  },
+  {
+   "claim": "PRINCE2 7 (2023) adds sustainability as seventh performance target",
+   "source": "https://wired-gov.net/wg/news.nsf/articles/prince2+7th+edition+sustaining+a+business+28112023162000",
+   "result": "confirmed (co-author Sue Taylor, Nov 2023)"
+  },
+  {
+   "claim": "DSDM fixes time, cost and quality at end of Foundations; contingency by varying features (MoSCoW); quality never a variable",
+   "source": "https://www.agilebusiness.org/page/ProjectFramework_03_PhilosophyFundamentals",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Scrum Guide 2020: Sprints fixed length of one month or less; no changes endangering Sprint Goal; quality does not decrease; scope clarified and renegotiated with Product Owner",
+   "source": "https://scrumguides.org/scrum-guide.html",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Highsmith's 2009 Agile triangle: value, quality, constraints",
+   "source": "https://www.infoq.com/news/2009/08/agile-triangle/",
+   "result": "confirmed (secondary summary; Highsmith original not inspected)"
+  },
+  {
+   "claim": "Microsoft Project eight task constraint types",
+   "source": "https://learn.microsoft.com/en-us/office/troubleshoot/project/definition-of-project-constraints",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Brooks, The Mythical Man-Month (1975): adding people to a late software project makes it later",
+   "source": "general knowledge (book not inspected)",
+   "result": "confirmed (well-established attribution; paraphrased)"
+  },
+  {
+   "claim": "Templates: scope template includes constraints and assumptions; charter has assumptions and constraints; change request has options and impact fields; RAID log",
+   "source": "/templates/ pages on site; llms.txt",
+   "result": "confirmed"
+  }
+ ],
+ "calculations_rechecked": [
+  {
+   "item": "Cost tolerance 240,000 x 0.05 = 12,000",
+   "result": "correct"
+  },
+  {
+   "item": "Capacity 4 x 5 x 0.8 = 16 person-days/week",
+   "result": "correct"
+  },
+  {
+   "item": "Option A: 48/16 = 3 weeks; 3 x 5,500 = 16,500 (6.9% of budget; 4,500 over tolerance); go-live end of week 29 inside freeze",
+   "result": "correct"
+  },
+  {
+   "item": "Option B: 48/0.8 = 60 days; 60 x 550 = 33,000 (13.75%; 2.75 x tolerance); 12 weeks of work within 16 remaining",
+   "result": "correct"
+  },
+  {
+   "item": "Option C: 30 + 18 = 48 person-days",
+   "result": "correct"
+  },
+  {
+   "item": "Option D: 2 x 16 + 18 = 50 >= 48; 2 x 5,500 = 11,000 (4.6%; 92% of tolerance; 1,000 tolerance left)",
+   "result": "correct; interpretation text corrected (previously said 'no cost reserve')"
+  }
+ ],
+ "changes_made": [
+  "Pollack, Helm and Adler sentence rewritten to match the abstract (time and cost consistent; quality contested)",
+  "Naybour example corrected from 'noise limit during school exams' to 'ban on heavy demolition work next to a school during exams' and SSSI wording aligned to source",
+  "PMI assumption definition aligned to Lexicon v4.0 wording",
+  "Barnes described as 'one of its founding members' (source wording) instead of 'one of its founders'",
+  "Option D interpretation and summary table corrected: no time reserve and £1,000 of cost tolerance left, instead of 'no time or cost reserve'",
+  "Filler sentence 'one of the most valuable conversations you can have with a sponsor' replaced with a direct statement"
+ ],
+ "statistical_text_measurements": {
+  "url": "/project-management/project-constraints/",
+  "word_count": 4208,
+  "unique_words": 1077,
+  "type_token_ratio": 0.2559,
+  "mattr_100": 0.7326,
+  "shannon_word_entropy_bits": 8.533,
+  "normalised_entropy": 0.8471,
+  "sentences": 187,
+  "avg_sentence_length": 16.88,
+  "sentence_length_sd": 9.47,
+  "sentence_length_cv": 0.561,
+  "paragraph_length_mean": 43.8,
+  "paragraph_length_sd": 20.7,
+  "bigram_repetition_rate": 0.3554,
+  "trigram_repetition_rate": 0.1203,
+  "top_repeated_4grams": [
+   [
+    "scope time and cost",
+    6
+   ],
+   [
+    "time cost and quality",
+    6
+   ],
+   [
+    "time and cost are",
+    5
+   ],
+   [
+    "the end of week",
+    5
+   ],
+   [
+    "a constraint is a",
+    3
+   ],
+   [
+    "16 person-days per week",
+    3
+   ],
+   [
+    "limits a project must",
+    2
+   ],
+   [
+    "a project must work",
+    2
+   ]
+  ],
+  "most_common_sentence_openers": [
+   [
+    "the project",
+    4
+   ],
+   [
+    "a project",
+    3
+   ],
+   [
+    "an assumption",
+    3
+   ],
+   [
+    "a constraint",
+    3
+   ]
+  ],
+  "formulaic_phrases_found": [],
+  "watch_phrases_counts": {},
+  "most_similar_existing_guides": [
+   [
+    0.416,
+    "/project-management/what-is-project-management/"
+   ],
+   [
+    0.399,
+    "/project-management/project-scope/"
+   ],
+   [
+    0.392,
+    "/project-management/kanban/theory-of-constraints/"
+   ],
+   [
+    0.38,
+    "/project-management/project-manager-roles-and-responsibilities/"
+   ],
+   [
+    0.358,
+    "/project-management/project-management-plan/"
+   ]
+  ],
+  "note": "Descriptive editorial diagnostics only. No AI-detection probability is calculated."
+ },
+ "unresolved_issues": [
+  "Word count about 4,200, above the usual 2,500 to 4,000 range; sections are distinct, so not cut",
+  "Highsmith's Agile triangle sourced via InfoQ summary; Brooks paraphrased without inspecting the book; Pollack et al. from abstract only",
+  "TF-IDF similarity 0.42 with /project-management/what-is-project-management/ and 0.40 with /project-management/project-scope/: different intent and examples; no competing intent found",
+  "llms.txt still lists the old title 'Project Constraints: The Triple Constraint and Beyond'; update on publication"
+ ],
+ "reviewer_note": "Automated review by an AI reviewer; not a human professional review."
+}

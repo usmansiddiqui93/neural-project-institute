@@ -13,7 +13,7 @@ RW = dict(
     takeaways=[
         "Swarming means two or more people finishing one item together before anyone starts another; the question at the board changes from \"what can I start?\" to \"what can we finish?\".",
         "It is a team practice, not a framework rule: the 2020 Scrum Guide and the 2025 Kanban Guide never mention it, but both leave the Developers or Kanban system members free to organise their work this way.",
-        "It works through Little's Law: with fewer items in progress, average cycle time falls, feedback arrives earlier and the risk of ending a Sprint with nothing Done drops sharply.",
+        "It works through Little's Law: with fewer items in progress and throughput roughly held, average cycle time falls, feedback arrives earlier and the risk of ending a Sprint with nothing Done falls.",
         "Swarming has a cost. Extra people on one item add coordination, so it pays only when the item can be split, the team has overlapping skills and the alternative is waiting, handoffs or unfinished work.",
         "Most items suit a swarm of two to four people; mobbing puts the whole team on one task, and intelligent swarming in customer support is a different practice that shares the name.",
     ],
@@ -21,10 +21,9 @@ RW = dict(
         S(
             "What is agile swarming?",
             "**Agile swarming** is a way of working in which two or more members of an Agile team focus on the same backlog item at the same time, splitting its tasks between them, until the item meets the [Definition of Done](/project-management/agile/definition-of-done/). The aim is to finish work in order of priority, rather than to keep every individual busy on an item of their own.",
-            "One of the clearest statements of the idea comes from the Scrum Patterns community. Its pattern **Swarming: One-Piece Continuous Flow** (pattern 25 in *A Scrum Book* by Jeff Sutherland and James O. Coplien, 2019) puts the problem and the response in two lines: working on too many things at once reduces velocity and quality, so the whole team should work together on one Product Backlog Item at a time. In practice, most teams treat \"the whole team\" as the far end of a range and swarm with a sub-group of two to four people.",
+            "One of the clearest statements of the idea comes from the Scrum Patterns community. Its pattern **Swarming: One-Piece Continuous Flow** (pattern 25 in *A Scrum Book* by Jeff Sutherland and James O. Coplien, 2019) puts the problem and the response in two lines: working on too many things at once reduces velocity and quality, so the whole team should work together on one Product Backlog Item at a time. Many teams treat \"the whole team\" as the far end of a range and swarm with a sub-group of two to four people.",
             "Neither of the main framework guides requires swarming. The [2020 Scrum Guide](/project-management/scrum/what-is-scrum/) does not use the word, but it makes the practice possible: Scrum Teams are self-managing, meaning \"they internally decide who does what, when, and how\", and \"the Sprint Backlog is a plan by and for the Developers\". The Kanban Guide (edition 2025.5) does not mention swarming either; it requires Kanban system members to \"explicitly control the number of work items in a workflow\" and notes that controlling WIP \"often improves the Kanban system members' collective focus, commitment, and collaboration\". Swarming is one common way teams act on that.",
-            "So treat swarming as a technique you choose, like pair programming or planning poker, not as an obligation.",
-            "See our overview of [Scrum techniques](/project-management/scrum/scrum-techniques/) for where swarming sits among the other practices teams add to Scrum.",
+            "So treat swarming as a technique you choose, like pair programming or planning poker, not as an obligation. The overview of [Scrum techniques](/project-management/scrum/scrum-techniques/) shows where it sits among the other practices teams add to Scrum.",
         ),
         S(
             "Why swarming works",
@@ -141,14 +140,7 @@ RW = dict(
         ),
         S(
             "Swarming with remote and hybrid teams",
-            "Remote teams can swarm well, but the informal cues of a shared room disappear, so make coordination explicit.",
-            L(
-                "Open a dedicated channel or video room per swarmed item, and keep it open while the swarm works.",
-                "Split tasks on the board, with each person's name on their task, so that nobody duplicates work.",
-                "Use screen sharing or collaborative editors for the hard parts; this is effectively remote pairing or mobbing.",
-                "Agree core overlap hours. A swarm across time zones with less than three or four hours of overlap often works better as a hand-over chain with clear notes than as a true swarm.",
-                "Integrate and update the item's status before signing off for the day, so the next person can carry on.",
-            ),
+            "Remote teams can swarm, but the informal cues of a shared room disappear, so coordination has to be explicit: a dedicated channel or video room for each swarmed item, each person's name on their task on the board, and screen sharing or a collaborative editor for the hardest part (in effect, remote pairing or mobbing). Overlapping hours are the real constraint. As a rule of thumb, a swarm spread across time zones with only two or three hours of shared working time usually works better as a hand-over chain, with each person integrating and updating the item's status before signing off.",
         ),
         S(
             "How to tell whether swarming is helping",
@@ -172,8 +164,7 @@ RW = dict(
                 "**The Product Owner** orders the Product Backlog and makes the value of each item clear, so the team knows which item to swarm on first. The Product Owner does not decide who works on what.",
                 "**Managers** shape the conditions: performance reviews and targets that reward individual output, or utilisation reports that treat an idle-looking person as a problem, discourage swarming. [How to manage Agile teams](/project-management/agile/how-to-manage-agile-teams/) explains how to measure team rather than individual performance.",
             ),
-            "Swarming depends on overlapping skills. A team where each person can work only in one specialism will struggle to swarm, which is a team-design question as much as a habit.",
-            "Read [Agile team structures](/project-management/agile/agile-team-structures/) to see how T-shaped composition and feature-team boundaries make swarming possible, and [what an Agile team is](/project-management/agile/what-is-an-agile-team/) for the basics of cross-functional teams.",
+            "Swarming also depends on overlapping skills. A team in which each person can work in only one specialism will struggle to swarm, so this is a team-design question as much as a habit: [Agile team structures](/project-management/agile/agile-team-structures/) explains how T-shaped composition and feature-team boundaries make it possible, and [what an Agile team is](/project-management/agile/what-is-an-agile-team/) covers the basics of cross-functional teams.",
         ),
         S(
             "Common swarming mistakes",
@@ -187,7 +178,7 @@ RW = dict(
                 ["Measuring individual utilisation", "People avoid swarming because it looks less productive", "Report items Done and cycle time at team level"],
                 ["Starting new work 'just in case'", "New items appear while older ones are ageing", "Walk the board right to left and agree to help before pulling"],
             ),
-            "Read [WIP limits](/project-management/kanban/wip-limits/) to set and tune the limits that trigger swarming, and the [Sprint Backlog](/project-management/scrum/sprint-backlog/) guide for how Developers plan and adapt their work during the Sprint.",
+            "The [Sprint Backlog](/project-management/scrum/sprint-backlog/) guide covers how Developers plan and adapt their work during the Sprint, which is where most swarming decisions are made.",
         ),
     ],
     faq=[
@@ -208,7 +199,7 @@ RW = dict(
         ("How do WIP limits relate to swarming?",
          "WIP limits create the trigger for swarming. When a column or the whole board is at its limit, people help finish existing items instead of starting new ones. Swarming is the behaviour; the WIP limit is the policy that makes it routine."),
         ("Does swarming work for remote teams?",
-         "Yes, if coordination is explicit: a dedicated channel or video room per item, tasks with names on the board, screen sharing for the hardest parts and enough overlapping working hours. Across wide time zones, a well-documented hand-over chain may work better."),
+         "Yes, if coordination is explicit: a dedicated channel or video room per item, names on tasks on the board, screen sharing for the hardest part and enough overlapping working hours. Across wide time zones, a well-documented hand-over chain may work better."),
         ("What is Intelligent Swarming?",
          "Intelligent Swarming is a customer support model from the Consortium for Service Innovation. It replaces tiered escalation by bringing the people best placed to help together on a customer case. It shares the collaborative idea but is separate from swarming on backlog items."),
     ],

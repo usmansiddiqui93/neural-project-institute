@@ -1,0 +1,241 @@
+{
+ "url": "/project-management/kanban/devops/",
+ "status": "PUBLISH",
+ "publication_eligible": true,
+ "gates": {
+  "definitions_accurate": true,
+  "framework_requirements_verified": true,
+  "calculations_correct": true,
+  "variables_units_defined": true,
+  "examples_consistent_and_labelled": true,
+  "claims_supported": true,
+  "sources_authentic": true,
+  "educational_value": true,
+  "no_duplicate_intent": true,
+  "internal_links_valid": true,
+  "certification_claims_accurate": true,
+  "disclosures_included": true,
+  "metadata_valid": true,
+  "no_fabricated_experience": true
+ },
+ "scores": {
+  "technical_accuracy_25": 23,
+  "sources_15": 14,
+  "educational_usefulness_15": 14,
+  "examples_10": 9,
+  "information_gain_10": 8,
+  "precision_readability_10": 9,
+  "search_intent_5": 5,
+  "internal_linking_5": 5,
+  "technical_seo_5": 5,
+  "total": 92
+ },
+ "claims_checked": [
+  {
+   "claim": "Five DORA metrics, names, definitions, throughput/instability grouping; guide last updated January 2026",
+   "source": "https://dora.dev/guides/dora-metrics/",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Speed and stability not a trade-off; metrics correlated; apply per application; avoid cross-application comparison and targets",
+   "source": "https://dora.dev/guides/dora-metrics/",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Improvement loop with Quick Check baseline",
+   "source": "https://dora.dev/guides/dora-metrics/",
+   "result": "confirmed"
+  },
+  {
+   "claim": "History: 2014 four candidate variables, 2015 groups, 2021 report wrongly called reliability the fifth metric, 2023 rename to failed deployment recovery time (external causes such as data centre outage), 2024 rework rate added",
+   "source": "https://dora.dev/insights/dora-metrics-history/",
+   "result": "corrected (2014/2015 wording: in 2014 change fail rate did not group with the other three; 'four keys' is a later label)"
+  },
+  {
+   "claim": "DORA research published annually since 2014",
+   "source": "https://dora.dev/research/",
+   "result": "confirmed (2014-2025 listed, including 2020)"
+  },
+  {
+   "claim": "Heavyweight external change approval associated with worse delivery performance, no evidence of lower change fail rate; 2019 report recommends peer review",
+   "source": "https://dora.dev/capabilities/streamlining-change-approval/",
+   "result": "corrected (finding attributed to DORA research generally; 2019 attached to the peer-review conclusion)"
+  },
+  {
+   "claim": "Batch taking more than a week to complete and check is too big; warning about large AI-generated pull requests",
+   "source": "https://dora.dev/capabilities/working-in-small-batches/",
+   "result": "confirmed"
+  },
+  {
+   "claim": "DORA capabilities include visual management, visibility of work in the value stream, WIP limits, pervasive security, platform engineering",
+   "source": "https://dora.dev/capabilities/",
+   "result": "confirmed"
+  },
+  {
+   "claim": "2025 DORA report: 23 Sep 2025, nearly 5,000 respondents, 90% use AI, amplifier, positive with throughput and product performance, negative with stability, loosely coupled architectures benefit, 90% adopted at least one platform, platform quality linked to AI value",
+   "source": "https://cloud.google.com/blog/products/ai-machine-learning/announcing-the-2025-dora-report",
+   "result": "confirmed"
+  },
+  {
+   "claim": "DORA lists using industry as a shield against improving as a pitfall",
+   "source": "https://dora.dev/guides/dora-metrics/",
+   "result": "confirmed (now quoted)"
+  },
+  {
+   "claim": "SRE as one concrete implementation of DevOps ('class SRE implements interface DevOps')",
+   "source": "https://sre.google/workbook/how-sre-relates/",
+   "result": "confirmed"
+  },
+  {
+   "claim": "First devopsdays, Ghent, 30-31 October 2009, organised by Patrick Debois",
+   "source": "https://groups.google.com/g/agile-system-administration/c/hp7WBg4uCJI",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Debois presented 'agile infrastructure' at Agile 2008",
+   "source": "https://jedi.be/presentations/agile-infrastructure-agile2008.pdf",
+   "result": "confirmed (slides exist; Toronto venue from general record)"
+  },
+  {
+   "claim": "Gene Kim's Three Ways article (2012) and use in The Phoenix Project / The DevOps Handbook",
+   "source": "https://itrevolution.com/the-three-ways-principles-underpinning-devops/",
+   "result": "confirmed via search listing and O'Reilly Phoenix Project resource; article page itself not fetchable"
+  },
+  {
+   "claim": "CALMS extends CAMS; L credited to Jez Humble, co-author of The DevOps Handbook",
+   "source": "https://www.atlassian.com/devops/frameworks/calms-framework",
+   "result": "confirmed (secondary source; attribution hedged as 'generally credited')"
+  }
+ ],
+ "calculations_rechecked": [
+  {
+   "item": "Deployment frequency 20/4 weeks = 5 per week; 20/20 working days = 1 per day",
+   "result": "correct"
+  },
+  {
+   "item": "Change lead time sorted list n=20, sum 675, mean 33.75 h, median (24+26)/2 = 25 h, nearest-rank P85 rank 17 = 70 h",
+   "result": "correct"
+  },
+  {
+   "item": "10/20 within 24 h ('about a day'); 6/20 (30%) over 48 h",
+   "result": "correct"
+  },
+  {
+   "item": "Change fail rate 3/20 = 15%; deployment rework rate 2/20 = 10%; one extra failure = +5 percentage points",
+   "result": "correct"
+  },
+  {
+   "item": "Recovery times 35, 50, 240 min: median 50, mean 108.3 (more than twice the median)",
+   "result": "correct"
+  }
+ ],
+ "changes_made": [
+  "Removed the paragraph after the timeline that repeated the 'four metrics' explanation given in the measurement section",
+  "Corrected the DORA history wording: 2014 began with four candidate measures; by 2015 all four were in use in two groups; 'four keys' described as a later label",
+  "Removed the duplicate link and sentence pointing to Agile metrics and KPIs at the end of the metrics section (already linked in that section's opening)",
+  "Worked example: stated that the second rework deployment fixed a long-standing defect, so it does not imply an uncounted failed deployment",
+  "Change approval: attributed the CAB finding to DORA's research generally and the peer-review conclusion to the 2019 report, matching the DORA capability page; adjusted the matching key takeaway",
+  "Trimmed the limitations section: removed embedded and legacy points that duplicate the continuous delivery guide's challenges table, linked to that guide, and replaced a paraphrase with DORA's own pitfall wording",
+  "Common mistakes: merged 'metrics as targets' and 'measuring only speed' (both already covered under how to read the metrics); corrected the old-definition mistake ('counted every outage' overstated; it also counted outages with external causes)",
+  "Removed the generic closing paragraph of 'How to start a DevOps improvement'",
+  "Merged the 'What does a DevOps engineer do?' FAQ into 'Is DevOps a role or a culture?'",
+  "Intro: 'usually measured' changed to 'its delivery performance is most often measured'"
+ ],
+ "statistical_text_measurements": {
+  "url": "/project-management/kanban/devops/",
+  "word_count": 4504,
+  "unique_words": 1185,
+  "type_token_ratio": 0.2631,
+  "mattr_100": 0.7563,
+  "shannon_word_entropy_bits": 8.8,
+  "normalised_entropy": 0.8618,
+  "sentences": 180,
+  "avg_sentence_length": 17.54,
+  "sentence_length_sd": 8.46,
+  "sentence_length_cv": 0.482,
+  "paragraph_length_mean": 38.0,
+  "paragraph_length_sd": 20.5,
+  "bigram_repetition_rate": 0.3302,
+  "trigram_repetition_rate": 0.1208,
+  "top_repeated_4grams": [
+   [
+    "failed deployment recovery time",
+    8
+   ],
+   [
+    "and the people who",
+    4
+   ],
+   [
+    "automation and fast feedback",
+    4
+   ],
+   [
+    "time to restore service",
+    4
+   ],
+   [
+    "the people who build",
+    3
+   ],
+   [
+    "the people who run",
+    3
+   ],
+   [
+    "for project managers devops",
+    3
+   ],
+   [
+    "deployment recovery time throughput",
+    3
+   ]
+  ],
+  "most_common_sentence_openers": [
+   [
+    "devops is",
+    5
+   ],
+   [
+    "many organisations",
+    3
+   ],
+   [
+    "a team",
+    3
+   ]
+  ],
+  "formulaic_phrases_found": [],
+  "watch_phrases_counts": {},
+  "most_similar_existing_guides": [
+   [
+    0.496,
+    "/project-management/kanban/continuous-delivery/"
+   ],
+   [
+    0.428,
+    "/project-management/industries/software-project-management/"
+   ],
+   [
+    0.412,
+    "/project-management/agile/agile-operations-it/"
+   ],
+   [
+    0.403,
+    "/project-management/agile/agile-metrics-and-kpis/"
+   ],
+   [
+    0.333,
+    "/project-management/agile/agile-software-development/"
+   ]
+  ],
+  "note": "Descriptive editorial diagnostics only. No AI-detection probability is calculated."
+ },
+ "unresolved_issues": [
+  "Word count about 4,500 after trimming; remaining sections carry distinct content, so further cuts were not made",
+  "Overlap with /project-management/kanban/continuous-delivery/ (TF-IDF about 0.50): both have a DORA metrics table and a CAB paragraph. Intent differs (DevOps definition hub vs CD practice) and examples are distinct; acceptable, but the CD page could later shorten its DORA table and link here for the worked calculation",
+  "The 2025 DORA report PDF and the Three Ways article page were not opened directly; figures come from Google Cloud's announcement and search listings",
+  "Outside this page: /project-management/agile/agile-software-development/ still lists four old DORA metrics (writer's note; should be in FOLLOWUPS.md)"
+ ],
+ "reviewer_note": "Automated review by an AI reviewer; not a human professional review."
+}

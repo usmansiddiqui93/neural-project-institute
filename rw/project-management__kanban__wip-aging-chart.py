@@ -57,7 +57,7 @@ RW = dict(
                 ["SLE marker (optional)", "Your service level expectation, often the 85th percentile line", "Agreed SLE"],
             ),
             "A **service level expectation (SLE)** has two parts, according to the Kanban Guide: a period of elapsed time and a probability, such as \"85% of items finish within 14 days\". It should be based on historical cycle time. On the aging chart it becomes a threshold: an item crossing it has not necessarily failed, but it now belongs to the slowest 15% of the team's work. See our [Kanban planning](/project-management/kanban/kanban-planning/) guide for how to calculate an SLE and keep it up to date.",
-            "Percentile lines change slowly as new items finish. Pace bands add information that the overall lines cannot: whether an item is behind for its stage. ActionableAgile, for example, calculates pace percentiles per column from the ages at which past items left that column, and requires at least 10 completed items before it shows them.",
+            "Percentile lines change slowly as new items finish. Pace bands add information that the overall lines cannot: whether an item is behind for its stage. ActionableAgile, for example, colours each column by applying percentiles of past items' ages to that column, and its documentation says at least 10 completed items are needed for the calculation.",
         ),
         S(
             "Worked example: reading one team's WIP aging chart",
@@ -88,7 +88,7 @@ RW = dict(
                 ["I", "Testing", "Mon 9 Nov", "17", "27 of 30 (90%)", "Above the 85th; SLE already missed"],
             ),
             H3("Step 3: read age against stage"),
-            "Against the overall lines alone, item B (9 days) and item H (8 days) look similar: both sit close to the 50th percentile. But H is in Testing, the last stage, while B is still in Analysis, with Development, Review and Testing ahead of it. The team's tool also reports **pace**: the age by which 85% of past items had left each stage.",
+            "Against the overall lines alone, item B (9 days) and item H (8 days) look similar: both sit close to the 50th percentile. But H is in Testing, the last stage, while B is still in Analysis, with Development, Review and Testing ahead of it. The team's tool also reports **pace**: the age by which 85% of past items had left each stage (illustrative figures for the same 30 items).",
             T(
                 ["Stage", "85% of past items had left this stage by age (days)", "Items now in the stage", "Reading"],
                 ["Analysis", "3", "A (2), B (9)", "A on pace; B three times the stage's 85th percentile"],
@@ -117,7 +117,7 @@ RW = dict(
                 "**No new item starts today** while four items are at risk.",
             ),
             H3("Step 6: check the cause with Little's Law"),
-            "Thirty items in six weeks is a throughput of 5 items a week, or 30 ÷ 42 ≈ 0.71 items per calendar day. Little's Law says average cycle time ≈ average WIP ÷ average throughput. Over the six weeks the mean cycle time was 275 ÷ 30 ≈ 9.2 days, which implies average WIP of about 9.2 × 0.71 ≈ 6.5 items. Today there are 9 items in progress. If throughput stays at 0.71 a day, 9 ÷ 0.71 ≈ **12.6 days** average cycle time, about three days longer than before.",
+            "Thirty items in six weeks is a throughput of 5 items a week, or 30 ÷ 42 ≈ 0.71 items per calendar day. Little's Law says average cycle time ≈ average WIP ÷ average throughput. Over the six weeks the mean cycle time was 275 ÷ 30 ≈ 9.2 days, which implies average WIP of about 9.2 × 0.71 ≈ 6.5 items. Today there are 9 items in progress. If throughput stays at 30 items per 42 days, 9 ÷ (30 ÷ 42) = **12.6 days** average cycle time, about three days longer than before.",
             "The aging chart is showing a symptom; the cause is that the team has started more work than it finishes. Its next action is to review its [WIP limits](/project-management/kanban/wip-limits/). Little's Law describes long-run averages in a stable system, so this is a direction of travel, not a precise prediction.",
         ),
         S(
@@ -129,7 +129,7 @@ RW = dict(
                 ["Many dots stacked in one stage", "A bottleneck or a full queue waiting for the next stage", "Swarm on the downstream stage; check the WIP limit for that column"],
                 ["All dots rising together day after day", "Little or nothing is finishing", "Stop starting; finish or unblock the oldest items"],
                 ["A few dots far above the 95th line", "Forgotten, parked or blocked items still counted as in progress", "Decide explicitly: resume, split or cancel and remove"],
-                ["Dots cluster just below the last stage", "Items waiting for release, sign-off or deployment", "Look at the release or approval policy rather than the team's work"],
+                ["Dots pile up in the last stage before done","Items waiting for release, sign-off or deployment", "Look at the release or approval policy rather than the team's work"],
                 ["Most dots above the 85th line", "WIP has grown, or the SLE is out of date", "Reduce WIP, then recalculate percentiles from recent data"],
             ),
             "Some tools offer a replay that shows how the chart looked on earlier days. Comparing the same items a week apart shows whether dots are moving right (progressing) or only upwards (ageing in place).",
@@ -149,9 +149,9 @@ RW = dict(
         ),
         S(
             "How to build a WIP aging chart in a spreadsheet",
-            "You do not need a specialist tool. The **Cards** tab of our free [Kanban board template](/templates/kanban-board-template/) already records Column, Started and Finished dates and calculates cycle time as finish date − start date + 1. It does not include an aging chart, but you can add one in about fifteen minutes:",
+            "You do not need a specialist tool. The **Cards** tab in the advanced and expert versions of our free [Kanban board template](/templates/kanban-board-template/) already records Column (D), Started (E) and Finished (F) dates, with headers on row 5 and cards from row 6, and its Cycle time column (G) uses finish date − start date + 1. It does not include an aging chart, but you can add one in about fifteen minutes:",
             OL(
-                "**Extend the card list** so that it holds at least 20 to 30 finished items plus everything currently in progress.",
+                "**Extend the card list** so that it holds at least 20 to 30 finished items plus everything currently in progress, and copy the Cycle time formula, =IF(F6=\"\",\"\",F6-E6+1), down column G for every row.",
                 "**Add an Age column** (column I). For a card with Started in column E and Finished in column F on row 6: =IF(AND(E6<>\"\",F6=\"\"),TODAY()-E6+1,\"\"). Finished cards and cards not yet started stay blank.",
                 "**Number the stages.** List your in-progress stages in order in a spare range, for example L2:L5, and add a Stage number column (column J): =IFERROR(MATCH(D6,$L$2:$L$5,0),\"\").",
                 "**Spread overlapping dots.** Add a Plot X column (column K) so that items in the same stage do not sit on top of each other: =IF(J6=\"\",\"\",J6+(COUNTIF($J$6:J6,J6)-1)*0.08), where J holds the stage number.",

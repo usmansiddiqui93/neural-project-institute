@@ -1,0 +1,200 @@
+{
+ "url": "/project-management/kanban/wip-aging-chart/",
+ "status": "PUBLISH",
+ "publication_eligible": true,
+ "gates": {
+  "definitions_accurate": true,
+  "framework_requirements_verified": true,
+  "calculations_correct": true,
+  "variables_units_defined": true,
+  "examples_consistent_and_labelled": true,
+  "claims_supported": true,
+  "sources_authentic": true,
+  "educational_value": true,
+  "no_duplicate_intent": true,
+  "internal_links_valid": true,
+  "certification_claims_accurate": true,
+  "disclosures_included": true,
+  "metadata_valid": true,
+  "no_fabricated_experience": true
+ },
+ "scores": {
+  "technical_accuracy_25": 24,
+  "sources_15": 13,
+  "educational_usefulness_15": 14,
+  "examples_10": 10,
+  "information_gain_10": 9,
+  "precision_readability_10": 9,
+  "search_intent_5": 5,
+  "internal_linking_5": 5,
+  "technical_seo_5": 5,
+  "total": 94
+ },
+ "claims_checked": [
+  {
+   "claim": "Work item age definition; four mandatory flow metrics; SLE = elapsed time + probability from historical cycle time, best guess allowed; 'ensuring work items do not age unnecessarily, using the SLE as a reference'; no chart prescribed",
+   "source": "https://kanbanguides.org/the-kanban-guide/2025.5/pdf/kanban-guide.v2025.5.en.pdf",
+   "result": "confirmed"
+  },
+  {
+   "claim": "ActionableAgile Y axis = age since first column; pace colour bands per column; at least 10 completed items; aging replay",
+   "source": "https://55degrees.atlassian.net/wiki/spaces/AAS/pages/2454290433/Aging+Work+in+Progress",
+   "result": "corrected (pace method described as the documentation states it)"
+  },
+  {
+   "claim": "Businessmap Aging WIP measures days in the current stage",
+   "source": "https://businessmap.io/kanban-resources/kanban-analytics/kanban-aging-wip",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Kanban board template Cards tab has Column, Started, Finished, Cycle time columns with finish - start + 1",
+   "source": "/templates/kanban-board-template/ (xlsx files inspected with openpyxl)",
+   "result": "corrected (Cards tab exists only in the advanced and expert versions; cycle time formula is present on one sample row only, so the build steps now say to copy it down)"
+  },
+  {
+   "claim": "Vacanti's Actionable Agile Metrics for Predictability has two chapters on the aging chart and uses the +1 convention",
+   "source": "https://s3.amazonaws.com/samples.leanpub.com/aamfp-10th-sample.pdf",
+   "result": "unverifiable by reviewer (writer inspected the sample TOC); low-stakes attribution, kept"
+  }
+ ],
+ "calculations_rechecked": [
+  {
+   "item": "30 cycle times: sorted, n=30, sum 275, mean 9.17",
+   "result": "correct"
+  },
+  {
+   "item": "Nearest-rank P50 rank 15 = 8, P70 rank 21 = 10, P85 rank 26 = 14, P95 rank 29 = 21; 26/30 = 87% within 14 days",
+   "result": "correct"
+  },
+  {
+   "item": "Ages on Wed 25 Nov 2026 for A-I (2, 9, 3, 7, 14, 6, 10, 8, 17), weekday labels of start dates, and positions against percentile lines",
+   "result": "correct"
+  },
+  {
+   "item": "Past items finished in fewer days than current age: 0, 17, 1, 11, 25, 8, 19, 14, 27 of 30",
+   "result": "correct"
+  },
+  {
+   "item": "Conditional share meeting SLE: A 26/30, B 9/13, G 7/11, E 1/5, I 0/3 with 2/3 within 21 days",
+   "result": "correct"
+  },
+  {
+   "item": "Per-stage pace P85 3/8/11/14 from the writer's synthetic stage-exit ages",
+   "result": "correct (now labelled illustrative)"
+  },
+  {
+   "item": "Little's Law: 30/42 = 0.714/day (5/week); implied past WIP 9.17 x 0.714 = 6.55; projected average cycle time 9/(30/42) = 12.6 days",
+   "result": "corrected (text previously computed 9 / 0.71, which gives 12.7; now uses 30/42 exactly)"
+  },
+  {
+   "item": "Spreadsheet formulas (Age, MATCH stage number, Plot X offset, SMALL/ROUNDUP nearest rank) against template column layout",
+   "result": "correct"
+  }
+ ],
+ "changes_made": [
+  "Spreadsheet section: Cards tab attributed to the advanced and expert versions of the template, column letters and header row stated, and an instruction added to copy the Cycle time formula down",
+  "Little's Law step: replaced 9 / 0.71 = 12.6 (rounding mismatch) with 9 / (30 / 42) = 12.6",
+  "Pace figures labelled as illustrative figures for the same 30 items",
+  "ActionableAgile pace description reworded to match its documentation",
+  "Patterns table: 'Dots cluster just below the last stage' (inconsistent with the chart's axes) changed to 'Dots pile up in the last stage before done'"
+ ],
+ "statistical_text_measurements": {
+  "url": "/project-management/kanban/wip-aging-chart/",
+  "word_count": 4071,
+  "unique_words": 856,
+  "type_token_ratio": 0.2103,
+  "mattr_100": 0.6965,
+  "shannon_word_entropy_bits": 8.261,
+  "normalised_entropy": 0.848,
+  "sentences": 163,
+  "avg_sentence_length": 18.26,
+  "sentence_length_sd": 9.65,
+  "sentence_length_cv": 0.529,
+  "paragraph_length_mean": 35.9,
+  "paragraph_length_sd": 18.0,
+  "bigram_repetition_rate": 0.4071,
+  "trigram_repetition_rate": 0.1597,
+  "top_repeated_4grams": [
+   [
+    "a wip aging chart",
+    11
+   ],
+   [
+    "work item age is",
+    5
+   ],
+   [
+    "finished within 14 days",
+    5
+   ],
+   [
+    "85 of past items",
+    4
+   ],
+   [
+    "past items reached age",
+    4
+   ],
+   [
+    "its work item age",
+    3
+   ],
+   [
+    "items are at risk",
+    3
+   ],
+   [
+    "on the horizontal axis",
+    3
+   ]
+  ],
+  "most_common_sentence_openers": [
+   [
+    "the kanban",
+    4
+   ],
+   [
+    "the aging",
+    4
+   ],
+   [
+    "work item",
+    3
+   ],
+   [
+    "an item",
+    3
+   ]
+  ],
+  "formulaic_phrases_found": [],
+  "watch_phrases_counts": {},
+  "most_similar_existing_guides": [
+   [
+    0.64,
+    "/project-management/kanban/cycle-time/"
+   ],
+   [
+    0.53,
+    "/project-management/kanban/kanban-metrics/"
+   ],
+   [
+    0.45,
+    "/project-management/kanban/what-is-kanban/"
+   ],
+   [
+    0.448,
+    "/project-management/kanban/kanban-planning/"
+   ],
+   [
+    0.406,
+    "/project-management/kanban/cumulative-flow-diagram/"
+   ]
+  ],
+  "note": "Descriptive editorial diagnostics only. No AI-detection probability is calculated."
+ },
+ "unresolved_issues": [
+  "TF-IDF similarity 0.636 with /project-management/kanban/cycle-time/, which has a short work item age subsection; intents differ (unfinished vs finished work), datasets differ (30 items/SLE 14 vs 20 items/SLE 11), and the cycle time page already links here. Overlap with cycle-time-vs-lead-time is limited to the shared +1 convention, which is consistent",
+  "Spreadsheet formulas were tested by the writer in LibreOffice only, not in Excel or Google Sheets"
+ ],
+ "reviewer_note": "Automated review by an AI reviewer; not a human professional review."
+}

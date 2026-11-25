@@ -1,0 +1,207 @@
+{
+ "url": "/project-management/agile/agile-swarming/",
+ "status": "PUBLISH",
+ "publication_eligible": true,
+ "gates": {
+  "definitions_accurate": true,
+  "framework_requirements_verified": true,
+  "calculations_correct": true,
+  "variables_units_defined": true,
+  "examples_consistent_and_labelled": true,
+  "claims_supported": true,
+  "sources_authentic": true,
+  "educational_value": true,
+  "no_duplicate_intent": true,
+  "internal_links_valid": true,
+  "certification_claims_accurate": true,
+  "disclosures_included": true,
+  "metadata_valid": true,
+  "no_fabricated_experience": true
+ },
+ "scores": {
+  "technical_accuracy_25": 23,
+  "sources_15": 13,
+  "educational_usefulness_15": 14,
+  "examples_10": 9,
+  "information_gain_10": 9,
+  "precision_readability_10": 9,
+  "search_intent_5": 5,
+  "internal_linking_5": 5,
+  "technical_seo_5": 5,
+  "total": 92
+ },
+ "claims_checked": [
+  {
+   "claim": "Scrum Guide 2020: self-managing teams 'internally decide who does what, when, and how'; 'The Sprint Backlog is a plan by and for the Developers'; Daily Scrum 'select whatever structure and techniques they want'; no mention of swarming",
+   "source": "https://scrumguides.org/scrum-guide.html",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Kanban Guide 2025.5: 'explicitly control the number of work items in a workflow'; controlling WIP 'often improves the Kanban system members' collective focus, commitment, and collaboration'; items 'do not age unnecessarily' using the SLE; no mention of swarming",
+   "source": "https://kanbanguides.org/the-kanban-guide/2025.5/pdf/kanban-guide.v2025.5.en.pdf",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Scrum Patterns ¶25 Swarming: One-Piece Continuous Flow — too many things at once reduces velocity and quality; whole Development Team works on one PBI at a time; A Scrum Book (Sutherland & Coplien, 2019)",
+   "source": "https://sites.google.com/a/scrumplop.org/published-patterns/book-outline/patlets",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Zuill, Agile2014 experience report: whole team works on the same thing, at the same time, in the same space, on the same computer",
+   "source": "https://agilealliance.org/resources/experience-reports/mob-programming-agile2014",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Intelligent Swarming is a service mark of the Consortium for Service Innovation; removes tiers of support; 'swarm' of analysts",
+   "source": "https://library.serviceinnovation.org/Intelligent_Swarming",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Brooks's law, The Mythical Man-Month (1975): adding people to a late software project makes it later",
+   "source": "https://en.wikipedia.org/wiki/Brooks%27s_law",
+   "result": "confirmed"
+  },
+  {
+   "claim": "'Most teams' swarm with a sub-group of two to four people",
+   "source": "none (practitioner rule of thumb)",
+   "result": "corrected"
+  },
+  {
+   "claim": "Fewer items in progress means average cycle time falls (takeaway)",
+   "source": "Little's Law as on /project-management/kanban/wip-limits/",
+   "result": "corrected"
+  }
+ ],
+ "calculations_rechecked": [
+  {
+   "item": "D = E ÷ s(k) for E=8: 8.00 / 4.44 / 3.33 days; last item Done 8.00 / 8.89 / 10.00; Done by day 5: 0 / 3 / 2",
+   "result": "correct"
+  },
+  {
+   "item": "Throughput 0.750 / 0.675 / 0.600 items/day and Little's Law cross-check 8.00 / 4.44 / 3.33 days",
+   "result": "correct"
+  },
+  {
+   "item": "30% overrun (E=10.4): D 10.40 / 5.78 / 4.33; Done by day 10: 0 / 3 / 4; carry-over 6 / 3 / 2; 10 ÷ 10.4 = 96%",
+   "result": "correct"
+  },
+  {
+   "item": "Solo plan with 1.5-day review wait: finish 9.5 days, throughput 0.632 vs pairs 0.675",
+   "result": "correct"
+  },
+  {
+   "item": "Communication paths n(n−1)/2 for 2, 3, 4 people: 1, 3, 6",
+   "result": "correct"
+  }
+ ],
+ "changes_made": [
+  "Takeaway on Little's Law: added the condition that throughput is roughly held and replaced 'drops sharply' with 'falls' (the original overstated the law)",
+  "Origin paragraph: 'In practice, most teams' changed to 'Many teams' (unsupported generalisation)",
+  "Merged the stand-alone Scrum techniques link sentence into the preceding paragraph",
+  "Trimmed 'Swarming with remote and hybrid teams' from a five-item list to one paragraph and labelled the overlap-hours guidance as a rule of thumb",
+  "Merged the team-structure link paragraph in 'Who does what' into the preceding paragraph",
+  "Replaced the closing paragraph of 'Common swarming mistakes', which repeated the WIP limits link a fourth time, with a single Sprint Backlog link",
+  "Minor wording tidy in the remote-swarming FAQ"
+ ],
+ "statistical_text_measurements": {
+  "url": "/project-management/agile/agile-swarming/",
+  "word_count": 4066,
+  "unique_words": 902,
+  "type_token_ratio": 0.2218,
+  "mattr_100": 0.7186,
+  "shannon_word_entropy_bits": 8.292,
+  "normalised_entropy": 0.8447,
+  "sentences": 159,
+  "avg_sentence_length": 18.16,
+  "sentence_length_sd": 10.83,
+  "sentence_length_cv": 0.596,
+  "paragraph_length_mean": 45.1,
+  "paragraph_length_sd": 23.7,
+  "bigram_repetition_rate": 0.3865,
+  "trigram_repetition_rate": 0.1346,
+  "top_repeated_4grams": [
+   [
+    "one item per person",
+    6
+   ],
+   [
+    "two or more people",
+    4
+   ],
+   [
+    "the 2020 scrum guide",
+    4
+   ],
+   [
+    "the definition of done",
+    4
+   ],
+   [
+    "on the same backlog",
+    3
+   ],
+   [
+    "the same backlog item",
+    3
+   ],
+   [
+    "the number of items",
+    3
+   ],
+   [
+    "at the same time",
+    3
+   ]
+  ],
+  "most_common_sentence_openers": [
+   [
+    "swarming is",
+    4
+   ],
+   [
+    "the 2020",
+    3
+   ],
+   [
+    "for a",
+    3
+   ],
+   [
+    "this is",
+    3
+   ]
+  ],
+  "formulaic_phrases_found": [],
+  "watch_phrases_counts": {},
+  "most_similar_existing_guides": [
+   [
+    0.429,
+    "/project-management/scrum/scrum-techniques/"
+   ],
+   [
+    0.391,
+    "/project-management/kanban/wip-limits/"
+   ],
+   [
+    0.362,
+    "/project-management/kanban/cycle-time/"
+   ],
+   [
+    0.348,
+    "/project-management/agile/agile-workflow/"
+   ],
+   [
+    0.344,
+    "/project-management/kanban/what-is-kanban/"
+   ]
+  ],
+  "note": "Descriptive editorial diagnostics only. No AI-detection probability is calculated."
+ },
+ "unresolved_issues": [
+  "A Scrum Book chapter seen only in part; the article relies on the public patlet wording (consistent with it)",
+  "Brooks's law checked against a secondary source only; the 1975 book was not inspected (well-established attribution)",
+  "Swarm size of two to four, right-to-left board walk and overlap-hours guidance are practitioner rules of thumb, now worded as such",
+  "TF-IDF similarity 0.43 with /project-management/scrum/scrum-techniques/; that page has a one-paragraph swarming entry that links here, so intents differ"
+ ],
+ "reviewer_note": "Automated review by an AI reviewer; not a human professional review."
+}

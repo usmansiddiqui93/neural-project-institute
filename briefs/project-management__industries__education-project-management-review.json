@@ -1,0 +1,216 @@
+{
+ "url": "/project-management/industries/education-project-management/",
+ "status": "PUBLISH",
+ "publication_eligible": true,
+ "gates": {
+  "definitions_accurate": true,
+  "framework_requirements_verified": true,
+  "calculations_correct": true,
+  "variables_units_defined": true,
+  "examples_consistent_and_labelled": true,
+  "claims_supported": true,
+  "sources_authentic": true,
+  "educational_value": true,
+  "no_duplicate_intent": true,
+  "internal_links_valid": true,
+  "certification_claims_accurate": true,
+  "disclosures_included": true,
+  "metadata_valid": true,
+  "no_fabricated_experience": true
+ },
+ "scores": {
+  "technical_accuracy_25": 23,
+  "sources_15": 14,
+  "educational_usefulness_15": 14,
+  "examples_10": 10,
+  "information_gain_10": 9,
+  "precision_readability_10": 9,
+  "search_intent_5": 5,
+  "internal_linking_5": 5,
+  "technical_seo_5": 5,
+  "total": 94
+ },
+ "claims_checked": [
+  {
+   "claim": "DOJ interim final rule effective 20 April 2026 moved ADA Title II compliance dates to 26 April 2027 (population 50,000+) and 26 April 2028 (smaller entities and special district governments); WCAG 2.1 AA unchanged; comments invited",
+   "source": "https://www.govinfo.gov/content/pkg/FR-2026-04-20/html/2026-07663.htm",
+   "result": "confirmed"
+  },
+  {
+   "claim": "No later DOJ change to those dates as at 25 Nov 2026",
+   "source": "https://www.ada.gov/title-ii-web-rule/",
+   "result": "confirmed (ada.gov still cites the April 2026 IFR dates; no final rule or further extension found)"
+  },
+  {
+   "claim": "UK public sector websites and apps must meet WCAG 2.2 AA and publish an accessibility statement; schools and nurseries partially exempt but must publish a statement",
+   "source": "https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps",
+   "result": "corrected (re-attributed to GOV.UK guidance on the 2018 Regulations rather than to the Regulations' own text)"
+  },
+  {
+   "claim": "Colleges and universities in scope; VLEs and intranets covered",
+   "source": "https://www.jisc.ac.uk/guides/accessibility-regulations-what-you-need-to-know",
+   "result": "confirmed"
+  },
+  {
+   "claim": "DfE 'Procuring educational technology' guidance updated 13 November 2026: DPIA early; storage, retention/deletion, sub-processors, breach notification; data exit timescales; whether pupil data trains AI",
+   "source": "https://www.gov.uk/guidance/data-protection-in-schools/procuring-educational-technology-edtech",
+   "result": "corrected (confirmed; labelled as England-only DfE guidance rather than UK-wide)"
+  },
+  {
+   "claim": "KCSIE 2026 in force 1 September 2026, replacing the 2025 edition; filtering and monitoring expectations",
+   "source": "https://assets.publishing.service.gov.uk/media/6aba40e0fceb6fb3a650127d/Keeping_children_safe_in_education_2026.pdf ; https://www.irwinmitchell.com/news-and-insights/expert-comment/post/102ngrq/kcsie-2026-whats-changed",
+   "result": "confirmed (gov.uk PDF: 'replaces ... September 2025 version'; in-force date from Irwin Mitchell and Family Law)"
+  },
+  {
+   "claim": "FERPA applies to institutions receiving funds from programmes administered by the US Department of Education",
+   "source": "https://studentprivacy.ed.gov/faq/which-educational-agencies-or-institutions-does-ferpa-apply",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Scally (2002) PMI paper: ten issues including student needs, classroom vs management expectations, more than one success criterion",
+   "source": "https://www.pmi.org/learning/library/ten-issues-managing-education-projects-1039",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Academy trusts in England account for a year ending 31 August",
+   "source": "https://www.gov.uk/guidance/academies-accounts-direction",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Wrike ranked first in site reviews; steeper learning curve noted",
+   "source": "/project-management-tools/wrike/",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Training plan and project schedule template fields",
+   "source": "/templates/training-plan-template/, /templates/project-schedule-template/",
+   "result": "confirmed"
+  }
+ ],
+ "calculations_rechecked": [
+  {
+   "item": "Backward pass (shifted scenario, go-live Mon 3 Sep 2029; staff last day Fri 13 Jul 2029): migration LS Mon 4 Jun; training LS Mon 18 Jun; pilot LS Mon 16 Apr (LF Fri 25 May); configuration LS Mon 19 Feb (LF Fri 13 Apr); contract LS Mon 29 Jan (LF Fri 16 Feb) 2029",
+   "result": "corrected (dates shifted by 104 weeks; recomputed in Python)"
+  },
+  {
+   "item": "Paper deadline 10 working days before Wed 13 Dec 2028 = Wed 29 Nov 2028",
+   "result": "correct"
+  },
+  {
+   "item": "Scenario A: configuration ES Mon 22 Jan 2029 vs LS Mon 19 Feb = +4 weeks float",
+   "result": "correct"
+  },
+  {
+   "item": "Scenario B: approval Wed 14 Mar 2029, contract from Mon 19 Mar, configuration Mon 9 Apr to Fri 1 Jun 2029 = 7 weeks after LF; float -7; pilot would end Fri 13 Jul",
+   "result": "correct"
+  },
+  {
+   "item": "Swing 4 - (-7) = 11 weeks; gap between meetings 13 weeks",
+   "result": "correct"
+  },
+  {
+   "item": "Sessions 380/16 = 23.75 -> 24; 380/(16 x 0.85) = 27.94 -> 28; available 4 x 3 x 2 = 24; shortfall 4",
+   "result": "correct"
+  }
+ ],
+ "changes_made": [
+  "Shifted the worked example two academic years forward (by exactly 104 weeks so weekdays are preserved): go-live Mon 3 Sep 2029, board meetings Wed 13 Dec 2028 and Wed 14 Mar 2029, paper deadline Wed 29 Nov 2028, staff last day Fri 13 Jul 2029, half-term from 28 May 2029; all backward-pass and float dates updated. A one-year shift was rejected because Easter 2028 (16 April) would put the pilot start on Easter Monday.",
+  "Rewrote the Christmas closure for the new dates: college reopens Tue 2 Jan 2029 after the New Year bank holiday; contract weeks counted from the week beginning Mon 1 Jan using the stated rule that estimates absorb bank holidays",
+  "Replaced 'a paper delayed by two weeks, from 2 December to a date after the deadline' (internally muddled) with 'a paper that misses the 29 November deadline, even by a few days', and aligned the following sentence",
+  "Re-attributed the WCAG 2.2 AA requirement to GOV.UK guidance on the Public Sector Bodies Accessibility Regulations 2018 (the Regulations' own text does not name WCAG 2.2)",
+  "Labelled the DfE edtech procurement guidance as applying in England rather than the whole UK"
+ ],
+ "statistical_text_measurements": {
+  "url": "/project-management/industries/education-project-management/",
+  "word_count": 4363,
+  "unique_words": 1152,
+  "type_token_ratio": 0.264,
+  "mattr_100": 0.7622,
+  "shannon_word_entropy_bits": 8.86,
+  "normalised_entropy": 0.8712,
+  "sentences": 152,
+  "avg_sentence_length": 18.18,
+  "sentence_length_sd": 9.74,
+  "sentence_length_cv": 0.536,
+  "paragraph_length_mean": 36.4,
+  "paragraph_length_sd": 20.9,
+  "bigram_repetition_rate": 0.3038,
+  "trigram_repetition_rate": 0.0926,
+  "top_repeated_4grams": [
+   [
+    "the student record system",
+    3
+   ],
+   [
+    "meeting and paper deadline",
+    3
+   ],
+   [
+    "data protection impact assessment",
+    3
+   ],
+   [
+    "your data protection officer",
+    3
+   ],
+   [
+    "education project management is",
+    2
+   ],
+   [
+    "project management is the",
+    2
+   ],
+   [
+    "is the planning and",
+    2
+   ],
+   [
+    "the planning and delivery",
+    2
+   ]
+  ],
+  "most_common_sentence_openers": [
+   [
+    "it is",
+    3
+   ],
+   [
+    "because the",
+    3
+   ]
+  ],
+  "formulaic_phrases_found": [],
+  "watch_phrases_counts": {},
+  "most_similar_existing_guides": [
+   [
+    0.279,
+    "/project-management/what-is-project-management/"
+   ],
+   [
+    0.266,
+    "/project-management/it-project-manager/"
+   ],
+   [
+    0.262,
+    "/project-management/what-is-a-project/"
+   ],
+   [
+    0.25,
+    "/project-management/industries/government-project-management/"
+   ],
+   [
+    0.247,
+    "/project-management/project-management-plan/"
+   ]
+  ],
+  "note": "Descriptive editorial diagnostics only. No AI-detection probability is calculated."
+ },
+ "unresolved_issues": [
+  "KCSIE 2026 in-force date (1 Sep 2026) is from secondary legal sources; the gov.uk PDF confirms it replaces the 2025 edition but the pages opened did not state the commencement date.",
+  "Calendar windows and half-term dates are typical English patterns, not a specific institution's published calendar (presented as adaptable).",
+  "Successive Approximation Model (SAM) named from general knowledge; no primary source opened (low risk).",
+  "DOJ IFR invited comments (closed 22 Jun 2026); page already tells readers to check for later changes."
+ ],
+ "reviewer_note": "Automated review by an AI reviewer; not a human professional review."
+}

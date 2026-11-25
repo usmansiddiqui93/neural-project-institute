@@ -1,0 +1,231 @@
+{
+ "url": "/project-management/kanban/kanban-ceremonies/",
+ "status": "PUBLISH",
+ "publication_eligible": true,
+ "gates": {
+  "definitions_accurate": true,
+  "framework_requirements_verified": true,
+  "calculations_correct": true,
+  "variables_units_defined": true,
+  "examples_consistent_and_labelled": true,
+  "claims_supported": true,
+  "sources_authentic": true,
+  "educational_value": true,
+  "no_duplicate_intent": true,
+  "internal_links_valid": true,
+  "certification_claims_accurate": true,
+  "disclosures_included": true,
+  "metadata_valid": true,
+  "no_fabricated_experience": true
+ },
+ "scores": {
+  "technical_accuracy_25": 23,
+  "sources_15": 13,
+  "educational_usefulness_15": 14,
+  "examples_10": 9,
+  "information_gain_10": 9,
+  "precision_readability_10": 9,
+  "search_intent_5": 5,
+  "internal_linking_5": 5,
+  "technical_seo_5": 5,
+  "total": 92
+ },
+ "claims_checked": [
+  {
+   "claim": "Kanban University glossary: cadence definition; 'feedback information without action is not a feedback loop'",
+   "source": "https://kanban.university/wp-content/uploads/2023/04/The-Official-Kanban-Guide_Glossary.pdf",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Feedback loops are one of the six general practices of the Kanban Method ('Implement feedback loops')",
+   "source": "https://kanban.university/wp-content/uploads/2023/04/The-Official-Kanban-Guide_A4.pdf",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Official Guide (2022) team cadences: team Kanban meeting daily, team retrospective biweekly or monthly, internal team replenishment weekly or as needed, with stated purposes; identify and evolve existing meetings",
+   "source": "https://kanban.university/wp-content/uploads/2023/04/The-Official-Kanban-Guide_A4.pdf",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Walk the board right to left asking what is keeping the item from flowing and who can help",
+   "source": "https://kanban.university/wp-content/uploads/2023/04/The-Official-Kanban-Guide_Glossary.pdf",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Kanban Guide 2025.5 (Coleman and Vacanti) prescribes no meetings; no requirement to wait for a formal meeting at a regular cadence",
+   "source": "https://kanbanguides.org/the-kanban-guide/2025.5/pdf/kanban-guide.v2025.5.en.pdf",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Anderson 'Kanban Cadences' (23 Apr 2015): seven cadences; risk review added 2014 after Leopold's blocker clustering 2013; client combined fortnightly SDR with weekly replenishment by adding 30 minutes every other week; adapt existing meetings; information flow to strategy review",
+   "source": "https://kanban.university/kanban-cadences/",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Typical frequencies of the seven cadences (previously 'most commonly shown in Kanban University material', unsourced) and lengths (previously the institute's own suggestions)",
+   "source": "https://www.slideshare.net/agilemanager/kanban-cadences-information-flow",
+   "result": "corrected (attributed to Linden-Reed, Lean Kanban Inc., 2015; table lengths and frequencies aligned to that deck)"
+  },
+  {
+   "claim": "Kanban University prefers 'cadence' because meetings have no fixed format; its names are the most widely used",
+   "source": "none found",
+   "result": "removed (unsupported causal and popularity claims rewritten)"
+  },
+  {
+   "claim": "Scrum Guide 2020: Daily Scrum is a 15-minute event for the Developers to inspect progress toward the Sprint Goal and adapt the Sprint Backlog; Developers choose the structure; Scrum uses 'events'",
+   "source": "https://scrumguides.org/scrum-guide.html",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Jira supports WIP limits on Kanban boards, cumulative flow diagrams and control charts for cycle time",
+   "source": "/project-management-tools/jira/ (site review)",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Meeting agenda, meeting notes and Kanban board template contents (columns, Cards tab, cycle time)",
+   "source": "/templates/ pages on site",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Purposes of operations, risk and strategy reviews",
+   "source": "https://kanban.university/kanban-cadences/ ; glossary 'Review' entry; https://businessmap.io/blog/kanban-cadences",
+   "result": "confirmed in outline (detail partly from a secondary vendor source)"
+  }
+ ],
+ "calculations_rechecked": [
+  {
+   "item": "Throughput 18 / 2 = 9 items per week",
+   "result": "correct"
+  },
+  {
+   "item": "SLE attainment 14 / 18 = 77.8%; 0.85 x 18 = 15.3 -> 16 items needed",
+   "result": "correct"
+  },
+  {
+   "item": "85th percentile nearest rank ceil(15.3) = 16 -> 12 days",
+   "result": "correct"
+  },
+  {
+   "item": "Ageing work: 2 of 9 items over 10 days",
+   "result": "correct"
+  },
+  {
+   "item": "Meeting hours: member 7.5 h (5.0% of 150 h); with replenishment 9.5 h (6.3%); lead 11.92 h (7.9%); daily share 2/3; 25-minute daily adds 3.33 h",
+   "result": "correct"
+  }
+ ],
+ "changes_made": [
+  "Duplicate-intent fix: replaced FAQ 'Does Kanban have sprint planning?' (near-identical to the same FAQ on /project-management/kanban/kanban-planning/) with 'Can Kanban cadences be combined?'",
+  "Seven-cadences table: frequencies and lengths now attributed to the 2015 Lean Kanban Inc. presentation (Linden-Reed) and aligned to its typical configurations (lengths changed for all seven rows; replenishment 'Weekly', delivery planning 'Varies with the delivery cadence', SDR 'Twice a month')",
+  "Removed unsupported claim that Kanban University prefers 'cadence' because meetings have no fixed format; replaced with sourced statement that frequency, length and attendees are adjustable",
+  "Removed unsupported claim that Kanban University's names are 'the most widely used'",
+  "Added internal link to /project-management/agile/agile-meetings-and-ceremonies/ to separate Scrum-style ceremonies from Kanban cadences",
+  "FAQ on daily meeting length updated to cite the 10 to 20 minute typical configuration"
+ ],
+ "statistical_text_measurements": {
+  "url": "/project-management/kanban/kanban-ceremonies/",
+  "word_count": 4088,
+  "unique_words": 901,
+  "type_token_ratio": 0.2204,
+  "mattr_100": 0.7056,
+  "shannon_word_entropy_bits": 8.314,
+  "normalised_entropy": 0.847,
+  "sentences": 184,
+  "avg_sentence_length": 17.0,
+  "sentence_length_sd": 9.44,
+  "sentence_length_cv": 0.555,
+  "paragraph_length_mean": 39.6,
+  "paragraph_length_sd": 21.7,
+  "bigram_repetition_rate": 0.3922,
+  "trigram_repetition_rate": 0.1424,
+  "top_repeated_4grams": [
+   [
+    "the service delivery review",
+    6
+   ],
+   [
+    "fortnightly service delivery review",
+    5
+   ],
+   [
+    "a service delivery review",
+    5
+   ],
+   [
+    "a daily kanban meeting",
+    4
+   ],
+   [
+    "the daily kanban meeting",
+    4
+   ],
+   [
+    "operations and strategy reviews",
+    4
+   ],
+   [
+    "one or more services",
+    3
+   ],
+   [
+    "the kanban method describes",
+    3
+   ]
+  ],
+  "most_common_sentence_openers": [
+   [
+    "kanban university",
+    4
+   ],
+   [
+    "the daily",
+    4
+   ],
+   [
+    "the kanban",
+    4
+   ],
+   [
+    "kanban university's",
+    3
+   ],
+   [
+    "the service",
+    3
+   ]
+  ],
+  "formulaic_phrases_found": [],
+  "watch_phrases_counts": {},
+  "most_similar_existing_guides": [
+   [
+    0.613,
+    "/project-management/kanban/kanban-planning/"
+   ],
+   [
+    0.606,
+    "/project-management/kanban/what-is-kanban/"
+   ],
+   [
+    0.539,
+    "/project-management/kanban/kanban-vs-agile/"
+   ],
+   [
+    0.539,
+    "/project-management/kanban/kanban-principles/"
+   ],
+   [
+    0.526,
+    "/project-management/kanban/kanban-vs-scrum/"
+   ]
+  ],
+  "note": "Descriptive editorial diagnostics only. No AI-detection probability is calculated."
+ },
+ "unresolved_issues": [
+  "TF-IDF similarity 0.61 with /project-management/kanban/kanban-planning/ is driven by shared Kanban vocabulary. Intent checked: kanban-planning owns 'replenishment meeting' (full agenda, worked example, FAQ) and forecasting; this page owns the full set of cadences and keeps replenishment to a short contrast with delivery planning plus a link. The only competing element (duplicate sprint-planning FAQ) was removed. Recommend removing 'replenishment meeting' from this page's secondary keywords in the record",
+  "kanban-planning links here with the anchor 'Kanban meetings and cadences' (old title); still descriptive, optional update",
+  "Similarity 0.61 with /project-management/kanban/what-is-kanban/, which has a short cadences summary table; acceptable parent/child overlap (it already links here)",
+  "Operations, risk and strategy review descriptions rely partly on a vendor blog (Businessmap); Kanban University's cadence figure could not be read",
+  "llms.txt still lists the old title 'Kanban Meetings and Cadences: Which Ones You Need'; update on publication"
+ ],
+ "reviewer_note": "Automated review by an AI reviewer; not a human professional review."
+}
