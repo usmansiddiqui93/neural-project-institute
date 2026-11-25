@@ -15169,45 +15169,186 @@ What a RACI matrix is, what Responsible, Accountable, Consulted and Informed mea
 
 ---
 
-# Project Constraints: The Triple Constraint and Beyond
+# Project Constraints: Types, Trade-offs and Worked Example
 
 URL: https://neuralprojectinstitute.com/project-management/project-constraints/
 Section: Project management guides
-Summary: What project constraints are, the triple constraint and its modern extensions, examples of constraints, and how to manage trade-offs.
+Summary: Project constraints explained: the triple constraint, types of constraint, tolerances, how Agile fixes and flexes them, and a costed trade-off example.
 
 
-## Project Constraints: The Triple Constraint and Beyond
-Constraints are limits that a project must work within. Understanding them, and how they interact, is essential to making good trade-offs.
+## Project Constraints: Types, Trade-offs and Worked Example
+Project constraints are the limits a project must work within, such as a fixed go-live date, a capped budget, a team of a given size or a legal requirement. The best-known model is the triple constraint of scope, time and cost, but most projects also have to respect limits on quality, resources, risk, benefits and regulation. This guide explains each type, shows how to tell a true constraint from a negotiable target, and works through a costed trade-off decision using tolerances.
 - Published 19 September 2026
-- 3 min read
+- Last updated 25 November 2026
+- 19 min read
 
 ### Key takeaways
-- Scope, time and cost form the triple constraint, with quality at the centre.
-- Other constraints include resources, risk and regulation.
-- Agree which constraint is most fixed and manage trade-offs openly.
+- A constraint is a known limit on how a project can be carried out; an assumption is something treated as true without proof, and the two need different handling.
+- The triple constraint (scope, time and cost, with quality at the centre) is a model of trade-offs, not a complete list of a project's limits.
+- Not everything called a constraint is fixed. Test each one by asking what happens if it is breached, then classify it as fixed, a key objective or flexible.
+- Tolerances turn constraints into decision rules: within tolerance the project manager acts; outside it the sponsor decides.
+- Agile approaches such as DSDM and Scrum usually fix time, cost and quality and let scope flex, but they still respect hard external limits.
+- Trade-offs are rarely linear. Adding people costs money and can slow work at first, so cost every option before recommending one.
 
-### The triple constraint
-Scope, time and cost are linked: change one and at least one other usually changes. Quality sits at the centre and suffers if the three are squeezed together.
+### What are project constraints?
+A project constraint is any limit that restricts how, when or with what a project can deliver its outputs. The PMI Lexicon of Project Management Terms (version 4.0) defines a constraint as "a limiting factor that affects the execution of a portfolio, program, project, or process". Typical examples are a launch date set by a trade show, a budget approved by the investment committee and a rule that patient data must stay in the UK.
+Constraints come from many places: the business case, the [project charter](https://neuralprojectinstitute.com/project-management/project-charter/), contracts, regulators, the organisation's own policies and the physical world. Some are decided by the sponsor and could in principle be renegotiated. Others, such as legislation or the availability of a specialist supplier, are outside the project's control entirely.
+Recording constraints matters because every later estimate depends on them. A schedule built without knowing that the warehouse cannot change systems during the peak season will look feasible on paper and fail in practice. Constraints are normally written into the charter and the [project scope](https://neuralprojectinstitute.com/project-management/project-scope/) statement, and they feed directly into risk identification and the [project baseline](https://neuralprojectinstitute.com/project-management/project-baseline/).
+The word also has two narrower meanings that this guide does not cover in depth. In the [theory of constraints](https://neuralprojectinstitute.com/project-management/kanban/theory-of-constraints/), a constraint is the single bottleneck that limits a system's throughput. In scheduling software, a constraint is a date rule attached to a task, which is discussed in a later section.
 
-### Six common constraints
-| Constraint | Example |
-| --- | --- |
-| Scope | Must include a payment feature |
-| Time | Must launch before the trade show |
-| Cost | Budget capped at $200,000 |
-| Quality | Must meet accessibility standards |
-| Resources | Only two developers available |
-| Risk | Low risk tolerance for regulatory issues |
-Other constraints include regulation, technology, contracts and stakeholder expectations.
+### The triple constraint and where it came from
+The triple constraint, also called the project management triangle or iron triangle, says that scope, time and cost are linked: change one and at least one of the others usually has to move. Quality is often drawn in the centre, because squeezing all three sides at once tends to show up as defects, rework or an exhausted team.
+| Corner | What it covers | Typical way it is fixed |
+| --- | --- | --- |
+| Scope | The deliverables and the work needed to produce them | Scope statement, requirements, contract schedule |
+| Time | Duration, milestones and the delivery date | Approved schedule baseline, external deadline |
+| Cost | Budget for labour, materials, suppliers and reserves | Approved budget and cost baseline |
+| Quality (centre) | Fitness for purpose and conformance to requirements | Acceptance criteria, standards, regulations |
+The Association for Project Management (APM) credits one of its founding members, Dr Martin Barnes, with inventing the triangle, sometimes called the Barnes triangle. His original corners were time, cost and quality. Later versions replaced quality with scope and moved quality to the middle, and a 2018 review of 45 years of literature by Pollack, Helm and Adler found that time and cost are consistently identified as part of the triangle, while the status of quality remains contested.
+The triangle is useful for one thing above all: it makes the sponsor face the fact that "more, sooner and cheaper" cannot all be granted at once. It is less useful as a complete description of a project. It says nothing about risk, benefits, people or the rules a project must obey, and it implies trade-offs are smooth and proportional when they rarely are.
 
-### Managing trade-offs
-- Agree with the sponsor which constraint is most fixed.
-- Show options and their impact when something changes.
-- Use techniques such as [fast-tracking and crashing](https://neuralprojectinstitute.com/project-management/schedule-compression/) for time constraints.
-- In Agile, fix time and cost and let scope flex.
+### Constraints or objectives? A useful distinction
+In a 2017 article on the APM website, Paul Naybour argued that time, cost and scope are better described as competing success criteria than as constraints. A sponsor can move a launch date or approve more budget. A sponsor cannot override a ban on heavy demolition work next to a school during exams, or a rule that limits work near a site of special scientific interest. Those are true constraints.
+Karl Wiegers makes a similar point with his five project dimensions: features, quality, schedule, cost and staff. On any project, each dimension plays one of three roles:
+| Role | Meaning | How to recognise it |
+| --- | --- | --- |
+| Constraint | A fixed limit with no flexibility | Breaching it makes the result unusable, illegal or unaffordable |
+| Driver | A key objective or success criterion with only a little flexibility | Missing it makes the result less valuable but not worthless |
+| Degree of freedom | A dimension the project manager can adjust within agreed limits | Adjusting it within the agreed limits needs no escalation |
+Wiegers' test is simple: ask what happens if the deadline slips. If the honest answer is that the product becomes useless, the date is a constraint. If it is merely less attractive, it is a driver. His second rule is just as important: all dimensions cannot be constraints, and they cannot all be drivers. A project where scope, date, budget, quality and team size are all fixed has no room to absorb a single surprise.
+Running this test with the sponsor at initiation replaces the vague instruction "everything is a priority" with an explicit statement of what will give first.
 
-### Constraints vs assumptions
-Constraints are known limits; assumptions are things believed true but not proven. Both should be documented and reviewed.
+### Types of project constraints
+Beyond the triangle, most guidance recognises a wider set. PRINCE2 has long set tolerances for time, cost, scope, quality, benefits and risk, and PRINCE2 7 (2023) added sustainability as a seventh performance target. J. M. Siegelaub's 2007 PMI Global Congress paper argued for agreeing ranges for the same six dimensions rather than relying on the triangle alone.
+| Constraint type | Example | Who usually owns it |
+| --- | --- | --- |
+| Scope | The system must support all four warehouses at go-live | Sponsor and senior user |
+| Time | Go-live before the peak-season change freeze | Sponsor; sometimes a regulator or customer |
+| Cost | Budget of £240,000 including contingency | Sponsor or investment committee |
+| Quality | Stock records must reconcile with the finance ledger every night | Senior user, quality or compliance function |
+| Resources | Four developers; the integration specialist is available two days a week | Line managers, resource manager |
+| Risk | No change may put customer orders at risk during trading hours | Sponsor, operations director |
+| Benefits | Picking errors must fall enough to justify the investment | Sponsor and business case owner |
+| Sustainability | New handheld devices must be repairable and recycled at end of life | Sponsor, sustainability lead |
+| Legal and regulatory | Personal data handled under UK GDPR | Data protection officer, legal |
+| Technology | Must integrate through the carrier's published API only | Enterprise architecture |
+| Physical and environmental | Cold-store installation only in the weekly two-hour maintenance window | Facilities, health and safety |
+| Organisational policy | All suppliers must come from the approved framework | Procurement |
+
+#### Internal and external constraints
+**Internal constraints** come from inside the organisation: the budget, the people available, policies, existing systems and the sponsor's priorities. They can be changed by someone senior enough, even if it is uncomfortable. **External constraints** come from customers, regulators, suppliers, the market, the weather or the law. The project has to plan around them because nobody inside the organisation can change them.
+
+#### Hard and soft constraints
+A **hard constraint** cannot be breached without the project failing or breaking a rule: a statutory deadline, a safety standard, a contractual completion date with heavy damages. A **soft constraint** is a strong preference that could move if the case is good enough, such as an internal target date chosen because it fits the financial year. Label each constraint hard or soft in the charter, because the difference decides whether a problem goes to the sponsor as an option or as an exception.
+
+### Constraints, assumptions, risks and dependencies
+These four terms are often confused, and the confusion causes real problems. An assumption written as if it were a constraint never gets tested; a risk recorded as a constraint never gets a response.
+| Term | Definition | Example | What you do with it |
+| --- | --- | --- | --- |
+| Constraint | A known limit on how the project is carried out (see the PMI definition above) | Budget capped at £240,000 | Plan within it; agree tolerance; escalate breaches |
+| Assumption | A factor in the planning process considered to be true, real or certain without proof or demonstration (PMI) | The carrier API will be stable by week 12 | Give it an owner and a date to confirm it |
+| Risk | An uncertain event or condition that, if it occurs, affects objectives (PMI) | The API may change during testing, causing rework | Assess it and plan a risk response |
+| Dependency | A logical relationship where one activity relies on another (PMI) | Label printing cannot start until the API is live | Sequence it in the schedule and track it |
+| Issue | A current condition that may have an impact on objectives (PMI) | The test environment is down | Resolve it now |
+The categories move over time. An assumption that proves false often becomes an issue; a dependency on another team becomes a schedule constraint once its date is fixed. Keep assumptions, issues and dependencies in a [RAID log](https://neuralprojectinstitute.com/project-management/raid-log/) and keep constraints in the charter and scope statement, where they are visible to the people who approve the plan. Treat any assumption that underpins a constraint, such as "the budget will be released in April", as a candidate risk for the [project risk](https://neuralprojectinstitute.com/project-management/project-risk/) register.
+
+### How to identify and manage project constraints
+1. **Collect candidate constraints.** Read the business case, charter, contracts, regulations and organisational policies, and interview the sponsor, senior users and suppliers. Ask directly: what must not happen, what is not negotiable, and where did each figure come from?
+2. **Test each one.** For every candidate, ask who set it, whether it can change, and what happens if it is breached. Wiegers' slip test separates constraints from drivers; anything that fails both tests is a degree of freedom.
+3. **Classify and rank.** Mark each constraint as hard or soft, internal or external, and agree which dimension gives first. A one-page flexibility table, like the one in the worked example below, is enough.
+4. **Record them where decisions are made.** Write constraints in measurable form (a date, a sum, a named standard) in the charter and scope statement, with the source of each.
+5. **Set tolerances.** Agree with the sponsor how far time, cost and other dimensions may deviate before the decision must be escalated, for example plus or minus 5% on cost.
+6. **Plan within them.** Build the schedule and budget inside the constraints. Use [resource leveling](https://neuralprojectinstitute.com/project-management/resource-leveling/) when people or equipment are the limit, and check the [critical path](https://neuralprojectinstitute.com/project-management/critical-path-method/) against any fixed dates.
+7. **Monitor against them.** Track forecast completion and cost at completion, not only spend to date. [Earned value management](https://neuralprojectinstitute.com/project-management/earned-value-management/) shows early whether cost or schedule is heading outside tolerance.
+8. **Trade off through change control.** When a change or problem threatens a constraint, cost the options, recommend one and let the person with the right authority decide through [change control](https://neuralprojectinstitute.com/project-management/change-control/).
+9. **Revisit at stage boundaries.** Constraints change: a budget is cut, a regulator moves a date, a key person leaves. Review the list at every major milestone.
+Tip
+Write constraints as numbers or named rules. "Limited budget" cannot be tested; "£240,000 including contingency, +5% tolerance" can.
+
+### Worked example: costing a trade-off within tolerances
+**Illustrative example.** A distribution company is replacing its warehouse management system. The figures below are invented to show the method; they do not describe a real project.
+
+#### The baseline and its constraints
+- **Time:** go-live planned for the end of week 26. The operations director has imposed a change freeze for the peak season from the start of week 29, so go-live must be complete by the end of week 28. Time tolerance: +2 weeks.
+- **Cost:** budget £240,000. Cost tolerance agreed with the sponsor: +5%, which is £240,000 × 0.05 = **£12,000**.
+- **Resources:** four developers. At five days a week and an assumed 80% of time on project work, capacity is 4 × 5 × 0.8 = **16 person-days per week**.
+- **Run rate:** the whole delivery team costs about £5,500 for each week the project runs.
+- **Scope:** prioritised with MoSCoW. Two Could-have items remain: a custom reporting dashboard (30 person-days) and a redesign of handheld scanner labels (18 person-days).
+The sponsor and project manager agreed this flexibility table at initiation:
+| Dimension | Role | Limit or objective |
+| --- | --- | --- |
+| Schedule | Constraint (hard, external to the project) | Live before the week 29 freeze |
+| Quality | Constraint | Nightly stock reconciliation with zero unexplained differences |
+| Cost | Driver | £240,000, tolerance +5% |
+| Staff | Driver | Four developers; contractors only with sponsor approval |
+| Scope | Degree of freedom | Could-have items may be deferred to a later release |
+
+#### The change
+In week 10 the commercial team asks for integration with a new parcel carrier, estimated at **48 person-days** of development. The project manager prepares four options.
+
+#### Option A: extend the schedule
+Extra duration = work ÷ capacity = 48 person-days ÷ 16 person-days per week = **3 weeks**. Go-live moves from the end of week 26 to the end of week 29, inside the peak-season freeze. Extra cost = 3 weeks × £5,500 = **£16,500**, which is 6.9% of the budget and £4,500 above the cost tolerance. Option A breaches a hard constraint and both tolerances.
+
+#### Option B: add a contractor
+A contractor at £550 a day will be less productive on an unfamiliar system. Assuming 80% productivity, delivering 48 person-days of output needs 48 ÷ 0.8 = **60 billable days**, costing 60 × £550 = **£33,000**. That is 13.75% of the budget and 2.75 times the cost tolerance. Sixty days of work fits inside the 16 weeks left before planned go-live, so the date holds, but onboarding will take time from the existing developers. This is the non-linear trade-off the triangle hides: Fred Brooks argued in The Mythical Man-Month (1975) that adding people to a late software project tends to make it later, because newcomers need training and every extra person adds communication overhead.
+
+#### Option C: defer Could-have scope
+Deferring the dashboard (30 person-days) and the label redesign (18 person-days) frees exactly 48 person-days. Time and cost are unchanged and both tolerances stay untouched. The price is in benefits: managers lose the dashboard until a later release.
+
+#### Option D: combine time tolerance and partial deferral
+Using the full two weeks of time tolerance adds 2 × 16 = 32 person-days at a cost of 2 × £5,500 = £11,000. Deferring only the label redesign adds 18 person-days, for 50 person-days in total, enough for the 48 needed. Go-live moves to the end of week 28, just before the freeze. Cost rises by 4.6% of the budget, within tolerance but using 92% of it, and the time tolerance is fully consumed.
+| Option | Time impact | Cost impact | Scope impact | Within tolerance? |
+| --- | --- | --- | --- | --- |
+| A. Extend | +3 weeks (into freeze) | +£16,500 | None | No: breaches hard date and cost tolerance |
+| B. Contractor | None planned | +£33,000 | None | No: 2.75 times cost tolerance |
+| C. Defer Could-haves | None | None | Dashboard and labels deferred | Yes, with all tolerance kept |
+| D. Hybrid | +2 weeks | +£11,000 | Labels deferred | Yes, but no time reserve and £1,000 of cost tolerance left |
+
+#### Interpreting the result
+Options A and B are outside the limits the sponsor delegated, so the project manager cannot choose them alone; in PRINCE2 terms they would be raised as an exception. Option D is permissible but leaves no time reserve and only £1,000 of cost tolerance for the 16 weeks of delivery still ahead, during which data migration and testing are likely to produce surprises. Option C keeps every reserve intact and changes only the dimension both parties agreed was the degree of freedom.
+The project manager therefore recommends Option C through the change request, sets out Option D as the fallback if the business values the dashboard more than schedule resilience, and lets the sponsor decide. The flexibility table agreed at initiation did most of the work: the decision rule was settled before the pressure arrived.
+The calculation has limits. Capacity of 16 person-days per week, contractor productivity of 80% and a flat weekly run rate are assumptions; real productivity varies, and some costs, such as licences, do not scale with duration. The estimate of 48 person-days is itself uncertain, so a three-point estimate or a [PERT](https://neuralprojectinstitute.com/project-management/pert-chart/) range would show how much of the tolerance the change could really consume.
+
+### Managing time, cost and resource constraints
+Each constraint type has its own set of techniques. Choose the one that matches the dimension under pressure and the dimension you are allowed to flex.
+| Constraint under pressure | Techniques | What you usually give up |
+| --- | --- | --- |
+| Fixed date | Schedule compression (fast tracking and crashing), scope deferral, using total float | Cost (crashing) or risk (fast tracking) |
+| Fixed budget | Value engineering, phasing, cheaper suppliers, reducing contingency only with sponsor approval | Scope, time or risk reserve |
+| Limited resources | Resource leveling or smoothing, critical chain buffers, cross-skilling | Time, usually |
+| Fixed quality standard | Earlier testing, inspections, definition of done, stronger acceptance criteria | Time or scope |
+| Fixed scope | Contingency reserve, schedule buffers, more people early rather than late | Time and cost |
+Our guides to [schedule compression](https://neuralprojectinstitute.com/project-management/schedule-compression/) and [fast tracking vs crashing](https://neuralprojectinstitute.com/project-management/fast-tracking-vs-crashing/) work through the crash cost slope calculation, [critical chain project management](https://neuralprojectinstitute.com/project-management/critical-chain-project-management/) shows how buffers protect a resource-constrained schedule, and [project quality management](https://neuralprojectinstitute.com/project-management/project-quality-management/) explains how to protect quality when other dimensions are squeezed.
+
+#### Date constraints in scheduling software
+Scheduling tools use "constraint" for a date rule on a single task. Microsoft Project, for example, offers eight types: As Soon As Possible, As Late As Possible, Start No Earlier Than, Start No Later Than, Finish No Earlier Than, Finish No Later Than, Must Start On and Must Finish On. The last two pin a task to a date regardless of its predecessors.
+Use them sparingly and only for real external dates, such as a regulator's submission window. Every hard date overrides the logic of your network, and when the logic cannot meet the date the schedule shows negative [float](https://neuralprojectinstitute.com/project-management/float-and-slack/), which is the amount of time you must recover.
+
+### Project constraints in Agile and hybrid projects
+Agile approaches do not remove constraints; they choose in advance which one flexes. The DSDM Agile Project Framework, published by the Agile Business Consortium, fixes time, cost and quality at the end of its Foundations phase and manages contingency by varying the features delivered, using MoSCoW priorities. The framework states that quality is never allowed to become a variable.
+Scrum applies the same idea at the scale of a Sprint. The 2020 Scrum Guide describes Sprints as fixed-length events of one month or less, and states that during the Sprint no changes are made that would endanger the Sprint Goal, quality does not decrease, and scope may be clarified and renegotiated with the Product Owner as more is learned.
+| Approach | Usually fixed | Usually flexed |
+| --- | --- | --- |
+| Traditional predictive plan | Scope, from the requirements | Time and cost, through change control |
+| DSDM | Time, cost and quality | Features (MoSCoW) |
+| Scrum Sprint | Sprint length, quality, Sprint Goal | Detailed Sprint scope |
+| Hybrid (common practice) | Milestones and budget for governance | Backlog content below the milestone level |
+Jim Highsmith went further in 2009 with the Agile triangle, which puts value and quality at two corners and collapses scope, schedule and cost into a single "constraints" corner. His argument is that the goal is a valuable, releasable product; staying inside scope, schedule and cost is a boundary, not the measure of success.
+Be careful with the slogan "Agile fixes time and cost and flexes scope". It describes how many Agile teams plan, not a rule that applies to every Agile project. A regulated product may have scope that cannot flex at all, and then time or cost must give instead. Our comparison of [Agile vs Waterfall](https://neuralprojectinstitute.com/project-management/agile/agile-vs-waterfall/) explains how each approach handles a change in the triangle.
+
+### Common mistakes with project constraints
+- **Treating every limit as fixed.** If scope, date, budget, quality and team are all non-negotiable, the first problem has nowhere to go except quality or overtime. Agree a degree of freedom at the start.
+- **Recording vague constraints.** "Tight deadline" and "limited budget" cannot be tested. State dates, sums and named standards, with the source.
+- **Confusing constraints with assumptions.** "The supplier will deliver in March" is an assumption until it is in a contract. Give it an owner and a confirmation date.
+- **Assuming trade-offs are linear.** Doubling the team rarely halves the duration, and extending the schedule usually costs money, as Options A and D above show.
+- **Letting quality absorb the pressure silently.** When scope, time and cost are squeezed together, testing and documentation are the first things cut. Make quality an explicit constraint or driver.
+- **Ignoring benefits.** A project can meet every time, cost and scope target and still fail if the market has moved. Review the business case at each stage.
+- **Using hard date constraints in the schedule for convenience.** Pinned tasks hide the real critical path. Reserve them for external dates.
+- **Agreeing a trade-off verbally.** If a constraint changes, update the baseline and the change log, or the project will be measured against a target nobody still believes in. Unapproved drift is [scope creep](https://neuralprojectinstitute.com/project-management/scope-creep/).
+
+### Templates for recording constraints
+Our free [project scope template](https://neuralprojectinstitute.com/templates/project-scope-template/) includes constraints and assumptions among its ten sections, alongside deliverables, exclusions and acceptance criteria. The [project charter template](https://neuralprojectinstitute.com/templates/project-charter-template/) has an "Assumptions and constraints" section and a section for the project manager's authority, which is where tolerances belong. When a constraint is threatened, the [change request template](https://neuralprojectinstitute.com/templates/change-request-template/) has fields for options considered and impact on scope, schedule, cost, quality and risk, which match the option analysis in the worked example.
+Assumptions, issues and dependencies have their own home in the [RAID log template](https://neuralprojectinstitute.com/templates/raid-log-template/). Read our guide to [what project management is](https://neuralprojectinstitute.com/project-management/what-is-project-management/) for how constraints fit the wider project life cycle.
 
 ### Free templates for this topic
 Project Scope Statement Template
@@ -15224,34 +15365,40 @@ Beginner · Advanced · Expert
 ### Frequently asked questions
 
 **Q: What are project constraints?**
-Limits within which a project must operate, such as time, cost and scope.
+Limits a project must work within, such as a deadline, a budget, the people available, quality standards, regulations or technology rules. True constraints are limits nobody on the project can change; targets such as a preferred date can be renegotiated.
 
 **Q: What is the triple constraint?**
-The relationship between scope, time and cost.
+A model saying that scope, time and cost are linked, so changing one usually forces a change in at least one of the others. Quality is often shown in the centre because it suffers when all three are squeezed.
 
-**Q: Is the project management triangle the same as the triple constraint?**
-Yes. It is another name for the triple constraint.
+**Q: Is the iron triangle the same as the triple constraint?**
+Broadly, yes. APM credits Dr Martin Barnes with the original time, cost and quality triangle; most modern versions use scope, time and cost with quality in the middle.
 
-**Q: Which project constraint is most important?**
-It depends on the project; agree it with the sponsor.
+**Q: What are the six project constraints?**
+A common list is scope, time, cost, quality, resources and risk. PRINCE2 instead sets tolerances for time, cost, scope, quality, benefits and risk, and PRINCE2 7 adds sustainability as a seventh performance target.
 
-**Q: How do project constraints affect quality?**
-Squeezing scope, time and cost together typically lowers quality.
+**Q: Which project constraint is the most important?**
+There is no universal answer. Agree it with the sponsor for each project by asking what happens if each limit is breached; the one that makes the result worthless or illegal is the true constraint.
 
-**Q: Which project constraint covers resources?**
-The resource constraint: limited availability of people, equipment or materials.
+**Q: What is the difference between a constraint and an assumption?**
+A constraint is a known limit you must work within. An assumption is something treated as true without proof, such as a supplier's delivery date, and it should be tested because it may turn out false.
 
-**Q: Where are project constraints documented?**
-In the charter, scope statement and project plan.
+**Q: What is the difference between a constraint and a risk?**
+A constraint exists now and is certain. A risk is an uncertain event that may or may not happen. A constraint can create risks, for example a fixed date raises the risk of rushed testing.
 
-**Q: What is the difference between a project constraint and a risk?**
-A constraint is a known limit; a risk is an uncertain event.
+**Q: What are internal and external project constraints?**
+Internal constraints come from the organisation, such as its budget, staff and policies, and can be changed by someone with authority. External constraints come from regulators, customers, suppliers or the environment and must be planned around.
 
-**Q: How does Agile handle the triple constraint?**
-It typically fixes time and cost per iteration and lets scope vary.
+**Q: How do Agile projects handle constraints?**
+Many Agile approaches fix time, cost and quality and let scope flex. DSDM does this explicitly using MoSCoW priorities, and Scrum keeps Sprint length and quality fixed while detailed scope can be renegotiated with the Product Owner.
+
+**Q: What is a tolerance in project management?**
+The permitted deviation from a target before a decision must be escalated, for example +5% on cost or +2 weeks on time. Within tolerance the project manager acts; outside it the sponsor or board decides.
 
 **Q: Can project constraints change?**
-Yes, but changes should be approved and their impact assessed.
+Yes. Budgets are cut, dates move and people leave. Soft constraints can be renegotiated through change control; hard constraints such as laws usually cannot, so the plan must change around them.
+
+**Q: Where should project constraints be documented?**
+In the project charter and the scope statement, written as measurable limits with their source. Tolerances belong with the project manager's authority, and related assumptions go in the RAID log.
 
 ### Related guides
 Project Scope: Definition, Statement, Examples and Steps
@@ -47398,40 +47545,174 @@ The Scrum Product Owner explained: accountabilities, daily activities, must-have
 
 ---
 
-# What Is an Increment in Scrum? Definition and Examples
+# Increment in Scrum: Definition, Rules and Examples
 
 URL: https://neuralprojectinstitute.com/project-management/scrum/increment-in-scrum/
 Section: Scrum guides
-Summary: What an Increment is in Scrum, how it relates to the Definition of Done, whether you can release several per Sprint, and examples across industries.
+Summary: What an Increment is in Scrum: the 2020 Scrum Guide rules, the Definition of Done, Increment vs release, examples, a worked undone-work example and mistakes.
 
 
-## What Is an Increment in Scrum? Definition and Examples
-An Increment is a concrete stepping stone toward the Product Goal. Each Increment adds to all prior Increments, is thoroughly verified, and must be usable.
+## Increment in Scrum: Definition, Rules and Examples
+An Increment in Scrum is a concrete, usable step towards the Product Goal: the work that meets the Definition of Done, added to everything Done before it. An Increment is born the moment a Product Backlog item meets the Definition of Done, a Sprint can produce several, and any of them can be released before the Sprint Review. This guide explains what the 2020 Scrum Guide requires, how an Increment differs from a release or an MVP, what does not count, and what unfinished "undone" work really costs, with a worked example.
 - Published 15 September 2026
-- 3 min read
+- Last updated 25 November 2026
+- 20 min read
 
 ### Key takeaways
-- An Increment is a usable step towards the Product Goal.
-- Only work meeting the Definition of Done counts.
-- Increments can be released at any time.
+- An Increment is one of Scrum's three artifacts. Its commitment is the Definition of Done: work that does not meet it is not part of the Increment.
+- Each Increment is additive to all prior Increments and thoroughly verified, so the whole product works together, and it must be usable to provide value.
+- The Developers create Increments; the whole Scrum Team is accountable for creating a valuable, useful Increment every Sprint.
+- Done is not the same as released. The 2020 Scrum Guide says the Sprint Review should never be considered a gate to releasing value, but whether and when to release remains a business decision.
+- The 2020 Guide dropped "potentially releasable" and the quotation marks around "Done", made the Definition of Done a formal commitment and stated that several Increments can be created in one Sprint.
+- Work left outside the Definition of Done ("undone work") does not disappear; it accumulates until someone pays for it, usually in a stabilisation period just before release.
 
-### Key rules
-- Work becomes part of an Increment only when it meets the [Definition of Done](https://neuralprojectinstitute.com/project-management/agile/definition-of-done/).
-- Each Increment is additive and works with all previous ones.
-- Multiple Increments can be created within a Sprint.
-- Increments can be delivered to stakeholders before the end of the Sprint.
-- The Sprint Review should never be the only gate to releasing value.
+### What is an Increment in Scrum?
+**An Increment** is a concrete stepping stone towards the Product Goal. It is the sum of the product work that meets the Definition of Done, including everything completed in earlier Sprints, verified so that it all works together and usable enough to provide value. A new Increment exists the moment a Product Backlog item meets the Definition of Done.
+The Increment is one of the three [Scrum artifacts](https://neuralprojectinstitute.com/project-management/scrum/scrum-artifacts/), alongside the [Product Backlog](https://neuralprojectinstitute.com/project-management/scrum/product-backlog/) and the [Sprint Backlog](https://neuralprojectinstitute.com/project-management/scrum/sprint-backlog/). The other two describe work the team intends to do; the Increment is the only one that represents value already created. That is why it sits at the centre of [empiricism in Scrum](https://neuralprojectinstitute.com/project-management/scrum/empiricism-in-scrum/): stakeholders can inspect real, working product rather than a status report about it.
+In everyday speech people say "product increment", "Sprint increment" or "shippable increment". The Scrum Guide simply says **Increment**, with a capital I, and that is the term used here.
 
-### Examples
-| Team | Example Increment |
+### What the 2020 Scrum Guide says about the Increment
+The November 2020 Scrum Guide by Ken Schwaber and Jeff Sutherland is still the current edition. Its Increment section is only a few sentences long, so each one carries weight. The left column paraphrases the Guide closely; the right column is our explanation.
+| The Scrum Guide says | What it means in practice |
 | --- | --- |
-| Software | A working checkout flow released to 10% of users |
-| Marketing | A tested landing page with analytics live |
-| Hardware | A working prototype that passes defined tests |
-| Education | A complete course module, reviewed and published |
+| An Increment is a concrete stepping stone toward the Product Goal | Every Increment should move the product measurably closer to the Product Goal. Work that is Done but unrelated to the goal is a question for the Product Owner |
+| Each Increment is additive to all prior Increments and thoroughly verified, ensuring that all Increments work together | A new feature that breaks an older one has not produced a valid Increment. Integration and regression checks are part of the job, not a later phase |
+| In order to provide value, the Increment must be usable | Someone could use it for its intended purpose today. A design that exists only in a mock-up is not usable product |
+| Multiple Increments may be created within a Sprint | Nothing forces a team to batch its work until the last day. Teams practising continuous delivery may create and release many Increments per Sprint |
+| The sum of the Increments is presented at the Sprint Review | Everything Done during the Sprint is inspected together at the [Sprint Review](https://neuralprojectinstitute.com/project-management/scrum/sprint-review/), even items already released |
+| An Increment may be delivered to stakeholders before the end of the Sprint; the Sprint Review should never be considered a gate to releasing value | Waiting for the Sprint Review to release finished work is a choice, not a Scrum rule |
+| Work cannot be considered part of an Increment unless it meets the Definition of Done | "Nearly done", "done apart from testing" and "done on my machine" are not Done |
+The Definition of Done section adds two further rules. The moment a Product Backlog item meets the Definition of Done, an Increment is born. And an item that does not meet it cannot be released or even presented at the Sprint Review; it returns to the Product Backlog for future consideration.
 
-### Why usable matters
-A usable Increment allows real feedback. Partially done work hides risk and delays learning, which undermines empiricism. If work doesn't meet the Definition of Done, it returns to the Product Backlog.
+#### Who is accountable for the Increment
+The Guide states that the entire Scrum Team is accountable for creating a valuable, useful Increment every Sprint. Within that shared accountability, the Developers create the Increment and are accountable for instilling quality by adhering to the Definition of Done. The [Product Owner](https://neuralprojectinstitute.com/project-management/scrum/scrum-product-owner/) is accountable for maximising the value of the product, which shapes which Increments are worth building and when they are released. The Scrum Master helps the team focus on creating high-value Increments that meet the Definition of Done. Our guide to [Scrum team roles](https://neuralprojectinstitute.com/project-management/scrum/scrum-team-roles/) sets out the rest of each accountability.
+
+### The five properties of an Increment
+Read together, the Guide's sentences give five properties. A piece of work that fails any of them is not yet part of the Increment. The test questions are our own, written to make each property checkable during a Sprint.
+| Property | Test question | Typical failure |
+| --- | --- | --- |
+| Meets the Definition of Done | Has every item on the Definition of Done been satisfied, with evidence? | Testing or review skipped under deadline pressure |
+| Additive | Does the product still do everything it did before this change? | A new report breaks an existing export |
+| Thoroughly verified | How do we know it works with all earlier Increments, not just on its own? | Tested in isolation, never in an integrated environment |
+| Usable | Could an intended user, or an operator, use it for its purpose today? | Back-end work with no way to reach it; a feature behind a login nobody has |
+| A step towards the Product Goal | Which part of the Product Goal does this move forward? | Work pulled in because it was easy, not because it mattered |
+Notice that **usable** and **released** are different tests. A usable Increment could go to users if the Product Owner and the organisation chose to release it. Whether it actually does is a separate decision, covered below.
+Tip
+A quick check before calling anything part of the Increment: if the Product Owner said "release it now", would anyone on the team object for a reason other than business timing? If yes, it is not Done.
+
+### How an Increment is created during a Sprint
+An Increment is not produced in one step at the end of the Sprint. It grows item by item. The sequence below follows one Sprint; the rules come from the Scrum Guide, and the order of steps reflects common practice.
+1. **Sprint Planning.** The Product Owner proposes how the product could increase its value and utility in the current Sprint. The Scrum Team crafts a Sprint Goal, and the Developers select items they believe they can make Done. See [Sprint Planning](https://neuralprojectinstitute.com/project-management/scrum/sprint-planning/).
+2. **Building.** The Developers work on the selected items, using the Definition of Done as the quality bar from the start rather than as a final checklist.
+3. **Verification and integration.** Each item is tested, reviewed and integrated with the existing product so that it works with all prior Increments.
+4. **An Increment is born.** When an item meets the Definition of Done, it becomes part of the Increment. This can happen on any day of the Sprint.
+5. **Release (optional and at any time).** If the Product Owner and stakeholders decide it is worth releasing, and organisational rules allow, the Done work can go to users immediately.
+6. **Sprint Review.** The Scrum Team presents the sum of the Sprint's Increments to key stakeholders, who inspect them and discuss what to do next. The Product Backlog may be adjusted.
+7. **Unfinished work.** Items that did not meet the Definition of Done are not presented as Done. They return to the Product Backlog, where the Product Owner reorders them like any other item.
+8. **Sprint Retrospective.** The team may strengthen the Definition of Done, which raises the quality bar for every future Increment. See [Sprint Retrospective](https://neuralprojectinstitute.com/project-management/scrum/sprint-retrospective/).
+
+### Increment vs release, deliverable, MVP and Sprint
+Several terms sit close to the Increment, and confusing them leads to poor decisions about release timing and progress reporting. Only the Increment and the Sprint are defined in the Scrum Guide; the other terms come from wider product and project management practice.
+| Term | What it is | Relationship to the Increment |
+| --- | --- | --- |
+| Increment | Usable work that meets the Definition of Done, added to all prior Done work | The thing itself |
+| Product Backlog item | A unit of work on the Product Backlog, such as a feature, fix or technical change | When an item meets the Definition of Done, it becomes part of the Increment |
+| Sprint | A fixed-length event of one month or less in which the work happens | The container; one Sprint can produce one or many Increments |
+| Release | Making Done work available to users or customers | A business decision about an Increment. One release can contain several Increments, or each can be released as soon as it is Done |
+| Deliverable | A project management term for any unique, verifiable product, result or capability | An Increment is a kind of deliverable, but many deliverables (a plan, a report) are not product Increments |
+| Minimum viable product (MVP) | The smallest version of a product used to test a business hypothesis with real users | An MVP is usually reached after several Increments; an Increment does not need to be viable as a whole product |
+| Planning Interval (SAFe) | In SAFe 6.0, a fixed timebox of several iterations for an Agile Release Train (formerly Program Increment) | Not a Scrum term. Despite the old name, a PI is a timebox, not a body of Done work |
+Two confusions are especially common. The first treats "Increment" and "release" as synonyms, so teams think they must ship at every Sprint Review or, conversely, that nothing counts until it ships. The second carries SAFe's former "Program Increment" into plain Scrum. If you work in SAFe, read our guide to the [Scaled Agile Framework](https://neuralprojectinstitute.com/project-management/agile/scaled-agile-framework-safe/) for how its Planning Intervals relate to team iterations.
+
+#### Who decides whether to release an Increment
+The 2020 Scrum Guide does not name who decides to release. The 2017 edition said the Increment must be in usable condition "regardless of whether the Product Owner decides to release it", and in practice the Product Owner, who is accountable for maximising value, decides with stakeholders when to release, within organisational rules such as change approval, regulatory sign-off or contractual acceptance. A useful decision rule: release when the value of users having the Increment now, plus the value of the feedback, outweighs the cost and risk of releasing now. Our guides to [Agile release planning](https://neuralprojectinstitute.com/project-management/agile/agile-release-planning/) and [continuous delivery](https://neuralprojectinstitute.com/project-management/kanban/continuous-delivery/) cover the mechanics of planning and automating releases.
+
+### From potentially shippable to usable: how the wording changed
+Older articles, courses and exam material still describe a "potentially shippable product increment". The phrase was common in earlier Scrum literature; the 2017 Scrum Guide used "potentially releasable". The 2020 edition uses neither. Comparing the two most recent editions on scrumguides.org shows what changed:
+| Topic | 2017 Scrum Guide | 2020 Scrum Guide |
+| --- | --- | --- |
+| Core description | The sum of all Product Backlog items completed during a Sprint plus the value of the increments of all previous Sprints | A concrete stepping stone toward the Product Goal |
+| Quality wording | "Done", useable and potentially releasable; each Increment thoroughly tested | Usable; each Increment thoroughly verified; the word releasable does not appear |
+| Definition of Done | The definition of "Done" (in quotation marks), not linked to a commitment | Definition of Done (no quotation marks) is the Increment's formal commitment |
+| Who builds it | The Development Team | The Developers; the whole Scrum Team is accountable |
+| Number per Sprint | Described as one Increment at the end of the Sprint | Multiple Increments may be created within a Sprint |
+| Release timing | The Product Owner may choose to release it immediately | May be delivered before the Sprint ends; the Sprint Review is never a gate to releasing value |
+| Direction | A step toward a vision or goal | A step toward the Product Goal, a concept added in 2020 |
+The practical effect is small but real. "Thoroughly verified" is broader than "tested", which suits non-software work where verification may be an expert review or a pilot. Dropping "potentially releasable" separates two questions the old phrase blurred: is the work complete to our quality standard, and should we release it? The Definition of Done answers the first; the Product Owner and stakeholders answer the second.
+
+### Examples of Increments in and outside software
+The examples below are illustrative. In each, the right-hand column shows a nearby piece of work that would not yet count, because it fails one of the five properties.
+| Team | Increment | How it is verified | Not yet an Increment |
+| --- | --- | --- | --- |
+| Software product | A checkout option released to 10% of users behind a feature flag | Automated and exploratory tests, integrated with the existing checkout, monitored in production | Code merged but never run against the payment provider's test environment |
+| Marketing | A tested landing page with analytics recording visits | Links, forms and tracking checked; brand and legal review done | Final copy written but the page not built |
+| Hardware | A working prototype that passes defined bench tests | Test results recorded against the agreed specification | CAD model approved but no physical unit assembled |
+| Education | A complete course module, reviewed and published to learners | Subject-matter review, accessibility check, tested in the learning platform | Slides finished but the assessment not written |
+| Internal IT | A migrated database table with reconciled record counts and a rollback plan | Reconciliation report, performance check, operations sign-off | Data copied but not reconciled |
+Technical work can form part of an Increment when it meets the Definition of Done and leaves the product usable, for example a performance improvement or a security fix that users or operators benefit from. Paying down [technical debt in Scrum](https://neuralprojectinstitute.com/project-management/scrum/scrum-technical-debt/) is a common case. For how one larger product is split into increments over several cycles, see [iterative and incremental development](https://neuralprojectinstitute.com/project-management/iterative-and-incremental-development/).
+
+### What does not count as an Increment
+The Scrum Guide's rule is binary: work either meets the Definition of Done or it is not part of the Increment. The following are common borderline cases.
+- **Partly finished items.** A story that is 90% complete contributes nothing to the Increment. Splitting it into smaller items that can each be Done is usually better than reporting partial credit; see [user stories](https://neuralprojectinstitute.com/project-management/agile/user-stories/) for splitting techniques.
+- **Work that passes acceptance criteria but not the Definition of Done.** Acceptance criteria describe what one item must do; the Definition of Done describes quality standards for all work. An item needs both. Our [Definition of Done guide](https://neuralprojectinstitute.com/project-management/agile/definition-of-done/) explains the difference.
+- **Documents about the product.** A specification, wireframe or test plan may be valuable, but on its own it is not usable product. It becomes part of an Increment only if the team's Definition of Done treats it as part of the product, as user help text often is.
+- **Spikes and experiments.** A spike that answers a technical question produces knowledge, not usable product. Ken Rubin of Innolution argued in January 2021 that the 2020 definition fits such knowledge-acquisition work poorly and that teams should not worry when it does not produce an Increment. Keep the spike on the Product Backlog, record what was learned, and do not inflate the Increment with throwaway code.
+- **Work Done to a weaker standard.** If the Definition of Done has been quietly relaxed for one item, that item is not Done by the team's own rules.
+
+### Worked example: the hidden cost of undone work
+This hypothetical example shows why a weak Definition of Done does not save effort; it moves it. A Scrum Team of seven Developers builds a customer self-service portal for a regional water utility. Sprints last two weeks (10 working days). The team estimates its available capacity at **60 person-days per Sprint**: 7 Developers × 10 days = 70 person-days, minus leave, Scrum events and support duties.
+
+#### Step 1: what was Done in Sprint 7
+The Developers selected 11 Product Backlog items. By the end of the Sprint, 8 met the Definition of Done and became part of the Increment; 3 did not and returned to the Product Backlog. Proportion of selected items Done = 8 ÷ 11 = 0.727, or **72.7%**. The Sprint Review inspected the 8 Done items only. The three unfinished items were not demonstrated, and the Product Owner reordered them alongside new feedback.
+
+#### Step 2: the undone work behind the Done items
+The team's Definition of Done excluded two activities, which it ran only before each release, every six Sprints:
+- Full regression testing in the integrated test environment: about **4 person-days** of effort per Sprint's worth of change.
+- Security testing and fixing its findings: about **2 person-days** per Sprint.
+Undone work per Sprint (U) = 4 + 2 = **6 person-days**. Over the number of Sprints between releases (n = 6), accumulated undone work = U × n = 6 × 6 = **36 person-days**. Dividing by the Sprint capacity (C = 60 person-days) gives 36 ÷ 60 = **0.6**: more than half a Sprint of effort that the release forecast did not show, usually spent in a so-called hardening or stabilisation Sprint. The Scrum Guide has no concept of a hardening Sprint; every Sprint is meant to end with Done, usable work.
+The 8 items presented in Sprint 7 met the team's own Definition of Done, yet none could have been released that day, because they still needed regression and security testing. The Definition of Done was too weak to make the Increment genuinely usable, and the Sprint Review inspected work whose real state was unknown.
+
+#### Step 3: compare bringing the work inside the Definition of Done
+The team estimates that automating the regression suite and adding security scanning to the build would take a one-off investment (I) of **15 person-days**, after which the remaining manual checks would cost about **1 person-day per Sprint** (r). The cumulative effort of each option after k Sprints is:
+- Undone approach: U × k = 6k person-days.
+- Inside the Definition of Done: I + r × k = 15 + 1k person-days.
+| Sprints (k) | Undone approach (person-days) | Inside the Definition of Done (person-days) |
+| --- | --- | --- |
+| 1 | 6 | 16 |
+| 2 | 12 | 17 |
+| 3 | 18 | 18 |
+| 4 | 24 | 19 |
+| 6 | 36 | 21 |
+Break-even occurs when 6k = 15 + k, so k = 15 ÷ (6 − 1) = **3 Sprints**. Over the six-Sprint release cycle the second option costs 21 person-days instead of 36, a difference of **15 person-days**, and every Increment becomes releasable on the day it is Done.
+
+#### Interpreting the result
+The calculation assumes undone work grows linearly. In practice it is usually worse, because defects found weeks after the change are harder to trace, and a single large stabilisation period is difficult to forecast. The estimates themselves are uncertain, so treat the break-even as a range rather than a precise figure. The decision it supports is clear: the Product Owner should order the automation work on the Product Backlog, and the team should agree at the next Sprint Retrospective which undone activities to move into the Definition of Done first. Large-scale frameworks treat this as a standing goal; see [undone work in LeSS](https://neuralprojectinstitute.com/project-management/agile/large-scale-scrum-less/).
+
+### Increments with several Scrum Teams
+When several Scrum Teams work on one product, they share one Product Backlog, one Product Goal and one Definition of Done, and the goal is a single integrated Increment rather than one per team. The 2020 Scrum Guide requires that Scrum Teams working on the same product mutually define and comply with the same Definition of Done.
+Scrum.org's Nexus Guide (January 2021 edition) makes this explicit: its **Integrated Increment** represents the current sum of all integrated work completed by a Nexus towards the Product Goal, and it is inspected at the Nexus Sprint Review. Three teams that each finish their own features but cannot combine them have produced no usable Increment for the product. Integration testing therefore belongs inside the shared Definition of Done. For the scaling frameworks, see [Large-Scale Scrum (LeSS)](https://neuralprojectinstitute.com/project-management/agile/large-scale-scrum-less/) and [Scrum@Scale](https://neuralprojectinstitute.com/project-management/scrum/scrum-at-scale/).
+
+### What if a Sprint produces no Increment?
+The Scrum Team is accountable for creating a valuable, useful Increment every Sprint, so a Sprint with nothing Done is a strong signal to inspect, not a rule broken by one person. The Scrum Guide does not prescribe a response. In practice:
+- **Hold the Sprint Review anyway.** Discuss what was learned, what changed in the environment and what the Product Backlog should look like now. Do not demonstrate unfinished work as if it were Done.
+- **Do not extend the Sprint.** Sprints have a fixed length; extending one to finish work hides the problem.
+- **Look for the cause at the Sprint Retrospective.** Typical causes are items too large to finish in a Sprint, too much work started at once, dependencies on people outside the team, or a Definition of Done the team cannot yet meet with its current skills and tools.
+- **Make items smaller.** Refining items until several can be Done within a Sprint is usually the fastest fix; see [backlog refinement](https://neuralprojectinstitute.com/project-management/scrum/backlog-refinement/).
+
+### Common Increment mistakes
+| Mistake | Why it causes problems | What to do instead |
+| --- | --- | --- |
+| Counting partly finished items as progress | Progress reports and forecasts overstate what users can actually use | Count only Done items; split large items so more of them finish |
+| Treating the Sprint Review as the release date | Finished value waits days or weeks for no reason | Release Done work when the Product Owner and stakeholders judge it worthwhile |
+| Relaxing the Definition of Done under deadline pressure | Quality debt grows unseen and later Increments break earlier ones | Return the item to the Product Backlog and discuss scope with the Product Owner |
+| Running hardening or release Sprints | Undone work is hidden from forecasts and found late | Move testing and integration into the Definition of Done step by step |
+| Each team on one product producing its own Increment | Nothing proves the parts work together | Share one Definition of Done that includes integration |
+| Demonstrating slides or mock-ups at the Sprint Review | Stakeholders give feedback on intentions rather than product | Present the working Increment; show designs separately as Product Backlog discussion |
+| Confusing the Increment with a SAFe Planning Interval | Teams think in quarters rather than in Done items | Use Increment for Done product work and PI for the SAFe timebox |
+
+### Tracking Increments: templates and tools
+The Increment itself is the working product, so it does not need its own document. What teams track is the status of the items that make it up and the plan for releasing them. Our free [product backlog template](https://neuralprojectinstitute.com/templates/product-backlog-template/) records order, item, type, value, estimate, readiness, Sprint and status for each item, which is enough to see which items are Done. The [release plan template](https://neuralprojectinstitute.com/templates/release-plan-template/) maps features to releases and Sprints with story points, cumulative points and a forecast capacity check, which helps the Product Owner decide when a set of Increments is worth releasing.
+If you track Done work as a measure, pair it with outcome measures such as usage or customer feedback; a team can produce many Increments that nobody uses. Our guide to [Scrum metrics and KPIs](https://neuralprojectinstitute.com/project-management/scrum/scrum-metrics-and-kpis/) covers which measures suit Sprint Reviews and stakeholders. Read [Scrum software tools](https://neuralprojectinstitute.com/project-management/scrum/scrum-software-tools/) to compare tools that display Done status and release progress for several teams.
 
 ### Free templates for this topic
 Agile Release Plan Template
@@ -47447,38 +47728,38 @@ Beginner · Advanced · Expert
 
 ### Frequently asked questions
 
-**Q: Does an Increment have to be released?**
-It must be usable, but whether to release it is a business decision.
+**Q: What is an Increment in Scrum in simple terms?**
+It is the working product the Scrum Team has finished to its Definition of Done, including everything finished in earlier Sprints. It must be usable and move the product towards the Product Goal.
 
-**Q: Can there be more than one Increment per Sprint?**
-Yes. Teams practising continuous delivery may release many Increments in a Sprint.
-
-**Q: What is a product increment?**
-In Scrum, an Increment is a concrete, usable step towards the Product Goal. It adds to all previous Increments and is thoroughly verified so they work together.
+**Q: Is the Increment a Scrum artifact?**
+Yes. It is one of three, with the Product Backlog and the Sprint Backlog. Its commitment is the Definition of Done, which is not a separate artifact.
 
 **Q: When is an Increment created?**
-The 2020 Scrum Guide says an Increment is born the moment a Product Backlog item meets the Definition of Done.
+According to the 2020 Scrum Guide, an Increment is born the moment a Product Backlog item meets the Definition of Done. That can happen on any day of the Sprint.
 
-**Q: What is the commitment for the Increment?**
-The Definition of Done, which describes the quality the Increment must meet.
+**Q: Can there be more than one Increment per Sprint?**
+Yes. The 2020 Scrum Guide says multiple Increments may be created within a Sprint. The sum of them is presented at the Sprint Review.
 
-**Q: What happens to work that does not meet the Definition of Done for the Increment?**
-It cannot be released or presented at the Sprint Review as done. It returns to the Product Backlog for future consideration.
-
-**Q: Is an Increment the same as a release?**
-No. An Increment is usable and could be released; releasing it is a separate business decision. Several Increments can be bundled into one release, or each released immediately.
-
-**Q: What does potentially shippable increment mean?**
-A phrase from earlier versions of the Scrum Guide meaning the Increment is in a releasable state. The 2020 Guide uses the word usable instead.
-
-**Q: Does the Increment have to be software?**
-No. In non-software work an Increment could be a tested landing page, a published course module or a working prototype that meets agreed quality standards.
+**Q: Does an Increment have to be released?**
+No. It must be usable, but releasing it is a separate business decision. It can be released at any time, including before the Sprint Review, or held and combined with later Increments.
 
 **Q: Who creates the Increment?**
-The Developers create it. The whole Scrum Team is accountable for creating a valuable, useful Increment every Sprint.
+The Developers create it and must adhere to the Definition of Done. The whole Scrum Team is accountable for creating a valuable, useful Increment every Sprint.
 
-**Q: How does the Increment relate to the Sprint Review?**
-The Sprint Review inspects the Increment with stakeholders and adapts the Product Backlog. See [Sprint Review](https://neuralprojectinstitute.com/project-management/scrum/sprint-review/).
+**Q: What does potentially shippable increment mean?**
+It is an older phrase for an Increment in a releasable state. The 2017 Scrum Guide said "potentially releasable"; the 2020 Guide says usable and leaves the release decision separate.
+
+**Q: What happens to work that does not meet the Definition of Done?**
+It is not part of the Increment, cannot be released or presented at the Sprint Review as Done, and returns to the Product Backlog for future consideration.
+
+**Q: Can unfinished work be shown at the Sprint Review?**
+Not as part of the Increment. Teams sometimes discuss ideas or designs to get direction, but they should make clear that this is not Done product and keep it separate from the inspection of the Increment.
+
+**Q: Does an Increment have to be software?**
+No. A published course module, a tested landing page or a prototype that passes its bench tests can all be Increments if they meet the team's Definition of Done and are usable.
+
+**Q: Is an Increment the same as an MVP?**
+No. An MVP is a product version used to test a business hypothesis with real users. It usually takes several Increments to reach one.
 
 ### Related guides
 Scrum Artifacts: The 3 Artifacts, Commitments and Examples
@@ -48090,8 +48371,8 @@ No. Lists of five or seven usually add items such as a product vision, burndown 
 ### Related guides
 Sprint Backlog: What It Is, How to Create It, Examples
 The sprint backlog explained: its three parts, who owns it, how to create and update it in Scrum, what can change mid-Sprint, plus worked examples.
-What Is an Increment in Scrum? Definition and Examples
-What an Increment is in Scrum, how it relates to the Definition of Done, whether you can release several per Sprint, and examples across industries.
+Increment in Scrum: Definition, Rules and Examples
+What an Increment is in Scrum: the 2020 Scrum Guide rules, the Definition of Done, Increment vs release, examples, a worked undone-work example and mistakes.
 What Is a Product Owner in Scrum? Role and Must-Have Skills
 The Scrum Product Owner explained: accountabilities, daily activities, must-have skills, how the role differs from a product manager, and common pitfalls.
 Story Points in Scrum: What They Are and How to Estimate
@@ -51514,8 +51795,8 @@ The term comes from software, but similar debt exists elsewhere: outdated proces
 Explain it in business terms, such as slower changes, incidents and risk, show the payback period and connect the work to upcoming goals. Report progress at the Sprint Review.
 
 ### Related guides
-What Is an Increment in Scrum? Definition and Examples
-What an Increment is in Scrum, how it relates to the Definition of Done, whether you can release several per Sprint, and examples across industries.
+Increment in Scrum: Definition, Rules and Examples
+What an Increment is in Scrum: the 2020 Scrum Guide rules, the Definition of Done, Increment vs release, examples, a worked undone-work example and mistakes.
 Scrum Metrics and KPIs: What to Track and How
 Scrum metrics and KPIs explained: Sprint Goal success, velocity, burndown, flow, quality and value measures, with formulas, examples and pitfalls.
 How Agile Software Development Works: Practices and Best Practices
@@ -53013,8 +53294,8 @@ Sprint Planning in Scrum: Agenda, Steps and Examples
 Sprint Planning explained: the three topics, time-box, who attends, a step-by-step agenda, Sprint Goal examples, capacity checks and a worked example.
 Scrum Boards: How to Set Up and Use One
 How a Scrum board works, typical columns, what goes on a Scrum card, physical vs digital boards, and the differences from a Kanban board.
-What Is an Increment in Scrum? Definition and Examples
-What an Increment is in Scrum, how it relates to the Definition of Done, whether you can release several per Sprint, and examples across industries.
+Increment in Scrum: Definition, Rules and Examples
+What an Increment is in Scrum: the 2020 Scrum Guide rules, the Definition of Done, Increment vs release, examples, a worked undone-work example and mistakes.
 
 
 ---
@@ -54128,8 +54409,8 @@ Sprint Review vs Sprint Retrospective: What's the Difference?
 Sprint Review vs Retrospective compared: purpose, focus, attendees, outputs and order, so each Scrum event does its own job.
 Sprint Retrospective: Agenda, Steps, Questions and Example
 How to run a Sprint Retrospective: what the 2020 Scrum Guide says, who attends, timebox, a 5-stage agenda, questions, worked example and action items.
-What Is an Increment in Scrum? Definition and Examples
-What an Increment is in Scrum, how it relates to the Definition of Done, whether you can release several per Sprint, and examples across industries.
+Increment in Scrum: Definition, Rules and Examples
+What an Increment is in Scrum: the 2020 Scrum Guide rules, the Definition of Done, Increment vs release, examples, a worked undone-work example and mistakes.
 Scrum Ceremonies: The 5 Scrum Events Explained
 The five Scrum events (Sprint, Sprint Planning, Daily Scrum, Sprint Review, Retrospective): purpose, attendees, time-boxes and how they fit together.
 
@@ -56955,43 +57236,177 @@ What is Kanban? Learn the Kanban method's meaning, principles, practices, board,
 
 ---
 
-# Kanban Meetings and Cadences: Which Ones You Need
+# Kanban Ceremonies: The 7 Cadences and How to Run Them
 
 URL: https://neuralprojectinstitute.com/project-management/kanban/kanban-ceremonies/
 Section: Kanban guides
-Summary: The Kanban cadences explained: daily Kanban meeting, replenishment, delivery planning, service delivery review, operations, risk and strategy reviews.
+Summary: Kanban ceremonies explained: the seven cadences, team-level meetings, an agenda for each, a worked service delivery review and how to start small.
 
 
-## Kanban Meetings and Cadences: Which Ones You Need
-Kanban does not prescribe Scrum-style ceremonies, but it does recommend regular feedback loops called cadences. Teams pick the ones they need, at a frequency that suits their work.
+## Kanban Ceremonies: The 7 Cadences and How to Run Them
+Kanban ceremonies are the regular meetings and reviews a Kanban team uses to coordinate work, choose what to start, check delivery against customer expectations and improve its process. Kanban University calls them cadences and describes seven, from a daily Kanban meeting to a quarterly strategy review, but none is mandatory and the Kanban Guide prescribes none. This guide explains what each cadence is for, who attends, how to run it, and how to choose the few your team actually needs.
 - Published 7 September 2026
-- 3 min read
+- Last updated 25 November 2026
+- 19 min read
 
 ### Key takeaways
-- Kanban uses cadences: regular feedback loops at different levels.
-- Start with a daily meeting and a replenishment meeting.
-- Walk the board right to left, focusing on finishing.
+- Kanban has no fixed ceremonies in the Scrum sense. The Kanban Method calls its meetings cadences: feedback loops held at a rhythm that suits the work.
+- Kanban University's 2015 model has seven cadences; its Official Guide also names three team-level ones: a daily Kanban meeting, team replenishment and a team retrospective.
+- The Kanban Guide (2025.5) requires no meetings and says changes need not wait for a regular cadence.
+- The daily Kanban meeting walks the board from right to left and asks what is stopping each item from flowing, not what each person did yesterday.
+- The service delivery review compares delivery with customer expectations, such as the share of items finished within the service level expectation.
+- Start with the meetings you already hold, add a daily meeting and replenishment, and combine cadences on small teams.
 
-### The seven Kanban cadences
-The Kanban Method describes seven cadences, from daily team meetings to quarterly strategy reviews:
-| Cadence | Typical frequency | Purpose |
+### What are Kanban ceremonies?
+Kanban ceremonies, more accurately called Kanban cadences, are recurring meetings and reviews in which a team or group of services looks at information about its work and acts on it. Kanban University's glossary defines a cadence as a type of meeting or review providing feedback from one or more services, and adds that feedback information without action is not a feedback loop.
+Cadences put one of the six general practices of the Kanban Method into effect: implement feedback loops. Without them, a board shows problems but nobody is obliged to look at them at a set time. With them, blocked work is raised daily, delivery is compared with expectations every week or two, and the system itself is redesigned when the evidence says it should be. Our guide to [Kanban principles and practices](https://neuralprojectinstitute.com/project-management/kanban/kanban-principles/) explains how this practice sits alongside visualising work, limiting WIP and making policies explicit.
+The word "ceremony" is borrowed from everyday Scrum usage, although the 2020 Scrum Guide itself calls its meetings events; our guide to [Agile ceremonies](https://neuralprojectinstitute.com/project-management/agile/agile-meetings-and-ceremonies/) covers those Scrum events. Kanban University uses "cadence" instead, and its material treats the frequency, length and attendees of each one as adjustable. You choose which to hold and how often, based on how quickly your work arrives and how many teams depend on each other.
+
+### What each Kanban source requires
+Two bodies publish definitions of Kanban for knowledge work, and they treat meetings differently. Knowing which one you are following avoids arguments about whether a team is "doing Kanban properly".
+| Source | What it says about meetings | Practical meaning |
 | --- | --- | --- |
-| Kanban meeting (daily stand-up) | Daily, 15 minutes | Coordinate and remove blockers |
-| Replenishment meeting | Weekly or as needed | Select new work to commit to |
-| Delivery planning meeting | Per delivery | Plan handover to customers |
-| Service delivery review | Every two weeks | Review service performance against customer expectations |
-| Operations review | Monthly | Review interactions between services |
-| Risk review | Monthly | Understand and respond to delivery risks |
-| Strategy review | Quarterly | Align services with strategy |
+| David J. Anderson, "Kanban Cadences", Kanban University (2015) | Seven cadences; adapt existing meetings rather than adding seven new ones; combine them at small scale | A menu to design from, not a checklist |
+| Kanban University, Official Guide to the Kanban Method (2022) | Three team-level cadences (daily Kanban meeting, team retrospective, internal team replenishment) plus service-oriented cadences; reuse and evolve existing meetings | A team can start with three meetings and add service-level reviews later |
+| Coleman and Vacanti, The Kanban Guide (edition 2025.5) | No required meetings. Reviewing the Definition of Workflow is common, but there is no need to wait for a formal meeting to change it | Improvement can happen just in time, whenever the data shows a problem |
+The two views are compatible in practice. Most teams following either source hold a short daily meeting and some form of regular replenishment, because those are the cheapest ways to keep work flowing. Where they differ is on the higher-level reviews, which only the Kanban Method describes. This guide uses Kanban University's names, because only the Kanban Method describes the full set.
+
+### The seven Kanban cadences at a glance
+The table below lists the seven cadences from Anderson's 2015 model. Frequencies and lengths are the "typical configurations" given in a 2015 Lean Kanban Inc. (now Kanban University) presentation by Janice Linden-Reed, Kanban Cadences and Information Flow, which stresses that each should be adjusted to the organisation. Anderson's own article confirms a fortnightly service delivery review and a weekly replenishment meeting for one client.
+| Cadence | Typical frequency | Typical length | Who attends | Question it answers |
+| --- | --- | --- | --- | --- |
+| Kanban meeting | Daily | 10 to 20 minutes | The team doing the work | What is blocking flow today, and how do we finish it? |
+| Replenishment (commitment) meeting | Weekly | 20 to 30 minutes | Whoever sets priorities, plus team representatives | Which options do we commit to start next? |
+| Delivery planning meeting | Varies with the delivery cadence | 1 to 2 hours | Team, release and operations staff, customer representatives | What will we hand over, when, and who must be ready? |
+| Service delivery review | Twice a month | 30 minutes | Service owner, team leads, customer representatives | Are we meeting customers' expectations, and what should change? |
+| Risk review | Monthly | 1 to 2 hours | Service owners, managers, people who see the blockers | What is likely to stop us delivering, and how do we respond? |
+| Operations review | Monthly | 2 hours | Managers and representatives of interdependent services | Is the network of services working as a whole? |
+| Strategy review | Quarterly | Half a day | Senior leaders and service owners | Are we offering the right services to the right customers? |
+Read the table from top to bottom as a move from today's work to the organisation's direction. The lower four depend on delivery data, and the last three pay off mainly when more than one team or service is involved. A single team with one customer group rarely needs separate operations and strategy reviews.
+
+### Team-level cadences
+For a single team, the Official Guide to the Kanban Method from Kanban University suggests three cadences, with these frequencies and purposes:
+| Team cadence | Frequency in the Official Guide | Purpose in the Official Guide |
+| --- | --- | --- |
+| Team Kanban meeting | Daily | To observe and track the status and flow of work (not the workers) |
+| Team retrospective | Biweekly or monthly | Reflect on how the team manages its work and how it can improve |
+| Internal team replenishment meeting | Weekly or as needed | Select items from the pool of work to do next |
+These three are the realistic starting set for most teams. The daily meeting keeps work moving, replenishment keeps the right work entering, and the retrospective changes the system. The same guide asks teams to identify existing meetings that already serve a similar purpose and evolve them, which follows the principle of starting with what you do now.
 
 ### The daily Kanban meeting
-The daily meeting focuses on the work, not the people. Instead of each person giving an update, the team walks the board from right to left, closest to done first, asking what is needed to move each item forward. Blocked and old items get attention first. See [WIP aging](https://neuralprojectinstitute.com/project-management/kanban/wip-aging-chart/).
+The daily Kanban meeting is a short meeting at the board where the team coordinates the flow of work. Its distinguishing feature is that it reviews the work, not the workers: instead of each person reporting in turn, the team walks the board from right to left, starting with items closest to done, and asks what is keeping each one from flowing and who can help.
+Walking right to left reflects a simple rule of flow: finishing work releases capacity and delivers value, starting new work does neither. An item one step from Done deserves attention before an item that has just begun.
 
-### Replenishment
-In a replenishment meeting, stakeholders and the team decide which items to pull from the backlog into the Ready column, based on capacity and priority. It replaces sprint planning, and it can be held as often as needed.
+#### A 15-minute agenda
+1. **Blocked items (2 to 4 minutes).** For each blocked card: what is the blocker, who is resolving it, and is an escalation needed today?
+2. **Ageing items (3 to 4 minutes).** Compare each in-progress item's age with the service level expectation (SLE). Items past a threshold the team chooses, such as 70% of the SLE, get a plan; items past the SLE get help. A [WIP aging chart](https://neuralprojectinstitute.com/project-management/kanban/wip-aging-chart/) shows this in seconds.
+3. **Walk the board right to left (5 to 6 minutes).** Column by column, ask what is needed to move each item on. Skip cards that are moving normally.
+4. **WIP check (1 minute).** Is any column over its [WIP limit](https://neuralprojectinstitute.com/project-management/kanban/wip-limits/)? If so, who stops starting and helps finish?
+5. **Close (1 minute).** Confirm who is swarming on what, and note anything to raise at replenishment or the next review.
+Detailed problem-solving does not belong in the meeting. When two people need to resolve something, agree that they will talk straight afterwards and move on.
 
-### Starting small
-Most teams begin with just two cadences: a daily Kanban meeting and a weekly replenishment. Add a service delivery review or retrospective once the board is stable, and the higher-level reviews when several teams or services interact.
+#### How it differs from a Daily Scrum
+The 2020 Scrum Guide defines the Daily Scrum as a 15-minute event for the Developers to inspect progress toward the Sprint Goal and adapt the Sprint Backlog, and lets them choose its structure. A Kanban meeting has no Sprint Goal to inspect against; its reference points are WIP limits, item age and the SLE. Because the Scrum Guide leaves the format to the Developers, a Scrum team may walk its board too, so in practice the two can look alike. See the [Daily Scrum](https://neuralprojectinstitute.com/project-management/scrum/daily-scrum/) guide for the Scrum event.
+
+### Replenishment and delivery planning
+These two cadences answer different questions and Kanban University keeps them separate on purpose. Replenishment decides which options the team commits to start, moving them across the commitment point. Delivery planning decides when finished work is handed over to customers and what must be ready for that handover. Committing to start work and committing to a delivery date are different promises.
+|  | Replenishment meeting | Delivery planning meeting |
+| --- | --- | --- |
+| Decision | What enters the system next | What leaves the system in the next delivery |
+| Trigger | Weekly, or when the Ready queue runs low | Each release window or customer handover |
+| Inputs | Free capacity, priorities, cost of delay, classes of service | Items that are done or nearly done, release constraints, customer readiness |
+| Outputs | A refilled, limited Ready queue | A delivery plan, communications and any rollback arrangements |
+Teams that deploy continuously may hardly need a delivery planning meeting, because every finished item is released on its own. Teams with release trains, regulated sign-off or customer training usually do. For a full replenishment agenda, prioritisation with classes of service and a worked replenishment example, read our guide to [Kanban planning](https://neuralprojectinstitute.com/project-management/kanban/kanban-planning/).
+
+### The service delivery review
+The service delivery review (SDR) is a regular review of how well a service is meeting its customers' expectations, using data rather than impressions. The Kanban University glossary describes reviews as cadences designed to reflect on the performance or risk of one or more services, and Anderson's 2015 article describes a client holding its SDR fortnightly.
+It is the cadence that most clearly separates the Kanban Method from "a board with a stand-up". The daily meeting looks at individual items; the SDR looks at the service as a whole and asks whether customers are getting what they were led to expect.
+
+#### Inputs and agenda
+- **Delivery against expectation:** share of items finished within the SLE, and the 85th percentile [cycle time](https://neuralprojectinstitute.com/project-management/kanban/cycle-time/) for the period.
+- **Throughput:** items finished per week, by work type or class of service. See [throughput](https://neuralprojectinstitute.com/project-management/kanban/throughput/).
+- **Ageing and blocked work:** items older than the SLE and total blocked time.
+- **Customer feedback:** complaints, escalations, quality problems found after delivery.
+- **Policies:** are WIP limits, classes of service and the commitment point still right?
+- **Outputs:** agreed actions, policy changes to test, and items to pass to the risk or operations review.
+
+#### Worked example: a fortnightly service delivery review
+**Illustrative example.** An internal IT service team handles access requests, small changes and vendor-supported fixes. Its published SLE is "85% of standard items finished within 10 days" (calendar days, from the commitment point to done). In the last fortnight it finished 18 items with these cycle times, in days: 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 9, 9, 11, 12, 14 and 16.
+| Measure | Calculation | Result |
+| --- | --- | --- |
+| Throughput | 18 items ÷ 2 weeks | 9 items per week |
+| Items within SLE | Count of cycle times of 10 days or less | 14 of 18 |
+| SLE attainment | 14 ÷ 18 × 100 | 77.8%, below the 85% expectation |
+| Items needed to meet 85% | 0.85 × 18 = 15.3, rounded up | 16 of 18 |
+| 85th percentile this fortnight | Value at rank 0.85 × 18 = 15.3, rounded up to 16, in the sorted list | 12 days, against an SLE of 10 |
+| Ageing work now | Current item ages: 1, 2, 2, 3, 5, 6, 8, 11, 13 days | 2 of 9 in-progress items already past the SLE |
+**Interpretation.** The service missed its expectation by two items in this fortnight, and two current items will add to next period's misses. Eighteen items is a small sample, so one bad fortnight is not proof that the SLE is wrong. The more useful question is whether the four late items share a cause. At the review, the team finds that three of the four waited for the same external vendor.
+**Decisions.** The review agrees three actions: flag vendor-dependent items at the commitment point so their wait is visible from day one; pass the vendor delay to the monthly risk review for [blocker clustering](https://neuralprojectinstitute.com/project-management/kanban/blocker-clustering/); and consider a separate SLE for vendor-dependent work if the pattern continues, so that customers of standard requests get an honest expectation. The team does not lower its WIP limits or change the SLE on the strength of one fortnight.
+
+### The team retrospective
+Kanban teams improve continuously, but most still benefit from a regular, protected time to reflect. The Official Guide suggests a team retrospective every two weeks or monthly. The format can borrow from Scrum, but the agenda is driven by flow data rather than a Sprint: cycle time trends, the [cumulative flow diagram](https://neuralprojectinstitute.com/project-management/kanban/cumulative-flow-diagram/), blocker patterns and the results of the last experiment.
+Treat each agreed change as an experiment: state what you expect to change, how you will measure it and when you will review it. A retrospective that produces one tested policy change is more useful than one that produces ten good intentions. The [Sprint Retrospective](https://neuralprojectinstitute.com/project-management/scrum/sprint-retrospective/) guide has facilitation techniques that work equally well here.
+
+### Risk, operations and strategy reviews
+These three cadences operate above a single team. Most organisations reach them only when several teams or services depend on each other, and they often map onto meetings that already exist, such as a monthly operations meeting or a quarterly business review.
+
+#### Risk review
+Anderson added the risk review in 2014, after Klaus Leopold formalised blocker clustering in 2013. Its purpose is to understand what is likely to stop the service delivering and to respond, for example by clustering past blockers by cause, agreeing how a type of risk should be handled, or assigning a class of service. A monthly rhythm is common. The blocker-clustering technique turns a pile of red stickers into a ranked list of causes with the blocked days each one cost.
+
+#### Operations review
+The operations review looks across services rather than inside one. Managers and representatives of interdependent teams review flow across the whole network, shared bottlenecks, capacity allocation between work types and dependencies that keep delaying each other. Typically monthly, it is where local improvements are checked against their effect on the system as a whole; a team that speeds up by pushing work onto a downstream team has not improved the network.
+
+#### Strategy review
+The strategy review, typically quarterly, asks whether the organisation is offering the right services to the right customers and whether those services remain fit for purpose as the market changes. It sets direction and capacity allocation that the replenishment meetings then apply. In many organisations an existing quarterly planning or portfolio meeting can serve, as long as it uses delivery data from the operations and service delivery reviews. For the portfolio view, see [agile portfolio management](https://neuralprojectinstitute.com/project-management/agile/agile-portfolio-management/).
+
+### How the cadences connect
+The cadences form a network of feedback loops, each feeding information up or decisions down. Anderson's 2015 article describes this information flow: replenishment output goes to the daily meeting, and the service delivery and operations reviews supply capability information to the strategy review.
+1. **Strategy review** sets direction and how capacity is shared between services and work types.
+2. **Operations review** turns that into cross-service decisions and checks the network's performance.
+3. **Service delivery review** checks each service against its customers' expectations and adjusts policies.
+4. **Risk review** looks for recurring causes of delay and feeds responses into policies and classes of service.
+5. **Replenishment** selects work to start within those priorities and policies.
+6. **Daily Kanban meeting** manages the flow of committed work.
+7. **Delivery planning** hands finished work over to customers.
+Data flows the other way: cycle times, throughput and blockers recorded at the board feed the service delivery review; its findings feed the operations and strategy reviews. If a higher-level review is not using data from the board, it is disconnected from the work it is meant to steer.
+
+### How to choose and introduce your cadences
+1. **List the meetings you already hold.** Note each one's purpose, attendees and frequency. Kanban University expects you to adapt these rather than add seven new meetings.
+2. **Map each existing meeting to a cadence.** A weekly team meeting may become replenishment; a monthly management meeting may become the operations review.
+3. **Start with the daily meeting and replenishment.** Set them at the board, with a time-box, and run them for at least a month before adding more.
+4. **Add a service delivery review once you have data.** You need recorded start and finish dates and an SLE before the review can compare delivery with expectations.
+5. **Combine cadences on small teams.** Anderson describes a client that merged its fortnightly service delivery review into its weekly replenishment meeting, extending the meeting by 30 minutes every other week because the audience was the same.
+6. **Add risk, operations and strategy reviews when several services interact.** Their value grows with the number of dependencies.
+7. **Review the cadences themselves.** At a retrospective, ask whether each meeting produced decisions. Drop or merge any that only share information.
+Tip
+A cadence is earning its place if it regularly changes something: a priority, a policy, a WIP limit or a commitment. If the outcome is always "noted", shorten it, merge it or stop it.
+
+### Worked example: a cadence calendar and its cost
+**Illustrative example.** The IT service team from the service delivery review above has six people and a team lead. It works roughly 7.5 hours a day, so a four-week month of 20 working days gives each person about 150 working hours. After three months of Kanban it settles on this calendar:
+| Cadence | Frequency and length | Who attends | Hours per attendee per month |
+| --- | --- | --- | --- |
+| Daily Kanban meeting | 15 minutes, 20 days | Whole team | 15 × 20 ÷ 60 = 5.0 |
+| Replenishment | 30 minutes, weekly | Team lead, one team member, two requesting managers | 30 × 4 ÷ 60 = 2.0 |
+| Service delivery review | 45 minutes, fortnightly | Whole team and two customer representatives | 45 × 2 ÷ 60 = 1.5 |
+| Team retrospective | 60 minutes, monthly | Whole team | 1.0 |
+| Risk review | 45 minutes, monthly | Team lead with other service leads | 0.75 |
+| Operations review | 60 minutes, monthly | Team lead with other service leads | 1.0 |
+| Strategy review | 2 hours, quarterly | Team lead and department head | 120 ÷ 3 ÷ 60 ≈ 0.67 |
+**Result.** A typical team member attends the daily meeting, the service delivery review and the retrospective: 5.0 + 1.5 + 1.0 = **7.5 hours a month, or 5.0% of 150 working hours**. The team member who also attends replenishment spends 9.5 hours (6.3%). The team lead, who attends every cadence, spends about 11.9 hours (7.9%).
+**What the team does with this.** The calculation makes the cost of coordination visible and gives the team a basis for pruning. It also shows where the effort goes: two-thirds of a typical member's meeting time is the daily meeting, so keeping that meeting to 15 minutes matters more than trimming the monthly reviews. The figures assume full attendance and no overruns; a daily meeting that habitually runs to 25 minutes adds over three hours per person per month.
+
+### Common mistakes with Kanban meetings
+- **Running the daily meeting as a round of status reports.** Walk the board instead and talk about items, blockers and age, not about who was busy.
+- **Copying all seven cadences on day one.** A single team does not need an operations or strategy review. Start with two or three and add only when a question is going unanswered.
+- **Holding an SDR without data.** Without start and finish dates there is nothing to compare with expectations, and the review becomes a discussion of opinions.
+- **Merging replenishment and delivery planning by accident.** Agreeing to start something is not a promise of a delivery date; keep the two decisions distinct even if they happen in one meeting.
+- **Letting reviews end without decisions.** Kanban University's own definition says feedback without action is not a feedback loop.
+- **Never improving between meetings.** The Kanban Guide's point is fair: an obviously broken policy can be fixed the day it is noticed.
+- **Treating Kanban as having no meetings at all.** Kanban has no prescribed meetings, but a team with no feedback loops has a board, not a Kanban system.
+
+### Templates and tools for Kanban meetings
+Our free [meeting agenda template](https://neuralprojectinstitute.com/templates/meeting-agenda-template/) has columns for time, minutes, agenda item, owner, desired outcome and pre-reading, which suits the time-boxed agendas above. Record decisions and actions from reviews in the [meeting notes template](https://neuralprojectinstitute.com/templates/meeting-notes-template/), which keeps decisions and owned actions in their own columns. The [Kanban board template](https://neuralprojectinstitute.com/templates/kanban-board-template/) records start and finish dates on its Cards tab and calculates cycle time, giving you the data a service delivery review needs.
+Digital boards can cut preparation time: [Jira](https://neuralprojectinstitute.com/project-management-tools/jira/), for example, supports WIP limits on Kanban boards and includes cumulative flow diagrams and control charts for cycle time, which covers much of what a service delivery review needs. To decide which metrics to bring to each review, read [Kanban metrics](https://neuralprojectinstitute.com/project-management/kanban/kanban-metrics/), and for a side-by-side comparison with Scrum's events, see [Kanban vs Scrum](https://neuralprojectinstitute.com/project-management/kanban/kanban-vs-scrum/).
 
 ### Free templates for this topic
 Meeting Agenda Template
@@ -57007,38 +57422,41 @@ Beginner · Advanced · Expert
 
 ### Frequently asked questions
 
-**Q: Do Kanban meetings include retrospectives?**
-The Kanban Method uses service delivery and operations reviews for improvement, but many teams also hold regular retrospectives.
-
-**Q: Is sprint planning one of the Kanban meetings?**
-No. Work is pulled continuously; replenishment meetings decide what to make ready next.
-
-**Q: What are the main Kanban meetings?**
-Kanban describes seven cadences: the daily Kanban meeting, replenishment, delivery planning, service delivery review, operations review, risk review and strategy review. Teams adopt only those they need.
-
-**Q: What is a Kanban cadence?**
-A cadence is a regular feedback loop, such as a meeting held at a set frequency, used to review work, flow or strategy. Kanban uses cadences instead of fixed Scrum-style ceremonies.
-
-**Q: What is a daily Kanban meeting?**
-A short daily meeting, often 15 minutes, held at the board. The team walks the board from right to left, focusing on items closest to done, blockers and ageing work rather than individual status updates.
-
-**Q: How is the daily Kanban meeting different from a Daily Scrum?**
-A Kanban standup reviews the flow of work across the board, often from right to left, while the Daily Scrum inspects progress towards the Sprint Goal. See [Kanban vs Scrum](https://neuralprojectinstitute.com/project-management/kanban/kanban-vs-scrum/).
-
-**Q: Which Kanban meeting decides what to work on next?**
-The replenishment meeting. The team and stakeholders choose which items to move from the backlog into the Ready column, based on priority and capacity. It is held weekly or as needed.
-
-**Q: Which Kanban cadence reviews how well the team serves its customers?**
-The service delivery review: a regular review, often every two weeks, of how well the team is meeting customer expectations, using measures such as [cycle time](https://neuralprojectinstitute.com/project-management/kanban/cycle-time/), throughput and blockers.
-
-**Q: Which Kanban meeting plans releases to customers?**
-The delivery planning meeting. It plans and coordinates releases of finished work to customers, and its frequency follows the team's delivery rhythm.
+**Q: What are the ceremonies in Kanban?**
+Kanban has no mandatory ceremonies. The Kanban Method describes seven cadences: the daily Kanban meeting, replenishment, delivery planning, service delivery review, risk review, operations review and strategy review. Teams adopt only those they need.
 
 **Q: Are Kanban meetings mandatory?**
-No. The Kanban Method recommends feedback loops but lets teams choose which cadences to hold and how often. Most start with a daily meeting and replenishment.
+No. Kanban University recommends feedback loops but lets teams choose which cadences to hold and how often, and the Kanban Guide 2025.5 requires no meetings at all.
 
-**Q: Who attends the strategy review, the least frequent Kanban cadence?**
-Senior leaders and service owners, usually quarterly, to review direction and decide which services and types of work the organisation should focus on.
+**Q: What is a cadence in Kanban?**
+A regular meeting or review that provides feedback on one or more services, such as a daily meeting or a fortnightly service delivery review. The feedback must lead to action to count as a feedback loop.
+
+**Q: How long should a daily Kanban meeting be?**
+Lean Kanban's typical configuration is 10 to 20 minutes, and 15 minutes is a common time-box. None of the Kanban sources makes a length mandatory; keep it short by walking the board and taking detailed problem-solving offline.
+
+**Q: What is the difference between a Kanban stand-up and a Daily Scrum?**
+A Kanban meeting reviews the flow of items against WIP limits, item age and the SLE. The Daily Scrum inspects progress toward the Sprint Goal and adapts the Sprint Backlog. Both are often run as a board walk.
+
+**Q: Can Kanban cadences be combined?**
+Yes, and on small teams they usually should be. Anderson describes a client that folded its fortnightly service delivery review into its weekly replenishment meeting by adding 30 minutes every other week, because the same people attended both.
+
+**Q: What happens in a service delivery review?**
+The service owner, team and customer representatives compare delivery with expectations, using measures such as SLE attainment, cycle time percentiles, throughput, ageing items and customer feedback, then agree policy changes or actions.
+
+**Q: Do Kanban teams hold retrospectives?**
+Many do. Kanban University's Official Guide suggests a team retrospective every two weeks or monthly, focused on flow data and experiments.
+
+**Q: What is a risk review in Kanban?**
+A regular review, often monthly, of what is likely to stop the service delivering. It commonly uses blocker clustering to rank causes of delay and agrees responses such as new policies or classes of service.
+
+**Q: Who attends a Kanban strategy review?**
+Senior leaders and service owners, usually quarterly, to decide which services and types of work the organisation should focus on, informed by data from the operations and service delivery reviews.
+
+**Q: Which Kanban meetings should a new team start with?**
+A daily Kanban meeting and a replenishment meeting, ideally adapted from meetings the team already holds. Add a service delivery review once you have cycle time data, and higher-level reviews when several services interact.
+
+**Q: How much time do Kanban meetings take?**
+It depends on the calendar you choose. In the illustrative example in this guide, a team member spends about 7.5 hours a month, or 5% of working time, in a daily meeting, a fortnightly SDR and a monthly retrospective.
 
 ### Related guides
 Kanban Planning: How to Plan and Forecast Without Sprints
@@ -57719,8 +58137,8 @@ Throughput in Kanban: How to Measure and Use It
 What throughput means in Kanban, how to measure it, how to forecast delivery dates with throughput and Monte Carlo simulation, and how to improve it.
 Cycle Time in Kanban: Formula, Examples and How to Reduce It
 Cycle time in Kanban is how long an item takes from start to finish. Learn the formula, percentiles, scatterplots and SLEs, with worked examples.
-Kanban Meetings and Cadences: Which Ones You Need
-The Kanban cadences explained: daily Kanban meeting, replenishment, delivery planning, service delivery review, operations, risk and strategy reviews.
+Kanban Ceremonies: The 7 Cadences and How to Run Them
+Kanban ceremonies explained: the seven cadences, team-level meetings, an agenda for each, a worked service delivery review and how to start small.
 What Is Kanban? Definition, Principles and Examples
 What is Kanban? Learn the Kanban method's meaning, principles, practices, board, WIP limits and flow metrics, with worked examples and step-by-step setup.
 
@@ -57981,8 +58399,8 @@ What Is Kanban? Definition, Principles and Examples
 What is Kanban? Learn the Kanban method's meaning, principles, practices, board, WIP limits and flow metrics, with worked examples and step-by-step setup.
 WIP Limits in Kanban: How to Set Them, With Examples
 WIP limits explained: what they are, why they work (Little's Law), how to set your first limits step by step, worked board examples and common mistakes.
-Kanban Meetings and Cadences: Which Ones You Need
-The Kanban cadences explained: daily Kanban meeting, replenishment, delivery planning, service delivery review, operations, risk and strategy reviews.
+Kanban Ceremonies: The 7 Cadences and How to Run Them
+Kanban ceremonies explained: the seven cadences, team-level meetings, an agenda for each, a worked service delivery review and how to start small.
 Kanban Board: What It Is, Examples and How to Build One
 What is a Kanban board? Learn its parts, see examples for software, marketing and IT, and build your own step by step with WIP limits and policies.
 
@@ -61468,8 +61886,8 @@ The service level expectation acts as a threshold: items nearing it are at risk 
 ### Related guides
 Cycle Time in Kanban: Formula, Examples and How to Reduce It
 Cycle time in Kanban is how long an item takes from start to finish. Learn the formula, percentiles, scatterplots and SLEs, with worked examples.
-Kanban Meetings and Cadences: Which Ones You Need
-The Kanban cadences explained: daily Kanban meeting, replenishment, delivery planning, service delivery review, operations, risk and strategy reviews.
+Kanban Ceremonies: The 7 Cadences and How to Run Them
+Kanban ceremonies explained: the seven cadences, team-level meetings, an agenda for each, a worked service delivery review and how to start small.
 Kanban Metrics: The Flow Measures That Matter
 The essential Kanban metrics: WIP, cycle time, lead time, throughput, work item age and flow efficiency, plus the charts that show them.
 WIP Limits in Kanban: How to Set Them, With Examples
@@ -63813,106 +64231,214 @@ Video production project management explained: phases, roles, budgets, schedules
 
 ---
 
-# Education Project Management: Phases, Roles, Tools and Tips
+# Education Project Management: Phases, Roles and Example
 
 URL: https://neuralprojectinstitute.com/project-management/industries/education-project-management/
 Section: Industry guides
-Summary: How education project management works in schools and universities: academic calendars, roles, phases, methods, documents, KPIs, challenges and tools.
+Summary: Education project management explained: planning around the academic calendar, life cycle, roles, methods, compliance, KPIs and a worked term-start schedule.
 
 
-## Education Project Management: Phases, Roles, Tools and Tips
-Education project management is the planning and delivery of projects in schools, colleges, universities and training organisations, such as curriculum redesigns, learning platform rollouts, new courses, building works, accreditation reviews and digital learning programmes. Its defining feature is the academic calendar: most changes must land at the start of a term or year, and teaching cannot be disrupted along the way.
+## Education Project Management: Phases, Roles and Example
+Education project management is the planning and delivery of change in schools, colleges, universities and training organisations: new courses, curriculum redesigns, learning platform rollouts, building works and accreditation reviews. What sets it apart is the academic calendar. Most changes must be ready on the first day of a term, teaching cannot stop while they are made, and approvals follow committee cycles that do not move. This guide covers the life cycle, roles and methods, the compliance rules to plan for in 2026–27, and a worked example that schedules a platform replacement backwards from a September start.
 - Published 27 August 2026
-- 7 min read
+- Last updated 25 November 2026
+- 20 min read
 
 ### Key takeaways
-- Education project management is planned backwards from term dates and committee cycles.
-- Involving teachers and students in design is the best defence against resistance.
-- Use ADDIE for course design, phased plans for buildings and systems, and Kanban or Agile for ongoing digital work.
-- Keep methods simple because many education projects are led part-time.
+- Plan backwards from the term start date and from the dates of the committees or governing bodies that must approve the work; both are fixed constraints.
+- Missing one approval meeting can cost far more than the weeks between meetings, because it can push the next steps out of the term in which staff are available.
+- Use ADDIE or an iterative design model for course content, phased plans for buildings and core systems, and Kanban or Scrum for continuing digital work.
+- Build accessibility, data protection and safeguarding checks into requirements and procurement, not into the final week before launch.
+- Most education projects are led by people with another job, so keep the method light: a one-page plan, a visible board and protected project time.
+- Measure readiness for term start, then adoption and learner outcomes; on-time delivery alone says little about whether teaching improved.
 
-### What makes education project management different
-- **The academic calendar is a hard constraint.** A system that misses the start of term may wait a whole year. Holidays are the main window for building work and IT changes.
-- **Shared governance.** Universities in particular make decisions through committees, senates and boards, which meet on fixed cycles and can add months to approval.
-- **Academic autonomy.** Teaching staff expect a say in changes that affect their teaching; mandated change without consultation often fails.
-- **Many stakeholder groups.** Students, parents, teachers, support staff, governors, regulators, inspectors and funders all have interests.
-- **Safeguarding and student data.** Projects involving children need safeguarding checks, and student records are protected by law (for example FERPA in the US and data protection law in the UK and EU).
-- **Accessibility.** Learning materials and systems must work for students with disabilities, so accessibility standards such as WCAG should be built into requirements.
-- **Limited project capacity.** Many schools have no dedicated project managers, so teachers and administrators run projects alongside their day jobs.
+### What is education project management?
+**Education project management** is the application of project management to temporary initiatives in education organisations, such as a new degree programme, a learning management system rollout or a school building extension. It combines standard scope, schedule, cost, risk and stakeholder control with sector constraints: fixed term dates, committee-based approval, academic ownership of teaching, and duties towards learners.
+It is different from running the institution. Timetabling, admissions rounds and marking are recurring operations; a project creates something new and then hands it over to those operations. The distinction matters because the same people usually do both, and project work competes directly with teaching for their time.
+This page is part of our series on [project management by industry](https://neuralprojectinstitute.com/project-management/industries/). If your projects are funded research rather than teaching or operational change, read [research project management](https://neuralprojectinstitute.com/project-management/industries/research-project-management/) instead.
 
-### Education project life cycle
-The life cycle is usually planned backwards from a term start date. For a course or curriculum project, the ADDIE instructional design model (analysis, design, development, implementation, evaluation) is often used inside these phases:
+### How education projects differ from other projects
+A 2002 paper in PMI's library by William Scally listed ten issues in managing education projects, among them working out what students actually need, reconciling classroom expectations with management expectations, and measuring success by more than one criterion. Those issues remain recognisable, and several structural differences sit behind them:
+- **The academic calendar is a hard constraint.** A system that is not ready for the first week of term may wait a term or a full year, because switching mid-term disrupts learners. Holidays are the main windows for building and infrastructure work, but most teaching staff are unavailable then.
+- **Shared governance.** Universities decide through senates, academic boards and committees; schools and colleges through governing bodies and trust boards. They meet on cycles fixed a year ahead, with paper deadlines before each meeting, so a missed deadline can mean waiting a full term for the next decision.
+- **Academic autonomy.** Teaching staff expect to shape changes to curriculum and assessment, and in universities the senate or academic board usually holds formal responsibility for academic matters. Change imposed without consultation tends to be adopted on paper only.
+- **Many stakeholder groups.** Learners, parents and carers, teaching and support staff, governors, inspectors, regulators, awarding bodies, funders and the local community can all be affected by one project.
+- **Duties towards learners.** Safeguarding, special educational needs, accessibility and protection of learner data shape requirements and procurement, especially where children are involved.
+- **Funding cycles that do not match the academic year.** Capital grants, annual budgets and the institution's financial year may each start on different dates. Academy trusts in England, for example, account for a year ending 31 August, so a project spanning summer can straddle two budget years.
+- **Limited dedicated capacity.** Many schools have no project manager; a deputy head, business manager or teacher leads the project alongside a full timetable.
+
+### Types of education projects
+Education projects vary widely, and the right approach depends more on the type of work than on the type of institution.
+| Project type | Examples | Dominant constraint | Typical approach |
+| --- | --- | --- | --- |
+| Curriculum and course development | New degree or vocational course, redesigned GCSE scheme of work, online module | Validation or approval deadlines; recruitment dates | ADDIE or iterative design, with stage approvals |
+| Learning technology | Learning management system (LMS) or virtual learning environment (VLE) replacement, assessment platform | Term start; integration with the student record system | Phased plan with an iterative pilot |
+| Estates and facilities | New science block, refurbishment, accessibility works | Holiday windows; safeguarding on a live site | Predictive, stage-gated plan |
+| Compliance and quality | Inspection preparation, accreditation renewal, data protection review | Regulator or awarding body dates | Predictive plan with a fixed deadline |
+| Organisational change | Merger of departments, timetable redesign, new behaviour policy | Staff consultation; start of an academic year | Phased plan with a change management workstream |
+| Continuing improvement | Course updates, IT requests, admissions process fixes | Competing priorities rather than a single deadline | Kanban with a regular review |
+
+### The education project life cycle
+Most education projects follow seven broad phases. They are planned backwards from the launch date, and course projects often run the ADDIE instructional design model (analysis, design, development, implementation, evaluation) inside phases 2 to 7. These are life-cycle phases, not the PMBOK process groups; see [project management phases](https://neuralprojectinstitute.com/project-management/project-management-phases/) for the general model.
 | Phase | What happens | Timing tip |
 | --- | --- | --- |
-| 1. Proposal and approval | Need identified, business case or course proposal approved by the relevant committee | Check committee dates; they fix the earliest start |
-| 2. Analysis | Learner needs, regulatory or accreditation requirements, current state | Consult staff and students before the summer break |
-| 3. Design | Learning outcomes, curriculum structure, system or building requirements | Align with timetabling and enrolment deadlines |
-| 4. Development and build | Content creation, platform configuration, procurement, construction | Building and infrastructure work in holidays |
-| 5. Pilot and training | Pilot with a small group, train staff, prepare guidance for students and parents | Train staff before they are busy with term start |
-| 6. Launch | Go-live at term start with extra support | Plan a support rota for the first weeks of term |
-| 7. Evaluation and closure | Student feedback, results, adoption data, [lessons learned](https://neuralprojectinstitute.com/project-management/lessons-learned/) | Evaluate after a full term or year |
+| 1. Proposal and approval | Need identified; business case or course proposal approved by the relevant committee or governing body | Find the meeting and paper deadline dates first; they fix the earliest start |
+| 2. Analysis | Learner needs, regulatory or awarding body requirements, current state, data protection screening | Consult staff and learners during term, before the summer break |
+| 3. Design | Learning outcomes, curriculum structure, system or building requirements, accessibility requirements | Align with timetabling, enrolment and validation deadlines |
+| 4. Development and build | Content creation, platform configuration and integration, procurement, construction | Building and infrastructure work in holidays |
+| 5. Pilot and training | Pilot with a small group, train staff, prepare guidance for learners and families | Finish training before staff leave for the summer |
+| 6. Launch | Go-live at term start with additional support | Plan a support rota for the first two to three weeks of term |
+| 7. Evaluation and closure | Learner feedback, results, adoption data, lessons learned, handover to operations | Evaluate after a full term or year, not at launch |
 
-### Key roles
+### Planning backwards from the academic calendar
+Because the launch date is fixed, education schedules are usually built with a **backward pass**: start from the date teaching begins, subtract each activity's duration and find the latest date each activity can start without missing it. The [forward and backward pass](https://neuralprojectinstitute.com/project-management/forward-and-backward-pass/) guide explains the method in detail. The difference between the latest start and the earliest realistic start is the activity's **total float**; see [float and slack](https://neuralprojectinstitute.com/project-management/float-and-slack/).
+Two features make the education version harder than a textbook network. Activities that need teaching staff can only run in term time, and activities that need governance approval can only start after a meeting. Both create gaps in the calendar that a simple duration count ignores.
+
+#### Calendar windows and what they suit
+The windows below follow a typical English school and college year; adapt them to your own calendar, including university semesters, trimester systems or southern-hemisphere years.
+| Window | Good for | Avoid |
+| --- | --- | --- |
+| Autumn term (September to December) | Analysis, consultation, approval papers, procurement | Launching new systems after the first weeks of term; staff are inducting new learners |
+| Spring term (January to Easter) | Design, configuration, building contracts, early pilots | Major changes during mock exams or coursework deadlines |
+| Summer term (Easter to July) | Pilots, staff training, content migration, readiness checks | Asking exam-year teachers for time in May and June |
+| Summer holiday | Building works, infrastructure, data migration, cutover | Anything needing teachers or learners to test or decide |
+| Short holidays and half-terms | Small infrastructure changes, network upgrades | Assuming staff will attend training |
+Tip
+Put every governance meeting and paper deadline on the project schedule as a milestone, with its dependency on the work it approves. A missed paper deadline should show up as a schedule problem straight away, not at the meeting.
+
+### Worked example: a VLE replacement for a September start
+This hypothetical example uses an illustrative further education college in England with 380 teaching staff. It is replacing its virtual learning environment (VLE) and wants the new platform live for the first day of teaching, **Monday 3 September 2029**. The college's governing body must approve the contract because its value exceeds the principal's delegated limit; the board meets on **Wednesday 13 December 2028** and next on **Wednesday 14 March 2029**, with papers due 10 working days before each meeting. Durations are in calendar weeks, and the estimates absorb bank holidays.
+
+#### Step 1: the backward pass
+Staff leave for the summer after **Friday 13 July 2029**, so all work that needs teachers must finish by then. The IT team can do technical cutover in August. Working backwards:
+| Activity | Duration | Must finish by | Latest start | Reason for the finish date |
+| --- | --- | --- | --- | --- |
+| Content migration and teacher checks | 6 weeks | Fri 13 Jul 2029 | Mon 4 Jun 2029 | Teachers must check their own courses before the summer |
+| Staff training (within the migration period) | 4 weeks | Fri 13 Jul 2029 | Mon 18 Jun 2029 | Training is most useful close to first use, but before the summer |
+| Pilot with six courses | 6 weeks | Fri 25 May 2029 | Mon 16 Apr 2029 | Must end before the half-term week starting 28 May and leave time to act on findings |
+| Configuration and student record system integration | 8 weeks | Fri 13 Apr 2029 | Mon 19 Feb 2029 | The pilot needs a working, integrated platform |
+| Contract signature and supplier onboarding | 3 weeks | Fri 16 Feb 2029 | Mon 29 Jan 2029 | Configuration cannot start until the supplier is engaged |
+So the contract work must start no later than **Monday 29 January 2029**, which in turn requires governing body approval before that date. Only the December meeting qualifies.
+
+#### Step 2: the float under each approval date
+- **Approval on 13 December 2028.** The paper is due on **Wednesday 29 November 2028**. The college is closed from Saturday 16 December and reopens on Tuesday 2 January 2029, after the New Year bank holiday. Because the estimates absorb bank holidays, the three weeks of contract work count from the week beginning Monday 1 January, so configuration can start on **Monday 22 January 2029**. Its latest start is Monday 19 February, so the project has **4 weeks of total float**.
+- **Approval slips to 14 March 2029.** Contract work starts on Monday 19 March, so configuration starts on **Monday 9 April** and ends on **Friday 1 June 2029**. That is **7 weeks after** its latest finish: the float is **−7 weeks**. A six-week pilot would end on Friday 13 July, the last day staff are available, leaving no time for training or content migration with teachers.
+A paper that misses the 29 November deadline, even by a few days, turns 4 weeks of float into −7 weeks, a swing of 11 weeks. The cause is the 13-week gap between board meetings combined with the fixed summer break, not the few days by which the paper was late. This is why the critical path in education projects often runs through a governance date rather than through technical work.
+What the project manager should do with this result:
+1. Treat the 29 November paper deadline as the most important date in the plan and agree who writes and checks the paper now.
+2. Ask the clerk to the governors whether the college's scheme of delegation allows urgent approval between meetings, for example by the chair, and record the answer in the [risk register](https://neuralprojectinstitute.com/project-management/risk-register/) as a fallback.
+3. Prepare a contingency plan if approval slips: launch with new courses only in September and migrate existing courses for the January term, or keep the old VLE for one more year. Each option has a cost and should be priced before December, not after.
+
+#### Step 3: can the training window cope?
+Each of the 380 teaching staff needs one 3-hour hands-on session. The training room holds 16 people, and the timetable allows one trainer to run 2 sessions a day on 3 days a week during the 4-week training window.
+- Sessions needed at full attendance = 380 ÷ 16 = 23.75, rounded up to **24 sessions**.
+- Sessions available with one trainer = 4 weeks × 3 days × 2 sessions = **24 sessions**.
+- If booked sessions run at 85% attendance on average (an assumption for this example), sessions needed = 380 ÷ (16 × 0.85) = 27.94, rounded up to **28 sessions**.
+Capacity exactly matches demand only if every booked seat is filled, which is unrealistic. The plan needs at least 4 more sessions: a second trainer for two weeks, a recorded module for experienced staff, or training for some departments during the pilot. The [capacity planning](https://neuralprojectinstitute.com/project-management/capacity-planning/) guide covers the general method, and the [training plan template](https://neuralprojectinstitute.com/templates/training-plan-template/) records each group, the activity, method, dates, cost, owner and status.
+
+#### Step 4: readiness criteria for go/no-go
+Agree go/no-go criteria with the sponsor in advance and review them at a readiness meeting before the summer break. The thresholds below are illustrative; set your own with the sponsor.
+| Criterion | Illustrative threshold | If not met |
+| --- | --- | --- |
+| Courses migrated and checked by their owners | At least 95% of courses running in September | Launch with checked courses; keep read-only access to the old VLE for the rest |
+| Teaching staff trained | At least 90% | Run drop-in sessions in the September staff development days |
+| Enrolment data flowing from the student record system | Tested end to end with real enrolment data | No-go: learners would not see their courses |
+| Accessibility check of templates and key pages | Meets the target standard, with known issues logged | Fix critical issues before launch; publish the rest in the accessibility statement |
+| Data protection impact assessment | Approved by the data protection officer | No-go until approved |
+| Rollback plan | Tested | No-go |
+
+### Key roles in education projects
 | Role | Responsibilities |
 | --- | --- |
-| Sponsor (head teacher, principal, dean or pro-vice-chancellor) | Owns the objectives, secures funding and champions the change |
-| Governors, board or academic committee | Formal approval of major changes, budgets and new programmes |
-| Project manager or project lead | Plans, coordinates and reports; often a senior teacher or administrator in schools |
+| Sponsor (head teacher, principal, dean or pro-vice-chancellor) | Owns the objectives and benefits, secures funding, chairs key decisions and champions the change |
+| Governing body, trust board or academic committee | Formally approves major changes, budgets, contracts and new programmes |
+| Project manager or project lead | Plans, coordinates, reports and manages risks; often a senior teacher, business manager or administrator in schools |
 | Academic or curriculum lead | Owns educational quality and learning outcomes |
-| Instructional or learning designers | Turn learning outcomes into courses and materials |
-| IT and learning technology team | Configures and supports learning platforms and student systems |
+| Learning designers and learning technologists | Turn learning outcomes into courses, materials and platform configuration |
+| IT and data teams | Integration with the student record system, security, identity and access |
+| Data protection officer | Advises on data protection impact assessments and supplier contracts |
+| Designated safeguarding lead | Advises where a project affects children's safety, including online filtering and contractors on site |
 | Estates and facilities | Leads building, refurbishment and maintenance projects |
-| Student and parent representatives | Provide feedback and help test changes |
-See [project manager roles and responsibilities](https://neuralprojectinstitute.com/project-management/project-manager-roles-and-responsibilities/) for how the PM role adapts when it is only part of someone's job.
+| Learner, parent and staff representatives | Give feedback, test changes and help communicate them |
+A [RACI matrix](https://neuralprojectinstitute.com/project-management/raci-matrix/) is especially useful here because decision rights are split between academic, administrative and governance bodies. For how the project manager role changes when it is only part of someone's job, see [project manager roles and responsibilities](https://neuralprojectinstitute.com/project-management/project-manager-roles-and-responsibilities/).
 
-### Methodologies that fit
-| Approach | Best for | Notes |
+### Choosing a delivery approach
+No single method suits every education project. Choose by the type of work and how stable the requirements are, and combine approaches where a project has both fixed and uncertain parts.
+| Approach | Best for | When it is a poor choice |
 | --- | --- | --- |
-| [Waterfall](https://neuralprojectinstitute.com/project-management/waterfall-project-management/) / phased | Building works, student record system replacements, accreditation reviews | Fixed deadlines and procurement suit sequential plans |
-| ADDIE | Course and curriculum development | A structured instructional design model; can be run iteratively |
-| [Agile](https://neuralprojectinstitute.com/project-management/agile/what-is-agile-project-management/) / [Scrum](https://neuralprojectinstitute.com/project-management/scrum/what-is-scrum/) | Online course production, learning apps, web projects | Short cycles help test materials with learners early |
-| [Kanban](https://neuralprojectinstitute.com/project-management/kanban/what-is-kanban/) | Ongoing work such as course updates, IT requests and admissions tasks | Visual boards help part-time project teams see priorities |
-| [PRINCE2](https://neuralprojectinstitute.com/project-management/prince2/) | Larger publicly funded institutions | Fits board governance and stage approvals |
-| Hybrid | Digital learning programmes | Phased approvals and term-based launch, with iterative content development |
+| Predictive (waterfall) with stage approvals | Building works, student record system replacements, accreditation reviews | Course content whose design will change after learners try it |
+| ADDIE | Course and curriculum development with a clear specification | Run as a strict sequence when the audience or content is uncertain; repeat the cycle instead |
+| Iterative design, such as the Successive Approximation Model (SAM) | Online courses and resources that benefit from rapid prototypes tested with learners | Projects where an awarding body fixes the content and assessment |
+| Scrum | Learning apps, web services, online course production with a dedicated team | Part-time teams that cannot meet regularly or keep a stable Sprint length |
+| Kanban | Continuing course updates, IT requests, admissions improvements | Large one-off projects that need a fixed scope and budget approval |
+| PRINCE2 | Larger publicly funded programmes that need formal stage boundaries | Small school projects, where its governance overhead outweighs the benefit |
+| Hybrid | Digital learning programmes: phased approvals and a fixed launch, with iterative content development | Teams that use it to avoid deciding who approves what |
+ADDIE is an instructional design model, not a project management method; it describes how to create learning, while the project plan controls time, cost and approvals around it. For the wider choice between approaches, read [Agile vs waterfall](https://neuralprojectinstitute.com/project-management/agile/agile-vs-waterfall/), and see [what Kanban is](https://neuralprojectinstitute.com/project-management/kanban/what-is-kanban/) for continuing improvement work.
+
+### Legal and compliance requirements to plan for
+The rules below affect requirements, procurement and schedules for many education projects. They are summarised as at 25 November 2026 for planning purposes and are not legal advice; check the current text and take advice from your data protection officer or legal team.
+
+#### Digital accessibility
+- **UK.** GOV.UK guidance on the Public Sector Bodies Accessibility Regulations 2018 says public sector websites and apps must meet WCAG 2.2 AA and publish an accessibility statement. The same guidance says primary and secondary schools and nurseries are partially exempt, except for content people need to use their services, and must still publish a statement. Jisc advises that colleges and universities are within scope and that VLEs and intranets are covered.
+- **United States.** The Department of Justice's 2024 ADA Title II rule requires state and local government web content and mobile apps, including those of public schools, community colleges and public universities, to meet WCAG 2.1 AA. An interim final rule effective 20 April 2026 moved the compliance dates to **26 April 2027** for public entities with a total population of 50,000 or more and **26 April 2028** for smaller entities and special district governments. Because the rule invited comments, check for later changes.
+For a platform project, this means accessibility belongs in the procurement requirements and acceptance tests, and course templates should be checked before teachers copy them hundreds of times.
+
+#### Learner data
+- **UK.** Under UK GDPR, a data protection impact assessment (DPIA) is required for processing likely to result in a high risk to individuals. In England, the Department for Education's guidance on procuring educational technology (updated 13 November 2026) tells schools to start the DPIA early, check where data is stored, retention, sub-processors and breach notification, agree an exit plan for data at the start, and check whether pupil data is used to train AI features.
+- **United States.** FERPA protects education records at agencies and institutions that receive funds from programmes administered by the US Department of Education, which includes public schools and most colleges and universities. Contracts with platform suppliers need to reflect it.
+
+#### Safeguarding
+In England, Keeping Children Safe in Education 2026 came into force on 1 September 2026, replacing the 2025 edition. Projects that change online services used by pupils should involve the designated safeguarding lead, because the guidance expects appropriate filtering and monitoring; building projects need arrangements for contractors working on a site with children present.
+
+### Engaging staff, learners and families
+Adoption, not delivery, is where most education projects succeed or fail. A new VLE that teachers do not use, or a curriculum that exists only in documents, has not achieved its objective. Practical techniques:
+- **Map stakeholders by group and by term.** A head of department's interest and availability change through the year; plan consultation for when people can respond. Our [stakeholder management](https://neuralprojectinstitute.com/project-management/project-stakeholder-management/) guide covers the power-interest grid.
+- **Recruit early adopters from each department** to pilot, give feedback and support colleagues after launch.
+- **Limit concurrent changes.** As a rule of thumb, avoid launching two changes that affect the same staff in the same term; sequence them across a year instead.
+- **Tailor messages.** Teachers need to know what changes in their lessons; learners need to know where to find their work; parents and carers need to know how to support them. A [communication plan](https://neuralprojectinstitute.com/project-management/communication-plan/) sets out the audience, message, channel, timing and owner.
+- **Release time for project work.** Timetabled remission or cover is more effective than asking staff to fit project tasks around teaching.
 
 ### Essential documents and templates
-- **[Project proposal](https://neuralprojectinstitute.com/templates/project-proposal-template/) or [business case](https://neuralprojectinstitute.com/templates/business-case-template/):** for committee or governor approval.
-- **[Project charter](https://neuralprojectinstitute.com/templates/project-charter-template/):** purpose, scope, sponsor and success measures.
-- **[Project schedule](https://neuralprojectinstitute.com/templates/project-schedule-template/) or [Gantt chart](https://neuralprojectinstitute.com/templates/gantt-chart-template/):** mapped to term dates, committee meetings and holidays.
-- **[RACI matrix](https://neuralprojectinstitute.com/templates/raci-matrix-template/):** who designs, approves and delivers each part.
-- **[Training plan](https://neuralprojectinstitute.com/templates/training-plan-template/):** staff training before launch.
-- **[Communication plan](https://neuralprojectinstitute.com/templates/communication-plan-template/):** staff, students, parents and governors.
-- **[Risk register](https://neuralprojectinstitute.com/templates/risk-register-template/):** including safeguarding, data protection and term-start risks.
-- **[Budget](https://neuralprojectinstitute.com/templates/budget-template/):** aligned with the institution's financial year, which may differ from the academic year.
-- **[Lessons learned](https://neuralprojectinstitute.com/templates/lessons-learned-template/):** reviewed before the next intake or rollout.
+- **Project proposal or business case** for committee or governor approval; see the [business case template](https://neuralprojectinstitute.com/templates/business-case-template/).
+- **Project charter** setting out purpose, scope, sponsor and success measures; see [how to write a project charter](https://neuralprojectinstitute.com/project-management/project-charter/).
+- **Schedule** mapped to term dates, governance meetings and holidays; the [project schedule template](https://neuralprojectinstitute.com/templates/project-schedule-template/) has tasks, owners, start dates, durations, predecessors, per cent complete and milestones.
+- **RACI matrix** for who designs, approves and delivers each part.
+- **Risk register** including safeguarding, data protection, accessibility and term-start risks.
+- **Training plan** for staff, linked to the launch criteria.
+- **Communication plan** for staff, learners, families and governors.
+- **Lessons learned** reviewed before the next intake or rollout; see [lessons learned](https://neuralprojectinstitute.com/project-management/lessons-learned/).
 
 ### KPIs for education projects
-| KPI | What it measures | Typical use |
+| KPI | How to measure it | Use |
 | --- | --- | --- |
-| Ready for term start | Whether all launch criteria are met by the deadline | Go/no-go decision |
-| Staff training completion | Percentage of staff trained before launch | Readiness |
-| Adoption or usage | Active use of a new platform or resource by staff and students | Benefits tracking |
-| Student satisfaction | Survey or module feedback scores | Evaluation |
-| Attainment, progression or retention | Changes in learning results linked to the project | Long-term impact |
-| Budget variance | Spend against plan; see [cost variance](https://neuralprojectinstitute.com/project-management/cost-variance/) | Financial control |
-| Support tickets after launch | Volume and type of help requests | Stabilisation |
+| Ready for term start | Go/no-go criteria met by the readiness date (yes or no, per criterion) | Launch decision |
+| Staff training completion | Staff trained ÷ staff in scope × 100 | Readiness |
+| Adoption | Active users or active courses in the first half-term ÷ total in scope × 100 | Benefits tracking |
+| Learner satisfaction | Survey or module feedback scores compared with the previous year | Evaluation |
+| Attainment, progression or retention | Change in results for the affected cohort, with caution about other causes | Long-term impact |
+| Schedule and cost performance | Milestones met; spend against budget; see [schedule variance](https://neuralprojectinstitute.com/project-management/schedule-variance/) | Control |
+| Support requests after launch | Number and type of help requests per week | Stabilisation |
+Outcome measures such as attainment are influenced by many factors besides one project, so report them as contributing evidence rather than proof of impact.
 
-### Common challenges and how to handle them
-- **Immovable deadlines.** Plan backwards from term start, build in a buffer, and define a minimum viable launch in case something slips.
-- **Slow approvals.** Put committee dates in the plan and prepare papers well ahead.
-- **Staff resistance and workload.** Involve teachers in design, release time for project work and avoid launching several changes in the same term.
-- **Part-time project managers.** Keep the method simple, such as a board and a one-page plan, and protect their project time.
-- **Budget cycles.** Capital and revenue budgets may be fixed annually; align purchases with funding windows.
-- **Multiple initiatives.** A small PMO or improvement office helps prioritise; see [project management office (PMO)](https://neuralprojectinstitute.com/project-management/project-management-office-pmo/).
+### Common mistakes in education project management
+| Mistake | Consequence | What to do instead |
+| --- | --- | --- |
+| Planning forwards from the approval date | The plan looks feasible until it meets the summer break | Plan backwards from term start and test the float under each meeting date |
+| Leaving governance meetings off the schedule | A missed paper deadline is noticed too late | Show each meeting and paper deadline as a milestone with dependencies |
+| Training staff in September | Teachers learn the system while inducting new learners | Train before the summer; use September days for refreshers |
+| Treating accessibility and data protection as sign-offs at the end | Late rework or a launch delay | Write them into requirements, procurement and acceptance tests |
+| Launching several changes in one term | Change fatigue and shallow adoption | Sequence changes across the year |
+| Measuring success only at launch | Adoption problems surface months later | Evaluate after a full term and track adoption |
+| No protected time for the project lead | The project slips whenever teaching pressure rises | Agree remission or cover in the charter |
 
 ### Software for education project management
-Education teams use learning management systems, student information systems and timetabling tools for operations, plus a project tool for planning change. Look for:
+Education organisations run their operations on learning management systems, student information systems and timetabling software, then use a separate project tool to plan and track change. Keep learner records in the student system; the project tool should hold tasks, plans and decisions, not personal data about learners.
 - Simple boards for part-time teams and timelines for term-based plans.
-- Education or nonprofit pricing.
-- Guest access for external partners and contractors.
-- Single sign-on with your institution's identity system.
-- Data protection terms suitable for any student data, though student records should stay in the student system.
-For universities and multi-academy trusts running many projects, [Wrike](https://neuralprojectinstitute.com/project-management-tools/wrike/) is a strong all-in-one option for portfolio dashboards, Gantt plans and request forms. Smaller schools may prefer a simpler board tool; see [our tool rankings](https://neuralprojectinstitute.com/project-management-tools/).
+- Education or nonprofit pricing, where the vendor offers it.
+- Guest access for suppliers, contractors and external partners.
+- Single sign-on with the institution's identity system.
+- Data protection terms and data location that your data protection officer can approve.
+For universities, colleges and multi-academy trusts running many projects, [Wrike](https://neuralprojectinstitute.com/project-management-tools/wrike/), ranked first in our [project management tool reviews](https://neuralprojectinstitute.com/project-management-tools/), suits portfolio dashboards, Gantt plans and request forms; our review notes a steeper learning curve than simpler tools. Smaller schools may prefer a lighter board tool such as [Trello](https://neuralprojectinstitute.com/project-management-tools/trello/), or [Microsoft Planner](https://neuralprojectinstitute.com/project-management-tools/microsoft-planner/) where the school already uses Microsoft 365. A small [project management office](https://neuralprojectinstitute.com/project-management/project-management-office-pmo/) helps larger institutions prioritise competing projects.
 
 ### Free templates for this topic
 Project Plan Template
@@ -63929,37 +64455,34 @@ Beginner · Advanced · Expert
 ### Frequently asked questions
 
 **Q: What is education project management?**
-Education project management is the planning and delivery of projects in schools, colleges and universities, such as new courses, learning platforms and building works, around the academic calendar.
+It is the planning and delivery of projects in schools, colleges, universities and training organisations, such as new courses, learning platforms and building works, around the academic calendar and governance cycle.
 
-**Q: What does a project manager do in education project management?**
-An education project manager plans and coordinates change projects, manages approvals, budgets and risks, and makes sure staff and students are ready for launch.
+**Q: What does a project manager do in education?**
+They plan and coordinate change projects, prepare approval papers, manage budgets, risks and suppliers, and make sure staff and learners are ready for launch. In schools the role is often part of a teacher's or business manager's job.
 
-**Q: Why is the academic calendar important in education project management?**
-Most changes must go live at the start of a term or year and building work must fit into holidays, so missing a deadline can delay a project by months.
+**Q: Why is the academic calendar so important?**
+Most changes must go live at the start of a term, teaching staff are unavailable in holidays, and building work must fit into those holidays. Missing a window can delay a project by a term or a year.
+
+**Q: How do you schedule an education project?**
+Start from the term start date, work backwards through each activity's duration to find its latest start, and add governance meetings and term-time-only activities as constraints. Then compare the latest starts with realistic start dates to find the float.
 
 **Q: What is ADDIE in education project management?**
-ADDIE is an instructional design model of analysis, design, development, implementation and evaluation, often used to manage course development projects.
+ADDIE is an instructional design model with five phases: analysis, design, development, implementation and evaluation. It structures how learning is created; a project plan still controls time, cost and approvals around it.
 
-**Q: Which methodology is best for education project management?**
-Phased approaches suit building and system projects, ADDIE suits course design, and Agile or Kanban suit digital content and ongoing improvement work.
+**Q: Which methodology is best for education projects?**
+It depends on the work. Predictive plans suit buildings and core systems, ADDIE or iterative design suits courses, and Kanban or Scrum suit continuing digital work. Many projects combine them.
 
-**Q: What are the phases of education project management?**
-Proposal and approval, analysis, design, development, pilot and training, launch, and evaluation and closure.
+**Q: Do schools need a data protection impact assessment for new edtech?**
+In the UK, a DPIA is required where processing is likely to be high risk, and Department for Education guidance tells schools to start one early when procuring edtech. Ask your data protection officer whether your project needs one.
 
-**Q: What KPIs are used in education project management?**
-Readiness for term start, staff training completion, adoption, student satisfaction, attainment or retention changes, budget variance and post-launch support tickets.
+**Q: What KPIs are used for education projects?**
+Readiness for term start, staff training completion, adoption, learner satisfaction, attainment or retention changes, schedule and cost performance, and support requests after launch.
 
-**Q: What are common challenges in education project management?**
-Fixed term-start deadlines, slow committee approvals, staff workload and resistance, part-time project leads and annual budget cycles.
+**Q: How do you get teachers to adopt a new system?**
+Involve them in design and piloting, train them before they need the system, release time for project work, avoid stacking several changes in one term and provide visible support in the first weeks.
 
-**Q: Do teachers need education project management skills?**
-Many teachers lead projects such as curriculum changes and trips, so basic planning, risk and stakeholder skills are valuable; see [project management skills](https://neuralprojectinstitute.com/project-management/project-management-skills/).
-
-**Q: What software is used for education project management?**
-Institutions combine their learning and student systems with a project tool; Wrike suits larger portfolios and simple board tools suit small teams.
-
-**Q: How do you manage stakeholders in education project management?**
-Map staff, students, parents, governors and regulators, consult early, and use a communication plan with tailored messages for each group.
+**Q: What software do schools and universities use for projects?**
+They combine their learning and student systems with a separate project tool. Larger institutions often use a portfolio-capable tool such as Wrike; smaller schools often use a simple board tool or Microsoft Planner.
 
 ### Related guides
 Research Project Management: Steps, Roles and Example
@@ -69934,8 +70457,8 @@ There is no single requirement. RACC credentials (CRA, CPRA, CFRA) are recognise
 Work back from the submission date, split the thesis into studies or chapters with milestones, allow time for ethics and data collection, and keep a simple board or Gantt chart up to date.
 
 ### Related guides
-Education Project Management: Phases, Roles, Tools and Tips
-How education project management works in schools and universities: academic calendars, roles, phases, methods, documents, KPIs, challenges and tools.
+Education Project Management: Phases, Roles and Example
+Education project management explained: planning around the academic calendar, life cycle, roles, methods, compliance, KPIs and a worked term-start schedule.
 Pharmaceutical Project Management: Phases, Roles and Tools
 Pharmaceutical project management explained: drug development phases, GxP, stage-gates, roles, worked examples, KPIs, templates and software.
 Engineering Project Management: Phases, Roles and Methods
