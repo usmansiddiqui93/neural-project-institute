@@ -36477,8 +36477,8 @@ Not formally, but someone should own the order of improvement work and balance s
 A board, interrupt policy and WIP limits can be in place within a month. Reliable capacity data takes about two months, and measurable reductions in unplanned work usually take several months of steady automation.
 
 ### Related guides
-What Is DevOps? Culture, Practices and Metrics
-DevOps explained: its origins, the CALMS model, the Three Ways, key practices, DORA metrics, and how DevOps connects to Lean, Agile and Kanban.
+What Is DevOps? Principles, Practices and DORA Metrics
+DevOps explained: what it is, where it came from, CALMS and the Three Ways, core practices, the five DORA metrics with a worked example, and what PMs do.
 What Is Kanban? Definition, Principles and Examples
 What is Kanban? Learn the Kanban method's meaning, principles, practices, board, WIP limits and flow metrics, with worked examples and step-by-step setup.
 WIP Limits in Kanban: How to Set Them, With Examples
@@ -55349,8 +55349,8 @@ It depends on the starting point. A new product can be set up for continuous del
 Yes. Many regulated organisations practise it by building approvals, audit trails and validation evidence into the pipeline, so every change is traceable. They may release less often, but the software stays releasable.
 
 ### Related guides
-What Is DevOps? Culture, Practices and Metrics
-DevOps explained: its origins, the CALMS model, the Three Ways, key practices, DORA metrics, and how DevOps connects to Lean, Agile and Kanban.
+What Is DevOps? Principles, Practices and DORA Metrics
+DevOps explained: what it is, where it came from, CALMS and the Three Ways, core practices, the five DORA metrics with a worked example, and what PMs do.
 How Agile Software Development Works: Practices and Best Practices
 How Agile software development works day to day: user stories, CI/CD, testing, code review and DevOps, plus best practices for high-performing teams.
 Value Stream Mapping: Steps, Metrics, Symbols and Examples
@@ -56163,62 +56163,220 @@ Cycle time vs lead time explained with examples: where each starts and ends, why
 Throughput in Kanban: How to Measure and Use It
 What throughput means in Kanban, how to measure it, how to forecast delivery dates with throughput and Monte Carlo simulation, and how to improve it.
 WIP Aging Chart: Spot Stuck Work Before It's Late
-What a WIP aging chart is, how to read it with cycle time percentiles, and how to use work item age in daily Kanban meetings to prevent delays.
+How to read a WIP aging chart: work item age, percentile lines, per-stage pace, a worked example with SLE risk, daily actions and how to build one in Excel.
 Flow Efficiency: Formula, Examples and How to Improve It
 Flow efficiency explained: the formula, worked examples, how to measure active and wait time on a Kanban board, what a good figure is and how to improve it.
 
 
 ---
 
-# What Is DevOps? Culture, Practices and Metrics
+# What Is DevOps? Principles, Practices and DORA Metrics
 
 URL: https://neuralprojectinstitute.com/project-management/kanban/devops/
 Section: Kanban guides
-Summary: DevOps explained: its origins, the CALMS model, the Three Ways, key practices, DORA metrics, and how DevOps connects to Lean, Agile and Kanban.
+Summary: DevOps explained: what it is, where it came from, CALMS and the Three Ways, core practices, the five DORA metrics with a worked example, and what PMs do.
 
 
-## What Is DevOps? Culture, Practices and Metrics
-DevOps is a set of cultural values, practices and tools that bring software development and IT operations together, so teams can deliver changes quickly and reliably. It extends Agile and Lean thinking across the whole path from code to customer.
+## What Is DevOps? Principles, Practices and DORA Metrics
+DevOps is a way of working in which the people who build software and the people who run it share responsibility for getting changes to users quickly and keeping the service reliable. It combines a culture of shared ownership with Lean flow, automation and fast feedback, and its delivery performance is most often measured with DORA's five software delivery metrics. This guide explains the principles behind DevOps, the practices that put them into effect, how to calculate the metrics from a deployment log, and what DevOps changes for project managers.
 - Published 19 September 2026
-- 3 min read
+- Last updated 25 November 2026
+- 21 min read
 
 ### Key takeaways
-- DevOps unites development and operations around shared goals.
-- CALMS and the Three Ways summarise its principles.
-- Measure it with deployment frequency, lead time, change failure rate and time to restore.
+- DevOps is a set of cultural values and technical practices, not a tool, a job title or a framework with a rulebook. Its aim is fast, safe flow of changes from idea to production and fast feedback back again.
+- CALMS (Culture, Automation, Lean, Measurement, Sharing) and Gene Kim's Three Ways (flow, feedback, continual learning) are the two most common summaries of its principles.
+- DORA now measures software delivery with five metrics: change lead time, deployment frequency and failed deployment recovery time (throughput), plus change fail rate and deployment rework rate (instability). Lists of four metrics with "time to restore service" are out of date.
+- DORA's research finds that speed and stability tend to improve together. Use the metrics to track one service's improvement over time, not as targets or to rank teams.
+- For project managers, DevOps shifts control from large release gates and change boards towards small batches, automated checks and peer review, the approach DORA's research associates with better delivery performance.
 
-### Origins
-The term DevOps emerged around 2009, when Patrick Debois organised the first DevOpsDays conference in Ghent, Belgium. It grew from frustration with the wall between developers, who wanted change, and operations, who wanted stability.
+### What is DevOps?
+**DevOps** is a set of cultural values, practices and tools that brings software development and IT operations together, so that one team, or closely aligned teams, build, release and run a service. It applies Lean and Agile thinking to the path from code change to production, using small batches, automation and fast feedback to deliver quickly and reliably.
+The word joins **development** (writing and changing software) and **operations** (deploying, running, monitoring and supporting it). The idea is older than any tool: the people who change a system and the people who keep it running should work towards the same goal and see the same results.
+DevOps is easy to misread, so three clarifications help:
+- **It is not only a job title.** Many organisations employ "DevOps engineers" who build pipelines and automation, but a team does not become DevOps by hiring one, or by renaming its operations group.
+- **It is not a toolset.** Pipelines, containers and monitoring tools support DevOps practices; buying them without changing how teams share responsibility tends to automate the old hand-offs.
+- **It has no single official guide.** Unlike Scrum (the Scrum Guide) or Kanban (the Kanban Guide), DevOps has no governing body or definitive text. The most widely used evidence base is the survey research of DORA (DevOps Research and Assessment), published annually since 2014 and now hosted at dora.dev.
 
-### The CALMS model
-| Element | Meaning |
+#### The problem DevOps set out to solve
+In a traditional IT organisation, developers are rewarded for delivering change and operations staff for keeping systems stable. Each group optimises for its own goal. Developers hand over large releases; operations, wary of the risk, add approval steps and release windows; releases become larger and rarer; and each one is riskier than the last. When something fails, the investigation turns into a dispute about whose fault it was.
+DevOps breaks that loop by making both groups accountable for the same outcome: changes that reach users quickly **and** work once they get there. That shared goal is why DevOps sits naturally beside [Lean](https://neuralprojectinstitute.com/project-management/kanban/lean-kanban/) and Kanban: all three treat waiting, hand-offs and large batches as the main enemies of flow.
+
+### Where DevOps came from
+DevOps emerged from practitioners rather than a standards body. The key steps are well documented:
+| When | What happened | Why it matters |
+| --- | --- | --- |
+| 2001 | The [Agile Manifesto](https://neuralprojectinstitute.com/project-management/agile/agile-manifesto-values-and-principles/) is published | Development teams start delivering working software in short iterations, but releases still queue behind operations |
+| 2008–2009 | Belgian consultant Patrick Debois presents on "agile infrastructure" at the Agile 2008 conference in Toronto, and practitioners debate the gap between developers and operations | The problem is named as an organisational one, not a technical one |
+| 30–31 October 2009 | Debois organises the first devopsdays conference in Ghent, Belgium | The shortened name "DevOps" spreads from the event's title |
+| 2010s | Practitioners summarise the movement as CAMS, later CALMS; Gene Kim publishes the Three Ways (2012) | Principles that teams can apply without a prescribed method |
+| 2014 onwards | The DORA research programme begins measuring software delivery performance through annual surveys | DevOps gains an evidence base and a shared set of metrics |
+| 2023–2024 | DORA renames and narrows its recovery metric and adds a fifth metric, deployment rework rate | Current measurement guidance uses five metrics |
+
+### DevOps principles: CALMS and the Three Ways
+Two summaries of DevOps principles are used widely. They overlap, but they answer different questions: CALMS describes what an organisation needs to have in place, while the Three Ways describe the direction of improvement.
+
+#### The CALMS model
+CALMS extends an earlier acronym, CAMS (Culture, Automation, Measurement, Sharing). Jez Humble, co-author of *The DevOps Handbook*, is generally credited with adding the L for Lean.
+| Element | What it means in practice | Typical evidence that it is in place |
+| --- | --- | --- |
+| Culture | Shared responsibility for outcomes between the people who build and the people who run a service | Developers take part in incident response; operations staff join planning |
+| Automation | Builds, tests, environment set-up and deployments run without manual steps | Any engineer can deploy a tested change through the same pipeline |
+| Lean | Small batches, limited [work in progress](https://neuralprojectinstitute.com/project-management/kanban/wip-limits/) and the removal of waiting | Changes are merged at least daily; queues before review and release are short |
+| Measurement | Decisions are based on flow, quality and service data rather than opinion | The team reviews delivery metrics and service health regularly |
+| Sharing | Knowledge, tools and lessons move freely between teams | Post-incident reviews are published; runbooks and dashboards are shared |
+
+#### The Three Ways
+Gene Kim set out the Three Ways in a 2012 article and later used them as the backbone of *The Phoenix Project* and *The DevOps Handbook*. Each Way implies specific practices:
+| Way | Principle | Practices that put it into effect |
+| --- | --- | --- |
+| First Way: flow and systems thinking | Optimise the whole value stream from requirement to customer, not one department | [Value stream mapping](https://neuralprojectinstitute.com/project-management/kanban/value-stream-mapping/), small batches, WIP limits, continuous delivery |
+| Second Way: amplify feedback loops | Create fast feedback from right to left, from production and users back to development | Automated testing, monitoring and alerting, peer review, telemetry on user behaviour |
+| Third Way: continual experimentation and learning | Build a culture that takes informed risks, learns from failure and practises until improvements stick | Blameless post-incident reviews, time reserved for improvement, controlled experiments |
+The First Way is where DevOps meets the [theory of constraints](https://neuralprojectinstitute.com/project-management/kanban/theory-of-constraints/): improving a stage that is not the bottleneck does little for overall flow. A team that automates its build while changes still wait three days for a manual approval has optimised the wrong step.
+
+### Core DevOps practices
+No single practice makes a team "do DevOps". The practices below appear in DORA's capability catalogue and in most practitioner accounts. The right-hand column shows which principle each one serves, which is useful when deciding where to start.
+| Practice | What it does | Main principle served |
+| --- | --- | --- |
+| Version control for everything | Application code, configuration, scripts and infrastructure definitions are stored and reviewed in one history | Flow; enables every other practice |
+| Continuous integration and trunk-based development | Developers merge small changes into the main branch at least daily, with automated build and test on every merge | Flow and feedback |
+| [Continuous delivery](https://neuralprojectinstitute.com/project-management/kanban/continuous-delivery/) | Every change that passes the pipeline is releasable, so release becomes a business decision, not a technical project | Flow |
+| Test automation | Fast, reliable automated tests run on every change | Feedback |
+| Infrastructure as code | Servers, networks and environments are defined in versioned files and created automatically | Flow; reduces configuration drift |
+| Monitoring and observability | Teams see how the service behaves in production and are alerted before users report problems | Feedback |
+| Loosely coupled architecture and teams | Teams can test and deploy their service without coordinating with many others | Flow |
+| Working in small batches | Features are split so that each change can be finished, checked and released in hours or days | Flow and feedback |
+| Blameless post-incident reviews | After an incident, the team asks what in the system allowed it, not who to blame | Learning |
+DORA's guidance on small batches is concrete: if a batch of work takes more than a week to complete and check, it is too big. Smaller changes are easier to review, test, release and, when something goes wrong, to diagnose and reverse.
+Tip
+If you are choosing where to start, find the longest wait in your path to production first. A [value stream map](https://neuralprojectinstitute.com/project-management/kanban/value-stream-mapping/) from commit to live usually shows that changes spend far more time waiting for review, testing environments or approval than being worked on.
+
+### How DevOps fits with Agile, Lean, Kanban, SRE and ITIL
+DevOps borrows from several older bodies of practice and overlaps with newer ones. The table separates what each one is, so you can combine them without confusing their purposes.
+| Approach | What it is | Relationship to DevOps |
+| --- | --- | --- |
+| Agile | A set of values and principles for delivering software iteratively | DevOps extends Agile's short feedback loops past "done in development" to release and operation |
+| Lean | A management philosophy focused on value, flow and the removal of waste | Supplies the L in CALMS and the First Way's focus on flow |
+| Kanban | A strategy for managing and improving the flow of work using visualisation, WIP control and flow metrics | A common way to run DevOps and operations teams day to day |
+| Continuous delivery | A specific engineering practice that keeps software always releasable | One of the core technical practices inside DevOps |
+| Site reliability engineering (SRE) | Google's approach to running services, using software engineering, service level objectives and error budgets | Google's SRE Workbook describes SRE as one concrete implementation of DevOps principles |
+| ITIL / IT service management | A framework of service management practices, including change enablement and incident management | Compatible when change and incident practices are designed for small, frequent, automated changes |
+
+#### DevOps and Kanban
+DevOps and Kanban reinforce each other. Kanban makes the whole value stream visible, including operational work such as incidents and maintenance that is often invisible on development boards; DORA lists [visual management](https://neuralprojectinstitute.com/project-management/kanban/visual-management/), visibility of work in the value stream and WIP limits among its capabilities. Kanban's flow metrics then describe the work end to end, while DORA's metrics focus on the stretch from commit to production.
+The two sets of measures differ in scope. [Lead time](https://neuralprojectinstitute.com/project-management/kanban/cycle-time-vs-lead-time/) in Kanban usually starts when a request is accepted; DORA's change lead time starts only when code is committed. A team can have a change lead time of a few hours and still keep customers waiting weeks, because most of the delay happens before anyone writes code. Track both. Teams running a mix of planned work and interruptions will find practical policies, including reserved capacity and classes of service, in our guide to [Agile IT operations](https://neuralprojectinstitute.com/project-management/agile/agile-operations-it/).
+
+#### DevSecOps and platform engineering
+**DevSecOps** moves security into the same flow: dependency scanning, static analysis and policy checks run in the pipeline on every change, and security specialists help teams build safe defaults instead of inspecting finished releases. DORA calls this capability pervasive security.
+**Platform engineering** provides internal, self-service platforms (pipelines, environments, observability, templates) so that each product team does not have to build its own. DORA's 2025 report found that 90% of surveyed organisations had adopted at least one internal platform, and linked platform quality to an organisation's ability to benefit from AI. A platform team is a product team whose customers are other developers; it fails when it becomes a new ticket queue between development and operations.
+
+### How DevOps performance is measured: the five DORA metrics
+DORA defines five software delivery performance metrics, grouped into **throughput** (how many changes move through the system) and **instability** (how well deployments go). The list below follows DORA's metrics guide on dora.dev, last updated in January 2026, and matches our guide to [Agile metrics and KPIs](https://neuralprojectinstitute.com/project-management/agile/agile-metrics-and-kpis/).
+| Metric | Group | Definition | Usual unit |
+| --- | --- | --- | --- |
+| Change lead time | Throughput | Time from a change being committed to version control to that change being deployed to production | Hours or days (median and percentiles) |
+| Deployment frequency | Throughput | How often deployments to production happen, or the time between deployments | Deployments per day or week |
+| Failed deployment recovery time | Throughput | Time to recover from a deployment that fails and needs immediate intervention | Minutes or hours (median) |
+| Change fail rate | Instability | Share of deployments that need immediate intervention, such as a rollback or hotfix | Percentage of deployments |
+| Deployment rework rate | Instability | Share of deployments that are unplanned and result from an incident in production | Percentage of deployments |
+
+#### Why older articles list four metrics
+DORA's history of its metrics, published on dora.dev in January 2026, explains the changes. The research began in 2014 with four candidate measures: deployment frequency, lead time, mean time to recover (MTTR) and change fail rate. By 2015 all four were in use, split into throughput and stability groups, and they later became known as the "four keys". In 2023 MTTR, also called time to restore service, was renamed **failed deployment recovery time** and narrowed to failures caused by a change to production; the old measure mixed in outages with external causes, such as a data centre failure, that say nothing about delivery. In 2024 DORA added **deployment rework rate** and regrouped the five metrics into throughput and instability.
+DORA also measures reliability (formerly availability), but treats it as a measure of operational performance rather than a sixth delivery metric. Its own history page notes that the 2021 report wrongly called reliability the fifth metric.
+
+#### How to read the metrics
+- **Speed and stability are not a trade-off.** DORA reports that the metrics are generally correlated: teams that are strong on one tend to be strong on all five.
+- **Measure one application or service at a time.** Blending a mobile app, a batch data platform and a website into one number hides the differences that matter.
+- **Compare a service with its own past, not with other teams.** DORA advises using the metrics to track improvement over time rather than to rank teams, and notes that comparing very different applications can mislead.
+- **Never set a single metric as a target.** A team told to raise deployment frequency can split deployments artificially. Read the throughput and instability groups together, so that one cannot improve at the other's expense unnoticed.
+DORA metrics are one category in a wider measurement set that also includes flow, quality, value and team health measures.
+
+### Worked example: calculating DORA metrics from a deployment log
+**Illustrative example.** A product team runs one customer-facing web service. Over four weeks (20 working days) it made **20 production deployments**. To keep the arithmetic simple, each deployment carried one change. Before calculating anything, the team wrote down its counting rules, because the same log can produce different numbers under different rules.
+| Counting rule | Team's choice |
 | --- | --- |
-| Culture | Shared responsibility and collaboration between development and operations |
-| Automation | Automate builds, tests, infrastructure and deployments |
-| Lean | Small batches, limited WIP, focus on flow |
-| Measurement | Measure flow, quality and user outcomes |
-| Sharing | Share knowledge, tools and lessons learned |
+| Change lead time starts | When the change is committed to the main branch |
+| Change lead time stops | When the deployment completes in production |
+| Time unit | Elapsed clock hours, including nights and weekends |
+| Failed deployment | A deployment needing immediate intervention: rollback, hotfix or feature switched off |
+| Rework deployment | An unplanned deployment made because of a production incident (a hotfix counts here, not as a failure) |
+| Recovery time | From detection of the failure to service restored for users, in minutes |
 
-### The Three Ways
-Popularised by The Phoenix Project and The DevOps Handbook:
-1. **Flow:** speed up the flow of work from development to operations to the customer.
-2. **Feedback:** create fast feedback from operations and users back to development.
-3. **Continual learning and experimentation:** build a culture that learns from failure and improves.
+#### Step 1: deployment frequency
+**Deployment frequency = number of production deployments ÷ length of period.** With 20 deployments in 4 weeks: 20 ÷ 4 = **5 deployments per week**, or 20 ÷ 20 = **1 per working day**.
 
-### Key practices
-- [Continuous integration and continuous delivery](https://neuralprojectinstitute.com/project-management/kanban/continuous-delivery/).
-- Infrastructure as code.
-- Automated testing and monitoring.
-- Small, frequent releases with feature flags.
-- Teams that build and run their own services.
-- Blameless post-incident reviews.
+#### Step 2: change lead time
+The 20 lead times, sorted, in hours: 3, 4, 5, 6, 6, 8, 9, 20, 22, 24, 26, 27, 30, 46, 50, 52, 70, 72, 75, 120. Lead time data is skewed by a few slow changes, so report the median and a high percentile rather than the mean.
+- **Median** (half of changes deployed within this time): the average of the 10th and 11th values, (24 + 26) ÷ 2 = **25 hours**.
+- **85th percentile** (nearest-rank method): rank = 0.85 × 20 = 17, so the 17th value, **70 hours**. About 85% of changes reached production within 70 hours.
+- **Mean** for comparison: 675 ÷ 20 = 33.75 hours, pulled upwards by the 120-hour change.
 
-### Measuring DevOps performance
-The DORA research programme popularised four key measures of software delivery:
-- **Deployment frequency:** how often you release.
-- **Lead time for changes:** from commit to production.
-- **Change failure rate:** share of releases causing problems.
-- **Time to restore service:** how quickly you recover from failure.
+#### Step 3: change fail rate and deployment rework rate
+Three deployments needed immediate intervention: two were rolled back and one was fixed by a hotfix. Two deployments were unplanned: the hotfix itself, and an urgent fix for a production incident that users reported, caused by a long-standing defect rather than by any of this period's deployments.
+- **Change fail rate = failed deployments ÷ total deployments × 100** = 3 ÷ 20 × 100 = **15%**.
+- **Deployment rework rate = unplanned deployments caused by production incidents ÷ total deployments × 100** = 2 ÷ 20 × 100 = **10%**.
+
+#### Step 4: failed deployment recovery time
+The three failures took 35, 50 and 240 minutes to recover. The **median is 50 minutes**; the mean is (35 + 50 + 240) ÷ 3 = 108.3 minutes, more than twice the median because of one long recovery. With only three failures, report the individual values alongside any summary figure.
+
+#### Interpreting the results
+| Metric | Result | Unit |
+| --- | --- | --- |
+| Deployment frequency | 5 | Deployments per week |
+| Change lead time | Median 25; 85th percentile 70 | Hours |
+| Failed deployment recovery time | Median 50 (values 35, 50, 240) | Minutes |
+| Change fail rate | 15 | % of deployments |
+| Deployment rework rate | 10 | % of deployments |
+The numbers raise questions rather than answer them. Half of the changes reached production within about a day, yet six of the twenty (30%) took more than 48 hours. When the team traced those six, most had waited over a day for code review. Waiting time, not deployment speed, was the constraint.
+Following DORA's improvement approach, the team committed to one constraint: review waiting time. It agreed a working policy that open reviews are picked up before new work is started, tracked time to first review as a leading indicator, and planned to recalculate the five metrics after another four weeks. It also opened a blameless review of the 240-minute recovery, because one long recovery matters more to users than the median suggests.
+Tip
+Keep units apart when you report: frequency is a rate, lead and recovery times are durations, and fail and rework rates are percentages of deployments. Never add or average them into a single "DevOps score".
+Two limitations apply. Twenty deployments is a small sample, so a single extra failure moves the change fail rate by 5 percentage points; look at the trend over several periods before drawing conclusions. And the figures describe one service only: they say nothing about whether customers value what was deployed, which needs outcome measures such as adoption or satisfaction.
+
+### How to start a DevOps improvement
+DORA recommends treating improvement as a repeating cycle owned by the whole cross-functional team, rather than a tool roll-out. Adapted for a team starting out:
+1. **Choose one service and set a baseline.** DORA's online Quick Check gives a survey-based starting point; a month of deployment records gives a measured one.
+2. **Map the path from commit to production.** Record each step and how long changes wait before it. Include approvals, environment requests and manual testing.
+3. **Agree the biggest constraint.** Pick one: often manual testing, long-lived branches, environment provisioning or change approval.
+4. **Turn it into a plan with leading indicators.** For example, time to first code review, build duration or the share of tests automated. These move weeks before the DORA metrics do.
+5. **Make the improvement work visible.** Put it on the team's [Kanban board](https://neuralprojectinstitute.com/project-management/kanban/kanban-boards/) alongside feature work, with capacity reserved for it.
+6. **Check progress and repeat.** Recalculate the metrics, discuss them in a [retrospective](https://neuralprojectinstitute.com/project-management/scrum/sprint-retrospective/), and move to the next constraint.
+
+### What DevOps changes for project managers
+DevOps does not remove the need for planning, risk management or stakeholder communication, but it changes where control sits.
+
+#### Change approval
+Many organisations route every production change through a change advisory board (CAB). DORA's research found that heavyweight external approval, such as a CAB or senior-manager sign-off, was associated with worse software delivery performance, and found no evidence that it lowered change fail rates. Its 2019 report concluded that approval works best through peer review during development, recorded in the team's tools, supported by automated testing and monitoring. The CAB's role shifts towards coordinating across teams and deciding business trade-offs. Our guide to [change control](https://neuralprojectinstitute.com/project-management/change-control/) explains how to separate scope and contract changes, which still need formal decisions, from routine technical changes.
+
+#### Release and delivery planning
+When deployment is routine, release becomes a business decision about when users should see a feature, often controlled with feature flags. Plans shift from fixed release dates for large bundles to forecasts based on [throughput](https://neuralprojectinstitute.com/project-management/kanban/throughput/) and a [release plan](https://neuralprojectinstitute.com/templates/release-plan-template/) that is revised as data arrives. Deploying and releasing are no longer the same event.
+
+#### Risk and reporting
+Small, frequent changes carry less risk each, but they need different controls: automated tests, rollback procedures and monitoring replace large pre-release test phases. Record these controls as risk responses in the [risk register](https://neuralprojectinstitute.com/templates/risk-register-template/). For reporting, the five DORA metrics and Kanban flow metrics give stakeholders a factual view of delivery capability; combine them with outcome measures so that reports show value as well as speed. Use a [root cause analysis template](https://neuralprojectinstitute.com/templates/root-cause-analysis-template/) to structure post-incident reviews without assigning blame.
+DevOps changes how software reaches users, but the surrounding project still needs a life cycle, estimates and governance. See our guide to [software project management](https://neuralprojectinstitute.com/project-management/industries/software-project-management/) for how those fit together.
+
+### AI and DevOps: what the 2025 DORA research found
+DORA's 2025 report, *State of AI-assisted Software Development* (published 23 September 2025, based on survey responses from nearly 5,000 technology professionals), found that 90% of respondents used AI at work. Its central finding is that AI acts as an **amplifier**: it strengthens teams with good practices and intensifies the problems of teams without them.
+- AI adoption showed a positive relationship with software delivery **throughput** and product performance.
+- It continued to show a negative relationship with delivery **stability**: producing more change faster exposes weak testing, version control and feedback loops downstream.
+- Teams with loosely coupled architectures and fast feedback saw gains; tightly coupled systems with slow processes saw little benefit.
+The practical lesson is that AI coding assistants do not replace DevOps foundations. DORA's guidance on small batches specifically warns against oversized AI-generated pull requests, which are harder to review. Generated code still needs human review, automated tests and clear accountability for what reaches production; confidential code and data also need clear rules about which AI tools may see them.
+
+### Limitations and when DevOps is harder to apply
+DevOps principles apply widely, but some contexts limit how far the practices can go. The [continuous delivery](https://neuralprojectinstitute.com/project-management/kanban/continuous-delivery/) guide shows how teams adapt pipelines to regulated, embedded and legacy settings; the points below concern DevOps as a whole.
+- **Regulated or safety-critical software** may require formal verification and release certification, so production releases stay infrequent. Shared ownership, automation and fast feedback still apply before release, and DORA lists "using industry as a shield against improving" as a pitfall.
+- **Small teams with little operational load** may gain more from version control, automated testing and a simple pipeline than from a platform team or an SRE practice.
+- **Non-software projects** can borrow the ideas (small batches, fast feedback, blameless learning) but not the DORA metrics, which are defined for software deployments.
+
+### Common DevOps mistakes
+- **Creating a separate "DevOps team" between development and operations.** This adds a third silo and another hand-off. A platform team that offers self-service tools is different from a team that performs deployments on others' behalf.
+- **Buying tools before changing ownership.** A pipeline that ends at a manual sign-off three days later has automated the fast part of the process.
+- **Automating a broken process.** Remove unnecessary steps and approvals first, then automate what remains.
+- **Using DORA metrics as targets or league tables, or tracking speed alone.** Both invite gaming and hide instability, as explained under how to read the metrics.
+- **Mixing old and new definitions.** "Time to restore service" also counted outages with external causes; failed deployment recovery time counts only failures caused by a change. A trend that switches definition part-way is not comparable.
+- **Blaming individuals after incidents.** People stop reporting near misses, and the organisation loses the information it needs to learn. Capture what you learn with a [lessons learned](https://neuralprojectinstitute.com/project-management/lessons-learned/) process.
+DORA metrics cover only the stretch from commit to production. See our guide to [Kanban metrics](https://neuralprojectinstitute.com/project-management/kanban/kanban-metrics/) for the flow measures that cover the rest of the journey.
 
 ### Free templates for this topic
 Kanban Board Template
@@ -56234,38 +56392,38 @@ Beginner · Advanced · Expert
 
 ### Frequently asked questions
 
-**Q: Is DevOps a role or a culture?**
-Primarily a culture and set of practices. Many organisations also have "DevOps engineer" roles focused on automation and tooling.
-
-**Q: How does DevOps relate to Kanban?**
-Both focus on flow, small batches and visibility. Many operations and platform teams use Kanban to manage their work.
-
 **Q: What is DevOps in simple terms?**
-DevOps is a way of working that brings software development and IT operations together, so teams can build, release and run software faster and more reliably.
+DevOps is a way of working in which the people who build software and the people who run it share responsibility for releasing changes quickly and keeping the service reliable, using small batches, automation and fast feedback.
+
+**Q: Is DevOps a role or a culture?**
+Primarily a culture and set of practices. Many organisations also employ DevOps engineers, who usually build and maintain deployment pipelines, infrastructure automation and monitoring, but hiring one does not make a team DevOps on its own.
 
 **Q: When did DevOps start?**
-The term emerged around 2009, when Patrick Debois organised the first DevOpsDays conference in Ghent, Belgium.
+The term spread after Patrick Debois organised the first devopsdays conference in Ghent, Belgium, on 30–31 October 2009. The underlying ideas grew from Agile and Lean practice in the preceding years.
 
 **Q: What does CALMS stand for in DevOps?**
-Culture, Automation, Lean, Measurement and Sharing: a model summarising the main elements of DevOps.
-
-**Q: What are the four DORA metrics in DevOps?**
-Deployment frequency, lead time for changes, change failure rate and time to restore service. They measure both speed and stability of software delivery.
+Culture, Automation, Lean, Measurement and Sharing. It extends the earlier CAMS acronym; Jez Humble is generally credited with adding Lean.
 
 **Q: What are the Three Ways of DevOps?**
-Flow from development to operations, fast feedback in both directions, and a culture of continual learning and experimentation.
+Gene Kim's three principles: flow and systems thinking from development to the customer, amplified feedback loops from production back to development, and a culture of continual experimentation and learning.
+
+**Q: What are the DORA metrics?**
+Five software delivery metrics: change lead time, deployment frequency and failed deployment recovery time (throughput), and change fail rate and deployment rework rate (instability). Deployment rework rate was added in 2024.
+
+**Q: Why did DORA replace time to restore service?**
+In 2023 DORA renamed mean time to restore as failed deployment recovery time and limited it to failures caused by a change to production. The old measure also counted outages with external causes, which do not reflect delivery performance.
 
 **Q: Is DevOps part of Agile?**
-DevOps extends Agile ideas beyond development into release and operations. Agile speeds up building software; DevOps speeds up getting it safely to users.
+DevOps extends Agile ideas beyond development into release and operations. Agile shortens the loop for building software; DevOps shortens the loop for getting it safely to users and learning from how it behaves.
 
 **Q: What is the difference between DevOps and continuous delivery?**
-Continuous delivery is a specific technical practice for keeping software releasable. DevOps is the broader culture and set of practices, of which continuous delivery is a key part; see [continuous delivery](https://neuralprojectinstitute.com/project-management/kanban/continuous-delivery/).
+Continuous delivery is a specific engineering practice that keeps software always releasable. DevOps is the broader culture and set of practices, of which continuous delivery is a central part.
 
-**Q: What does a DevOps engineer do?**
-A DevOps engineer usually builds and maintains deployment pipelines, infrastructure automation and monitoring, helping development and operations teams work together.
+**Q: How is DevOps different from SRE?**
+Site reliability engineering is Google's approach to running services with software engineering, service level objectives and error budgets. Google's SRE Workbook presents it as one concrete way of implementing DevOps principles.
 
-**Q: What is a blameless post-incident review in DevOps?**
-A review after an outage that focuses on what in the system allowed the problem to happen, rather than who to blame, so people share information openly and the team learns.
+**Q: What is a blameless post-incident review?**
+A review after an incident that asks what in the system allowed the problem to happen, rather than who caused it, so that people share information openly and the team can fix the underlying causes.
 
 ### Related guides
 Continuous Delivery: Pipeline, Principles and Kanban Flow
@@ -57863,7 +58021,7 @@ What throughput means in Kanban, how to measure it, how to forecast delivery dat
 Cumulative Flow Diagram: How to Read and Use a CFD
 A cumulative flow diagram (CFD) shows work in each stage over time. Learn to read bands, spot bottlenecks, estimate cycle time and build one step by step.
 WIP Aging Chart: Spot Stuck Work Before It's Late
-What a WIP aging chart is, how to read it with cycle time percentiles, and how to use work item age in daily Kanban meetings to prevent delays.
+How to read a WIP aging chart: work item age, percentile lines, per-stage pace, a worked example with SLE risk, daily actions and how to build one in Excel.
 
 
 ---
@@ -61366,8 +61524,8 @@ Flow Efficiency: Formula, Examples and How to Improve It
 Flow efficiency explained: the formula, worked examples, how to measure active and wait time on a Kanban board, what a good figure is and how to improve it.
 Lean Manufacturing: Principles, Wastes, Tools and Examples
 Lean manufacturing explained: the five principles, eight wastes, key tools such as 5S, kanban and kaizen, worked examples and a step-by-step way to start.
-What Is DevOps? Culture, Practices and Metrics
-DevOps explained: its origins, the CALMS model, the Three Ways, key practices, DORA metrics, and how DevOps connects to Lean, Agile and Kanban.
+What Is DevOps? Principles, Practices and DORA Metrics
+DevOps explained: what it is, where it came from, CALMS and the Three Ways, core practices, the five DORA metrics with a worked example, and what PMs do.
 Lean Kanban: How Lean Thinking Shapes the Kanban Method
 How Lean principles underpin Kanban: value, flow, pull and continuous improvement, the history of Lean Kanban, and how to apply both together.
 
@@ -61801,40 +61959,179 @@ Kanban vs Scrum compared: cadence, roles, planning, WIP limits and metrics, the 
 
 ---
 
-# WIP Aging Chart: Spot Stuck Work Before It's Late
+# WIP Aging Chart: How to Read and Use It, With Examples
 
 URL: https://neuralprojectinstitute.com/project-management/kanban/wip-aging-chart/
 Section: Kanban guides
-Summary: What a WIP aging chart is, how to read it with cycle time percentiles, and how to use work item age in daily Kanban meetings to prevent delays.
+Summary: How to read a WIP aging chart: work item age, percentile lines, per-stage pace, a worked example with SLE risk, daily actions and how to build one in Excel.
 
 
-## WIP Aging Chart: Spot Stuck Work Before It's Late
-Cycle time tells you about items you have already finished. Work item age tells you about items still in progress. A WIP aging chart puts every unfinished item on one chart, so you can act before an item becomes late.
+## WIP Aging Chart: How to Read and Use It, With Examples
+A WIP aging chart plots every unfinished work item as a dot, placed in its current workflow stage at the height of its work item age, with lines showing how long past items took to finish. It tells you which items are at risk of missing your service level expectation while there is still time to act, which cycle time charts cannot do because they only show finished work. This guide explains how work item age is calculated, how to read the dots and percentile lines, and what to do about ageing items, with a fully worked example and spreadsheet instructions.
 - Published 14 September 2026
-- 3 min read
+- Last updated 25 November 2026
+- 19 min read
 
 ### Key takeaways
-- A WIP aging chart plots unfinished items by stage and age.
-- Compare ages with historical cycle time percentiles.
-- Act on old items first in the daily meeting.
+- A WIP aging chart shows work in progress only: one dot per started-but-unfinished item, with workflow stages on the horizontal axis and work item age on the vertical axis.
+- Work item age is the elapsed time since an item started. Calculate it the same way as cycle time, for example today − start date + 1 in calendar days.
+- Horizontal lines show percentiles of historical cycle time (commonly 50th, 70th, 85th and 95th). A dot above the 85th percentile line is already older than 85% of past items were when they finished.
+- Read age against stage: an item that is old in an early stage has most of its work still ahead and is at greater risk than an item of the same age near the end.
+- Review the chart daily, oldest and most at-risk items first, and respond by unblocking, swarming, splitting or escalating before starting new work.
 
-### What the chart shows
-The horizontal axis lists the workflow stages; the vertical axis shows age in days. Each in-progress item is a dot in its current stage, at the height of its age. Background bands show historical [cycle time](https://neuralprojectinstitute.com/project-management/kanban/cycle-time/) percentiles, for example the 50th and 85th.
+### What is a WIP aging chart?
+A **WIP aging chart** (also called an aging work in progress chart) is a scatter chart of the items currently in progress. Each dot is one unfinished item, placed in its workflow stage on the horizontal axis and at its work item age on the vertical axis. Lines from historical cycle time percentiles show which items are ageing beyond what is normal.
+Its purpose is to make the age of unfinished work visible every day. Most Kanban charts look backwards: a [cycle time](https://neuralprojectinstitute.com/project-management/kanban/cycle-time/) scatterplot shows how long finished items took, and a throughput chart counts what was completed. Those are **lagging** measures: by the time an item appears on them, it is too late to change its outcome. Work item age is a **leading** measure, because it describes items that can still be helped.
+The chart is closely associated with Daniel Vacanti, co-author of the Kanban Guide, whose book *Actionable Agile Metrics for Predictability* devotes two chapters to it. The Kanban Guide (edition 2025.5) does not require any particular chart, but it does make work item age one of four mandatory flow metrics and lists "ensuring work items do not age unnecessarily, using the SLE as a reference" as part of actively managing work. The aging chart is the most direct way to do that.
 
-### How to read it
-- **Dots below the 50th percentile:** on track.
-- **Dots approaching the 85th percentile:** at risk; discuss today.
-- **Dots above the 85th percentile:** already slower than most past items; act now.
-- **Old dots in early stages:** items that started and stalled.
+### Work item age: the measure behind the chart
+The Kanban Guide defines **work item age** as the elapsed time between when a work item started and the current date. It applies only to items that have started and not finished; once an item finishes, its age becomes its cycle time.
+**Work item age = today's date − start date + 1**
+- **Start date:** the date the item crossed your agreed start point, usually when it is pulled into the first in-progress column. Use exactly the same start point as for cycle time, or the two cannot be compared.
+- **Today's date:** the date you look at the chart.
+- **+ 1:** a counting convention, so that an item started today has an age of 1 day rather than 0. Vacanti's book uses it, and our [cycle time vs lead time](https://neuralprojectinstitute.com/project-management/kanban/cycle-time-vs-lead-time/) guide uses the same convention for cycle time. Whichever convention you choose, apply it to both measures.
+- **Unit:** calendar days are usual, because customers wait through weekends and holidays too. Working days are acceptable if cycle time is also counted in working days.
+For example, an item started on Monday 16 November and still unfinished on Wednesday 25 November has an age of 25 − 16 + 1 = **10 days**.
 
-### Using it in the daily meeting
-1. Start with the oldest items, especially those nearing your service level expectation.
-2. Ask what is needed to move each one forward.
-3. Swarm, unblock or split items where needed.
-4. Avoid starting new work while old items are at risk.
+#### Total age or time in the current stage?
+Tools differ on what the vertical axis shows. ActionableAgile's Aging Work in Progress chart plots **total age** since the item started. Businessmap's Aging WIP chart describes age as the days an item has spent **in its current stage**. Both are useful, but they answer different questions:
+| Measure | Question it answers | Best used for |
+| --- | --- | --- |
+| Total work item age | Is this item at risk of missing our service level expectation? | Daily prioritisation; matches the Kanban Guide's definition and compares directly with cycle time percentiles |
+| Time in current stage | Has this item stalled where it is now? | Diagnosing a bottleneck or a stuck hand-off within one stage |
+Use total age as the primary measure. An item that has spent only one day in Testing may still be 20 days old overall, and its customer experiences the 20 days, not the one.
 
-### Why work item age matters
-Age is a leading indicator: it warns you while there is still time to act. Combined with a [service level expectation](https://neuralprojectinstitute.com/project-management/kanban/kanban-planning/), it turns Kanban from reporting what happened into managing what is happening.
+### Anatomy of a WIP aging chart
+Whichever tool draws it, the chart has the same parts:
+| Element | What it shows | Where the data comes from |
+| --- | --- | --- |
+| Horizontal axis | Workflow stages in board order, from the first started stage to the last stage before done | Your [Kanban board](https://neuralprojectinstitute.com/project-management/kanban/kanban-boards/) columns |
+| Vertical axis | Work item age in days | Start dates of unfinished items |
+| Dots | One per item in progress; a number on a dot means several items share the same stage and age | Current board state |
+| Percentile lines | The age by which a given share of past items had finished, for example 50%, 70%, 85% and 95% | Cycle times of finished items over a recent period |
+| Pace bands (optional) | Colour zones per stage showing how old past items typically were when they left that stage | Stage exit dates of finished items |
+| SLE marker (optional) | Your service level expectation, often the 85th percentile line | Agreed SLE |
+A **service level expectation (SLE)** has two parts, according to the Kanban Guide: a period of elapsed time and a probability, such as "85% of items finish within 14 days". It should be based on historical cycle time. On the aging chart it becomes a threshold: an item crossing it has not necessarily failed, but it now belongs to the slowest 15% of the team's work. See our [Kanban planning](https://neuralprojectinstitute.com/project-management/kanban/kanban-planning/) guide for how to calculate an SLE and keep it up to date.
+Percentile lines change slowly as new items finish. Pace bands add information that the overall lines cannot: whether an item is behind for its stage. ActionableAgile, for example, colours each column by applying percentiles of past items' ages to that column, and its documentation says at least 10 completed items are needed for the calculation.
+
+### Worked example: reading one team's WIP aging chart
+**Illustrative example.** A five-person website development team uses a Kanban board with four in-progress stages: Analysis, Development, Review and Testing. An item starts when it is pulled into Analysis and finishes when it leaves Testing. The team counts calendar days and uses the + 1 convention.
+
+#### Step 1: calculate the percentile lines from finished work
+Over the last six weeks the team finished 30 items. Their cycle times, sorted, in days: 2, 3, 3, 4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8, 8, 9, 9, 10, 10, 11, 12, 12, 13, 14, 16, 18, 21, 26.
+With the nearest-rank method, the rank for percentile p is p ÷ 100 × n, rounded up, where n is the number of items:
+| Percentile | Rank (n = 30) | Cycle time (days) | Meaning |
+| --- | --- | --- | --- |
+| 50th | 0.50 × 30 = 15 | 8 | Half of past items finished within 8 days |
+| 70th | 0.70 × 30 = 21 | 10 | 70% finished within 10 days |
+| 85th | 0.85 × 30 = 25.5 → 26 | 14 | 85% finished within 14 days |
+| 95th | 0.95 × 30 = 28.5 → 29 | 21 | 95% finished within 21 days |
+The team's SLE is therefore **85% of items finish within 14 days**. As a check, 26 of the 30 items (87%) took 14 days or less; with nearest rank, the chosen value always covers at least the stated share.
+
+#### Step 2: calculate the age of every item in progress
+On Wednesday 25 November 2026, nine items are in progress. Age = 25 November − start date + 1. The fifth column counts how many of the 30 past items finished in fewer days than the item's current age, which shows how unusual that age already is.
+| Item | Stage | Started | Age (days) | Past items that finished sooner | Position against the lines |
+| --- | --- | --- | --- | --- | --- |
+| A | Analysis | Tue 24 Nov | 2 | 0 of 30 (0%) | Below 50th |
+| B | Analysis | Tue 17 Nov | 9 | 17 of 30 (57%) | Between 50th and 70th |
+| C | Development | Mon 23 Nov | 3 | 1 of 30 (3%) | Below 50th |
+| D | Development | Thu 19 Nov | 7 | 11 of 30 (37%) | Below 50th |
+| E | Development | Thu 12 Nov | 14 | 25 of 30 (83%) | On the 85th (SLE) line; blocked by a third-party API |
+| F | Review | Fri 20 Nov | 6 | 8 of 30 (27%) | Below 50th |
+| G | Review | Mon 16 Nov | 10 | 19 of 30 (63%) | On the 70th line |
+| H | Testing | Wed 18 Nov | 8 | 14 of 30 (47%) | On the 50th line |
+| I | Testing | Mon 9 Nov | 17 | 27 of 30 (90%) | Above the 85th; SLE already missed |
+
+#### Step 3: read age against stage
+Against the overall lines alone, item B (9 days) and item H (8 days) look similar: both sit close to the 50th percentile. But H is in Testing, the last stage, while B is still in Analysis, with Development, Review and Testing ahead of it. The team's tool also reports **pace**: the age by which 85% of past items had left each stage (illustrative figures for the same 30 items).
+| Stage | 85% of past items had left this stage by age (days) | Items now in the stage | Reading |
+| --- | --- | --- | --- |
+| Analysis | 3 | A (2), B (9) | A on pace; B three times the stage's 85th percentile |
+| Development | 8 | C (3), D (7), E (14) | D near the limit; E well behind |
+| Review | 11 | F (6), G (10) | G close to the limit |
+| Testing | 14 | H (8), I (17) | H on pace; I behind |
+The pace view moves B from "middle of the pack" to one of the three most urgent items. This is the most common insight an aging chart gives that a simple list of ages does not: **the same age means different risk in different stages**.
+
+#### Step 4: estimate each item's chance of meeting the SLE
+Historical data can also answer a sharper question: of past items that reached this age, how many still finished within 14 days? This is a conditional share: items with a cycle time between the current age and 14 days, divided by all items with a cycle time of at least the current age.
+- **Item A (age 2):** all 30 past items reached age 2, and 26 of them finished within 14 days, so 26 ÷ 30 = **87%**.
+- **Item B (age 9):** 13 past items reached age 9; 9 of them finished within 14 days, so 9 ÷ 13 = **69%**, and lower in practice because B is still in Analysis.
+- **Item G (age 10):** 11 past items reached age 10; 7 finished within 14 days, so 7 ÷ 11 = **64%**.
+- **Item E (age 14):** 5 past items reached age 14 and only 1 finished on that day, so **1 in 5 (20%)**. Since E is blocked in Development, it will almost certainly miss the SLE.
+- **Item I (age 17):** the SLE is already missed. Of the 3 past items that reached age 17, 2 finished within 21 days (the 95th percentile).
+The pattern is the reason ageing matters: **the older an item gets, the lower its chance of finishing within the SLE**, because the items that remain unfinished at a given age are disproportionately the slow ones. These shares assume the future resembles the past 30 items and ignore stage, so treat them as a guide to priority rather than a forecast.
+
+#### Step 5: decide what to do
+At the daily meeting the team works through the items from most to least at risk:
+1. **Item I (17 days, Testing):** past the SLE. Two people pair on the remaining tests today, and the delivery lead tells the requester to expect it within the next few days rather than leaving them to discover the delay.
+2. **Item E (14 days, blocked):** escalate the third-party API issue the same day and record the blocked time, so the cause can be analysed later with [blocker clustering](https://neuralprojectinstitute.com/project-management/kanban/blocker-clustering/).
+3. **Item B (9 days, Analysis):** ask why. The analyst reports that the item has grown to cover three separate page templates. The team splits it into three smaller items, and the first enters Development tomorrow.
+4. **Item G (10 days, Review):** a developer reviews it before starting anything new.
+5. **No new item starts today** while four items are at risk.
+
+#### Step 6: check the cause with Little's Law
+Thirty items in six weeks is a throughput of 5 items a week, or 30 ÷ 42 ≈ 0.71 items per calendar day. Little's Law says average cycle time ≈ average WIP ÷ average throughput. Over the six weeks the mean cycle time was 275 ÷ 30 ≈ 9.2 days, which implies average WIP of about 9.2 × 0.71 ≈ 6.5 items. Today there are 9 items in progress. If throughput stays at 30 items per 42 days, 9 ÷ (30 ÷ 42) = **12.6 days** average cycle time, about three days longer than before.
+The aging chart is showing a symptom; the cause is that the team has started more work than it finishes. Its next action is to review its [WIP limits](https://neuralprojectinstitute.com/project-management/kanban/wip-limits/). Little's Law describes long-run averages in a stable system, so this is a direction of travel, not a precise prediction.
+
+### Patterns to look for and what they mean
+After a few weeks of daily use, most teams recognise a handful of recurring shapes on the chart:
+| Pattern on the chart | Likely meaning | Typical response |
+| --- | --- | --- |
+| Old dots in early stages | Items started before they were understood, or too large | Split, clarify or, if the work is no longer needed, cancel it |
+| Many dots stacked in one stage | A bottleneck or a full queue waiting for the next stage | Swarm on the downstream stage; check the WIP limit for that column |
+| All dots rising together day after day | Little or nothing is finishing | Stop starting; finish or unblock the oldest items |
+| A few dots far above the 95th line | Forgotten, parked or blocked items still counted as in progress | Decide explicitly: resume, split or cancel and remove |
+| Dots pile up in the last stage before done | Items waiting for release, sign-off or deployment | Look at the release or approval policy rather than the team's work |
+| Most dots above the 85th line | WIP has grown, or the SLE is out of date | Reduce WIP, then recalculate percentiles from recent data |
+Some tools offer a replay that shows how the chart looked on earlier days. Comparing the same items a week apart shows whether dots are moving right (progressing) or only upwards (ageing in place).
+
+### Using the chart in the daily Kanban meeting
+The aging chart is designed for the daily meeting, where the team focuses on the work rather than on individual status updates. A sequence that works for most teams:
+1. **Start from the right of the chart** and work leftwards, because items closest to done need the least effort to finish.
+2. **Within each stage, start with the oldest dot**, and look first at anything above the 85th percentile or behind its stage pace.
+3. **Ask what the item needs to move today**: a reviewer, a decision, a test environment, an answer from a supplier.
+4. **Agree an action**: swarm, pair, unblock, escalate, split, or cancel if the item no longer has value.
+5. **Check before pulling new work**: if items are at risk, finishing them takes priority over starting more.
+Fifteen minutes is usually enough. The [Kanban meetings and cadences](https://neuralprojectinstitute.com/project-management/kanban/kanban-ceremonies/) guide explains how the daily meeting fits with replenishment and service delivery reviews. Scrum teams can use the same chart during the [Daily Scrum](https://neuralprojectinstitute.com/project-management/scrum/daily-scrum/) to inspect progress towards the Sprint Goal; the Scrum Guide does not require it, but nothing in Scrum prevents it.
+Tip
+Mark blocked items differently on the chart (a different colour or shape). A blocked dot keeps ageing, and seeing several blocked items in a row on the chart is a prompt to look for a common cause.
+
+### How to build a WIP aging chart in a spreadsheet
+You do not need a specialist tool. The **Cards** tab in the advanced and expert versions of our free [Kanban board template](https://neuralprojectinstitute.com/templates/kanban-board-template/) already records Column (D), Started (E) and Finished (F) dates, with headers on row 5 and cards from row 6, and its Cycle time column (G) uses finish date − start date + 1. It does not include an aging chart, but you can add one in about fifteen minutes:
+1. **Extend the card list** so that it holds at least 20 to 30 finished items plus everything currently in progress, and copy the Cycle time formula, =IF(F6="","",F6-E6+1), down column G for every row.
+2. **Add an Age column** (column I). For a card with Started in column E and Finished in column F on row 6: =IF(AND(E6<>"",F6=""),TODAY()-E6+1,""). Finished cards and cards not yet started stay blank.
+3. **Number the stages.** List your in-progress stages in order in a spare range, for example L2:L5, and add a Stage number column (column J): =IFERROR(MATCH(D6,$L$2:$L$5,0),"").
+4. **Spread overlapping dots.** Add a Plot X column (column K) so that items in the same stage do not sit on top of each other: =IF(J6="","",J6+(COUNTIF($J$6:J6,J6)-1)*0.08), where J holds the stage number.
+5. **Calculate the percentile lines** from the Cycle time column G with the nearest-rank method, for example the 85th: =SMALL($G$6:$G$40,ROUNDUP(0.85*COUNT($G$6:$G$40),0)). Repeat with 0.5, 0.7 and 0.95.
+6. **Insert a scatter chart** with Plot X on the horizontal axis and Age on the vertical axis. Label the axis positions 1 to 4 with your stage names.
+7. **Add each percentile as a two-point line series**, from x = 0.5 to x = 4.5 at the percentile's value, so it runs across the whole chart.
+Excel's PERCENTILE.INC and Google Sheets' PERCENTILE functions interpolate between values, so they can give slightly different results from nearest rank. Either is acceptable if you use the same method every time and say which one you use.
+
+### WIP aging chart vs other Kanban charts
+Each standard Kanban chart answers a different question, and they work best together. Our [Kanban metrics](https://neuralprojectinstitute.com/project-management/kanban/kanban-metrics/) guide covers the full set.
+| Chart | Shows | Items included | Best for |
+| --- | --- | --- | --- |
+| WIP aging chart | Age of each unfinished item by stage | In progress only | Daily decisions on what to finish or unblock |
+| Cycle time scatterplot | Cycle time of each finished item by finish date | Finished only | Setting and reviewing SLEs; spotting trends |
+| [Cumulative flow diagram](https://neuralprojectinstitute.com/project-management/kanban/cumulative-flow-diagram/) | Count of items in each stage over time | All, as counts | Seeing WIP growth and bottlenecks over weeks |
+| Throughput run chart | Items finished per day or week | Finished only, as counts | Forecasting with [throughput](https://neuralprojectinstitute.com/project-management/kanban/throughput/) and Monte Carlo |
+When an item finishes, its dot leaves the aging chart and becomes a dot on the cycle time scatterplot at the same age. The two charts are two halves of the same picture.
+
+### Limitations of the WIP aging chart
+- **Age says nothing about remaining effort.** A 3-day-old item may have weeks of work left; per-stage pace helps, but only the team can judge size. Right-sized items make the chart far more reliable.
+- **Percentiles need enough history.** With fewer than about 20 to 30 finished items, one unusual item moves the lines noticeably. Use a best guess at first, as the Kanban Guide allows, and recalculate as data accumulates.
+- **Mixed work types blur the lines.** If bugs typically take 3 days and features 15, one set of percentiles misleads for both. Draw separate lines per work type or class of service, or filter the chart; [swimlanes](https://neuralprojectinstitute.com/project-management/kanban/kanban-swimlanes/) on the board often map to these groups.
+- **Stale history misleads.** After a large process change, percentiles from before the change no longer describe the system. Use a rolling window, such as the last 8 to 12 weeks.
+- **The chart depends on honest start dates.** Moving an item back to the backlog to reset its age, or starting the clock late, hides exactly the information the chart exists to show.
+
+### Common WIP aging chart mistakes
+- **Looking at it only in retrospectives.** Its value is in daily action; a weekly glance turns a leading indicator into a lagging one.
+- **Treating dots above the line as individual failures.** Age reflects the system: WIP levels, dependencies and policies. Using the chart to judge people encourages gaming of start dates.
+- **Using different start points for age and cycle time.** If cycle time starts at Development but age starts at Analysis, every item looks older than it is.
+- **Leaving parked items on the chart.** Work that is genuinely on hold should be explicitly cancelled or moved out of the workflow by a team decision, not left to age silently and distort the picture.
+- **Starting new work to look busy while old items wait.** That raises WIP and, through Little's Law, lengthens cycle time for everything.
+- **Ignoring the stage.** Ranking items by age alone misses the early-stage items that are furthest behind.
+Work item age is most useful alongside a service level expectation. See our guide to [cycle time](https://neuralprojectinstitute.com/project-management/kanban/cycle-time/) for how percentiles, scatterplots and SLEs are calculated from finished work.
 
 ### Free templates for this topic
 Kanban Board Template
@@ -61850,38 +62147,41 @@ Beginner · Advanced · Expert
 
 ### Frequently asked questions
 
-**Q: What is work item age on a WIP aging chart?**
-The time since an unfinished item started, measured from the same start point used for cycle time.
-
-**Q: How is a WIP aging chart different from a cycle time scatterplot?**
-The scatterplot shows finished items; the aging chart shows unfinished ones.
-
 **Q: What is a WIP aging chart?**
-A WIP aging chart shows every item currently in progress as a dot, placed in its workflow stage and plotted by how long it has been in progress.
+A scatter chart of the items currently in progress: each dot is one unfinished item, placed in its workflow stage and plotted at its work item age, with lines showing historical cycle time percentiles.
 
-**Q: How do you read a WIP aging chart?**
-Look for dots approaching or above your 85th percentile cycle time line, and for old dots stuck in early stages. Those items need attention first.
+**Q: What is work item age?**
+The elapsed time between when a work item started and the current date. The Kanban Guide makes it one of four mandatory flow metrics, alongside WIP, throughput and cycle time.
 
-**Q: Why is a WIP aging chart a leading indicator?**
-Because it plots work item age, which warns you about items at risk while they are still in progress, before they finish late. Cycle time only tells you after the item is done.
+**Q: How is work item age calculated?**
+Age = today's date − start date + 1, using the same start point and day-counting convention as for cycle time. An item started on 16 November is 10 days old on 25 November.
 
-**Q: How is work item age calculated for a WIP aging chart?**
-Age = today's date − start date for each unfinished item, using the same start point as for [cycle time](https://neuralprojectinstitute.com/project-management/kanban/cycle-time/).
+**Q: How do you read the percentile lines on a WIP aging chart?**
+Each line is a percentile of historical cycle time. A dot above the 85th percentile line is already older than 85% of past items were when they finished, so it is at high risk of missing an SLE based on that percentile.
 
-**Q: What should a team do when the WIP aging chart shows an ageing item?**
-Discuss it at the daily meeting, swarm on it, remove the blocker or split it. Starting new work should wait until it moves.
+**Q: What is the difference between a WIP aging chart and a cycle time scatterplot?**
+The aging chart shows unfinished items and their current age; the scatterplot shows finished items and their final cycle time. When an item finishes, it moves from the first chart to the second.
 
-**Q: What are the percentile lines on a WIP aging chart?**
-They show historical cycle time percentiles, such as the 50th and 85th, so you can see whether an item is already taking longer than most past items.
+**Q: Why is work item age a leading indicator?**
+Because it describes items that are still in progress, it warns you about delays while you can still act. Cycle time is only known after an item has finished.
 
-**Q: Which tools produce a WIP aging chart?**
-Several Kanban tools and analytics add-ons produce one, and you can build a simple version in a spreadsheet from start dates and stages.
+**Q: Should the chart show total age or time in the current stage?**
+Use total age as the main measure, because it compares directly with cycle time and the SLE. Time in the current stage is a useful secondary view for finding where an item has stalled.
+
+**Q: What should a team do when an item is ageing?**
+Discuss it at the daily meeting, then swarm on it, remove the blocker, escalate a dependency or split the item. Avoid starting new work until at-risk items are moving.
+
+**Q: How much history do you need for the percentile lines?**
+Aim for 20 to 30 finished items of similar type. With less data, use a best-guess SLE and recalculate as items finish.
+
+**Q: Can Scrum teams use a WIP aging chart?**
+Yes. The Scrum Guide does not require it, but many teams use work item age during the Daily Scrum to decide which Sprint Backlog items need help first.
 
 **Q: How often should the WIP aging chart be reviewed?**
-Daily, ideally at the daily Kanban meeting, because its value is in catching stuck work early.
+Daily, usually at the daily Kanban meeting or Daily Scrum. Recalculate the percentile lines every few weeks, or after a significant process change.
 
-**Q: How does a WIP aging chart relate to service level expectations?**
-The service level expectation acts as a threshold: items nearing it are at risk of missing it. See [Kanban planning](https://neuralprojectinstitute.com/project-management/kanban/kanban-planning/).
+**Q: Which tools produce a WIP aging chart?**
+Specialist flow analytics tools such as ActionableAgile and Kanban tools such as Businessmap include one, and you can build a simple version in Excel or Google Sheets from start dates and stages.
 
 ### Related guides
 Cycle Time in Kanban: Formula, Examples and How to Reduce It
