@@ -32801,8 +32801,8 @@ How to Implement Agile: A 10-Step Plan for Organisations
 How to implement Agile across teams or a whole organisation: a 10-step plan, readiness check, pilot scoring, 90-day example and mistakes to avoid.
 What Is an Agile Team? Roles, Size, Structure and Examples
 What is an Agile team? Learn the roles, ideal size, characteristics and structure of Agile teams, with a step-by-step setup guide and a worked example.
-Agile Team Structures: Types, Roles and How to Choose One
-The main Agile team structures compared: generalist, specialist, feature, component and platform teams, plus roles, team size and how to choose.
+Agile Team Structures: Types, Examples and How to Choose
+Agile team structures compared: feature, component, platform and enabling teams, how teams interact, reporting lines, scaling, and a worked redesign.
 
 
 ---
@@ -37236,8 +37236,8 @@ Agile Release Planning: Steps, Example and Template
 Agile release planning explained: what a release plan is, how to build one step by step, a worked velocity forecast, burnup charts and a free template.
 What Is an Agile Team? Roles, Size, Structure and Examples
 What is an Agile team? Learn the roles, ideal size, characteristics and structure of Agile teams, with a step-by-step setup guide and a worked example.
-Agile Team Structures: Types, Roles and How to Choose One
-The main Agile team structures compared: generalist, specialist, feature, component and platform teams, plus roles, team size and how to choose.
+Agile Team Structures: Types, Examples and How to Choose
+Agile team structures compared: feature, component, platform and enabling teams, how teams interact, reporting lines, scaling, and a worked redesign.
 
 
 ---
@@ -37505,8 +37505,8 @@ Agile PMO: Roles, Services and How to Build One
 An Agile PMO enables value delivery instead of policing projects. Learn its services, roles, metrics, governance and how to transform a traditional PMO.
 How to Learn Agile and Get Certified: Step-by-Step Path
 How to learn Agile from scratch: what to study, a 90-day plan, how to get experience, and how to choose PSM, CSM, PMI-ACP, SAFe or PRINCE2 Agile.
-Agile Team Structures: Types, Roles and How to Choose One
-The main Agile team structures compared: generalist, specialist, feature, component and platform teams, plus roles, team size and how to choose.
+Agile Team Structures: Types, Examples and How to Choose
+Agile team structures compared: feature, component, platform and enabling teams, how teams interact, reporting lines, scaling, and a worked redesign.
 
 
 ---
@@ -38492,51 +38492,168 @@ Agile IT operations explained: run incidents, requests and improvements with Kan
 
 ---
 
-# What Is Agile Swarming? How Teams Finish Work Faster
+# Agile Swarming: What It Is, When to Swarm and How
 
 URL: https://neuralprojectinstitute.com/project-management/agile/agile-swarming/
 Section: Agile guides
-Summary: What swarming means in Agile, when to use it, how it reduces work in progress and cycle time, and practical tips for teams starting to swarm.
+Summary: Agile swarming explained: how it works, when to swarm and when not to, swarming vs pairing and mobbing, a worked Sprint example and common mistakes.
 
 
-## What Is Agile Swarming? How Teams Finish Work Faster
-Swarming is when several team members work together on the same backlog item until it is done, instead of each person working on a separate item. It is one of the simplest ways to finish work faster and reduce the amount of half-done work.
+## Agile Swarming: What It Is, When to Swarm and How
+Agile swarming is when several members of a team work together on the same backlog item until it is finished, instead of each person starting a separate item. It cuts the number of items in progress, so each one reaches Done sooner and fewer are left half-finished at the end of a Sprint. This guide explains where the practice comes from, why it works, when it does not, how to run it day to day and what the trade-off looks like in numbers.
 - Published 17 September 2026
-- 3 min read
+- Last updated 25 November 2026
+- 18 min read
 
 ### Key takeaways
-- Swarming means several people finish one item together.
-- It reduces work in progress and speeds up delivery.
-- Ask "what can we finish?" rather than "what can we start?"
+- Swarming means two or more people finishing one item together before anyone starts another; the question at the board changes from "what can I start?" to "what can we finish?".
+- It is a team practice, not a framework rule: the 2020 Scrum Guide and the 2025 Kanban Guide never mention it, but both leave the Developers or Kanban system members free to organise their work this way.
+- It works through Little's Law: with fewer items in progress and throughput roughly held, average cycle time falls, feedback arrives earlier and the risk of ending a Sprint with nothing Done falls.
+- Swarming has a cost. Extra people on one item add coordination, so it pays only when the item can be split, the team has overlapping skills and the alternative is waiting, handoffs or unfinished work.
+- Most items suit a swarm of two to four people; mobbing puts the whole team on one task, and intelligent swarming in customer support is a different practice that shares the name.
+
+### What is agile swarming?
+**Agile swarming** is a way of working in which two or more members of an Agile team focus on the same backlog item at the same time, splitting its tasks between them, until the item meets the [Definition of Done](https://neuralprojectinstitute.com/project-management/agile/definition-of-done/). The aim is to finish work in order of priority, rather than to keep every individual busy on an item of their own.
+One of the clearest statements of the idea comes from the Scrum Patterns community. Its pattern **Swarming: One-Piece Continuous Flow** (pattern 25 in *A Scrum Book* by Jeff Sutherland and James O. Coplien, 2019) puts the problem and the response in two lines: working on too many things at once reduces velocity and quality, so the whole team should work together on one Product Backlog Item at a time. Many teams treat "the whole team" as the far end of a range and swarm with a sub-group of two to four people.
+Neither of the main framework guides requires swarming. The [2020 Scrum Guide](https://neuralprojectinstitute.com/project-management/scrum/what-is-scrum/) does not use the word, but it makes the practice possible: Scrum Teams are self-managing, meaning "they internally decide who does what, when, and how", and "the Sprint Backlog is a plan by and for the Developers". The Kanban Guide (edition 2025.5) does not mention swarming either; it requires Kanban system members to "explicitly control the number of work items in a workflow" and notes that controlling WIP "often improves the Kanban system members' collective focus, commitment, and collaboration". Swarming is one common way teams act on that.
+So treat swarming as a technique you choose, like pair programming or planning poker, not as an obligation. The overview of [Scrum techniques](https://neuralprojectinstitute.com/project-management/scrum/scrum-techniques/) shows where it sits among the other practices teams add to Scrum.
 
 ### Why swarming works
-When everyone works on separate items, many items are in progress at once and none are finished until late in the sprint. Swarming reduces work in progress (WIP), which shortens cycle time, exposes blockers sooner and spreads knowledge across the team.
-
-### When to swarm
-- A high-priority item is at risk of not finishing in the sprint.
-- An item is blocked and needs several skills to unblock it.
-- The board shows too many items in progress.
-- A new team member needs to learn part of the product.
-- A production incident needs urgent attention.
-
-### How to start swarming
-1. At the Daily Scrum, ask "What can we finish today?" rather than "What will you start?"
-2. Set WIP limits on your board.
-3. Break the item into tasks that can be done in parallel.
-4. Pair or mob on the hardest parts.
-5. Celebrate finished items, not busy people.
-
-### Swarming vs mobbing vs pairing
-| Practice | Who | How |
+Swarming improves delivery through four separate mechanisms. It helps to know which one you are relying on, because each has different conditions.
+| Mechanism | What happens | Condition for it to work |
 | --- | --- | --- |
-| Pairing | Two people | Share one task at one screen |
-| Swarming | Several people | Split one item into parallel tasks |
-| Mobbing | The whole team | Everyone on one task at one screen |
+| Less work in progress | Fewer items are open at once, so by Little's Law each spends less time in progress | Throughput does not fall by as much as WIP does |
+| Earlier Done | Items finish one after another through the Sprint instead of all near the end | The item can be split into tasks people can do in parallel |
+| Fewer handoffs and queues | Review, testing and fixes happen inside the swarm instead of waiting for someone who is busy with their own item | The swarm includes, or can borrow, the skills the item needs |
+| Shared knowledge | More than one person understands each piece of work, which reduces key-person risk | Members actually work on unfamiliar parts, not just watch |
 
-### Pitfalls
-- Too many people on a tiny item, so they get in each other's way.
-- Swarming only in emergencies, so it never becomes a habit.
-- No shared definition of when the item is done; agree it upfront using the [Definition of Done](https://neuralprojectinstitute.com/project-management/agile/definition-of-done/).
+#### The Little's Law view
+Little's Law states that, for a reasonably stable system, **average cycle time = average WIP ÷ average throughput**. WIP is counted in items, throughput in items per day and cycle time in days. If six Developers each work on their own item, WIP is six. If they work in three pairs, WIP is three. Provided throughput stays roughly level, halving WIP roughly halves the time each item spends in progress. Our guide to [WIP limits](https://neuralprojectinstitute.com/project-management/kanban/wip-limits/) explains the law and its conditions in more detail.
+The proviso matters. Two people rarely finish an item in exactly half the time, so swarming usually costs a little raw capacity. It still pays when the time saved on waiting, rework and context switching is larger than the coordination overhead. The worked example below puts numbers on that trade.
+
+### Swarming vs pairing, mobbing and intelligent swarming
+Several collaborative practices sound similar. They differ in how many people are involved and whether those people work on one task or on several tasks within one item.
+| Practice | Who | Unit of work | Typical use |
+| --- | --- | --- | --- |
+| Pair programming (pairing) | Two people | One task, one keyboard, roles swapped regularly | Complex code, reviews built in, onboarding |
+| Swarming | Two or more people, often two to four | One backlog item, split into parallel tasks | Finishing the top item, clearing a blocker, cutting WIP |
+| Mob or ensemble programming | The whole team | One task, one screen, rotating who types | Hard design problems, spreading knowledge fast |
+| Incident swarming | Whoever has the skills, pulled in at once | One live incident | Restoring a service; see [Agile for IT operations](https://neuralprojectinstitute.com/project-management/agile/agile-operations-it/) |
+| Intelligent Swarming (customer support) | Support analysts across the organisation | One customer case, routed to the people best placed to help | Replacing tiered escalation in service desks |
+Mob programming was described by Woody Zuill in an Agile2014 experience report as the whole team working "on the same thing, at the same time, in the same space" and on the same computer. Swarming is looser: people in a swarm usually work on different tasks of the same item and integrate their work frequently, and they may pair or mob on the hardest part.
+**Intelligent Swarming** is a service mark of the Consortium for Service Innovation and refers to a support model that removes tiers of escalation and brings together a "swarm" of analysts on a customer issue. It shares the principle of collaborating on one problem, but it is a service-management practice, not a backlog practice.
+
+### When to swarm and when not to
+Whether to swarm is a decision about one item at one moment, not a permanent team setting. Use these rules to decide.
+| Situation | Swarm? | Why |
+| --- | --- | --- |
+| The top-priority item is at risk of missing the Sprint | Yes | Concentrating effort protects the Sprint Goal |
+| An item is blocked and needs several skills to unblock it | Yes | Parallel diagnosis is faster than passing the problem along |
+| The board shows more items in progress than people | Yes | WIP is already too high; finish before starting |
+| A production incident is open | Yes, with a named incident lead | Restoring service outweighs planned work |
+| A column has hit its WIP limit and the next stage is idle | Yes, on the bottleneck | Help clear the constraint instead of starting new work |
+| The item is small (under about a day of effort) | Usually no | Coordination costs more than it saves |
+| The work cannot be split, such as one person's research spike | No, or pair at most | Extra people would queue behind one task |
+| Swarm members lack the skills the item needs | Only if learning is the goal | Pairing to build skills is useful, but say so and expect slower delivery |
+| The team swarms on everything, every day | Review | Some items are better done by one focused person; agree a default |
+Two warnings apply in every case. First, Brooks's law (from Fred Brooks's *The Mythical Man-Month*, 1975) observes that adding people to a late software project makes it later, because newcomers need time and the number of communication paths grows. Swarming avoids most of that because the people already know the product, but a swarm that is too large on an item that cannot be split will still slow down. Second, swarming is not an emergency-only tool. Teams that swarm only in crises never build the habits, shared code ownership and T-shaped skills that make it effective.
+
+### How to swarm, step by step
+1. **Order the Sprint Backlog for flow.** At [Sprint Planning](https://neuralprojectinstitute.com/project-management/scrum/sprint-planning/), agree which items matter most to the Sprint Goal and plan to finish them in that order, rather than assigning one item per person.
+2. **Split each item into tasks people can do in parallel.** For example, API change, user interface, test automation and documentation. If an item cannot be split, it is a candidate for pairing rather than swarming.
+3. **Set a limit on items in progress.** For a team that swarms in pairs, that means about half as many open items as Developers. Make the limit visible on the board; the [Kanban board template](https://neuralprojectinstitute.com/templates/kanban-board-template/) has WIP-limited columns you can adapt.
+4. **Agree who is the item's point of contact.** One person keeps the item's overall picture and integrates the pieces. This is not a manager; it is whoever knows the item best, and it can rotate.
+5. **Integrate often.** Merge, test and review small pieces several times a day so that parallel work does not turn into a painful integration at the end.
+6. **Pair or mob on the hardest part.** When one task is the critical one, put two people on it rather than leaving it to whoever started it.
+7. **Finish, then pull.** When the item is Done, the swarm moves to the next item in priority order. Nobody starts a new item while the current one still needs help.
+8. **Inspect it at the Sprint Retrospective.** Check items Done, carry-over and cycle time against previous Sprints, and adjust the WIP limit or swarm size. The [Sprint Retrospective](https://neuralprojectinstitute.com/project-management/scrum/sprint-retrospective/) is the natural place for that review.
+
+#### How many people should swarm on one item?
+There is no formula, but a useful rule is: **as many people as there are tasks that can be done in parallel without waiting for one another, and no more than about four.** Every extra person adds communication paths: two people have one, three have three, four have six. If two people in the swarm are regularly waiting for the same file, environment or decision, the swarm is too big for that item. For a team of seven, two or three swarms running at once is a common pattern.
+
+#### A Daily Scrum that encourages swarming
+The 2020 Scrum Guide lets the Developers "select whatever structure and techniques they want" for the [Daily Scrum](https://neuralprojectinstitute.com/project-management/scrum/daily-scrum/), as long as it focuses on progress towards the Sprint Goal. Many swarming teams **walk the board from right to left**: start with the item closest to Done, ask what it needs to finish today and who can help, and only then move to items further left. That ordering makes unfinished work visible before anyone mentions starting something new. Replace "what will you do today?" with "what can we finish today, and what is in the way?".
+Tip
+If people still pick up new items while older ones are open, try a simple team agreement: before you start an item, check whether anything to your right needs help. Put it in your working agreement and review it after two Sprints.
+
+### Worked example: the same Sprint planned three ways
+This example is illustrative, and the speed-up figures are assumptions chosen to show the trade-off, not research findings. A team of six Developers works in two-week Sprints of 10 working days. Its Sprint Backlog holds six items, each estimated at 8 person-days of effort. The team compares three plans: one item per person, three swarms of two, and two swarms of three.
+
+#### The formula
+**Item duration D = E ÷ s(k)**
+- **D** is the elapsed time to finish one item, in working days.
+- **E** is the item's effort, in person-days (8 in the base case).
+- **k** is the number of people working on the item.
+- **s(k)** is the speed-up from k people, a dimensionless factor. Perfect parallel work would make s(k) equal to k; in practice coordination makes it lower. The example assumes s(1) = 1.0, s(2) = 1.8 and s(3) = 2.4, so a pair loses 10% to coordination and a trio 20%.
+Substituting for a pair: D = 8 ÷ 1.8 = 4.44 working days. For a trio: D = 8 ÷ 2.4 = 3.33 working days. For one person: D = 8 ÷ 1.0 = 8 working days. Each swarm then works through its items one after another.
+
+#### Results when the estimates are right
+| Plan | Items in progress (WIP) | Days to finish each item | Items Done by day 5 | Last item Done on day | Average cycle time (days) | Throughput (items/day) |
+| --- | --- | --- | --- | --- | --- | --- |
+| One item per person | 6 | 8.00 | 0 | 8.00 | 8.00 | 0.750 |
+| Three swarms of two | 3 | 4.44 | 3 | 8.89 | 4.44 | 0.675 |
+| Two swarms of three | 2 | 3.33 | 2 | 10.00 | 3.33 | 0.600 |
+The Little's Law cross-check holds for each plan: 6 ÷ 0.750 = 8.00 days, 3 ÷ 0.675 = 4.44 days and 2 ÷ 0.600 = 3.33 days. Throughput here is six items divided by the day the last item finishes.
+Read the table honestly. On these assumptions, one item per person finishes all six items earliest, on day 8, because nobody loses time to coordination. Pairs finish on day 8.89 and trios exactly on day 10, with no margin left. What swarming buys is earlier Done: pairs have three items finished by day 5, which the Product Owner can review with stakeholders or release, while the solo plan has nothing Done until day 8.
+
+#### Results when every item overruns by 30%
+Estimates are rarely exact. Suppose every item turns out to need 10.4 person-days (8 × 1.3) instead of 8.
+| Plan | Days to finish each item | Items Done by day 10 | Items carried over |
+| --- | --- | --- | --- |
+| One item per person | 10.40 | 0 | 6 |
+| Three swarms of two | 5.78 | 3 | 3 |
+| Two swarms of three | 4.33 | 4 | 2 |
+Now the picture reverses. With one item per person, every item is 96% complete at the end of the Sprint and none meets the Definition of Done, so the Increment contains nothing from this Sprint. Pairs deliver three items and trios four. This is the main practical argument for swarming: it turns a risk of "everything almost done" into "most things done, a few not started".
+
+#### Adding handoffs to the solo plan
+The base model leaves out waiting. In many teams, a solo item cannot be Done until a colleague reviews and tests it, and that colleague is busy with their own item. If each solo item waits an average of 1.5 working days for that review (an assumption), the solo plan finishes on day 9.5 instead of day 8, and its throughput drops to 6 ÷ 9.5 = 0.632 items per day. The pairs, who review inside the swarm, now finish both earlier on average and faster overall (0.675 items per day).
+
+#### What the team should do with this
+- If the team's items are well estimated, independent and rarely wait for others, swarming mainly improves predictability and early feedback; use pairs on the top items rather than swarming everything.
+- If items often overrun, wait for review or testing, or end the Sprint unfinished, swarming in pairs or trios is likely to raise the number of items Done; start with a WIP limit of three for a six-person team.
+- Measure your own speed-up: compare the cycle time of items done by pairs with similar items done alone over two or three Sprints, rather than relying on the 1.8 and 2.4 assumed here.
+**Limitations of the model:** it treats all items as equal in size and value, applies the same overrun to every item, ignores context switching (which would favour swarming further) and assumes speed-up factors that will differ by team and by type of work.
+
+### Swarming in Kanban
+Kanban teams have no Sprints, so the trigger for swarming is the board rather than the calendar. Three signals are common.
+- **A WIP limit is reached.** When a column is full, people who would otherwise pull new work help to finish items in that column. This is exactly the behaviour [WIP limits](https://neuralprojectinstitute.com/project-management/kanban/wip-limits/) are meant to cause.
+- **An item is ageing.** The Kanban Guide asks teams to make sure work items "do not age unnecessarily", using their service level expectation as a reference. A [WIP aging chart](https://neuralprojectinstitute.com/project-management/kanban/wip-aging-chart/) shows which items are getting old; swarm on the oldest first. The guide to [flow efficiency](https://neuralprojectinstitute.com/project-management/kanban/flow-efficiency/) explains why waiting time is usually the larger share of cycle time.
+- **An expedite item arrives.** Teams that use an expedite lane agree in advance who drops what to swarm on it; see [Kanban swimlanes](https://neuralprojectinstitute.com/project-management/kanban/kanban-swimlanes/).
+Swarming also has a place in the [Theory of Constraints](https://neuralprojectinstitute.com/project-management/kanban/theory-of-constraints/): when one stage is the bottleneck, people from other stages swarm on it to exploit the constraint before anyone argues for more capacity. Track the effect through [cycle time](https://neuralprojectinstitute.com/project-management/kanban/cycle-time/) and [throughput](https://neuralprojectinstitute.com/project-management/kanban/throughput/), not through how busy people look.
+
+### Swarming with remote and hybrid teams
+Remote teams can swarm, but the informal cues of a shared room disappear, so coordination has to be explicit: a dedicated channel or video room for each swarmed item, each person's name on their task on the board, and screen sharing or a collaborative editor for the hardest part (in effect, remote pairing or mobbing). Overlapping hours are the real constraint. As a rule of thumb, a swarm spread across time zones with only two or three hours of shared working time usually works better as a hand-over chain, with each person integrating and updating the item's status before signing off.
+
+### How to tell whether swarming is helping
+Judge swarming by flow and outcomes, not by individual utilisation. Compare at least three Sprints, or four to six weeks of Kanban data, before and after you change the way you work.
+| Measure | What to look for | Caution |
+| --- | --- | --- |
+| Items in progress per Developer | Below 1, for example 0.5 for a team swarming in pairs | A low number with nothing finishing means items are stuck, not swarmed |
+| Average and 85th-percentile cycle time | Falling | Compare similar item sizes |
+| Items Done per Sprint and carry-over | Carry-over falling, Done stable or rising | A drop in Done may mean the swarms are too large |
+| Day of the Sprint the first item is Done | Earlier | Easy to track on a burn-up or board |
+| Work item age of the oldest item | Lower peaks | Use a WIP aging chart |
+| Key-person risk | More skills rated 3 or above by two or more people | Rate it with a [skills matrix template](https://neuralprojectinstitute.com/templates/skills-matrix-template/) twice a year |
+See [Agile metrics and KPIs](https://neuralprojectinstitute.com/project-management/agile/agile-metrics-and-kpis/) for a wider set of measures and how to report them to stakeholders.
+
+### Who does what when a team swarms
+- **Developers** decide whether and how to swarm, as part of managing their own Sprint Backlog. Nobody outside the team should assign people to swarms.
+- **The Scrum Master** coaches the team on limiting WIP, helps it notice items that are ageing and removes impediments such as environments that only one person can use. See the [Scrum Master role](https://neuralprojectinstitute.com/project-management/agile/scrum-master-role/).
+- **The Product Owner** orders the Product Backlog and makes the value of each item clear, so the team knows which item to swarm on first. The Product Owner does not decide who works on what.
+- **Managers** shape the conditions: performance reviews and targets that reward individual output, or utilisation reports that treat an idle-looking person as a problem, discourage swarming. [How to manage Agile teams](https://neuralprojectinstitute.com/project-management/agile/how-to-manage-agile-teams/) explains how to measure team rather than individual performance.
+Swarming also depends on overlapping skills. A team in which each person can work in only one specialism will struggle to swarm, so this is a team-design question as much as a habit: [Agile team structures](https://neuralprojectinstitute.com/project-management/agile/agile-team-structures/) explains how T-shaped composition and feature-team boundaries make it possible, and [what an Agile team is](https://neuralprojectinstitute.com/project-management/agile/what-is-an-agile-team/) covers the basics of cross-functional teams.
+
+### Common swarming mistakes
+| Mistake | What it looks like | Fix |
+| --- | --- | --- |
+| Swarm too large for the item | People wait for each other or duplicate work | Cap the swarm at the number of parallel tasks; move spare people to the next item |
+| Swarming only in emergencies | The team reverts to one item each as soon as the crisis ends | Make a WIP limit part of normal working and review it at each retrospective |
+| No shared finish line | Each person finishes their task, but the item is still not Done | Agree the Definition of Done and acceptance criteria before splitting the item |
+| Spectators instead of contributors | One expert does the work while others watch | Give each person a task, or switch to explicit pairing with swapped roles |
+| Late integration | Parallel pieces collide on the last day | Integrate and test several times a day |
+| Measuring individual utilisation | People avoid swarming because it looks less productive | Report items Done and cycle time at team level |
+| Starting new work 'just in case' | New items appear while older ones are ageing | Walk the board right to left and agree to help before pulling |
+The [Sprint Backlog](https://neuralprojectinstitute.com/project-management/scrum/sprint-backlog/) guide covers how Developers plan and adapt their work during the Sprint, which is where most swarming decisions are made.
 
 ### Free templates for this topic
 Kanban Board Template
@@ -38552,38 +38669,35 @@ Beginner · Advanced · Expert
 
 ### Frequently asked questions
 
-**Q: Does swarming reduce productivity?**
-Individual utilisation may drop, but the team finishes more items, sooner, with fewer handoffs and less rework.
-
-**Q: Is swarming only for software teams?**
-No. Any team can swarm, for example a marketing team finishing a campaign launch together.
-
 **Q: What is swarming in Agile?**
-Several team members working together on the same backlog item to finish it quickly, instead of each working on a separate item.
+Swarming is when two or more members of an Agile team work together on the same backlog item, splitting its tasks between them, until it meets the Definition of Done, instead of each person working on a separate item. It reduces work in progress so items finish sooner.
+
+**Q: Is swarming part of Scrum?**
+No. The 2020 Scrum Guide does not mention swarming. It is a technique teams choose. Scrum makes it possible because the Developers are self-managing and own the Sprint Backlog, so they decide who works on what.
 
 **Q: What is the difference between swarming and mobbing?**
-In swarming, several people split one item into parallel tasks. In mobbing, the whole team works on one task together at a single screen.
+In swarming, a sub-group of the team works on different tasks within one backlog item at the same time. In mob or ensemble programming, the whole team works on one task together at one screen, rotating who types. A swarm may mob on its hardest task.
 
-**Q: When should a team use swarming?**
-When a high-priority item is at risk, an item is blocked and needs several skills, too much work is in progress, or a production incident needs urgent attention.
+**Q: What is the difference between swarming and pair programming?**
+Pair programming is two people sharing one task at one keyboard. Swarming involves two or more people working in parallel on several tasks of one item. Pairs are often used inside a swarm for the most complex task.
 
-**Q: How does swarming relate to WIP limits?**
-WIP limits encourage swarming: when a column is full, team members help finish existing items instead of starting new ones.
+**Q: How many people should swarm on one item?**
+As many as there are tasks that can proceed in parallel without waiting for each other, usually two to four. If swarm members regularly wait for the same file, environment or decision, the swarm is too large for that item.
 
-**Q: Is swarming the same as pair programming?**
-No. Pairing is two people sharing one task; swarming involves several people working in parallel on parts of one item.
+**Q: Does swarming reduce productivity?**
+It can reduce raw output slightly, because coordination takes time. It usually increases the number of items Done when work would otherwise wait for reviews, testing or specialists, and it sharply reduces the risk of ending a Sprint with many items almost finished.
 
-**Q: How many people should be swarming on one item?**
-As many as can contribute without getting in each other's way. For most items, two to four people is enough.
+**Q: When should a team not swarm?**
+Avoid swarming on very small items, work that cannot be split such as a single research spike, or items where the extra people lack the needed skills and learning is not the goal. In those cases, one person or a pair is usually faster.
+
+**Q: How do WIP limits relate to swarming?**
+WIP limits create the trigger for swarming. When a column or the whole board is at its limit, people help finish existing items instead of starting new ones. Swarming is the behaviour; the WIP limit is the policy that makes it routine.
 
 **Q: Does swarming work for remote teams?**
-Yes, with a shared board, video calls and clear task splits. Remote swarming often uses screen sharing for the hardest parts.
+Yes, if coordination is explicit: a dedicated channel or video room per item, names on tasks on the board, screen sharing for the hardest part and enough overlapping working hours. Across wide time zones, a well-documented hand-over chain may work better.
 
-**Q: What are the benefits of swarming?**
-Shorter cycle times, earlier detection of blockers, fewer handoffs and wider knowledge across the team.
-
-**Q: How do you encourage swarming?**
-Ask "what can we finish today?" at the Daily Scrum, set WIP limits and celebrate finished items rather than busy individuals.
+**Q: What is Intelligent Swarming?**
+Intelligent Swarming is a customer support model from the Consortium for Service Innovation. It replaces tiered escalation by bringing the people best placed to help together on a customer case. It shares the collaborative idea but is separate from swarming on backlog items.
 
 ### Related guides
 Agile Workflow: Stages, Examples and How to Design One
@@ -38598,69 +38712,197 @@ Agile epics explained: what an epic is, how to write one with a template, worked
 
 ---
 
-# Agile Team Structures: Types, Roles and How to Choose One
+# Agile Team Structures: Types, Examples and How to Choose
 
 URL: https://neuralprojectinstitute.com/project-management/agile/agile-team-structures/
 Section: Agile guides
-Summary: The main Agile team structures compared: generalist, specialist, feature, component and platform teams, plus roles, team size and how to choose.
+Summary: Agile team structures compared: feature, component, platform and enabling teams, how teams interact, reporting lines, scaling, and a worked redesign.
 
 
-## Agile Team Structures: Types, Roles and How to Choose One
-An Agile team structure is the way people, skills and responsibilities are organised so that a small, cross-functional team can deliver value end to end. Common structures include feature teams, component teams, generalist and specialist mixes, and platform teams, often grouped into larger units as organisations scale.
+## Agile Team Structures: Types, Examples and How to Choose
+An Agile team structure is the way an organisation divides people and work into small, long-lived, cross-functional teams, decides what each team owns and sets how those teams work with one another. Most organisations build mainly feature or stream-aligned teams that deliver end to end, supported by a few platform, enabling or specialist teams. This guide compares the options, explains how to choose between them and shows how to test a candidate structure against your real backlog before you reorganise.
 - Published 7 September 2026
-- 5 min read
+- Last updated 25 November 2026
+- 20 min read
 
 ### Key takeaways
-- Agile teams are small, cross-functional, self-managing and long-lived.
-- Feature teams reduce hand-offs; component and platform teams provide depth and shared services.
-- Design structures around the flow of value and minimise dependencies.
-- Review structures periodically, but keep teams stable.
+- Team structure involves three decisions: where each team's boundary sits (what it owns), who is in each team (composition) and how teams connect (interaction modes, line management and multi-team coordination).
+- Feature or stream-aligned teams that can deliver a customer outcome alone should be the default; platform, enabling and complicated-subsystem teams exist to make those teams faster, not to own slices of every feature.
+- Conway's law explains why structure matters: the system you build tends to mirror the communication structure of the teams building it, so team boundaries become architecture.
+- Test a proposed structure by mapping your next ten to twenty features to the teams that would touch them; count cross-team handoffs, not boxes on an organisation chart.
+- Keep teams stable and change structure deliberately, a few times a year at most, when dependency, flow or cognitive-load measures show the current design no longer fits.
 
-### What makes a team Agile
-- **Cross-functional:** the team has all the skills needed to turn a backlog item into a finished result.
-- **Small and stable:** typically around ten people or fewer; the 2020 Scrum Guide says a Scrum Team is typically 10 or fewer.
-- **Self-managing:** the team decides how to do its work.
-- **Long-lived:** teams stay together across many projects so that they learn and improve.
-- **Focused on one goal or product at a time.**
-See [what is an Agile team](https://neuralprojectinstitute.com/project-management/agile/what-is-an-agile-team/) for the basics.
+### What is an Agile team structure?
+An **Agile team structure** is the deliberate arrangement of an organisation's delivery people into small, stable, cross-functional teams, each with a clear area of ownership, together with the rules for how those teams cooperate, who manages the people in them and how several teams align on one product. It is an organisation-design choice that sits above any single team.
+Designing one means answering three questions:
+- **Boundaries:** what does each team own? A customer journey, a product, a market, a technical component or a shared platform?
+- **Composition:** which skills sit inside each team, and how deep or broad does each member's expertise need to be?
+- **Connections:** how do teams depend on and help one another, who are people's line managers, and how do several teams plan and integrate when they work on the same product?
+This guide deals with those organisation-wide choices. For the anatomy of a single team (its characteristics, roles, size and how to form it), start with [what an Agile team is](https://neuralprojectinstitute.com/project-management/agile/what-is-an-agile-team/). For one well-known multi-team design in depth, see the [Spotify model of squads, tribes, chapters and guilds](https://neuralprojectinstitute.com/project-management/agile/squads-tribes-chapters-guilds/).
 
-### Common Agile team structures
-| Structure | How it works | Strengths | Watch out for |
+### Why team structure matters
+
+#### Conway's law: structure becomes architecture
+In 1968 Melvin Conway observed that "any organization that designs a system (defined broadly) will produce a design whose structure is a copy of the organization's communication structure". Separate front-end, back-end and database teams tend to produce systems with hard seams between those layers, and every customer feature then has to cross the seams. Some organisations now use the **inverse Conway manoeuvre**, a term coined by Jonny LeRoy and Matt Simons in 2010: they shape teams around the architecture they want, so the system grows in that direction.
+
+#### Dependencies turn into queues
+Each time a piece of work has to pass to another team, it usually waits until that team can fit it into its own plan. A feature that touches three teams has two handoffs and can wait twice. Over many features those waits, rather than the hands-on work, often make up much of the lead time, which a value stream map will show for your own process. Reducing the number of teams each item must pass through is often the single biggest flow improvement available.
+
+#### Cognitive load limits what one team can own
+The *Team Topologies* approach, published in 2019 by Matthew Skelton and Manuel Pais, treats a team's cognitive load (the amount it must understand to work safely) as a design constraint: overloaded teams "make poor decisions and move slowly". A team that owns too many systems, domains or technologies will struggle however capable its members are. Boundaries should therefore keep each team's area small enough to understand well.
+
+### Ways to draw team boundaries
+Most Agile organisations combine several of the following team types. The question is not which single type to use, but which should be the default and which should be exceptions.
+| Team type | What it owns | Use it when | Main risk |
 | --- | --- | --- | --- |
-| Feature team | Owns complete customer features across all layers | Fast end-to-end delivery, fewer hand-offs | Needs broad skills; shared code needs good practices |
-| Component team | Owns one part of the system, such as payments or search | Deep expertise, consistent architecture | Features need several teams; more dependencies |
-| Generalist team | Members can work across many types of task | Flexible, avoids bottlenecks | May lack deep expertise |
-| Specialist team | Members each hold a distinct skill | High quality in each discipline | Bottlenecks when one skill is overloaded |
-| Hybrid (T-shaped) team | Members have one deep skill and broader secondary skills | Balances depth and flexibility | Takes time and support to build |
-| Platform team | Provides shared tools and services to other teams | Reduces duplicated effort | Must treat other teams as customers |
+| Feature or stream-aligned team | A flow of customer value: a journey, product, customer segment or market, across all technical layers | Default choice for most delivery work | Needs broad skills and shared engineering standards across code it does not exclusively own |
+| Component team | One technical part of the system, such as a search service or identity and login | The component is reused by many teams, needs rare expertise or carries high risk if built inconsistently | Features need several teams; handoffs and late integration |
+| Platform team | Internal services other teams use on a self-service basis, such as build pipelines, hosting or data platforms | Several stream-aligned teams would otherwise build the same capability | Building what nobody asked for; ignoring its internal customers |
+| Enabling team | Expertise it lends to other teams for a limited period, such as test automation or security practices | Teams need a new capability quickly | Becoming a permanent dependency instead of stepping back |
+| Complicated-subsystem team | A part needing deep specialist knowledge, such as a fraud-scoring model or signal-processing algorithm | Few people have the expertise and spreading it thinly would be unsafe | Growing into a component team for ordinary work |
+| Functional or specialist team | One discipline, such as testing, analysis or design | Rarely, for example a small central design-systems group | Sequential handoffs, more documentation and reviews; PMI's Disciplined Agile notes higher communication overhead and project risk |
+| Internal open-source model | A shared component that one team maintains and other teams contribute to | Many teams need changes to one component and its owner would become a bottleneck | Needs clear contribution rules and review capacity |
+
+#### Feature teams and component teams
+This is the oldest debate in Agile team design. Large-Scale Scrum (LeSS) defines a feature team as "a long-lived, cross-functional, cross-component team" that works on complete customer-centric features, and lists the drawbacks of component teams, among them extra planning to manage dependencies between teams, responsibility for only part of a customer-centric feature, individual code ownership and "waterfall" development. It also warns that hybrid models can have "the drawbacks from both worlds". Mountain Goat Software's guidance is similar but less absolute: most teams should be feature teams, and component teams are reasonable when several feature teams need the component, building it once reduces the overloading of scarce specialists, and the component team builds only what feature teams are ready to use.
+In practice the decision turns on how often features cross component lines. If most work changes one component, component teams lose little. If most features touch three or four components, component teams turn each feature into a multi-team project. The worked example below shows how to count this.
+
+#### How SAFe applies the four team types
+The Scaled Agile Framework uses the four *Team Topologies* types (stream-aligned, complicated subsystem, platform and enabling) as a template for organising teams on an [Agile Release Train](https://neuralprojectinstitute.com/project-management/agile/agile-release-train/). Its guidance, last updated in April 2023, says most teams should be stream-aligned, that a single train should contain no more than one to three complicated-subsystem teams, and that it is common to have two or three enabling teams working across the enterprise. A rough sense check of our own, not a SAFe rule, follows from those ratios: if more than about a quarter of your teams are not stream-aligned, ask why.
+
+### Team composition: generalists, specialists and T-shaped people
+Once a team's boundary is set, its membership has to cover the skills the boundary demands. The 2020 Scrum Guide notes that the skills Developers need "are often broad and will vary with the domain of work". Cross-functionality is a property of the team as a whole: no individual needs every skill, but someone in the team must hold each one.
+| Composition | Description | Strength | Weakness |
+| --- | --- | --- | --- |
+| Specialists | Each member has one deep skill | High quality within each discipline | Bottlenecks when one skill is overloaded; little cover for absence |
+| Generalists | Members can do many kinds of task | Flexible; work rarely waits for one person | Can lack depth for complex work |
+| T-shaped (generalising specialists) | One deep skill plus working ability in neighbouring areas | Balances depth with the ability to help where work piles up | Takes deliberate time to build |
+Most Agile teams aim for the T-shaped pattern because it lets people help finish work outside their speciality, which is what makes practices such as [agile swarming](https://neuralprojectinstitute.com/project-management/agile/agile-swarming/) possible. Build it on purpose: map the team's skills, identify skills held by only one person and plan pairing or training to add a second. The [skills matrix template](https://neuralprojectinstitute.com/templates/skills-matrix-template/) rates each person from 0 to 4 per skill and shows those single points of failure.
+
+#### Shared specialists
+Scarce specialists, such as a security engineer or a data scientist, are often split across several teams. Mountain Goat Software notes that someone who is "20% on five teams" is rarely experienced as 20% available by any of them: they miss conversations, switch context constantly and become a queue. Better options are to give each specialist one primary team, form a small enabling team that coaches others and steps back, or create a complicated-subsystem team if the work genuinely needs concentrated expertise.
+
+### How teams work with each other
+Boundaries never remove all dependencies, so decide how teams should interact. *Team Topologies* describes three interaction modes.
+| Interaction mode | What it means | Good for | Signal it has run too long |
+| --- | --- | --- | --- |
+| Collaboration | Two teams work closely together "for a defined period of time to discover new things" | New technology, unclear boundaries, early discovery | The teams still need each other for routine work months later |
+| X-as-a-Service | One team provides something and another consumes it with minimal coordination | Stable platforms and well-defined interfaces | Consumers keep raising tickets to get basic things done |
+| Facilitation | One team helps and mentors another | Enabling teams spreading a skill or practice | The helped team cannot proceed without the facilitator |
+Making the mode explicit helps. A platform team that thinks it is collaborating while its users expect a service will frustrate both sides. A good default is to collaborate briefly while an interface is being discovered, then move to X-as-a-Service once it is stable.
+For recurring coordination between teams on one product, lightweight events such as a [Scrum of Scrums](https://neuralprojectinstitute.com/project-management/scrum/scrum-of-scrums/) or joint refinement of a shared [Product Backlog](https://neuralprojectinstitute.com/project-management/scrum/product-backlog/) are usually enough. If coordination needs more than that every week, treat it as a boundary problem rather than a meeting problem.
+
+### Line management and reporting lines
+Agile teams are self-managing, and the 2020 Scrum Guide says that "within a Scrum Team, there are no sub-teams or hierarchies". People still need line managers for hiring, career development, pay and performance conversations. Those managers usually sit outside the team, and the choice of where affects how the structure behaves.
+| Option | How it works | Strength | Watch out for |
+| --- | --- | --- | --- |
+| Functional line management | People report to a head of their discipline (engineering, design, testing) while working in a cross-functional team | Strong professional standards and career paths | Managers pulling people into functional priorities; divided loyalty |
+| Product-aligned management | People report to a manager responsible for a product area containing several teams | Clear alignment with delivery goals | Craft standards drift between areas |
+| Chapter model | A practising specialist in the same area line-manages people with their skill across several teams | Combines craft leadership with team focus | Chapter leads with too many reports; see the [Spotify model guide](https://neuralprojectinstitute.com/project-management/agile/squads-tribes-chapters-guilds/) |
+| Project-based allocation | Managers assign people to temporary project teams | Familiar to traditional organisations | Unstable teams; works against long-lived Agile teams |
+Whichever option you choose, keep day-to-day work decisions with the team and its Product Owner, not with the line manager. A [RACI matrix template](https://neuralprojectinstitute.com/templates/raci-matrix-template/) is a quick way to agree who decides on hiring, team membership, priorities and performance. In some organisations an [Agile project manager](https://neuralprojectinstitute.com/project-management/agile/agile-project-manager/) coordinates budgets, reporting and cross-team dependencies; Scrum itself defines no project manager accountability, as the [Scrum team roles](https://neuralprojectinstitute.com/project-management/scrum/scrum-team-roles/) guide explains.
+
+### Structures for several teams on one product
+When one product needs more people than one team can hold, the 2020 Scrum Guide's answer is to reorganise "into multiple cohesive Scrum Teams, each focused on the same product", which "should share the same Product Goal, Product Backlog, and Product Owner". Scaling frameworks add structure on top of that principle.
+| Structure | Typical scale | What it adds | Guide |
+| --- | --- | --- | --- |
+| Multiple Scrum Teams, one Product Owner | Two or three teams | Shared Product Goal and Product Backlog; joint refinement and review | [Scrum team roles](https://neuralprojectinstitute.com/project-management/scrum/scrum-team-roles/) |
+| LeSS | Two to eight feature teams | One Product Owner, one Product Backlog, one Sprint for all teams | [Large-Scale Scrum](https://neuralprojectinstitute.com/project-management/agile/large-scale-scrum-less/) |
+| LeSS Huge | More than eight teams | Requirement areas of four to eight teams, each with an Area Product Owner | [Large-Scale Scrum](https://neuralprojectinstitute.com/project-management/agile/large-scale-scrum-less/) |
+| SAFe Agile Release Train | 50 to 125 people, roughly 5 to 12 teams | Planning Intervals, train roles and the four team types | [Agile Release Train](https://neuralprojectinstitute.com/project-management/agile/agile-release-train/) |
+| Scrum@Scale | Scrums of Scrums of four or five teams, repeated | Scale-free networks of teams with Scrum Master and Product Owner cycles | [Scrum@Scale](https://neuralprojectinstitute.com/project-management/scrum/scrum-at-scale/) |
+| Spotify-style squads and tribes | Tribes under about 100 people in the 2012 description | Chapters for line management, guilds for communities | [Squads, tribes, chapters and guilds](https://neuralprojectinstitute.com/project-management/agile/squads-tribes-chapters-guilds/) |
+A scaling framework does not decide your team boundaries for you. Each still assumes mostly feature or stream-aligned teams, so the boundary choices in this guide come first. The [Scaled Agile Framework guide](https://neuralprojectinstitute.com/project-management/agile/scaled-agile-framework-safe/) and the LeSS guide compare the heavier options in detail.
+
+### How to choose an Agile team structure
+The "Use it when" column in the boundary table above tells you when each supporting team type earns its place. For the default delivery teams, and for two situations that table does not cover, use the signals below. Several will usually apply; the structure that removes the most frequent handoffs normally wins.
+| If you see this | Lean towards | Because |
+| --- | --- | --- |
+| Most features touch several technical components | Feature or stream-aligned teams | One team can finish a feature without waiting for others |
+| Work divides naturally by customer journey, product or market | Stream-aligned teams on those lines | Boundaries match how value reaches customers |
+| Most work stays inside one component | Component teams lose little; keep them if they already work | Few features would cross team lines |
+| Teams are overloaded with too many systems | Split boundaries or move systems to a platform | Reduces cognitive load |
+| Regulation requires separation of duties | Keep the separation in the workflow, not in separate teams, where the regulator allows | Avoids recreating handoffs that compliance does not actually require |
+A structure suits your situation when, for most upcoming work, one team can take an item from idea to release, each team can explain its area in a sentence, and no team's people spend most of their week waiting for another team.
+
+### How to design your team structure, step by step
+1. **Map how value flows.** Trace how a typical request travels from idea to customer and where it waits. [Value stream mapping](https://neuralprojectinstitute.com/project-management/kanban/value-stream-mapping/) gives you the data.
+2. **List the next ten to twenty features.** Use real items from the roadmap or Product Backlog, not hypothetical ones.
+3. **Mark what each feature touches.** For each feature, note the components, systems and skills it needs.
+4. **Sketch two or three candidate structures.** For example, by customer journey, by product line and by component. Include any platform or enabling teams you think you need.
+5. **Count handoffs for each candidate.** For every feature, count how many teams it would pass through; handoffs equal teams touched minus one. Prefer the candidate with the fewest.
+6. **Check demand balance and cognitive load.** Make sure each team has a reasonable share of the work and an area small enough to understand.
+7. **Allocate people and check skills.** Place people so that each team covers its skills, and use a skills matrix to find single points of failure.
+8. **Agree interaction modes and decision rights.** Decide which relationships are collaboration, X-as-a-Service or facilitation, and who manages whom.
+9. **Pilot, then review.** Start with one or two teams if you can, measure flow for three to six months, and adjust boundaries before rolling out further.
 Tip
-Most organisations use a mix: mainly feature teams, supported by a small number of platform or component teams for shared services.
+Involve the people affected. Teams that help design their own boundaries, or choose their team within agreed constraints, tend to adopt the new structure faster than teams that receive an organisation chart.
 
-### Roles in an Agile team
-| Role | Focus |
-| --- | --- |
-| Product owner | Maximises value; owns and orders the backlog; see [Scrum Product Owner](https://neuralprojectinstitute.com/project-management/scrum/scrum-product-owner/) |
-| Scrum Master or Agile coach | Team effectiveness and removing impediments; see [Scrum Master role](https://neuralprojectinstitute.com/project-management/agile/scrum-master-role/) |
-| Developers or team members | Build, test and deliver the work; may include engineers, designers, analysts, testers and writers |
-| Stakeholders | Provide input and feedback, especially at reviews |
-| Agile project manager (in some organisations) | Coordination across teams, budgets and reporting; see [Agile project manager](https://neuralprojectinstitute.com/project-management/agile/agile-project-manager/) |
+### Worked example: redesigning an online retailer's teams
+This example is illustrative. An online retailer has 24 delivery people in four component teams of six: web front end, mobile, checkout services and database. Each team does its own testing. A typical feature needs several teams, so items queue between them and even simple changes take weeks.
 
-### How to design your team structure
-1. **Start from the value stream:** map how work flows from request to customer; see [value stream mapping](https://neuralprojectinstitute.com/project-management/kanban/value-stream-mapping/).
-2. **Choose the team type:** prefer feature teams aligned to customer journeys or products, and add component or platform teams only where expertise or scale demands it.
-3. **Size the teams:** aim for around five to nine members, and split larger groups.
-4. **Fill skill gaps:** list the skills needed to finish work without hand-offs, then hire, train or pair to cover gaps.
-5. **Minimise dependencies:** if a team regularly waits on another, adjust boundaries.
-6. **Define how teams coordinate:** use practices such as a [Scrum of Scrums](https://neuralprojectinstitute.com/project-management/scrum/scrum-of-scrums/) or shared planning.
-7. **Review regularly:** check flow, dependencies and morale every few months and adapt.
+#### Step 1: map upcoming features to components
+The product leaders list ten features from the roadmap and mark which components each would change (W = web front end, M = mobile, C = checkout services, D = database). They also note which customer journey each belongs to and whether it needs new shared infrastructure.
+| Feature | Journey | Components | Teams (component structure) | Teams (feature structure) |
+| --- | --- | --- | --- | --- |
+| Filter search results by size | Browse | W, M, D | 3 | 1 |
+| Save basket across devices | Buy | W, M, C, D | 4 | 1 |
+| Add a digital wallet payment option | Buy | W, M, C | 3 | 1 |
+| Export order history | Account | W, D | 2 | 1 |
+| Product recommendation carousel (needs a new hosted service) | Browse | W, M, D | 3 | 2 (Browse + platform) |
+| Change delivery address after ordering | Account | W, M, C, D | 4 | 1 |
+| Fix promotion-code validation | Buy | C | 1 | 1 |
+| Wish list | Account | W, M, D | 3 | 1 |
+| Show stock availability on product pages | Browse | W, M, D | 3 | 1 |
+| Guest checkout | Buy | W, M, C, D | 4 | 1 |
 
-### Example: from component to feature teams
-An online retailer has four component teams (web front end, mobile, checkout services and database) of six people each. A typical feature needs all four, so items wait in queues and a simple change takes six weeks. The company re-forms into three feature teams aligned to customer journeys (browse, buy, account), each with front-end, mobile, back-end and testing skills, plus one small platform team of six for shared infrastructure. With fewer hand-offs, most features are now completed by a single team within one or two sprints.
+#### Step 2: count teams and handoffs
+**Handoffs per feature = teams touched − 1.** Under the component structure the ten features touch 30 teams in total, an average of 3.0 teams per feature, and only one feature (the promotion-code fix) can be finished by a single team. That gives 30 − 10 = 20 handoffs. Under a structure of three journey-aligned feature teams (Browse, Buy and Account) plus a platform team, the features touch 11 teams, an average of 1.1, and nine of the ten can be finished by one team. Only the recommendation carousel needs the platform team, so there is one handoff. Handoffs fall from 20 to 1, a reduction of 95%.
+To turn handoffs into time, the team makes one explicit assumption: in two-week Sprints, a request passed to another team waits on average about half a Sprint, or 5 working days, before that team starts it. **Expected waiting = handoffs × 5 working days.** Under the component structure that is 20 × 5 = 100 working days of waiting across the ten features, or 10 working days per feature on average. Under the feature structure it is 1 × 5 = 5 working days in total, or 0.5 days per feature.
 
-### Structures at scale
-- **Team of teams:** several teams working on one product share a backlog and coordinate; see [Large-Scale Scrum (LeSS)](https://neuralprojectinstitute.com/project-management/agile/large-scale-scrum-less/).
-- **Agile Release Train:** in SAFe, typically 5–12 teams plan and deliver together; see [Agile Release Train](https://neuralprojectinstitute.com/project-management/agile/agile-release-train/).
-- **Squads, tribes, chapters and guilds:** a model popularised by Spotify; see [squads, tribes, chapters and guilds](https://neuralprojectinstitute.com/project-management/agile/squads-tribes-chapters-guilds/).
+#### Step 3: check demand and allocate people
+Demand is reasonably balanced: Buy has four of the ten features, Browse and Account three each. The component counts show where skills are needed: web front end appears in nine features, mobile and database in eight each, and checkout services in five, four of them in the Buy journey. The 24 people are reallocated accordingly.
+| Team | Web front end | Mobile | Checkout services | Database | Total |
+| --- | --- | --- | --- | --- | --- |
+| Browse | 2 | 2 | 0 | 2 | 6 |
+| Buy | 2 | 1 | 2 | 1 | 6 |
+| Account | 2 | 2 | 1 | 1 | 6 |
+| Platform (pipelines, hosting, mobile build, database platform) | 0 | 1 | 3 | 2 | 6 |
+| Total | 6 | 6 | 6 | 6 | 24 |
+Every original specialist is placed and headcount is unchanged. The Buy team holds both of the checkout-services specialists it needs for four features; Browse needs none. The skills matrix shows that the Account team has only one checkout-services person, so the platform team agrees to pair with Account on its one checkout change for the first two Sprints, an explicit, time-limited collaboration.
+
+#### Step 4: interpret the result
+- The structure removes most cross-team waiting for this set of features, so lead time should fall. The 10 days of average waiting is an estimate; the retailer should measure [cycle time](https://neuralprojectinstitute.com/project-management/kanban/cycle-time/) before and after.
+- Feature teams now change code they used to hand to others. The retailer agrees shared coding standards, code review across teams for the checkout and database code, and an X-as-a-Service relationship with the platform team.
+- The test is only as good as the feature list. The retailer repeats the count each quarter with the next roadmap; if a growing share of features needs two teams, boundaries need another look.
+**Limitations:** the 5-day wait per handoff is an assumption, and real waits vary with each team's priorities; the count treats every handoff as equal and ignores the size of each feature; and it does not measure the extra knowledge feature teams now need, which will slow them at first.
+
+### Changing structure without losing momentum
+Restructuring has a cost: new teams must form, agree working practices and learn unfamiliar code. Convert one or two teams, or one journey, at a time rather than everyone on the same day; keep specialists close to the code they know and plan pairing for the areas each new team must learn; then leave the new teams alone long enough for them to settle and for their measures to mean something (six to nine months is a reasonable rule of thumb). Rising cross-team dependencies, teams that cannot describe their area in a sentence, constant escalations or one permanently overloaded team are reasons to revisit boundaries. A new executive's preference is not.
+[Agile transformation](https://neuralprojectinstitute.com/project-management/agile/agile-transformation/) covers the wider organisational change, including leadership, funding and governance, and [how to manage Agile teams](https://neuralprojectinstitute.com/project-management/agile/how-to-manage-agile-teams/) covers the manager's role during and after a restructure.
+
+### How to tell whether your structure is working
+| Measure | Healthy pattern | What a poor result suggests |
+| --- | --- | --- |
+| Share of items finished by a single team | Most items, for example 80% or more | Boundaries cut across the flow of value |
+| Cross-team dependencies per Sprint | Few, and falling | A missing skill or a component that needs a different owner |
+| Time items spend blocked or waiting for another team | Small share of cycle time | Handoffs are the main delay |
+| Cycle time and lead time | Stable or falling | Structure or WIP problems |
+| Team self-assessment of cognitive load | Teams can explain and support their area | The area is too large or too varied |
+| Requests to the platform team handled self-service | Rising | The platform is not yet a usable product |
+See [Agile metrics and KPIs](https://neuralprojectinstitute.com/project-management/agile/agile-metrics-and-kpis/) for how to collect and report flow measures without turning them into targets.
+
+### Common team-structure mistakes
+| Mistake | Why it hurts | Better approach |
+| --- | --- | --- |
+| Renaming teams without changing what they own | Handoffs remain under new labels | Change ownership of code, backlog and decisions, not just names |
+| Organising by technical layer by default | Every feature becomes a multi-team project | Start from value streams and test with a handoff count |
+| Too many platform or component teams | Stream-aligned teams wait on internal suppliers | Keep most teams stream-aligned and treat platforms as products |
+| Splitting specialists across many teams | Specialists become queues | Give each person one primary team, or form an enabling team |
+| Reorganising every few months | Teams never form or learn | Change deliberately, and only when measures show the boundaries no longer fit |
+| Ignoring line management | People feel ownerless or torn between bosses | Choose a reporting model and make decision rights explicit |
+| Copying another company's model | Their structure solved their problems, not yours | Borrow ideas, but test them against your own backlog |
+Once the boundaries are set, forming each individual team (size, roles, working agreement) is covered in [what an Agile team is](https://neuralprojectinstitute.com/project-management/agile/what-is-an-agile-team/).
 
 ### Free templates for this topic
 RACI Matrix Template
@@ -38677,37 +38919,34 @@ Beginner · Advanced · Expert
 ### Frequently asked questions
 
 **Q: What is the best Agile team structure?**
-There is no single best structure. Feature teams suit most product work, with platform or component teams where specialist depth or shared services are needed.
+There is no single best structure. For most product work, feature or stream-aligned teams that can deliver a customer outcome alone should be the default, supported by a small number of platform, enabling or complicated-subsystem teams where shared services or rare expertise justify them.
 
-**Q: How big should an Agile team structure be?**
-Small, typically around ten people or fewer. Larger groups should usually split into several teams.
+**Q: What are the main types of Agile teams?**
+The common types are feature or stream-aligned teams, component teams, platform teams, enabling teams and complicated-subsystem teams. Functional teams organised by discipline exist too, but they create handoffs that Agile structures usually try to remove.
 
-**Q: What is a cross-functional Agile team structure?**
-A team that has all the skills needed to deliver a finished result without relying on other teams.
+**Q: Should I use feature teams or component teams?**
+Count how many components your typical feature touches. If most features change several components, feature teams remove most handoffs. If most work stays within one component, or a component needs rare expertise and must stay consistent, a component team can make sense.
 
-**Q: Which Agile team structure is better: feature teams or component teams?**
-A feature team delivers complete customer features across the system; a component team owns one part of the system.
+**Q: What is a stream-aligned team?**
+A stream-aligned team, a term from Team Topologies, is aligned to a flow of work from a segment of the business, such as a product, customer journey or market. It delivers and runs that flow end to end and is the primary team type in the model.
 
-**Q: What is a T-shaped team member in an Agile team structure?**
-Someone with deep expertise in one area and working knowledge of several others, which helps the team share work.
+**Q: What is a platform team in Agile?**
+A platform team builds and runs internal services, such as build pipelines, hosting or data platforms, that other teams use on a self-service basis. Its purpose is to reduce the cognitive load on stream-aligned teams, so it should treat those teams as customers.
+
+**Q: What is Conway's law?**
+Conway's law, from Melvin Conway's 1968 article, says that organisations design systems that copy their own communication structures. In practice, team boundaries shape software architecture, which is why team structure is an architectural decision as well as an organisational one.
+
+**Q: Who do Agile team members report to?**
+It depends on the reporting model. Common options are a functional head of discipline, a product-area manager or a chapter lead who practises the same skill. The line manager handles careers and performance; the team and Product Owner decide day-to-day work.
 
 **Q: Does an Agile team structure need a project manager?**
-Not within Scrum, which has no project manager role. Some organisations keep project managers for cross-team coordination; see [Agile project manager](https://neuralprojectinstitute.com/project-management/agile/agile-project-manager/).
+Scrum defines no project manager accountability. Some organisations keep project managers to coordinate budgets, reporting and dependencies across teams. That role should support the teams rather than assign their work.
 
-**Q: Who leads in an Agile team structure?**
-Agile teams are self-managing. The product owner sets priorities, the Scrum Master supports effectiveness, and the team decides how to do the work.
+**Q: How often should you change an Agile team structure?**
+Rarely. Teams need stability to form and learn, so change structure deliberately and infrequently, when measures such as cross-team dependencies, waiting time or cognitive load show the current boundaries no longer fit the work.
 
-**Q: What is a platform team in an Agile team structure?**
-A team that builds and runs shared tools or services so that other teams can deliver faster.
-
-**Q: Should an Agile team structure be co-located?**
-Co-location helps communication, but many teams work well remotely or in hybrid setups with good tools and agreed working hours.
-
-**Q: How often should an Agile team structure change?**
-Teams benefit from stability, so avoid frequent reshuffles. Review structures every few months and change them when dependencies or goals shift.
-
-**Q: How does an Agile team structure coordinate multiple teams?**
-Through shared backlogs, joint planning, regular cross-team meetings and scaling frameworks; see [scaled Agile framework](https://neuralprojectinstitute.com/project-management/agile/scaled-agile-framework-safe/).
+**Q: When do you need a scaling framework?**
+Two or three teams on one product can usually coordinate with a shared Product Owner, Product Backlog and a Scrum of Scrums. Beyond that, frameworks such as LeSS, SAFe or Scrum@Scale add planning and coordination structures, but you still need good team boundaries first.
 
 ### Related guides
 What Is an Agile Team? Roles, Size, Structure and Examples
@@ -40429,8 +40668,8 @@ A horizontal row that separates types of work, such as an expedite lane for urge
 ### Related guides
 Types of Agile Methodologies: Scrum, Kanban, XP, Lean and More
 Compare the main Agile methodologies (Scrum, Kanban, Scrumban, XP, Lean, Crystal, DSDM and FDD) and learn which suits your team and work.
-What Is Agile Swarming? How Teams Finish Work Faster
-What swarming means in Agile, when to use it, how it reduces work in progress and cycle time, and practical tips for teams starting to swarm.
+Agile Swarming: What It Is, When to Swarm and How
+Agile swarming explained: how it works, when to swarm and when not to, swarming vs pairing and mobbing, a worked Sprint example and common mistakes.
 Agile Tools and Techniques: 20 Essentials With Examples
 Agile tools and techniques explained: user stories, backlogs, estimation, MoSCoW, boards, burndown charts and retros, with examples and how to pick a tool.
 Agile Epics: What They Are, How to Write Them, Examples
@@ -41983,8 +42222,8 @@ Agile Environment: Culture, Workspace, Tools and Setup
 What is an Agile environment? Learn its culture, structure, workspace and tools, assess your own with a scorecard and build one step by step.
 What Does a Scrum Master Do? Role and Responsibilities
 What does a Scrum Master do? Responsibilities per the 2020 Scrum Guide, a typical day, skills, worked examples and Scrum Master vs project manager.
-Agile Team Structures: Types, Roles and How to Choose One
-The main Agile team structures compared: generalist, specialist, feature, component and platform teams, plus roles, team size and how to choose.
+Agile Team Structures: Types, Examples and How to Choose
+Agile team structures compared: feature, component, platform and enabling teams, how teams interact, reporting lines, scaling, and a worked redesign.
 
 
 ---
@@ -44482,8 +44721,8 @@ The Agile Project Manager: Role, Skills and Career Path
 What an Agile project manager does, how the role differs from a Scrum Master and traditional PM, key skills, certifications and a step-by-step career path.
 Agile Ceremonies: A Practical Guide to Agile Meetings
 Agile ceremonies explained: sprint planning, daily stand-up, review, retrospective and refinement, with agendas, time-boxes, a sprint calendar and tips.
-Agile Team Structures: Types, Roles and How to Choose One
-The main Agile team structures compared: generalist, specialist, feature, component and platform teams, plus roles, team size and how to choose.
+Agile Team Structures: Types, Examples and How to Choose
+Agile team structures compared: feature, component, platform and enabling teams, how teams interact, reporting lines, scaling, and a worked redesign.
 
 
 ---
@@ -45836,8 +46075,8 @@ How to Manage Agile Teams: A Practical Guide for Managers
 How to manage Agile teams: what managers do, delegation levels, a weekly rhythm, measuring performance, conflict, remote teams and worked examples.
 Agile Environment: Culture, Workspace, Tools and Setup
 What is an Agile environment? Learn its culture, structure, workspace and tools, assess your own with a scorecard and build one step by step.
-Agile Team Structures: Types, Roles and How to Choose One
-The main Agile team structures compared: generalist, specialist, feature, component and platform teams, plus roles, team size and how to choose.
+Agile Team Structures: Types, Examples and How to Choose
+Agile team structures compared: feature, component, platform and enabling teams, how teams interact, reporting lines, scaling, and a worked redesign.
 
 
 ---
