@@ -8,7 +8,7 @@ RW = dict(
     desc="Fast tracking vs crashing compared: definitions, crash cost slope, a worked example with risk-adjusted cost, break-even rework probability and how to choose.",
     intro=(
         "Fast tracking and crashing are the two standard schedule compression techniques. "
-        "Fast tracking shortens the schedule by overlapping activities that would normally run in sequence, so it mainly adds risk of rework; crashing shortens critical activities by adding resources, so it mainly adds cost. "
+        "Fast tracking shortens the schedule by overlapping activities that would normally run in sequence, at the price of possible rework; crashing shortens critical activities by adding resources, at the price of extra direct cost. "
         "This guide compares them side by side and works through an example that puts the risk of fast tracking and the cost of crashing on the same scale."
     ),
     takeaways=[
@@ -172,11 +172,11 @@ RW = dict(
                 "**Calling a scope cut compression.** Removing deliverables is a scope change and needs approval as one.",
                 "**Leaving the risk out of the comparison**, so the sponsor chooses between a priced option and an apparently free one.",
             ),
-            "In Agile delivery, where sprints are fixed time-boxes, the closest equivalents are reprioritising the backlog (a scope decision) and [swarming](/project-management/agile/agile-swarming/) on the highest-priority item; adding people mid-release behaves like crashing and carries the same onboarding cost.",
+            "Agile teams working in fixed time-boxes rarely use either technique in its classic form; the schedule compression guide explains the closest equivalents, such as [swarming](/project-management/agile/agile-swarming/) on the highest-priority item.",
         ),
     ],
     faq=[
-        ("What is the difference between fast tracking and crashing?", "Fast tracking overlaps activities that were planned in sequence, so it mainly adds risk of rework. Crashing adds resources to critical activities to shorten them, so it mainly adds cost. Both shorten the schedule without reducing scope."),
+        ("What is the difference between fast tracking and crashing?", "Fast tracking overlaps activities that were planned in sequence; its main cost is the risk of rework. Crashing adds resources to critical activities to shorten them; its main cost is money. Both shorten the schedule without reducing scope."),
         ("Which is better, crashing or fast tracking?", "Neither in general. Compare them on risk-adjusted cost: the certain cost of crashing against the probability of rework multiplied by its cost and delay. Stable inputs and cheap rework favour fast tracking; unstable inputs, expensive rework or a sponsor who needs certainty favour crashing."),
         ("Does fast tracking increase cost?", "Not directly, but rework caused by building on inputs that later change can add cost and delay. It can also add coordination effort and create resource peaks when activities run at the same time."),
         ("How do you calculate crash cost per day?", "Crash cost slope = (crash cost − normal cost) ÷ (normal duration − crash duration). For example, an activity crashed from 5 to 3 days with its cost rising from $10,000 to $13,000 costs $3,000 ÷ 2 = $1,500 per day saved."),
