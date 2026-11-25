@@ -1,0 +1,291 @@
+{
+ "url": "/project-management/industries/education-project-management/",
+ "proposed_status": "PUBLISH",
+ "article_type": "sector methodology guide with worked example",
+ "language": "en-GB",
+ "learning_level": "beginner",
+ "primary_keyword": "education project management",
+ "secondary_keywords": [
+  "project management in education",
+  "project management for schools",
+  "higher education project management",
+  "project management in universities",
+  "school project management",
+  "academic calendar planning",
+  "LMS implementation project",
+  "VLE migration project",
+  "curriculum development project",
+  "ADDIE project management",
+  "edtech implementation",
+  "education project life cycle",
+  "education project KPIs",
+  "education project manager role",
+  "backward scheduling term start",
+  "staff training plan for new system",
+  "DPIA edtech schools",
+  "digital accessibility in education"
+ ],
+ "search_intent": "Sector methodology / how-to, with definition answered first",
+ "h1": "Education Project Management: Phases, Roles and Example",
+ "seo_title": "Education Project Management: Phases, Roles and Example",
+ "meta_description": "Education project management explained: planning around the academic calendar, life cycle, roles, methods, compliance, KPIs and a worked term-start schedule.",
+ "excerpt": "How project management works in schools, colleges and universities: academic-calendar constraints, the life cycle, roles, delivery approaches, 2026-27 compliance rules, KPIs and a worked backward schedule for a VLE replacement.",
+ "parent_topic_cluster": "/project-management/industries/ (project management by industry)",
+ "prerequisite_guides": [
+  "/project-management/project-scheduling/",
+  "/project-management/forward-and-backward-pass/",
+  "/project-management/project-stakeholder-management/"
+ ],
+ "related_articles": [
+  "/project-management/industries/research-project-management/",
+  "/project-management/industries/government-project-management/",
+  "/project-management/industries/nonprofit-project-management/",
+  "/project-management/float-and-slack/",
+  "/project-management/capacity-planning/"
+ ],
+ "learning_objectives": [
+  "Explain how education projects differ from projects in other sectors",
+  "Plan backwards from a term start date and include governance meetings as constraints",
+  "Calculate total float under alternative approval dates and decide on contingency",
+  "Check whether a training window has enough capacity",
+  "Choose a delivery approach by type of education project",
+  "Identify accessibility, data protection and safeguarding requirements to plan for in the UK and US"
+ ],
+ "internal_links": [
+  "/project-management-tools/",
+  "/project-management-tools/microsoft-planner/",
+  "/project-management-tools/trello/",
+  "/project-management-tools/wrike/",
+  "/project-management/agile/agile-vs-waterfall/",
+  "/project-management/capacity-planning/",
+  "/project-management/communication-plan/",
+  "/project-management/float-and-slack/",
+  "/project-management/forward-and-backward-pass/",
+  "/project-management/industries/",
+  "/project-management/industries/research-project-management/",
+  "/project-management/kanban/what-is-kanban/",
+  "/project-management/lessons-learned/",
+  "/project-management/project-charter/",
+  "/project-management/project-management-office-pmo/",
+  "/project-management/project-management-phases/",
+  "/project-management/project-manager-roles-and-responsibilities/",
+  "/project-management/project-stakeholder-management/",
+  "/project-management/raci-matrix/",
+  "/project-management/risk-register/",
+  "/project-management/schedule-variance/",
+  "/templates/business-case-template/",
+  "/templates/project-schedule-template/",
+  "/templates/training-plan-template/"
+ ],
+ "relevant_templates": [
+  "/templates/project-schedule-template/",
+  "/templates/training-plan-template/",
+  "/templates/business-case-template/"
+ ],
+ "related_npi_course": "Wayfinder: Leadership and Stakeholder Communication (named only in the page's existing PMAI box; not mentioned in the body)",
+ "external_references": [
+  {
+   "title": "Federal Register 91(75), 20 April 2026: DOJ interim final rule extending ADA Title II web and mobile accessibility compliance dates",
+   "url": "https://www.govinfo.gov/content/pkg/FR-2026-04-20/html/2026-07663.htm",
+   "inspected": true,
+   "what_it_supports": "New dates 26 Apr 2027 (population 50,000+) and 26 Apr 2028 (smaller and special districts); WCAG 2.1 AA; effective 20 Apr 2026; interim final rule with comments"
+  },
+  {
+   "title": "GOV.UK, Understanding accessibility requirements for public sector bodies (updated 30 Sep 2024)",
+   "url": "https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps",
+   "inspected": true,
+   "what_it_supports": "WCAG 2.2 AA; accessibility statement; schools and nurseries partially exempt"
+  },
+  {
+   "title": "Jisc, Accessibility regulations: what you need to know",
+   "url": "https://www.jisc.ac.uk/guides/accessibility-regulations-what-you-need-to-know",
+   "inspected": true,
+   "what_it_supports": "Colleges and universities in scope; VLEs and intranets covered"
+  },
+  {
+   "title": "DfE, Data protection in schools: procuring educational technology (updated 13 Nov 2026)",
+   "url": "https://www.gov.uk/guidance/data-protection-in-schools/procuring-educational-technology-edtech",
+   "inspected": true,
+   "what_it_supports": "DPIA for high-risk processing, start early; checks on storage, retention, sub-processors, breach notification, exit plan, AI training on pupil data; filtering and monitoring per KCSIE"
+  },
+  {
+   "title": "Family Law, 'Keeping children safe in education 2026' published ahead of September implementation (13 Jul 2026)",
+   "url": "https://www.familylaw.co.uk/news_and_comment/keeping-children-safe-in-education-2026'-published-ahead-of-september-implementation",
+   "inspected": true,
+   "what_it_supports": "KCSIE 2026 published 7 Jul 2026, in force 1 Sep 2026, replacing 2025 edition (secondary source; gov.uk document itself not opened)"
+  },
+  {
+   "title": "US Department of Education, Student Privacy Policy Office: To which educational agencies or institutions does FERPA apply?",
+   "url": "https://studentprivacy.ed.gov/faq/which-educational-agencies-or-institutions-does-ferpa-apply",
+   "inspected": true,
+   "what_it_supports": "FERPA scope"
+  },
+  {
+   "title": "Scally, W. A. (2002) Ten issues in managing education projects. PMI Annual Seminars & Symposium",
+   "url": "https://www.pmi.org/learning/library/ten-issues-managing-education-projects-1039",
+   "inspected": true,
+   "what_it_supports": "Issues cited in 'How education projects differ'"
+  },
+  {
+   "title": "GOV.UK, Academies planning calendar 2025 to 2026",
+   "url": "https://www.gov.uk/government/publications/academies-planning-calendar/academies-planning-calendar-2025-to-2026",
+   "inspected": true,
+   "what_it_supports": "Indirect support for academy accounting year ending 31 August (audited statements due 31 May 2027, nine months after period end)"
+  },
+  {
+   "title": "Prosci, Project management in higher education",
+   "url": "https://www.prosci.com/blog/project-management-in-higher-education",
+   "inspected": true,
+   "what_it_supports": "SERP gap analysis only"
+  }
+ ],
+ "formulas": [
+  {
+   "formula": "Latest start = latest finish - duration (backward pass)",
+   "variables": "dates; durations in calendar weeks",
+   "verified_by": "python",
+   "inputs": "go-live Mon 6 Sep 2027; staff last day Fri 16 Jul 2027; migration 6 wk; training 4 wk; pilot 6 wk ending Fri 28 May 2027; configuration 8 wk; contract/onboarding 3 wk",
+   "result": "Migration LS Mon 7 Jun; training LS Mon 21 Jun; pilot LS Mon 19 Apr; configuration LS Mon 22 Feb (LF Fri 16 Apr); contract LS Mon 1 Feb 2027 (LF Fri 19 Feb)"
+  },
+  {
+   "formula": "Total float = latest start - earliest realistic start",
+   "variables": "weeks",
+   "verified_by": "python",
+   "inputs": "A: approval 16 Dec 2026, work from Mon 4 Jan 2027, config ES Mon 25 Jan; B: approval 17 Mar 2027, work from Mon 22 Mar, config ES Mon 12 Apr",
+   "result": "A +4 weeks; B -7 weeks; swing 11 weeks; gap between meetings 13 weeks; paper deadline (10 working days before 16 Dec) Wed 2 Dec 2026"
+  },
+  {
+   "formula": "Sessions needed = ceil(staff / (room capacity x attendance rate))",
+   "variables": "staff (people), room capacity (people per session), attendance rate (proportion)",
+   "verified_by": "python",
+   "inputs": "380, 16, 1.0 and 0.85",
+   "result": "23.75 -> 24; 27.94 -> 28"
+  },
+  {
+   "formula": "Sessions available = weeks x days per week x sessions per day x trainers",
+   "variables": "counts",
+   "verified_by": "python",
+   "inputs": "4 x 3 x 2 x 1",
+   "result": "24"
+  }
+ ],
+ "formula_verification_output": "go-live Mon 06 Sep 2027\nstaff last Fri 16 Jul 2027\nmigration latest start Mon 07 Jun 2027\ntraining latest start Mon 21 Jun 2027\npilot latest start Mon 19 Apr 2027\nconfig latest finish Fri 16 Apr 2027 latest start Mon 22 Feb 2027\ncontract latest start Mon 01 Feb 2027\nA config earliest start Mon 25 Jan 2027 float weeks 4.0\nA paper deadline 10 working days before 16 Dec:\nWed 02 Dec 2026\nB config start Mon 12 Apr 2027 end Fri 04 Jun 2027 float weeks -7.0\nB pilot would end Fri 16 Jul 2027 vs staff last Fri 16 Jul 2027\nsessions 23.75 24 27.941176470588236 28\nslots one trainer 24 slots two trainers 48\nseat-hours 1140\ntraining window days 25\n2027-03-28\n13.0 7.0 Fri\n",
+ "worked_examples": [
+  {
+   "title": "Hypothetical English FE college replacing its VLE for Monday 6 September 2027: backward pass, float under two governance dates, training capacity and readiness criteria",
+   "illustrative": true
+  }
+ ],
+ "statistical_text_measurements": {
+  "url": "/project-management/industries/education-project-management/",
+  "word_count": 4335,
+  "unique_words": 1146,
+  "type_token_ratio": 0.2644,
+  "mattr_100": 0.7618,
+  "shannon_word_entropy_bits": 8.852,
+  "normalised_entropy": 0.871,
+  "sentences": 152,
+  "avg_sentence_length": 17.99,
+  "sentence_length_sd": 9.65,
+  "sentence_length_cv": 0.536,
+  "paragraph_length_mean": 36.0,
+  "paragraph_length_sd": 20.3,
+  "bigram_repetition_rate": 0.3016,
+  "trigram_repetition_rate": 0.093,
+  "top_repeated_4grams": [
+   [
+    "the student record system",
+    3
+   ],
+   [
+    "meeting and paper deadline",
+    3
+   ],
+   [
+    "data protection impact assessment",
+    3
+   ],
+   [
+    "your data protection officer",
+    3
+   ],
+   [
+    "education project management is",
+    2
+   ],
+   [
+    "project management is the",
+    2
+   ],
+   [
+    "is the planning and",
+    2
+   ],
+   [
+    "the planning and delivery",
+    2
+   ]
+  ],
+  "most_common_sentence_openers": [
+   [
+    "it is",
+    3
+   ]
+  ],
+  "formulaic_phrases_found": [],
+  "watch_phrases_counts": {},
+  "most_similar_existing_guides": [
+   [
+    0.285,
+    "/project-management/what-is-project-management/"
+   ],
+   [
+    0.272,
+    "/project-management/it-project-manager/"
+   ],
+   [
+    0.267,
+    "/project-management/what-is-a-project/"
+   ],
+   [
+    0.258,
+    "/project-management/industries/government-project-management/"
+   ],
+   [
+    0.252,
+    "/project-management/project-management-plan/"
+   ]
+  ],
+  "note": "Descriptive editorial diagnostics only. No AI-detection probability is calculated."
+ },
+ "self_assessment": {
+  "technical_accuracy_25": 23,
+  "sources_15": 13,
+  "educational_usefulness_15": 14,
+  "examples_10": 10,
+  "information_gain_10": 9,
+  "precision_readability_10": 9,
+  "search_intent_5": 5,
+  "internal_linking_5": 5,
+  "technical_seo_5": 5,
+  "total": 93
+ },
+ "required_disclosures": [
+  "Worked example labelled hypothetical/illustrative, with assumptions (attendance rate, thresholds) labelled",
+  "Compliance section labelled 'as at 25 November 2026, not legal advice'",
+  "Calendar windows and 'limit concurrent changes' presented as rules of thumb, not requirements",
+  "No PMAI course mention in body (existing PMAI box only)",
+  "Wrike recommendation consistent with /project-management-tools/wrike/ (9.4, #1; steeper learning curve noted)"
+ ],
+ "unverified_claims": [
+  "KCSIE 2026 dates taken from a Family Law news report; the gov.uk KCSIE 2026 document itself was not opened",
+  "Academy trust year ending 31 August inferred from the DfE planning calendar's filing deadline (31 May 2027, nine months after period end); not stated explicitly on the page opened",
+  "ADA Title II interim final rule: comment period closed 22 Jun 2026; any later DOJ action after that date was not checked",
+  "'Successive Approximation Model (SAM)' named from general knowledge; no primary source opened",
+  "Calendar windows (English term pattern, half-term week from 31 May 2027) are typical/illustrative, not taken from a specific institution's published calendar",
+  "Statement that university senates/academic boards usually hold formal responsibility for academic matters is general knowledge, not sourced"
+ ],
+ "unresolved_issues": [
+  "Paper deadline in the example (Wed 2 Dec 2026) is one week after the article date; consistent and labelled hypothetical, but the scenario should be shifted forward at the next update"
+ ]
+}

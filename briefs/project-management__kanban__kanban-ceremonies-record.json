@@ -1,0 +1,283 @@
+{
+ "url": "/project-management/kanban/kanban-ceremonies/",
+ "proposed_status": "PUBLISH",
+ "article_type": "methodology guide (definition and how-to) with worked examples",
+ "language": "en-GB",
+ "learning_level": "intermediate",
+ "primary_keyword": "kanban ceremonies",
+ "secondary_keywords": [
+  "kanban cadences",
+  "kanban meetings",
+  "seven kanban cadences",
+  "daily kanban meeting",
+  "kanban stand-up",
+  "walk the board",
+  "replenishment meeting",
+  "delivery planning meeting",
+  "service delivery review",
+  "operations review",
+  "risk review",
+  "strategy review",
+  "kanban retrospective",
+  "kanban feedback loops",
+  "kanban vs scrum ceremonies",
+  "are kanban meetings mandatory"
+ ],
+ "search_intent": "Definition plus methodology/how-to: which Kanban meetings exist, which are required, and how to run them",
+ "h1": "Kanban Ceremonies: The 7 Cadences and How to Run Them",
+ "seo_title": "Kanban Ceremonies: The 7 Cadences and How to Run Them",
+ "meta_description": "Kanban ceremonies explained: the seven cadences, team-level meetings, an agenda for each, a worked service delivery review and how to start small.",
+ "excerpt": "The seven Kanban cadences and the three team-level meetings, what the Kanban Method and the Kanban Guide each require, agendas for each cadence, a worked service delivery review and the monthly cost of a cadence calendar.",
+ "parent_topic_cluster": "/project-management/kanban/ (Kanban practices)",
+ "prerequisite_guides": [
+  "/project-management/kanban/what-is-kanban/",
+  "/project-management/kanban/kanban-principles/"
+ ],
+ "related_articles": [
+  "/project-management/kanban/kanban-planning/",
+  "/project-management/kanban/kanban-vs-scrum/",
+  "/project-management/kanban/kanban-metrics/",
+  "/project-management/kanban/blocker-clustering/",
+  "/project-management/kanban/wip-aging-chart/",
+  "/project-management/scrum/daily-scrum/"
+ ],
+ "learning_objectives": [
+  "Explain what a Kanban cadence is and how it implements the feedback-loop practice",
+  "State what Kanban University and the Kanban Guide each require regarding meetings",
+  "Run a daily Kanban meeting by walking the board right to left",
+  "Distinguish replenishment from delivery planning",
+  "Prepare and interpret a service delivery review using SLE attainment and cycle time percentiles",
+  "Choose, combine and cost a cadence calendar for a team"
+ ],
+ "internal_links": [
+  "/project-management-tools/jira/",
+  "/project-management/agile/agile-portfolio-management/",
+  "/project-management/kanban/blocker-clustering/",
+  "/project-management/kanban/cumulative-flow-diagram/",
+  "/project-management/kanban/cycle-time/",
+  "/project-management/kanban/kanban-metrics/",
+  "/project-management/kanban/kanban-planning/",
+  "/project-management/kanban/kanban-principles/",
+  "/project-management/kanban/kanban-vs-scrum/",
+  "/project-management/kanban/throughput/",
+  "/project-management/kanban/wip-aging-chart/",
+  "/project-management/kanban/wip-limits/",
+  "/project-management/scrum/daily-scrum/",
+  "/project-management/scrum/sprint-retrospective/",
+  "/templates/kanban-board-template/",
+  "/templates/meeting-agenda-template/",
+  "/templates/meeting-notes-template/"
+ ],
+ "relevant_templates": [
+  "/templates/meeting-agenda-template/",
+  "/templates/meeting-notes-template/",
+  "/templates/kanban-board-template/"
+ ],
+ "related_npi_course": "Sprintcraft: Agile and Scrum Practitioner (named only in the page's existing PMAI box; not mentioned in the body)",
+ "external_references": [
+  {
+   "title": "Anderson, Kanban Cadences, Kanban University, 23 Apr 2015",
+   "url": "https://kanban.university/kanban-cadences/",
+   "inspected": true,
+   "what_it_supports": "Seven cadences; risk review added 2014 after Leopold's blocker clustering (2013); client with fortnightly SDR and weekly replenishment, combined by adding 30 minutes every other week; adapt existing meetings rather than add seven; combine at small scale; SDR and ops review feed strategy review; replenishment feeds standup. Cadence diagram not readable, so frequencies other than SDR/replenishment not confirmed from this page."
+  },
+  {
+   "title": "Kanban University, The Official Guide to the Kanban Method (A4 PDF, © Mauvius Group 2022)",
+   "url": "https://kanban.university/wp-content/uploads/2023/04/The-Official-Kanban-Guide_A4.pdf",
+   "inspected": true,
+   "what_it_supports": "Team-level cadences table (team Kanban meeting daily; team retrospective biweekly or monthly; internal team replenishment weekly or as needed) with purposes; reuse and evolve existing meetings; walk the board right to left. Service-oriented cadence figure (Figure 9) not extractable."
+  },
+  {
+   "title": "Kanban University, The Official Kanban Guide Glossary (© 2022)",
+   "url": "https://kanban.university/wp-content/uploads/2023/04/The-Official-Kanban-Guide_Glossary.pdf",
+   "inspected": true,
+   "what_it_supports": "Definitions of cadence, feedback loop ('feedback information without action is not a feedback loop'), Kanban meeting, review, team retrospective, commitment point"
+  },
+  {
+   "title": "Coleman & Vacanti, The Kanban Guide, edition 2025.5 (1 May 2025)",
+   "url": "https://kanbanguides.org/the-kanban-guide/2025.5/pdf/kanban-guide.v2025.5.en.pdf",
+   "inspected": true,
+   "what_it_supports": "No requirement to wait for a formal meeting at a regular cadence; just-in-time alterations; improvements need not be small; SLE and work item age definitions"
+  },
+  {
+   "title": "Schwaber & Sutherland, The Scrum Guide (November 2020)",
+   "url": "https://scrumguides.org/scrum-guide.html",
+   "inspected": true,
+   "what_it_supports": "Daily Scrum is a 15-minute event for the Developers to inspect progress toward the Sprint Goal and adapt the Sprint Backlog; uses the term events"
+  },
+  {
+   "title": "Orszewski, How Kanban Cadences Help You Align Business Communication?, Businessmap blog (25 Jun 2022, updated 6 Jul 2026)",
+   "url": "https://businessmap.io/blog/kanban-cadences",
+   "inspected": true,
+   "what_it_supports": "Secondary source (vendor blog) for typical frequencies of operations review (monthly), risk review (monthly), strategy review (quarterly) and their purposes"
+  }
+ ],
+ "formulas": [
+  {
+   "formula": "SLE attainment = items finished within SLE ÷ items finished × 100",
+   "variables": "counts of items; SLE in calendar days",
+   "verified_by": "python",
+   "inputs": "14 ÷ 18 (SLE 10 days)",
+   "result": "77.8%"
+  },
+  {
+   "formula": "85th percentile (nearest rank) = value at rank ceil(0.85 × n) of sorted cycle times",
+   "variables": "n finished items; cycle time in calendar days",
+   "verified_by": "python",
+   "inputs": "n = 18 → rank 16",
+   "result": "12 days"
+  },
+  {
+   "formula": "Throughput = items finished ÷ weeks",
+   "variables": "items; weeks",
+   "verified_by": "python",
+   "inputs": "18 ÷ 2",
+   "result": "9 items per week"
+  },
+  {
+   "formula": "Meeting hours per month = minutes per occurrence × occurrences per month ÷ 60; share = hours ÷ (20 days × 7.5 h)",
+   "variables": "minutes; occurrences; hours",
+   "verified_by": "python",
+   "inputs": "daily 15×20; SDR 45×2; retro 60; replenishment 30×4; risk 45; ops 60; strategy 120÷3",
+   "result": "member 7.5 h (5.0%); with replenishment 9.5 h (6.3%); lead 11.92 h (7.9%)"
+  }
+ ],
+ "formula_verification_script": "import math, statistics\n# Service delivery review, illustrative fortnight (10 working days), cycle times in calendar days\nct=[2,3,3,4,4,5,5,6,6,7,7,8,9,9,11,12,14,16]\nsle=10; n=len(ct)\nwithin=sum(c<=sle for c in ct)\nprint(\"n\",n,\"within SLE\",within,\"share\",within/n*100)\nprint(\"throughput per week\",n/2,\"mean\",statistics.mean(ct),\"median\",statistics.median(ct))\nr=math.ceil(0.85*n); print(\"P85 nearest rank r\",r,\"value\",sorted(ct)[r-1])\nlate=[c for c in ct if c>sle]; print(\"late items\",late)\n# items needed within SLE to reach 85%\nprint(\"items needed for 85%\",math.ceil(0.85*n))\nages=[1,2,2,3,5,6,8,11,13]; print(\"WIP now\",len(ages),\"over SLE\",[a for a in ages if a>sle])\n# meeting load per team member per 4-week month (20 working days)\ndaily=15*20/60; sdr=45*2/60; retro=60/60; repl=30*4/60\nprint(\"daily h\",daily,\"sdr h\",sdr,\"retro h\",retro,\"replenishment h (attendees only)\",repl)\ncore=daily+sdr+retro; hours=20*7.5\nprint(\"core h\",core,\"of\",hours,\"=\",core/hours*100,\"%; with replenishment\",(core+repl),(core+repl)/hours*100)\n# lead role: plus ops review 60 + risk review 45 + strategy quarterly 120/3 per month\nlead=core+repl+1+0.75+120/3/60\nprint(\"lead h\",lead,lead/hours*100)\n",
+ "formula_verification_output": "n 18 within SLE 14 share 77.77777777777779\nthroughput per week 9.0 mean 7.277777777777778 median 6.5\nP85 nearest rank r 16 value 12\nlate items [11, 12, 14, 16]\nitems needed for 85% 16\nWIP now 9 over SLE [11, 13]\ndaily h 5.0 sdr h 1.5 retro h 1.0 replenishment h (attendees only) 2.0\ncore h 7.5 of 150.0 = 5.0 %; with replenishment 9.5 6.333333333333334\nlead h 11.916666666666666 7.944444444444445",
+ "worked_examples": [
+  {
+   "title": "Internal IT service team: fortnightly service delivery review with SLE attainment, 85th percentile and ageing work",
+   "illustrative": true
+  },
+  {
+   "title": "Same team: monthly cadence calendar and meeting-time cost per role",
+   "illustrative": true
+  }
+ ],
+ "statistical_text_measurements": {
+  "url": "/project-management/kanban/kanban-ceremonies/",
+  "word_count": 4051,
+  "unique_words": 894,
+  "type_token_ratio": 0.2207,
+  "mattr_100": 0.7047,
+  "shannon_word_entropy_bits": 8.309,
+  "normalised_entropy": 0.8475,
+  "sentences": 185,
+  "avg_sentence_length": 16.69,
+  "sentence_length_sd": 9.5,
+  "sentence_length_cv": 0.569,
+  "paragraph_length_mean": 39.1,
+  "paragraph_length_sd": 21.5,
+  "bigram_repetition_rate": 0.3884,
+  "trigram_repetition_rate": 0.1388,
+  "top_repeated_4grams": [
+   [
+    "the service delivery review",
+    6
+   ],
+   [
+    "a service delivery review",
+    5
+   ],
+   [
+    "a daily kanban meeting",
+    4
+   ],
+   [
+    "the daily kanban meeting",
+    4
+   ],
+   [
+    "fortnightly service delivery review",
+    4
+   ],
+   [
+    "operations and strategy reviews",
+    4
+   ],
+   [
+    "one or more services",
+    3
+   ],
+   [
+    "a fortnightly service delivery",
+    3
+   ]
+  ],
+  "most_common_sentence_openers": [
+   [
+    "kanban university",
+    5
+   ],
+   [
+    "the daily",
+    4
+   ],
+   [
+    "the kanban",
+    4
+   ],
+   [
+    "kanban university's",
+    3
+   ],
+   [
+    "the service",
+    3
+   ]
+  ],
+  "formulaic_phrases_found": [],
+  "watch_phrases_counts": {},
+  "most_similar_existing_guides": [
+   [
+    0.618,
+    "/project-management/kanban/kanban-planning/"
+   ],
+   [
+    0.607,
+    "/project-management/kanban/what-is-kanban/"
+   ],
+   [
+    0.543,
+    "/project-management/kanban/kanban-principles/"
+   ],
+   [
+    0.539,
+    "/project-management/kanban/kanban-vs-agile/"
+   ],
+   [
+    0.527,
+    "/project-management/kanban/kanban-vs-scrum/"
+   ]
+  ],
+  "note": "Descriptive editorial diagnostics only. No AI-detection probability is calculated."
+ },
+ "self_assessment": {
+  "technical_accuracy_25": 23,
+  "sources_15": 13,
+  "educational_usefulness_15": 14,
+  "examples_10": 9,
+  "information_gain_10": 9,
+  "precision_readability_10": 9,
+  "search_intent_5": 5,
+  "internal_linking_5": 5,
+  "technical_seo_5": 5,
+  "total": 92
+ },
+ "required_disclosures": [
+  "Both worked examples labelled illustrative",
+  "Suggested meeting lengths labelled as the institute's suggestions, not Kanban University rules",
+  "Typical frequencies presented as starting points"
+ ],
+ "unverified_claims": [
+  "Typical frequencies for risk review (monthly), operations review (monthly), strategy review (quarterly) and delivery planning (per delivery) could not be read from Kanban University's own diagram; they come from a secondary vendor source (Businessmap) and match the site's kanban-planning page",
+  "Descriptions of operations, risk and strategy review purposes rely partly on the Businessmap secondary source",
+  "Statement that Delivery Planning was covered in Anderson's 2010 book is not made; only that Kanban University keeps it separate (Anderson 2015 says it is taught separately)",
+  "Jira capabilities limited to what the site's Jira review states (WIP limits, cumulative flow diagrams, control charts)"
+ ],
+ "unresolved_issues": [
+  "TF-IDF similarity 0.62 with /project-management/kanban/kanban-planning/ and 0.61 with /project-management/kanban/what-is-kanban/ (shared Kanban vocabulary). Replenishment detail is deliberately left to the planning page and linked; the reviewer may wish to confirm there is no intent overlap on 'replenishment meeting'",
+  "Title changed from 'Kanban Meetings and Cadences: Which Ones You Need' to 'Kanban Ceremonies: The 7 Cadences and How to Run Them' (URL unchanged)",
+  "Word count about 4,040, at the top of the usual range"
+ ]
+}

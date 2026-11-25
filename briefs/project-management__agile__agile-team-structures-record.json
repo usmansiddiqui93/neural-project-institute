@@ -1,0 +1,277 @@
+{
+ "url": "/project-management/agile/agile-team-structures/",
+ "proposed_status": "PUBLISH",
+ "article_type": "methodology and comparison guide with worked example",
+ "language": "en-GB",
+ "learning_level": "intermediate",
+ "primary_keyword": "agile team structure",
+ "secondary_keywords": [
+  "agile team structures",
+  "types of agile teams",
+  "how to structure agile teams",
+  "feature teams vs component teams",
+  "stream-aligned team",
+  "platform team",
+  "enabling team",
+  "complicated subsystem team",
+  "team topologies interaction modes",
+  "T-shaped team",
+  "generalising specialist",
+  "cross-functional team structure",
+  "Conway's law",
+  "inverse Conway manoeuvre",
+  "agile organisational structure",
+  "agile team reporting structure",
+  "scaling agile team structures",
+  "team cognitive load",
+  "dependencies between agile teams"
+ ],
+ "search_intent": "Methodology/how-to (which structures exist and how to choose and test one), with secondary comparison intent (feature vs component; team types)",
+ "h1": "Agile Team Structures: Types, Examples and How to Choose",
+ "seo_title": "Agile Team Structures: Types, Examples and How to Choose",
+ "meta_description": "Agile team structures compared: feature, component, platform and enabling teams, how teams interact, reporting lines, scaling, and a worked redesign.",
+ "excerpt": "How to structure Agile teams across an organisation: team boundary types, composition, interaction modes, line management and multi-team structures, with a decision table and a worked redesign that counts cross-team handoffs before and after.",
+ "parent_topic_cluster": "/project-management/agile/ (Agile roles and teams)",
+ "prerequisite_guides": [
+  "/project-management/agile/what-is-an-agile-team/",
+  "/project-management/scrum/scrum-team-roles/"
+ ],
+ "related_articles": [
+  "/project-management/agile/squads-tribes-chapters-guilds/",
+  "/project-management/agile/large-scale-scrum-less/",
+  "/project-management/agile/agile-release-train/",
+  "/project-management/agile/scaled-agile-framework-safe/",
+  "/project-management/scrum/scrum-at-scale/",
+  "/project-management/agile/agile-transformation/",
+  "/project-management/agile/how-to-manage-agile-teams/",
+  "/project-management/agile/agile-swarming/"
+ ],
+ "learning_objectives": [
+  "Explain the three decisions in an Agile team structure: boundaries, composition and connections",
+  "Compare feature/stream-aligned, component, platform, enabling, complicated-subsystem, functional and internal open-source teams",
+  "Explain Conway's law, handoff queues and cognitive load as reasons structure matters",
+  "Choose interaction modes and a line-management model",
+  "Test candidate structures by counting teams touched and handoffs for real upcoming features, and interpret the result"
+ ],
+ "internal_links": [
+  "/project-management/agile/agile-metrics-and-kpis/",
+  "/project-management/agile/agile-project-manager/",
+  "/project-management/agile/agile-release-train/",
+  "/project-management/agile/agile-swarming/",
+  "/project-management/agile/agile-transformation/",
+  "/project-management/agile/how-to-manage-agile-teams/",
+  "/project-management/agile/large-scale-scrum-less/",
+  "/project-management/agile/scaled-agile-framework-safe/",
+  "/project-management/agile/squads-tribes-chapters-guilds/",
+  "/project-management/agile/what-is-an-agile-team/",
+  "/project-management/kanban/cycle-time/",
+  "/project-management/kanban/value-stream-mapping/",
+  "/project-management/scrum/product-backlog/",
+  "/project-management/scrum/scrum-at-scale/",
+  "/project-management/scrum/scrum-of-scrums/",
+  "/project-management/scrum/scrum-team-roles/",
+  "/templates/raci-matrix-template/",
+  "/templates/skills-matrix-template/"
+ ],
+ "relevant_templates": [
+  "/templates/skills-matrix-template/",
+  "/templates/raci-matrix-template/"
+ ],
+ "related_npi_course": "Sprintcraft: Agile and Scrum Practitioner (named only in the page's existing PMAI box; not mentioned in the body)",
+ "external_references": [
+  {
+   "title": "Schwaber & Sutherland, The Scrum Guide (November 2020)",
+   "url": "https://scrumguides.org/scrum-guide.html",
+   "inspected": true,
+   "what_it_supports": "'no sub-teams or hierarchies'; skills 'often broad and will vary with the domain of work'; reorganise 'into multiple cohesive Scrum Teams, each focused on the same product' sharing Product Goal, Product Backlog and Product Owner; no project manager accountability"
+  },
+  {
+   "title": "Team Topologies, Key Concepts (teamtopologies.com)",
+   "url": "https://teamtopologies.com/key-concepts",
+   "inspected": true,
+   "what_it_supports": "Four team types; three interaction modes with quoted definitions; 'overloaded teams make poor decisions and move slowly'"
+  },
+  {
+   "title": "Martin Fowler, Team Topologies (bliki, 25 July 2023)",
+   "url": "https://martinfowler.com/bliki/TeamTopologies.html",
+   "inspected": true,
+   "what_it_supports": "Book published 2019 by Skelton and Pais; stream-aligned as primary team type; platform reduces cognitive load"
+  },
+  {
+   "title": "Martin Fowler, Conway's Law (bliki, 20 October 2022)",
+   "url": "https://www.martinfowler.com/bliki/ConwaysLaw.html",
+   "inspected": true,
+   "what_it_supports": "Conway 1968 quote (Datamation); inverse Conway manoeuvre coined by Jonny LeRoy and Matt Simons in 2010"
+  },
+  {
+   "title": "LeSS, Feature Teams (less.works)",
+   "url": "https://less.works/less/structure/feature-teams",
+   "inspected": true,
+   "what_it_supports": "Feature team definition 'long-lived, cross-functional, cross-component'; component-team disadvantages; hybrid models 'drawbacks from both worlds'"
+  },
+  {
+   "title": "PMI Disciplined Agile, How do we organize a large agile team?",
+   "url": "https://www.pmi.org/disciplined-agile/agility-at-scale/tactical-agility-at-scale/large-agile-teams/how-do-we-organize-a-large-agile-team",
+   "inspected": true,
+   "what_it_supports": "Component, feature, functional and internal open-source strategies; functional teams add communication overhead and project risk; strategies can be combined"
+  },
+  {
+   "title": "Scaled Agile, Features and Components (updated 17 April 2023)",
+   "url": "https://scaledagileframework.com/features-and-components/",
+   "inspected": true,
+   "what_it_supports": "Four team types as template; most teams stream-aligned; no more than 1–3 complicated-subsystem teams per ART; two or three enabling teams across the enterprise common"
+  },
+  {
+   "title": "Mountain Goat Software, Agile Team Structure (updated 31 July 2026)",
+   "url": "https://www.mountaingoatsoftware.com/agile/agile-teams-and-collaboration/agile-team-structure",
+   "inspected": true,
+   "what_it_supports": "Most teams should be feature teams; conditions for component teams; '20% on five teams' specialist allocation; primary team; do not reorganise constantly"
+  }
+ ],
+ "formulas": [
+  {
+   "formula": "Handoffs per feature = teams touched − 1",
+   "variables": "teams touched (count); handoffs (count)",
+   "verified_by": "python",
+   "inputs": "10 illustrative features mapped to W/M/C/D components and to journey teams + platform",
+   "result": "Component structure: 30 team touches, average 3.0, 1/10 single-team, 20 handoffs. Feature structure: 11 touches, average 1.1, 9/10 single-team, 1 handoff; reduction 95%"
+  },
+  {
+   "formula": "Expected waiting = handoffs × w",
+   "variables": "w assumed average wait per handoff = 5 working days (half a two-week Sprint)",
+   "verified_by": "python",
+   "inputs": "20 and 1 handoffs",
+   "result": "100 working days total (10.0 per feature) vs 5 (0.5 per feature)"
+  },
+  {
+   "formula": "Headcount and skill allocation sums",
+   "variables": "people per skill per team",
+   "verified_by": "python",
+   "inputs": "Browse 2/2/0/2, Buy 2/1/2/1, Account 2/2/1/1, Platform 0/1/3/2 (W/M/C/D)",
+   "result": "Each team 6; each skill 6; total 24 (matches four component teams of six). Component demand W 9, M 8, C 5 (Buy 4, Account 1), D 8"
+  }
+ ],
+ "formula_verification_script": "F=[(\"Filter search results by size\",\"Browse\",\"WMD\",False),\n   (\"Save basket across devices\",\"Buy\",\"WMCD\",False),\n   (\"Add a digital wallet payment option\",\"Buy\",\"WMC\",False),\n   (\"Export order history\",\"Account\",\"WD\",False),\n   (\"Product recommendation carousel\",\"Browse\",\"WMD\",True),\n   (\"Change delivery address after ordering\",\"Account\",\"WMCD\",False),\n   (\"Fix promotion-code validation\",\"Buy\",\"C\",False),\n   (\"Wish list\",\"Account\",\"WMD\",False),\n   (\"Show stock availability on product pages\",\"Browse\",\"WMD\",False),\n   (\"Guest checkout\",\"Buy\",\"WMCD\",False)]\nWAIT=5\ntc=[];tf=[]\nfor n,j,c,p in F:\n    a=len(c); b=1+p\n    tc.append(a); tf.append(b)\n    print(f\"{n:45s} {j:8s} comp_teams={a} handoffs={a-1} wait={WAIT*(a-1)} | feat_teams={b} handoffs={b-1} wait={WAIT*(b-1)} pairs_comp={a*(a-1)//2}\")\nN=len(F)\nprint(\"avg teams comp\",sum(tc)/N,\"feat\",sum(tf)/N)\nprint(\"single-team comp\",sum(t==1 for t in tc),\"/\",N,\" feat\",sum(t==1 for t in tf),\"/\",N)\nhc=sum(t-1 for t in tc); hf=sum(t-1 for t in tf)\nprint(\"handoffs comp\",hc,\"feat\",hf,\"reduction\",(hc-hf)/hc*100)\nprint(\"wait days comp\",hc*WAIT,\"avg\",hc*WAIT/N,\"feat\",hf*WAIT,\"avg\",hf*WAIT/N)\nfrom collections import Counter\nprint(Counter(j for _,j,_,_ in F))\nprint(\"component load\", {k:sum(k in c for _,_,c,_ in F) for k in \"WMCD\"})\nprint(\"pairs comp total\",sum(t*(t-1)//2 for t in tc))\nprint(\"people\",4*6,\"new\",3*6+6)\nalloc={\"Browse\":dict(W=2,M=2,C=0,D=2),\"Buy\":dict(W=2,M=1,C=2,D=1),\"Account\":dict(W=2,M=2,C=1,D=1),\"Platform\":dict(W=0,M=1,C=3,D=2)}\nfor t,a in alloc.items(): print(t,sum(a.values()))\nprint({k:sum(a[k] for a in alloc.values()) for k in \"WMCD\"}, sum(sum(a.values()) for a in alloc.values()))\nprint(\"C features by journey\", Counter(j for _,j,c,_ in F if \"C\" in c))\nprint(\"total team touches comp\",sum(tc),\"feat\",sum(tf))\n",
+ "formula_verification_output": "avg teams comp 3.0 feat 1.1; single-team comp 1/10 feat 9/10; handoffs comp 20 feat 1 reduction 95.0%; wait days comp 100 avg 10.0 feat 5 avg 0.5; journeys Buy 4, Browse 3, Account 3; component load W 9, M 8, C 5, D 8; allocation each team 6, each skill 6, total 24; C features by journey Buy 4, Account 1; total team touches comp 30 feat 11",
+ "worked_examples": [
+  {
+   "title": "Online retailer (24 people) moves from four component teams to three journey-aligned feature teams plus a platform team; handoff count, waiting estimate and skill allocation",
+   "illustrative": true
+  }
+ ],
+ "statistical_text_measurements": {
+  "url": "/project-management/agile/agile-team-structures/",
+  "word_count": 4417,
+  "unique_words": 1052,
+  "type_token_ratio": 0.2382,
+  "mattr_100": 0.7328,
+  "shannon_word_entropy_bits": 8.6,
+  "normalised_entropy": 0.8567,
+  "sentences": 153,
+  "avg_sentence_length": 18.08,
+  "sentence_length_sd": 10.34,
+  "sentence_length_cv": 0.572,
+  "paragraph_length_mean": 43.2,
+  "paragraph_length_sd": 22.8,
+  "bigram_repetition_rate": 0.334,
+  "trigram_repetition_rate": 0.0988,
+  "top_repeated_4grams": [
+   [
+    "an agile team structure",
+    6
+   ],
+   [
+    "feature or stream-aligned teams",
+    6
+   ],
+   [
+    "w m d 3",
+    4
+   ],
+   [
+    "or stream-aligned teams that",
+    3
+   ],
+   [
+    "should be the default",
+    3
+   ],
+   [
+    "teams on one product",
+    3
+   ],
+   [
+    "browse w m d",
+    3
+   ],
+   [
+    "m d 3 1",
+    3
+   ]
+  ],
+  "most_common_sentence_openers": [
+   [
+    "if most",
+    4
+   ],
+   [
+    "under the",
+    3
+   ]
+  ],
+  "formulaic_phrases_found": [],
+  "watch_phrases_counts": {},
+  "most_similar_existing_guides": [
+   [
+    0.591,
+    "/project-management/agile/what-is-an-agile-team/"
+   ],
+   [
+    0.471,
+    "/project-management/agile/large-scale-scrum-less/"
+   ],
+   [
+    0.441,
+    "/project-management/agile/how-to-manage-agile-teams/"
+   ],
+   [
+    0.407,
+    "/project-management/agile/agile-methodology/"
+   ],
+   [
+    0.401,
+    "/project-management/agile/how-to-implement-agile/"
+   ]
+  ],
+  "note": "Descriptive editorial diagnostics only. No AI-detection probability is calculated."
+ },
+ "self_assessment": {
+  "technical_accuracy_25": 23,
+  "sources_15": 14,
+  "educational_usefulness_15": 14,
+  "examples_10": 9,
+  "information_gain_10": 9,
+  "precision_readability_10": 9,
+  "search_intent_5": 5,
+  "internal_linking_5": 5,
+  "technical_seo_5": 4,
+  "total": 92
+ },
+ "required_disclosures": [
+  "Worked example labelled illustrative; 5-working-day wait per handoff stated as an assumption",
+  "'More than about a quarter of teams not stream-aligned' labelled as NPI's own sense check, not a SAFe rule",
+  "Scaling-framework figures (LeSS 2–8 teams, ART 5–12 teams / 50–125 people, Scrum@Scale 4–5 teams per Scrum of Scrums, Spotify tribes under ~100) kept consistent with existing NPI guides"
+ ],
+ "unverified_claims": [
+  "Conway's 1968 Datamation article not inspected directly; quote taken from Fowler's bliki",
+  "Team Topologies book itself not inspected; definitions from teamtopologies.com and Fowler",
+  "Scaling-framework size figures taken from existing NPI guides (consistent with the site) rather than re-inspected primary framework sites in this session",
+  "'Involve the people affected / self-selection' tip is editorial guidance without a cited study",
+  "'Avoid reshuffles for six to nine months' and 'pilot for three to six months' are editorial rules of thumb"
+ ],
+ "unresolved_issues": [
+  "About 4,400 words, above the usual 2,500–4,000 range; justified by comparison + decision + worked example scope, but a reviewer could trim the line-management or change sections",
+  "TF-IDF similarity 0.591 with /project-management/agile/what-is-an-agile-team/ (live page baseline was about 0.44); driven by shared topic terms (component, stream-aligned, feature, handoffs). Intents differ: that page is the single-team guide and links here to compare structures; size table, roles table, build steps and skills-matrix example were deliberately not repeated",
+  "Live page's 'Generalist team' and 'Specialist team' rows are now treated as composition patterns rather than boundary types (a deliberate restructuring)"
+ ]
+}
