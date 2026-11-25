@@ -1,0 +1,403 @@
+{
+ "url": "/project-management/agile/scaled-agile-framework-safe/",
+ "proposed_status": "PUBLISH",
+ "article_type": "framework explainer (hub page for the SAFe cluster)",
+ "language": "en-GB",
+ "learning_level": "beginner",
+ "primary_keyword": "Scaled Agile Framework (SAFe)",
+ "secondary_keywords": [
+  "what is SAFe",
+  "SAFe framework",
+  "SAFe Agile",
+  "SAFe configurations",
+  "Essential SAFe",
+  "Portfolio SAFe",
+  "Large Solution SAFe",
+  "Full SAFe",
+  "SAFe core values",
+  "SAFe principles",
+  "SAFe roles",
+  "Planning Interval",
+  "Agile Release Train",
+  "Lean Portfolio Management",
+  "SAFe 6.0",
+  "AI-Native SAFe",
+  "Core SAFe",
+  "SAFe vs LeSS",
+  "SAFe certification",
+  "SAFe criticism"
+ ],
+ "search_intent": "definition / methodology, with version-currency, comparison and certification sub-intents",
+ "h1": "What Is SAFe? The Scaled Agile Framework Explained",
+ "seo_title": "What Is SAFe? The Scaled Agile Framework Explained",
+ "meta_description": "SAFe explained: core values, principles, configurations, roles and Planning Intervals, Core SAFe vs AI-Native SAFe, a worked sizing example and criticisms.",
+ "excerpt": "What SAFe is, which version is current (Core SAFe 6.0 and AI-Native SAFe), its values, principles and five disciplines, how to choose a configuration, its cadence and roles, a worked sizing example and a balanced view of its criticisms.",
+ "parent_topic_cluster": "Agile (/project-management/agile/)",
+ "prerequisite_guides": [
+  "/project-management/scrum/what-is-scrum/",
+  "/project-management/kanban/what-is-kanban/",
+  "/project-management/agile/what-is-an-agile-team/"
+ ],
+ "related_articles": [
+  "/project-management/agile/agile-release-train/",
+  "/project-management/agile/pi-planning/",
+  "/project-management/agile/agile-portfolio-management/",
+  "/project-management/agile/large-scale-scrum-less/",
+  "/project-management/scrum/scrum-at-scale/"
+ ],
+ "learning_objectives": [
+  "Define SAFe and distinguish Core SAFe (6.0) from AI-Native SAFe",
+  "Recall the four core values and ten Lean-Agile principles",
+  "Explain the team, ART, Solution Train and portfolio levels",
+  "Choose an appropriate configuration from an organisation's structure",
+  "Describe the Planning Interval cadence and SAFe events",
+  "Weigh SAFe's benefits and criticisms and identify when lighter alternatives fit"
+ ],
+ "internal_links": [
+  "/project-management/agile/agile-epics/",
+  "/project-management/agile/agile-metrics-and-kpis/",
+  "/project-management/agile/agile-portfolio-management/",
+  "/project-management/agile/agile-release-train/",
+  "/project-management/agile/agile-transformation/",
+  "/project-management/agile/how-to-learn-agile-and-get-certified/",
+  "/project-management/agile/large-scale-scrum-less/",
+  "/project-management/agile/pi-planning/",
+  "/project-management/agile/squads-tribes-chapters-guilds/",
+  "/project-management/agile/what-is-an-agile-team/",
+  "/project-management/kanban/value-stream-mapping/",
+  "/project-management/kanban/what-is-kanban/",
+  "/project-management/scrum/scrum-at-scale/",
+  "/project-management/scrum/scrum-certification-and-training/",
+  "/project-management/scrum/scrum-of-scrums/",
+  "/project-management/scrum/what-is-scrum/",
+  "/templates/okr-template/",
+  "/templates/release-plan-template/"
+ ],
+ "relevant_templates": [
+  "/templates/release-plan-template/",
+  "/templates/okr-template/"
+ ],
+ "related_npi_course": "Sprintcraft: Agile and Scrum Practitioner (page PMAI box only; not mentioned in body)",
+ "external_references": [
+  {
+   "title": "Welcome to the Scaled Agile Framework (home; modified 25 Sep 2026)",
+   "url": "https://framework.scaledagile.com/",
+   "inspected": true,
+   "what_it_supports": "Two operating models Core SAFe and AI-Native SAFe; competencies grouped by discipline; AI-Native Big Picture elements"
+  },
+  {
+   "title": "SAFe Knowledge Base (modified 5 Oct 2026)",
+   "url": "https://framework.scaledagile.com/safe-knowledge-base",
+   "inspected": true,
+   "what_it_supports": "Five disciplines and their competencies; role list; ART and team events incl. Team Sync, Team Backlog Refinement"
+  },
+  {
+   "title": "SAFe Posters",
+   "url": "https://framework.scaledagile.com/posters",
+   "inspected": true,
+   "what_it_supports": "Four configuration posters still labelled SAFe 6.0 plus AI-Native SAFe Big Picture"
+  },
+  {
+   "title": "Lean-Agile Mindset, SAFe Core Values, SAFe Principles",
+   "url": "https://framework.scaledagile.com/lean-agile-mindset-safe-core-values-safe-principles",
+   "inspected": true,
+   "what_it_supports": "Four core values; ten immutable principles"
+  },
+  {
+   "title": "SAFe Lean-Agile Principles",
+   "url": "https://framework.scaledagile.com/safe-lean-agile-principles",
+   "inspected": true,
+   "what_it_supports": "Exact names of the ten principles"
+  },
+  {
+   "title": "PI Planning (last update 15 Mar 2026)",
+   "url": "https://framework.scaledagile.com/pi-planning/",
+   "inspected": true,
+   "what_it_supports": "Every 8-12 weeks, typically two days, in IP iteration; outputs"
+  },
+  {
+   "title": "Planning Interval (scaledagileframework.com/program-increment, 7 Feb 2023)",
+   "url": "https://scaledagileframework.com/program-increment",
+   "inspected": true,
+   "what_it_supports": "PI 8-12 weeks, bias to shorter; four iterations + IP common; no fixed rule"
+  },
+  {
+   "title": "What's new in SAFe 6.0",
+   "url": "https://scaledagileframework.com/whats-new-in-safe-6-0",
+   "inspected": true,
+   "what_it_supports": "Renamed terms (ART, VMO, SAFe Scrum, SAFe Team Kanban, Pre-Plan, Coordinate and Deliver, Measure and Grow), Scrum Master/Team Coach, core values"
+  },
+  {
+   "title": "New Release: AI-Native SAFe (blog, 23 Jun 2026)",
+   "url": "https://framework.scaledagile.com/blog/ai-native-safe-is-the-operating-model-for-the-ai-native-organization",
+   "inspected": true,
+   "what_it_supports": "Unveiled 16 Jun 2026; does not replace Core SAFe"
+  },
+  {
+   "title": "PR Newswire via Yahoo Finance: Scaled Agile Releases AI-Native SAFe (23 Jun 2026)",
+   "url": "https://sg.finance.yahoo.com/news/scaled-agile-releases-ai-native-130300669.html",
+   "inspected": true,
+   "what_it_supports": "AI Value Architect role; continued support for Core SAFe"
+  },
+  {
+   "title": "AI-Native ART (14 Aug 2026)",
+   "url": "https://framework.scaledagile.com/ain-safe-ai-native-art",
+   "inspected": true,
+   "what_it_supports": "AI-Native ART definition (full article behind login)"
+  },
+  {
+   "title": "AI-Native Teams (14 Jul 2026)",
+   "url": "https://framework.scaledagile.com/ain-safe-ai-native-teams",
+   "inspected": true,
+   "what_it_supports": "3-7 members; Product, Builder, Domain Expert, AI capabilities; human accountability"
+  },
+  {
+   "title": "AI Value Architect (14 Jul 2026)",
+   "url": "https://framework.scaledagile.com/ain-safe-ai-value-architect",
+   "inspected": true,
+   "what_it_supports": "Role purpose (partial, rest behind login)"
+  },
+  {
+   "title": "PI Outcome Planning (28 Jul 2026)",
+   "url": "https://framework.scaledagile.com/ain-safe-pi-outcome-planning",
+   "inspected": true,
+   "what_it_supports": "One-day event replacing two-day PI Planning in AI-Native SAFe"
+  },
+  {
+   "title": "Sense and Respond (28 Jul 2026)",
+   "url": "https://framework.scaledagile.com/ain-safe-sense-and-respond",
+   "inspected": true,
+   "what_it_supports": "Two-hour event at least once per iteration; replaces Inspect and Adapt and absorbs System Demo"
+  },
+  {
+   "title": "Just announced: new SAFe 6.0 Big Picture (SAFe Summit Oct 2024)",
+   "url": "https://scaledagileframework.com/blog/just-announced-live-at-the-safe-summit",
+   "inspected": true,
+   "what_it_supports": "Big Picture refresh still called SAFe 6.0"
+  },
+  {
+   "title": "Exam study guide: AI-Empowered SA - SAFe Agilist (updated 20 Oct 2026)",
+   "url": "https://support.scaledagile.com/en/articles/13835858-exam-study-guide-ai-empowered-sa-safe-agilist-exam-for-leading-safe",
+   "inspected": true,
+   "what_it_supports": "45 questions, 90 min, 80%, two attempts within 60 days, retake fees"
+  },
+  {
+   "title": "Scaled Agile certification tiers for Studio",
+   "url": "https://support.scaledagile.com/en/articles/9768958-what-are-scaled-agile-s-certification-tiers-for-studio",
+   "inspected": true,
+   "what_it_supports": "Foundational $195, Advanced $295, Expert $995 per year; tier membership of SA, SSM, POPM, RTE, SPC; AI-Native certs renew individually"
+  },
+  {
+   "title": "General renewal FAQs",
+   "url": "https://support.scaledagile.com/en/articles/9791345-general-renewal-faqs",
+   "inspected": true,
+   "what_it_supports": "Renewals are every year"
+  },
+  {
+   "title": "CEU requirement for SAFe certification renewal (9 Oct 2026)",
+   "url": "https://support.scaledagile.com/en/articles/12054115-what-is-the-ceu-requirement-for-safe-certification-renewal",
+   "inspected": true,
+   "what_it_supports": "CEU numbers by tier (not used in article because the period is unstated)"
+  },
+  {
+   "title": "Wikipedia: Scaled agile framework",
+   "url": "https://en.wikipedia.org/wiki/Scaled_agile_framework",
+   "inspected": true,
+   "what_it_supports": "First release 2011; 6.0 March 2023; sourced criticisms (Schwaber 2013, Thoughtworks Radar)"
+  },
+  {
+   "title": "Substack: What shipped in AI-Native SAFe",
+   "url": "https://daviderinwilson.substack.com/p/ai-native-safe-what-shipped",
+   "inspected": true,
+   "what_it_supports": "Official release 15 Sep 2026 at SAFe Summit (secondary)"
+  },
+  {
+   "title": "Pretty Agile: AI-Native SAFe implementation roadmap",
+   "url": "https://prettyagile.com.au/blog/ai-native-safe-implementation-roadmap",
+   "inspected": true,
+   "what_it_supports": "Courses and rollout dates Aug-Nov 2026 (secondary; research only)"
+  },
+  {
+   "title": "Atlassian: What is SAFe",
+   "url": "https://www.atlassian.com/agile/agile-at-scale/what-is-safe",
+   "inspected": true,
+   "what_it_supports": "SERP gap analysis only"
+  },
+  {
+   "title": "IBM Think: What is SAFe (10 Mar 2025)",
+   "url": "https://ibm.com/think/topics/scaled-agile-framework",
+   "inspected": true,
+   "what_it_supports": "SERP gap analysis only"
+  }
+ ],
+ "formulas": [
+  {
+   "formula": "Total people = sum of value stream headcounts; train size check 50 <= n <= 125",
+   "variables": "people (count)",
+   "verified_by": "python",
+   "inputs": "120, 105, 110, 85; merged 120 + 105",
+   "result": "420; all four within range; merged 225 > 125"
+  },
+  {
+   "formula": "Teams per train ~ people / team size",
+   "variables": "people; team size (people)",
+   "verified_by": "python",
+   "inputs": "team size about 10",
+   "result": "about 12, 10-11, 11, 8-9"
+  },
+  {
+   "formula": "Event share = event hours / (PI weeks x 40 h)",
+   "variables": "hours; weeks; percentage",
+   "verified_by": "python",
+   "inputs": "(16 + 4) / (10 x 40); 20 / (12 x 40)",
+   "result": "5.0%; 4.2%"
+  },
+  {
+   "formula": "IP iteration share of PI calendar = IP weeks / PI weeks",
+   "variables": "weeks; percentage",
+   "verified_by": "python",
+   "inputs": "2 / 10",
+   "result": "20%"
+  },
+  {
+   "formula": "PIs per year = 52 / PI weeks",
+   "variables": "weeks; count",
+   "verified_by": "python",
+   "inputs": "52/10; 52/12",
+   "result": "5.2; about 4.3"
+  }
+ ],
+ "python_verification_output": "total 420 | each stream within 50-125: True | teams of ~8 (not used; ~10 used): 15.0, 13.1, 13.8, 10.6 | digital banking combined 225 >125: True | PI hours 400 ART event hours 20 share % 5.0 | IP share of PI weeks % 20.0 | 12wk: 4.2 | PIs/yr 10wk 5.2 12wk 4.33",
+ "worked_examples": [
+  {
+   "title": "Sizing and configuring SAFe for a 420-person bank technology division (train sizing, configuration choice, cadence cost)",
+   "illustrative": true
+  }
+ ],
+ "statistical_text_measurements": {
+  "url": "/project-management/agile/scaled-agile-framework-safe/",
+  "word_count": 4046,
+  "unique_words": 1094,
+  "type_token_ratio": 0.2704,
+  "mattr_100": 0.7424,
+  "shannon_word_entropy_bits": 8.694,
+  "normalised_entropy": 0.8612,
+  "sentences": 147,
+  "avg_sentence_length": 17.7,
+  "sentence_length_sd": 9.02,
+  "sentence_length_cv": 0.51,
+  "paragraph_length_mean": 34.7,
+  "paragraph_length_sd": 23.7,
+  "bigram_repetition_rate": 0.332,
+  "trigram_repetition_rate": 0.1135,
+  "top_repeated_4grams": [
+   [
+    "8 to 12 weeks",
+    4
+   ],
+   [
+    "the scaled agile framework",
+    3
+   ],
+   [
+    "scaled agile framework safe",
+    3
+   ],
+   [
+    "by scaled agile inc",
+    3
+   ],
+   [
+    "50 to 125 people",
+    3
+   ],
+   [
+    "typically 8 to 12",
+    3
+   ],
+   [
+    "ai value architect role",
+    3
+   ],
+   [
+    "scrum master team coach",
+    3
+   ]
+  ],
+  "most_common_sentence_openers": [
+   [
+    "safe is",
+    5
+   ],
+   [
+    "scaled agile",
+    4
+   ],
+   [
+    "the division",
+    3
+   ],
+   [
+    "it is",
+    3
+   ]
+  ],
+  "formulaic_phrases_found": [],
+  "watch_phrases_counts": {},
+  "most_similar_existing_guides": [
+   [
+    0.601,
+    "/project-management/agile/agile-release-train/"
+   ],
+   [
+    0.452,
+    "/project-management/agile/pi-planning/"
+   ],
+   [
+    0.339,
+    "/project-management/agile/agile-portfolio-management/"
+   ],
+   [
+    0.32,
+    "/project-management/agile/agile-pmo/"
+   ],
+   [
+    0.312,
+    "/project-management/agile/how-to-learn-agile-and-get-certified/"
+   ]
+  ],
+  "note": "Descriptive editorial diagnostics only. No AI-detection probability is calculated."
+ },
+ "self_assessment": {
+  "technical_accuracy_25": 23,
+  "sources_15": 14,
+  "educational_usefulness_15": 14,
+  "examples_10": 9,
+  "information_gain_10": 9,
+  "precision_readability_10": 9,
+  "search_intent_5": 5,
+  "internal_linking_5": 5,
+  "technical_seo_5": 5,
+  "total": 93
+ },
+ "required_disclosures": [
+  "Worked example labelled illustrative",
+  "No affiliation with Scaled Agile, Inc. implied; certification facts attributed to Scaled Agile's support site with check date (November 2026)",
+  "No NPI course mentioned in body (page PMAI box carries Sprintcraft)"
+ ],
+ "unverified_claims": [
+  "Official AI-Native SAFe release date (15 September 2026, SAFe Summit) comes from secondary sources; Scaled Agile's keynote recap page could not be fetched (robots disallowed). Article says 'officially released at the SAFe Summit in September 2026'.",
+  "Implementation Roadmap stage names summarised from general knowledge plus 6.0 rename notes (Organize Around Value, Enhance the Portfolio); the roadmap article itself was not opened. Article flags it as a summary, not the official list.",
+  "Agile Release Train framework article (50-125 people) could not be fetched (robots disallowed); figure kept consistent with our ART page and widely cited Scaled Agile guidance.",
+  "Ken Schwaber 2013 and Thoughtworks Technology Radar criticisms verified via Wikipedia citations only; originals not opened.",
+  "Nexus team range (three to nine Scrum teams) from general knowledge of the Nexus Guide; not re-inspected.",
+  "Course names for POPM, RTE and SPC (Implementing SAFe) not re-verified on scaledagile.com course pages.",
+  "Solution Management as a Large Solution role taken from What's new in SAFe 6.0 role list; not re-checked on a current role article."
+ ],
+ "unresolved_issues": [
+  "ART page (/project-management/agile/agile-release-train/) says '6.0 remains the current numbered version' and does not mention AI-Native SAFe (released 2026). Still accurate for Core SAFe but should gain a one-line note; not edited (outside writer scope).",
+  "Certification page (/project-management/scrum/scrum-certification-and-training/) states SAFe Scrum Master renewal needs '24 CEUs over each two-year cycle'; Scaled Agile's CEU page (9 Oct 2026) lists 12 CEUs for Foundational certifications without stating the period. This article avoids a CEU figure; the certification page should be rechecked.",
+  "/project-management/agile/how-to-learn-agile-and-get-certified/ says the SAFe Agilist exam pass mark is '35 correct' of 45; Scaled Agile's study guide (updated 20 Oct 2026) says 80% (36 of 45). That page should be corrected.",
+  "TF-IDF similarity 0.601 with the ART page is expected for a hub/child pair; the SAFe page summarises ART roles and events and links to the ART page for depth rather than repeating its worked example."
+ ]
+}

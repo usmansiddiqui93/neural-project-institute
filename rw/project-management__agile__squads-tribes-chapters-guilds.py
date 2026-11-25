@@ -164,14 +164,13 @@ RW = dict(
         ),
         S(
             "Criticism and limitations",
-            "The model has attracted more criticism than most scaling approaches, much of it from people involved with Spotify.",
+            "Some of the sharpest criticism of the model comes from people who worked at or with Spotify.",
             L(
                 "**It was a snapshot, not a framework.** In a June 2015 blog post Kniberg wrote that the material \"wasn't actually intended to be a generic framework\" and described himself as \"just the messenger\" for ideas many Spotify people developed. In 2016 InfoQ reported a talk by Spotify chapter lead Marcin Floryan arguing that the model was a simplified description of Spotify and not something to copy.",
                 "**Spotify may not have worked that way either.** Jeremiah Lee, who interviewed for a product role at Spotify in 2017 and later worked there, wrote in an April 2020 essay that the model was \"only ever aspirational\" and never fully implemented. He quoted Joakim Sundén, an agile coach at Spotify from 2011 to 2017: \"Even at the time we wrote it, we weren't doing it.\" Lee also wrote that the material was planned as a multi-part series and that \"the parts on alignment and accountability were never completed.\"",
                 "**Matrix friction.** Lee described engineers line-managed by chapter leads across all the squads in a tribe while product managers reported to the tribe lead, so a squad disagreement could mean negotiating with one engineering manager per specialism and then escalating to an engineering director. The chapter lead's dual role can leave nobody clearly accountable for a squad's engineering outcomes.",
                 "**Autonomy without alignment.** Squads optimise for their own mission unless company priorities and cross-team processes are explicit. The 2012 paper says little about how priorities are set across tribes.",
                 "**Inconsistent practices.** Letting each squad choose its process makes it harder for people to move between squads and for leaders to compare progress.",
-                "**Renaming without changing.** Calling departments tribes and teams squads changes nothing if budgets, approvals and line management stay as they were.",
             ),
             "None of this makes the ideas worthless. Kniberg also wrote that he had not seen a company end up worse off after adapting the ideas, and that some had seen large improvements. The sound conclusion is narrower: copy the problems Spotify was solving and test your own answers, rather than copying the org chart. The bank ING is a widely cited example of an organisation that adopted squads and tribes after studying other companies and then designed its own model; see the [ING example in our Agile transformation guide](/project-management/agile/agile-transformation/).",
         ),
@@ -205,13 +204,13 @@ RW = dict(
         S(
             "Common mistakes when copying the Spotify model",
             L(
-                "**Starting with the labels.** Renaming teams first makes people think the change is cosmetic. Start with missions and decision rights.",
+                "**Starting with the labels.** Calling departments tribes and teams squads changes nothing if budgets, approvals and line management stay as they were, and renaming first tells people the change is cosmetic. Start with missions and decision rights.",
                 "**Squads that cannot release alone.** If squads still depend on a central release or testing team, they are not autonomous whatever they are called. Fix the pipeline and ownership first.",
                 "**Overloaded chapter leads.** A lead with a dozen reports and a full squad role ends up doing neither well. Estimate the load and split chapters when needed.",
                 "**No alignment mechanism.** Autonomy needs shared goals and visible priorities. Without them squads optimise locally.",
                 "**Mandatory guilds.** Compulsory attendance turns a community into another meeting. Keep guilds voluntary and outcome-focused.",
                 "**Ignoring the project and programme layer.** Cross-tribe initiatives still need someone to coordinate them. Decide who does this; [Agile portfolio management](/project-management/agile/agile-portfolio-management/) and the [Agile PMO](/project-management/agile/agile-pmo/) offer options.",
-                "**Treating 2012 as current.** Spotify kept changing its organisation. Do not present the paper as how Spotify works today.",
+                "**Treating 2012 as current.** The paper describes Spotify as it was in 2012. Do not present it as how Spotify works today.",
             ),
         ),
         S(
