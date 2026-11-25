@@ -49,8 +49,7 @@ Gaps: nobody explains Core SAFe vs AI-Native SAFe (2026); most still list the se
 - Certifications: SA exam (study guide, 20 Oct 2026): 45 questions, 90 minutes, 80%, closed book, first two attempts within 60 days included, retake $50 unproctored / $495 proctored. Tiers: Foundational $195/yr (SA, SSM, POPM), Advanced $295/yr (RTE, LPM, SASM...), Expert $995/yr (SPC). Renewal annual. AI-Native certifications renew individually ($195–$1,500/yr).
 
 ## SEO
-- Title (55 chars): Scaled Agile Framework (SAFe): Guide to SAFe 6.0 and 2026
-  Alternative chosen after review: "What Is SAFe? Scaled Agile Framework Explained (2026)" (52 chars)
+- Title (H1/SEO, 50 chars): What Is SAFe? The Scaled Agile Framework Explained (kept from the live page; no year in the title so it does not date)
 - Meta description (≤155): SAFe explained: core values, principles, configurations, roles, Planning Intervals, Core SAFe vs AI-Native SAFe, a worked sizing example and criticisms.
 
 ## Outline
