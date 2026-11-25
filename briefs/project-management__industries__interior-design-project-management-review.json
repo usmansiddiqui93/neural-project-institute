@@ -1,0 +1,205 @@
+{
+ "url": "/project-management/industries/interior-design-project-management/",
+ "status": "PUBLISH",
+ "publication_eligible": true,
+ "gates": {
+  "definitions_accurate": true,
+  "framework_requirements_verified": true,
+  "calculations_correct": true,
+  "variables_units_defined": true,
+  "examples_consistent_and_labelled": true,
+  "claims_supported": true,
+  "sources_authentic": true,
+  "educational_value": true,
+  "no_duplicate_intent": true,
+  "internal_links_valid": true,
+  "certification_claims_accurate": true,
+  "disclosures_included": true,
+  "metadata_valid": true,
+  "no_fabricated_experience": true
+ },
+ "scores": {
+  "technical_accuracy_25": 23,
+  "sources_15": 13,
+  "educational_usefulness_15": 14,
+  "examples_10": 10,
+  "information_gain_10": 9,
+  "precision_readability_10": 9,
+  "search_intent_5": 5,
+  "internal_linking_5": 5,
+  "technical_seo_5": 5,
+  "total": 93
+ },
+ "claims_checked": [
+  {
+   "claim": "BIID Interior Design Project Book is published by RIBA Publishing with BIID and reflects the RIBA Plan of Work 2020; sets out designer responsibilities at each stage",
+   "source": "https://biid.org.uk/about/biid-project-book",
+   "result": "corrected"
+  },
+  {
+   "claim": "Furniture and Furnishings (Fire) (Safety) Regulations 1988 cover domestic upholstered furniture; draft said only that government 'announced plans in 2025 to amend them'",
+   "source": "https://www.gov.uk/government/publications/furniture-and-furnishings-fire-safety-regulations/furniture-and-furnishings-fire-safety-amendment-regulations-2025-uk",
+   "result": "corrected"
+  },
+  {
+   "claim": "Wider FFR reform (new test approach) still at consultation in 2026",
+   "source": "https://furniturenews.net/news/government-issues-final-call-for-fr-reform-feedback",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Government policy paper on amending the FFRs announced January 2025",
+   "source": "https://www.gov.uk/government/news/update-to-furniture-fire-safety-review",
+   "result": "confirmed"
+  },
+  {
+   "claim": "BS 7176 specifies resistance to ignition of upholstered furniture for non-domestic seating according to hazard level",
+   "source": "https://knowledge.bsigroup.com/products/specification-for-resistance-to-ignition-of-upholstered-furniture-for-non-domestic-seating-by-testing-composites",
+   "result": "confirmed"
+  },
+  {
+   "claim": "CDM 2015 applies to domestic projects; domestic client duties normally pass to the contractor/principal contractor",
+   "source": "https://www.hse.gov.uk/Construction/cdm/2015/domestic-clients.htm",
+   "result": "confirmed"
+  },
+  {
+   "claim": "RIBA Plan of Work 2020 stages; architecture guide covers RIBA/AIA mapping",
+   "source": "/project-management/industries/architecture-project-management/",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Cat B fit-out led by interior designers ('usually')",
+   "source": "editorial judgement; no authoritative source for 'usually'",
+   "result": "corrected"
+  },
+  {
+   "claim": "Wrike ranked #1; proofing and approvals, request forms, portfolio views, workload, custom fields, Gantt",
+   "source": "/project-management-tools/wrike/",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Phase sign-off 'the single most effective way to stop rework'; changes 'the biggest threats'; procurement is where 'most' projects gain or lose",
+   "source": "unsupported superlatives",
+   "result": "corrected"
+  }
+ ],
+ "calculations_rechecked": [
+  {
+   "item": "Must-order-by dates (needed date minus lead + shipping + buffer weeks) for 6 items; all Mondays",
+   "result": "correct"
+  },
+  {
+   "item": "Ordering of critical item (pendants 9 Nov 2026 before sofa 16 Nov 2026)",
+   "result": "correct"
+  },
+  {
+   "item": "FF&E tracker: budget 54,000, forecast 56,100, variance +2,100, contingency remaining 3,900, 35% drawn, contingency 10% of 60,000",
+   "result": "correct"
+  },
+  {
+   "item": "Hours vs fee: 18,000/75 = 240 h; phase hours 36/72/48/48/36; used 134 h; earned 45% = 8,100; 8,100/134 = 60.45/h",
+   "result": "correct"
+  },
+  {
+   "item": "Change log: sofa ordered 16 Nov 2026 + 15 wk lead + 1 wk shipping = 8 Mar 2027; +2 wk buffer = 22 Mar 2027",
+   "result": "corrected"
+  }
+ ],
+ "changes_made": [
+  "Regulations: replaced 'government announced plans in 2025 to amend' with the in-force 2025 amendments (from 30 Oct 2025: certain baby/children's products out of scope, display label removed, permanent label still applies) and noted wider reform still consulted on in 2026.",
+  "BIID Project Book: 'obligations' changed to 'responsibilities' to match BIID's description.",
+  "Cat B: 'Interior designers usually lead' softened to 'often lead'.",
+  "Phases intro: 'single most effective way to stop rework' changed to 'one of the most reliable ways to limit rework'.",
+  "FF&E procurement intro: removed unsupported 'most interior projects' generalisation.",
+  "Approvals section: 'the biggest threats' changed to 'among the commonest threats'.",
+  "FF&E budget example: defined variance formula and sign convention (positive = overrun).",
+  "Hours-vs-fee example: stated the earned-fee basis (earned at phase sign-off), showed the £8,100 / 134 h substitution and added the limitation for monthly or percent-complete billing.",
+  "Change log example: made the sofa time impact traceable (order 16 Nov 2026, arrival 8 Mar 2027, two-week buffer, fitted 22 Mar 2027).",
+  "Software section: linked monday.com and Asana to their site review pages."
+ ],
+ "statistical_text_measurements": {
+  "url": "/project-management/industries/interior-design-project-management/",
+  "word_count": 4424,
+  "unique_words": 1112,
+  "type_token_ratio": 0.2514,
+  "mattr_100": 0.74,
+  "shannon_word_entropy_bits": 8.696,
+  "normalised_entropy": 0.8594,
+  "sentences": 168,
+  "avg_sentence_length": 16.19,
+  "sentence_length_sd": 9.47,
+  "sentence_length_cv": 0.585,
+  "paragraph_length_mean": 31.6,
+  "paragraph_length_sd": 18.9,
+  "bigram_repetition_rate": 0.3556,
+  "trigram_repetition_rate": 0.1201,
+  "top_repeated_4grams": [
+   [
+    "the ff e schedule",
+    7
+   ],
+   [
+    "an interior design project",
+    6
+   ],
+   [
+    "interior design project management",
+    5
+   ],
+   [
+    "is needed on site",
+    3
+   ],
+   [
+    "at the end of",
+    3
+   ],
+   [
+    "furniture fixtures and equipment",
+    3
+   ],
+   [
+    "ff e schedule budget",
+    3
+   ],
+   [
+    "an ff e schedule",
+    3
+   ]
+  ],
+  "most_common_sentence_openers": [
+   [
+    "illustrative example",
+    4
+   ]
+  ],
+  "formulaic_phrases_found": [],
+  "watch_phrases_counts": {},
+  "most_similar_existing_guides": [
+   [
+    0.484,
+    "/project-management/industries/architecture-project-management/"
+   ],
+   [
+    0.388,
+    "/project-management/industries/construction-project-management/"
+   ],
+   [
+    0.363,
+    "/project-management/industries/agency-project-management/"
+   ],
+   [
+    0.328,
+    "/project-management/construction-project-manager/"
+   ],
+   [
+    0.285,
+    "/project-management/industries/professional-services-project-management/"
+   ]
+  ],
+  "note": "Descriptive editorial diagnostics only. No AI-detection probability is calculated."
+ },
+ "unresolved_issues": [
+  "Minor: the illustrative must-order-by dates (9, 16 and 23 Nov 2026) and the change approval date (12 Nov 2026) are now in the past relative to publication; consistent and labelled illustrative, but the writer may want to shift the scenario forward a year at the next update."
+ ],
+ "reviewer_note": "Automated review by an AI reviewer; not a human professional review."
+}

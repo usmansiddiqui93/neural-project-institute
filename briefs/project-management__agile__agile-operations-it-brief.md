@@ -1,180 +1,74 @@
-# Content Brief: Agile in IT Operations
+# Research and content brief: Agile in IT operations
 
-URL (unchanged): /project-management/agile/agile-operations-it/
-Brief date: 8 November 2026
+- URL (unchanged): /project-management/agile/agile-operations-it/
+- Brief date: 25 November 2026 (v2 framework; replaces the 8 November 2026 v1 brief, whose research is re-checked below)
+- Article type: methodology guide with a how-to layer and a worked example
+- Learning level: intermediate (assumes basic Agile and Kanban vocabulary; links to prerequisites)
+- Language: en-GB
 
-## Primary Keyword
-
+## Primary keyword
 Agile IT operations
 
-## Secondary Keywords
+## Secondary keywords (17)
+Agile in IT operations; Agile operations; AgileOps; Kanban for IT operations; Scrum vs Kanban for operations teams; Agile operations vs DevOps; Agile and ITIL; Agile ITSM; unplanned work in operations; interrupt-driven team; reserved capacity for unplanned work; classes of service for IT operations; DORA metrics; failed deployment recovery time; error budget; toil reduction; blameless post-incident review.
 
-- Agile in IT operations
-- Agile operations
-- AgileOps
-- what is Agile operations
-- how to apply Agile to IT operations
-- how to implement Agile in an operations team (steps)
-- Kanban for IT operations
-- Scrum vs Kanban for operations teams
-- Agile operations vs DevOps
-- Agile and ITIL / Agile ITSM
-- Agile infrastructure team
-- unplanned work / interrupt-driven teams
-- classes of service for IT operations
-- Agile operations metrics (DORA metrics, MTTR, change fail rate)
-- Agile operations example
-- blameless post-incident review
-- Agile change management in IT operations
-- benefits of Agile IT operations
+## Search intent
+Primary: methodology / how-to ("how do I make an ops team work in an Agile way?"). Secondary: definition (what is AgileOps), comparison (Agile ops vs DevOps vs ITIL). The definition must appear in the first H2; the practical answer (Kanban + reserved capacity + explicit interrupt policy + automation, coexisting with ITSM) must be clear in the intro.
 
-## Search Intent
+## Audience
+Infrastructure, platform, network, database, service desk and security operations leads; IT managers asked to "go Agile"; Scrum Masters, delivery leads and project managers supporting ops teams; ITSM practitioners combining ITIL with Agile and DevOps.
 
-Informational with a strong practical layer ("how do I make my ops team Agile?"). The reader wants:
+## Inventory and duplicate check (framework §30)
+- Live page (about 1,250 words incl. FAQ): accurate core ideas (work-type table, Kanban, reserved capacity, stand-ups, metrics table, mistakes, 11 FAQs). Problems: worked example uses unlabelled invented numbers; metrics use pre-2023 DORA names ("time to restore service"); "30–40% reserved capacity" stated without basis; no ITIL detail; no SRE; no calculations.
+- Parent cluster: Agile guide (/project-management/agile/). Siblings: is-agile-only-for-software (broad, non-software use), how-to-implement-agile (organisation-wide rollout), agile-transformation.
+- Overlaps: /project-management/kanban/kanban-swimlanes/ (classes of service, expedite lane rules: link, do not repeat the table); /project-management/kanban/wip-limits/ (Little's Law, how to set limits: link, use only a short Little's Law check); /project-management/kanban/devops/ (DevOps definition, CALMS; note that page still lists four DORA metrics with "time to restore service"; flagged as an unresolved site consistency issue, not edited); /project-management/kanban/kanban-ceremonies/ (cadences); /project-management/service-level-agreement-sla/ (SLA metrics, response/resolution time); /project-management/industries/it-project-management/ (IT projects, not operations).
+- Differentiation: this page owns the operations-team view: work mix, interrupt policy, reserved capacity calculation, ITSM practice mapping, change enablement, SRE error budgets and toil, and a single consistent illustrative scenario.
+- stats.py similarity results recorded in the record JSON after drafting.
 
-- A plain definition of Agile in IT operations (and what "AgileOps" means)
-- Why ops is different from development (interrupts, stability, compliance)
-- Which practices actually work (Kanban, classes of service, reserved capacity, SRE-style error budgets, automation)
-- How Agile fits with ITIL/ITSM and DevOps, rather than replacing them
-- A step-by-step rollout plan for an existing team
-- A worked example with numbers, metrics to track and common mistakes
+## SERP findings (searched 25 November 2026; v1 SERP notes from 8 November re-used for context)
+Results: InfoWorld (Sacolick, "3 steps to applying agile methodologies in IT operations", March 2020), DZone, Broadcom "Agile operations and the three ways", Wrike Agile guide, Atlassian Team Playbook "Agile for IT teams", McKinsey "Transforming IT infrastructure organizations using agile", PMI Disciplined Agile IT operations process blade, Budibase, Apress *Hands-On Guide to AgileOps*, HCLTech, Lucid.
+Fetched: InfoWorld (mission/charter, product ownership, user stories, Kanban for small initiatives, tool integration; no metrics, no worked example, ITIL only in passing); Atlassian playbook (about 550 words of plays: stand-ups, retros, capacity planning, dependency mapping; no metrics, no ITIL); PMI Disciplined Agile IT operations practices (goals: run solutions, manage infrastructure, manage configurations, evolve infrastructure, mitigate disasters, govern IT operations).
+Gaps we fill: no competitor sizes reserved capacity from data, maps ITSM practices to Agile mechanics, uses the current five DORA metrics, explains error budgets with arithmetic, or gives a labelled worked example with consistent numbers.
 
-## Target Audience
+## Fact checks (primary sources)
+- DORA (dora.dev/guides/dora-metrics/, updated 5 January 2026; history page): five software delivery metrics: change lead time, deployment frequency, failed deployment recovery time (throughput); change fail rate, deployment rework rate (instability). MTTR/time to restore was redefined as failed deployment recovery time in 2023; deployment rework rate added 2024; reliability is treated as operational performance, not a delivery metric.
+- Google SRE book (sre.google): error budget = 1 − SLO, releases halted when exhausted (Embracing Risk); toil definition (manual, repetitive, automatable, tactical, no enduring value, scales linearly) and the 50% cap on operational work (Eliminating Toil).
+- ITIL: PeopleCert "ITIL (Version 5) explained": phased release, ITIL 4 remains available; Global Knowledge FAQ: no ITIL 4 retirement date announced, at least 12 months of parallel running. ITSM.tools: ITIL 4 change enablement, standard/normal/emergency changes, change authority incl. peer review and automated pipeline approvals; "change control" was the original ITIL 4 Foundation term. AWS whitepaper quotes the ITIL 4 purpose of change enablement.
+- Agile Manifesto values used for the translation table (agilemanifesto.org; already established on site).
+- Site facts: Wrike #1 (9.4) with request forms and automation; Jira #6 (8.6); Jira Service Management is a separate service-desk product (per our Jira review).
 
-- IT operations, infrastructure, service desk and platform team leads
-- IT managers and heads of service delivery asked to "go Agile"
-- Project managers and Scrum Masters supporting ops teams
-- ITSM practitioners wanting to combine ITIL with Agile and DevOps
+## SEO
+- Title (H1/SEO, 55 chars): Agile IT Operations: Kanban, ITIL and DevOps in Practice
+- Meta description (≤155): Agile IT operations explained: run incidents, requests and improvements with Kanban, reserved capacity, ITIL and DevOps, with a worked example and metrics.
 
-## Recommended Length
+## Outline
+- H2 What is Agile in IT operations? (40–60 word definition; scope; AgileOps; what it is not)
+- H2 Why operations work needs a different kind of Agile (work-type table; why sprint commitments break)
+- H2 Agile values translated for an operations team (table)
+- H2 Kanban, Scrum or Scrumban for an operations team? (decision table by unplanned share)
+- H2 Core practices for Agile operations teams (H3: one board; interrupt policy and classes of service; WIP limits; reserved capacity from data; cadences; automation and toil; blameless post-incident reviews)
+- H2 Agile alongside ITIL and IT service management (practice mapping table; change enablement)
+- H2 Agile operations, DevOps and SRE (error budget with calculation)
+- H2 How to introduce Agile in an operations team, step by step (10 steps with timings)
+- H2 Worked example: an infrastructure team moves to Kanban (illustrative; capacity, Little's Law, automation payback, results, interpretation)
+- H2 Metrics for Agile IT operations (flow, DORA five, service)
+- H2 Roles in an Agile operations team
+- H2 Tools and templates
+- H2 When Agile operations practices are unsuitable or limited
+- H2 Common mistakes (table)
+- FAQ (11)
 
-3,600–4,000 words (sections + FAQ), with tables, a step-by-step rollout, an illustrative worked example with calculations and a common-mistakes table.
+## Worked examples planned (one consistent illustrative scenario)
+Six-person infrastructure team, 32 focus hours each per week (192 h). Eight weeks of unplanned effort: 78, 92, 85, 101, 88, 95, 70, 99 h → mean 88.5 h (46.1%); 50% reservation (96 h) covers 6 of 8 weeks. Little's Law: standard requests WIP 36, throughput 22.5/week → 1.6 weeks (8 working days); WIP 18 → 0.8 weeks (4 days). Automation of environment builds: 14/month × (3 − 0.25) h = 38.5 h/month saved; 60 h build → 1.56 months payback. Error budget: 99.9% monthly SLO over 30 days = 43.2 minutes; 25-minute incident uses 57.9%. Change fail rate 6/80 = 7.5%. Illustrative outcome after three months: unplanned mean 72 h (37.5%).
 
-## SERP Research (searched 8 November 2026)
+## Internal links planned
+Kanban: what-is-kanban, kanban-boards, kanban-swimlanes, wip-limits, kanban-ceremonies, kanban-vs-scrum, kanban-vs-scrumban, cycle-time, throughput, kanban-metrics, devops, continuous-delivery, value-stream-mapping. Agile: agile-manifesto-values-and-principles, is-agile-only-for-software, how-to-implement-agile, agile-metrics-and-kpis, agile-capacity-planning. Scrum: sprint-retrospective, scrum-product-owner. Other: service-level-agreement-sla, change-management-vs-change-control. Templates: work-request-template, kanban-board-template, root-cause-analysis-template. Tools: wrike, jira, wrike-vs-jira.
 
-Top results for "Agile IT operations": SD Times guest view, InfoWorld (Isaac Sacolick, "3 steps to applying agile methodologies in IT operations"), ITPro Today, LaunchNotes glossary, PMI Disciplined Agile (IT operations process blade: practices and mindset), WWT blog, Atlassian community (Agile ITSM), ITSM.tools, TechTarget ("Agile operations (AgileOps)" definition), Opsio, Wrike Agile guide ("Agile operations IT"), Budibase, APMdigest, Squadcast, Netenrich, and the Apress book *Hands-On Guide to AgileOps*. Second search ("agile operations team kanban how to apply agile to IT ops"): Planview Kanban-for-IT-ops ebook, NimbleWork (Digité) "Implementing Kanban in IT operations", KnowledgeHut, InfoQ (Kanban operations at Spotify), Medium case story. Third search ("AgileOps vs DevOps vs ITIL"): TechTarget "DevOps vs AgileOps", Freshworks, SolarWinds, ITSM.tools, BMC, DevOps.com "Agile vs ITIL".
+## FAQs
+What is Agile in IT operations? What is AgileOps? Is Scrum or Kanban better for IT operations? Can operations teams run sprints? How do Agile ops teams handle incidents? How much capacity should an ops team reserve? Can Agile and ITIL work together? Agile operations vs DevOps? What metrics? Do ops teams need a product owner? How long does it take?
 
-Pages fetched:
+## Sources to cite / record
+dora.dev metrics and history; sre.google Embracing Risk and Eliminating Toil; peoplecert.org ITIL (Version 5) explained; Global Knowledge ITIL 5 FAQ; itsm.tools change enablement; AWS change enablement in ITIL 4; pmi.org Disciplined Agile IT operations; agilemanifesto.org (site-established).
 
-- **Wrike Agile guide (agile-operations-it)**: about 1,100 words. H2s: What is Agile operations; History of Agile in IT operations (DevOps as the bridge); Benefits (H3s: team integration, fewer errors, reduced costs, productivity, clear priorities); How to implement (choose Kanban or Scrum, adapt roles, training, tools); How Wrike can help. No tables, no example, no metrics section.
-- **TechTarget AgileOps definition**: about 900 words. What is AgileOps (an operating model extending Agile and DevOps beyond development); why it matters (hybrid estates: legacy, cloud, containers); how it works (CI/CD, cross-functional teams, Kanban boards, continuous improvement); attributes and benefits (proactive monitoring, technical debt, KPIs). Dated February 2022.
-- **DORA (dora.dev metrics history)**: used for fact-checking the metrics section (see below).
-
-Common H2s across the SERP: What is Agile operations; Why ops is different/challenges; Benefits; How to implement; Kanban vs Scrum; Agile and DevOps/ITIL; Tools.
-
-PAA-style questions (the search tool returns no PAA boxes; compiled from SERP headings, FAQ sections and related searches): What is Agile in IT operations? What is AgileOps? Can operations teams use Scrum? Is Kanban better for operations? What is the difference between AgileOps and DevOps? Can ITIL and Agile work together? How do Agile teams handle incidents and unplanned work? What metrics should an ops team track? How do you implement Agile in an infrastructure team?
-
-### Content gaps we can fill
-
-- Competitors are short and abstract: none gives a work-type table, a rollout plan with timings or a worked example with numbers.
-- Nobody explains how to size reserved capacity from data or how classes of service work in practice.
-- Metrics sections are missing or use pre-2023 DORA names; we can use the current five DORA metrics and explain where MTTR still fits.
-- Little on combining Agile with ITIL 4/ITIL (Version 5) practices such as change enablement (standard changes, peer review) without abandoning control.
-- No coverage of SRE-style error budgets and toil reduction as an ops-friendly way to balance reliability and change.
-- No common-mistakes table and no balanced, specific tooling advice.
-
-## Fact checks (8 November 2026)
-
-- **DORA metrics** (dora.dev, "A history of DORA's software delivery metrics"): since 2024 there are five software delivery metrics, grouped as throughput (change lead time, deployment frequency, failed deployment recovery time) and instability (change fail rate, deployment rework rate). In 2023 "time to restore service"/MTTR was redefined as failed deployment recovery time, covering only failures caused by a change. Reliability is measured separately as operational performance.
-- **ITIL**: PeopleCert is releasing ITIL (Version 5) in phases during 2026; ITIL Foundation (Version 5) is available and ITIL 4 remains available in parallel (PeopleCert "New ITIL explained"; Advised Skills summary). We describe ITIL 4 concepts (guiding principles, change enablement) as ITIL 4 and avoid detailed ITIL 5 claims.
-- **Kanban, WIP limits, classes of service, SRE error budgets**: established practice; described without statistics.
-- **Old page worked example** (45% unplanned work, cycle time 8 to 4 days): invented numbers not labelled as illustrative. The rewrite keeps the scenario but labels it illustrative and shows the calculations.
-- Tool facts: Wrike #1 (9.4); Jira #6 (8.6) and Jira Service Management mentioned on the Jira review; no new tool claims.
-
-## SEO Title
-
-**Agile IT Operations: Kanban, DevOps and ITIL in Practice** (55 characters)
-
-## Meta Description
-
-Agile IT operations explained: handle incidents and planned work with Kanban, reserved capacity, ITIL and DevOps, with steps, metrics and a worked example. (154 characters)
-
----
-
-# Recommended Article Structure
-
-## H1: Agile IT Operations: Kanban, DevOps and ITIL in Practice
-
-### Introduction (lead)
-- Define Agile in IT operations in the first sentence.
-- Explain the main twist: ops mixes planned and unplanned work, so the practices change (Kanban, reserved capacity, automation, DevOps).
-- Say what the guide covers.
-
-## H2: What is Agile in IT operations?
-- 40–60 word snippet definition.
-- Who it applies to: infrastructure, network, service desk, platform, database, security operations.
-- AgileOps as a term; what it is not (not abandoning stability or control).
-
-## H2: Why IT operations needs a different kind of Agile
-- Work-type table: unplanned, routine requests, planned improvement, maintenance/compliance, with example and approach.
-- Stability vs change tension; why sprint commitments break.
-
-## H2: Agile principles translated for operations teams
-- Table: Agile idea → what it means in ops (working software → working, reliable service; customer collaboration → service owners and users; responding to change → interrupt policy, etc.).
-
-## H2: Scrum, Kanban or Scrumban for an ops team?
-- Comparison table by work mix; decision rule based on % unplanned.
-- Link Kanban vs Scrum, Scrumban.
-
-## H2: Core practices for Agile operations teams
-- H3 One board for all work (work items, swimlanes)
-- H3 Classes of service and an interrupt policy (expedite, fixed date, standard, intangible)
-- H3 WIP limits and pull
-- H3 Reserved capacity based on data (how to calculate)
-- H3 Cadence: stand-up, replenishment, service delivery review, retrospective
-- H3 Automation and toil reduction as backlog work
-- H3 Blameless post-incident reviews
-
-## H2: Agile, ITIL and IT service management
-- Agile and ITIL complement each other; ITIL 4 guiding principles align with Agile; ITIL (Version 5) phased release in 2026.
-- Table: ITSM practice → Agile way to run it (incident, request, change enablement, problem, service level management).
-- Change enablement: standard changes, peer review, automated evidence.
-
-## H2: Agile operations and DevOps
-- Difference; shared ownership, infrastructure as code, on-call, SRE error budgets.
-
-## H2: How to introduce Agile in an operations team, step by step
-- 10-step rollout with week ranges; what to measure at each step.
-
-## H2: Worked example: an infrastructure team moves to Kanban (illustrative)
-- Baseline data table; capacity calculation; board design; WIP limits; results after three months; Little's Law check.
-
-## H2: Metrics for Agile IT operations
-- Flow metrics, five DORA metrics, service metrics (MTTR for incidents, SLA performance, unplanned share), how to use them.
-
-## H2: Roles in an Agile operations team
-- Service owner/product owner, team lead/flow manager or Scrum Master, engineers, on-call; link roles pages.
-
-## H2: Tools for Agile IT operations
-- Board and intake (Wrike, Jira/Jira Service Management, Trello, monday.com), templates.
-
-## H2: Common mistakes in Agile operations
-- Table: mistake, why it hurts, fix.
-
-## FAQ (12)
-1. What is Agile in IT operations?
-2. What is AgileOps?
-3. Is Scrum or Kanban better for IT operations?
-4. Can operations teams run sprints?
-5. How do Agile ops teams handle incidents?
-6. How much capacity should an ops team reserve for unplanned work?
-7. Can Agile and ITIL work together?
-8. What is the difference between Agile operations and DevOps?
-9. What metrics should an Agile operations team track?
-10. Do Agile operations teams need a product owner?
-11. What is a blameless post-incident review?
-12. How long does it take to make an ops team Agile?
-13. Which tools suit Agile IT operations?
-
-## Internal links planned (from en_urls.txt)
-- /project-management/kanban/what-is-kanban/, /project-management/kanban/wip-limits/, /project-management/kanban/kanban-swimlanes/, /project-management/kanban/kanban-ceremonies/, /project-management/kanban/kanban-vs-scrum/, /project-management/kanban/kanban-vs-scrumban/, /project-management/kanban/cycle-time/, /project-management/kanban/throughput/, /project-management/kanban/cumulative-flow-diagram/, /project-management/kanban/devops/, /project-management/kanban/continuous-delivery/, /project-management/kanban/kanban-metrics/
-- /project-management/agile/agile-manifesto-values-and-principles/, /project-management/agile/is-agile-only-for-software/, /project-management/agile/how-to-implement-agile/, /project-management/agile/agile-metrics-and-kpis/, /project-management/agile/agile-capacity-planning/
-- /project-management/scrum/sprint-retrospective/, /project-management/scrum/scrum-product-owner/
-- /project-management/service-level-agreement-sla/, /project-management/change-control/
-- Templates: /templates/work-request-template/, /templates/kanban-board-template/, /templates/root-cause-analysis-template/, /templates/change-request-template/
-- Tools: /project-management-tools/wrike/, /project-management-tools/jira/, /project-management-tools/wrike/wrike-vs-jira/
-
-## Writer notes
-- British spelling; no hype; label the worked example illustrative; no invented statistics.
-- Do not claim ITIL is outdated or that Agile replaces ITSM.
-- Use the current DORA metric names.
+## Course
+Sprintcraft: Agile and Scrum Practitioner is on the page's PMAI box; no body mention planned.

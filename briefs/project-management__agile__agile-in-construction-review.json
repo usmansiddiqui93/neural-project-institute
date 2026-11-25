@@ -1,0 +1,226 @@
+{
+ "url": "/project-management/agile/agile-in-construction/",
+ "status": "PUBLISH",
+ "publication_eligible": true,
+ "gates": {
+  "definitions_accurate": true,
+  "framework_requirements_verified": true,
+  "calculations_correct": true,
+  "variables_units_defined": true,
+  "examples_consistent_and_labelled": true,
+  "claims_supported": true,
+  "sources_authentic": true,
+  "educational_value": true,
+  "no_duplicate_intent": true,
+  "internal_links_valid": true,
+  "certification_claims_accurate": true,
+  "disclosures_included": true,
+  "metadata_valid": true,
+  "no_fabricated_experience": true
+ },
+ "scores": {
+  "technical_accuracy_25": 23,
+  "sources_15": 14,
+  "educational_usefulness_15": 14,
+  "examples_10": 9,
+  "information_gain_10": 9,
+  "precision_readability_10": 9,
+  "search_intent_5": 5,
+  "internal_linking_5": 5,
+  "technical_seo_5": 5,
+  "total": 93
+ },
+ "claims_checked": [
+  {
+   "claim": "Last Planner System conceived by Glenn Ballard and Greg Howell; 'Last Planner' is an LCI registered trademark",
+   "source": "https://leanconstruction.org/wp-content/uploads/2022/08/Last-Planner-System-Workbook.pdf",
+   "result": "confirmed"
+  },
+  {
+   "claim": "LPS levels per the workbook (master, phase, lookahead, weekly work plan) plus learning",
+   "source": "https://www.leanconstruction.org/last-planner-system/",
+   "result": "corrected"
+  },
+  {
+   "claim": "Lookahead typically about five to six weeks",
+   "source": "https://leanconstruction.org/wp-content/uploads/2022/08/Last-Planner-System-Workbook.pdf",
+   "result": "confirmed"
+  },
+  {
+   "claim": "PPC = completions / assignments for the week",
+   "source": "https://leanconstruction.org/wp-content/uploads/2022/08/Last-Planner-System-Workbook.pdf",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Assignment quality criteria: definition, soundness, sequence, size, learning",
+   "source": "https://leanconstruction.org/wp-content/uploads/2022/08/Last-Planner-System-Workbook.pdf",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Daily meetings of first-line supervisors and crews",
+   "source": "https://leanconstruction.org/wp-content/uploads/2022/08/Last-Planner-System-Workbook.pdf",
+   "result": "corrected"
+  },
+  {
+   "claim": "Glenn Strausser, PMI Global Congress 2015: Agile principles add value to non-IT projects such as construction if applied correctly; applied without labels",
+   "source": "https://www.pmi.org/learning/library/agile-software-applied-to-construction-9931",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Scrum Guide 2020: Scrum Team typically 10 or fewer (draft attributed it to Developers)",
+   "source": "https://scrumguides.org/scrum-guide.html",
+   "result": "corrected"
+  },
+  {
+   "claim": "Scrum Master 'runs the events'; Daily Scrum 'focused on blockers'",
+   "source": "https://scrumguides.org/scrum-guide.html",
+   "result": "corrected"
+  },
+  {
+   "claim": "Sprint fixed length of one month or less",
+   "source": "https://scrumguides.org/scrum-guide.html",
+   "result": "confirmed"
+  },
+  {
+   "claim": "NEC4 early warnings oblige parties to notify risks as soon as they become aware, discussed at early warning meetings",
+   "source": "https://www.neccontract.com/news/seven-practical-tips-for-making-nec-early-warnings-more-effective",
+   "result": "confirmed"
+  },
+  {
+   "claim": "ISO 19650 sets information management requirements for BIM",
+   "source": "https://knowledge.bsigroup.com/products/bs-en-iso-19650-1-organization-and-digitization-of-information-about-buildings-and-civil-engineering-works-including-building-information-modelling-bim-information-management-part-1-concepts-and-principles",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Wrike (#1) Kanban boards, Gantt with dependencies and baselines, request forms, cross-project dashboards; Smartsheet grid, Gantt and roll-up reports; monday.com visual boards",
+   "source": "/project-management-tools/wrike/ ; /project-management-tools/smartsheet/ ; /project-management-tools/monday/",
+   "result": "confirmed"
+  }
+ ],
+ "calculations_rechecked": [
+  {
+   "item": "PPC weekly example (draft 33/42 = 78.6% was arithmetically correct but mirrored the construction guide's 31/40, nine-miss example)",
+   "result": "corrected"
+  },
+  {
+   "item": "PPC revised example: committed 14+12+9+7+6 = 48, completed 12+8+7+7+2 = 36, missed 12; 36/48 = 75%",
+   "result": "correct"
+  },
+  {
+   "item": "Reasons-for-variance totals reconcile with trade misses (4+3+2+2+1 = 12; per-trade allocation consistent)",
+   "result": "correct"
+  },
+  {
+   "item": "RFI Kanban before/after counts (46 open, 31 days oldest; 18 open, 9 days) labelled illustrative",
+   "result": "correct"
+  }
+ ],
+ "changes_made": [
+  "Replaced the design-sprint scenario (a four-classroom school extension, which duplicated the worked example on /project-management/construction-project-manager/) with a new library and community hub scenario, including sprint table and review story.",
+  "Reworked the PPC example figures (48 committed, 36 completed, 12 missed, PPC 75%) and reasons table so it no longer mirrors the construction guide's 40/31/nine-miss example; added an interpretation note that PPC counts tasks, not work volume.",
+  "Scrum mapping: team-size guidance attributed to the whole Scrum Team per the 2020 Scrum Guide, not to Developers.",
+  "Scrum mapping: Scrum Master 'runs the events' changed to 'makes sure the events happen and stay useful'.",
+  "Scrum mapping: Daily Scrum focus changed from 'blockers' to progress toward the Sprint Goal and what is blocking it.",
+  "Scrum mapping: Sprint row notes the one-month maximum and uses the term 'Sprint Goal' consistently (also in the sprint table header).",
+  "Last Planner: heading and table header changed from 'levels' to 'layers', and attribution reworded so the workbook's four planning levels and LCI's learning element are not misattributed.",
+  "Last Planner daily meetings: 'play the same role as' a Daily Scrum softened to 'a similar role to'."
+ ],
+ "statistical_text_measurements": {
+  "url": "/project-management/agile/agile-in-construction/",
+  "word_count": 4306,
+  "unique_words": 1110,
+  "type_token_ratio": 0.2578,
+  "mattr_100": 0.7486,
+  "shannon_word_entropy_bits": 8.712,
+  "normalised_entropy": 0.8612,
+  "sentences": 155,
+  "avg_sentence_length": 16.83,
+  "sentence_length_sd": 10.07,
+  "sentence_length_cv": 0.599,
+  "paragraph_length_mean": 37.3,
+  "paragraph_length_sd": 21.9,
+  "bigram_repetition_rate": 0.3247,
+  "trigram_repetition_rate": 0.1069,
+  "top_repeated_4grams": [
+   [
+    "the last planner system",
+    6
+   ],
+   [
+    "percent plan complete ppc",
+    5
+   ],
+   [
+    "programme budget and contract",
+    4
+   ],
+   [
+    "the people doing the",
+    4
+   ],
+   [
+    "people doing the work",
+    4
+   ],
+   [
+    "lean construction and the",
+    3
+   ],
+   [
+    "construction and the last",
+    3
+   ],
+   [
+    "and the last planner",
+    3
+   ]
+  ],
+  "most_common_sentence_openers": [
+   [
+    "keep the",
+    3
+   ],
+   [
+    "a design",
+    3
+   ],
+   [
+    "this example",
+    3
+   ],
+   [
+    "the team",
+    3
+   ]
+  ],
+  "formulaic_phrases_found": [],
+  "watch_phrases_counts": {},
+  "most_similar_existing_guides": [
+   [
+    0.589,
+    "/project-management/industries/construction-project-management/"
+   ],
+   [
+    0.457,
+    "/project-management/construction-project-manager/"
+   ],
+   [
+    0.383,
+    "/project-management/agile/agile-methodology/"
+   ],
+   [
+    0.354,
+    "/project-management/agile/is-agile-only-for-software/"
+   ],
+   [
+    0.335,
+    "/project-management/project-management-methodologies/"
+   ]
+  ],
+  "note": "Descriptive editorial diagnostics only. No AI-detection probability is calculated."
+ },
+ "unresolved_issues": [
+  "Minor: topical overlap remains with the Last Planner/PPC paragraph in /project-management/industries/construction-project-management/ (similarity 0.589); intents are distinct (industry overview vs Agile applicability), and that guide could link here as the deeper treatment."
+ ],
+ "reviewer_note": "Automated review by an AI reviewer; not a human professional review."
+}

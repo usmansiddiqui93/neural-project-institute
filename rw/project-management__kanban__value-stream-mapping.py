@@ -7,7 +7,7 @@ RW = dict(
     desc="Value stream mapping explained: how to map the current and future state step by step, key metrics and symbols, worked examples and common mistakes.",
     intro=(
         "Value stream mapping (VSM) is a Lean method for drawing every step, handoff and wait involved in delivering a product or service, from the customer's request to the customer receiving it, with time and quality data for each step. "
-        "Most teams that map a process for the first time find that work spends far more time waiting than being worked on, so the map points straight at the queues, approvals and rework worth fixing. "
+        "A first map often shows work spending far more time waiting than being worked on, which points the team straight at the queues, approvals and rework worth fixing. "
         "This guide shows you how to build a current and future state map step by step, which metrics and symbols to use, and how to turn the result into a Kanban board, with three worked examples."
     ),
     takeaways=[
@@ -15,7 +15,7 @@ RW = dict(
         "For each step, record process time, lead time and % complete and accurate (%C&A). Totals give the activity ratio (flow efficiency) and rolled %C&A.",
         "Map the current state by walking the process with the people who do the work, then design a future state and an action plan that removes the biggest delays.",
         "In knowledge work the largest gains usually come from shorter queues, fewer approvals and handoffs, better intake quality and smaller, more frequent releases.",
-        "A map is only useful if it leads to change: turn improvement ideas into owned actions, track the metrics on a Kanban board and re-map every six to twelve months.",
+        "A map is only useful if it leads to change: turn improvement ideas into owned actions, track the metrics on a Kanban board and re-map when you reach the future state.",
     ],
     sections=[
         S(
@@ -28,12 +28,12 @@ RW = dict(
                 "**Information flow:** it shows how work is triggered and communicated (emails, tickets, meetings), not only the work steps.",
                 "**A timeline:** a line along the bottom compares time worked with time waiting.",
             ),
-            "Teams usually draw two maps. The **current state map** shows how the process works today; the **future state map** shows how it should work in six to twelve months, with an implementation plan to get there. Steps are classed as **value-adding**, **necessary but non-value-adding** (such as a regulatory check) or **non-value-adding** (waiting, rework, duplicate data entry), which you aim to remove.",
+            "Teams usually draw two maps. The **current state map** shows how the process works today; the **future state map** shows how it should work within a set horizon, often six to twelve months, with an implementation plan to get there. Steps are classed as **value-adding**, **necessary but non-value-adding** (such as a regulatory check) or **non-value-adding** (waiting, rework, duplicate data entry), which you aim to remove.",
         ),
         S(
             "Where value stream mapping came from",
             "Value stream mapping grew out of the Toyota Production System, where Toyota used what it called **material and information flow diagrams** to see how parts and instructions moved through a plant. Mike Rother and John Shook turned the practice into a step-by-step method in their workbook *Learning to See*, published by the Lean Enterprise Institute in 1998, which received a Shingo Research award in 1999 and gave VSM its standard icons.",
-            "Karen Martin and Mike Osterling's *Value Stream Mapping* (McGraw-Hill, 2013) adapted the method for office, service and knowledge work, popularising measures such as % complete and accurate and the activity ratio. Software teams now map the path from idea to production, and healthcare and public sector teams map patient and case journeys.",
+            "Karen Martin and Mike Osterling's *Value Stream Mapping* (McGraw-Hill, 2013) adapted the method for office, service and knowledge work, using measures such as process time, lead time, % complete and accurate and the activity ratio. Software teams now map the path from idea to production, and healthcare and public sector teams map patient and case journeys.",
             "Our guides to [Lean manufacturing](/project-management/kanban/lean-manufacturing/) and [Lean Kanban](/project-management/kanban/lean-kanban/) explain the wider principles, and [Lean project management](/project-management/lean-project-management/) shows how they apply to projects.",
         ),
         S(
@@ -58,7 +58,7 @@ RW = dict(
                 ["Lead time (LT)", "Elapsed time from work arriving at the step to passing it on, including waiting", "Ticket or card timestamps, emails"],
                 ["Wait time", "LT minus PT: time queued or blocked", "Calculated"],
                 ["% complete and accurate (%C&A)", "Share of work the next step can use without correcting, adding or clarifying", "Ask the downstream step"],
-                ["Rolled %C&A", "Share of items that pass every step with no rework", "Multiply the step values"],
+                ["Rolled %C&A (rolled first pass yield)", "Approximate share of items that pass every step with no rework", "Multiply the step values"],
                 ["Activity ratio", "Total PT ÷ total LT, also known as flow efficiency", "Calculated"],
                 ["WIP and batch size", "Items queued at each step, and how many move together", "Count cards or tickets"],
                 ["Takt time", "Pace of customer demand: available time ÷ demand", "Calculated"],
@@ -136,7 +136,7 @@ RW = dict(
                 "**Turn each kaizen burst into an action** with an owner, date and target metric, using our [action plan template](/templates/action-plan-template/).",
                 "**Start with the biggest delay** the team controls.",
                 "**Track the metrics** monthly against the current state baseline.",
-                "**Re-map** once you reach the future state, often every six to twelve months.",
+                "**Re-map** once you reach the future state or the process changes significantly.",
             ),
             "See our guide to [flow efficiency](/project-management/kanban/flow-efficiency/) for how to measure the activity ratio continuously once the new process is running.",
         ),
@@ -160,7 +160,7 @@ RW = dict(
                 "Total process time: 0.5 + 4 + 0.5 + 16 + 2 + 6 + 1 = 30 hours, which is 30 ÷ 8 = **3.75 working days**.",
                 "Activity ratio: 3.75 ÷ 35 = **10.7%**. Nearly 90% of the customer's wait is waiting.",
                 "Rolled %C&A: 0.60 × 0.80 × 0.95 × 0.85 × 0.90 × 0.75 × 0.98 = **about 26%**. Only about one change in four gets through without someone correcting or clarifying something.",
-                "Rank the waits: release window (about 8.9 days waiting), development queue (6), analysis (4.5), approval (about 3.9), testing (3.25) and intake (about 2.9).",
+                "Rank the waits (lead time minus process time in days): release window (about 8.9), development queue (6), analysis (4.5), approval (about 3.9), testing (3.25), intake (about 2.9) and code review (1.75).",
             ),
             "Working faster would barely help: halving every step's process time would cut lead time by less than two days. The big gains lie in the monthly release window, the development queue, the weekly approval board and poor intake quality, which causes rework downstream.",
         ),
@@ -169,25 +169,25 @@ RW = dict(
             "The team marks kaizen bursts on the map and turns them into an action plan (illustrative):",
             T(
                 ["Kaizen burst", "Change", "Owner", "Target metric"],
-                ["Intake quality", "Structured request form with mandatory fields and acceptance criteria", "Service manager", "Intake %C&A 60% → 90%"],
+                ["Intake quality", "Structured request form with mandatory fields and acceptance criteria", "Service manager", "Intake LT 3 → 1 day; %C&A 60% → 90%"],
                 ["Analysis", "Short call with the requester within two days instead of email chains", "Lead analyst", "Analysis LT 5 → 2 days"],
                 ["Approval", "Delegated approval for standard, low-risk changes against written criteria", "Change manager", "Approval LT 4 → 0.5 days"],
                 ["Development queue", "WIP limits and a pull policy so developers finish before starting", "Team lead", "Development LT 8 → 4 days"],
                 ["Code review", "Pick up reviews before starting new work", "Developers", "Review LT 2 → 1 day"],
-                ["Testing", "Automated regression suite plus focused exploratory testing", "Test lead", "Testing PT 6 → 4 hours; %C&A 75% → 90%"],
+                ["Testing", "Automated regression suite plus focused exploratory testing", "Test lead", "Testing PT 6 → 4 hours; LT 4 → 2 days; %C&A 75% → 90%"],
                 ["Release", "Weekly release window instead of monthly", "Release manager", "Release LT 9 → 3 days"],
             ),
             "A structured intake form like our free [work request template](/templates/work-request-template/) is often the cheapest improvement on the list, because better information at the start reduces rework at every later step.",
             T(
                 ["Measure", "Current state", "Future state"],
                 ["Total lead time", "35 working days", "13.5 working days"],
-                ["Total process time", "30 hours (3.75 days)", "27.25 hours (about 3.4 days)"],
-                ["Activity ratio", "10.7%", "About 25%"],
-                ["Rolled %C&A", "About 26%", "About 49%"],
+                ["Total process time", "30 hours (3.75 days)", "28 hours (3.5 days)"],
+                ["Activity ratio", "10.7%", "About 26% (3.5 ÷ 13.5)"],
+                ["Rolled %C&A", "About 26%", "About 46%"],
                 ["Approval batch", "Weekly board", "Delegated for standard changes"],
                 ["Release batch", "Monthly", "Weekly"],
             ),
-            "Future state lead times are 1, 2, 0.5, 4, 1, 2 and 3 days for the seven steps. Process time barely changes, but lead time falls by more than 60% because work waits less, approvals and releases happen in smaller batches and fewer items bounce back for rework. That is the typical pattern of a good knowledge-work future state.",
+            "Future state lead times are 1, 2, 0.5, 4, 1, 2 and 3 days for the seven steps (13.5 in total), and the only process time change is testing, from 6 to 4 hours. Rolled %C&A is 0.90 × 0.80 × 0.95 × 0.85 × 0.90 × 0.90 × 0.98, about 46%. Process time barely changes, but lead time falls by about 61% ((35 − 13.5) ÷ 35) because work waits less, approvals and releases happen in smaller batches and fewer items bounce back for rework. These targets are planning assumptions until the changes are made and re-measured.",
         ),
         S(
             "Worked example: an office value stream with parallel paths",

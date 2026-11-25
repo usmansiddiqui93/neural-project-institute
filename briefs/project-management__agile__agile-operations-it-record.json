@@ -1,0 +1,335 @@
+{
+ "url": "/project-management/agile/agile-operations-it/",
+ "proposed_status": "PUBLISH",
+ "article_type": "methodology guide (how-to with worked example)",
+ "language": "en-GB",
+ "learning_level": "intermediate",
+ "primary_keyword": "Agile IT operations",
+ "secondary_keywords": [
+  "Agile in IT operations",
+  "Agile operations",
+  "AgileOps",
+  "Kanban for IT operations",
+  "Scrum vs Kanban for operations teams",
+  "Agile operations vs DevOps",
+  "Agile and ITIL",
+  "Agile ITSM",
+  "unplanned work in operations",
+  "interrupt-driven team",
+  "reserved capacity for unplanned work",
+  "classes of service for IT operations",
+  "DORA metrics",
+  "failed deployment recovery time",
+  "error budget",
+  "toil reduction",
+  "blameless post-incident review"
+ ],
+ "search_intent": "methodology / how-to, with definition and comparison sub-intents",
+ "h1": "Agile IT Operations: Kanban, ITIL and DevOps in Practice",
+ "seo_title": "Agile IT Operations: Kanban, ITIL and DevOps in Practice",
+ "meta_description": "Agile IT operations explained: run incidents, requests and improvements with Kanban, reserved capacity, ITIL and DevOps, with a worked example and metrics.",
+ "excerpt": "How IT operations teams apply Agile: one board for all work, an interrupt policy, capacity reserved from data, ITIL change enablement, DORA metrics and error budgets, with an illustrative worked example.",
+ "parent_topic_cluster": "Agile (/project-management/agile/)",
+ "prerequisite_guides": [
+  "/project-management/agile/agile-manifesto-values-and-principles/",
+  "/project-management/kanban/what-is-kanban/",
+  "/project-management/kanban/wip-limits/"
+ ],
+ "related_articles": [
+  "/project-management/kanban/devops/",
+  "/project-management/kanban/kanban-swimlanes/",
+  "/project-management/kanban/kanban-vs-scrum/",
+  "/project-management/agile/is-agile-only-for-software/",
+  "/project-management/service-level-agreement-sla/",
+  "/project-management/industries/it-project-management/"
+ ],
+ "learning_objectives": [
+  "Classify operations work into incidents, requests, improvement and maintenance and set a policy for each",
+  "Choose between Kanban, Scrum and Scrumban from the measured work mix",
+  "Size reserved capacity for unplanned work from eight or more weeks of data",
+  "Map ITIL 4 practices, including change enablement, to Agile ways of working",
+  "Calculate and interpret an error budget and a Little's Law cycle time estimate",
+  "Select flow, DORA and service metrics, using current DORA definitions"
+ ],
+ "internal_links": [
+  "/project-management-tools/jira/",
+  "/project-management-tools/wrike/",
+  "/project-management-tools/wrike/wrike-vs-jira/",
+  "/project-management/agile/agile-capacity-planning/",
+  "/project-management/agile/agile-manifesto-values-and-principles/",
+  "/project-management/agile/agile-metrics-and-kpis/",
+  "/project-management/agile/how-to-implement-agile/",
+  "/project-management/agile/is-agile-only-for-software/",
+  "/project-management/change-management-vs-change-control/",
+  "/project-management/kanban/cycle-time/",
+  "/project-management/kanban/devops/",
+  "/project-management/kanban/kanban-boards/",
+  "/project-management/kanban/kanban-ceremonies/",
+  "/project-management/kanban/kanban-metrics/",
+  "/project-management/kanban/kanban-swimlanes/",
+  "/project-management/kanban/kanban-vs-scrum/",
+  "/project-management/kanban/kanban-vs-scrumban/",
+  "/project-management/kanban/throughput/",
+  "/project-management/kanban/wip-limits/",
+  "/project-management/scrum/scrum-product-owner/",
+  "/project-management/scrum/sprint-retrospective/",
+  "/project-management/service-level-agreement-sla/",
+  "/templates/kanban-board-template/",
+  "/templates/root-cause-analysis-template/",
+  "/templates/work-request-template/"
+ ],
+ "relevant_templates": [
+  "/templates/kanban-board-template/",
+  "/templates/work-request-template/",
+  "/templates/root-cause-analysis-template/"
+ ],
+ "related_npi_course": "Sprintcraft: Agile and Scrum Practitioner (page PMAI box only; not mentioned in body)",
+ "external_references": [
+  {
+   "title": "DORA's software delivery performance metrics (updated 5 Jan 2026)",
+   "url": "https://dora.dev/guides/dora-metrics/",
+   "inspected": true,
+   "what_it_supports": "Five current metrics, names and throughput/instability grouping"
+  },
+  {
+   "title": "A history of DORA's software delivery metrics",
+   "url": "https://dora.dev/guides/dora-metrics/history/",
+   "inspected": true,
+   "what_it_supports": "MTTR redefined as failed deployment recovery time in 2023; deployment rework rate added 2024; reliability as operational performance"
+  },
+  {
+   "title": "Google SRE book, ch. 3 Embracing Risk",
+   "url": "https://sre.google/sre-book/embracing-risk/",
+   "inspected": true,
+   "what_it_supports": "Error budget = 1 - SLO; releases halted when budget exhausted; gentler variants"
+  },
+  {
+   "title": "Google SRE book, ch. 5 Eliminating Toil",
+   "url": "https://sre.google/sre-book/eliminating-toil/",
+   "inspected": true,
+   "what_it_supports": "Toil characteristics; keep operational work below 50% of each SRE's time"
+  },
+  {
+   "title": "PeopleCert: ITIL (Version 5) explained",
+   "url": "https://peoplecert.org/news-and-announcements/itil-version-5-explained",
+   "inspected": true,
+   "what_it_supports": "Phased release; ITIL 4 remains available (page gives no dates)"
+  },
+  {
+   "title": "Global Knowledge: ITIL (Version 5) certification FAQ",
+   "url": "https://www.globalknowledge.com/en-us/certifications/certification-training/itil/itil-version-5-certification-faq",
+   "inspected": true,
+   "what_it_supports": "No ITIL 4 retirement date announced; parallel running at least 12 months (training provider, secondary)"
+  },
+  {
+   "title": "ITSM.tools: Change enablement in ITIL 4",
+   "url": "https://itsm.tools/change-enablement/",
+   "inspected": true,
+   "what_it_supports": "Standard/normal/emergency changes, change authority incl. peer review and automated approvals, original 'change control' term (secondary source)"
+  },
+  {
+   "title": "AWS whitepaper: Change enablement in ITIL 4",
+   "url": "https://docs.aws.amazon.com/it_it/wellarchitected/latest/change-enablement-in-the-cloud/change-enablement-in-itil4.html",
+   "inspected": true,
+   "what_it_supports": "Quoted ITIL 4 purpose of change enablement"
+  },
+  {
+   "title": "PMI Disciplined Agile: IT operations practices",
+   "url": "https://www.pmi.org/disciplined-agile/process/it-operations/it-operations-practices",
+   "inspected": true,
+   "what_it_supports": "Background on operations goals; used for research only"
+  },
+  {
+   "title": "InfoWorld: 3 steps to applying agile methodologies in IT operations (Mar 2020)",
+   "url": "https://www.infoworld.com/article/3533429/3-steps-to-applying-agile-methodologies-in-it-operations.html",
+   "inspected": true,
+   "what_it_supports": "SERP coverage and gap analysis only"
+  },
+  {
+   "title": "Atlassian Team Playbook: Agile for IT teams",
+   "url": "https://www.atlassian.com/hu/team-playbook/examples/agile-for-it-teams",
+   "inspected": true,
+   "what_it_supports": "SERP coverage and gap analysis only"
+  }
+ ],
+ "formulas": [
+  {
+   "formula": "Team capacity = people x focus hours per week",
+   "variables": "people (count); focus hours (h/person/week)",
+   "verified_by": "python",
+   "inputs": "6 x 32",
+   "result": "192 h/week"
+  },
+  {
+   "formula": "Mean unplanned effort = sum of weekly unplanned hours / weeks; share = mean / capacity",
+   "variables": "hours; weeks; percentage",
+   "verified_by": "python",
+   "inputs": "78,92,85,101,88,95,70,99; capacity 192",
+   "result": "708/8 = 88.5 h; 46.1%; range 36.5%-52.6%; 50% reservation (96 h) covers 6 of 8 weeks"
+  },
+  {
+   "formula": "Little's Law: average cycle time = average WIP / average throughput",
+   "variables": "WIP (items); throughput (items/week); cycle time (weeks)",
+   "verified_by": "python",
+   "inputs": "36/22.5 and 18/22.5",
+   "result": "1.6 weeks (8 working days); 0.8 weeks (4 working days)"
+  },
+  {
+   "formula": "Error budget = (1 - SLO) x period",
+   "variables": "SLO (decimal); period (minutes)",
+   "verified_by": "python",
+   "inputs": "0.999; 30 x 24 x 60 = 43,200 min; 25-min outage",
+   "result": "43.2 min; 57.9% consumed; 18.2 min left"
+  },
+  {
+   "formula": "Monthly saving = volume x (hours before - hours after); payback = build effort / monthly saving",
+   "variables": "builds/month; hours; months",
+   "verified_by": "python",
+   "inputs": "14 x (3 - 0.25); 60 h",
+   "result": "38.5 h/month; 1.56 months"
+  },
+  {
+   "formula": "Change fail rate = failed changes / total changes",
+   "variables": "counts; percentage",
+   "verified_by": "python",
+   "inputs": "6 / 80",
+   "result": "7.5%"
+  },
+  {
+   "formula": "Post-change unplanned share = 72 / 192",
+   "variables": "hours; percentage",
+   "verified_by": "python",
+   "inputs": "72, 192",
+   "result": "37.5%"
+  }
+ ],
+ "python_verification_output": "weekly capacity h 192 | sum 708 mean 88.5 share % 46.1 | reserve 50% h 96.0 weeks covered 6 / 8 | planned capacity h 96.0 | max week share 52.6 min 36.5 | CT before weeks 1.6 days 8.0 | CT after weeks 0.8 days 4.0 | minutes 43200 budget 43.2 | 25-min incident uses % 57.9 remaining 18.2 | saving h/month 38.5 payback months 1.56 | after share 37.5 | CFR 7.5",
+ "worked_examples": [
+  {
+   "title": "Six-person infrastructure team moves to Kanban (capacity, reservation, Little's Law, automation payback, results)",
+   "illustrative": true
+  },
+  {
+   "title": "Error budget for a 99.9% monthly availability SLO",
+   "illustrative": true
+  }
+ ],
+ "statistical_text_measurements": {
+  "url": "/project-management/agile/agile-operations-it/",
+  "word_count": 4456,
+  "unique_words": 1140,
+  "type_token_ratio": 0.2558,
+  "mattr_100": 0.7517,
+  "shannon_word_entropy_bits": 8.743,
+  "normalised_entropy": 0.861,
+  "sentences": 191,
+  "avg_sentence_length": 17.46,
+  "sentence_length_sd": 8.57,
+  "sentence_length_cv": 0.491,
+  "paragraph_length_mean": 42.7,
+  "paragraph_length_sd": 23.9,
+  "bigram_repetition_rate": 0.327,
+  "trigram_repetition_rate": 0.1089,
+  "top_repeated_4grams": [
+   [
+    "eight weeks or more",
+    3
+   ],
+   [
+    "failed deployment recovery time",
+    3
+   ],
+   [
+    "agile in it operations",
+    3
+   ],
+   [
+    "cycle time per class",
+    3
+   ],
+   [
+    "time per class of",
+    3
+   ],
+   [
+    "per class of service",
+    3
+   ],
+   [
+    "written interrupt policy and",
+    2
+   ],
+   [
+    "teams whose work is",
+    2
+   ]
+  ],
+  "most_common_sentence_openers": [
+   [
+    "agile operations",
+    4
+   ],
+   [
+    "this guide",
+    3
+   ],
+   [
+    "it is",
+    3
+   ]
+  ],
+  "formulaic_phrases_found": [],
+  "watch_phrases_counts": {},
+  "most_similar_existing_guides": [
+   [
+    0.464,
+    "/project-management/kanban/kanban-vs-agile/"
+   ],
+   [
+    0.437,
+    "/project-management/kanban/kanban-vs-scrum/"
+   ],
+   [
+    0.418,
+    "/project-management/agile/agile-methodology/"
+   ],
+   [
+    0.409,
+    "/project-management/kanban/what-is-kanban/"
+   ],
+   [
+    0.4,
+    "/project-management/kanban/kanban-principles/"
+   ]
+  ],
+  "note": "Descriptive editorial diagnostics only. No AI-detection probability is calculated."
+ },
+ "self_assessment": {
+  "technical_accuracy_25": 23,
+  "sources_15": 13,
+  "educational_usefulness_15": 14,
+  "examples_10": 10,
+  "information_gain_10": 9,
+  "precision_readability_10": 9,
+  "search_intent_5": 5,
+  "internal_linking_5": 5,
+  "technical_seo_5": 5,
+  "total": 93
+ },
+ "required_disclosures": [
+  "Worked example and results labelled illustrative/invented",
+  "No NPI course mentioned in body (page PMAI box carries Sprintcraft)",
+  "Wrike described as our top-rated tool, consistent with review ranking"
+ ],
+ "unverified_claims": [
+  "ITIL 4 guiding principle names ('focus on value', 'progress iteratively with feedback') are from general knowledge of ITIL 4; the PeopleCert publication itself was not inspected",
+  "ITIL 4 change types and change authority, and the 'change control' original term, verified via ITSM.tools (secondary), not the PeopleCert Change Enablement practice guide (paywalled)",
+  "ITIL (Version 5) exact release dates not found on PeopleCert pages; article states only phased release in 2026 and ITIL 4 still available",
+  "Statement that AgileOps has no official guide or certification is based on absence of any such body in research, not on a primary source",
+  "'On-call/shield role' and 'service owner' described as common practice, not framework requirements; no source cited"
+ ],
+ "unresolved_issues": [
+  "Site consistency: /project-management/kanban/devops/ still lists four DORA metrics with 'time to restore service'; this page uses the current five (dora.dev, Jan 2026). The DevOps page should be updated separately.",
+  "Live page linked /templates/work-request-template/ in a promo box; retained as an in-body link only"
+ ]
+}

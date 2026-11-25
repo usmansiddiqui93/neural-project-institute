@@ -8,7 +8,7 @@ RW = dict(
     intro=(
         "Lean manufacturing is a way of producing goods that delivers what the customer values with the least possible waste, by making work flow smoothly, producing only what is pulled by demand and improving the process continuously. "
         "It grew out of the Toyota Production System and now shapes operations, healthcare, software and project management. "
-        "This guide covers the principles, the eight wastes and the main tools, then works through value stream, takt time and OEE examples and a step-by-step way to start."
+        "This guide covers the principles, the eight wastes and the main tools, then works through value stream and takt time examples and a step-by-step way to start."
     ),
     takeaways=[
         "Lean manufacturing maximises customer value by removing waste (muda), unevenness (mura) and overburden (muri) from the way work flows.",
@@ -29,7 +29,7 @@ RW = dict(
                 ["Necessary but non-value-adding", "Adds no value but cannot be removed yet because of current technology, rules or contracts", "Safety inspection, regulatory labelling"],
                 ["Pure waste", "Adds no value and could be removed", "Moving parts to a store and back, waiting for a forklift, reworking a scratched top"],
             ),
-            "The value-adding share is usually small, so lean focuses first on time spent waiting, travelling and being reworked, not on making people work faster.",
+            "The value-adding share is often small, so lean focuses first on time spent waiting, travelling and being reworked, not on making people work faster.",
             "Lean also targets two problems that cause waste: **mura** (unevenness in workload or demand) and **muri** (overburden on people or machines). These are explained in the section on the eight wastes below.",
             H3("Lean manufacturing vs mass production"),
             T(
@@ -73,10 +73,10 @@ RW = dict(
             "In Lean Thinking (1996), James Womack and Daniel Jones distilled the Toyota approach into five principles. They are meant to be applied in order, then repeated.",
             T(
                 ["Principle", "What it means", "Factory example", "Project example"],
-                ["1. Value", "Define value from the customer's point of view", "A customer needs 200 brackets a week, delivered on time and to tolerance; a polished finish is not required", "The sponsor needs a working payroll integration, not a 60-page design document"],
-                ["2. Value stream", "Map every step from order to delivery and classify each as value-adding or waste", "Map the bracket's path from steel coil to dispatch, including stores and waiting", "Map the request from intake to release, including approvals and hand-offs"],
+                ["1. Value", "Define value from the customer's point of view", "A customer needs 200 hinges a week, delivered on time and to tolerance; a polished finish is not required", "The sponsor needs a working payroll integration, not a 60-page design document"],
+                ["2. Value stream", "Map every step from order to delivery and classify each as value-adding or waste", "Map the hinge's path from steel coil to dispatch, including stores and waiting", "Map the request from intake to release, including approvals and hand-offs"],
                 ["3. Flow", "Make the value-adding steps follow each other without stops, batches or detours", "Move the press next to the bending machine and pass parts one at a time", "Reduce hand-offs and finish one feature before starting the next"],
-                ["4. Pull", "Produce only when the next step or customer signals demand", "A kanban card authorises another box of brackets only when one is used", "Start new work only when a WIP limit frees up space"],
+                ["4. Pull", "Produce only when the next step or customer signals demand", "A kanban card authorises another box of hinges only when one is used", "Start new work only when a WIP limit frees up space"],
                 ["5. Perfection", "Keep improving, because there is always more waste to remove", "Weekly kaizen on changeover time", "Regular retrospectives with one improvement action each"],
             ),
             "The Lean Enterprise Institute also stresses **respect for people**: lean is a practice of continuous experimentation by the people doing the work, not a set of cost-cutting tools imposed on them.",
@@ -136,18 +136,18 @@ RW = dict(
         ),
         S(
             "Worked example: mapping a value stream",
-            "**Illustrative example.** A small metal workshop makes one bracket family in five steps. Demand is 400 brackets per working day on one shift of 420 available minutes. The team walks the process and records each step's cycle time and the inventory waiting in front of it.",
+            "**Illustrative example.** A small metal workshop makes one family of steel hinges in five steps. Demand is 400 hinges per working day on one shift of 420 available minutes (25,200 seconds), so takt time is 25,200 ÷ 400 = 63 seconds and every step below runs within it. The team walks the process and records each step's cycle time and the inventory waiting in front of it.",
             T(
                 ["Step", "Cycle time per unit", "Inventory waiting before the step", "Days of waiting (inventory ÷ 400 a day)"],
                 ["Raw steel store", "None", "800 units' worth", "2.0"],
                 ["1. Cut", "40 s", "0", "0"],
-                ["2. Weld", "75 s", "400", "1.0"],
+                ["2. Weld", "60 s", "400", "1.0"],
                 ["3. Paint", "50 s", "600", "1.5"],
                 ["4. Assemble", "60 s", "300", "0.75"],
-                ["5. Pack", "20 s", "200", "0.5"],
+                ["5. Pack", "35 s", "200", "0.5"],
                 ["**Total**", "**245 s (about 4 minutes)**", "**2,300 units**", "**5.75 working days**"],
             ),
-            "A bracket spends about four minutes being worked on and almost six working days waiting. The **process cycle efficiency** (value-adding time divided by total lead time) is 245 seconds out of roughly 145,000 seconds of working time, well under 1%. Figures like this are common on a first value stream map and are the reason lean starts with waiting and inventory rather than with speeding up operators.",
+            "A hinge spends about four minutes being worked on and almost six working days waiting. The **process cycle efficiency** (value-adding time divided by total lead time) is 245 seconds out of 5.75 × 25,200 = 144,900 seconds of working time, about 0.17%. When nearly all of the lead time is waiting, speeding up operators barely changes it, which is why lean starts with waiting and inventory. (The days-of-waiting column treats each queue as being worked off at the daily demand rate, a simplification that ignores variation in demand and in step times.)",
             "The team then designs a future state:",
             OL(
                 "Replace the stockpiles between steps with kanban loops capped at 100 units each, so a step only produces when the next one has used a container.",
@@ -155,7 +155,7 @@ RW = dict(
                 "Run a SMED workshop on the paint line, whose long colour changeovers were the reason for large batches.",
                 "Move cutting and welding next to each other so parts pass in small trays instead of on pallets.",
             ),
-            "With four loops of 100 units (0.25 days each) and one day of raw steel, lead time falls from about 5.75 to about 2 working days, while cycle times and output are unchanged. This is Little's Law at work: at the same throughput, less inventory means a shorter lead time. Our guides to [value stream mapping](/project-management/kanban/value-stream-mapping/) and [WIP limits](/project-management/kanban/wip-limits/) explain both techniques step by step.",
+            "With four loops of 100 units (0.25 days each) and one day of raw steel, lead time falls from about 5.75 to about 2 working days (process cycle efficiency rises to roughly 0.5%), while cycle times and output are unchanged. This is Little's Law at work: at the same throughput, less inventory means a shorter lead time. Our guides to [value stream mapping](/project-management/kanban/value-stream-mapping/) and [WIP limits](/project-management/kanban/wip-limits/) explain both techniques step by step.",
             TIP("Map the current state by walking the process with a stopwatch, not from the ERP system or the procedure manual. The gap between the documented and the real process is usually where the waste is."),
         ),
         S(
@@ -176,7 +176,7 @@ RW = dict(
                 "Rebalance by moving a task, such as attaching labels, from C to station A or D, which have spare time.",
                 "Only if those are not enough, add capacity: a second test fixture or a second operator at peak times.",
             ),
-            "Running station A faster would only pile sub-assemblies in front of C, which is overproduction. That is the insight as the [theory of constraints](/project-management/kanban/theory-of-constraints/): improving anywhere other than the bottleneck does not raise output.",
+            "Running station A faster would only pile sub-assemblies in front of C, which is overproduction. That is the central insight of the [theory of constraints](/project-management/kanban/theory-of-constraints/): improving anywhere other than the bottleneck does not raise output.",
         ),
         S(
             "How to implement lean manufacturing step by step",
@@ -225,7 +225,7 @@ RW = dict(
                 ["Agile", "How do we deliver value in small increments and adapt to change?", "Iterations, backlogs, reviews, retrospectives", "Software development, 2001 Agile Manifesto"],
                 ["Kanban Method", "How do we visualise knowledge work, limit WIP and improve flow?", "Kanban boards, WIP limits, flow metrics", "Lean, adapted to knowledge work in the 2000s"],
             ),
-            "Lean speeds the process up and Six Sigma makes it consistent, which is why they are often combined. Our guides to [Lean vs Six Sigma](/project-management/lean-vs-six-sigma/) and [Six Sigma](/project-management/six-sigma/) explain when to use each, and [Scrum vs Lean](/project-management/scrum/scrum-vs-lean/) and [Kanban vs Agile](/project-management/kanban/kanban-vs-agile/) cover the software side.",
+            "Lean mainly attacks delay and waste, while Six Sigma mainly attacks variation and defects, which is why they are often combined. Our guides to [Lean vs Six Sigma](/project-management/lean-vs-six-sigma/) and [Six Sigma](/project-management/six-sigma/) explain when to use each, and [Scrum vs Lean](/project-management/scrum/scrum-vs-lean/) and [Kanban vs Agile](/project-management/kanban/kanban-vs-agile/) cover the software side.",
         ),
         S(
             "Lean manufacturing lessons for project teams",
@@ -239,7 +239,7 @@ RW = dict(
                 ["Value stream mapping", "Map a request from intake to delivery and measure [flow efficiency](/project-management/kanban/flow-efficiency/)"],
                 ["Kaizen", "Retrospectives and [lessons learned](/project-management/lessons-learned/) with one owned action each"],
             ),
-            "The biggest lesson is usually about waiting. As in the bracket example, work items typically spend far longer waiting for reviews, approvals and decisions than being worked on, so limiting work in progress does more for delivery dates than asking people to work faster.",
+            "The biggest lesson is usually about waiting. As in the hinge example, work items often spend far longer waiting for reviews, approvals and decisions than being worked on, so limiting work in progress does more for delivery dates than asking people to work faster.",
             "Read our guide to [lean project management](/project-management/lean-project-management/) for how to apply these ideas across a whole project life cycle.",
         ),
         S(

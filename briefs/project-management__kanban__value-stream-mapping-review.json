@@ -1,0 +1,243 @@
+{
+ "url": "/project-management/kanban/value-stream-mapping/",
+ "status": "PUBLISH",
+ "publication_eligible": true,
+ "gates": {
+  "definitions_accurate": true,
+  "framework_requirements_verified": true,
+  "calculations_correct": true,
+  "variables_units_defined": true,
+  "examples_consistent_and_labelled": true,
+  "claims_supported": true,
+  "sources_authentic": true,
+  "educational_value": true,
+  "no_duplicate_intent": true,
+  "internal_links_valid": true,
+  "certification_claims_accurate": true,
+  "disclosures_included": true,
+  "metadata_valid": true,
+  "no_fabricated_experience": true
+ },
+ "scores": {
+  "technical_accuracy_25": 23,
+  "sources_15": 12,
+  "educational_usefulness_15": 15,
+  "examples_10": 10,
+  "information_gain_10": 9,
+  "precision_readability_10": 8,
+  "search_intent_5": 5,
+  "internal_linking_5": 5,
+  "technical_seo_5": 5,
+  "total": 92
+ },
+ "claims_checked": [
+  {
+   "claim": "Toyota calls VSM a material and information flow diagram",
+   "source": "https://www.lean.org/lexicon-terms/value-stream-mapping/",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Learning to See (Rother and Shook, LEI) 1998; Shingo Research award 1999",
+   "source": "https://www.lean.org/store/book/learning-to-see/",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Manufacturing C/T = time an operator takes to go through all work elements",
+   "source": "https://www.lean.org/lexicon-terms/value-stream-mapping/",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Martin and Osterling, Value Stream Mapping, McGraw-Hill 2013, for service and office environments",
+   "source": "https://oreilly.com/library/view/value-stream-mapping/9780071828918",
+   "result": "confirmed"
+  },
+  {
+   "claim": "PT, LT, %C&A (judged by the person receiving the work), activity ratio = sum PT / sum LT, rolled value = product of %C&A",
+   "source": "https://www.slideshare.net/KarenMartinGroup/value-stream-mapping-in-nonmanufacturing-environments",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Martin and Osterling 'popularised' %C&A and activity ratio",
+   "source": "https://www.slideshare.net/KarenMartinGroup/value-stream-mapping-in-nonmanufacturing-environments",
+   "result": "corrected"
+  },
+  {
+   "claim": "Learning to See frames future state around takt, continuous flow, pull and scheduling questions",
+   "source": "https://www.slideshare.net/slideshow/value-stream-mapping-future-state-38433127/38433127",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Poppendieck, Lean Software Development (2003) translated the seven wastes for software",
+   "source": "https://www.oreilly.com/library/view/lean-software-development/0321150783/",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Wrike boards built on custom statuses, request forms, dashboards; Jira CFD and control charts",
+   "source": "/project-management-tools/wrike/, /project-management-tools/jira/",
+   "result": "confirmed"
+  },
+  {
+   "claim": "'Most teams that map a process for the first time find...' (unsupported generalisation)",
+   "source": "none",
+   "result": "corrected"
+  },
+  {
+   "claim": "'That is the typical pattern of a good knowledge-work future state' (unsupported)",
+   "source": "none",
+   "result": "removed"
+  }
+ ],
+ "calculations_rechecked": [
+  {
+   "item": "Current state: PT 30 h = 3.75 d; LT 35 d; activity ratio 10.7%; rolled %C&A 25.6%",
+   "result": "correct"
+  },
+  {
+   "item": "Wait ranking (LT - PT/8): 8.875, 6, 4.5, 3.94, 3.25, 2.94, 1.75",
+   "result": "correct"
+  },
+  {
+   "item": "Halving all PT saves 1.875 days ('less than two days')",
+   "result": "correct"
+  },
+  {
+   "item": "Future state PT stated as 27.25 h; only change listed is testing 6 -> 4 h, giving 28 h (3.5 d)",
+   "result": "corrected"
+  },
+  {
+   "item": "Future activity ratio 3.5 / 13.5 = 25.9% (was 'about 25%')",
+   "result": "corrected"
+  },
+  {
+   "item": "Future rolled %C&A 0.9x0.8x0.95x0.85x0.9x0.9x0.98 = 46.2% (was 'about 49%')",
+   "result": "corrected"
+  },
+  {
+   "item": "Future LT 13.5 d; reduction 61.4%",
+   "result": "correct"
+  },
+  {
+   "item": "Onboarding: IT path 16 d + 1 = 17 d; PT 7 h = 0.875 d; ratio 5.1%; future 5 + 1 = 6 d",
+   "result": "correct"
+  },
+  {
+   "item": "Takt 450 / 30 = 15 min",
+   "result": "correct"
+  }
+ ],
+ "changes_made": [
+  "Corrected future-state total process time from 27.25 h to 28 h (3.5 days), consistent with the only listed process-time change.",
+  "Corrected future-state activity ratio to about 26% and rolled %C&A to about 46%, with the multiplication shown.",
+  "Added the intake (3 -> 1 day) and testing (4 -> 2 days) lead-time targets to the kaizen action table so the future-state lead times are traceable.",
+  "Added code review to the wait ranking and labelled the ranking as LT minus PT in days.",
+  "Replaced unsupported 'typical pattern' claim with a note that targets are planning assumptions until re-measured.",
+  "Softened the intro generalisation about first-time maps.",
+  "Changed 'popularising' %C&A and activity ratio to 'using' (Martin and Osterling).",
+  "Labelled rolled %C&A as also called rolled first pass yield and as an approximate share.",
+  "Reduced repetition of 'six to twelve months' (from 5 to 3 occurrences)."
+ ],
+ "statistical_text_measurements": {
+  "url": "/project-management/kanban/value-stream-mapping/",
+  "word_count": 4418,
+  "unique_words": 989,
+  "type_token_ratio": 0.2239,
+  "mattr_100": 0.7234,
+  "shannon_word_entropy_bits": 8.492,
+  "normalised_entropy": 0.8535,
+  "sentences": 179,
+  "avg_sentence_length": 16.85,
+  "sentence_length_sd": 9.72,
+  "sentence_length_cv": 0.577,
+  "paragraph_length_mean": 27.4,
+  "paragraph_length_sd": 19.3,
+  "bigram_repetition_rate": 0.3849,
+  "trigram_repetition_rate": 0.1533,
+  "top_repeated_4grams": [
+   [
+    "a value stream map",
+    13
+   ],
+   [
+    "process time lead time",
+    7
+   ],
+   [
+    "people who do the",
+    5
+   ],
+   [
+    "who do the work",
+    5
+   ],
+   [
+    "a product or service",
+    3
+   ],
+   [
+    "service or request type",
+    3
+   ],
+   [
+    "time lead time and",
+    3
+   ],
+   [
+    "and rolled c a",
+    3
+   ]
+  ],
+  "most_common_sentence_openers": [
+   [
+    "value stream",
+    5
+   ],
+   [
+    "a value",
+    4
+   ],
+   [
+    "software teams",
+    3
+   ],
+   [
+    "total process",
+    3
+   ],
+   [
+    "activity ratio",
+    3
+   ]
+  ],
+  "formulaic_phrases_found": [],
+  "watch_phrases_counts": {},
+  "most_similar_existing_guides": [
+   [
+    0.423,
+    "/project-management/kanban/flow-efficiency/"
+   ],
+   [
+    0.362,
+    "/project-management/kanban/cycle-time-vs-lead-time/"
+   ],
+   [
+    0.341,
+    "/project-management/scrum/scrum-vs-lean/"
+   ],
+   [
+    0.34,
+    "/project-management/swimlane-diagram/"
+   ],
+   [
+    0.335,
+    "/project-management/kanban/lean-kanban/"
+   ]
+  ],
+  "note": "Descriptive editorial diagnostics only. No AI-detection probability is calculated."
+ },
+ "unresolved_issues": [
+  "Page has no explicit references list; sources are named in text only.",
+  "'a value stream map' 4-gram repeats 13 times; acceptable technical repetition but could be trimmed.",
+  "Word count (~4,400) exceeds the brief's 4,000 target."
+ ],
+ "reviewer_note": "Automated review by an AI reviewer; not a human professional review."
+}
