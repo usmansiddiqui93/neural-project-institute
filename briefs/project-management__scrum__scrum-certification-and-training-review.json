@@ -1,0 +1,224 @@
+{
+ "url": "/project-management/scrum/scrum-certification-and-training/",
+ "status": "PUBLISH",
+ "publication_eligible": true,
+ "gates": {
+  "definitions_accurate": true,
+  "framework_requirements_verified": true,
+  "calculations_correct": true,
+  "variables_units_defined": true,
+  "examples_consistent_and_labelled": true,
+  "claims_supported": true,
+  "sources_authentic": true,
+  "educational_value": true,
+  "no_duplicate_intent": true,
+  "internal_links_valid": true,
+  "certification_claims_accurate": true,
+  "disclosures_included": true,
+  "metadata_valid": true,
+  "no_fabricated_experience": true
+ },
+ "scores": {
+  "technical_accuracy_25": 24,
+  "sources_15": 14,
+  "educational_usefulness_15": 14,
+  "examples_10": 9,
+  "information_gain_10": 9,
+  "precision_readability_10": 9,
+  "search_intent_5": 5,
+  "internal_linking_5": 5,
+  "technical_seo_5": 5,
+  "total": 94
+ },
+ "claims_checked": [
+  {
+   "claim": "SAFe renewal requires '24 CEUs over each two-year cycle'",
+   "source": "https://support.scaledagile.com/en/articles/12054115-what-is-the-ceu-requirement-for-safe-certification-renewal (dated 9 Oct 2026: Foundational incl. SSM 12 CEUs; Advanced 24; Expert 36; extra CEUs carried forward to the following year; audits possible)",
+   "result": "corrected"
+  },
+  {
+   "claim": "SAFe Foundational renewal $195/year + tax; SSM in Foundational tier; tier renewals annual",
+   "source": "https://support.scaledagile.com/en/articles/9768958-what-are-scaled-agile-s-certification-tiers-for-studio ; https://support.scaledagile.com/en/articles/9791345-general-renewal-faqs",
+   "result": "confirmed"
+  },
+  {
+   "claim": "AI-Empowered SAFe Scrum Master exam: 45 questions, 90 minutes, 80% pass; first two attempts included within 60 days",
+   "source": "https://support.scaledagile.com/en/articles/16011384-exam-details-ai-empowered-safe-scrum-master (dated 20 Oct 2026)",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Course name AI-Empowered SAFe Scrum Master (aligned with SAFe page)",
+   "source": "https://support.scaledagile.com/en/articles/16011384-exam-details-ai-empowered-safe-scrum-master",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Proctored exam $495 + tax, two attempts within 60 days; SSM exam can be taken without the instructor-led course",
+   "source": "https://support.scaledagile.com/en/articles/15452551-proctored-exams-faq-overview-and-general-information ; https://scaledagile.com/?p=184172",
+   "result": "confirmed"
+  },
+  {
+   "claim": "PSM I: $200, 80 questions, 60 minutes, 85%, lifetime, password single-use and non-expiring; English, Japanese, Simplified Chinese via scrum.org.cn",
+   "source": "https://www.scrum.org/assessments/professional-scrum-master-i-certification",
+   "result": "confirmed"
+  },
+  {
+   "claim": "PSM class: free attempt; second attempt free if taken within 14 days and score below 85%",
+   "source": "https://www.scrum.org/PSM",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Scrum.org count (1 Nov 2026): 778,506 PSM I; 279,802 PSPO I; over 1.2 million total",
+   "source": "https://www.scrum.org/professional-scrum-certifications/count",
+   "result": "confirmed"
+  },
+  {
+   "claim": "CSM test: 50 questions, 60 minutes, 37 correct (74%), two attempts within 90 days, then $25; 13 languages",
+   "source": "https://support.scrumalliance.org/hc/en-us/articles/208753776-What-to-expect-from-the-Certified-ScrumMaster-CSM-test",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Scrum Alliance renewal fees $100/$175/$250 by highest level, paid once; new certification course renews others",
+   "source": "https://support.scrumalliance.org/hc/en-us/articles/50926906482843-What-is-the-cost-to-renew-a-certification",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Scrum Alliance SEUs 20/30/40 and half-SEU rule for other tracks",
+   "source": "https://certification.scrumalliance.org/renewal-requirements (search listing only; not fetched in this review)",
+   "result": "unverifiable"
+  },
+  {
+   "claim": "PMI-ACP: 120 questions/180 minutes; $435 member/$495 non-member; 30 PDUs per 3 years",
+   "source": "https://umbrex.com/resources/professional-credentials-directory/pmi-acp/ (secondary; pmi.org returned 403)",
+   "result": "confirmed"
+  },
+  {
+   "claim": "PMI-ACP eligibility: secondary degree, 21 contact hours, 12 months general project experience in 5 years (PMP/PgMP satisfies), 8 months agile in 3 years",
+   "source": "https://www.pmi.org/-/media/pmi/documents/public/pdf/certifications/certification_framework_final.pdf (matched in search; pmi.org pages returned 403)",
+   "result": "unverifiable"
+  }
+ ],
+ "calculations_rechecked": [
+  {
+   "item": "Three-year totals: PSM self-study $200; two attempts $400; PSM class $1,000; CSM $800 + $100 = $900; SAFe $495 + $195 + $195 = $885",
+   "result": "correct"
+  },
+  {
+   "item": "SAFe renewals over five years: 4 annual renewals x $195 = $780",
+   "result": "correct"
+  },
+  {
+   "item": "CSM pass mark 37/50 = 74%",
+   "result": "correct"
+  }
+ ],
+ "changes_made": [
+  "At-a-glance table, SAFe Scrum Master renewal cell: 'Annual: $195 + 24 CEUs every two years' -> 'Annual: $195 (Foundational tier) + 12 CEUs'.",
+  "SAFe Scrum Master renewal bullet: removed '24 continuing education units over each two-year cycle'; now states $195/year Foundational tier renewing all Foundational SAFe certifications, 12 CEUs for Foundational certifications such as SSM, carry-forward of extra CEUs and possible audit.",
+  "SAFe section: 'SAFe Scrum Master certification' -> 'SAFe Scrum Master (SSM) certification' to align naming with the SAFe page (course name AI-Empowered SAFe Scrum Master and 80% pass mark already matched and were confirmed).",
+  "Verification TIP: added '(SAFe figures rechecked on 25 November 2026)'."
+ ],
+ "statistical_text_measurements": {
+  "url": "/project-management/scrum/scrum-certification-and-training/",
+  "word_count": 4011,
+  "unique_words": 884,
+  "type_token_ratio": 0.2204,
+  "mattr_100": 0.7168,
+  "shannon_word_entropy_bits": 8.377,
+  "normalised_entropy": 0.8559,
+  "sentences": 172,
+  "avg_sentence_length": 15.59,
+  "sentence_length_sd": 8.86,
+  "sentence_length_cv": 0.568,
+  "paragraph_length_mean": 30.5,
+  "paragraph_length_sd": 19.3,
+  "bigram_repetition_rate": 0.4042,
+  "trigram_repetition_rate": 0.1716,
+  "top_repeated_4grams": [
+   [
+    "psm i or csm",
+    8
+   ],
+   [
+    "with an approved trainer",
+    5
+   ],
+   [
+    "80 questions 60 minutes",
+    5
+   ],
+   [
+    "questions 60 minutes 85",
+    5
+   ],
+   [
+    "in the past five",
+    5
+   ],
+   [
+    "the past five years",
+    5
+   ],
+   [
+    "professional scrum master i",
+    4
+   ],
+   [
+    "scrum master i psm",
+    4
+   ]
+  ],
+  "most_common_sentence_openers": [
+   [
+    "scrum alliance",
+    6
+   ],
+   [
+    "psm i",
+    5
+   ],
+   [
+    "see our",
+    4
+   ],
+   [
+    "yes",
+    4
+   ],
+   [
+    "scrum org",
+    3
+   ]
+  ],
+  "formulaic_phrases_found": [],
+  "watch_phrases_counts": {},
+  "most_similar_existing_guides": [
+   [
+    0.626,
+    "/project-management/agile/how-to-learn-agile-and-get-certified/"
+   ],
+   [
+    0.507,
+    "/project-management/scrum/scrum-glossary/"
+   ],
+   [
+    0.495,
+    "/project-management/agile/scrum-master-role/"
+   ],
+   [
+    0.473,
+    "/project-management/scrum/"
+   ],
+   [
+    0.46,
+    "/project-management/agile/agile-vs-scrum/"
+   ]
+  ],
+  "note": "Descriptive editorial diagnostics only. No AI-detection probability is calculated."
+ },
+ "unresolved_issues": [
+  "Scaled Agile's CEU article does not state the CEU period explicitly; 'carried forward to the following year' implies an annual cycle, so the page states 12 CEUs without asserting a period.",
+  "PMI-ACP eligibility and Scrum Alliance SEU counts were not re-fetched from the primary pages (pmi.org 403; SEU page not fetched); they match the writer's 4 Nov 2026 check and PMI's framework PDF listing.",
+  "Live HTML still shows the old SAFe renewal wording until re-rendered and published (not done, per instruction)."
+ ],
+ "reviewer_note": "Automated review by an AI reviewer; not a human professional review."
+}

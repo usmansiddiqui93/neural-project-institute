@@ -1,0 +1,332 @@
+{
+ "url": "/project-management/kanban/devops/",
+ "proposed_status": "PUBLISH",
+ "article_type": "definition and methodology guide with worked example",
+ "language": "en-GB",
+ "learning_level": "beginner",
+ "primary_keyword": "what is DevOps",
+ "secondary_keywords": [
+  "DevOps meaning",
+  "DevOps definition",
+  "DORA metrics",
+  "five DORA metrics",
+  "failed deployment recovery time",
+  "deployment rework rate",
+  "change lead time",
+  "change fail rate",
+  "deployment frequency",
+  "CALMS framework",
+  "Three Ways of DevOps",
+  "DevOps principles",
+  "DevOps practices",
+  "DevOps vs Agile",
+  "DevOps vs SRE",
+  "DevSecOps",
+  "platform engineering",
+  "DevOps and Kanban",
+  "DevOps change approval",
+  "DevOps for project managers"
+ ],
+ "search_intent": "Definition (what is DevOps), with secondary methodology intent (principles, practices) and a DORA-metrics sub-intent",
+ "h1": "What Is DevOps? Principles, Practices and DORA Metrics",
+ "seo_title": "What Is DevOps? Principles, Practices and DORA Metrics",
+ "meta_description": "DevOps explained: what it is, where it came from, CALMS and the Three Ways, core practices, the five DORA metrics with a worked example, and what PMs do.",
+ "excerpt": "What DevOps is and is not, its origins, CALMS and the Three Ways, core practices, how it relates to Agile, Lean, Kanban, SRE and ITIL, DORA's current five metrics with a calculated example, and what it changes for project managers.",
+ "parent_topic_cluster": "/project-management/kanban/ (Kanban guide, Lean foundations)",
+ "prerequisite_guides": [
+  "/project-management/kanban/lean-kanban/",
+  "/project-management/agile/agile-manifesto-values-and-principles/"
+ ],
+ "related_articles": [
+  "/project-management/kanban/continuous-delivery/",
+  "/project-management/agile/agile-metrics-and-kpis/",
+  "/project-management/agile/agile-operations-it/",
+  "/project-management/industries/software-project-management/",
+  "/project-management/kanban/value-stream-mapping/",
+  "/project-management/kanban/kanban-metrics/"
+ ],
+ "learning_objectives": [
+  "Define DevOps and distinguish it from a job title, a toolset or a prescriptive framework",
+  "Explain CALMS and the Three Ways and map practices to them",
+  "Name DORA's five current software delivery metrics, their groups and the 2023/2024 changes",
+  "Calculate the five metrics from a deployment log using explicit counting rules, medians and nearest-rank percentiles",
+  "Explain how DevOps changes change approval, release planning, risk and reporting for project managers",
+  "Recognise contexts where DevOps practices are constrained and common adoption mistakes"
+ ],
+ "internal_links": [
+  "/project-management/agile/agile-manifesto-values-and-principles/",
+  "/project-management/agile/agile-metrics-and-kpis/",
+  "/project-management/agile/agile-operations-it/",
+  "/project-management/change-control/",
+  "/project-management/industries/software-project-management/",
+  "/project-management/kanban/continuous-delivery/",
+  "/project-management/kanban/cycle-time-vs-lead-time/",
+  "/project-management/kanban/kanban-boards/",
+  "/project-management/kanban/kanban-metrics/",
+  "/project-management/kanban/lean-kanban/",
+  "/project-management/kanban/theory-of-constraints/",
+  "/project-management/kanban/throughput/",
+  "/project-management/kanban/value-stream-mapping/",
+  "/project-management/kanban/visual-management/",
+  "/project-management/kanban/wip-limits/",
+  "/project-management/lessons-learned/",
+  "/project-management/scrum/sprint-retrospective/",
+  "/templates/release-plan-template/",
+  "/templates/risk-register-template/",
+  "/templates/root-cause-analysis-template/"
+ ],
+ "relevant_templates": [
+  "/templates/release-plan-template/",
+  "/templates/risk-register-template/",
+  "/templates/root-cause-analysis-template/"
+ ],
+ "related_npi_course": "Sprintcraft: Agile and Scrum Practitioner (named only in the page's existing PMAI box; not mentioned in the body)",
+ "external_references": [
+  {
+   "title": "DORA, DORA's software delivery performance metrics (guide, last updated 5 Jan 2026)",
+   "url": "https://dora.dev/guides/dora-metrics/",
+   "inspected": true,
+   "what_it_supports": "Five metrics, names, definitions, throughput/instability groups; speed and stability correlated; apply per application/service; pitfalls (targets, single metric, industry excuse, cross-application comparison, competing); 7-step improvement loop incl. Quick Check"
+  },
+  {
+   "title": "Nathen Harvey, A history of DORA's software delivery metrics, dora.dev (2 Jan 2026)",
+   "url": "https://dora.dev/insights/dora-metrics-history/",
+   "inspected": true,
+   "what_it_supports": "2014 start with four variables; 2015 groups; 2018 availability/SDO; 2021 reliability wrongly called fifth metric; 2023 MTTR renamed failed deployment recovery time and narrowed to change-caused failures; 2024 rework rate added and throughput/instability grouping"
+  },
+  {
+   "title": "DORA research index, dora.dev/research",
+   "url": "https://dora.dev/research/",
+   "inspected": true,
+   "what_it_supports": "Annual reports 2014-2025; latest is 2025; no 2026 report listed as of 25 Nov 2026"
+  },
+  {
+   "title": "DORA capabilities catalogue",
+   "url": "https://dora.dev/capabilities/",
+   "inspected": true,
+   "what_it_supports": "Capability names: visual management, visibility of work in the value stream, work in process limits, pervasive security, platform engineering, working in small batches, etc."
+  },
+  {
+   "title": "DORA capability: Streamlining change approval (updated 30 Oct 2025)",
+   "url": "https://dora.dev/capabilities/streamlining-change-approval/",
+   "inspected": true,
+   "what_it_supports": "2019 finding: heavyweight external approval (CAB, senior sign-off) hurts delivery performance, no evidence of lower change fail rate; peer review recommended; CAB role shift"
+  },
+  {
+   "title": "DORA capability: Working in small batches",
+   "url": "https://dora.dev/capabilities/working-in-small-batches/",
+   "inspected": true,
+   "what_it_supports": "Batch taking more than a week to complete and check is too big; warning about oversized AI-generated pull requests"
+  },
+  {
+   "title": "Google Cloud blog, Announcing the 2025 DORA report (23 Sep 2025)",
+   "url": "https://cloud.google.com/blog/products/ai-machine-learning/announcing-the-2025-dora-report",
+   "inspected": true,
+   "what_it_supports": "Nearly 5,000 respondents; 90% use AI; AI as amplifier; positive relationship with throughput and product performance, negative with stability; loosely coupled architectures benefit; 90% adopted an internal platform"
+  },
+  {
+   "title": "Gene Kim, The Three Ways: The Principles Underpinning DevOps, IT Revolution (22 Aug 2012)",
+   "url": "https://itrevolution.com/the-three-ways-principles-underpinning-devops/",
+   "inspected": true,
+   "what_it_supports": "Names and descriptions of the First, Second and Third Way"
+  },
+  {
+   "title": "Patrick Debois, [ANN] Devopsdays '09 announcement, agile-system-administration Google Group (22 Jul 2009)",
+   "url": "https://groups.google.com/g/agile-system-administration/c/hp7WBg4uCJI",
+   "inspected": true,
+   "what_it_supports": "First devopsdays: 30-31 October 2009, Ghent, Belgium, organised by Debois"
+  },
+  {
+   "title": "Wikipedia, DevOps",
+   "url": "https://en.wikipedia.org/wiki/DevOps",
+   "inspected": true,
+   "what_it_supports": "Secondary support for Debois's Agile 2008 Toronto presentation (cited in its references); not used as a primary source"
+  },
+  {
+   "title": "Murphy, Fong-Jones, Beyer et al., How SRE Relates to DevOps, The Site Reliability Workbook (Google)",
+   "url": "https://sre.google/workbook/how-sre-relates/",
+   "inspected": true,
+   "what_it_supports": "'class SRE implements interface DevOps' framing: SRE as a concrete implementation of DevOps principles"
+  },
+  {
+   "title": "Atlassian, CALMS framework",
+   "url": "https://www.atlassian.com/devops/frameworks/calms-framework",
+   "inspected": true,
+   "what_it_supports": "CALMS credited to Jez Humble, co-author of The DevOps Handbook; meaning of each letter"
+  },
+  {
+   "title": "DWP Digital blog, Keep CALMS and carry on (25 Mar 2019)",
+   "url": "https://dwpdigital.blog.gov.uk/2019/03/25/keep-calms-and-carry-on-how-we-do-devops/",
+   "inspected": true,
+   "what_it_supports": "UK government use of CALMS as an adoption model (context only)"
+  },
+  {
+   "title": "AWS, What is DevOps?; Red Hat, What is DevOps?",
+   "url": "https://aws.amazon.com/devops/what-is-devops/",
+   "inspected": true,
+   "what_it_supports": "SERP structure and gaps only; no wording reused"
+  }
+ ],
+ "formulas": [
+  {
+   "formula": "Deployment frequency = production deployments ÷ length of period",
+   "variables": "deployments (count); period in weeks or working days",
+   "verified_by": "python",
+   "inputs": "20 deployments, 4 weeks, 20 working days",
+   "result": "5 per week; 1.0 per working day"
+  },
+  {
+   "formula": "Change lead time median and 85th percentile (nearest rank = value at rank ceil(0.85 × n))",
+   "variables": "lead time in elapsed clock hours from commit to production; n = 20",
+   "verified_by": "python",
+   "inputs": "3,4,5,6,6,8,9,20,22,24,26,27,30,46,50,52,70,72,75,120",
+   "result": "median 25 h ((24+26)/2); P85 rank 17 = 70 h; mean 33.75 h; 10/20 within 24 h; 6/20 (30%) over 48 h"
+  },
+  {
+   "formula": "Change fail rate = failed deployments ÷ total deployments × 100",
+   "variables": "counts of deployments; result in %",
+   "verified_by": "python",
+   "inputs": "3 failed of 20",
+   "result": "15%"
+  },
+  {
+   "formula": "Deployment rework rate = unplanned deployments caused by production incidents ÷ total deployments × 100",
+   "variables": "counts of deployments; result in %",
+   "verified_by": "python",
+   "inputs": "2 of 20",
+   "result": "10%"
+  },
+  {
+   "formula": "Failed deployment recovery time: median of recovery durations",
+   "variables": "minutes from detection to service restored",
+   "verified_by": "python",
+   "inputs": "35, 50, 240 minutes",
+   "result": "median 50 min; mean 108.3 min"
+  }
+ ],
+ "formula_verification_script": "import math, statistics as st\nlt=[3,4,5,6,6,8,9,20,22,24,26,27,30,46,50,52,70,72,75,120]  # change lead time, elapsed hours, one change per deployment\nn=len(lt); s=sorted(lt)\nprint(\"n deployments\",n,\"sum\",sum(lt),\"mean h\",round(st.mean(lt),2),\"median h\",st.median(lt))\nfor p in (50,85):\n    r=math.ceil(p/100*n); print(f\"P{p} nearest rank r={r} ->\",s[r-1])\nprint(\"share <=24h\",sum(x<=24 for x in lt)/n, \"share >48h\", sum(x>48 for x in lt)/n)\nweeks=4; wd=20\nprint(\"deploy freq per week\",n/weeks,\"per working day\",n/wd)\nfails=3; print(\"change fail rate %\",fails/n*100)\nrework=2; print(\"deployment rework rate %\",rework/n*100)\nrec=[35,50,240]; print(\"recovery median min\",st.median(rec),\"mean min\",round(st.mean(rec),1), \"mean h\", round(st.mean(rec)/60,2))\n# after improvement scenario? none\n",
+ "formula_verification_output": "n deployments 20 sum 675 mean h 33.75 median h 25.0; P50 nearest rank r=10 -> 24; P85 nearest rank r=17 -> 70; share <=24h 0.5 share >48h 0.3; deploy freq per week 5.0 per working day 1.0; change fail rate % 15.0; deployment rework rate % 10.0; recovery median min 50 mean min 108.3",
+ "worked_examples": [
+  {
+   "title": "Product team calculates the five DORA metrics from a four-week, 20-deployment log with written counting rules, then picks code review waiting as its constraint",
+   "illustrative": true
+  }
+ ],
+ "statistical_text_measurements": {
+  "url": "/project-management/kanban/devops/",
+  "word_count": 4600,
+  "unique_words": 1209,
+  "type_token_ratio": 0.2628,
+  "mattr_100": 0.7592,
+  "shannon_word_entropy_bits": 8.819,
+  "normalised_entropy": 0.8612,
+  "sentences": 190,
+  "avg_sentence_length": 17.09,
+  "sentence_length_sd": 8.45,
+  "sentence_length_cv": 0.494,
+  "paragraph_length_mean": 36.5,
+  "paragraph_length_sd": 19.5,
+  "bigram_repetition_rate": 0.3316,
+  "trigram_repetition_rate": 0.1198,
+  "top_repeated_4grams": [
+   [
+    "failed deployment recovery time",
+    8
+   ],
+   [
+    "change fail rate and",
+    5
+   ],
+   [
+    "time to restore service",
+    5
+   ],
+   [
+    "and the people who",
+    4
+   ],
+   [
+    "fail rate and deployment",
+    4
+   ],
+   [
+    "rate and deployment rework",
+    4
+   ],
+   [
+    "and deployment rework rate",
+    4
+   ],
+   [
+    "the people who build",
+    3
+   ]
+  ],
+  "most_common_sentence_openers": [
+   [
+    "devops is",
+    5
+   ],
+   [
+    "many organisations",
+    3
+   ],
+   [
+    "a team",
+    3
+   ]
+  ],
+  "formulaic_phrases_found": [],
+  "watch_phrases_counts": {},
+  "most_similar_existing_guides": [
+   [
+    0.499,
+    "/project-management/kanban/continuous-delivery/"
+   ],
+   [
+    0.428,
+    "/project-management/industries/software-project-management/"
+   ],
+   [
+    0.414,
+    "/project-management/agile/agile-operations-it/"
+   ],
+   [
+    0.402,
+    "/project-management/agile/agile-metrics-and-kpis/"
+   ],
+   [
+    0.337,
+    "/project-management/agile/agile-software-development/"
+   ]
+  ],
+  "note": "Descriptive editorial diagnostics only. No AI-detection probability is calculated."
+ },
+ "self_assessment": {
+  "technical_accuracy_25": 23,
+  "sources_15": 14,
+  "educational_usefulness_15": 14,
+  "examples_10": 9,
+  "information_gain_10": 9,
+  "precision_readability_10": 9,
+  "search_intent_5": 5,
+  "internal_linking_5": 5,
+  "technical_seo_5": 5,
+  "total": 93
+ },
+ "required_disclosures": [
+  "Worked example labelled illustrative",
+  "No PMAI course mentioned in the body (existing PMAI box only), so no commercial-interest disclosure needed in the body"
+ ],
+ "unverified_claims": [
+  "Patrick Debois's Agile 2008 Toronto 'agile infrastructure' presentation: supported only via Wikipedia's reference list; the conference programme itself was not inspected",
+  "That The Phoenix Project and The DevOps Handbook use the Three Ways as their backbone: based on publisher/O'Reilly table-of-contents search results, books not inspected",
+  "CAMS as the predecessor acronym of CALMS: widely reported; the original CAMS source (often attributed to Damon Edwards and John Willis, 2010) was not inspected, so the article does not attribute it",
+  "The 2025 DORA report PDF itself was not opened; figures taken from Google Cloud's announcement post"
+ ],
+ "unresolved_issues": [
+  "Word count about 4,600 (above the usual 2,500-4,000 range); every section adds distinct content, but a reviewer may trim the comparison table or limitations",
+  "TF-IDF similarity 0.50 with /project-management/kanban/continuous-delivery/ (shared DORA vocabulary); the release-window example and DORA-to-Kanban table from that page are not repeated",
+  "Outside this task: /project-management/agile/agile-software-development/ still lists the four old DORA metrics including 'time to restore service' and should be added to FOLLOWUPS.md"
+ ]
+}

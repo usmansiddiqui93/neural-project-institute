@@ -1,0 +1,331 @@
+{
+ "url": "/project-management/project-constraints/",
+ "proposed_status": "PUBLISH",
+ "article_type": "definition and how-to guide with worked example",
+ "language": "en-GB",
+ "learning_level": "beginner",
+ "primary_keyword": "project constraints",
+ "secondary_keywords": [
+  "triple constraint",
+  "project management triangle",
+  "iron triangle",
+  "types of project constraints",
+  "project constraints examples",
+  "six project constraints",
+  "constraints vs assumptions",
+  "constraint vs risk",
+  "internal and external constraints",
+  "hard and soft constraints",
+  "project tolerances",
+  "PRINCE2 tolerances",
+  "managing project constraints",
+  "project trade-offs",
+  "Agile triangle",
+  "fixed time fixed cost flexible scope",
+  "DSDM MoSCoW",
+  "Microsoft Project constraint types"
+ ],
+ "search_intent": "Definition plus how-to (identify, record and trade off constraints), answered in the first paragraph",
+ "h1": "Project Constraints: Types, Trade-offs and Worked Example",
+ "seo_title": "Project Constraints: Types, Trade-offs and Worked Example",
+ "meta_description": "Project constraints explained: the triple constraint, types of constraint, tolerances, how Agile fixes and flexes them, and a costed trade-off example.",
+ "excerpt": "What project constraints are, the triple constraint and its limits, the wider set of constraint types, how to tell true constraints from negotiable objectives, and a costed four-option trade-off decided with tolerances.",
+ "parent_topic_cluster": "/project-management/ (project management fundamentals)",
+ "prerequisite_guides": [
+  "/project-management/what-is-project-management/",
+  "/project-management/project-scope/"
+ ],
+ "related_articles": [
+  "/project-management/change-control/",
+  "/project-management/scope-creep/",
+  "/project-management/schedule-compression/",
+  "/project-management/resource-leveling/",
+  "/project-management/raid-log/",
+  "/project-management/kanban/theory-of-constraints/",
+  "/project-management/agile/agile-vs-waterfall/"
+ ],
+ "learning_objectives": [
+  "Define a project constraint and distinguish it from assumptions, risks, dependencies and issues",
+  "Explain the triple constraint, its origin and its limitations",
+  "Classify constraints as hard or soft, internal or external, and as constraint, driver or degree of freedom",
+  "Use tolerances to decide who may approve a trade-off",
+  "Cost alternative responses to a change and recommend one",
+  "Explain how DSDM and Scrum fix and flex constraints"
+ ],
+ "internal_links": [
+  "/project-management/agile/agile-vs-waterfall/",
+  "/project-management/change-control/",
+  "/project-management/critical-chain-project-management/",
+  "/project-management/critical-path-method/",
+  "/project-management/earned-value-management/",
+  "/project-management/fast-tracking-vs-crashing/",
+  "/project-management/float-and-slack/",
+  "/project-management/kanban/theory-of-constraints/",
+  "/project-management/pert-chart/",
+  "/project-management/project-baseline/",
+  "/project-management/project-charter/",
+  "/project-management/project-quality-management/",
+  "/project-management/project-risk/",
+  "/project-management/project-scope/",
+  "/project-management/raid-log/",
+  "/project-management/resource-leveling/",
+  "/project-management/schedule-compression/",
+  "/project-management/scope-creep/",
+  "/project-management/what-is-project-management/",
+  "/templates/change-request-template/",
+  "/templates/project-charter-template/",
+  "/templates/project-scope-template/",
+  "/templates/raid-log-template/"
+ ],
+ "relevant_templates": [
+  "/templates/project-scope-template/",
+  "/templates/project-charter-template/",
+  "/templates/change-request-template/",
+  "/templates/raid-log-template/"
+ ],
+ "related_npi_course": "Groundwork: Project Management Foundations (named only in the page's existing PMAI box; not mentioned in the body)",
+ "external_references": [
+  {
+   "title": "PMI Lexicon of Project Management Terms, version 4.0 (©2024), hosted copy at coloradocollege.edu",
+   "url": "https://www.coloradocollege.edu/offices/its/pmi-lexicon-pm-terms-compressed.pdf",
+   "inspected": true,
+   "what_it_supports": "Definitions of constraint, assumption, risk, issue, dependency (wording quoted for constraint)"
+  },
+  {
+   "title": "APM: A tribute to APM founder Dr Martin Barnes CBE (Feb 2022)",
+   "url": "https://www.apm.org.uk/news/a-tribute-to-apm-founder-dr-martin-barnes-cbe/",
+   "inspected": true,
+   "what_it_supports": "Barnes invented the Time/Cost/Quality triangle ('Barnes Triangle' or Iron Triangle); founding member of APM. No year given, so the article gives no date."
+  },
+  {
+   "title": "Pollack, Helm & Adler (2018) What is the Iron Triangle, and how has it changed? IJMPB 11(2)",
+   "url": "https://emerald.com/insight/content/doi/10.1108/IJMPB-09-2017-0107/full/html",
+   "inspected": true,
+   "what_it_supports": "Abstract only (full text paywalled): 45 years of literature; disagreement over vertices; time and cost consistent"
+  },
+  {
+   "title": "Naybour, Project constraints: using the wrong terminology? APM blog, 17 Nov 2017",
+   "url": "https://www.apm.org.uk/blog/project-constraints-are-we-using-the-wrong-terminology/",
+   "inspected": true,
+   "what_it_supports": "Time/cost/scope as competing success criteria; examples of true constraints (noise limits during exams, SSSI)"
+  },
+  {
+   "title": "Wiegers, Rethinking the Triple Constraint: Five Project Dimensions, Modern Analyst (undated page)",
+   "url": "https://www.modernanalyst.com/Resources/Articles/tabid/115/ID/5361/Rethinking-the-Triple-Constraint-Five-Project-Dimensions.aspx",
+   "inspected": true,
+   "what_it_supports": "Five dimensions; constraint/driver/degree of freedom; slip test; not all can be constraints or drivers; non-linear trade-offs"
+  },
+  {
+   "title": "Siegelaub, Six (yes six!) constraints: an enhanced model for project control, PMI Global Congress 2007",
+   "url": "https://www.pmi.org/learning/library/six-constraints-enhanced-model-project-control-7294",
+   "inspected": true,
+   "what_it_supports": "PRINCE2's six tolerances (time, cost, scope, quality, benefits, risk) as an extended constraint model"
+  },
+  {
+   "title": "Sue Taylor, PRINCE2 7th edition: sustaining a business (blog 23 Nov 2023, republished WiredGov 28 Nov 2023)",
+   "url": "https://wired-gov.net/wg/news.nsf/articles/prince2+7th+edition+sustaining+a+business+28112023162000",
+   "inspected": true,
+   "what_it_supports": "Seven performance targets incl. sustainability as new target; interdependencies"
+  },
+  {
+   "title": "Agile Business Consortium, DSDM Agile Project Framework, Chapter 3 Philosophy and Fundamentals",
+   "url": "https://www.agilebusiness.org/page/ProjectFramework_03_PhilosophyFundamentals",
+   "inspected": true,
+   "what_it_supports": "DSDM fixes time, cost and quality at end of Foundations; contingency by varying features with MoSCoW; quality never a variable"
+  },
+  {
+   "title": "Schwaber & Sutherland, The Scrum Guide (November 2020)",
+   "url": "https://scrumguides.org/scrum-guide.html",
+   "inspected": true,
+   "what_it_supports": "Sprints fixed length one month or less; during the Sprint quality does not decrease, scope may be clarified and renegotiated with the Product Owner"
+  },
+  {
+   "title": "Hazrati, Measuring Agile Performance with the Agile Triangle, InfoQ, 25 Aug 2009",
+   "url": "https://www.infoq.com/news/2009/08/agile-triangle/",
+   "inspected": true,
+   "what_it_supports": "Highsmith's Agile triangle (value, quality, constraints). Highsmith's original Cutter post not inspected."
+  },
+  {
+   "title": "Microsoft Learn: Definition of Microsoft Project constraints",
+   "url": "https://learn.microsoft.com/en-us/office/troubleshoot/project/definition-of-project-constraints",
+   "inspected": true,
+   "what_it_supports": "Eight task constraint types; Must Start On / Must Finish On not movable"
+  },
+  {
+   "title": "Brooks, The Mythical Man-Month (1975)",
+   "url": null,
+   "inspected": false,
+   "what_it_supports": "Brooks's law, paraphrased; consistent with the site's schedule compression guide"
+  }
+ ],
+ "formulas": [
+  {
+   "formula": "Cost tolerance = budget × tolerance %",
+   "variables": "budget in £; tolerance as a proportion",
+   "verified_by": "python",
+   "inputs": "£240,000 × 0.05",
+   "result": "£12,000"
+  },
+  {
+   "formula": "Weekly capacity = developers × working days per week × focus factor",
+   "variables": "people; days/week; proportion of time on project work",
+   "verified_by": "python",
+   "inputs": "4 × 5 × 0.8",
+   "result": "16 person-days per week"
+  },
+  {
+   "formula": "Extra duration = added work ÷ weekly capacity; extra cost = extra weeks × weekly run rate",
+   "variables": "work in person-days; capacity in person-days/week; run rate in £/week",
+   "verified_by": "python",
+   "inputs": "48 ÷ 16; 3 × £5,500",
+   "result": "3 weeks; £16,500 (6.875%, shown as 6.9%, of budget; £4,500 over tolerance)"
+  },
+  {
+   "formula": "Billable days = output needed ÷ productivity; cost = billable days × day rate",
+   "variables": "person-days; productivity proportion; £/day",
+   "verified_by": "python",
+   "inputs": "48 ÷ 0.8; 60 × £550",
+   "result": "60 days; £33,000 (13.75% of budget; 2.75 × tolerance); 12 weeks of work vs 16 weeks remaining"
+  },
+  {
+   "formula": "Hybrid capacity = tolerance weeks × capacity + deferred work",
+   "variables": "weeks; person-days",
+   "verified_by": "python",
+   "inputs": "2 × 16 + 18; cost 2 × £5,500",
+   "result": "50 person-days ≥ 48; £11,000 = 4.58% (shown 4.6%) of budget, 91.7% (shown 92%) of tolerance"
+  }
+ ],
+ "formula_verification_script": "budget=240000; cost_tol_pct=0.05; cost_tol=budget*cost_tol_pct\ntime_tol_weeks=2; baseline_golive=26; freeze_start=29\ndevs=4; days=5; focus=0.8; cap=devs*days*focus\nrun_rate=5500; cr_pd=48\nprint(\"cost tolerance\",cost_tol,\"capacity pd/week\",cap)\n# A extend\nwA=cr_pd/cap; costA=wA*run_rate\nprint(\"A weeks\",wA,\"golive week\",baseline_golive+wA,\"cost\",costA,\"pct budget\",costA/budget*100,\"over tol by\",costA-cost_tol, \"breach freeze\", baseline_golive+wA>=freeze_start)\n# B contractor\nprod=0.8; rate=550; billable=cr_pd/prod; costB=billable*rate\nprint(\"B billable days\",billable,\"cost\",costB,\"x tol\",costB/cost_tol,\"pct budget\",costB/budget*100,\"weeks of contractor\",billable/5,\"remaining weeks\",baseline_golive-10)\n# C descope\nprint(\"C descoped pd\",30+18)\n# D hybrid\npdD=time_tol_weeks*cap+18; costD=time_tol_weeks*run_rate\nprint(\"D pd\",pdD,\">=48\",pdD>=cr_pd,\"cost\",costD,\"share of tol\",costD/cost_tol*100,\"pct budget\",costD/budget*100,\"golive\",baseline_golive+time_tol_weeks)\n",
+ "formula_verification_output": "cost tolerance 12000.0 capacity pd/week 16.0\nA weeks 3.0 golive week 29.0 cost 16500.0 pct budget 6.875000000000001 over tol by 4500.0 breach freeze True\nB billable days 60.0 cost 33000.0 x tol 2.75 pct budget 13.750000000000002 weeks of contractor 12.0 remaining weeks 16\nC descoped pd 48\nD pd 50.0 >=48 True cost 11000 share of tol 91.66666666666666 pct budget 4.583333333333333 golive 28",
+ "worked_examples": [
+  {
+   "title": "Warehouse management system: four costed responses to a 48 person-day change, judged against time and cost tolerances and a flexibility table",
+   "illustrative": true
+  }
+ ],
+ "statistical_text_measurements": {
+  "url": "/project-management/project-constraints/",
+  "word_count": 4189,
+  "unique_words": 1072,
+  "type_token_ratio": 0.2559,
+  "mattr_100": 0.7344,
+  "shannon_word_entropy_bits": 8.535,
+  "normalised_entropy": 0.8479,
+  "sentences": 188,
+  "avg_sentence_length": 16.76,
+  "sentence_length_sd": 9.3,
+  "sentence_length_cv": 0.555,
+  "paragraph_length_mean": 43.8,
+  "paragraph_length_sd": 20.3,
+  "bigram_repetition_rate": 0.3534,
+  "trigram_repetition_rate": 0.1187,
+  "top_repeated_4grams": [
+   [
+    "scope time and cost",
+    6
+   ],
+   [
+    "time cost and quality",
+    6
+   ],
+   [
+    "the end of week",
+    5
+   ],
+   [
+    "time and cost are",
+    4
+   ],
+   [
+    "a constraint is a",
+    3
+   ],
+   [
+    "16 person-days per week",
+    3
+   ],
+   [
+    "limits a project must",
+    2
+   ],
+   [
+    "a project must work",
+    2
+   ]
+  ],
+  "most_common_sentence_openers": [
+   [
+    "the project",
+    4
+   ],
+   [
+    "a project",
+    3
+   ],
+   [
+    "an assumption",
+    3
+   ],
+   [
+    "a constraint",
+    3
+   ]
+  ],
+  "formulaic_phrases_found": [],
+  "watch_phrases_counts": {},
+  "most_similar_existing_guides": [
+   [
+    0.415,
+    "/project-management/what-is-project-management/"
+   ],
+   [
+    0.401,
+    "/project-management/project-scope/"
+   ],
+   [
+    0.398,
+    "/project-management/kanban/theory-of-constraints/"
+   ],
+   [
+    0.38,
+    "/project-management/project-manager-roles-and-responsibilities/"
+   ],
+   [
+    0.358,
+    "/project-management/project-management-plan/"
+   ]
+  ],
+  "note": "Descriptive editorial diagnostics only. No AI-detection probability is calculated."
+ },
+ "self_assessment": {
+  "technical_accuracy_25": 23,
+  "sources_15": 13,
+  "educational_usefulness_15": 14,
+  "examples_10": 9,
+  "information_gain_10": 9,
+  "precision_readability_10": 9,
+  "search_intent_5": 5,
+  "internal_linking_5": 5,
+  "technical_seo_5": 4,
+  "total": 91
+ },
+ "required_disclosures": [
+  "Worked example labelled illustrative with invented figures",
+  "Calculation assumptions (capacity, productivity, flat run rate) and limitations stated",
+  "'Agile fixes time and cost' described as common practice, not a universal rule"
+ ],
+ "unverified_claims": [
+  "The date commonly given for Barnes's triangle (often 1969) was not confirmed in a primary source, so the article gives no year",
+  "Pollack, Helm & Adler (2018) used from the abstract only; full text paywalled",
+  "Highsmith's original 2009 Cutter post not opened; Agile triangle described via InfoQ summary",
+  "Brooks's law paraphrased from general knowledge and the site's schedule compression guide; book not inspected",
+  "PRINCE2 7 publication year (2023) from PeopleCert announcement titles and the co-author blog; the manual itself not inspected",
+  "Wiegers article page is undated",
+  "Statement that exceeding tolerance triggers an exception in PRINCE2 terms is from general knowledge of PRINCE2, not from the manual"
+ ],
+ "unresolved_issues": [
+  "Word count about 4,190, slightly above the usual 2,500–4,000 range; all sections add distinct content",
+  "Title changed from 'Project Constraints: The Triple Constraint and Beyond' to 'Project Constraints: Types, Trade-offs and Worked Example' (URL unchanged)",
+  "TF-IDF similarity 0.42 with /project-management/what-is-project-management/ and 0.40 with /project-management/project-scope/; examples and angle differ, and both are linked"
+ ]
+}

@@ -1,0 +1,195 @@
+{
+ "url": "/project-management/agile/agile-release-train/",
+ "status": "PUBLISH",
+ "publication_eligible": true,
+ "gates": {
+  "definitions_accurate": true,
+  "framework_requirements_verified": true,
+  "calculations_correct": true,
+  "variables_units_defined": true,
+  "examples_consistent_and_labelled": true,
+  "claims_supported": true,
+  "sources_authentic": true,
+  "educational_value": true,
+  "no_duplicate_intent": true,
+  "internal_links_valid": true,
+  "certification_claims_accurate": true,
+  "disclosures_included": true,
+  "metadata_valid": true,
+  "no_fabricated_experience": true
+ },
+ "scores": {
+  "technical_accuracy_25": 24,
+  "sources_15": 13,
+  "educational_usefulness_15": 14,
+  "examples_10": 9,
+  "information_gain_10": 9,
+  "precision_readability_10": 9,
+  "search_intent_5": 5,
+  "internal_linking_5": 5,
+  "technical_seo_5": 5,
+  "total": 93
+ },
+ "claims_checked": [
+  {
+   "claim": "ART is 'a long-lived team of Agile teams'; generally 50-125 people; leadership roles RTE, Product Management, System Architect, Business Owners",
+   "source": "https://framework.scaledagile.com/agile-release-train",
+   "result": "confirmed"
+  },
+  {
+   "claim": "SAFe 6.0 (2023) renames: Planning Interval, ART backlog, ART Kanban, ART planning board, Coach Sync, Scrum Master/Team Coach; PI 8-12 weeks",
+   "source": "https://scaledagileframework.com/whats-new-in-safe-6-0 (as confirmed in the SAFe page review of the same site)",
+   "result": "confirmed"
+  },
+  {
+   "claim": "'6.0 remains the current numbered version' (no mention of AI-Native SAFe)",
+   "source": "https://framework.scaledagile.com/posters ; https://framework.scaledagile.com/blog/ai-native-safe-is-the-operating-model-for-the-ai-native-organization",
+   "result": "corrected"
+  },
+  {
+   "claim": "AI-Native SAFe unveiled 16 June 2026, press release 23 June 2026, full model presented at SAFe Summit San Diego, September 2026; does not replace Core SAFe; Core SAFe posters still labelled 6.0",
+   "source": "https://aijourn.com/scaled-agile-releases-ai-native-safe-a-new-version-of-the-worlds-most-trusted-framework-to-provide-governance-for-the-ai-era/ (PR Newswire, 23 Jun 2026); https://www.prnewswire.com/news-releases/scaled-agile-to-host-safe--ai-summit-san-diego-unveiling-ai-native-safe-for-the-age-of-ai-302872730.html; https://framework.scaledagile.com/posters",
+   "result": "confirmed"
+  },
+  {
+   "claim": "AI-Native SAFe replaces two-day PI Planning with one-day PI Outcome Planning",
+   "source": "https://framework.scaledagile.com/ain-safe-pi-outcome-planning",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Predictability = actual business value (committed + uncommitted) / planned business value (committed only); 80-100% treated as predictable",
+   "source": "SAFe framework guidance on PI objectives / ART predictability measure (consistent with /project-management/agile/pi-planning/)",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Develop on cadence, release on demand; WSJF = cost of delay / job size; Team Topologies four team types",
+   "source": "https://framework.scaledagile.com (SAFe articles); Skelton & Pais, Team Topologies (2019)",
+   "result": "confirmed"
+  },
+  {
+   "claim": "80% capacity loading is a rule of thumb, not a SAFe requirement",
+   "source": "page text (explicitly attributed as the site's own heuristic)",
+   "result": "confirmed"
+  }
+ ],
+ "calculations_rechecked": [
+  {
+   "item": "Worked-example headcount 9+8+8+9+7+8+6+5 = 60",
+   "result": "correct"
+  },
+  {
+   "item": "Planned business value 10+7+8 = 25; actual 9+7+5+3 = 24; predictability 24/25 = 96%",
+   "result": "correct"
+  },
+  {
+   "item": "Ten-week PI = four two-week development iterations + one two-week IP iteration",
+   "result": "correct"
+  },
+  {
+   "item": "50-125 people with teams of <=10 -> roughly 5-12 teams plus train roles",
+   "result": "correct"
+  }
+ ],
+ "changes_made": [
+  "Replaced 'Scaled Agile has added articles and competencies since then, but 6.0 remains the current numbered version' with a note that 6.0 remains the basis of Core SAFe (posters still labelled 6.0); AI-Native SAFe unveiled 16 June 2026 (press release 23 June), full model presented at SAFe Summit San Diego September 2026; Scaled Agile says it does not replace Core SAFe; example change (one-day PI Outcome Planning); guide scoped to Core SAFe; link to /project-management/agile/scaled-agile-framework-safe/."
+ ],
+ "statistical_text_measurements": {
+  "url": "/project-management/agile/agile-release-train/",
+  "word_count": 4258,
+  "unique_words": 1020,
+  "type_token_ratio": 0.2395,
+  "mattr_100": 0.7208,
+  "shannon_word_entropy_bits": 8.459,
+  "normalised_entropy": 0.8464,
+  "sentences": 172,
+  "avg_sentence_length": 16.05,
+  "sentence_length_sd": 8.89,
+  "sentence_length_cv": 0.554,
+  "paragraph_length_mean": 37.8,
+  "paragraph_length_sd": 19.8,
+  "bigram_repetition_rate": 0.3658,
+  "trigram_repetition_rate": 0.1295,
+  "top_repeated_4grams": [
+   [
+    "an agile release train",
+    13
+   ],
+   [
+    "50 to 125 people",
+    7
+   ],
+   [
+    "team of agile teams",
+    5
+   ],
+   [
+    "scrum masters team coaches",
+    5
+   ],
+   [
+    "and inspect and adapt",
+    5
+   ],
+   [
+    "8 to 12 weeks",
+    5
+   ],
+   [
+    "a long-lived team of",
+    4
+   ],
+   [
+    "long-lived team of agile",
+    4
+   ]
+  ],
+  "most_common_sentence_openers": [
+   [
+    "scaled agile",
+    6
+   ],
+   [
+    "this guide",
+    3
+   ],
+   [
+    "the art",
+    3
+   ],
+   [
+    "an art",
+    3
+   ]
+  ],
+  "formulaic_phrases_found": [],
+  "watch_phrases_counts": {},
+  "most_similar_existing_guides": [
+   [
+    0.672,
+    "/project-management/agile/scaled-agile-framework-safe/"
+   ],
+   [
+    0.616,
+    "/project-management/agile/pi-planning/"
+   ],
+   [
+    0.357,
+    "/project-management/agile/what-is-an-agile-team/"
+   ],
+   [
+    0.338,
+    "/project-management/agile/how-to-implement-agile/"
+   ],
+   [
+    0.32,
+    "/project-management/agile/agile-team-structures/"
+   ]
+  ],
+  "note": "Descriptive editorial diagnostics only. No AI-detection probability is calculated."
+ },
+ "unresolved_issues": [
+  "Live HTML at /home/claude/neural-project-institute/project-management/agile/agile-release-train/index.html still carries the old wording until the page is re-rendered and published (not done, per instruction).",
+  "Strongest overlap is with /project-management/agile/scaled-agile-framework-safe/ (0.645) and /project-management/agile/pi-planning/ (0.614); intents are distinct (ART structure vs framework overview vs event), so no consolidation recommended."
+ ],
+ "reviewer_note": "Automated review by an AI reviewer; not a human professional review."
+}

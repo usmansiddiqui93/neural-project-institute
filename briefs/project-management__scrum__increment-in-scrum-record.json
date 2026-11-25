@@ -1,0 +1,295 @@
+{
+ "url": "/project-management/scrum/increment-in-scrum/",
+ "proposed_status": "PUBLISH",
+ "article_type": "definition guide with worked example",
+ "language": "en-GB",
+ "learning_level": "beginner",
+ "primary_keyword": "increment in scrum",
+ "secondary_keywords": [
+  "scrum increment",
+  "product increment",
+  "what is an increment in scrum",
+  "increment definition of done",
+  "increment commitment",
+  "usable increment",
+  "potentially shippable increment",
+  "potentially releasable increment",
+  "increment vs release",
+  "multiple increments per sprint",
+  "integrated increment",
+  "increment sprint review",
+  "who creates the increment",
+  "undone work scrum",
+  "hardening sprint",
+  "increment examples",
+  "increment vs MVP"
+ ],
+ "search_intent": "Definition, with secondary methodology and exam-clarification intent (Done vs released, multiple Increments, 2017 vs 2020 wording)",
+ "h1": "Increment in Scrum: Definition, Rules and Examples",
+ "seo_title": "Increment in Scrum: Definition, Rules and Examples",
+ "meta_description": "What an Increment is in Scrum: the 2020 Scrum Guide rules, the Definition of Done, Increment vs release, examples, a worked undone-work example and mistakes.",
+ "excerpt": "The Scrum Increment explained: what the 2020 Scrum Guide requires, five properties with test questions, Increment vs release and MVP, how the wording changed from 2017, examples, multi-team Increments and a worked undone-work calculation.",
+ "parent_topic_cluster": "/project-management/scrum/scrum-artifacts/ (Scrum artifacts, within the /project-management/scrum/ guide)",
+ "prerequisite_guides": [
+  "/project-management/scrum/scrum-artifacts/",
+  "/project-management/agile/definition-of-done/"
+ ],
+ "related_articles": [
+  "/project-management/scrum/sprint-review/",
+  "/project-management/iterative-and-incremental-development/",
+  "/project-management/kanban/continuous-delivery/",
+  "/project-management/scrum/scrum-technical-debt/",
+  "/project-management/agile/large-scale-scrum-less/",
+  "/project-management/agile/agile-release-planning/"
+ ],
+ "learning_objectives": [
+  "Define the Scrum Increment and its commitment, the Definition of Done, as the 2020 Scrum Guide states them",
+  "Test work against five properties of an Increment",
+  "Distinguish an Increment from a release, deliverable, MVP, Sprint and SAFe Planning Interval",
+  "Explain how the 2017 and 2020 Scrum Guide wording differs",
+  "Quantify undone work and compare it with bringing the work inside the Definition of Done",
+  "Respond to a Sprint that produces no Increment"
+ ],
+ "internal_links": [
+  "/project-management/agile/agile-release-planning/",
+  "/project-management/agile/definition-of-done/",
+  "/project-management/agile/large-scale-scrum-less/",
+  "/project-management/agile/scaled-agile-framework-safe/",
+  "/project-management/agile/user-stories/",
+  "/project-management/iterative-and-incremental-development/",
+  "/project-management/kanban/continuous-delivery/",
+  "/project-management/scrum/backlog-refinement/",
+  "/project-management/scrum/empiricism-in-scrum/",
+  "/project-management/scrum/product-backlog/",
+  "/project-management/scrum/scrum-artifacts/",
+  "/project-management/scrum/scrum-at-scale/",
+  "/project-management/scrum/scrum-metrics-and-kpis/",
+  "/project-management/scrum/scrum-product-owner/",
+  "/project-management/scrum/scrum-software-tools/",
+  "/project-management/scrum/scrum-team-roles/",
+  "/project-management/scrum/scrum-technical-debt/",
+  "/project-management/scrum/sprint-backlog/",
+  "/project-management/scrum/sprint-planning/",
+  "/project-management/scrum/sprint-retrospective/",
+  "/project-management/scrum/sprint-review/",
+  "/templates/product-backlog-template/",
+  "/templates/release-plan-template/"
+ ],
+ "relevant_templates": [
+  "/templates/product-backlog-template/",
+  "/templates/release-plan-template/"
+ ],
+ "related_npi_course": "Sprintcraft: Agile and Scrum Practitioner (named only in the page's existing PMAI box; not mentioned in the body)",
+ "external_references": [
+  {
+   "title": "The 2020 Scrum Guide (Schwaber and Sutherland, November 2020)",
+   "url": "https://scrumguides.org/scrum-guide.html",
+   "inspected": true,
+   "what_it_supports": "Increment section wording, 'an Increment is born', DoD commitment, multiple Increments, Sprint Review not a gate, whole Scrum Team accountability, Developers adhere to DoD, Sprint Planning topic one wording, shared DoD across teams; 'releasable' absent; release decision-maker not named"
+  },
+  {
+   "title": "The 2017 Scrum Guide",
+   "url": "https://scrumguides.org/scrum-guide-2017.html",
+   "inspected": true,
+   "what_it_supports": "2017 wording: sum of PBIs, 'Done', useable and potentially releasable, thoroughly tested, Product Owner may choose to release, regardless of whether the PO decides to release, step toward a vision or goal, no Product Goal"
+  },
+  {
+   "title": "Scrum Guide revision history",
+   "url": "https://scrumguides.org/revisions.html",
+   "inspected": true,
+   "what_it_supports": "2020 changes: commitments for each artifact, DoD without quotes, Product Goal added, one Scrum Team"
+  },
+  {
+   "title": "The Nexus Guide (Scrum.org, January 2021)",
+   "url": "https://www.scrum.org/resources/online-nexus-guide",
+   "inspected": true,
+   "what_it_supports": "Integrated Increment definition; inspected at the Nexus Sprint Review"
+  },
+  {
+   "title": "Barry Overeem, Myth 3: Scrum releases are done only at the end of the Sprint (Scrum.org, 6 Nov 2017)",
+   "url": "https://www.scrum.org/resources/blog/myth-3-scrum-releases-are-done-only-end-sprint",
+   "inspected": true,
+   "what_it_supports": "Background: releasing within a Sprint; not quoted in body"
+  },
+  {
+   "title": "Ken Rubin, 2020 Scrum Guide definition of Increment inadequately addresses knowledge acquisition work (Innolution, 4 Jan 2021)",
+   "url": "https://innolution.com/blog/2020-scrum-guide-definition-of-increment-inadequately-addresses-knowledge-acquisition-work",
+   "inspected": true,
+   "what_it_supports": "Spikes and knowledge-acquisition work need not produce an Increment"
+  },
+  {
+   "title": "Ciprian Banica, What is a usable Increment (Scrum.org, 1 Oct 2024)",
+   "url": "https://www.scrum.org/resources/blog/what-usable-increment",
+   "inspected": true,
+   "what_it_supports": "SERP/background only"
+  },
+  {
+   "title": "Mountain Goat Software, Scrum Increment",
+   "url": "https://www.mountaingoatsoftware.com/agile/scrum/artifacts/increment",
+   "inspected": true,
+   "what_it_supports": "SERP gap analysis only"
+  }
+ ],
+ "formulas": [
+  {
+   "formula": "Proportion of selected items Done = Done items / selected items",
+   "variables": "counts of Product Backlog items (dimensionless)",
+   "verified_by": "python",
+   "inputs": "8, 11",
+   "result": "0.727 (72.7%)"
+  },
+  {
+   "formula": "Accumulated undone work = U x n",
+   "variables": "U = undone work per Sprint (person-days); n = Sprints between releases",
+   "verified_by": "python",
+   "inputs": "U = 4 + 2 = 6; n = 6",
+   "result": "36 person-days"
+  },
+  {
+   "formula": "Share of a Sprint = accumulated undone work / C",
+   "variables": "C = team capacity per Sprint (person-days)",
+   "verified_by": "python",
+   "inputs": "36, 60 (from 7 x 10 = 70 gross, assumed 60 net)",
+   "result": "0.6"
+  },
+  {
+   "formula": "Inside-DoD cost = I + r x k; break-even k = I / (U - r)",
+   "variables": "I = one-off automation investment (person-days); r = residual checks per Sprint (person-days); k = Sprints",
+   "verified_by": "python",
+   "inputs": "I = 15, r = 1, U = 6, k = 1..6",
+   "result": "16,17,18,19,(20),21 vs 6,12,18,24,(30),36; break-even 3 Sprints; saving over 6 Sprints 15 person-days"
+  }
+ ],
+ "formula_verification_output": "gross person-days 70\nreturned 3 done ratio % 72.7\nundone per sprint 6 accumulated 36 share of a sprint capacity 0.6 pct 60\noption B total 21 saving 15\nbreak-even sprints 3.0\n1 6 16\n2 12 17\n3 18 18\n4 24 19\n5 30 20\n6 36 21\nundone share per sprint % 10.0 ongoing share % 1.7\n",
+ "worked_examples": [
+  {
+   "title": "Hypothetical water utility customer portal team: Sprint 7 Done ratio and the cost of undone work",
+   "illustrative": true
+  }
+ ],
+ "statistical_text_measurements": {
+  "url": "/project-management/scrum/increment-in-scrum/",
+  "word_count": 4302,
+  "unique_words": 927,
+  "type_token_ratio": 0.2155,
+  "mattr_100": 0.6858,
+  "shannon_word_entropy_bits": 8.053,
+  "normalised_entropy": 0.817,
+  "sentences": 170,
+  "avg_sentence_length": 16.32,
+  "sentence_length_sd": 9.87,
+  "sentence_length_cv": 0.605,
+  "paragraph_length_mean": 43.4,
+  "paragraph_length_sd": 23.0,
+  "bigram_repetition_rate": 0.4341,
+  "trigram_repetition_rate": 0.207,
+  "top_repeated_4grams": [
+   [
+    "the definition of done",
+    39
+   ],
+   [
+    "meets the definition of",
+    13
+   ],
+   [
+    "part of the increment",
+    9
+   ],
+   [
+    "the 2020 scrum guide",
+    7
+   ],
+   [
+    "at the sprint review",
+    7
+   ],
+   [
+    "item meets the definition",
+    6
+   ],
+   [
+    "definition of done the",
+    6
+   ],
+   [
+    "towards the product goal",
+    5
+   ]
+  ],
+  "most_common_sentence_openers": [
+   [
+    "the scrum",
+    8
+   ],
+   [
+    "an increment",
+    5
+   ],
+   [
+    "it is",
+    5
+   ],
+   [
+    "the 2020",
+    4
+   ],
+   [
+    "the definition",
+    3
+   ]
+  ],
+  "formulaic_phrases_found": [],
+  "watch_phrases_counts": {},
+  "most_similar_existing_guides": [
+   [
+    0.647,
+    "/project-management/scrum/scrum-artifacts/"
+   ],
+   [
+    0.591,
+    "/project-management/scrum/scrum-process-and-phases/"
+   ],
+   [
+    0.556,
+    "/project-management/scrum/scrum-sprint-cycle/"
+   ],
+   [
+    0.544,
+    "/project-management/scrum/what-is-scrum/"
+   ],
+   [
+    0.537,
+    "/project-management/scrum/sprint-review/"
+   ]
+  ],
+  "note": "Descriptive editorial diagnostics only. No AI-detection probability is calculated."
+ },
+ "self_assessment": {
+  "technical_accuracy_25": 24,
+  "sources_15": 14,
+  "educational_usefulness_15": 14,
+  "examples_10": 9,
+  "information_gain_10": 9,
+  "precision_readability_10": 9,
+  "search_intent_5": 5,
+  "internal_linking_5": 5,
+  "technical_seo_5": 5,
+  "total": 94
+ },
+ "required_disclosures": [
+  "Worked example labelled hypothetical",
+  "Test questions and practice steps labelled as our own, distinct from Scrum Guide rules",
+  "No PMAI course mention in body (existing PMAI box only)"
+ ],
+ "unverified_claims": [
+  "'Potentially shippable' attributed only to 'earlier Scrum literature' without a specific primary source (2010/2011 Scrum Guides and Schwaber's books not opened)",
+  "Statement that late-found defects are harder to trace is general practice knowledge, not sourced; no multiplier is quoted",
+  "SAFe 6.0 renaming Program Increment to Planning Interval: consistent with the site's SAFe and glossary pages; the Scaled Agile blog opened did not state the new name explicitly ('What's new in SAFe 6.0' page not opened)",
+  "Deliverable and MVP definitions are paraphrases of common PMBOK/Lean Startup usage; the PMBOK glossary and Ries were not opened"
+ ],
+ "unresolved_issues": [
+  "TF-IDF similarity 0.648 with /project-management/scrum/scrum-artifacts/ (parent page); expected for a child topic, worked example and most tables are distinct, the 'four rules' content overlaps by design",
+  "The phrase 'the Definition of Done' recurs 38 times; it is the defined technical term and was not replaced"
+ ]
+}

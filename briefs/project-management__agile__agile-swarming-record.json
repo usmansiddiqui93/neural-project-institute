@@ -1,0 +1,302 @@
+{
+ "url": "/project-management/agile/agile-swarming/",
+ "proposed_status": "PUBLISH",
+ "article_type": "definition and how-to guide with worked example",
+ "language": "en-GB",
+ "learning_level": "intermediate",
+ "primary_keyword": "agile swarming",
+ "secondary_keywords": [
+  "swarming in agile",
+  "what is swarming in scrum",
+  "swarming vs mobbing",
+  "swarming vs pair programming",
+  "mob programming",
+  "ensemble programming",
+  "when to swarm",
+  "swarming kanban",
+  "swarming WIP limits",
+  "story swarming",
+  "incident swarming",
+  "intelligent swarming",
+  "swarming benefits",
+  "swarming disadvantages",
+  "how many people should swarm",
+  "remote swarming",
+  "one-piece continuous flow",
+  "walk the board"
+ ],
+ "search_intent": "Definition plus how-to (what swarming is, when and how to do it), with secondary comparison (pairing/mobbing) and troubleshooting intent",
+ "h1": "Agile Swarming: What It Is, When to Swarm and How",
+ "seo_title": "Agile Swarming: What It Is, When to Swarm and How",
+ "meta_description": "Agile swarming explained: how it works, when to swarm and when not to, swarming vs pairing and mobbing, a worked Sprint example and common mistakes.",
+ "excerpt": "What agile swarming is, where the idea comes from, why it works (Little's Law, earlier Done, fewer handoffs), when not to swarm, how to run it day to day, and a worked Sprint example that shows both the coordination cost and the reduced risk of unfinished work.",
+ "parent_topic_cluster": "/project-management/agile/ (Agile practices; linked to the Kanban flow cluster)",
+ "prerequisite_guides": [
+  "/project-management/agile/what-is-an-agile-team/",
+  "/project-management/scrum/sprint-backlog/",
+  "/project-management/kanban/wip-limits/"
+ ],
+ "related_articles": [
+  "/project-management/scrum/scrum-techniques/",
+  "/project-management/kanban/flow-efficiency/",
+  "/project-management/kanban/theory-of-constraints/",
+  "/project-management/kanban/kanban-swimlanes/",
+  "/project-management/agile/agile-operations-it/",
+  "/project-management/agile/agile-team-structures/",
+  "/project-management/agile/how-to-manage-agile-teams/"
+ ],
+ "learning_objectives": [
+  "Define agile swarming and distinguish it from pairing, mob/ensemble programming, incident swarming and Intelligent Swarming",
+  "Explain what the Scrum Guide and Kanban Guide do and do not say about swarming",
+  "Explain the mechanisms (Little's Law, earlier Done, fewer handoffs, shared knowledge) and the coordination cost",
+  "Decide when to swarm, when not to and how many people to involve",
+  "Run swarming through Sprint Planning, WIP limits and a right-to-left Daily Scrum, and measure whether it helps"
+ ],
+ "internal_links": [
+  "/project-management/agile/agile-metrics-and-kpis/",
+  "/project-management/agile/agile-operations-it/",
+  "/project-management/agile/agile-team-structures/",
+  "/project-management/agile/definition-of-done/",
+  "/project-management/agile/how-to-manage-agile-teams/",
+  "/project-management/agile/scrum-master-role/",
+  "/project-management/agile/what-is-an-agile-team/",
+  "/project-management/kanban/cycle-time/",
+  "/project-management/kanban/flow-efficiency/",
+  "/project-management/kanban/kanban-swimlanes/",
+  "/project-management/kanban/theory-of-constraints/",
+  "/project-management/kanban/throughput/",
+  "/project-management/kanban/wip-aging-chart/",
+  "/project-management/kanban/wip-limits/",
+  "/project-management/scrum/daily-scrum/",
+  "/project-management/scrum/scrum-techniques/",
+  "/project-management/scrum/sprint-backlog/",
+  "/project-management/scrum/sprint-planning/",
+  "/project-management/scrum/sprint-retrospective/",
+  "/project-management/scrum/what-is-scrum/",
+  "/templates/kanban-board-template/",
+  "/templates/skills-matrix-template/"
+ ],
+ "relevant_templates": [
+  "/templates/kanban-board-template/",
+  "/templates/skills-matrix-template/"
+ ],
+ "related_npi_course": "Sprintcraft: Agile and Scrum Practitioner (named only in the page's existing PMAI box; not mentioned in the body)",
+ "external_references": [
+  {
+   "title": "Schwaber & Sutherland, The Scrum Guide (November 2020)",
+   "url": "https://scrumguides.org/scrum-guide.html",
+   "inspected": true,
+   "what_it_supports": "Self-managing ('internally decide who does what, when, and how'); 'The Sprint Backlog is a plan by and for the Developers'; Daily Scrum 'select whatever structure and techniques they want'; the Guide does not mention swarming"
+  },
+  {
+   "title": "Coleman & Vacanti, The Kanban Guide, edition 2025.5 (May 2025)",
+   "url": "https://kanbanguides.org/the-kanban-guide/2025.5/pdf/kanban-guide.v2025.5.en.pdf",
+   "inspected": true,
+   "what_it_supports": "'explicitly control the number of work items in a workflow'; controlling WIP 'often improves ... collective focus, commitment, and collaboration'; work items 'do not age unnecessarily' using the SLE; no mention of swarming"
+  },
+  {
+   "title": "Scrum Patterns Group, patlets incl. ¶25 Swarming: One-Piece Continuous Flow (scrumplop.org)",
+   "url": "https://sites.google.com/a/scrumplop.org/published-patterns/book-outline/patlets",
+   "inspected": true,
+   "what_it_supports": "Pattern name and number; 'Working on too many things at once reduces velocity and the quality of work' → whole Development Team works on one PBI at a time"
+  },
+  {
+   "title": "Sutherland & Coplien, A Scrum Book (Pragmatic Bookshelf, 2019), ¶25 (O'Reilly preview)",
+   "url": "https://www.oreilly.com/library/view/a-scrum-book/9781680507577/f_0058.xhtml",
+   "inspected": true,
+   "what_it_supports": "Book, authors, year and pattern number; only the opening of the chapter was visible"
+  },
+  {
+   "title": "Woody Zuill, Mob Programming: A Whole Team Approach, Agile2014 experience report (Agile Alliance)",
+   "url": "https://agilealliance.org/resources/experience-reports/mob-programming-agile2014",
+   "inspected": true,
+   "what_it_supports": "Quote 'the whole team works on the same thing, at the same time, in the same space' (and same computer); 2014"
+  },
+  {
+   "title": "Consortium for Service Innovation, Intelligent Swarming",
+   "url": "https://library.serviceinnovation.org/Intelligent_Swarming",
+   "inspected": true,
+   "what_it_supports": "Service mark of the Consortium; removes tiers of support; 'swarm' of analysts"
+  },
+  {
+   "title": "Linders, How Swarming Helps Agile Teams to Deliver, InfoQ, 28 February 2013",
+   "url": "https://www.infoq.com/news/2013/02/swarming-agile-teams-deliver",
+   "inspected": true,
+   "what_it_supports": "Background reading on swarming definitions (not quoted in the article)"
+  },
+  {
+   "title": "Brooks's law (Wikipedia summary of The Mythical Man-Month, 1975)",
+   "url": "https://en.wikipedia.org/wiki/Brooks%27s_law",
+   "inspected": false,
+   "what_it_supports": "Brooks's law statement and 1975 date; secondary source surfaced in search, the book itself not inspected"
+  }
+ ],
+ "formulas": [
+  {
+   "formula": "D = E ÷ s(k)",
+   "variables": "D item duration (working days); E item effort (person-days); k people on the item; s(k) speed-up factor (dimensionless, assumed s(1)=1.0, s(2)=1.8, s(3)=2.4)",
+   "verified_by": "python",
+   "inputs": "E=8 and E=10.4 (30% overrun); 6 Developers; 6 items; 10-working-day Sprint",
+   "result": "E=8: D=8.00/4.44/3.33; last item Done day 8.00/8.89/10.00; Done by day 5: 0/3/2. E=10.4: D=10.40/5.78/4.33; Done by day 10: 0/3/4"
+  },
+  {
+   "formula": "Average cycle time = average WIP ÷ average throughput (Little's Law)",
+   "variables": "WIP items; throughput items/day; cycle time days",
+   "verified_by": "python",
+   "inputs": "WIP 6/3/2; throughput 0.750/0.675/0.600 items/day",
+   "result": "8.00/4.44/3.33 days, matching D"
+  },
+  {
+   "formula": "Solo plan with review wait: finish = E + w; throughput = 6 ÷ finish",
+   "variables": "w average wait for review/test (working days, assumed 1.5)",
+   "verified_by": "python",
+   "inputs": "E=8, w=1.5",
+   "result": "9.5 days; 0.632 items/day vs pairs 0.675"
+  },
+  {
+   "formula": "Communication paths = n(n − 1) ÷ 2",
+   "variables": "n people in the swarm",
+   "verified_by": "python",
+   "inputs": "n=2,3,4",
+   "result": "1, 3, 6"
+  },
+  {
+   "formula": "Share of solo item complete at Sprint end = 10 ÷ 10.4",
+   "variables": "working days available ÷ person-days needed",
+   "verified_by": "python",
+   "inputs": "10, 10.4",
+   "result": "0.9615 → 96%"
+  }
+ ],
+ "formula_verification_script": "# Illustrative swarming model: 6 Developers, 10-working-day Sprint, 6 items of E person-days each.\n# Speed-up s(k): assumed (illustrative), k people on one item.\ns={1:1.0,2:1.8,3:2.4,6:3.6}\ndef run(E, k, n_people=6, n_items=6, sprint=10.0):\n    swarms=n_people//k\n    dur=E/s[k]\n    finish=[]\n    per=n_items//swarms\n    for sw in range(swarms):\n        for j in range(1,per+1): finish.append(j*dur)\n    finish.sort()\n    done=sum(1 for f in finish if f<=sprint+1e-9)\n    last=max(finish)\n    wip=swarms\n    th=n_items/last\n    print(f\"E={E} k={k}: swarms={swarms} item duration={dur:.2f}d finishes={[round(f,2) for f in finish]} avgCT={dur:.2f} done_by_day10={done} first_done={min(finish):.2f} last={last:.2f} done_by_day5={sum(f<=5+1e-9 for f in finish)} throughput={th:.3f}/day LittleCT={wip/th:.2f} effort_eff={6*E/(n_people*last):.3f}\")\nfor E in [8,10,10.4]:\n    for k in [1,2,3]: run(E,k)\nprint(\"effective capacity: k=2 ->\", 6/2*1.8, \"person-day-equivalents/day; k=3 ->\", 6/3*2.4)\nprint(\"paths\", [(n,n*(n-1)//2) for n in [2,3,4,6]])\n",
+ "formula_verification_output": "E=8 k=1: finishes all 8.0, avgCT 8.00, done_by_day5 0, throughput 0.750; k=2: 4.44 x3, 8.89 x3, avgCT 4.44, done_by_day5 3, throughput 0.675; k=3: 3.33,6.67,10.0 (x2), avgCT 3.33, done_by_day5 2, throughput 0.600. E=10.4: k=1 done_by_day10 0 (10.40); k=2 3 (5.78/11.56); k=3 4 (4.33/8.67/13.0). Little's Law check 8.00/4.44/3.33. 10/10.4=0.9615; 8+1.5=9.5; 6/9.5=0.632. paths 2->1, 3->3, 4->6",
+ "worked_examples": [
+  {
+   "title": "Six-Developer team plans the same two-week Sprint three ways (solo, pairs, trios), with a 30% overrun case and a review-wait variant",
+   "illustrative": true
+  }
+ ],
+ "statistical_text_measurements": {
+  "url": "/project-management/agile/agile-swarming/",
+  "word_count": 4091,
+  "unique_words": 901,
+  "type_token_ratio": 0.2202,
+  "mattr_100": 0.7195,
+  "shannon_word_entropy_bits": 8.294,
+  "normalised_entropy": 0.845,
+  "sentences": 164,
+  "avg_sentence_length": 17.78,
+  "sentence_length_sd": 9.9,
+  "sentence_length_cv": 0.557,
+  "paragraph_length_mean": 41.1,
+  "paragraph_length_sd": 22.9,
+  "bigram_repetition_rate": 0.3836,
+  "trigram_repetition_rate": 0.133,
+  "top_repeated_4grams": [
+   [
+    "one item per person",
+    6
+   ],
+   [
+    "two or more people",
+    4
+   ],
+   [
+    "the 2020 scrum guide",
+    4
+   ],
+   [
+    "the definition of done",
+    4
+   ],
+   [
+    "on the same backlog",
+    3
+   ],
+   [
+    "the same backlog item",
+    3
+   ],
+   [
+    "the number of items",
+    3
+   ],
+   [
+    "at the same time",
+    3
+   ]
+  ],
+  "most_common_sentence_openers": [
+   [
+    "swarming is",
+    4
+   ],
+   [
+    "the 2020",
+    3
+   ],
+   [
+    "for a",
+    3
+   ],
+   [
+    "this is",
+    3
+   ]
+  ],
+  "formulaic_phrases_found": [],
+  "watch_phrases_counts": {},
+  "most_similar_existing_guides": [
+   [
+    0.425,
+    "/project-management/scrum/scrum-techniques/"
+   ],
+   [
+    0.389,
+    "/project-management/kanban/wip-limits/"
+   ],
+   [
+    0.357,
+    "/project-management/kanban/cycle-time/"
+   ],
+   [
+    0.345,
+    "/project-management/agile/agile-workflow/"
+   ],
+   [
+    0.342,
+    "/project-management/kanban/what-is-kanban/"
+   ]
+  ],
+  "note": "Descriptive editorial diagnostics only. No AI-detection probability is calculated."
+ },
+ "self_assessment": {
+  "technical_accuracy_25": 23,
+  "sources_15": 13,
+  "educational_usefulness_15": 14,
+  "examples_10": 9,
+  "information_gain_10": 9,
+  "precision_readability_10": 9,
+  "search_intent_5": 5,
+  "internal_linking_5": 5,
+  "technical_seo_5": 5,
+  "total": 92
+ },
+ "required_disclosures": [
+  "Worked example labelled illustrative; speed-up factors and review wait explicitly stated as assumptions, not research findings",
+  "Swarming presented as a team technique, not a Scrum or Kanban requirement",
+  "Intelligent Swarming identified as a Consortium for Service Innovation service mark and a separate support practice"
+ ],
+ "unverified_claims": [
+  "A Scrum Book chapter ¶25 seen only in part (O'Reilly preview); the article relies on the public patlet wording",
+  "Brooks's law taken from a secondary source; The Mythical Man-Month not inspected",
+  "'two to four people' and 'no more than about four' are practitioner rules of thumb (consistent with the live page's 'two to four'), not from a primary source",
+  "'Walk the board right to left' is described as common practice; no primary source cited",
+  "Little's Law original paper (Little 1961) not re-inspected; formula consistent with /project-management/kanban/wip-limits/",
+  "Remote-swarming advice (3–4 hours overlap) is editorial guidance, not sourced"
+ ],
+ "unresolved_issues": [
+  "About 4,100 words, slightly above the usual range; justified by the worked example and comparison, but a reviewer could trim the remote section",
+  "TF-IDF similarity 0.427 with /project-management/scrum/scrum-techniques/ (that page has a one-paragraph swarming entry linking here); intents differ"
+ ]
+}
