@@ -73,7 +73,8 @@ RW = dict(
             "Each iteration repeats the forward pass with new durations, so missing links or constraints that override "
             "logic produce meaningless results. GAO's schedule assessment guidance makes the same point: the schedule "
             "must contain complete and correct logic before a schedule risk analysis can be trusted. Build and check the "
-            "network first with the [critical path method](/project-management/critical-path-method/).",
+            "network first with a [project network diagram](/project-management/project-network-diagram/) and the "
+            "[critical path method](/project-management/critical-path-method/).",
             "For cost, the model is usually the cost estimate by work package, with time-related costs (site "
             "management, hired equipment, the project team) linked to the simulated duration. That link matters: a "
             "late finish costs money, and a cost model that ignores duration understates cost risk.",
@@ -90,10 +91,11 @@ RW = dict(
                 ["Discrete (yes/no)", "Probability p and an impact", "p x mean impact", "Risk events that either happen or do not"],
                 ["Lognormal or empirical", "Fitted to historical data", "From the data", "You have enough completed-activity actuals to fit or resample"],
             ),
-            "Distribution choice is not a technicality. In the example below, switching every activity from triangular "
-            "to beta-PERT moved the P80 finish by almost three working days.",
+            "Distribution choice is not a technicality. In the example below, switching every activity duration from "
+            "triangular to beta-PERT moved the P80 finish by almost three working days.",
             H3("Risk events from the risk register"),
-            "Discrete risks come from the [risk register](/project-management/risk-register/). For each one you need a "
+            "Discrete risks come from the [risk register](/project-management/risk-register/); our guide to "
+            "[project risk](/project-management/project-risk/) covers how to identify and describe them. For each one you need a "
             "probability of occurrence, the activity or cost line it affects, and an impact range if it occurs. Model a "
             "risk either as a separate event or inside an activity's range, never both, or it will be counted twice.",
             H3("Correlation between inputs"),
@@ -165,8 +167,8 @@ RW = dict(
                 ["3", "11.4", "29.2 + 10.6 = 39.8 (R1 yes)", "18.2 (R2 no)", "9.7", "6.6", "11.4 + 39.8 + 9.7 + 6.6 = 67.5"],
             ),
             "In iteration 1 the asbestos risk occurs and the non-critical site works path (C) drives the finish, even "
-            "though it had 5 days of float in the plan. In iteration 3 the supplier risk occurs and the finish slips "
-            "by more than three weeks. After 100,000 such iterations, the finish dates form the distribution below.",
+            "though it had 5 days of float in the plan. In iteration 3 the supplier risk occurs and the finish lands "
+            "25.5 working days after the plan. After 100,000 such iterations, the finish dates form the distribution below.",
             H3("Schedule results"),
             T(
                 ["Measure", "Finish (working days)"],
@@ -177,7 +179,7 @@ RW = dict(
                 ["Mean", "50.3"],
                 ["P80", "55.3"],
                 ["P90", "58.5"],
-                ["Range across all iterations", "34.8 to 75.6"],
+                ["Range across all iterations", "About 35 to 75 (the extremes vary between runs)"],
             ),
             "The plan's 42 days is roughly a **P5 date**: it would be met in about one run in twenty. A sponsor who "
             "wants 80% confidence needs to plan for about 56 working days, which means holding about 13 to 14 working "
@@ -255,7 +257,8 @@ RW = dict(
             "2009 JCL guidance asks projects to be budgeted at a 70% JCL unless the decision authority approves "
             "otherwise.",
             "See [project forecasting](/project-management/project-forecasting/) for how a simulation sits alongside "
-            "earned value and earned schedule forecasts once the project is under way.",
+            "[earned value management](/project-management/earned-value-management/) and earned schedule forecasts once "
+            "the project is under way.",
         ),
         S(
             "How to read Monte Carlo outputs",
@@ -306,8 +309,9 @@ RW = dict(
                 ["Probability of meeting 42 days", "4.7%", "13.9%"],
                 ["P80 cost (£k)", "475.5", "469.9"],
             ),
-            "Beta-PERT concentrates more probability near the most likely value, so it gives earlier dates from the "
-            "same three numbers. Neither is right in general. Use triangular when the experts' most likely value is "
+            "Only the five activity durations were switched; cost lines and risk impacts stayed triangular, so the cost "
+            "change comes entirely from the shorter durations. Beta-PERT concentrates more probability near the most "
+            "likely value, so it gives earlier dates from the same three numbers. Neither is right in general. Use triangular when the experts' most likely value is "
             "itself uncertain, beta-PERT when it is well supported, and historical data when you have it.",
             H3("Correlation"),
             "A second run gave all five activity durations a pairwise correlation of 0.5, representing a common cause "
@@ -321,17 +325,17 @@ RW = dict(
                 ["P80 (days)", "55.2", "56.4"],
                 ["P90 (days)", "58.5", "60.0"],
             ),
-            "Correlation leaves the mean unchanged but widens the spread in both directions. The upper percentiles "
+            "Correlation leaves the mean almost unchanged but widens the spread in both directions. The upper percentiles "
             "used for commitments move later, so ignoring a real common cause makes the P80 look safer than it is.",
             H3("Number of iterations"),
-            "Each run of the full model was repeated 20 times with different random seeds to see how much the P80 "
+            "Each run of the full model was repeated 100 times with different random seeds to see how much the P80 "
             "finish moved from run to run:",
             T(
                 ["Iterations per run", "Lowest P80 (days)", "Highest P80 (days)", "Standard deviation (days)"],
-                ["100", "54.1", "56.8", "0.91"],
-                ["1,000", "54.8", "55.9", "0.39"],
-                ["10,000", "55.1", "55.5", "0.08"],
-                ["100,000", "55.25", "55.38", "0.03"],
+                ["100", "52.9", "57.7", "1.06"],
+                ["1,000", "54.5", "56.1", "0.35"],
+                ["10,000", "55.1", "55.6", "0.11"],
+                ["100,000", "55.23", "55.38", "0.03"],
             ),
             "A few thousand iterations are usually enough for decisions. More "
             "iterations reduce sampling noise only; they do nothing to correct wrong ranges or missing risks. For a "
@@ -399,8 +403,8 @@ RW = dict(
             "\"when will these 40 items be done?\" or \"how many items by this date?\" with a probability.",
             "The same cautions apply. The history must come from a reasonably stable system, scope growth must be "
             "modelled or the forecast will be early, and the forecast needs updating as new data arrives. The "
-            "mechanics and a worked throughput example are in our guide to [Kanban planning](/project-management/kanban/kanban-planning/).",
-            "See [throughput in Kanban](/project-management/kanban/throughput/) for how to measure the input data.",
+            "mechanics and a worked throughput example are in our guide to [Kanban planning](/project-management/kanban/kanban-planning/), "
+            "and [throughput in Kanban](/project-management/kanban/throughput/) explains how to measure the input data.",
         ),
         S(
             "When to use Monte Carlo simulation, and when not to",
@@ -441,16 +445,6 @@ RW = dict(
                 "Rerun it with actual progress and the current [risk register](/templates/risk-register-template/).",
             ),
         ),
-        S(
-            "Further learning",
-            "Monte Carlo simulation builds on several other techniques. Work through the "
-            "[project network diagram](/project-management/project-network-diagram/) and critical path guides to "
-            "build sound logic, PERT for three-point estimating, and "
-            "[earned value management](/project-management/earned-value-management/) for tracking performance once "
-            "the baseline is set.",
-            "Read our guide to [project risk](/project-management/project-risk/) for how to identify and describe the "
-            "risk events that a simulation needs.",
-        ),
     ],
     faq=[
         ("What is Monte Carlo simulation in project management?",
@@ -460,8 +454,8 @@ RW = dict(
          "P80 is the value that was not exceeded in 80% of iterations. A P80 finish of day 55 means the model "
          "finished on or before day 55 in 80% of runs, given its assumptions."),
         ("How many iterations does a Monte Carlo simulation need?",
-         "Usually a few thousand to 10,000. In our example, the P80 varied by about 0.4 days between repeated runs of "
-         "1,000 iterations and by under 0.1 days at 10,000. More iterations reduce sampling noise but cannot fix poor inputs."),
+         "Usually a few thousand to 10,000. In our example, the P80 had a run-to-run standard deviation of about 0.35 "
+         "days at 1,000 iterations and about 0.1 days at 10,000. More iterations reduce sampling noise but cannot fix poor inputs."),
         ("Which distribution should I use for three-point estimates?",
          "Triangular is a common default and gives heavier tails; beta-PERT weights the most likely value more and "
          "gives earlier dates. Use historical data where you have it and record the choice, because it changes the result."),
@@ -471,9 +465,6 @@ RW = dict(
         ("Can I run a Monte Carlo simulation in Excel?",
          "Yes, for small models. Sample each input with RAND() and the inverse triangular formula, put one iteration "
          "per row, and read results with PERCENTILE.INC and COUNTIF. Large schedules need a dedicated tool."),
-        ("Why does a Monte Carlo simulation give a later date than the plan?",
-         "Because most estimate ranges are skewed towards overruns, merging paths wait for the latest predecessor, and "
-         "risk events add delay in some runs. The plan's most-likely date ignores all three."),
         ("What is the criticality index?",
          "The percentage of iterations in which an activity lies on the critical path. An activity off the "
          "deterministic critical path can still have a high criticality index if its path is near-critical or risky."),

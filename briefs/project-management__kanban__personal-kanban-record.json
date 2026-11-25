@@ -1,0 +1,251 @@
+{
+ "url": "/project-management/kanban/personal-kanban/",
+ "proposed_status": "PUBLISH",
+ "article_type": "how-to guide with worked example",
+ "language": "en-GB",
+ "learning_level": "beginner",
+ "primary_keyword": "personal kanban",
+ "secondary_keywords": [
+  "personal kanban board",
+  "personal kanban rules",
+  "two rules of personal kanban",
+  "personal kanban WIP limit",
+  "personal kanban columns",
+  "personal kanban example",
+  "personal kanban for project managers",
+  "personal kanban for students",
+  "personal kanban vs to-do list",
+  "personal kanban app",
+  "how to set up a personal kanban board",
+  "personal kanban weekly review",
+  "personal kanban Jim Benson",
+  "kanban for personal productivity",
+  "limit work in progress",
+  "visualise your work",
+  "Little's Law personal"
+ ],
+ "search_intent": "How-to (set up and use a personal Kanban board), answering the definition first",
+ "h1": "Personal Kanban: The Two Rules, Board Setup and Examples",
+ "seo_title": "Personal Kanban: The Two Rules, Board Setup and Examples",
+ "meta_description": "Personal Kanban explained: the two rules, how to set up your board and WIP limit step by step, a worked Little's Law example, and how to make it stick.",
+ "excerpt": "How to use personal Kanban: the two rules, a step-by-step board setup, layouts for project managers and students, how to adjust your WIP limit from evidence, and a worked Little's Law example.",
+ "parent_topic_cluster": "/project-management/kanban/ (Kanban basics)",
+ "prerequisite_guides": [
+  "/project-management/kanban/what-is-kanban/"
+ ],
+ "related_articles": [
+  "/project-management/kanban/wip-limits/",
+  "/project-management/kanban/kanban-boards/",
+  "/project-management/kanban/kanban-cards/",
+  "/project-management/kanban/wip-aging-chart/",
+  "/project-management/kanban/cycle-time/",
+  "/project-management/managing-multiple-projects/"
+ ],
+ "learning_objectives": [
+  "State the two rules of personal Kanban and what counts as work in progress for an individual",
+  "Set up a personal board and choose a starting WIP limit",
+  "Adjust the limit and columns from observed evidence",
+  "Calculate average cycle time with Little's Law and an 85th-percentile personal service level expectation",
+  "Run a weekly review and combine personal Kanban with other prioritisation methods"
+ ],
+ "internal_links": [
+  "/project-management-tools/microsoft-planner/",
+  "/project-management-tools/notion/",
+  "/project-management-tools/trello/",
+  "/project-management/kanban/",
+  "/project-management/kanban/cycle-time/",
+  "/project-management/kanban/kanban-boards/",
+  "/project-management/kanban/kanban-cards/",
+  "/project-management/kanban/kanban-ceremonies/",
+  "/project-management/kanban/kanban-principles/",
+  "/project-management/kanban/kanban-vs-scrum/",
+  "/project-management/kanban/pull-system-vs-push-system/",
+  "/project-management/kanban/what-is-kanban/",
+  "/project-management/kanban/wip-aging-chart/",
+  "/project-management/kanban/wip-limits/",
+  "/project-management/managing-multiple-projects/",
+  "/templates/kanban-board-template/",
+  "/templates/priority-list-template/",
+  "/templates/to-do-list-template/"
+ ],
+ "relevant_templates": [
+  "/templates/kanban-board-template/",
+  "/templates/to-do-list-template/",
+  "/templates/priority-list-template/"
+ ],
+ "related_npi_course": "Wayfinder: Leadership and Stakeholder Communication (named only in the page's existing PMAI box; not mentioned in the body)",
+ "external_references": [
+  {
+   "title": "Drickhamer, Personal Kanban: You can't manage what you can't see, Lean Enterprise Institute (19 Nov 2015)",
+   "url": "https://www.lean.org/the-lean-post/articles/personal-kanban-you-cant-manage-what-you-cant-see/",
+   "inspected": true,
+   "what_it_supports": "Two rules; Benson adapted Kanban for dev teams in early 2000s then individuals; Shingo award-winning book; invisible knowledge work; whiteboard recommendation"
+  },
+  {
+   "title": "Personal Kanban website primer: Building your first Personal Kanban",
+   "url": "https://personalkanban.com/pk/primers/building-your-first-personal-kanban-2",
+   "inspected": true,
+   "what_it_supports": "Backlog/Doing/Done; whiteboard; arbitrary starting WIP limit such as no more than 5; pull (author and date not shown on page)"
+  },
+  {
+   "title": "Coleman & Vacanti, The Kanban Guide, edition 2025.5 (1 May 2025)",
+   "url": "https://kanbanguides.org/the-kanban-guide/2025.5/pdf/kanban-guide.v2025.5.en.pdf",
+   "inspected": true,
+   "what_it_supports": "WIP = items started but not finished; throughput, work item age, cycle time definitions; SLE = elapsed time plus probability based on historical cycle time"
+  },
+  {
+   "title": "American Psychological Association, Multitasking: switching costs (2006)",
+   "url": "https://www.apa.org/topics/research/multitasking",
+   "inspected": true,
+   "what_it_supports": "Task switching has measurable time costs, larger for complex/unfamiliar tasks (Rubinstein, Meyer and Evans 2001)"
+  },
+  {
+   "title": "Benson & DeMaria Barry, Personal Kanban: Mapping Work | Navigating Life (2011)",
+   "url": null,
+   "inspected": false,
+   "what_it_supports": "Origin of the two rules (book itself not inspected; facts taken via the Lean Post article)"
+  }
+ ],
+ "formulas": [
+  {
+   "formula": "Average cycle time = average WIP ÷ average throughput (Little's Law)",
+   "variables": "cycle time in working days; WIP in cards started but not finished; throughput in cards finished per working day",
+   "verified_by": "python",
+   "inputs": "Before: daily WIP 8,9,10,9,8,9,10,9,9,9 (avg 9), 12 cards in 10 days (1.2/day). After: 5,4,4,4,3,4,4,5,4,3 (avg 4), 12 cards in 10 days",
+   "result": "Before 7.5 working days; after 3.33 (shown as 3.3) working days; 55.6% shorter (shown as about 56%); 4.17 days sooner"
+  },
+  {
+   "formula": "85th percentile (nearest rank) = value at rank ceil(0.85 × n) of sorted cycle times",
+   "variables": "n number of finished cards; cycle times in working days",
+   "verified_by": "python",
+   "inputs": "1,1,1,2,2,2,2,2,3,3,3,3,4,4,5,5,6,7,9,12 (n=20)",
+   "result": "rank 17 → 6 working days; 17/20 = 85% finished within 6 days"
+  }
+ ],
+ "formula_verification_script": "import math, statistics\n# Little's Law: avg cycle time = avg WIP / avg throughput\ndays=10\nbefore_wip=[8,9,10,9,8,9,10,9,9,9]   # started-not-finished, counted each afternoon\ndone_before=12\nwip_b=sum(before_wip)/len(before_wip); th_b=done_before/days\nprint(\"before avg WIP\",wip_b,\"throughput/day\",th_b,\"cycle time days\",wip_b/th_b, \"per week\",th_b*5)\nafter_wip=[5,4,4,4,3,4,4,5,4,3]\ndone_after=12\nwip_a=sum(after_wip)/len(after_wip); th_a=done_after/days\nprint(\"after avg WIP\",wip_a,\"throughput/day\",th_a,\"cycle time days\",wip_a/th_a)\nprint(\"reduction %\",(1-(wip_a/th_a)/(wip_b/th_b))*100)\n# cycle time sample\nct=[1,1,1,2,2,2,2,2,3,3,3,3,4,4,5,5,6,7,9,12]\nprint(\"n\",len(ct),\"mean\",statistics.mean(ct),\"median\",statistics.median(ct))\nfor p in (50,85,95):\n    r=math.ceil(p/100*len(ct)); print(f\"P{p} nearest-rank r={r} ->\",sorted(ct)[r-1])\nprint(\"share <=6:\",sum(c<=6 for c in ct)/len(ct))\n",
+ "formula_verification_output": "before avg WIP 9.0 throughput/day 1.2 cycle time days 7.5; after avg WIP 4.0 cycle time 3.333; reduction 55.56%; n 20 mean 3.85 median 3.0; P85 nearest-rank r=17 -> 6; share <=6: 0.85",
+ "worked_examples": [
+  {
+   "title": "Project coordinator measures a personal board before and after WIP limits with Little's Law and sets an 85th-percentile service level expectation",
+   "illustrative": true
+  }
+ ],
+ "statistical_text_measurements": {
+  "url": "/project-management/kanban/personal-kanban/",
+  "word_count": 3690,
+  "unique_words": 835,
+  "type_token_ratio": 0.2263,
+  "mattr_100": 0.7262,
+  "shannon_word_entropy_bits": 8.242,
+  "normalised_entropy": 0.8492,
+  "sentences": 177,
+  "avg_sentence_length": 16.76,
+  "sentence_length_sd": 9.7,
+  "sentence_length_cv": 0.578,
+  "paragraph_length_mean": 38.5,
+  "paragraph_length_sd": 20.0,
+  "bigram_repetition_rate": 0.389,
+  "trigram_repetition_rate": 0.1364,
+  "top_repeated_4grams": [
+   [
+    "started but not finished",
+    4
+   ],
+   [
+    "visualise your work and",
+    3
+   ],
+   [
+    "your work and limit",
+    3
+   ],
+   [
+    "work and limit your",
+    3
+   ],
+   [
+    "limit your work in",
+    3
+   ],
+   [
+    "your work in progress",
+    3
+   ],
+   [
+    "jim benson and tonianne",
+    3
+   ],
+   [
+    "benson and tonianne demaria",
+    3
+   ]
+  ],
+  "most_common_sentence_openers": [
+   [
+    "personal kanban",
+    5
+   ],
+   [
+    "if you",
+    5
+   ],
+   [
+    "the kanban",
+    3
+   ]
+  ],
+  "formulaic_phrases_found": [],
+  "watch_phrases_counts": {},
+  "most_similar_existing_guides": [
+   [
+    0.569,
+    "/project-management/kanban/kanban-boards/"
+   ],
+   [
+    0.565,
+    "/project-management/kanban/what-is-kanban/"
+   ],
+   [
+    0.557,
+    "/project-management/kanban/wip-limits/"
+   ],
+   [
+    0.473,
+    "/project-management/agile/agile-workflow/"
+   ],
+   [
+    0.454,
+    "/project-management/kanban/kanban-vs-agile/"
+   ]
+  ],
+  "note": "Descriptive editorial diagnostics only. No AI-detection probability is calculated."
+ },
+ "self_assessment": {
+  "technical_accuracy_25": 23,
+  "sources_15": 13,
+  "educational_usefulness_15": 14,
+  "examples_10": 9,
+  "information_gain_10": 8,
+  "precision_readability_10": 9,
+  "search_intent_5": 5,
+  "internal_linking_5": 5,
+  "technical_seo_5": 5,
+  "total": 91
+ },
+ "required_disclosures": [
+  "Worked example labelled illustrative",
+  "WIP limit numbers presented as starting hypotheses, not official requirements",
+  "Little's Law limitations stated (stable system, averages, similar item sizes)"
+ ],
+ "unverified_claims": [
+  "The 2011 book itself was not inspected; the two rules, author names, year and Shingo award come from the Lean Enterprise Institute article and the existing page",
+  "The exact name of the Shingo award (described as 'a Shingo publication award') is not verified beyond Lean.org's 'Shingo Award-winning'",
+  "Rubinstein, Meyer and Evans (2001) findings are reported via the APA summary; the original paper was not opened",
+  "Little's Law origin (Little, 1961) relies on the site's existing WIP limits guide, not a primary source inspected in this session",
+  "David Allen as author of Getting Things Done stated from general knowledge, not inspected"
+ ],
+ "unresolved_issues": [
+  "TF-IDF similarity 0.568 with /project-management/kanban/kanban-boards/ (shared Kanban vocabulary); intent and examples differ, but a reviewer may want to confirm no cannibalisation on 'personal kanban board'",
+  "Title changed from 'Personal Kanban: Manage Your Own Work With Two Simple Rules' to 'Personal Kanban: The Two Rules, Board Setup and Examples' (URL unchanged)"
+ ]
+}

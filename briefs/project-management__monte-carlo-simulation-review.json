@@ -1,0 +1,226 @@
+{
+ "url": "/project-management/monte-carlo-simulation/",
+ "status": "PUBLISH",
+ "publication_eligible": true,
+ "gates": {
+  "definitions_accurate": true,
+  "framework_requirements_verified": true,
+  "calculations_correct": true,
+  "variables_units_defined": true,
+  "examples_consistent_and_labelled": true,
+  "claims_supported": true,
+  "sources_authentic": true,
+  "educational_value": true,
+  "no_duplicate_intent": true,
+  "internal_links_valid": true,
+  "certification_claims_accurate": true,
+  "disclosures_included": true,
+  "metadata_valid": true,
+  "no_fabricated_experience": true
+ },
+ "scores": {
+  "technical_accuracy_25": 24,
+  "sources_15": 13,
+  "educational_usefulness_15": 14,
+  "examples_10": 10,
+  "information_gain_10": 9,
+  "precision_readability_10": 8,
+  "search_intent_5": 5,
+  "internal_linking_5": 5,
+  "technical_seo_5": 5,
+  "total": 93
+ },
+ "claims_checked": [
+  {
+   "claim": "Ulam conceived the Monte Carlo method at Los Alamos in 1946; von Neumann and Metropolis developed it; Metropolis named it after Monte Carlo (probabilistic nature)",
+   "source": "https://www.lanl.gov/media/publications/actinide-research-quarterly/1123-hitting-the-jackpot-the-birth-of-the-monte-carlo-method",
+   "result": "confirmed"
+  },
+  {
+   "claim": "GAO schedule guidance: complete and correct logic needed before schedule risk analysis",
+   "source": "https://gaoinnovations.gov/schedule-guide/conducting-a-schedule-risk-analysis.html",
+   "result": "confirmed"
+  },
+  {
+   "claim": "GAO example of an organisation adopting a completion date with 70% probability",
+   "source": "https://gaoinnovations.gov/schedule-guide/conducting-a-schedule-risk-analysis.html",
+   "result": "confirmed (presented as an example, as the article says)"
+  },
+  {
+   "claim": "NASA 2009 JCL guidance: budget at 70% JCL unless decision authority approves otherwise; fund at no less than 50%",
+   "source": "https://www.nasa.gov/pdf/394931main_JCL_FAQ_10_12_09.pdf",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Barreras (PMI Global Congress 2011): P80 common for total project cost, P90 to include management reserve; correlation matrix agreed with functional leads",
+   "source": "https://www.pmi.org/learning/library/monte-carlo-simulation-cost-estimating-6195",
+   "result": "confirmed"
+  },
+  {
+   "claim": "No site template runs a simulation; critical path, cost estimate and risk register templates exist",
+   "source": "/home/claude/neural-project-institute/templates/",
+   "result": "confirmed"
+  },
+  {
+   "claim": "P50/P80 usage and baseline-plus-contingency arrangement described as common practice, not a standard",
+   "source": "editorial framing check (\u00a712)",
+   "result": "confirmed"
+  }
+ ],
+ "calculations_rechecked": [
+  {
+   "item": "Independent Python re-implementation (numpy default_rng, 100,000 iterations, triangular, independent): finish mean 50.32, P10 43.4, P50 49.5, P80 55.26, P90 58.5, P(<=42) 4.6%; cost mean 460.7, P50 459.0, P80 475.4, P90 484.0, P(<=429) 1.4%",
+   "result": "correct (within Monte Carlo noise of writer's figures)"
+  },
+  {
+   "item": "Min/max of finish (writer 34.8-75.6; reviewer 35.8-73.7)",
+   "result": "corrected (extremes are seed-dependent; now 'about 35 to 75')"
+  },
+  {
+   "item": "Deterministic plan 42 days, C float 5 days, budget 345 + 84 = \u00a3429k; contingency 13.3 days, \u00a346.5k (10.8%), \u00a330.0k at P50",
+   "result": "correct"
+  },
+  {
+   "item": "Criticality B path 87%/C path 13%; Spearman R1 0.66, B 0.45, A 0.29, D 0.29, R2 0.22, E 0.15, C 0.05; finish-cost rank corr 0.75",
+   "result": "correct"
+  },
+  {
+   "item": "Joint confidence 72% at P80/P80; 82% at P88/P88 (57.8 days, \u00a3482k)",
+   "result": "correct"
+  },
+  {
+   "item": "Mean decomposition 42 -> 47.33 -> 47.40 -> 50.32; R1 EMV 2.5 days",
+   "result": "correct"
+  },
+  {
+   "item": "Mitigation run (R1 5%, +\u00a36k): mean 48.5, P50 48.1, P80 52.1, P90 54.5, mean cost 463.0, P80 cost 475.8",
+   "result": "correct"
+  },
+  {
+   "item": "Beta-PERT comparison (mean 47.6, P50 46.7, P80 52.5, 14.0%, cost P50 453.5, P80 469.7) reproduced only when beta-PERT is applied to durations alone",
+   "result": "corrected (text now states only durations were switched; figures unchanged)"
+  },
+  {
+   "item": "Correlation rho=0.5 Gaussian copula: SD 5.8 -> 7.2, P10 43.4 -> 41.3, P80 55.3 -> 56.4, P90 58.6 -> 60.0",
+   "result": "correct ('mean unchanged' softened to 'almost unchanged')"
+  },
+  {
+   "item": "Iteration convergence table (writer: 20 seeds)",
+   "result": "corrected (re-run with 100 seeds per size: 100: 52.9-57.7 SD 1.06; 1,000: 54.5-56.1 SD 0.35; 10,000: 55.1-55.6 SD 0.11; 100,000: 55.23-55.38 SD 0.03; FAQ updated)"
+  },
+  {
+   "item": "Sampling error sqrt(0.8x0.2/n): 1.26 pp at 1,000, 0.40 pp at 10,000",
+   "result": "correct"
+  },
+  {
+   "item": "Classic PERT A-B-D-E: TE 44.67, var 9.44, SD 3.07, z -0.87, P 19.3%",
+   "result": "correct"
+  },
+  {
+   "item": "Excel inverse triangular for B: switch 0.286; U=0.5 -> 21.63 (median); U=0.2 -> 19.35",
+   "result": "correct"
+  },
+  {
+   "item": "Sum of P80s 53.96 vs P80 of sum 50.67",
+   "result": "correct"
+  },
+  {
+   "item": "Three traced iterations: sums, ranges and risk flags internally consistent",
+   "result": "correct"
+  }
+ ],
+ "changes_made": [
+  "Range of finish dates changed from '34.8 to 75.6' to 'About 35 to 75 (the extremes vary between runs)' because the extremes did not reproduce",
+  "Clarified that the beta-PERT comparison switched only the activity durations (cost lines and risk impacts stayed triangular), which is the only configuration that reproduces the stated figures",
+  "Iteration-convergence table replaced with reviewer's 100-seed results (writer's 20-seed SD of 0.08 days at 10,000 understated the ~0.11 day noise); text changed from 20 to 100 repeats",
+  "FAQ on iterations updated to 'about 0.35 days at 1,000 and about 0.1 days at 10,000'",
+  "'Correlation leaves the mean unchanged' changed to 'almost unchanged'",
+  "Iteration 3 'slips by more than three weeks' made precise: '25.5 working days after the plan'",
+  "Removed the low-value 'Further learning' section; moved its links (project network diagram, project risk, earned value management) into the relevant body sentences",
+  "Merged the one-line Kanban throughput paragraph into the preceding paragraph",
+  "Removed the FAQ 'Why does a Monte Carlo simulation give a later date than the plan?', which repeated the 'Why single-point plans are usually optimistic' section"
+ ],
+ "statistical_text_measurements": {
+  "url": "/project-management/monte-carlo-simulation/",
+  "word_count": 5072,
+  "unique_words": 1087,
+  "type_token_ratio": 0.2143,
+  "mattr_100": 0.7264,
+  "shannon_word_entropy_bits": 8.625,
+  "normalised_entropy": 0.8551,
+  "sentences": 207,
+  "avg_sentence_length": 17.59,
+  "sentence_length_sd": 9.89,
+  "sentence_length_cv": 0.562,
+  "paragraph_length_mean": 39.6,
+  "paragraph_length_sd": 22.5,
+  "bigram_repetition_rate": 0.355,
+  "trigram_repetition_rate": 0.1132,
+  "top_repeated_4grams": [
+   [
+    "monte carlo simulation in",
+    5
+   ],
+   [
+    "a monte carlo simulation",
+    5
+   ],
+   [
+    "the most likely value",
+    4
+   ],
+   [
+    "on the critical path",
+    4
+   ],
+   [
+    "carlo simulation in project",
+    3
+   ],
+   [
+    "simulation in project management",
+    3
+   ],
+   [
+    "schedule or cost model",
+    3
+   ],
+   [
+    "a date or budget",
+    3
+   ]
+  ],
+  "most_common_sentence_openers": [],
+  "formulaic_phrases_found": [],
+  "watch_phrases_counts": {},
+  "most_similar_existing_guides": [
+   [
+    0.371,
+    "/project-management/pert-chart/"
+   ],
+   [
+    0.345,
+    "/project-management/project-forecasting/"
+   ],
+   [
+    0.333,
+    "/project-management/sensitivity-analysis/"
+   ],
+   [
+    0.324,
+    "/project-management/project-time-management/"
+   ],
+   [
+    0.303,
+    "/project-management/project-risk-management/"
+   ]
+  ],
+  "note": "Descriptive editorial diagnostics only. No AI-detection probability is calculated."
+ },
+ "unresolved_issues": [
+  "Length remains about 5,000 words including tables (checker ~5,017); the remaining sections are substantive and further cuts would remove verified content",
+  "Internal links at the 25 maximum",
+  "PMBOK/PMI risk standard text and AACE recommended practices not inspected; article attributes no requirements to them"
+ ],
+ "reviewer_note": "Automated review by an AI reviewer; not a human professional review."
+}
