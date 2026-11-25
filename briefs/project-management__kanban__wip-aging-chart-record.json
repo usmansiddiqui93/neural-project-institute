@@ -1,0 +1,281 @@
+{
+ "url": "/project-management/kanban/wip-aging-chart/",
+ "proposed_status": "PUBLISH",
+ "article_type": "how-to guide with worked example",
+ "language": "en-GB",
+ "learning_level": "intermediate",
+ "primary_keyword": "WIP aging chart",
+ "secondary_keywords": [
+  "aging work in progress chart",
+  "aging WIP chart",
+  "work item age",
+  "work item age Kanban",
+  "how to read a WIP aging chart",
+  "work item aging chart",
+  "WIP aging chart percentiles",
+  "pace percentiles",
+  "service level expectation",
+  "work item age vs cycle time",
+  "leading indicator Kanban",
+  "WIP aging chart Excel",
+  "total WIP age",
+  "daily Kanban meeting ageing work",
+  "Kanban flow metrics"
+ ],
+ "search_intent": "How-to (read and act on the chart), answering the definition first; secondary: build one in a spreadsheet",
+ "h1": "WIP Aging Chart: How to Read and Use It, With Examples",
+ "seo_title": "WIP Aging Chart: How to Read and Use It, With Examples",
+ "meta_description": "How to read a WIP aging chart: work item age, percentile lines, per-stage pace, a worked example with SLE risk, daily actions and how to build one in Excel.",
+ "excerpt": "How a WIP aging chart works: work item age and how to calculate it, percentile lines and per-stage pace, a fully worked example with the chance of meeting the SLE, daily-meeting actions, a spreadsheet build and limitations.",
+ "parent_topic_cluster": "/project-management/kanban/ (Kanban guide, flow and metrics)",
+ "prerequisite_guides": [
+  "/project-management/kanban/cycle-time/",
+  "/project-management/kanban/kanban-metrics/",
+  "/project-management/kanban/kanban-boards/"
+ ],
+ "related_articles": [
+  "/project-management/kanban/kanban-planning/",
+  "/project-management/kanban/wip-limits/",
+  "/project-management/kanban/blocker-clustering/",
+  "/project-management/kanban/kanban-ceremonies/",
+  "/project-management/kanban/cumulative-flow-diagram/",
+  "/project-management/kanban/throughput/"
+ ],
+ "learning_objectives": [
+  "Define a WIP aging chart and work item age, and explain why age is a leading indicator",
+  "Calculate work item age and nearest-rank cycle time percentiles",
+  "Read item age against both overall percentile lines and per-stage pace",
+  "Estimate an item's historical chance of meeting the SLE given its current age",
+  "Run an oldest-first daily review and choose an action for ageing items",
+  "Build a basic aging chart in a spreadsheet from the Kanban board template's card data"
+ ],
+ "internal_links": [
+  "/project-management/kanban/blocker-clustering/",
+  "/project-management/kanban/cumulative-flow-diagram/",
+  "/project-management/kanban/cycle-time-vs-lead-time/",
+  "/project-management/kanban/cycle-time/",
+  "/project-management/kanban/kanban-boards/",
+  "/project-management/kanban/kanban-ceremonies/",
+  "/project-management/kanban/kanban-metrics/",
+  "/project-management/kanban/kanban-planning/",
+  "/project-management/kanban/kanban-swimlanes/",
+  "/project-management/kanban/throughput/",
+  "/project-management/kanban/wip-limits/",
+  "/project-management/scrum/daily-scrum/",
+  "/templates/kanban-board-template/"
+ ],
+ "relevant_templates": [
+  "/templates/kanban-board-template/"
+ ],
+ "related_npi_course": "Baseline: Scope, Schedule and Cost Control (named only in the page's existing PMAI box; not mentioned in the body)",
+ "external_references": [
+  {
+   "title": "Coleman & Vacanti, The Kanban Guide, edition 2025.5 (1 May 2025)",
+   "url": "https://kanbanguides.org/the-kanban-guide/2025.5/pdf/kanban-guide.v2025.5.en.pdf",
+   "inspected": true,
+   "what_it_supports": "Work item age and cycle time definitions; four mandatory flow metrics; SLE = elapsed time + probability, based on historical cycle time, best guess if no data; 'ensuring work items do not age unnecessarily, using the SLE as a reference'; no specific chart prescribed"
+  },
+  {
+   "title": "Vacanti, Actionable Agile Metrics for Predictability, 10th Anniversary Edition (2025), Leanpub sample",
+   "url": "https://s3.amazonaws.com/samples.leanpub.com/aamfp-10th-sample.pdf",
+   "inspected": true,
+   "what_it_supports": "Chapters 6-7 on the Work Item Aging Chart (titles only; chapter text not in sample); age = current date - start date + 1, inclusive, never zero"
+  },
+  {
+   "title": "55 Degrees, ActionableAgile Aging Work in Progress documentation (updated 11 Dec 2025, archived)",
+   "url": "https://55degrees.atlassian.net/wiki/spaces/AAS/pages/2454290433/Aging+Work+in+Progress",
+   "inspected": true,
+   "what_it_supports": "Axes; cumulative age; done percentile lines; per-column pace percentiles from column exit ages; minimum 10 completed items; aging replay; stalled alert"
+  },
+  {
+   "title": "Businessmap, Aging WIP chart article",
+   "url": "https://businessmap.io/kanban-resources/kanban-analytics/kanban-aging-wip",
+   "inspected": true,
+   "what_it_supports": "Age measured as days in current stage (contrast with total age)"
+  },
+  {
+   "title": "Julia Wester, Want to be more predictable? Do these two things every day, Scrum.org (6 Feb 2020)",
+   "url": "https://www.scrum.org/resources/blog/want-be-more-predictable-do-these-two-things-every-day",
+   "inspected": true,
+   "what_it_supports": "Daily attention to WIP age; percentile lines from scatterplot overlaid on aging chart"
+  },
+  {
+   "title": "John Coleman, How do we actively manage items in progress in Kanban?, Scrum.org (4 Jan 2024)",
+   "url": "https://www.scrum.org/resources/blog/how-do-we-actively-manage-items-workflowitems-progress-kanban",
+   "inspected": true,
+   "what_it_supports": "Relative age by column; unblock first; cancel items on hold; avoid moving items backwards"
+  }
+ ],
+ "formulas": [
+  {
+   "formula": "Work item age = today's date - start date + 1",
+   "variables": "dates; result in calendar days",
+   "verified_by": "python",
+   "inputs": "today 25 Nov 2026; starts 24,17,23,19,12,20,16,18 Nov and 9 Nov",
+   "result": "ages 2,9,3,7,14,6,10,8,17; e.g. 16 Nov -> 10 days"
+  },
+  {
+   "formula": "Nearest-rank percentile = value at rank ceil(p/100 x n) of sorted cycle times",
+   "variables": "p percentile; n = 30 finished items; cycle time in calendar days",
+   "verified_by": "python",
+   "inputs": "2,3,3,4,4,5,5,5,6,6,6,7,7,7,8,8,8,9,9,10,10,11,12,12,13,14,16,18,21,26",
+   "result": "P50 rank 15 = 8; P70 rank 21 = 10; P85 rank 26 = 14; P95 rank 29 = 21; 26/30 (87%) <= 14"
+  },
+  {
+   "formula": "Conditional share meeting SLE = count(age <= CT <= 14) / count(CT >= age)",
+   "variables": "CT historical cycle time (days); age current work item age (days)",
+   "verified_by": "python",
+   "inputs": "same 30 cycle times; ages 2, 9, 10, 14, 17",
+   "result": "A 26/30 = 87%; B 9/13 = 69%; G 7/11 = 64%; E 1/5 = 20%; I 0/3 (SLE missed), 2/3 within 21 days"
+  },
+  {
+   "formula": "Little's Law: average cycle time ~ average WIP / average throughput",
+   "variables": "WIP in items; throughput in items per calendar day; cycle time in days",
+   "verified_by": "python",
+   "inputs": "30 items in 42 days (0.714/day, 5/week); mean CT 275/30 = 9.17 days; current WIP 9",
+   "result": "implied past average WIP 6.55 (~6.5); projected average CT 9/0.714 = 12.6 days"
+  },
+  {
+   "formula": "Per-stage pace: 85th percentile (nearest rank) of age at which past items left each stage",
+   "variables": "stage exit ages in days for the same 30 illustrative items (synthetic, derived as round(fraction x cycle time) with fractions 0.2/0.6/0.8/1.0)",
+   "verified_by": "python",
+   "inputs": "see script",
+   "result": "Analysis 3, Development 8, Review 11, Testing 14"
+  },
+  {
+   "formula": "Spreadsheet: =IF(AND(E6<>\"\",F6=\"\"),TODAY()-E6+1,\"\"); =IFERROR(MATCH(D6,$L$2:$L$5,0),\"\"); =IF(J6=\"\",\"\",J6+(COUNTIF($J$6:J6,J6)-1)*0.08); =SMALL($G$6:$G$40,ROUNDUP(0.85*COUNT($G$6:$G$40),0))",
+   "variables": "template Cards tab: D Column, E Started, F Finished, G Cycle time; added I Age, J Stage number, K Plot X",
+   "verified_by": "LibreOffice Calc (headless) recalculation",
+   "inputs": "test rows on a copy of kanban-board-template-advanced.xlsx",
+   "result": "Age 2, 9, 14, 10; stage numbers 1,1,2,3; Plot X 1, 1.08, 2, 3; P85 of {8,14} = 14"
+  }
+ ],
+ "formula_verification_script": "import math, statistics as st, datetime as dt\nct=[2,3,3,4,4,5,5,5,6,6,6,7,7,7,8,8,8,9,9,10,10,11,12,12,13,14,16,18,21,26]  # cycle times, calendar days, finish-start+1\nn=len(ct); s=sorted(ct)\ndef nr(data,p):\n    d=sorted(data); r=math.ceil(p/100*len(d)); return r,d[r-1]\nprint(\"n\",n,\"sum\",sum(ct),\"mean\",round(st.mean(ct),2),\"median(avg)\",st.median(ct))\nfor p in (50,70,85,95): print(\"P\",p,nr(ct,p))\nprint(\"share<=14\",sum(c<=14 for c in ct),\"/\",n, sum(c<=14 for c in ct)/n)\ntoday=dt.date(2026,11,25)\nwip=[(\"A\",\"Analysis\",dt.date(2026,11,24)),(\"B\",\"Analysis\",dt.date(2026,11,17)),(\"C\",\"Development\",dt.date(2026,11,23)),\n     (\"D\",\"Development\",dt.date(2026,11,19)),(\"E\",\"Development\",dt.date(2026,11,12)),(\"F\",\"Review\",dt.date(2026,11,20)),\n     (\"G\",\"Review\",dt.date(2026,11,16)),(\"H\",\"Testing\",dt.date(2026,11,18)),(\"I\",\"Testing\",dt.date(2026,11,9))]\nages={}\nfor k,stg,d in wip:\n    a=(today-d).days+1; ages[k]=a\n    ge=[c for c in ct if c>=a]; ok=[c for c in ge if c<=14]\n    rank=sum(c<a for c in ct)/n  # share of past items that finished faster than current age\n    print(k,stg,d.strftime('%a %d %b'),\"age\",a,\"| past items finished in fewer days:\",f\"{rank:.0%}\",\"| P(<=14 | >=age)=\",f\"{len(ok)}/{len(ge)}\", (f\"{len(ok)/len(ge):.0%}\" if ge else \"-\"))\nprint(\"total WIP age\",sum(ages.values()),\"avg age\",round(sum(ages.values())/len(ages),2),\"WIP\",len(ages))\nge=[c for c in ct if c>=17]; print(\"I: P(<=21|>=17)\",sum(c<=21 for c in ge),\"/\",len(ge))\n# per-stage exit ages (synthetic, derived from each item's cycle time)\nfr={\"Analysis\":0.2,\"Development\":0.6,\"Review\":0.8,\"Testing\":1.0}\nexits={k:[max(1,round(f*c)) for c in ct] for k,f in fr.items()}\nfor k,v in exits.items(): print(\"exit age\",k,\"P50\",nr(v,50)[1],\"P85\",nr(v,85)[1])\n# Little's law check: 30 items finished over 6 weeks (42 days)\nth=30/42; print(\"throughput/day\",round(th,3),\"per week\",round(th*7,2))\nprint(\"LL avg CT at WIP 9:\",round(9/th,2),\"days; implied avg WIP for mean CT\",round(st.mean(ct)*th,2))\n",
+ "formula_verification_output": "n 30 sum 275 mean 9.17 median(avg) 8.0\nP 50 (15, 8)\nP 70 (21, 10)\nP 85 (26, 14)\nP 95 (29, 21)\nshare<=14 26 / 30 0.8666666666666667\nA Analysis Tue 24 Nov age 2 | past items finished in fewer days: 0% | P(<=14 | >=age)= 26/30 87%\nB Analysis Tue 17 Nov age 9 | past items finished in fewer days: 57% | P(<=14 | >=age)= 9/13 69%\nC Development Mon 23 Nov age 3 | past items finished in fewer days: 3% | P(<=14 | >=age)= 25/29 86%\nD Development Thu 19 Nov age 7 | past items finished in fewer days: 37% | P(<=14 | >=age)= 15/19 79%\nE Development Thu 12 Nov age 14 | past items finished in fewer days: 83% | P(<=14 | >=age)= 1/5 20%\nF Review Fri 20 Nov age 6 | past items finished in fewer days: 27% | P(<=14 | >=age)= 18/22 82%\nG Review Mon 16 Nov age 10 | past items finished in fewer days: 63% | P(<=14 | >=age)= 7/11 64%\nH Testing Wed 18 Nov age 8 | past items finished in fewer days: 47% | P(<=14 | >=age)= 12/16 75%\nI Testing Mon 09 Nov age 17 | past items finished in fewer days: 90% | P(<=14 | >=age)= 0/3 0%\ntotal WIP age 76 avg age 8.44 WIP 9\nI: P(<=21|>=17) 2 / 3\nexit age Analysis P50 2 P85 3\nexit age Development P50 5 P85 8\nexit age Review P50 6 P85 11\nexit age Testing P50 8 P85 14\nthroughput/day 0.714 per week 5.0\nLL avg CT at WIP 9: 12.6 days; implied avg WIP for mean CT 6.55\n",
+ "worked_examples": [
+  {
+   "title": "Website development team reads its WIP aging chart on Wednesday 25 November 2026: percentile lines from 30 finished items, ages of nine items in progress, per-stage pace, conditional chance of meeting a 14-day SLE, daily actions and a Little's Law check",
+   "illustrative": true
+  }
+ ],
+ "statistical_text_measurements": {
+  "url": "/project-management/kanban/wip-aging-chart/",
+  "word_count": 4023,
+  "unique_words": 846,
+  "type_token_ratio": 0.2103,
+  "mattr_100": 0.6961,
+  "shannon_word_entropy_bits": 8.253,
+  "normalised_entropy": 0.8487,
+  "sentences": 163,
+  "avg_sentence_length": 17.98,
+  "sentence_length_sd": 9.11,
+  "sentence_length_cv": 0.506,
+  "paragraph_length_mean": 35.3,
+  "paragraph_length_sd": 17.6,
+  "bigram_repetition_rate": 0.4053,
+  "trigram_repetition_rate": 0.1582,
+  "top_repeated_4grams": [
+   [
+    "a wip aging chart",
+    11
+   ],
+   [
+    "work item age is",
+    5
+   ],
+   [
+    "finished within 14 days",
+    5
+   ],
+   [
+    "85 of past items",
+    4
+   ],
+   [
+    "past items reached age",
+    4
+   ],
+   [
+    "its work item age",
+    3
+   ],
+   [
+    "items are at risk",
+    3
+   ],
+   [
+    "on the horizontal axis",
+    3
+   ]
+  ],
+  "most_common_sentence_openers": [
+   [
+    "the kanban",
+    4
+   ],
+   [
+    "the aging",
+    4
+   ],
+   [
+    "work item",
+    3
+   ],
+   [
+    "an item",
+    3
+   ]
+  ],
+  "formulaic_phrases_found": [],
+  "watch_phrases_counts": {},
+  "most_similar_existing_guides": [
+   [
+    0.636,
+    "/project-management/kanban/cycle-time/"
+   ],
+   [
+    0.528,
+    "/project-management/kanban/kanban-metrics/"
+   ],
+   [
+    0.448,
+    "/project-management/kanban/what-is-kanban/"
+   ],
+   [
+    0.445,
+    "/project-management/kanban/kanban-planning/"
+   ],
+   [
+    0.404,
+    "/project-management/kanban/cumulative-flow-diagram/"
+   ]
+  ],
+  "note": "Descriptive editorial diagnostics only. No AI-detection probability is calculated."
+ },
+ "self_assessment": {
+  "technical_accuracy_25": 24,
+  "sources_15": 13,
+  "educational_usefulness_15": 14,
+  "examples_10": 10,
+  "information_gain_10": 9,
+  "precision_readability_10": 9,
+  "search_intent_5": 5,
+  "internal_linking_5": 5,
+  "technical_seo_5": 5,
+  "total": 94
+ },
+ "required_disclosures": [
+  "Worked example labelled illustrative",
+  "Per-stage pace figures are illustrative values derived from the example's own data",
+  "No PMAI course mentioned in the body (existing PMAI box only)"
+ ],
+ "unverified_claims": [
+  "The content of Vacanti's chapters 6-7 on the aging chart was not inspected (only the sample's table of contents and chapter 3/3a); the article attributes only the chapter existence and the +1 convention to the book",
+  "Businessmap's current product behaviour was taken from its published article, not tested in the product",
+  "ActionableAgile documentation page is marked archived; the current product version was not tested"
+ ],
+ "unresolved_issues": [
+  "TF-IDF similarity 0.635 with /project-management/kanban/cycle-time/ (shared vocabulary: cycle time, percentile, SLE). Intent differs (unfinished vs finished work), and the dataset and examples are new; the cycle time page's work item age subsection now overlaps lightly and could link here",
+  "Spreadsheet formulas (Age, Stage number, Plot X, nearest-rank SMALL/ROUNDUP percentile) were tested in LibreOffice Calc on a copy of the advanced Kanban board template's Cards tab, with DATE(2026,11,25) substituted for TODAY(); results matched (ages 2, 9, 14, 10; P85 correct). Not tested in Microsoft Excel or Google Sheets, and chart-building steps 6-7 were not executed"
+ ]
+}
