@@ -1,0 +1,214 @@
+{
+ "url": "/project-management/agile/agile-operations-it/",
+ "status": "PUBLISH",
+ "publication_eligible": true,
+ "gates": {
+  "definitions_accurate": true,
+  "framework_requirements_verified": true,
+  "calculations_correct": true,
+  "variables_units_defined": true,
+  "examples_consistent_and_labelled": true,
+  "claims_supported": true,
+  "sources_authentic": true,
+  "educational_value": true,
+  "no_duplicate_intent": true,
+  "internal_links_valid": true,
+  "certification_claims_accurate": true,
+  "disclosures_included": true,
+  "metadata_valid": true,
+  "no_fabricated_experience": true
+ },
+ "scores": {
+  "technical_accuracy_25": 23,
+  "sources_15": 13,
+  "educational_usefulness_15": 14,
+  "examples_10": 10,
+  "information_gain_10": 9,
+  "precision_readability_10": 9,
+  "search_intent_5": 5,
+  "internal_linking_5": 5,
+  "technical_seo_5": 5,
+  "total": 93
+ },
+ "claims_checked": [
+  {
+   "claim": "DORA has five software delivery metrics (change lead time, deployment frequency, failed deployment recovery time; change fail rate, deployment rework rate) grouped as throughput and instability",
+   "source": "https://dora.dev/guides/dora-metrics/",
+   "result": "confirmed"
+  },
+  {
+   "claim": "MTTR/time to restore redefined as failed deployment recovery time in 2023, covering only change-caused failures; deployment rework rate added 2024; reliability treated as operational performance",
+   "source": "https://dora.dev/guides/dora-metrics/history/",
+   "result": "confirmed"
+  },
+  {
+   "claim": "PeopleCert is releasing ITIL (Version 5) in phases during 2026; ITIL 4 remains available; no ITIL 4 retirement date",
+   "source": "https://peoplecert.org/news-and-announcements/itil-version-5-explained ; https://www.globalknowledge.com/en-us/resources/articles/announcing-itil-version-5-evolution-in-action ; https://www.globalknowledge.com/en-us/certifications/certification-training/itil/itil-version-5-certification-faq",
+   "result": "corrected"
+  },
+  {
+   "claim": "ITIL 4 change enablement: standard/normal/emergency changes, change authority incl. peer review/automation; formerly 'change control'",
+   "source": "https://itsm.tools/change-enablement/ (secondary; PeopleCert practice guide paywalled)",
+   "result": "confirmed"
+  },
+  {
+   "claim": "ITIL 4 guiding principles 'focus on value', 'progress iteratively with feedback'",
+   "source": "ITIL 4 Foundation (general reference; not re-inspected)",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Toil definition and 50% operational-work cap",
+   "source": "https://sre.google/sre-book/eliminating-toil/",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Error budget = 1 - SLO; releases halted when exhausted",
+   "source": "https://sre.google/sre-book/embracing-risk/",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Change fail rate defined per deployment requiring immediate intervention",
+   "source": "https://dora.dev/guides/dora-metrics/",
+   "result": "corrected"
+  },
+  {
+   "claim": "Wrike top-rated tool",
+   "source": "site fact (Wrike #1, 9.4)",
+   "result": "confirmed"
+  }
+ ],
+ "calculations_rechecked": [
+  {
+   "item": "Capacity 6 x 32 = 192 h/week",
+   "result": "correct"
+  },
+  {
+   "item": "Unplanned sum 708, mean 88.5 h, 46.1%, weekly shares 36.5-52.6%",
+   "result": "correct"
+  },
+  {
+   "item": "Mean exceeded in 4/8 weeks; 96 h reservation covers 6/8",
+   "result": "correct"
+  },
+  {
+   "item": "Little's Law 36/22.5 = 1.6 wk (8 days); 18/22.5 = 0.8 wk (4 days)",
+   "result": "correct"
+  },
+  {
+   "item": "Error budget 43,200 x 0.001 = 43.2 min; 25/43.2 = 57.9%; 18.2 min left",
+   "result": "correct"
+  },
+  {
+   "item": "Automation saving 14 x 2.75 = 38.5 h/month; payback 60/38.5 = 1.56 months",
+   "result": "correct"
+  },
+  {
+   "item": "72/192 = 37.5%",
+   "result": "correct"
+  },
+  {
+   "item": "Change fail rate 6/80 = 7.5%",
+   "result": "correct"
+  }
+ ],
+ "changes_made": [
+  "ITIL (Version 5) paragraph rewritten: attributes 'phased release' and 'ITIL 4 remains available' to PeopleCert, attributes Feb 2026 Foundation launch and no-retirement-date to accredited training providers, and replaces unsupported 'still the ones most service desks run on' with 'remain in wide use while the new version rolls out'.",
+  "Worked example: added note that DORA defines change fail rate per deployment and the example treats each change as one deployment.",
+  "FAQ 'Can Agile and ITIL work together?': ITIL 4 availability now attributed to PeopleCert."
+ ],
+ "statistical_text_measurements": {
+  "url": "/project-management/agile/agile-operations-it/",
+  "word_count": 4496,
+  "unique_words": 1156,
+  "type_token_ratio": 0.2571,
+  "mattr_100": 0.7526,
+  "shannon_word_entropy_bits": 8.76,
+  "normalised_entropy": 0.8609,
+  "sentences": 191,
+  "avg_sentence_length": 17.66,
+  "sentence_length_sd": 9.06,
+  "sentence_length_cv": 0.513,
+  "paragraph_length_mean": 43.3,
+  "paragraph_length_sd": 24.7,
+  "bigram_repetition_rate": 0.3257,
+  "trigram_repetition_rate": 0.1088,
+  "top_repeated_4grams": [
+   [
+    "eight weeks or more",
+    3
+   ],
+   [
+    "failed deployment recovery time",
+    3
+   ],
+   [
+    "agile in it operations",
+    3
+   ],
+   [
+    "cycle time per class",
+    3
+   ],
+   [
+    "time per class of",
+    3
+   ],
+   [
+    "per class of service",
+    3
+   ],
+   [
+    "written interrupt policy and",
+    2
+   ],
+   [
+    "teams whose work is",
+    2
+   ]
+  ],
+  "most_common_sentence_openers": [
+   [
+    "agile operations",
+    4
+   ],
+   [
+    "this guide",
+    3
+   ],
+   [
+    "it is",
+    3
+   ]
+  ],
+  "formulaic_phrases_found": [],
+  "watch_phrases_counts": {},
+  "most_similar_existing_guides": [
+   [
+    0.463,
+    "/project-management/kanban/kanban-vs-agile/"
+   ],
+   [
+    0.435,
+    "/project-management/kanban/kanban-vs-scrum/"
+   ],
+   [
+    0.418,
+    "/project-management/agile/agile-methodology/"
+   ],
+   [
+    0.407,
+    "/project-management/kanban/what-is-kanban/"
+   ],
+   [
+    0.399,
+    "/project-management/kanban/kanban-principles/"
+   ]
+  ],
+  "note": "Descriptive editorial diagnostics only. No AI-detection probability is calculated."
+ },
+ "unresolved_issues": [
+  "Site consistency (not this page): /project-management/kanban/devops/ still lists four DORA metrics with 'time to restore service'; should be updated to the five current metrics.",
+  "ITIL 4 change enablement details rest on a secondary source (ITSM.tools) because the PeopleCert practice guide is paywalled; low risk."
+ ],
+ "reviewer_note": "Automated review by an AI reviewer; not a human professional review."
+}

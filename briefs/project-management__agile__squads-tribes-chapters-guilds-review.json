@@ -1,0 +1,278 @@
+{
+ "url": "/project-management/agile/squads-tribes-chapters-guilds/",
+ "status": "PUBLISH",
+ "publication_eligible": true,
+ "gates": {
+  "definitions_accurate": true,
+  "framework_requirements_verified": true,
+  "calculations_correct": true,
+  "variables_units_defined": true,
+  "examples_consistent_and_labelled": true,
+  "claims_supported": true,
+  "sources_authentic": true,
+  "educational_value": true,
+  "no_duplicate_intent": true,
+  "internal_links_valid": true,
+  "certification_claims_accurate": true,
+  "disclosures_included": true,
+  "metadata_valid": true,
+  "no_fabricated_experience": true
+ },
+ "scores": {
+  "technical_accuracy_25": 23,
+  "sources_15": 14,
+  "educational_usefulness_15": 14,
+  "examples_10": 9,
+  "information_gain_10": 9,
+  "precision_readability_10": 9,
+  "search_intent_5": 5,
+  "internal_linking_5": 5,
+  "technical_seo_5": 5,
+  "total": 93
+ },
+ "claims_checked": [
+  {
+   "claim": "Kniberg & Ivarsson paper dated October 2012; 30 to 250 tech staff in 3 years; 30+ teams in 3 cities; 'a journey in progress, not a journey completed'; introduced gradually over the past year",
+   "source": "https://holub.com/goodies/SpotifyScaling.pdf",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Kniberg and Ivarsson were 'then agile coaches at Spotify'",
+   "source": "https://holub.com/goodies/SpotifyScaling.pdf",
+   "result": "removed (paper does not state the authors' roles)"
+  },
+  {
+   "claim": "Squad similar to a Scrum team, 'mini-startup', sit together, roughly 10% hack time, no formally appointed squad leader, own choice of Scrum/Kanban",
+   "source": "https://holub.com/goodies/SpotifyScaling.pdf",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Agile coach 'coaches the product owner'",
+   "source": "https://holub.com/goodies/SpotifyScaling.pdf",
+   "result": "corrected (paper: retrospectives, sprint planning, one-on-one coaching)"
+  },
+  {
+   "claim": "Tribe as incubator; under about 100 people citing Dunbar number; tribe lead provides best possible habitat",
+   "source": "https://holub.com/goodies/SpotifyScaling.pdf",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Chapter lead is line manager with traditional responsibilities and works in a squad; matrix 'weighted towards delivery'",
+   "source": "https://holub.com/goodies/SpotifyScaling.pdf",
+   "result": "confirmed"
+  },
+  {
+   "claim": "'Professor and entrepreneur' model",
+   "source": "https://holub.com/goodies/SpotifyScaling.pdf",
+   "result": "corrected (attributed to Mary and Tom Poppendieck as in the paper; fixed 'It compares' grammar)"
+  },
+  {
+   "claim": "System owner (pair encouraged, dev-ops pair, not a bottleneck); chief architect advice not binding; dependency survey; Scrum of Scrums on demand; guild coordinator",
+   "source": "https://holub.com/goodies/SpotifyScaling.pdf",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Two Spotify Engineering Culture videos in 2014",
+   "source": "https://engineering.atspotify.com/spotify-engineering-culture-part-2/",
+   "result": "confirmed (made specific: March and September 2014)"
+  },
+  {
+   "claim": "Atlassian: squads 6-12, tribes 40-150, trio (tribe lead, product lead, design lead), alliance of typically three or more trios",
+   "source": "https://www.atlassian.com/agile/agile-at-scale/spotify",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Kniberg 2015: 'wasn't actually intended to be a generic framework', 'just the messenger', adopters not worse off and some improved",
+   "source": "https://www.goodreads.com/author_blog_posts/8501556-no-i-didn-t-invent-the-spotify-model?tab=author",
+   "result": "confirmed (paraphrase tightened)"
+  },
+  {
+   "claim": "InfoQ 2016: Spotify chapter lead Marcin Floryan, simplified description, not to copy",
+   "source": "https://www.infoq.com/news/2016/10/no-spotify-model",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Jeremiah Lee 2020: 'only ever aspirational', never fully implemented",
+   "source": "https://jeremiahlee.com/posts/failed-squad-goals/",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Lee, 'citing comments by Joakim Sundén', reported that alignment and accountability parts were never completed",
+   "source": "https://jeremiahlee.com/posts/failed-squad-goals/",
+   "result": "corrected (that statement is Lee's own; Sundén's actual quote 'Even at the time we wrote it, we weren't doing it' added with his role)"
+  },
+  {
+   "claim": "Lee joined Spotify after interviewing in 2017; matrix friction description",
+   "source": "https://jeremiahlee.com/posts/failed-squad-goals/",
+   "result": "corrected (precise wording: chapter leads across all squads in a tribe, PMs report to tribe lead, escalation to engineering director)"
+  },
+  {
+   "claim": "Scrum Guide 2020: typically 10 or fewer; self-managing 'who does what, when, and how'",
+   "source": "https://www.scrumguides.org/scrum-guide.html",
+   "result": "confirmed"
+  },
+  {
+   "claim": "SAFe ART 50-125 and PI 8-12 weeks; LeSS 2-8 teams, LeSS Huge; Scrum@Scale 4-5 teams, MetaScrum",
+   "source": "site pages /project-management/agile/scaled-agile-framework-safe/, /large-scale-scrum-less/, /project-management/scrum/scrum-at-scale/",
+   "result": "confirmed (consistent with site)"
+  },
+  {
+   "claim": "Jira 8.6, best for software and Agile teams; Wrike top-rated 9.4",
+   "source": "/project-management-tools/jira/, /project-management-tools/wrike/",
+   "result": "confirmed"
+  },
+  {
+   "claim": "ING designed its own model after studying others",
+   "source": "/project-management/agile/agile-transformation/",
+   "result": "confirmed (consistent with site page)"
+  },
+  {
+   "claim": "'More criticism than most scaling approaches'",
+   "source": "none",
+   "result": "removed (unsupported comparative)"
+  },
+  {
+   "claim": "'Spotify kept changing its organisation'",
+   "source": "none",
+   "result": "removed (reworded to: the paper describes Spotify as it was in 2012)"
+  }
+ ],
+ "calculations_rechecked": [
+  {
+   "item": "Squad sizes 8,8,7,6,7,7,7,6; tribe totals 29 and 27; 56+2+3=61",
+   "result": "correct"
+  },
+  {
+   "item": "Chapter counts by skill (A: backend 8, FE 10, QA 4, design 3; B: backend 13 = 7+6, data 7, QA 3)",
+   "result": "correct"
+  },
+  {
+   "item": "H=(R*m/60/f)+s+d: R=12 -> 8.5 h (22.7%), 29 h left (77.3%); R=6 -> 6.25 h (16.7%); R=5 -> 5.875 h (15.7%)",
+   "result": "correct"
+  },
+  {
+   "item": "'Split frees about 2.25 hours a week for each lead'",
+   "result": "corrected (2.25 h for one lead, about 2.6 h for the other)"
+  },
+  {
+   "item": "Communication paths n(n-1)/2: 1,830 and 28",
+   "result": "correct (paragraph removed as low value)"
+  }
+ ],
+ "changes_made": [
+  "Removed unsupported 'then agile coaches at Spotify'; changed 'Its authors were working on one problem' to 'The paper addresses one problem'.",
+  "Dated the two 2014 videos precisely (March and September 2014); '30 to 250' stated as in the paper.",
+  "Merged the redundant 'Squad vs tribe vs chapter vs guild' section into the at-a-glance table (added Main risk column, merged membership wording) and moved the chapter-vs-guild / squad-vs-tribe disambiguation there.",
+  "Agile coach role corrected to the paper's description (retrospectives, sprint planning, one-to-one coaching).",
+  "Tribe sizing sentence attributed to 'the paper'; adapt-step reworded to reduce repetition of 'under about 100 people'.",
+  "Removed filler 'Crucially'.",
+  "Fixed 'It compares the arrangement' (wrong referent) and attributed the 'professor and entrepreneur' model to Mary and Tom Poppendieck as the paper does.",
+  "Worked example: 'Every person' -> 'Every squad member' has one line manager (tribe leads/coaches not covered); corrected the time-saved interpretation to 2.25 and about 2.6 hours.",
+  "Removed the low-value communication-paths paragraph.",
+  "Criticism: replaced the misattributed Sundén claim with Lee's own statement and Sundén's verified quote and role; made the matrix-friction description match Lee's essay; tightened Kniberg paraphrase; replaced unsupported 'more criticism than most scaling approaches'; removed 'Renaming without changing' bullet (duplicated in Common mistakes, which now carries the fuller wording).",
+  "Common mistakes: replaced unsupported 'Spotify kept changing its organisation'.",
+  "Condensed the Tools section from a list to one paragraph (same verified scores).",
+  "Removed two FAQs that duplicated body text ('What does a tribe lead do?', 'Why do companies struggle...'); 12 -> 10 FAQs.",
+  "Net length about 5,026 -> 4,860 words; 18 -> 17 sections."
+ ],
+ "statistical_text_measurements": {
+  "url": "/project-management/agile/squads-tribes-chapters-guilds/",
+  "word_count": 4860,
+  "unique_words": 1118,
+  "type_token_ratio": 0.23,
+  "mattr_100": 0.7243,
+  "shannon_word_entropy_bits": 8.597,
+  "normalised_entropy": 0.849,
+  "sentences": 205,
+  "avg_sentence_length": 18.6,
+  "sentence_length_sd": 11.62,
+  "sentence_length_cv": 0.625,
+  "paragraph_length_mean": 39.7,
+  "paragraph_length_sd": 24.1,
+  "bigram_repetition_rate": 0.3571,
+  "trigram_repetition_rate": 0.1278,
+  "top_repeated_4grams": [
+   [
+    "a tribe is a",
+    4
+   ],
+   [
+    "under about 100 people",
+    4
+   ],
+   [
+    "people with the same",
+    3
+   ],
+   [
+    "with the same skill",
+    3
+   ],
+   [
+    "henrik kniberg and anders",
+    3
+   ],
+   [
+    "kniberg and anders ivarsson",
+    3
+   ],
+   [
+    "part of the product",
+    3
+   ],
+   [
+    "tribe is a group",
+    3
+   ]
+  ],
+  "most_common_sentence_openers": [
+   [
+    "the paper",
+    4
+   ],
+   [
+    "a squad",
+    3
+   ],
+   [
+    "a chapter",
+    3
+   ],
+   [
+    "the chapter",
+    3
+   ]
+  ],
+  "formulaic_phrases_found": [],
+  "watch_phrases_counts": {},
+  "most_similar_existing_guides": [
+   [
+    0.239,
+    "/project-management/agile/agile-team-structures/"
+   ],
+   [
+    0.216,
+    "/project-management/agile/what-is-an-agile-team/"
+   ],
+   [
+    0.188,
+    "/project-management/agile/agile-transformation/"
+   ],
+   [
+    0.164,
+    "/project-management/agile/large-scale-scrum-less/"
+   ],
+   [
+    0.162,
+    "/project-management/agile/how-to-implement-agile/"
+   ]
+  ],
+  "note": "Descriptive editorial diagnostics only. No AI-detection probability is calculated."
+ },
+ "unresolved_issues": [
+  "Still about 4,860 words, longer than typical; the remaining sections each serve a distinct sub-intent, so no further cuts were made.",
+  "Joakim Sundén quote and Lee's account are second-hand reports in Lee's essay; attributed as such.",
+  "'In the authors' view, bureaucracy and politics creep in' paraphrases the paper's Dunbar passage; not re-quoted verbatim in this review."
+ ],
+ "reviewer_note": "Automated review by an AI reviewer; not a human professional review."
+}

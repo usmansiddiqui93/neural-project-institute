@@ -1,0 +1,239 @@
+{
+ "url": "/project-management/agile/scaled-agile-framework-safe/",
+ "status": "PUBLISH",
+ "publication_eligible": true,
+ "gates": {
+  "definitions_accurate": true,
+  "framework_requirements_verified": true,
+  "calculations_correct": true,
+  "variables_units_defined": true,
+  "examples_consistent_and_labelled": true,
+  "claims_supported": true,
+  "sources_authentic": true,
+  "educational_value": true,
+  "no_duplicate_intent": true,
+  "internal_links_valid": true,
+  "certification_claims_accurate": true,
+  "disclosures_included": true,
+  "metadata_valid": true,
+  "no_fabricated_experience": true
+ },
+ "scores": {
+  "technical_accuracy_25": 23,
+  "sources_15": 14,
+  "educational_usefulness_15": 14,
+  "examples_10": 9,
+  "information_gain_10": 9,
+  "precision_readability_10": 9,
+  "search_intent_5": 5,
+  "internal_linking_5": 5,
+  "technical_seo_5": 5,
+  "total": 93
+ },
+ "claims_checked": [
+  {
+   "claim": "AI-Native SAFe announced June 2026 (unveiled 16 June; release announcement 23 June); does not replace Core SAFe; Core SAFe continues to be supported",
+   "source": "https://framework.scaledagile.com/blog/ai-native-safe-is-the-operating-model-for-the-ai-native-organization ; https://aijourn.com/scaled-agile-releases-ai-native-safe-a-new-version-of-the-worlds-most-trusted-framework-to-provide-governance-for-the-ai-era/ (PR Newswire release)",
+   "result": "confirmed"
+  },
+  {
+   "claim": "AI-Native SAFe 'officially released at the SAFe Summit in September 2026'",
+   "source": "https://www.prnewswire.com/news-releases/scaled-agile-to-host-safe--ai-summit-san-diego-unveiling-ai-native-safe-for-the-age-of-ai-302872730.html ; keynote recap title on framework.scaledagile.com (page itself robots-blocked)",
+   "result": "corrected"
+  },
+  {
+   "claim": "AI Value Architect role",
+   "source": "PR Newswire release 23 Jun 2026; https://framework.scaledagile.com/ain-safe-ai-value-architect",
+   "result": "confirmed"
+  },
+  {
+   "claim": "AI-Native Teams typically 3-7 people; Product, Builder, Domain Expert, AI capabilities; human accountability",
+   "source": "https://framework.scaledagile.com/ain-safe-ai-native-teams",
+   "result": "confirmed"
+  },
+  {
+   "claim": "One-day PI Outcome Planning replaces two-day PI Planning",
+   "source": "https://framework.scaledagile.com/ain-safe-pi-outcome-planning",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Two-hour Sense and Respond at least once per iteration replaces Inspect and Adapt and includes System Demo activities",
+   "source": "https://framework.scaledagile.com/ain-safe-sense-and-respond",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Five disciplines (Leadership and Culture; Team and Technical Agility; Product Development Flow; Large Solution Integration and Delivery; Lean Portfolio Management) and example competencies",
+   "source": "https://framework.scaledagile.com/safe-knowledge-base (modified 5 Oct 2026)",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Configuration posters still labelled SAFe 6.0",
+   "source": "https://framework.scaledagile.com/posters",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Certification tiers $195/$295/$995 a year; SA, SSM, POPM foundational, RTE advanced, SPC expert",
+   "source": "https://support.scaledagile.com/en/articles/9768958-what-are-scaled-agile-s-certification-tiers-for-studio",
+   "result": "confirmed"
+  },
+  {
+   "claim": "AI-Native certifications renewed individually",
+   "source": "https://support.scaledagile.com/en/articles/9768958-what-are-scaled-agile-s-certification-tiers-for-studio",
+   "result": "corrected"
+  },
+  {
+   "claim": "SAFe Agilist exam 45 questions, 90 min, 80%, two attempts within 60 days",
+   "source": "https://support.scaledagile.com/en/articles/13835858-exam-study-guide-ai-empowered-sa-safe-agilist-exam-for-leading-safe",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Course names AI-Empowered Leading SAFe / AI-Empowered SAFe Scrum Master",
+   "source": "https://www.fastlaneus.com/course/scaledagile-sa ; https://www.flane.de/en/course/scaledagile-ssm (training partners)",
+   "result": "corrected"
+  },
+  {
+   "claim": "Most organisations, tools, job descriptions and courses still work with Core SAFe",
+   "source": "none available",
+   "result": "corrected"
+  },
+  {
+   "claim": "Four core values, ten immutable principles; PI 8-12 weeks; SAFe 6.0 renames; first release 2011; 6.0 March 2023",
+   "source": "https://framework.scaledagile.com/lean-agile-mindset-safe-core-values-safe-principles ; https://scaledagileframework.com/whats-new-in-safe-6-0 ; writer record",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Schwaber 2013 and Thoughtworks Radar criticisms",
+   "source": "https://en.wikipedia.org/wiki/Scaled_agile_framework (citations)",
+   "result": "confirmed"
+  }
+ ],
+ "calculations_rechecked": [
+  {
+   "item": "120+105+110+85 = 420; each within 50-125; merged 225 > 125",
+   "result": "correct"
+  },
+  {
+   "item": "Teams of ~10: 12, 10.5, 11, 8.5",
+   "result": "correct"
+  },
+  {
+   "item": "PI hours 10 x 40 = 400; (16+4)/400 = 5.0%; 20/480 = 4.2%",
+   "result": "correct"
+  },
+  {
+   "item": "IP share 2/10 = 20%",
+   "result": "correct"
+  },
+  {
+   "item": "PIs per year 52/10 = 5.2; 52/12 = 4.33",
+   "result": "correct"
+  }
+ ],
+ "changes_made": [
+  "Takeaway: 'officially released in September 2026' replaced with 'announced in June 2026 and presented in full at the SAFe Summit in September 2026'; 'mainstream' changed to 'established'.",
+  "Version table: AI-Native SAFe status now cites the 23 June 2026 release announcement and the SAFe Summit keynote (San Diego, 14-18 Sept 2026) instead of an unsourced 'officially released' date.",
+  "Replaced unsupported claim that most organisations, tools, job descriptions and courses still use Core SAFe with a reasoned statement tied to the model's newness and the Core SAFe role certifications.",
+  "Certification renewal: corrected 'AI-Native SAFe certifications are renewed individually' to 'most', noting AI-Native SPC versions fall under the Expert tier.",
+  "Certification table: course name normalised to 'AI-Empowered SAFe Scrum Master' as used by training partners."
+ ],
+ "statistical_text_measurements": {
+  "url": "/project-management/agile/scaled-agile-framework-safe/",
+  "word_count": 4095,
+  "unique_words": 1104,
+  "type_token_ratio": 0.2696,
+  "mattr_100": 0.7412,
+  "shannon_word_entropy_bits": 8.701,
+  "normalised_entropy": 0.8608,
+  "sentences": 147,
+  "avg_sentence_length": 17.86,
+  "sentence_length_sd": 9.13,
+  "sentence_length_cv": 0.511,
+  "paragraph_length_mean": 35.0,
+  "paragraph_length_sd": 24.1,
+  "bigram_repetition_rate": 0.3332,
+  "trigram_repetition_rate": 0.1156,
+  "top_repeated_4grams": [
+   [
+    "8 to 12 weeks",
+    4
+   ],
+   [
+    "the scaled agile framework",
+    3
+   ],
+   [
+    "scaled agile framework safe",
+    3
+   ],
+   [
+    "by scaled agile inc",
+    3
+   ],
+   [
+    "50 to 125 people",
+    3
+   ],
+   [
+    "typically 8 to 12",
+    3
+   ],
+   [
+    "ai value architect role",
+    3
+   ],
+   [
+    "scrum master team coach",
+    3
+   ]
+  ],
+  "most_common_sentence_openers": [
+   [
+    "safe is",
+    5
+   ],
+   [
+    "scaled agile",
+    4
+   ],
+   [
+    "the division",
+    3
+   ],
+   [
+    "it is",
+    3
+   ]
+  ],
+  "formulaic_phrases_found": [],
+  "watch_phrases_counts": {},
+  "most_similar_existing_guides": [
+   [
+    0.592,
+    "/project-management/agile/agile-release-train/"
+   ],
+   [
+    0.445,
+    "/project-management/agile/pi-planning/"
+   ],
+   [
+    0.333,
+    "/project-management/agile/agile-portfolio-management/"
+   ],
+   [
+    0.315,
+    "/project-management/agile/agile-pmo/"
+   ],
+   [
+    0.309,
+    "/project-management/agile/how-to-learn-agile-and-get-certified/"
+   ]
+  ],
+  "note": "Descriptive editorial diagnostics only. No AI-detection probability is calculated."
+ },
+ "unresolved_issues": [
+  "Scaled Agile's SAFe Summit keynote recap and ART article could not be fetched (robots disallowed); September presentation sourced to the 9 Sept 2026 PR Newswire release and the recap's title only.",
+  "Implementation Roadmap stage names summarised, not checked against the roadmap article (article flags this).",
+  "Site consistency (other pages): ART page lacks AI-Native SAFe note; scrum-certification-and-training CEU figure and how-to-learn-agile SAFe Agilist pass mark ('35 of 45' vs 80%) need rechecking."
+ ],
+ "reviewer_note": "Automated review by an AI reviewer; not a human professional review."
+}

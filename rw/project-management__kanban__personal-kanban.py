@@ -4,7 +4,7 @@ URL = "/project-management/kanban/personal-kanban/"
 
 RW = dict(
     title="Personal Kanban: The Two Rules, Board Setup and Examples",
-    desc="Personal Kanban explained: the two rules, how to set up your board and WIP limit step by step, a worked Little's Law example, and how to make it stick.",
+    desc="Personal Kanban explained: the two rules, how to set up your board and WIP limit step by step, a worked Little's Law example and a weekly review.",
     intro=(
         "Personal Kanban is a way to manage your own work with a simple board and two rules: visualise your work, and limit your work in progress (WIP). "
         "You write each task on a card, move it from Backlog to Doing to Done, and refuse to start something new while your Doing column is full, so you finish more and juggle less. "
@@ -21,13 +21,13 @@ RW = dict(
         S(
             "What is personal Kanban?",
             "**Personal Kanban** is a visual system for managing an individual's work, based on the Kanban method used by teams. You put every task on a card on a board, move cards through simple columns such as Backlog, Doing and Done, and set a limit on how many tasks can be in progress at once. The board shows your real workload; the limit makes you finish before you start more.",
-            "The approach was popularised by Jim Benson and Tonianne DeMaria Barry in *Personal Kanban: Mapping Work | Navigating Life* (2011), which later received a Shingo publication award. According to a 2015 Lean Enterprise Institute article, Benson had first adapted Kanban for software development teams as a manager in the early 2000s and later applied it to individual work. The book boils the method down to two rules.",
+            "The approach was popularised by Jim Benson and Tonianne DeMaria Barry in *Personal Kanban: Mapping Work | Navigating Life* (2011), which the Lean Enterprise Institute describes as Shingo Award-winning. According to a 2015 article on the institute's Lean Post, Benson had first adapted Kanban for software development teams as a manager in the early 2000s and later applied it to individual work. The book boils the method down to two rules.",
             "Personal Kanban is not a separate framework with roles or events. It borrows the core of team Kanban, a pull system with visible work and limited WIP, and leaves everything else to you. For the team version, start with [what Kanban is](/project-management/kanban/what-is-kanban/) or browse the full [Kanban guide](/project-management/kanban/).",
         ),
         S(
             "The two rules of personal Kanban",
             H3("Rule 1: Visualise your work"),
-            "Put every commitment where you can see it, one task per card: work tasks, admin, personal errands, learning. Seeing everything at once does two things a list in your head cannot. It shows how much you have actually agreed to do, and it lets you choose what to do next by comparing options instead of reacting to whatever arrived last. A 2015 Lean Enterprise Institute article on the book makes the same point: knowledge work feels unmanageable largely because it is invisible.",
+            "Put every commitment where you can see it, one task per card: work tasks, admin, personal errands, learning. Seeing everything at once does two things a list in your head cannot. It shows how much you have actually agreed to do, and it lets you choose what to do next by comparing options instead of reacting to whatever arrived last. The same Lean Post article makes the point that knowledge work is often treated as unmanageable because it is invisible.",
             H3("Rule 2: Limit your work in progress"),
             "Decide the maximum number of tasks you will have in Doing at the same time and stick to it. When Doing is full you have three choices: finish something, unblock something, or move something out deliberately. You do not start another task.",
             "The Kanban Guide (edition 2025.5, by John Coleman and Daniel Vacanti) defines WIP as \"the number of work items started but not finished\". On a personal board, that means everything in Doing **and** anything you have started and parked, such as a report waiting for a colleague's figures. If you only count Doing, you can hide overload in a Waiting column.",
@@ -35,7 +35,7 @@ RW = dict(
         ),
         S(
             "Why personal Kanban works",
-            "Three mechanisms explain most of the benefit, and none of them depends on willpower.",
+            "Three mechanisms explain why the two rules help, and none of them depends on willpower.",
             L(
                 "**Less task switching.** The American Psychological Association summarises research showing that switching between tasks has a measurable time cost, and that the cost is larger for complex or unfamiliar tasks (Rubinstein, Meyer and Evans, 2001). Each switch is small, but frequent switching adds up. A WIP limit reduces how often you switch.",
                 "**Shorter waits for each task.** Little's Law, a result from queueing theory, says that in a stable system average cycle time equals average WIP divided by average throughput. If you finish the same number of tasks per week but hold fewer open, each one finishes sooner. The worked example below puts numbers on this.",
@@ -133,7 +133,7 @@ RW = dict(
                 ["Getting Things Done (David Allen)", "Capture, clarify and context lists", "No explicit WIP limit", "GTD next actions can be the backlog; the limit stops overload"],
                 ["Team Kanban board", "Shared view of a team's workflow and flow metrics", "Does not show your personal admin and commitments", "Keep team work on the team board; personal board holds what only you own"],
             ),
-            "Our [to-do list template](/templates/to-do-list-template/) includes a running list with priority, due date, estimated time and status plus a weekly planner, which works well as a backlog. The [priority list template](/templates/priority-list-template/) scores tasks for importance and urgency (1–5) and assigns a do now, schedule, delegate or drop quadrant, which helps you decide what to pull next.",
+            "Our [to-do list template](/templates/to-do-list-template/) includes a running list with priority, due date, estimated time and status plus a weekly planner, which works well as a backlog. The [priority list template](/templates/priority-list-template/) scores tasks for importance and urgency (1–5) and assigns an Eisenhower quadrant (do, schedule, delegate or drop), which helps you decide what to pull next.",
         ),
         S(
             "Personal Kanban for teams and families",
@@ -144,7 +144,7 @@ RW = dict(
             "Tools for personal Kanban",
             "A whiteboard or a sheet of paper is enough, and has the advantage that you see it without opening an app. If you need your board on the move or shared with others, a simple digital board works well.",
             L(
-                "**Spreadsheet:** our [Kanban board template](/templates/kanban-board-template/) has a board view with WIP-limited columns (Backlog, To do, In progress, Review, Done) and a card list that records start and finish dates and calculates cycle time.",
+                "**Spreadsheet:** our [Kanban board template](/templates/kanban-board-template/) has a board view with WIP-limited columns (Backlog, To do, In progress, Review, Done) and a card list with start date, finish date and cycle time for each card.",
                 "**[Trello](/project-management-tools/trello/):** our review rates it best for simple Kanban boards (7.8 out of 10); the free plan allows up to 10 collaborators per Workspace.",
                 "**[Notion](/project-management-tools/notion/):** suits people who want their board next to notes and documents (8.0 out of 10 in our review).",
                 "**[Microsoft Planner](/project-management-tools/microsoft-planner/):** basic Planner is included with Microsoft 365, so it is a practical choice if your organisation already uses it.",
@@ -154,7 +154,7 @@ RW = dict(
         S(
             "Common personal Kanban mistakes",
             L(
-                "**Treating the board as a to-do list with columns.** Without a WIP limit the board only records overload; it does not reduce it.",
+                "**Leaving out the WIP limit.** A board without one records overload; it does not reduce it.",
                 "**Not counting waiting work.** Parking a dozen started tasks in Waiting looks tidy but keeps your real WIP high.",
                 "**Cards that are too big.** \"Website redesign\" will sit in Doing for weeks. Break it into steps you can finish in a day or two.",
                 "**Too many columns too soon.** Each extra column needs a rule about when cards move. Add columns only to solve a problem you have seen.",

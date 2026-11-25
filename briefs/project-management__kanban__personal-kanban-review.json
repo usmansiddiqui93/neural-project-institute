@@ -1,0 +1,206 @@
+{
+ "url": "/project-management/kanban/personal-kanban/",
+ "status": "PUBLISH",
+ "publication_eligible": true,
+ "gates": {
+  "definitions_accurate": true,
+  "framework_requirements_verified": true,
+  "calculations_correct": true,
+  "variables_units_defined": true,
+  "examples_consistent_and_labelled": true,
+  "claims_supported": true,
+  "sources_authentic": true,
+  "educational_value": true,
+  "no_duplicate_intent": true,
+  "internal_links_valid": true,
+  "certification_claims_accurate": true,
+  "disclosures_included": true,
+  "metadata_valid": true,
+  "no_fabricated_experience": true
+ },
+ "scores": {
+  "technical_accuracy_25": 24,
+  "sources_15": 13,
+  "educational_usefulness_15": 14,
+  "examples_10": 9,
+  "information_gain_10": 9,
+  "precision_readability_10": 9,
+  "search_intent_5": 5,
+  "internal_linking_5": 5,
+  "technical_seo_5": 5,
+  "total": 93
+ },
+ "claims_checked": [
+  {
+   "claim": "Two rules (visualise work, limit WIP); Benson and DeMaria Barry book; Benson adapted Kanban for development teams as a manager in the early 2000s, then individual work; knowledge work invisible; whiteboard recommended",
+   "source": "https://www.lean.org/the-lean-post/articles/personal-kanban-you-cant-manage-what-you-cant-see/",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Book 'later received a Shingo publication award'",
+   "source": "https://www.lean.org/the-lean-post/articles/personal-kanban-you-cant-manage-what-you-cant-see/",
+   "result": "corrected (attributed: Lean Enterprise Institute describes it as Shingo Award-winning; exact award name not verified)"
+  },
+  {
+   "claim": "Personal Kanban primer: whiteboard preferable; Backlog/Doing/Done; arbitrary starting limit such as no more than 5",
+   "source": "https://personalkanban.com/pk/primers/building-your-first-personal-kanban-2",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Kanban Guide 2025.5 (Coleman, Vacanti): WIP = 'number of work items started but not finished'; SLE = elapsed time plus probability based on historical cycle time; work item age, cycle time, throughput definitions",
+   "source": "https://kanbanguides.org/the-kanban-guide/2025.5/pdf/kanban-guide.v2025.5.en.pdf",
+   "result": "confirmed"
+  },
+  {
+   "claim": "APA summary of Rubinstein, Meyer and Evans (2001): switching costs time, larger for complex or unfamiliar tasks",
+   "source": "https://www.apa.org/topics/research/multitasking",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Little's Law: average cycle time = average WIP / average throughput, stable system",
+   "source": "/project-management/kanban/wip-limits/",
+   "result": "confirmed (consistent with site; limitations stated)"
+  },
+  {
+   "claim": "Trello 7.8, best for simple Kanban boards, free plan up to 10 collaborators per Workspace; Notion 8.0; basic Planner included in Microsoft 365",
+   "source": "/project-management-tools/trello/, /notion/, /microsoft-planner/",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Kanban board template (Backlog, To do, In progress, Review, Done; started, finished, cycle time); to-do list template fields and weekly planner; priority list template importance/urgency 1-5 and Eisenhower quadrant",
+   "source": "/templates/kanban-board-template/, /templates/to-do-list-template/, /templates/priority-list-template/",
+   "result": "confirmed (quadrant labels and cycle-time wording aligned to the template pages)"
+  },
+  {
+   "claim": "Getting Things Done by David Allen",
+   "source": "general knowledge",
+   "result": "confirmed (widely documented authorship)"
+  }
+ ],
+ "calculations_rechecked": [
+  {
+   "item": "Average WIP 90/10 = 9; throughput 12/10 = 1.2 per day (6 per week)",
+   "result": "correct"
+  },
+  {
+   "item": "Cycle time 9/1.2 = 7.5 working days",
+   "result": "correct"
+  },
+  {
+   "item": "After limits: 40/10 = 4; 4/1.2 = 3.33 days; 55.6% shorter (about 56%); 4.17 days sooner (more than four)",
+   "result": "correct"
+  },
+  {
+   "item": "Counts after limits never exceed Doing 3 + Waiting 2 = 5",
+   "result": "correct (internally consistent)"
+  },
+  {
+   "item": "Nearest-rank 85th percentile of 20 sorted cycle times: rank 17 = 6 working days; 17 of 20 within 6",
+   "result": "correct"
+  }
+ ],
+ "changes_made": [
+  "Meta description: replaced 'how to make it stick' (no such section) with 'a weekly review'.",
+  "Shingo award: replaced unverified 'Shingo publication award' with the Lean Enterprise Institute's own 'Shingo Award-winning' wording, attributed.",
+  "Rule 1: reworded the Lean Post reference to match the article ('treated as unmanageable because it is invisible') and to refer back to the source introduced earlier.",
+  "'Three mechanisms explain most of the benefit' softened to 'explain why the two rules help' (no evidence for 'most').",
+  "Common mistakes: reworded the first bullet so it no longer echoes the kanban-boards page's 'to-do list with columns' line.",
+  "Priority list template description aligned to its page (Eisenhower quadrant: do, schedule, delegate or drop).",
+  "Kanban board template description aligned to its page (card list with start date, finish date and cycle time)."
+ ],
+ "statistical_text_measurements": {
+  "url": "/project-management/kanban/personal-kanban/",
+  "word_count": 3687,
+  "unique_words": 833,
+  "type_token_ratio": 0.2259,
+  "mattr_100": 0.7259,
+  "shannon_word_entropy_bits": 8.241,
+  "normalised_entropy": 0.8494,
+  "sentences": 177,
+  "avg_sentence_length": 16.75,
+  "sentence_length_sd": 9.76,
+  "sentence_length_cv": 0.583,
+  "paragraph_length_mean": 38.5,
+  "paragraph_length_sd": 20.1,
+  "bigram_repetition_rate": 0.3877,
+  "trigram_repetition_rate": 0.1338,
+  "top_repeated_4grams": [
+   [
+    "started but not finished",
+    4
+   ],
+   [
+    "visualise your work and",
+    3
+   ],
+   [
+    "your work and limit",
+    3
+   ],
+   [
+    "work and limit your",
+    3
+   ],
+   [
+    "limit your work in",
+    3
+   ],
+   [
+    "your work in progress",
+    3
+   ],
+   [
+    "jim benson and tonianne",
+    3
+   ],
+   [
+    "benson and tonianne demaria",
+    3
+   ]
+  ],
+  "most_common_sentence_openers": [
+   [
+    "personal kanban",
+    5
+   ],
+   [
+    "if you",
+    5
+   ],
+   [
+    "the kanban",
+    3
+   ]
+  ],
+  "formulaic_phrases_found": [],
+  "watch_phrases_counts": {},
+  "most_similar_existing_guides": [
+   [
+    0.567,
+    "/project-management/kanban/kanban-boards/"
+   ],
+   [
+    0.564,
+    "/project-management/kanban/what-is-kanban/"
+   ],
+   [
+    0.556,
+    "/project-management/kanban/wip-limits/"
+   ],
+   [
+    0.471,
+    "/project-management/agile/agile-workflow/"
+   ],
+   [
+    0.454,
+    "/project-management/kanban/kanban-vs-agile/"
+   ]
+  ],
+  "note": "Descriptive editorial diagnostics only. No AI-detection probability is calculated."
+ },
+ "unresolved_issues": [
+  "Overlap with /project-management/kanban/kanban-boards/ checked: TF-IDF similarity 0.567 is driven by shared Kanban vocabulary; kanban-boards targets team board design (one table row and one example row on personal boards) and its worked example (marketing team, 9 items a week) is not reused. Intents are distinct. Recommendation outside this review's scope: kanban-boards does not link to personal-kanban; add a link from its 'Simple three-column board' / 'Personal' rows.",
+  "The 2011 book and the original Rubinstein et al. (2001) paper were not inspected directly; claims are attributed to the secondary sources that were inspected."
+ ],
+ "reviewer_note": "Automated review by an AI reviewer; not a human professional review."
+}
