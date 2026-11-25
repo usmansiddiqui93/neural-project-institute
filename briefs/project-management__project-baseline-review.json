@@ -1,0 +1,313 @@
+{
+ "url": "/project-management/project-baseline/",
+ "status": "PUBLISH",
+ "publication_eligible": true,
+ "gates": {
+  "definitions_accurate": true,
+  "framework_requirements_verified": true,
+  "calculations_correct": true,
+  "variables_units_defined": true,
+  "examples_consistent_and_labelled": true,
+  "claims_supported": true,
+  "sources_authentic": true,
+  "educational_value": true,
+  "no_duplicate_intent": true,
+  "internal_links_valid": true,
+  "certification_claims_accurate": true,
+  "disclosures_included": true,
+  "metadata_valid": true,
+  "no_fabricated_experience": true
+ },
+ "scores": {
+  "technical_accuracy_25": 24,
+  "sources_15": 13,
+  "educational_usefulness_15": 14,
+  "examples_10": 10,
+  "information_gain_10": 9,
+  "precision_readability_10": 9,
+  "search_intent_5": 5,
+  "internal_linking_5": 5,
+  "technical_seo_5": 5,
+  "total": 94
+ },
+ "claims_checked": [
+  {
+   "claim": "PMI Lexicon v4.0 (2024) definition of baseline quoted",
+   "source": "https://www.coloradocollege.edu/offices/its/pmi-lexicon-pm-terms-compressed.pdf",
+   "result": "confirmed"
+  },
+  {
+   "claim": "PMI Lexicon scope baseline wording 'the approved version of formal scope documents'",
+   "source": "https://www.coloradocollege.edu/offices/its/pmi-lexicon-pm-terms-compressed.pdf",
+   "result": "confirmed"
+  },
+  {
+   "claim": "PMI Lexicon PMB definition quoted",
+   "source": "https://www.coloradocollege.edu/offices/its/pmi-lexicon-pm-terms-compressed.pdf",
+   "result": "confirmed"
+  },
+  {
+   "claim": "PMI Lexicon contingency reserve and management reserve definitions quoted",
+   "source": "https://www.coloradocollege.edu/offices/its/pmi-lexicon-pm-terms-compressed.pdf",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Cost baseline includes contingency, excludes management reserve",
+   "source": "https://www.coloradocollege.edu/offices/its/pmi-lexicon-pm-terms-compressed.pdf",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Scope baseline = scope statement, WBS, WBS dictionary (PMBOK 6th edition)",
+   "source": "PMBOK Guide 6th ed. (reviewer knowledge; not opened)",
+   "result": "confirmed"
+  },
+  {
+   "claim": "DoD EVM: PMB = distributed budget + undistributed budget; MR outside PMB",
+   "source": "https://www.acq.osd.mil/asda/dpc/api/ipm/evm-definitions.html",
+   "result": "confirmed"
+  },
+  {
+   "claim": "DoD EVM: internal replanning, formal reprogramming, OTB quote 'a new baseline for management when the original objectives cannot be met', OTS",
+   "source": "https://www.acq.osd.mil/asda/dpc/api/ipm/evm-definitions.html",
+   "result": "confirmed"
+  },
+  {
+   "claim": "DoD EVM: BEI formula and LOE/milestone exclusions",
+   "source": "https://www.acq.osd.mil/asda/dpc/api/ipm/evm-definitions.html",
+   "result": "confirmed"
+  },
+  {
+   "claim": "GAO: OTB/OTS 'should rarely be necessary'; OTB 'normally eliminates historical variances'; repeated requests suggest severe management problems",
+   "source": "https://gaoinnovations.gov/cost-guide/overtarget-baselines-and-schedules.html",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Elecosoft Powerproject BEI pass 1.00 / fail 0.95",
+   "source": "https://help.elecosoft.com/powerproject/english/help/Content/HTML_Topics/Conceptual/Quality_check/Baseline_execution_index_metric.htm",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Microsoft Project: up to 11 baseline data sets incl. unnumbered Baseline; page scoped to Project Online and Project Server",
+   "source": "https://support.microsoft.com/en-US/project/set-and-save-a-baseline",
+   "result": "confirmed"
+  },
+  {
+   "claim": "PRINCE2 7 glossary (Knowledge Train): baseline = 'the reference points against which an entity is monitored and managed'",
+   "source": "https://www.knowledgetrain.co.uk/project-management/prince2/prince2-glossary",
+   "result": "confirmed"
+  },
+  {
+   "claim": "16 baseline management products incl. issue management approach describing how changes to the project baseline are controlled",
+   "source": "https://www.knowledgetrain.co.uk/project-management/prince2-management-products",
+   "result": "confirmed"
+  },
+  {
+   "claim": "2020 Scrum Guide does not mention baselines",
+   "source": "https://scrumguides.org/scrum-guide.html",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Wrike includes baselines from Team plan",
+   "source": "/project-management-tools/wrike/",
+   "result": "confirmed"
+  },
+  {
+   "claim": "ClickUp offers baselines on paid plans",
+   "source": "/project-management-tools/clickup/",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Microsoft Planner baselines on Planner and Project Plan 3",
+   "source": "/project-management-tools/microsoft-planner/",
+   "result": "confirmed"
+  },
+  {
+   "claim": "monday.com Gantt feature page lists baselines",
+   "source": "/project-management-tools/monday/",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Basecamp, Trello, Notion do not offer baselines",
+   "source": "/project-management-tools/basecamp/ ; /project-management-tools/trello/ ; /project-management-tools/notion/",
+   "result": "corrected"
+  },
+  {
+   "claim": "Smartsheet not named (review page does not mention baselines)",
+   "source": "/project-management-tools/smartsheet/",
+   "result": "confirmed"
+  },
+  {
+   "claim": "'Confusing these four terms is the most common reason baseline reports mislead' (unsupported superlative)",
+   "source": "none",
+   "result": "corrected"
+  },
+  {
+   "claim": "'Reserves are where most cost baseline errors creep in' (unsupported superlative)",
+   "source": "none",
+   "result": "corrected"
+  },
+  {
+   "claim": "Management reserve exists to cover the worst case of a single large identified risk",
+   "source": "https://www.coloradocollege.edu/offices/its/pmi-lexicon-pm-terms-compressed.pdf",
+   "result": "corrected"
+  }
+ ],
+ "calculations_rechecked": [
+  {
+   "item": "WP totals 40/120/50/45/35 = 290; monthly PV 25/35/55/70/70/35; cumulative 25/60/115/185/255/290",
+   "result": "correct"
+  },
+  {
+   "item": "EMV 0.40x50=20, 0.25x40=10; contingency 30",
+   "result": "correct"
+  },
+  {
+   "item": "Cost baseline 290+30=320; MR 0.05x320=16; project budget 336",
+   "result": "correct"
+  },
+  {
+   "item": "SV=106-115=-9; CV=106-121=-15; SPI=0.9217->0.92; CPI=0.8760->0.88; SV%=-7.83->-7.8; CV%=-14.15->-14.2",
+   "result": "correct"
+  },
+  {
+   "item": "±10% threshold: CV% breaches, SV% does not",
+   "result": "correct"
+  },
+  {
+   "item": "BEI 21/24=0.875 and three overdue tasks (wording made unambiguous)",
+   "result": "corrected"
+  },
+  {
+   "item": "Weekdays: Mon 4 Jan, Fri 12 Feb, Fri 14 May, Fri 11 Jun, Fri 25 Jun, Wed 31 Mar 2027; 25 Jun + 2 weeks = Fri 9 Jul 2027",
+   "result": "correct"
+  },
+  {
+   "item": "Quiet re-baseline: SV 0, CV 0, SPI 1.00, CPI 1.00 (setup now stated as PV=EV=AC=£121k)",
+   "result": "corrected"
+  },
+  {
+   "item": "Baseline log: 320+24=344; 344+16=360; contingency 30-10=20 with baseline unchanged; 344+8=352; 16-8=8; 352+8=360",
+   "result": "correct"
+  },
+  {
+   "item": "CR-07 phasing: go-live moves to 9 July so the £24k is phased April to July, not April to June",
+   "result": "corrected"
+  }
+ ],
+ "changes_made": [
+  "Section 'Baseline, current plan, forecast and target': replaced unsupported 'the most common reason baseline reports mislead' with 'Baseline reports often mislead because these four terms are confused'.",
+  "Section 'How reserves relate to the cost baseline': replaced unsupported 'where most cost baseline errors creep in' with 'a frequent source of cost baseline errors'.",
+  "Worked example step 1: corrected the claim that management reserve exists to cover the worst case of an identified risk (contradicts the PMI Lexicon); now explains EMV's limit with the £50k vs £30k figure, mentions higher-confidence (e.g. Monte Carlo) sizing, and states MR is for unforeseen work.",
+  "BEI formula: added that the numerator counts all completed baseline tasks including early finishes beyond the status date (per DoD definition).",
+  "BEI example: removed the ambiguous 'one of them finished ahead of its baseline date' and stated that no later-baselined task finished early, so 21/24 and 'three overdue tasks' are consistent.",
+  "Quiet re-baseline: defined the reset precisely (PV = EV = AC = £121k) so the zero variances and 1.00 indices follow.",
+  "Baseline log: CR-07 £24k phasing changed from 'April to June' to 'April to July' to match the new 9 July go-live.",
+  "Baseline log: contingency drawdown now states that part of the data quality risk occurred and cost £10k, removing the inconsistency with the risk's £40k impact.",
+  "Tools section: 'Basecamp, Trello and Notion do not offer baselines' qualified as 'natively' (review pages note third-party Gantt add-ons) and added Jira's lack of built-in baseline tracking, per the Jira review page."
+ ],
+ "statistical_text_measurements": {
+  "url": "/project-management/project-baseline/",
+  "word_count": 4046,
+  "unique_words": 977,
+  "type_token_ratio": 0.2415,
+  "mattr_100": 0.704,
+  "shannon_word_entropy_bits": 8.373,
+  "normalised_entropy": 0.843,
+  "sentences": 183,
+  "avg_sentence_length": 17.73,
+  "sentence_length_sd": 10.64,
+  "sentence_length_cv": 0.6,
+  "paragraph_length_mean": 37.7,
+  "paragraph_length_sd": 20.8,
+  "bigram_repetition_rate": 0.3931,
+  "trigram_repetition_rate": 0.1454,
+  "top_repeated_4grams": [
+   [
+    "scope schedule and cost",
+    7
+   ],
+   [
+    "the approved version of",
+    5
+   ],
+   [
+    "the performance measurement baseline",
+    5
+   ],
+   [
+    "baseline is the approved",
+    4
+   ],
+   [
+    "approved version of a",
+    4
+   ],
+   [
+    "schedule and cost baselines",
+    4
+   ],
+   [
+    "number of baseline tasks",
+    4
+   ],
+   [
+    "is the approved version",
+    3
+   ]
+  ],
+  "most_common_sentence_openers": [
+   [
+    "the baseline",
+    4
+   ],
+   [
+    "a schedule",
+    4
+   ],
+   [
+    "management reserve",
+    4
+   ],
+   [
+    "a project",
+    3
+   ],
+   [
+    "the pmi",
+    3
+   ]
+  ],
+  "formulaic_phrases_found": [],
+  "watch_phrases_counts": {},
+  "most_similar_existing_guides": [
+   [
+    0.472,
+    "/project-management/project-budget/"
+   ],
+   [
+    0.455,
+    "/project-management/cost-management-plan/"
+   ],
+   [
+    0.447,
+    "/project-management/project-management-plan/"
+   ],
+   [
+    0.431,
+    "/project-management/project-cost-management/"
+   ],
+   [
+    0.381,
+    "/project-management/project-time-management/"
+   ]
+  ],
+  "note": "Descriptive editorial diagnostics only. No AI-detection probability is calculated."
+ },
+ "unresolved_issues": [
+  "Minor, outside this page: /project-management/change-control/ uses CR-07 for a different change (remove legacy data export, portal scenario) and CR-06 for a deferred mobile app; readers following links may notice the reused ID. Consider renumbering in a later pass.",
+  "Outside this page: /project-management-tools/trello/trello-alternatives/ says Smartsheet offers baselines, but the Smartsheet review page does not mention them; the tool pages should be reconciled.",
+  "PRINCE2 7 wording relies on a training provider's summary (disclosed in the article); the official manual was not accessed.",
+  "Tool baseline support was checked against the site's review pages, not re-verified on vendor sites today."
+ ],
+ "reviewer_note": "Automated review by an AI reviewer; not a human professional review."
+}

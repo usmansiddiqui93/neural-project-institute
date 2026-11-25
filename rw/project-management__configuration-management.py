@@ -21,7 +21,7 @@ RW = dict(
         S(
             "What is configuration management?",
             "**Configuration management (CM)** is the set of technical and administrative activities that identify a project's configuration items, control changes to them, record and report their status, and verify that the delivered product matches its approved configuration. Its purpose is that the product, its documentation and its records always agree.",
-            "ISO 10007:2017, *Quality management: Guidelines for configuration management*, describes it as \"a management activity that applies technical and administrative direction over the life cycle of a product and service\", covering its configuration identification and status and the related configuration information. ISO lists the standard as current (confirmed in 2023) with a revision under development. APM's own definition, which it attributes to the APM Body of Knowledge 8th edition, says configuration management \"encompasses the technical and administrative activities concerned with the creation, maintenance, controlled change and quality control of the scope of work\".",
+            "ISO 10007:2017, *Quality management: Guidelines for configuration management*, describes it as \"a management activity that applies technical and administrative direction over the life cycle of a product and service\", covering its configuration identification and status and the related configuration information. ISO lists the standard as current (last reviewed and confirmed in 2023) and marked for revision. APM's own definition, which it attributes to the APM Body of Knowledge 8th edition, says configuration management \"encompasses the technical and administrative activities concerned with the creation, maintenance, controlled change and quality control of the scope of work\".",
             "Three clarifications prevent common confusion:",
             L(
                 "**It is not only version control.** Version control stores successive versions of files. Configuration management also decides which items to control, records how they relate, reports their status and audits them.",
@@ -64,7 +64,7 @@ RW = dict(
                 ["Status accounting", "5.5 Configuration status accounting", "Configuration status accounting", "Configuration status accounting and metrics", "Configuration status accounting"],
                 ["Verification and audit", "5.6 Configuration audit", "Configuration verification audit", "Configuration verification and audits", "Configuration verification"],
             ),
-            "Many introductions list only four activities and treat planning as a preliminary step. All five sources above include planning, and in practice skipping it is what makes CM either bureaucratic or ineffective.",
+            "Many introductions list only four activities and treat planning as a preliminary step. All four sources above include planning, and in practice skipping it is what makes CM either bureaucratic or ineffective.",
             H3("1. Planning"),
             "Planning decides how much configuration management the project needs and records it in a **configuration management plan**, usually part of the [project management plan](/project-management/project-management-plan/). ISO 10007 includes an informative annex on the structure and content of such a plan. At minimum the plan should state which items will be controlled, the naming and version rules, the repositories and tools, who may approve changes to which items, what status reports are produced, and when audits take place.",
             H3("2. Identification"),
@@ -116,7 +116,7 @@ RW = dict(
             "The project controls 46 configuration items. An excerpt of the register:",
             T(
                 ["CI ID", "Item", "Type", "Version", "Status", "Owner", "Related CIs"],
-                ["CI-003", "Functional specification", "Document", "2.0", "Baselined", "Business analyst", "CI-010, CI-030"],
+                ["CI-003", "Functional specification", "Document", "2.0", "Baselined", "Business analyst", "CI-010, CI-030, CI-031, CI-040"],
                 ["CI-010", "Solution design", "Document", "1.2", "Baselined", "Solution architect", "CI-003, CI-014"],
                 ["CI-014", "Contractor scheduling interface", "Software", "1.1.2", "Baselined", "Integration lead", "CI-010, CI-030"],
                 ["CI-030", "System test plan", "Document", "1.1", "Baselined", "Test lead", "CI-003, CI-014, CI-031"],
@@ -163,7 +163,7 @@ RW = dict(
         ),
         S(
             "Configuration management in PRINCE2",
-            "[PRINCE2](/project-management/prince2/) treats configuration management as part of controlling change. In PRINCE2 7, the issue management approach (one of the method's baseline management products) sets out how products are identified and controlled, including status accounting and verification, and the product register records the products required for a plan and their status. The method's issue and change control procedure handles the decisions, with a change authority and optional change budget delegated by the project board.",
+            "[PRINCE2](/project-management/prince2/) treats configuration management as part of controlling change. In PRINCE2 7, the issue management approach (one of the method's baseline management products) sets out how products are identified and controlled, including status accounting and verification, and the product register, part of the project log, identifies the products the project will deliver and records their acceptance. The method's issue and change control procedure handles the decisions, with a change authority and optional change budget delegated by the project board.",
             "We based this summary on training-provider summaries of the 7th edition rather than the official manual, so check the manual's wording if you are preparing for a PRINCE2 exam. Earlier editions used separate configuration item records and a product status account; you may still meet those terms in organisations that adopted PRINCE2 before 2023.",
         ),
         S(

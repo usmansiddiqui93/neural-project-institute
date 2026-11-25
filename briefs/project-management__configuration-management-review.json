@@ -1,0 +1,265 @@
+{
+ "url": "/project-management/configuration-management/",
+ "status": "PUBLISH",
+ "publication_eligible": true,
+ "gates": {
+  "definitions_accurate": true,
+  "framework_requirements_verified": true,
+  "calculations_correct": true,
+  "variables_units_defined": true,
+  "examples_consistent_and_labelled": true,
+  "claims_supported": true,
+  "sources_authentic": true,
+  "educational_value": true,
+  "no_duplicate_intent": true,
+  "internal_links_valid": true,
+  "certification_claims_accurate": true,
+  "disclosures_included": true,
+  "metadata_valid": true,
+  "no_fabricated_experience": true
+ },
+ "scores": {
+  "technical_accuracy_25": 24,
+  "sources_15": 13,
+  "educational_usefulness_15": 14,
+  "examples_10": 9,
+  "information_gain_10": 9,
+  "precision_readability_10": 9,
+  "search_intent_5": 5,
+  "internal_linking_5": 5,
+  "technical_seo_5": 5,
+  "total": 93
+ },
+ "claims_checked": [
+  {
+   "claim": "ISO 10007:2017 title, edition 3, confirmed 2023",
+   "source": "https://www.iso.org/standard/70400.html",
+   "result": "confirmed"
+  },
+  {
+   "claim": "ISO 10007 revision 'under development'",
+   "source": "https://www.iso.org/standard/70400.html",
+   "result": "corrected"
+  },
+  {
+   "claim": "ISO 10007 introduction quote 'a management activity that applies technical and administrative direction over the life cycle of a product and service'",
+   "source": "https://webstore.ansi.org/preview-pages/BSI/preview_30341507.pdf",
+   "result": "confirmed"
+  },
+  {
+   "claim": "ISO 10007 clauses 5.2-5.6 names; Annex A on CM plan",
+   "source": "https://webstore.ansi.org/preview-pages/BSI/preview_30341507.pdf",
+   "result": "confirmed"
+  },
+  {
+   "claim": "ISO 10007 definitions of configuration item, configuration baseline, configuration status accounting",
+   "source": "https://webstore.ansi.org/preview-pages/BSI/preview_30341507.pdf",
+   "result": "confirmed"
+  },
+  {
+   "claim": "APM definition quote attributed to APM BoK 8th edition; APM's five activity names",
+   "source": "https://apm.org.uk/resources/what-is-project-management/what-is-configuration-management/",
+   "result": "confirmed"
+  },
+  {
+   "claim": "PMI Practice Standard for Project Configuration Management (2007) chapter names",
+   "source": "https://www.oreilly.com/library/view/practice-standard-for/9781935589952/",
+   "result": "confirmed"
+  },
+  {
+   "claim": "NASA SE Handbook 6.5 five elements; SAE/EIA 649B quote; functional/allocated/product/as-deployed baselines",
+   "source": "https://www.nasa.gov/seh/6-5-configuration-management",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Table says 'All five sources above include planning' (table has four sources)",
+   "source": "article table",
+   "result": "corrected"
+  },
+  {
+   "claim": "DoF NI: 'only one person should have the ability to update a controlled item' at any one time; check-out/check-in; configuration manager and PMO roles",
+   "source": "https://www.finance-ni.gov.uk/articles/programme-and-project-configuration-management",
+   "result": "confirmed"
+  },
+  {
+   "claim": "MIL-HDBK-61A FCA and PCA purposes",
+   "source": "https://product-lifecycle-management.com/mil-hdbk-61a-8-2.htm",
+   "result": "confirmed"
+  },
+  {
+   "claim": "DAU: at PCA conclusion the final product baseline is established and later changes go through formal engineering change action",
+   "source": "https://aaf.dau.edu/aaf/mca/pca/",
+   "result": "confirmed"
+  },
+  {
+   "claim": "PMI Lexicon definition of configuration management system",
+   "source": "https://www.coloradocollege.edu/offices/its/pmi-lexicon-pm-terms-compressed.pdf",
+   "result": "confirmed"
+  },
+  {
+   "claim": "PRINCE2 7 issue management approach covers identification, control, status accounting and verification; change authority and change budget",
+   "source": "https://prince2.wiki/theme/change",
+   "result": "confirmed"
+  },
+  {
+   "claim": "PRINCE2 7 product register 'records the products required for a plan and their status'",
+   "source": "https://www.knowledgetrain.co.uk/project-management/prince2/prince2-glossary",
+   "result": "corrected"
+  },
+  {
+   "claim": "Issue management approach is a PRINCE2 7 baseline management product",
+   "source": "https://www.knowledgetrain.co.uk/project-management/prince2-management-products",
+   "result": "confirmed"
+  },
+  {
+   "claim": "2020 Scrum Guide does not mention configuration management",
+   "source": "https://scrumguides.org/scrum-guide.html",
+   "result": "confirmed"
+  },
+  {
+   "claim": "Semantic versioning MAJOR/MINOR/PATCH rules",
+   "source": "https://semver.org/",
+   "result": "confirmed"
+  }
+ ],
+ "calculations_rechecked": [
+  {
+   "item": "Status account 28+5+6+7=46; shares 60.9%, 10.9%, 13.0%, 15.2% (sum 100.0%)",
+   "result": "correct"
+  },
+  {
+   "item": "Impact trace 6 existing + 2 new = 8 affected; register 46+2=48",
+   "result": "correct"
+  },
+  {
+   "item": "5 'under change' = baselined CIs reopened by CR-07 (CI-003/010/014/030/031); CI-040 remains draft",
+   "result": "correct"
+  },
+  {
+   "item": "Audit conformance 19/21 = 90.48% -> 90.5%",
+   "result": "correct"
+  },
+  {
+   "item": "Traceability coverage 62/64 = 96.875% -> 96.9%",
+   "result": "correct"
+  },
+  {
+   "item": "Version numbers: interface 1.1.2 -> 1.2.0 (CR-07 functionality, MINOR) -> 1.2.1 hotfix (PATCH) consistent with semver as described",
+   "result": "correct"
+  },
+  {
+   "item": "Register relationships: CI-031 and CI-040 list CI-003 but CI-003 did not list them back; made bidirectional",
+   "result": "corrected"
+  }
+ ],
+ "changes_made": [
+  "ISO 10007 status: 'with a revision under development' changed to 'last reviewed and confirmed in 2023) and marked for revision' to match the ISO page (stage 90.92, to be revised).",
+  "Five activities section: 'All five sources above include planning' corrected to 'All four sources above' (the table compares four sources).",
+  "Worked example register: CI-003 related CIs changed from 'CI-010, CI-030' to 'CI-010, CI-030, CI-031, CI-040' so relationships are bidirectional and support the impact trace.",
+  "PRINCE2 section: product register description aligned with the PRINCE2 7 glossary summary ('part of the project log, identifies the products the project will deliver and records their acceptance')."
+ ],
+ "statistical_text_measurements": {
+  "url": "/project-management/configuration-management/",
+  "word_count": 3768,
+  "unique_words": 919,
+  "type_token_ratio": 0.2439,
+  "mattr_100": 0.7102,
+  "shannon_word_entropy_bits": 8.364,
+  "normalised_entropy": 0.8496,
+  "sentences": 147,
+  "avg_sentence_length": 18.07,
+  "sentence_length_sd": 9.71,
+  "sentence_length_cv": 0.537,
+  "paragraph_length_mean": 38.0,
+  "paragraph_length_sd": 21.4,
+  "bigram_repetition_rate": 0.3525,
+  "trigram_repetition_rate": 0.1166,
+  "top_repeated_4grams": [
+   [
+    "a project's products and",
+    3
+   ],
+   [
+    "nasa's systems engineering handbook",
+    3
+   ],
+   [
+    "status accounting and verification",
+    3
+   ],
+   [
+    "accounting and verification and",
+    3
+   ],
+   [
+    "configuration management planning configuration",
+    3
+   ],
+   [
+    "configuration identification configuration identification",
+    3
+   ],
+   [
+    "is the discipline of",
+    2
+   ],
+   [
+    "the discipline of identifying",
+    2
+   ]
+  ],
+  "most_common_sentence_openers": [
+   [
+    "configuration management",
+    5
+   ],
+   [
+    "iso 10007",
+    4
+   ],
+   [
+    "it is",
+    4
+   ],
+   [
+    "the two",
+    4
+   ],
+   [
+    "the project",
+    4
+   ]
+  ],
+  "formulaic_phrases_found": [],
+  "watch_phrases_counts": {},
+  "most_similar_existing_guides": [
+   [
+    0.306,
+    "/project-management/change-management-vs-change-control/"
+   ],
+   [
+    0.274,
+    "/project-management/project-management-plan/"
+   ],
+   [
+    0.265,
+    "/project-management/project-integration-management/"
+   ],
+   [
+    0.263,
+    "/project-management/industries/engineering-project-management/"
+   ],
+   [
+    0.242,
+    "/project-management/change-control/"
+   ]
+  ],
+  "note": "Descriptive editorial diagnostics only. No AI-detection probability is calculated."
+ },
+ "unresolved_issues": [
+  "Minor, outside this page: /project-management/change-control/ uses CR-07 for a different change in a different scenario; consider renumbering to avoid confusion across linked pages.",
+  "PRINCE2 7 details rely on training-provider summaries (disclosed in the article); the official manual was not accessed.",
+  "PMI Practice Standard (2007) checked only via chapter titles; SAE EIA-649 text not accessed (mentioned only as widely used)."
+ ],
+ "reviewer_note": "Automated review by an AI reviewer; not a human professional review."
+}
