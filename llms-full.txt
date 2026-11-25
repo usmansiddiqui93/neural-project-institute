@@ -33524,8 +33524,8 @@ Agile Workflow: Stages, Examples and How to Design One
 What an Agile workflow is, its stages, Scrum and Kanban examples, and a step-by-step way to design one with column policies, WIP limits and flow metrics.
 Is Agile Only for Software? How Agile Works Beyond IT
 Is Agile only for software? No. See how marketing, HR, finance, government and hardware teams use Agile, what changes, worked examples and how to start.
-Agile in IT Operations: How Ops Teams Apply Agile and DevOps
-How IT operations teams apply Agile: handling planned and unplanned work, Kanban for ops, DevOps links, metrics, an example and common mistakes.
+Agile IT Operations: Kanban, ITIL and DevOps in Practice
+Agile IT operations explained: run incidents, requests and improvements with Kanban, reserved capacity, ITIL and DevOps, with a worked example and metrics.
 
 
 ---
@@ -34461,8 +34461,8 @@ Is Agile Only for Software? How Agile Works Beyond IT
 Is Agile only for software? No. See how marketing, HR, finance, government and hardware teams use Agile, what changes, worked examples and how to start.
 Role of the Project Plan in Agile: Levels and Example
 The role of the project plan in Agile: the five planning levels, what an Agile plan contains, how to build one step by step, and a worked example.
-Agile in IT Operations: How Ops Teams Apply Agile and DevOps
-How IT operations teams apply Agile: handling planned and unplanned work, Kanban for ops, DevOps links, metrics, an example and common mistakes.
+Agile IT Operations: Kanban, ITIL and DevOps in Practice
+Agile IT operations explained: run incidents, requests and improvements with Kanban, reserved capacity, ITIL and DevOps, with a worked example and metrics.
 
 
 ---
@@ -35011,8 +35011,8 @@ Is Agile Only for Software? How Agile Works Beyond IT
 Is Agile only for software? No. See how marketing, HR, finance, government and hardware teams use Agile, what changes, worked examples and how to start.
 Agile Workflow: Stages, Examples and How to Design One
 What an Agile workflow is, its stages, Scrum and Kanban examples, and a step-by-step way to design one with column policies, WIP limits and flow metrics.
-Agile in IT Operations: How Ops Teams Apply Agile and DevOps
-How IT operations teams apply Agile: handling planned and unplanned work, Kanban for ops, DevOps links, metrics, an example and common mistakes.
+Agile IT Operations: Kanban, ITIL and DevOps in Practice
+Agile IT operations explained: run incidents, requests and improvements with Kanban, reserved capacity, ITIL and DevOps, with a worked example and metrics.
 
 
 ---
@@ -36091,70 +36091,196 @@ What is an Agile environment? Learn its culture, structure, workspace and tools,
 
 ---
 
-# Agile in IT Operations: How Ops Teams Apply Agile and DevOps
+# Agile IT Operations: Kanban, ITIL and DevOps in Practice
 
 URL: https://neuralprojectinstitute.com/project-management/agile/agile-operations-it/
 Section: Agile guides
-Summary: How IT operations teams apply Agile: handling planned and unplanned work, Kanban for ops, DevOps links, metrics, an example and common mistakes.
+Summary: Agile IT operations explained: run incidents, requests and improvements with Kanban, reserved capacity, ITIL and DevOps, with a worked example and metrics.
 
 
-## Agile in IT Operations: How Ops Teams Apply Agile and DevOps
-Agile in IT operations means applying Agile values and practices, such as visible work, short feedback loops and continuous improvement, to the teams that run infrastructure, networks, service desks and production systems. Because operations work mixes planned projects with unplanned incidents, ops teams often favour Kanban and close collaboration with development through DevOps.
+## Agile IT Operations: Kanban, ITIL and DevOps in Practice
+Agile IT operations means running infrastructure, platform and support work in short feedback loops, with all work visible, priorities explicit and improvement built into the week. Because operations teams handle a constant stream of incidents and requests, most adapt Agile through Kanban, capacity reserved for unplanned work, a written interrupt policy and steady automation, while keeping their IT service management practices. This guide shows how, with an illustrative worked example and the metrics to track.
 - Published 8 September 2026
-- 5 min read
+- Last updated 25 November 2026
+- 21 min read
 
 ### Key takeaways
-- Operations teams apply Agile by making all work visible and planning for interruptions.
-- Kanban with classes of service and WIP limits usually fits ops better than strict sprints.
-- Reserve capacity for unplanned work and invest steadily in automation.
-- Close collaboration with development through DevOps multiplies the benefits.
+- Operations work mixes unplanned incidents, routine requests and planned improvement, so practices built around a fixed sprint commitment usually need adapting.
+- Kanban with WIP limits, classes of service and an explicit expedite rule fits most interrupt-driven teams; Scrum or Scrumban suits teams whose work is mostly planned.
+- Size the capacity you reserve for unplanned work from your own data, ideally eight weeks or more, rather than from a rule of thumb.
+- Agile does not replace ITIL: incident, request and change enablement practices still apply, and Agile changes how the work flows through them.
+- DORA now defines five software delivery metrics; failed deployment recovery time replaced the old MTTR measure in 2023 and covers only failures caused by changes.
+- Treat automation and toil reduction as backlog items with protected capacity; otherwise the same interruptions return every week.
 
-### Why operations is different
-Development teams can usually plan a sprint and protect it. Operations teams face a steady stream of interruptions: incidents, service requests, security patches and urgent changes. A strict sprint commitment often breaks within days. Agile still helps, but the practices need adapting.
-| Work type | Example | Typical approach |
+### What is Agile in IT operations?
+**Agile in IT operations is the application of Agile values and Lean flow practices to the teams that run live services, such as infrastructure, network, platform, database, service desk and security operations. It makes every type of work visible, limits work in progress, plans for interruptions and improves the service in small, frequent steps, while keeping reliability and control.**
+You will also see the label **AgileOps**. Vendors and analysts use it for the same idea: extending Agile and DevOps ways of working beyond software development into the operation of systems. It is a label rather than a defined framework, so there is no official AgileOps guide, role set or certification behind it.
+Agile operations is not a licence to skip change approval, documentation or service levels. The [Agile Manifesto](https://neuralprojectinstitute.com/project-management/agile/agile-manifesto-values-and-principles/) values working software over comprehensive documentation, not instead of it, and an operations team still needs runbooks, audit evidence and agreed targets. What changes is how the team decides what to work on next, how much it starts at once and how quickly it learns from failures.
+
+### Why operations work needs a different kind of Agile
+Scrum was designed for a team that can commit to a goal for a short period and protect it. An operations team rarely has that luxury. A storage array fails on Tuesday, a security patch becomes urgent on Wednesday and fifteen access requests arrive before Friday. Classify the work first, because each type needs a different policy.
+| Work type | Example | Arrival pattern | Typical policy |
+| --- | --- | --- | --- |
+| Incidents | Outage, failed backup, security alert | Unpredictable; urgency varies | Expedite lane or on-call rota; strict limit on parallel expedites |
+| Service requests | New accounts, access changes, firewall rule | Steady, fairly predictable volume | Standard flow; automate or self-serve the most frequent |
+| Planned improvement | Upgrade a database cluster, automate backups | Chosen by the team | Ordered backlog; protected capacity |
+| Maintenance and compliance | Patching, certificate renewals, audits | Recurring, often date-driven | Fixed-date class of service; scheduled in advance |
+The tension is between stability and change. Every change to a live system is a potential incident, and every incident pulls people away from the changes that would prevent the next one. Agile practices help only if they make that trade-off explicit: how much capacity goes to keeping the lights on, how much to improvement, and who decides when an interruption is allowed to displace planned work.
+This guide stays with the specific mechanics of operations teams. Read [Is Agile only for software?](https://neuralprojectinstitute.com/project-management/agile/is-agile-only-for-software/) for the wider question of using Agile beyond development.
+
+### Agile values translated for an operations team
+The four Manifesto values were written for software development. Read them as an operations lead and they become concrete working rules.
+| Agile value | What it means in operations | Practical sign |
 | --- | --- | --- |
-| Unplanned | Outage, security alert, urgent fix | Handled immediately through an expedite lane |
-| Routine requests | New user accounts, access changes | Standardised and automated where possible; flow through a board |
-| Planned improvement | Upgrade a database cluster, automate backups | Broken into small items and prioritised in a backlog |
-| Maintenance | Patching, certificate renewals | Scheduled as recurring work with capacity reserved |
+| Individuals and interactions over processes and tools | Engineers talk across teams during incidents and handovers instead of passing tickets | Joint incident channel; developers join post-incident reviews |
+| Working software over comprehensive documentation | A working, reliable service is the measure of progress; documentation serves operation | Runbooks kept short, tested and updated after incidents |
+| Customer collaboration over contract negotiation | Service owners and users help set priorities and service levels | Regular service review with the business, not only SLA reports |
+| Responding to change over following a plan | Plans exist but include explicit rules for interruptions | Written interrupt policy and reserved capacity |
 
-### Agile practices that work for ops teams
-- **Kanban boards with WIP limits:** visualise all work types and limit how much is in progress; see [WIP limits](https://neuralprojectinstitute.com/project-management/kanban/wip-limits/).
-- **Classes of service:** an expedite lane for incidents, a fixed-date lane for deadlines and a standard lane for everything else; see [Kanban swimlanes](https://neuralprojectinstitute.com/project-management/kanban/kanban-swimlanes/).
-- **Reserved capacity:** keep a share of capacity, for example 30–40%, for unplanned work, based on your own history.
-- **Short daily stand-ups at the board:** focus on blocked and ageing items.
-- **Regular retrospectives and post-incident reviews:** blameless reviews that lead to concrete improvements.
-- **Automation as backlog work:** treat automating repeated tasks as planned improvement items.
-- **Shared ownership with development:** joint on-call, shared metrics and infrastructure as code; see [DevOps](https://neuralprojectinstitute.com/project-management/kanban/devops/).
+### Kanban, Scrum or Scrumban for an operations team?
+Choose the method from your work mix. Measure the share of team effort that goes to unplanned work for several weeks before deciding; guessing tends to underestimate it.
+| Situation | Best starting point | Why |
+| --- | --- | --- |
+| Unplanned work takes a large and variable share of effort | Kanban | No fixed commitment to break; work is pulled continuously and urgent items have explicit rules |
+| Mostly planned project work, such as a data-centre migration, with light support duties | Scrum, with a rotating support role | Sprint Goals give focus; one person shields the rest of the team |
+| A steady mix of both | Scrumban | Kanban flow with a regular planning and review cadence |
+| Separate support and engineering sub-teams | Kanban for support, Scrum or Kanban for engineering | Each sub-team uses the method that suits its work |
+There is no universally agreed threshold at which Scrum stops working. As a decision rule, if your team cannot protect a meaningful Sprint Goal in most sprints because interruptions keep displacing it, start with Kanban. The full comparison is in [Kanban vs Scrum](https://neuralprojectinstitute.com/project-management/kanban/kanban-vs-scrum/), and the hybrid is explained in [Kanban vs Scrumban](https://neuralprojectinstitute.com/project-management/kanban/kanban-vs-scrumban/).
 
-### How to introduce Agile in an operations team
-1. **Make all work visible:** put incidents, requests and projects on one board for two to four weeks without changing anything else.
-2. **Measure the mix:** count how much work is unplanned versus planned.
-3. **Set classes of service and WIP limits:** agree rules for what can interrupt planned work.
-4. **Reserve capacity:** set aside enough for the unplanned work you measured.
-5. **Prioritise improvement work:** create a backlog of automation and reliability items with a clear owner.
-6. **Add a cadence:** a weekly replenishment meeting and a fortnightly retrospective are a good start; see [Kanban ceremonies](https://neuralprojectinstitute.com/project-management/kanban/kanban-ceremonies/).
-7. **Review metrics monthly:** look at [cycle time](https://neuralprojectinstitute.com/project-management/kanban/cycle-time/), [throughput](https://neuralprojectinstitute.com/project-management/kanban/throughput/) and incident trends, then adapt.
+### Core practices for Agile operations teams
+The practices below reinforce each other. A board without WIP limits becomes a wall of half-finished tickets, and WIP limits without an interrupt policy are broken by the first outage.
 
-### Worked example
-A six-person infrastructure team tracks four weeks of work and finds that 45% of completed items were unplanned. They reserve about half their capacity for unplanned work, introduce an expedite lane limited to one item at a time and set a WIP limit of eight across the board. Each week they pull the top improvement items from the backlog. After two months the team automates its three most frequent requests (password resets for a legacy system, test environment builds and log-access requests), and the share of unplanned work falls to around a third. Average cycle time for standard requests drops from eight days to four.
+#### One board for all work
+Put incidents, requests, maintenance and improvement work on one [Kanban board](https://neuralprojectinstitute.com/project-management/kanban/kanban-boards/), even if tickets live in a service desk tool. Columns follow your real workflow, for example Ready, Investigating or Doing, Waiting on others, Verifying and Done. If incidents stay in one tool and project work in another, the team looks idle on one screen and overloaded on the other, and nobody can see the trade-offs being made.
 
-### Metrics for Agile operations
-| Metric | Why it matters |
-| --- | --- |
-| Cycle time per class of service | Shows how quickly each type of work is completed |
-| Throughput | Shows how many items the team completes per week |
-| Planned vs unplanned ratio | Shows whether improvement work is reducing interruptions |
-| Mean time to restore service | Shows how quickly the team recovers from incidents |
-| Change failure rate | Shows how often changes cause problems |
-| Service level performance | Shows whether agreed targets are met; see [service level agreement](https://neuralprojectinstitute.com/project-management/service-level-agreement-sla/) |
+#### An interrupt policy and classes of service
+A class of service is a set of policies for how a type of work is treated, based on what happens if it is delayed. Operations teams typically use Expedite for live incidents, Fixed date for patches and certificate expiries, Standard for requests and Intangible for improvements such as technical debt. Write down who may declare an expedite, how many can run at once (usually one) and what happens to planned work when one arrives. The full set of lane rules is in our [Kanban swimlanes guide](https://neuralprojectinstitute.com/project-management/kanban/kanban-swimlanes/).
 
-### Common mistakes
-- Forcing two-week sprint commitments on a team that is mostly interrupt-driven.
-- Leaving unplanned work off the board, so the team looks idle when it is busy.
-- Never protecting time for improvement, so the same incidents keep happening.
-- Treating Agile and IT service management frameworks as enemies; their processes can coexist with Agile ways of working.
-- Separating development and operations so tightly that problems are thrown over the wall.
+#### WIP limits and pull
+Limit how many items each stage may hold, and pull new work only when something finishes. In operations, the *Waiting on others* column needs a limit too, because tickets waiting for a supplier, a change window or a user reply quietly accumulate. Start a little below today's actual work in progress and adjust after a few weeks; [WIP limits](https://neuralprojectinstitute.com/project-management/kanban/wip-limits/) explains the method and Little's Law behind it.
+
+#### Reserved capacity sized from data
+Reserve a share of team capacity for unplanned work, and size it from your history rather than from someone else's percentage. Log the hours, or at least the items, spent on incidents and unplanned requests each week for eight weeks or more. Then choose a reservation that covers most weeks, not just the average week, because a reservation set at the average is exceeded in roughly half of all weeks. Our [Agile capacity planning guide](https://neuralprojectinstitute.com/project-management/agile/agile-capacity-planning/) covers focus factors and leave in more detail.
+
+#### A light cadence
+Operations teams need fewer meetings than sprint teams, but they need some. A useful starting set is a short daily meeting at the board focused on blocked, ageing and expedited items; weekly replenishment to choose the next improvement items; a fortnightly or monthly retrospective; and a monthly service review with stakeholders. [Kanban meetings and cadences](https://neuralprojectinstitute.com/project-management/kanban/kanban-ceremonies/) describes each one.
+
+#### Automation and toil reduction as backlog work
+Google's site reliability engineering (SRE) book defines **toil** as operational work that is manual, repetitive, automatable, tactical, has no enduring value and grows linearly as the service grows. Google aims to keep operational work below 50% of each SRE's time so that engineering work can reduce it. You do not need to adopt SRE to borrow the idea: tag toil on the board, count it, and keep a standing improvement item in progress that removes the most frequent kind.
+
+#### Blameless post-incident reviews
+After a significant incident, review how the system, process and information available allowed it to happen, not who made the mistake. Record the timeline, the contributing factors, what went well and the corrective actions, each with an owner and a date. Put those actions on the same board as everything else, or they compete invisibly with new requests and lose. The [root cause analysis template](https://neuralprojectinstitute.com/templates/root-cause-analysis-template/) provides a 5 whys worksheet and a corrective action plan with a column for how you will verify each fix worked.
+
+### Agile alongside ITIL and IT service management
+ITIL describes service management practices; Agile and Kanban describe how a team organises and improves its work. They operate at different levels, so most organisations use both. ITIL 4's guiding principles, such as *progress iteratively with feedback* and *focus on value*, are already close to Agile thinking.
+PeopleCert describes ITIL (Version 5) as a gradual, phased release and states that ITIL 4 remains available. PeopleCert's own pages give no dates; accredited training providers reported the Foundation course launching in February 2026, with other modules following during the year, and say no retirement date for ITIL 4 has been announced. This guide uses ITIL 4 terms, which remain in wide use while the new version rolls out. Check PeopleCert's site for the current position before choosing a certification.
+| ITSM practice | Agile way to run it | What stays the same |
+| --- | --- | --- |
+| Incident management | Expedite class of service; swarming; post-incident review items on the backlog | Priority definitions, escalation paths, major incident procedure |
+| Service request management | Standard flow with WIP limits; frequent requests automated or self-served | Request catalogue and fulfilment records |
+| Problem management | Problems become improvement items with protected capacity | Known error records and workarounds |
+| Change enablement | Standard changes and peer review for low risk; automated pipeline evidence | Risk assessment, change authority and audit trail for higher-risk changes |
+| Service level management | Service level targets reviewed in a regular service review with users | The agreed targets themselves; see [service level agreements](https://neuralprojectinstitute.com/project-management/service-level-agreement-sla/) |
+
+#### Change enablement without a weekly bottleneck
+ITIL 4 calls the practice change enablement (its first edition used the term change control) and distinguishes **standard changes** (pre-authorised, low risk, repeatable), **normal changes** (assessed and authorised according to risk) and **emergency changes** (implemented quickly to restore or protect service, then reviewed). It also uses the idea of a **change authority**, which need not be a central board: it can be a peer reviewer or an automated check in a deployment pipeline. Agile operations teams use this flexibility deliberately. They turn their most common changes into standard changes with tested runbooks, use peer review for low-risk normal changes and reserve formal assessment for changes that could seriously affect services.
+Project teams sometimes confuse this with project change control, which governs changes to a project's scope, schedule or budget baseline. The difference is explained in [change management vs change control](https://neuralprojectinstitute.com/project-management/change-management-vs-change-control/).
+
+### Agile operations, DevOps and SRE
+**Agile operations** applies Agile and Lean flow practices inside operations teams. **DevOps** goes further: it joins development and operations into shared ownership of building, releasing and running software, with practices such as infrastructure as code, automated pipelines and shared on-call. **Site reliability engineering** is one specific way to run operations with software engineering methods, built around service level objectives and error budgets. An operations team can be Agile without full DevOps, but the biggest gains usually come when the wall between the teams that build and those that run a service comes down. Our [DevOps guide](https://neuralprojectinstitute.com/project-management/kanban/devops/) covers those practices and their origins.
+
+#### Error budgets: deciding between stability and change
+An error budget turns the stability-versus-change argument into a number both sides accept. The formula is:
+**Error budget = (1 − SLO) × measurement period**, where the SLO (service level objective) is the target proportion of time, or of requests, in which the service works as intended, expressed as a decimal, and the measurement period is in minutes (or in requests, for a request-based SLO).
+**Illustrative calculation.** A service has an availability SLO of 99.9% over a 30-day month. The month has 30 × 24 × 60 = 43,200 minutes. The error budget is (1 − 0.999) × 43,200 = **43.2 minutes** of unavailability. A 25-minute outage caused by a failed configuration change uses 25 ÷ 43.2 = **57.9%** of the budget, leaving 18.2 minutes for the rest of the month.
+Google's SRE book describes halting releases when the budget is exhausted and investing the time in testing and reliability work; slowing releases as the budget runs low is a gentler variant. The calculation assumes the SLO reflects what users actually notice and that monitoring measures it independently. If the SLO is set arbitrarily, the budget gives a precise answer to the wrong question.
+
+### How to introduce Agile in an operations team, step by step
+The sequence below suits an existing team of roughly 4 to 12 people. The timings are typical, not fixed; a team with poor ticket data will need longer at step 2.
+1. **Visualise everything (weeks 1–2).** Put all incidents, requests, maintenance and project items on one board without changing anything else. Agree the column names with the team.
+2. **Measure the work mix (weeks 1–8).** Record, each week, the effort or item count for each work type. Eight weeks gives a more reliable picture than two, especially if your workload is seasonal.
+3. **Write the interrupt policy (week 3).** Define classes of service, who can declare an expedite, the expedite limit and what happens to displaced work.
+4. **Set WIP limits (week 3).** Start slightly below current WIP for each active column, including Waiting on others.
+5. **Reserve capacity (week 4).** Use the measured unplanned effort to decide how much capacity to hold back; review it monthly.
+6. **Build an improvement backlog (week 4).** List automation, reliability and problem-management items, ordered by the effort or incidents they would remove. Name one person to own the order.
+7. **Add the cadence (week 5).** Daily board meeting, weekly replenishment, a regular retrospective and a monthly service review.
+8. **Streamline change enablement (weeks 5–12).** Agree with your change authority which frequent changes can become standard changes.
+9. **Review metrics monthly (from week 8).** Look at [cycle time](https://neuralprojectinstitute.com/project-management/kanban/cycle-time/) per class of service, [throughput](https://neuralprojectinstitute.com/project-management/kanban/throughput/), unplanned share and the change metrics below.
+10. **Adjust one thing at a time.** Change a WIP limit, the reservation or a policy, then watch the effect for a few weeks before the next change.
+Organisation-wide rollouts raise different questions, such as funding, governance and leadership behaviour. See [how to implement Agile](https://neuralprojectinstitute.com/project-management/agile/how-to-implement-agile/) for that wider programme.
+
+### Worked example: an infrastructure team moves to Kanban
+This example is **illustrative**: the team, figures and results are invented to show the calculations. A six-person infrastructure team supports servers, storage, backups and internal environments. Its manager wants to know why upgrade projects keep slipping.
+
+#### Step 1: measure capacity and unplanned work
+Each engineer has about 32 hours a week for ticket and project work after meetings, training and leave, so team capacity is 6 × 32 = **192 hours per week**. For eight weeks the team logs hours spent on incidents and unplanned requests.
+| Week | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Unplanned effort (hours) | 78 | 92 | 85 | 101 | 88 | 95 | 70 | 99 |
+| Share of 192 hours | 40.6% | 47.9% | 44.3% | 52.6% | 45.8% | 49.5% | 36.5% | 51.6% |
+Total unplanned effort is 708 hours, so the mean is 708 ÷ 8 = **88.5 hours per week**, or 88.5 ÷ 192 = **46.1%** of capacity. Weekly values range from 36.5% to 52.6%.
+
+#### Step 2: choose the reservation
+Reserving the mean (88.5 hours) would be exceeded in four of the eight weeks. The team reserves 50% of capacity, **96 hours**, which covers six of the eight weeks. That leaves 192 − 96 = **96 hours a week** for planned improvement and maintenance. In weeks when unplanned work exceeds 96 hours, the policy says planned items pause rather than the team working overtime, and the manager sees the overflow on the board. Eight data points are a small sample, so the reservation is reviewed every month.
+
+#### Step 3: set WIP limits and check them with Little's Law
+For standard service requests, the team has on average 36 items in progress and finishes 22.5 a week. Little's Law (average cycle time = average WIP ÷ average throughput) gives 36 ÷ 22.5 = **1.6 weeks**, or 8 working days on a five-day week, which matches what requesters complain about. The team sets WIP limits that bring standard requests in progress down to about 18. If throughput stays at 22.5 a week, average cycle time becomes 18 ÷ 22.5 = **0.8 weeks**, or 4 working days.
+Little's Law holds for averages in a reasonably stable system: arrivals roughly equal departures and items are not abandoned. Treat the 4-day figure as an expectation to test, not a promise; if throughput falls when WIP drops, the cycle time gain will be smaller.
+
+#### Step 4: pick the first automation
+The team's most frequent toil is building test environments: 14 builds a month at about 3 hours each. A scripted build would take about 60 hours to create and cut each build to about 0.25 hours of checking. The monthly saving is 14 × (3 − 0.25) = **38.5 hours**, so the payback period is 60 ÷ 38.5 = **1.56 months**. That is fast enough to justify starting it first, using the protected 96 hours.
+
+#### Step 5: interpret the results
+Three months later (still illustrative), mean unplanned effort has fallen to 72 hours a week, or 72 ÷ 192 = **37.5%** of capacity. The manager should not immediately cut the reservation to match. The right response is to keep it for another month to confirm the new level, then lower it in steps while watching how often it is exceeded. Over the same period the team made 80 infrastructure changes, of which 6 needed a rollback or hotfix: a change fail rate of 6 ÷ 80 = **7.5%**. (DORA defines the rate per deployment; here each change is treated as one deployment.) The post-incident reviews show most failures came from manual firewall edits, which becomes the next automation candidate.
+Tip
+Track unplanned work in hours if you can. Item counts hide the difference between a five-minute password reset and a two-day storage failure, and capacity decisions need effort, not volume.
+
+### Metrics for Agile IT operations
+Use three groups of measures and review them together. A team that improves flow but breaks more services is not improving.
+| Group | Measure | What it tells you |
+| --- | --- | --- |
+| Flow | Cycle time per class of service | How long each type of work takes from start to finish |
+| Flow | Throughput | Items finished per week, used for forecasting |
+| Flow | Work item age and WIP | Whether work is getting stuck before it is late |
+| Flow | Unplanned share of effort | Whether improvement work is reducing interruptions |
+| DORA throughput | Change lead time; deployment frequency; failed deployment recovery time | How quickly and often changes reach production, and how fast you recover when a change fails |
+| DORA instability | Change fail rate; deployment rework rate | How often changes need immediate intervention, and how many deployments are unplanned fixes for incidents |
+| Service | Incident resolution time; SLA and SLO performance; customer satisfaction | Whether users get the service they were promised |
+DORA's software delivery metrics changed recently. In 2023 the measure long known as MTTR or time to restore service was redefined as **failed deployment recovery time**, which covers only failures caused by a change; in 2024 **deployment rework rate** was added as a fifth metric. Outages with other causes, such as a hardware failure, are not part of that measure, so keep a separate incident resolution time for them. DORA treats reliability as operational performance rather than as a delivery metric.
+See [Kanban metrics](https://neuralprojectinstitute.com/project-management/kanban/kanban-metrics/) for definitions and charts of the flow measures, and [Agile metrics and KPIs](https://neuralprojectinstitute.com/project-management/agile/agile-metrics-and-kpis/) for presenting measures without encouraging gaming.
+
+### Roles in an Agile operations team
+Neither Agile nor Kanban prescribes operations roles, so use what the work needs.
+- **Service owner or product owner:** owns the order of the improvement backlog and balances requests from different stakeholders. Many ops teams lack this role, which is why improvement work loses every priority argument. The [Product Owner guide](https://neuralprojectinstitute.com/project-management/scrum/scrum-product-owner/) describes the Scrum version.
+- **Team lead or flow manager:** looks after the system of work: policies, WIP limits, cadences and impediments. In Scrum this overlaps with the Scrum Master accountability.
+- **Engineers:** pull work, swarm on incidents, write runbooks and automation, and take part in on-call.
+- **On-call or shield role:** one person, rotating weekly, absorbs interruptions so that others can finish planned work. This is a common pattern, not a framework requirement.
+
+### Tools and templates for Agile operations
+Incidents and requests usually stay in an IT service management tool for audit and SLA timing. The question is where planned and improvement work lives, and whether you can see both together.
+- **[Jira](https://neuralprojectinstitute.com/project-management-tools/jira/)** suits teams close to software development. Jira Service Management, a separate Atlassian product for service desks, works closely with Jira's Scrum and Kanban boards.
+- **[Wrike](https://neuralprojectinstitute.com/project-management-tools/wrike/)**, our top-rated tool, fits operations groups that also serve non-IT departments, with request forms, custom workflows, automation and cross-team dashboards. Compare the two in [Wrike vs Jira](https://neuralprojectinstitute.com/project-management-tools/wrike/wrike-vs-jira/).
+- To start before buying anything, the [Kanban board template](https://neuralprojectinstitute.com/templates/kanban-board-template/) has WIP-limited columns and a card list recording owner, class of service, start and finish dates, cycle time and a blocked flag. The [work request template](https://neuralprojectinstitute.com/templates/work-request-template/) provides an intake form and a request log with type, priority, owner, due date and status.
+
+### When Agile operations practices are unsuitable or limited
+These practices assume the team has some control over how it works. They are harder to apply, or need heavy adaptation, in a few situations:
+- **Outsourced operations under a fixed contract**, where the supplier's scope and SLAs define the work and the client cannot change WIP or priorities directly. Improvement then happens through contract and service reviews.
+- **Very small teams of one or two people**, where a board and reserved capacity still help but a formal cadence adds little.
+- **Highly regulated change regimes**, where every change requires fixed approval steps. Agile practices still improve flow before and after approval, but cannot remove the gate.
+- **Teams with no reliable data**, where reserved capacity and Little's Law calculations rest on guesses. Fix the measurement first.
+In each case, Lean tools such as value stream mapping can still reveal where requests wait, even when the team cannot change its operating model.
+
+### Common mistakes in Agile operations
+| Mistake | Why it hurts | What to do instead |
+| --- | --- | --- |
+| Forcing fixed sprint commitments on an interrupt-driven team | Commitments break every sprint and the team stops believing in planning | Use Kanban or Scrumban, or a rotating shield role |
+| Leaving incidents off the board | The team looks idle on paper and trade-offs stay invisible | One board for all work, linked to the service desk tool |
+| Reserving capacity at the average | The reservation is exceeded in roughly half of all weeks | Size it to cover most weeks and review monthly |
+| No limit on expedites | Everything becomes urgent and standard work stalls | One expedite at a time, declared by a named role |
+| Treating ITIL and Agile as rivals | Controls are either abandoned or block all change | Map practices; use standard changes and peer review |
+| Post-incident actions that never get done | The same incidents recur | Put actions on the board with owners and dates |
+| Measuring only speed | Faster changes that fail more often | Pair throughput measures with change fail rate and service measures |
+A retrospective is the natural place to spot these patterns; our [sprint retrospective guide](https://neuralprojectinstitute.com/project-management/scrum/sprint-retrospective/) offers formats that work equally well for Kanban teams.
 
 ### Free templates for this topic
 Work Request Form Template
@@ -36170,38 +36296,38 @@ Beginner · Advanced · Expert
 
 ### Frequently asked questions
 
-**Q: Can IT operations teams use Agile operations practices?**
-Yes. They adapt it to handle unplanned work, usually with Kanban, reserved capacity and close collaboration with development.
+**Q: What is Agile in IT operations?**
+It is the use of Agile values and Kanban-style flow management by teams that run live IT services. They make all work visible, limit work in progress, reserve capacity for incidents and improve the service in small steps, while keeping service management controls.
 
-**Q: Is Scrum or Kanban better for Agile IT operations?**
-Kanban usually fits better because it handles a continuous flow of interruptions. Teams with mostly planned project work can use Scrum. See [Kanban vs Scrum](https://neuralprojectinstitute.com/project-management/kanban/kanban-vs-scrum/).
+**Q: What is AgileOps?**
+AgileOps is an informal label for extending Agile and DevOps ways of working into IT operations. It is not a formal framework, so there is no official AgileOps guide or certification.
 
-**Q: How do Agile ops teams handle incidents?**
-Through an expedite lane or class of service that lets urgent work bypass the normal queue, with a strict limit on how many expedited items run at once.
+**Q: Is Scrum or Kanban better for IT operations?**
+Kanban usually fits teams whose work is largely unplanned, because it has no fixed commitment to break and handles urgent work through explicit policies. Scrum suits teams doing mostly planned project work, often with one person rotating on support.
+
+**Q: Can operations teams run sprints?**
+Yes, if most of their work is planned or if a shield role absorbs interruptions. If the Sprint Goal is displaced by incidents in most sprints, switch to Kanban or Scrumban.
+
+**Q: How do Agile operations teams handle incidents?**
+Through an expedite class of service or on-call rota, with a limit on how many expedites run at once, followed by a blameless post-incident review whose actions go on the team's board.
+
+**Q: How much capacity should an operations team reserve for unplanned work?**
+Measure it rather than adopt a fixed percentage. Log unplanned effort for eight weeks or more and choose a reservation that covers most weeks, not the average week, then review it monthly.
+
+**Q: Can Agile and ITIL work together?**
+Yes. ITIL describes service management practices such as incident, request and change enablement; Agile changes how the team organises and improves its work within them. PeopleCert states that ITIL 4 remains available while ITIL (Version 5) is introduced in phases.
 
 **Q: What is the difference between Agile operations and DevOps?**
-Agile operations applies Agile practices inside ops teams; [DevOps](https://neuralprojectinstitute.com/project-management/kanban/devops/) joins development and operations into a shared way of building, releasing and running software.
+Agile operations applies Agile practices inside operations teams. DevOps joins development and operations into shared ownership of building, releasing and running software, with automation, shared on-call and infrastructure as code.
 
-**Q: How much capacity should Agile operations teams reserve for unplanned work?**
-Base it on your own history. Track several weeks of work, measure the unplanned share and reserve around that amount.
-
-**Q: Can Agile IT operations work with ITIL?**
-Yes. ITIL describes service management practices; Agile describes how teams work. Many organisations use both.
-
-**Q: What metrics should an Agile ops team track?**
-Cycle time, throughput, planned versus unplanned work, time to restore service, change failure rate and service level performance.
+**Q: What metrics should an Agile operations team track?**
+Flow measures (cycle time per class of service, throughput, work item age, unplanned share), DORA's five delivery metrics for changes, and service measures such as incident resolution time and SLA performance.
 
 **Q: Do Agile operations teams need a product owner?**
-Many benefit from someone who prioritises improvement work and balances requests; some call this a service owner.
+Not formally, but someone should own the order of improvement work and balance stakeholder requests. Many teams call this person a service owner.
 
-**Q: How do Agile ops teams run stand-ups?**
-Briefly, at the board, focusing on blocked, ageing and expedited items rather than individual status updates.
-
-**Q: What is a blameless post-incident review in Agile operations?**
-A review that looks at how the system and process allowed an incident to happen, rather than who caused it, and agrees improvements.
-
-**Q: Which tools suit Agile IT operations?**
-Tools that support Kanban boards, request intake and automation; compare options in our [project management tools](https://neuralprojectinstitute.com/project-management-tools/) reviews.
+**Q: How long does it take to make an operations team Agile?**
+A board, interrupt policy and WIP limits can be in place within a month. Reliable capacity data takes about two months, and measurable reductions in unplanned work usually take several months of steady automation.
 
 ### Related guides
 What Is DevOps? Culture, Practices and Metrics
@@ -36505,7 +36631,7 @@ What an Agile project manager does, how the role differs from a Scrum Master and
 PRINCE2 vs Agile: Key Differences and How to Combine Them
 PRINCE2 vs Agile compared: governance vs delivery, roles, documents and tolerances, plus PRINCE2 Agile, a worked example and how to combine them.
 What Is SAFe? The Scaled Agile Framework Explained
-SAFe explained: core values, configurations, Agile Release Trains, Program Increments, key roles, benefits and criticisms of the Scaled Agile Framework.
+SAFe explained: core values, principles, configurations, roles and Planning Intervals, Core SAFe vs AI-Native SAFe, a worked sizing example and criticisms.
 
 
 ---
@@ -36799,7 +36925,7 @@ Inventory all current initiatives, put them on one board, agree a few strategic 
 Agile PMO: Roles, Services and How to Build One
 An Agile PMO enables value delivery instead of policing projects. Learn its services, roles, metrics, governance and how to transform a traditional PMO.
 What Is SAFe? The Scaled Agile Framework Explained
-SAFe explained: core values, configurations, Agile Release Trains, Program Increments, key roles, benefits and criticisms of the Scaled Agile Framework.
+SAFe explained: core values, principles, configurations, roles and Planning Intervals, Core SAFe vs AI-Native SAFe, a worked sizing example and criticisms.
 Agile Metrics and KPIs: What to Track, Formulas, Examples
 Agile metrics and KPIs explained: flow, delivery, quality, DORA, value and team health measures with formulas, worked examples and how to report at scale.
 Agile Release Train (ART): Roles, Events and Example
@@ -37940,7 +38066,7 @@ No certification is required to be a team member. Scaled Agile offers role-based
 
 ### Related guides
 What Is SAFe? The Scaled Agile Framework Explained
-SAFe explained: core values, configurations, Agile Release Trains, Program Increments, key roles, benefits and criticisms of the Scaled Agile Framework.
+SAFe explained: core values, principles, configurations, roles and Planning Intervals, Core SAFe vs AI-Native SAFe, a worked sizing example and criticisms.
 PI Planning in SAFe: Agenda, Steps and Example
 PI planning explained: what happens at SAFe's two-day event, the agenda, roles, PI objectives, ROAM, the confidence vote and a worked team example.
 Agile Portfolio Management: Practices, WSJF and Steps
@@ -38360,8 +38486,8 @@ Agile Metrics and KPIs: What to Track, Formulas, Examples
 Agile metrics and KPIs explained: flow, delivery, quality, DORA, value and team health measures with formulas, worked examples and how to report at scale.
 Types of Agile Methodologies: Scrum, Kanban, XP, Lean and More
 Compare the main Agile methodologies (Scrum, Kanban, Scrumban, XP, Lean, Crystal, DSDM and FDD) and learn which suits your team and work.
-Agile in IT Operations: How Ops Teams Apply Agile and DevOps
-How IT operations teams apply Agile: handling planned and unplanned work, Kanban for ops, DevOps links, metrics, an example and common mistakes.
+Agile IT Operations: Kanban, ITIL and DevOps in Practice
+Agile IT operations explained: run incidents, requests and improvements with Kanban, reserved capacity, ITIL and DevOps, with a worked example and metrics.
 
 
 ---
@@ -39205,7 +39331,7 @@ What the Agile mindset means, its core traits and behaviours, how it links to th
 Agile Portfolio Management: Practices, WSJF and Steps
 Agile portfolio management explained: Lean budgets, portfolio Kanban, WSJF with a worked example, metrics, roles and a step-by-step plan to start.
 What Is SAFe? The Scaled Agile Framework Explained
-SAFe explained: core values, configurations, Agile Release Trains, Program Increments, key roles, benefits and criticisms of the Scaled Agile Framework.
+SAFe explained: core values, principles, configurations, roles and Planning Intervals, Core SAFe vs AI-Native SAFe, a worked sizing example and criticisms.
 
 
 ---
@@ -40985,7 +41111,7 @@ The Agile Manifesto explained: the 4 values and 12 principles in plain English, 
 Types of Agile Methodologies: Scrum, Kanban, XP, Lean and More
 Compare the main Agile methodologies (Scrum, Kanban, Scrumban, XP, Lean, Crystal, DSDM and FDD) and learn which suits your team and work.
 What Is SAFe? The Scaled Agile Framework Explained
-SAFe explained: core values, configurations, Agile Release Trains, Program Increments, key roles, benefits and criticisms of the Scaled Agile Framework.
+SAFe explained: core values, principles, configurations, roles and Planning Intervals, Core SAFe vs AI-Native SAFe, a worked sizing example and criticisms.
 Agile Development Life Cycle: 6 Phases With Examples
 The Agile development life cycle explained: the 6 phases, what each produces, one iteration step by step, a worked example and how it compares with the SDLC.
 
@@ -42927,7 +43053,7 @@ Yes. The LeSS Company issues Certified LeSS Basics, Certified LeSS Practitioner 
 
 ### Related guides
 What Is SAFe? The Scaled Agile Framework Explained
-SAFe explained: core values, configurations, Agile Release Trains, Program Increments, key roles, benefits and criticisms of the Scaled Agile Framework.
+SAFe explained: core values, principles, configurations, roles and Planning Intervals, Core SAFe vs AI-Native SAFe, a worked sizing example and criticisms.
 Spotify Model: Squads, Tribes, Chapters and Guilds Explained
 The Spotify model explained: squads, tribes, chapters and guilds, who decides what, a worked reorganisation example, the criticism, and how to adapt it.
 Agile vs Scrum: Key Differences, Examples and When to Use
@@ -43240,7 +43366,7 @@ No. It is a SAFe event, but a regular big-room planning session for several team
 Agile Release Train (ART): Roles, Events and Example
 What is an Agile Release Train? Learn ART roles, events, SAFe 6.0 terms, how to launch one step by step, with a worked example and common mistakes.
 What Is SAFe? The Scaled Agile Framework Explained
-SAFe explained: core values, configurations, Agile Release Trains, Program Increments, key roles, benefits and criticisms of the Scaled Agile Framework.
+SAFe explained: core values, principles, configurations, roles and Planning Intervals, Core SAFe vs AI-Native SAFe, a worked sizing example and criticisms.
 Agile Release Planning: Steps, Example and Template
 Agile release planning explained: what a release plan is, how to build one step by step, a worked velocity forecast, burnup charts and a free template.
 Agile Portfolio Management: Practices, WSJF and Steps
@@ -43816,57 +43942,219 @@ Agile epics explained: what an epic is, how to write one with a template, worked
 
 URL: https://neuralprojectinstitute.com/project-management/agile/scaled-agile-framework-safe/
 Section: Agile guides
-Summary: SAFe explained: core values, configurations, Agile Release Trains, Program Increments, key roles, benefits and criticisms of the Scaled Agile Framework.
+Summary: SAFe explained: core values, principles, configurations, roles and Planning Intervals, Core SAFe vs AI-Native SAFe, a worked sizing example and criticisms.
 
 
 ## What Is SAFe? The Scaled Agile Framework Explained
-The Scaled Agile Framework (SAFe) is the most widely adopted framework for applying Agile across large organisations. It provides roles, events and practices to align many Agile teams around shared goals, while keeping the team-level practices of Scrum and Kanban.
+The Scaled Agile Framework (SAFe) is a knowledge base published by Scaled Agile, Inc. for running Agile and Lean practices across many teams, from groups of Agile teams called Agile Release Trains up to portfolio strategy and funding. Since 2026 the framework site offers two operating models: Core SAFe, whose Big Picture is still labelled SAFe 6.0, and the newer AI-Native SAFe. This guide explains how SAFe is structured, which configuration fits which organisation, how its cadence works, and where its critics have a point.
 - Published 22 September 2026
-- 3 min read
+- Last updated 25 November 2026
+- 19 min read
 
 ### Key takeaways
-- SAFe aligns many Agile teams through Agile Release Trains and Program Increments.
-- PI Planning and Lean Portfolio Management are its signature practices.
-- It is powerful at scale but can become heavy if adopted mechanically.
+- SAFe coordinates many Agile teams through long-lived Agile Release Trains of about 50 to 125 people that plan together every Planning Interval of typically 8 to 12 weeks.
+- Core SAFe (Big Picture 6.0) remains the established model; AI-Native SAFe, announced in June 2026 and presented in full at the SAFe Summit in September 2026, sits alongside it rather than replacing it.
+- Four core values and ten Lean-Agile principles underpin the framework; the knowledge base now groups its competencies into five disciplines.
+- Choose a configuration by structure: Essential for one or a few trains, Large Solution when one solution needs several trains, Portfolio when strategy and funding must connect to delivery, Full for all of these.
+- SAFe adds roles, events and planning layers. That structure helps large organisations align, but it costs time and can preserve old hierarchies if adopted mechanically.
+- If one or two teams can deliver the product, a scaling framework is probably unnecessary; lighter options such as LeSS or Scrum@Scale also exist.
 
-### Where SAFe comes from
-SAFe was created by Dean Leffingwell and first released in 2011. It is maintained by Scaled Agile, Inc., which publishes the framework and runs training and certification. It draws on Agile, Lean, systems thinking and DevOps, and it is updated regularly; check the official site for the current version.
+### What is the Scaled Agile Framework (SAFe)?
+**The Scaled Agile Framework (SAFe) is a set of roles, events, practices and principles for applying Agile and Lean ways of working across an enterprise. It organises Agile teams into long-lived Agile Release Trains that plan and deliver on a shared cadence, and it connects those trains to portfolio strategy, funding and governance.**
+SAFe was created by Dean Leffingwell, first released in 2011 and is maintained by Scaled Agile, Inc., which publishes the framework articles at framework.scaledagile.com and runs the associated training and certification. It draws on Agile development, Lean product development, systems thinking and DevOps. Its teams use Scrum or Kanban, which SAFe calls SAFe Scrum and SAFe Team Kanban.
+SAFe is a framework, not a methodology you execute line by line. Most organisations adopt part of it, and the framework itself is designed to be configured. That flexibility matters for the debate about SAFe: many problems attributed to it come from how it was implemented, though critics argue that its size makes heavy implementations likely.
 
-### Core values
-- **Alignment:** everyone understands and works towards the same goals.
-- **Transparency:** progress, problems and decisions are visible.
-- **Respect for people:** the people doing the work are trusted and developed.
-- **Relentless improvement:** the organisation keeps learning and improving.
+### Which version of SAFe is current?
+This question has become less straightforward. As of November 2026, Scaled Agile's framework site presents two operating models side by side:
+| Operating model | Status | What it contains |
+| --- | --- | --- |
+| Core SAFe | The established model; Big Picture posters still labelled SAFe 6.0 (released March 2023) | The four configurations, Agile Release Trains, two-day PI planning, Inspect and Adapt, Lean Portfolio Management |
+| AI-Native SAFe | Unveiled in June 2026 (Scaled Agile's release announcement is dated 23 June); presented in full in the keynote at the SAFe Summit, San Diego, 14–18 September 2026 | Smaller AI-augmented teams, AI-Native ARTs, a new AI Value Architect role, AI governance and ethics, and redesigned ART events |
+Scaled Agile states that AI-Native SAFe does not replace Core SAFe, and that it will continue to support and evolve Core SAFe. Because AI-Native SAFe is so new, existing SAFe implementations, role certifications such as SAFe Agilist and most tool templates are built around Core SAFe, so the rest of this guide describes Core SAFe unless it says otherwise.
 
-### The four configurations
-| Configuration | Use when |
+#### SAFe 6.0 terminology you will still meet
+SAFe 6.0 renamed several terms, and older names linger in tools and job adverts. The most visible changes are below; our [Agile Release Train guide](https://neuralprojectinstitute.com/project-management/agile/agile-release-train/) lists more.
+| Older term | Current term |
 | --- | --- |
-| Essential SAFe | One or a few Agile Release Trains deliver a product or solution |
-| Large Solution SAFe | Very large, complex systems need several trains and suppliers working together |
-| Portfolio SAFe | Strategy, funding and governance must be connected to delivery |
-| Full SAFe | All of the above in very large enterprises |
+| Program Increment (PI) | Planning Interval (PI) |
+| Program (as in program backlog, program board) | ART (ART backlog, ART planning board) |
+| Agile Program Management Office (APMO) | Value Management Office (VMO) |
+| Scrum XP; Kanban (team level) | SAFe Scrum; SAFe Team Kanban |
+| Scrum Master | Scrum Master/Team Coach (either title may be used) |
+| Metrics | Measure and Grow, with outcome, flow and competency measures |
 
-### Key building blocks
-- **Agile teams** of about ten or fewer people use Scrum, Kanban or both.
-- **[Agile Release Train (ART)](https://neuralprojectinstitute.com/project-management/agile/agile-release-train/):** a long-lived team of Agile teams, typically 50 to 125 people, that plans and delivers together.
-- **Program Increment (PI):** a planning interval, usually 8 to 12 weeks, often four development iterations followed by an Innovation and Planning iteration.
-- **[PI Planning](https://neuralprojectinstitute.com/project-management/agile/pi-planning/):** a regular, usually two-day event in which the whole ART plans the next PI together.
-- **[Lean Portfolio Management](https://neuralprojectinstitute.com/project-management/agile/agile-portfolio-management/):** connects strategy and funding with execution.
+#### What AI-Native SAFe changes
+AI-Native SAFe redesigns teams and events for organisations where AI agents do a substantial share of the work. Its framework articles describe AI-Native Teams of typically three to seven people combining product, builder, domain expert and AI capabilities, with humans reviewing AI output and remaining accountable. At train level, the two-day PI Planning is replaced by a one-day **PI Outcome Planning** event, and a two-hour **Sense and Respond** event held at least once per iteration replaces Inspect and Adapt and absorbs System Demo activities. A dedicated **AI Value Architect** role helps teams adopt AI responsibly and link it to business outcomes. The model is new, so expect its guidance to change and evidence from real adoptions to be thin for some time.
 
-### Key roles
-| Role | Responsibility |
-| --- | --- |
-| Release Train Engineer (RTE) | Servant leader and coach for the ART; facilitates PI Planning |
-| Product Management | Owns the ART's backlog and vision |
-| System Architect | Guides technical direction across teams |
-| Business Owners | Key stakeholders accountable for business outcomes |
-| Product Owner and Scrum Master (team coach) | Team-level roles, as in Scrum |
+### SAFe core values and Lean-Agile principles
+SAFe's four core values describe the behaviour the framework expects from leaders and teams:
+- **Alignment:** everyone understands the strategy and how their work contributes to it.
+- **Transparency:** plans, progress, problems and decisions are visible, which requires trust.
+- **Respect for people:** the people doing the work are trusted, developed and listened to.
+- **Relentless improvement:** the organisation keeps learning, through events such as Inspect and Adapt.
+Beneath the values sit ten Lean-Agile principles. Scaled Agile calls them immutable; the practices are meant to be adapted, the principles are not.
+| # | Principle | What it means in practice |
+| --- | --- | --- |
+| 1 | Take an economic view | Decide using cost of delay and economics, not only dates and utilisation |
+| 2 | Apply systems thinking | Optimise the whole value stream, not one team or department |
+| 3 | Assume variability; preserve options | Keep design options open until learning reduces uncertainty |
+| 4 | Build incrementally with fast, integrated learning cycles | Integrate frequently so that feedback arrives early |
+| 5 | Base milestones on objective evaluation of working systems | Judge progress by working solutions, not documents |
+| 6 | Make value flow without interruptions | Limit WIP, reduce batch sizes and queues |
+| 7 | Apply cadence, synchronize with cross-domain planning | Plan together on a fixed rhythm |
+| 8 | Unlock the intrinsic motivation of knowledge workers | Autonomy, mastery and purpose rather than individual incentives |
+| 9 | Decentralize decision-making | Centralise only strategic, infrequent decisions |
+| 10 | Organize around value | Build teams and trains around value streams, not functions |
+Principle 10 is the one most often skipped. Renaming departments as trains without reorganising around a flow of value leaves the hand-offs that SAFe is meant to remove.
 
-### Benefits and criticisms
-**Benefits reported by adopters** include better alignment between strategy and delivery, more predictable releases, fewer dependency surprises and clearer visibility for leaders.
-**Criticisms** include that SAFe can feel heavy and prescriptive, that it may preserve hierarchy under new names, and that large planning events can become theatre if teams lack real autonomy. Alternatives such as [LeSS](https://neuralprojectinstitute.com/project-management/agile/large-scale-scrum-less/) take a lighter approach.
+### How SAFe is organised: five disciplines
+Earlier descriptions of SAFe, including many training materials, list seven core competencies. Scaled Agile's knowledge base now groups its guidance into **five disciplines**, each containing several competencies:
+| Discipline | What it covers | Example competencies |
+| --- | --- | --- |
+| Leadership and Culture | How leaders lead the change and build a learning organisation | Leading Change; Building an AI Organization |
+| Team and Technical Agility | Effective Agile teams and engineering quality | Creating Great Agile Teams; Developing Quality Software; Continuously Delivering Value |
+| Product Development Flow | Turning product strategy into released, measured value | Accelerating Product Flow; Creating Responsive Roadmaps; Harnessing Customer Feedback |
+| Large Solution Integration and Delivery | Coordinating several trains and suppliers on very large systems | Coordinating Large Solution Delivery; Lean Systems Engineering |
+| Lean Portfolio Management | Strategy, investment funding and governance | Managing a Balanced Portfolio; Transitioning to Value Stream Funding |
+If you are studying for an exam, check which model your course material uses. The underlying ideas map across, but question wording may follow the version the course was written for.
+
+### How SAFe works, level by level
+SAFe stacks structures so that the same rhythm of planning, delivery and review runs from teams to the portfolio.
+
+#### Team level
+[Agile teams](https://neuralprojectinstitute.com/project-management/agile/what-is-an-agile-team/) of ten or fewer people, each with a Product Owner and a Scrum Master/Team Coach, plan and deliver in iterations, usually of two weeks. They use [Scrum](https://neuralprojectinstitute.com/project-management/scrum/what-is-scrum/) or [Kanban](https://neuralprojectinstitute.com/project-management/kanban/what-is-kanban/) practices and share a Definition of Done with the other teams on their train.
+
+#### Agile Release Train (ART)
+An ART is a long-lived team of Agile teams, generally 50 to 125 people, organised around a value stream and able to define, build, test and release its solution. All teams on a train share one ART backlog, one calendar and one set of events, led by the Release Train Engineer, Product Management, the System Architect and Business Owners. The ART is the core building block of every configuration.
+
+#### Solution Train
+When a single solution, such as an aircraft system or a national tax platform, is too large for one ART, several trains and suppliers coordinate through a Solution Train, led by a Solution Train Engineer, Solution Management and a Solution Architect. Trains on a Solution Train align their Planning Intervals and add solution-level events such as Pre-Plan and Coordinate and Deliver.
+
+#### Portfolio
+A portfolio contains one or more value streams. **Lean Portfolio Management** connects strategy to execution through value stream budgets with guardrails, a portfolio Kanban for large initiatives called epics, and Lean governance. Roles include Epic Owners, Enterprise Architects and the Value Management Office. Our [Agile portfolio management guide](https://neuralprojectinstitute.com/project-management/agile/agile-portfolio-management/) works through WSJF prioritisation and Lean budgeting in detail, and [Agile epics](https://neuralprojectinstitute.com/project-management/agile/agile-epics/) explains how epics are written and split.
+
+### The four configurations and how to choose
+Core SAFe's Big Picture comes in four configurations. Each adds structure to the one before, so start with the smallest that fits.
+| Configuration | Adds | Choose it when | Avoid it when |
+| --- | --- | --- | --- |
+| Essential SAFe | Teams and ARTs with their roles, events and artefacts | One or a few trains each deliver a largely independent solution | One or two teams can deliver the product without a train |
+| Large Solution SAFe | Solution Train, supplier coordination, solution roles and events | One very large solution needs several ARTs and suppliers to integrate | Trains deliver separate solutions with few integration points |
+| Portfolio SAFe | Lean Portfolio Management, value stream budgets, portfolio Kanban | Several value streams compete for funding and strategy must steer them | Funding and strategy are already set elsewhere and cannot change |
+| Full SAFe | Everything above | A very large enterprise has multiple large solutions plus portfolio governance | A smaller configuration covers your actual problems |
 Tip
-Scale only when you need to. If one or two teams can deliver the product, a scaling framework may add more overhead than value.
+Many organisations start with Essential SAFe on one train and add the portfolio layer after two or three Planning Intervals, once the first train has shown where funding and prioritisation get in its way.
+
+### SAFe roles at a glance
+| Role | Level | Main responsibility |
+| --- | --- | --- |
+| Product Owner | Team | Owns the team backlog, refines features into stories, accepts work |
+| Scrum Master/Team Coach | Team | Coaches the team, facilitates team events, improves flow |
+| Release Train Engineer (RTE) | ART | Servant leader and coach of the train; facilitates ART events, manages risks and impediments |
+| Product Management | ART | Owns the ART backlog, vision and roadmap |
+| System Architect | ART | Guides the technical direction and architectural runway |
+| Business Owners | ART | Senior stakeholders accountable for the train's business outcomes |
+| Solution Train Engineer, Solution Management, Solution Architect | Large solution | The equivalent leadership roles for a Solution Train |
+| Epic Owners, Enterprise Architect, Value Management Office | Portfolio | Shape epics, guide enterprise architecture and support portfolio operations |
+None of these roles is a traditional project manager. Former project and programme managers often become RTEs or work in the VMO, but the RTE coaches and facilitates rather than owning scope or assigning tasks. The [Agile Release Train guide](https://neuralprojectinstitute.com/project-management/agile/agile-release-train/) describes the train-level roles in depth.
+
+### The SAFe cadence: iterations, Planning Intervals and events
+A **Planning Interval (PI)** is a fixed timebox, typically 8 to 12 weeks, in which an ART plans, builds, demonstrates and reviews a set of objectives. Scaled Agile notes a bias towards shorter PIs. The most common pattern is four development iterations followed by one **Innovation and Planning (IP) iteration**, which provides time for innovation, training, final integration, Inspect and Adapt and planning the next PI. There is no fixed rule on the number of iterations.
+| Event | Level | When | Purpose |
+| --- | --- | --- | --- |
+| Iteration Planning, Team Sync, Team Backlog Refinement, Iteration Review, Iteration Retrospective | Team | Every iteration | Plan, coordinate daily, refine, review and improve team work |
+| PI Planning | ART | Once per PI, typically two days, in the IP iteration | Committed PI objectives and an ART planning board of features and dependencies |
+| ART Sync | ART | Weekly or more often | Track progress, dependencies, risks and scope |
+| System Demo | ART | End of each iteration | Show the integrated increment working |
+| Inspect and Adapt | ART | End of each PI | PI system demo, measures review and problem-solving workshop |
+| Pre-Plan; Coordinate and Deliver | Solution Train | Around each PI | Align several ARTs and suppliers on one solution |
+SAFe's phrase for releases is **develop on cadence, release on demand**: planning and integration follow the calendar, but features can be released whenever they are ready and the business wants them. See our [PI planning guide](https://neuralprojectinstitute.com/project-management/agile/pi-planning/) for the two-day agenda, ROAM risk handling and the confidence vote.
+
+### Implementing SAFe: the Implementation Roadmap
+Scaled Agile publishes an Implementation Roadmap that sequences a SAFe adoption. In outline it moves through the following stages; the exact step names have changed between versions, so treat this as a summary rather than the official list.
+1. **Reach a tipping point.** Leaders agree that the current way of working must change and why.
+2. **Train change agents and leaders.** Internal coaches, often SAFe Practice Consultants, and executives learn the framework first.
+3. **Create a Lean-Agile Center of Excellence (LACE).** A small team owns the transformation backlog.
+4. **Organise around value.** Map value streams and design the trains; [value stream mapping](https://neuralprojectinstitute.com/project-management/kanban/value-stream-mapping/) is the usual starting tool.
+5. **Prepare, train and launch the first ART.** Fill roles, publish the PI calendar, train the teams together and run the first PI planning.
+6. **Coach ART execution.** Support the first PIs closely and act on Inspect and Adapt findings.
+7. **Launch more ARTs and value streams, then enhance the portfolio.** Extend the pattern and introduce Lean Portfolio Management.
+8. **Accelerate.** Measure, learn and improve continuously.
+Change-management issues such as sponsorship, resistance and measuring progress apply to any large Agile adoption, not only SAFe. Read our [Agile transformation guide](https://neuralprojectinstitute.com/project-management/agile/agile-transformation/) for how to handle them.
+
+### Worked example: sizing and configuring SAFe for a 420-person organisation
+This example is **illustrative**; the organisation and numbers are invented. A bank's technology division has 420 people and wants to decide how many trains to form and which configuration to adopt.
+
+#### Step 1: map value streams and size the trains
+The division maps four development value streams and counts the people needed to build and run each solution.
+| Value stream | People | Within 50–125? | Teams of about ten |
+| --- | --- | --- | --- |
+| Retail digital banking | 120 | Yes | About 12 |
+| Business banking | 105 | Yes | About 10 to 11 |
+| Payments | 110 | Yes | About 11 |
+| Data platform | 85 | Yes | About 8 to 9 |
+The total is 120 + 105 + 110 + 85 = **420 people**. An earlier proposal merged retail and business digital banking into one train of 120 + 105 = 225 people, well above the 125 guide figure, so the division keeps them as two trains split by customer segment. That gives **four ARTs**.
+
+#### Step 2: choose the configuration
+Each train delivers a largely independent solution, and integration between them happens through stable APIs rather than joint releases, so no single solution needs a Solution Train. Large Solution SAFe would add roles and events with little benefit. However, the four value streams compete for one annual technology budget, and the board wants funding to follow strategy. The division therefore chooses **Portfolio SAFe**: Essential SAFe for each train plus Lean Portfolio Management.
+
+#### Step 3: check the cadence cost
+The division picks a 10-week PI: four two-week iterations plus a two-week IP iteration. A full-time team member has about 10 × 40 = **400 working hours** per PI. Attending PI planning (two days, about 16 hours) and Inspect and Adapt (about half a day, 4 hours) takes 16 + 4 = 20 hours, or 20 ÷ 400 = **5.0%** of the PI. With a 12-week PI the same events take 20 ÷ 480 = **4.2%**. Team-level events, ART Sync for coaches and Product Owners, and System Demos come on top and are not included here.
+The IP iteration is 2 ÷ 10 = **20%** of the PI calendar, but it is not overhead: it holds integration, innovation, training and buffer for estimates that prove wrong. A 10-week cadence gives 52 ÷ 10 = **5.2** PIs a year, so in practice the calendar needs an adjustment, such as one longer PI over the year-end holidays; a 12-week cadence gives about 4.3.
+
+#### Step 4: interpret and decide
+The numbers support four trains in Portfolio SAFe, but they do not prove SAFe is the right choice. Before committing, the division should test whether a lighter approach would solve its actual problems; if the main pain is funding rather than cross-team delivery, Lean Portfolio Management practices alone might be enough. If it proceeds, it launches the payments train first, because that value stream has the most cross-team dependencies today and a sponsor willing to attend PI planning. Each train can record its first PI's features and capacity check in the [release plan template](https://neuralprojectinstitute.com/templates/release-plan-template/), and portfolio objectives can be tracked with the [OKR template](https://neuralprojectinstitute.com/templates/okr-template/), which holds objectives, key results, owners, baselines, targets and confidence.
+
+### Benefits, limitations and criticisms of SAFe
+
+#### What SAFe does well
+- It gives large organisations a documented, shared vocabulary and a defined starting structure, which reduces design effort.
+- PI planning makes cross-team dependencies and risks visible early, in one room or one virtual board.
+- It addresses portfolio funding and governance, which team-level frameworks leave out.
+- Its training and certification ecosystem makes it easy to find people with a common baseline of knowledge.
+
+#### Limitations and criticisms
+SAFe is one of the most debated frameworks in Agile. Ken Schwaber, a co-creator of Scrum, criticised it in 2013 as a return to hierarchical control, and Thoughtworks' Technology Radar has warned that top-down control generates waste in the value stream. Common concerns are:
+- **Weight:** many roles, events and artefacts, which smaller organisations may not need.
+- **Preserved hierarchy:** existing managers and approval chains can survive under new names, so behaviour does not change.
+- **Reduced team autonomy:** synchronised cadences and PI commitments constrain how teams plan.
+- **Planning theatre:** PI planning becomes a ritual when scope is fixed in advance and teams cannot negotiate.
+- **Commercial ecosystem:** the framework is tied to paid training and certification, which critics say encourages adoption by default.
+Supporters reply that SAFe is meant to be configured and that most failures come from adopting its structures without its principles. Both views have merit, which is why the decision to adopt SAFe should rest on your organisation's actual coordination problems rather than on the framework's popularity.
+
+### When SAFe is unsuitable and what to use instead
+SAFe is designed for coordination problems that appear at scale. It is usually a poor fit when:
+- A single team, or a pair of closely working teams, can build the product; a shared backlog and a [Scrum of Scrums](https://neuralprojectinstitute.com/project-management/scrum/scrum-of-scrums/) may be enough.
+- The organisation cannot or will not reorganise around value streams, so trains would be departments in disguise.
+- Leaders want visibility but not decentralised decision-making; SAFe's events will then turn into status reporting.
+- Work is mostly continuous operational flow rather than product development; Kanban at team and service level may suit better.
+| Alternative | Best suited to | Key difference from SAFe |
+| --- | --- | --- |
+| [Large-Scale Scrum (LeSS)](https://neuralprojectinstitute.com/project-management/agile/large-scale-scrum-less/) | One product built by up to eight teams (more with LeSS Huge) | One Product Owner and one Product Backlog, very few added roles |
+| [Scrum@Scale](https://neuralprojectinstitute.com/project-management/scrum/scrum-at-scale/) | Organisations wanting a light, modular extension of Scrum to leadership | Minimal prescription; scales Scrum's own roles |
+| Nexus | Three to nine Scrum teams on one product | A thin integration layer over Scrum |
+| [Spotify-style squads and tribes](https://neuralprojectinstitute.com/project-management/agile/squads-tribes-chapters-guilds/) | Organisations designing their own model | A description of one company's structure, not a framework |
+
+### SAFe certifications
+Scaled Agile offers role-based certifications. Facts below were checked on Scaled Agile's support site in November 2026; prices exclude tax and course fees, which training partners set.
+| Certification | Course | Audience | Renewal tier |
+| --- | --- | --- | --- |
+| SAFe Agilist (SA) | Leading SAFe (now AI-Empowered Leading SAFe) | Leaders, managers and anyone needing an overview | Foundational: $195 a year |
+| SAFe Scrum Master (SSM) | AI-Empowered SAFe Scrum Master | Scrum Masters/Team Coaches on an ART | Foundational: $195 a year |
+| SAFe Product Owner/Product Manager (POPM) | SAFe Product Owner/Product Manager | Product Owners and Product Management | Foundational: $195 a year |
+| SAFe Release Train Engineer (RTE) | SAFe Release Train Engineer | RTEs and those preparing for the role | Advanced: $295 a year |
+| SAFe Practice Consultant (SPC) | Implementing SAFe | Coaches and consultants who lead adoptions and teach courses | Expert: $995 a year |
+The SAFe Agilist exam has 45 questions in 90 minutes with an 80% pass mark, and the first two attempts are included if taken within 60 days of the course. All SAFe certifications renew every year, with continuing education requirements set by Scaled Agile. Most AI-Native SAFe certifications are renewed individually rather than through these tiers; AI-Native versions of the SPC certification fall under the Expert tier. Check Scaled Agile's site for current figures before you register.
+See our [Scrum certification and training guide](https://neuralprojectinstitute.com/project-management/scrum/scrum-certification-and-training/) for how SAFe credentials compare with PSM, CSM and PMI-ACP, including exam fees and five-year costs, and the broader [guide to learning Agile and getting certified](https://neuralprojectinstitute.com/project-management/agile/how-to-learn-agile-and-get-certified/) for a study path.
+
+### Common SAFe adoption mistakes
+| Mistake | Consequence | Better approach |
+| --- | --- | --- |
+| Adopting Full SAFe on day one | Many new roles and events before any train has delivered | Start with Essential SAFe on one train |
+| Forming trains around departments | Features still cross several trains and teams | Organise around value streams (principle 10) |
+| Treating PI objectives as fixed contracts | Teams pad estimates; uncommitted objectives disappear | Plan below capacity and use predictability as a learning measure |
+| Skipping leadership training | Leaders keep old approval habits | Train executives and managers before teams |
+| Filling the IP iteration with features | No time for integration, innovation or recovery | Protect the IP iteration |
+| Measuring only velocity and predictability | Output rises while outcomes stagnate | Use outcome, flow and competency measures together; see [Agile metrics and KPIs](https://neuralprojectinstitute.com/project-management/agile/agile-metrics-and-kpis/) |
 
 ### Free templates for this topic
 Agile Release Plan Template
@@ -43882,38 +44170,41 @@ Beginner · Advanced · Expert
 
 ### Frequently asked questions
 
-**Q: Is SAFe Agile?**
-SAFe is built on Agile and Lean principles, and its teams use Scrum and Kanban. Critics argue some implementations become too process-heavy, so how it is adopted matters a lot.
-
-**Q: How big must an organisation be for SAFe?**
-SAFe is designed for programmes of roughly 50 or more people working on one solution. Smaller organisations rarely need it.
-
 **Q: What is SAFe in simple terms?**
-A framework for coordinating many Agile teams that work on the same large product or solution, with shared planning, cadence and governance.
+SAFe is a framework for coordinating many Agile teams working on the same products or solutions. Teams are grouped into Agile Release Trains that plan together every 8 to 12 weeks, and the trains are linked to portfolio strategy and funding.
+
+**Q: Is SAFe 6.0 still the current version?**
+SAFe 6.0 remains the basis of Core SAFe, whose Big Picture posters are still labelled 6.0. In 2026 Scaled Agile also released AI-Native SAFe as a second operating model alongside Core SAFe, not as a replacement.
+
+**Q: What is AI-Native SAFe?**
+An operating model Scaled Agile released in 2026 for organisations where AI agents do a large share of the work. It uses smaller AI-augmented teams, a one-day PI Outcome Planning event, a recurring Sense and Respond event and a new AI Value Architect role.
+
+**Q: What does PI stand for in SAFe?**
+Planning Interval. Before SAFe 6.0 it stood for Program Increment. It is a timebox of typically 8 to 12 weeks, commonly four development iterations and one Innovation and Planning iteration.
+
+**Q: How many people do you need for SAFe?**
+SAFe's basic unit, the Agile Release Train, is generally 50 to 125 people. Organisations with fewer people working on one product rarely need SAFe.
+
+**Q: What are the four SAFe configurations?**
+Essential SAFe, Large Solution SAFe, Portfolio SAFe and Full SAFe. Choose the smallest that covers your coordination and governance needs.
+
+**Q: Is SAFe really Agile?**
+SAFe is built on Agile and Lean principles, and its teams use Scrum and Kanban. Critics argue that its structure can preserve top-down control, so whether an implementation is Agile depends on how much decision-making it actually decentralises.
+
+**Q: What is the difference between SAFe and Scrum?**
+Scrum is a framework for one team of ten or fewer people. SAFe coordinates many such teams through trains, Planning Intervals and portfolio management; its teams often use Scrum internally.
+
+**Q: What is the difference between SAFe and LeSS?**
+SAFe adds roles, events and portfolio layers for large enterprises. LeSS keeps Scrum's roles and scales one product with one Product Owner and one Product Backlog, with far less added structure but deeper organisational change.
 
 **Q: Who created SAFe?**
 Dean Leffingwell, who first released it in 2011. It is maintained by Scaled Agile, Inc.
 
-**Q: What is a Program Increment in SAFe?**
-A planning interval, usually 8 to 12 weeks, often four development iterations followed by an Innovation and Planning iteration. Recent SAFe versions call it a Planning Interval.
+**Q: What does a Release Train Engineer do?**
+The RTE is the servant leader and coach of an Agile Release Train. They facilitate PI planning, ART Sync, System Demos and Inspect and Adapt, manage risks and impediments, and help the train improve its flow.
 
-**Q: What is an Agile Release Train in SAFe?**
-A long-lived team of Agile teams, typically 50 to 125 people, that plans and delivers together. See [Agile Release Train](https://neuralprojectinstitute.com/project-management/agile/agile-release-train/).
-
-**Q: What are the SAFe configurations?**
-Essential SAFe, Large Solution SAFe, Portfolio SAFe and Full SAFe, chosen according to size and complexity.
-
-**Q: What is a Release Train Engineer in SAFe?**
-The servant leader and coach for an Agile Release Train, who facilitates PI Planning and other ART events and helps remove impediments.
-
-**Q: What are the criticisms of SAFe?**
-Critics say it can be prescriptive and process-heavy, and that some implementations rename existing structures without changing how work is done.
-
-**Q: What is the difference between SAFe and LeSS?**
-SAFe adds roles, events and layers for large enterprises; [LeSS](https://neuralprojectinstitute.com/project-management/agile/large-scale-scrum-less/) keeps Scrum's simplicity and scales it with as little extra structure as possible.
-
-**Q: What certifications does SAFe offer?**
-Scaled Agile, Inc. offers role-based certifications such as SAFe Agilist, SAFe Scrum Master and Release Train Engineer. Check its site for current options.
+**Q: Which SAFe certification should I take first?**
+Most people start with SAFe Agilist through the Leading SAFe course, then take a role certification such as SAFe Scrum Master or POPM if their job requires it. Certification is not needed to work on a train.
 
 ### Related guides
 Agile Release Train (ART): Roles, Events and Example
@@ -44426,7 +44717,7 @@ A later addition described by Atlassian and others: a tribe lead, product lead a
 Large-Scale Scrum (LeSS): Rules, Roles and Examples
 Large-Scale Scrum (LeSS) explained: rules, 10 principles, roles, events, LeSS Huge, a worked example, adoption steps and LeSS vs SAFe and Nexus.
 What Is SAFe? The Scaled Agile Framework Explained
-SAFe explained: core values, configurations, Agile Release Trains, Program Increments, key roles, benefits and criticisms of the Scaled Agile Framework.
+SAFe explained: core values, principles, configurations, roles and Planning Intervals, Core SAFe vs AI-Native SAFe, a worked sizing example and criticisms.
 What Is an Agile Team? Roles, Size, Structure and Examples
 What is an Agile team? Learn the roles, ideal size, characteristics and structure of Agile teams, with a step-by-step setup guide and a worked example.
 Agile Release Train (ART): Roles, Events and Example
@@ -47801,7 +48092,7 @@ Yes. Scrum Inc. and its registered trainers offer a Scrum@Scale Practitioner cou
 Scrum of Scrums: How to Coordinate Multiple Scrum Teams
 What a Scrum of Scrums is, who attends, how often it meets, a sample agenda, common pitfalls, and how it fits with Scrum@Scale, LeSS and SAFe.
 What Is SAFe? The Scaled Agile Framework Explained
-SAFe explained: core values, configurations, Agile Release Trains, Program Increments, key roles, benefits and criticisms of the Scaled Agile Framework.
+SAFe explained: core values, principles, configurations, roles and Planning Intervals, Core SAFe vs AI-Native SAFe, a worked sizing example and criticisms.
 Large-Scale Scrum (LeSS): Rules, Roles and Examples
 Large-Scale Scrum (LeSS) explained: rules, 10 principles, roles, events, LeSS Huge, a worked example, adoption steps and LeSS vs SAFe and Nexus.
 Scrum Certification: Options, Costs and Training Guide
@@ -48992,7 +49283,7 @@ Scrum@Scale explained: Jeff Sutherland's scale-free framework, Scrum of Scrums, 
 Large-Scale Scrum (LeSS): Rules, Roles and Examples
 Large-Scale Scrum (LeSS) explained: rules, 10 principles, roles, events, LeSS Huge, a worked example, adoption steps and LeSS vs SAFe and Nexus.
 What Is SAFe? The Scaled Agile Framework Explained
-SAFe explained: core values, configurations, Agile Release Trains, Program Increments, key roles, benefits and criticisms of the Scaled Agile Framework.
+SAFe explained: core values, principles, configurations, roles and Planning Intervals, Core SAFe vs AI-Native SAFe, a worked sizing example and criticisms.
 Scrum Certification: Options, Costs and Training Guide
 Scrum certification compared: PSM, CSM, PSPO, CSPO and SAFe exam facts, fees and renewal, total costs, training formats and a step-by-step way to choose.
 
@@ -66643,8 +66934,8 @@ IT Project Manager: Role, Skills, Career Path and Certs
 What an IT project manager does, key skills, certifications, career path and pay, with a typical week, a cut-over example and how to get into the role.
 Software Project Management: Process, Methods and KPIs
 Software project management explained: the SDLC, a step-by-step process, Agile methods, roles, estimation with worked examples, DORA metrics and tools.
-Agile in IT Operations: How Ops Teams Apply Agile and DevOps
-How IT operations teams apply Agile: handling planned and unplanned work, Kanban for ops, DevOps links, metrics, an example and common mistakes.
+Agile IT Operations: Kanban, ITIL and DevOps in Practice
+Agile IT operations explained: run incidents, requests and improvements with Kanban, reserved capacity, ITIL and DevOps, with a worked example and metrics.
 Technical Project Manager: Role, Skills and Career Path
 What a technical project manager does, how the role differs from IT PMs and tech leads, the skills and certifications you need, and how to become one.
 
