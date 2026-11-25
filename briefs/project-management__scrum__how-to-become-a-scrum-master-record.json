@@ -1,0 +1,290 @@
+{
+ "url": "/project-management/scrum/how-to-become-a-scrum-master/",
+ "proposed_status": "PUBLISH",
+ "article_type": "how-to career guide with certification facts and worked self-assessment",
+ "language": "en-GB",
+ "learning_level": "beginner",
+ "primary_keyword": "how to become a scrum master",
+ "secondary_keywords": [
+  "scrum master career",
+  "become a scrum master with no experience",
+  "scrum master skills",
+  "scrum master certification",
+  "PSM I vs CSM",
+  "scrum master requirements",
+  "scrum master CV",
+  "scrum master interview questions",
+  "project manager to scrum master",
+  "developer to scrum master",
+  "first scrum master job",
+  "scrum master first 90 days",
+  "do I need a certification to be a scrum master",
+  "how long to become a scrum master",
+  "scrum master career path",
+  "A-CSM requirements"
+ ],
+ "search_intent": "How-to (career route) with certification sub-intent",
+ "h1": "How to Become a Scrum Master: Steps, Skills, Certification",
+ "seo_title": "How to Become a Scrum Master: Steps, Skills, Certification",
+ "meta_description": "How to become a Scrum Master: the skills employers look for and how to prove them, routes from your current job, PSM I vs CSM facts and your first 90 days.",
+ "excerpt": "A practical route into the Scrum Master accountability: map Scrum Guide duties to skills you can practise now, score your readiness, choose PSM I or CSM with verified facts, turn practice into CV evidence, prepare for scenario interviews and plan your first 90 days.",
+ "parent_topic_cluster": "/project-management/scrum/ (The Scrum Team)",
+ "prerequisite_guides": [
+  "/project-management/agile/scrum-master-role/",
+  "/project-management/scrum/what-is-scrum/"
+ ],
+ "related_articles": [
+  "/project-management/scrum/scrum-certification-and-training/",
+  "/project-management/agile/how-to-learn-agile-and-get-certified/",
+  "/project-management/agile/agile-project-manager/",
+  "/project-management/scrum/servant-leadership-in-scrum/",
+  "/project-management/scrum/scrum-team-roles/"
+ ],
+ "learning_objectives": [
+  "Relate each Scrum Guide duty of the Scrum Master to a skill that can be practised before holding the role",
+  "Score readiness on eight core skills and choose development priorities",
+  "Compare PSM I and CSM on issuer, assessment, cost, attempts and renewal",
+  "Turn practice into specific CV evidence and prepare for scenario interviews",
+  "Plan the first 90 days in a new Scrum Master role"
+ ],
+ "internal_links": [
+  "/project-management/agile/agile-project-manager/",
+  "/project-management/agile/agile-transformation/",
+  "/project-management/agile/how-to-learn-agile-and-get-certified/",
+  "/project-management/agile/scaled-agile-framework-safe/",
+  "/project-management/agile/scrum-master-role/",
+  "/project-management/project-coordinator/",
+  "/project-management/project-management-certification/",
+  "/project-management/scrum/",
+  "/project-management/scrum/backlog-refinement/",
+  "/project-management/scrum/scrum-certification-and-training/",
+  "/project-management/scrum/scrum-glossary/",
+  "/project-management/scrum/scrum-metrics-and-kpis/",
+  "/project-management/scrum/scrum-product-owner/",
+  "/project-management/scrum/scrum-team-roles/",
+  "/project-management/scrum/servant-leadership-in-scrum/",
+  "/project-management/scrum/sprint-retrospective/",
+  "/project-management/scrum/sprint-review/",
+  "/templates/skills-matrix-template/",
+  "/templates/sprint-retrospective-template/",
+  "/templates/training-plan-template/"
+ ],
+ "relevant_templates": [
+  "/templates/skills-matrix-template/",
+  "/templates/training-plan-template/",
+  "/templates/sprint-retrospective-template/"
+ ],
+ "related_npi_course": "Sprintcraft: Agile and Scrum Practitioner (mentioned once in body with commercial-interest disclosure; described as a course-completion certificate, not a substitute for PSM I or CSM)",
+ "external_references": [
+  {
+   "title": "The 2020 Scrum Guide",
+   "url": "https://scrumguides.org/scrum-guide.html",
+   "inspected": true,
+   "what_it_supports": "Scrum Master accountability, 'true leaders who serve', service to team, Product Owner and organisation"
+  },
+  {
+   "title": "Scrum.org: Professional Scrum Master I certification",
+   "url": "https://www.scrum.org/assessments/professional-scrum-master-i-certification",
+   "inspected": true,
+   "what_it_supports": "US$200 per attempt plus taxes; 80 questions; 60 minutes; 85%; course not required but recommended; classes include a free attempt; passwords one attempt, no expiry; lifetime certification (checked 25 Nov 2026)"
+  },
+  {
+   "title": "Scrum Alliance: Certified ScrumMaster (CSM)",
+   "url": "https://www.scrumalliance.org/get-certified/scrum-master-track/certified-scrummaster",
+   "inspected": true,
+   "what_it_supports": "16 hours over 2-3 days; 50 multiple-choice questions, one hour, 37 of 50 to pass; two attempts within 90 days; US$250-2,495 as of October 2023; SEU renewal every two years (checked 25 Nov 2026)"
+  },
+  {
+   "title": "Scrum Alliance: Renewing certifications",
+   "url": "https://www.scrumalliance.org/get-certified/renewing-certifications",
+   "inspected": true,
+   "what_it_supports": "Foundational 20 SEUs + US$100 every two years; Advanced 30/$175; Professional 40/$250"
+  },
+  {
+   "title": "Scrum Alliance support: What is the cost to renew a certification",
+   "url": "https://support.scrumalliance.org/hc/en-us/articles/50926906482843-What-is-the-cost-to-renew-a-certification",
+   "inspected": true,
+   "what_it_supports": "Renewal fees by level"
+  },
+  {
+   "title": "Scrum Alliance: Advanced Certified ScrumMaster",
+   "url": "https://www.scrumalliance.org/get-certified/scrum-master-track/advanced-certified-scrummaster",
+   "inspected": true,
+   "what_it_supports": "CSM prerequisite; 12 months Scrum Master experience validated within past five years"
+  },
+  {
+   "title": "Scrum Alliance support: PSM as prerequisite for A-CSM",
+   "url": "https://support.scrumalliance.org/hc/en-us/articles/53987387167003-How-to-add-PSM-from-Scrum-org-as-a-prerequisite-credential-for-A-CSM-and-A-CSD-courses",
+   "inspected": true,
+   "what_it_supports": "PSM I or PSM II accepted in place of CSM for A-CSM"
+  },
+  {
+   "title": "Scrum Alliance: CSP-SM",
+   "url": "https://www.scrumalliance.org/get-certified/scrum-master-track/certified-scrum-professional-scrummaster",
+   "inspected": true,
+   "what_it_supports": "A-CSM prerequisite; 24 months within past five years"
+  },
+  {
+   "title": "Scrum.org blog: How to become a Scrum Master in 5 simple steps",
+   "url": "https://www.scrum.org/resources/blog/how-become-scrum-master-5-simple-steps",
+   "inspected": true,
+   "what_it_supports": "SERP gap analysis only; not cited"
+  },
+  {
+   "title": "Scrum Alliance resource: land a Scrum Master job without experience",
+   "url": "https://resources.scrumalliance.org/Article/land-scrum-master-job-experience",
+   "inspected": true,
+   "what_it_supports": "SERP gap analysis only; not cited"
+  }
+ ],
+ "formulas": [
+  {
+   "formula": "Readiness score = sum of ratings / (skills x 4) x 100%",
+   "variables": "ratings on a 0-4 scale (dimensionless); 8 skills",
+   "verified_by": "python",
+   "inputs": "3,2,1,3,3,2,1,2",
+   "result": "17 / 32 = 53.1%; mean 2.1"
+  },
+  {
+   "formula": "Target after plan",
+   "variables": "same",
+   "verified_by": "python",
+   "inputs": "3,3,2,3,3,2,2,2",
+   "result": "20 / 32 = 62.5%"
+  },
+  {
+   "formula": "Study time = weeks x hours per week",
+   "variables": "hours",
+   "verified_by": "python",
+   "inputs": "12 x 5",
+   "result": "60 hours"
+  },
+  {
+   "formula": "Pass thresholds",
+   "variables": "questions",
+   "verified_by": "python",
+   "inputs": "CSM 37/50; PSM I 85% of 80",
+   "result": "74%; 68 correct"
+  }
+ ],
+ "formula_verification_output": "total 17 max 32 pct 53.1\nbelow 2: ['Coaching and questioning', 'Teaching Scrum to others']\navg 2.12\nafter 20 pct 62.5\nstudy hours 12*5 = 60\nCSM 37/50 = 74%\nPSM 85% of 80 = 68.0\n",
+ "worked_examples": [
+  {
+   "title": "Project coordinator readiness self-assessment and 12-week plan (Priya)",
+   "illustrative": true
+  },
+  {
+   "title": "Weak vs stronger CV bullets",
+   "illustrative": true
+  }
+ ],
+ "statistical_text_measurements": {
+  "url": "/project-management/scrum/how-to-become-a-scrum-master/",
+  "word_count": 3679,
+  "unique_words": 982,
+  "type_token_ratio": 0.2669,
+  "mattr_100": 0.7515,
+  "shannon_word_entropy_bits": 8.527,
+  "normalised_entropy": 0.8579,
+  "sentences": 140,
+  "avg_sentence_length": 15.81,
+  "sentence_length_sd": 10.48,
+  "sentence_length_cv": 0.663,
+  "paragraph_length_mean": 37.5,
+  "paragraph_length_sd": 19.1,
+  "bigram_repetition_rate": 0.3374,
+  "trigram_repetition_rate": 0.1243,
+  "top_repeated_4grams": [
+   [
+    "become a scrum master",
+    6
+   ],
+   [
+    "the 2020 scrum guide",
+    6
+   ],
+   [
+    "psm i or csm",
+    6
+   ],
+   [
+    "the scrum master accountability",
+    5
+   ],
+   [
+    "to become a scrum",
+    4
+   ],
+   [
+    "questions in 60 minutes",
+    4
+   ],
+   [
+    "us 200 per attempt",
+    3
+   ],
+   [
+    "the accountability for your",
+    3
+   ]
+  ],
+  "most_common_sentence_openers": [
+   [
+    "no",
+    3
+   ]
+  ],
+  "formulaic_phrases_found": [],
+  "watch_phrases_counts": {},
+  "most_similar_existing_guides": [
+   [
+    0.745,
+    "/project-management/agile/scrum-master-role/"
+   ],
+   [
+    0.662,
+    "/project-management/scrum/scrum-certification-and-training/"
+   ],
+   [
+    0.603,
+    "/project-management/scrum/scrum-team-roles/"
+   ],
+   [
+    0.589,
+    "/project-management/scrum/scrum-glossary/"
+   ],
+   [
+    0.579,
+    "/project-management/scrum/"
+   ]
+  ],
+  "note": "Descriptive editorial diagnostics only. No AI-detection probability is calculated."
+ },
+ "self_assessment": {
+  "technical_accuracy_25": 24,
+  "sources_15": 14,
+  "educational_usefulness_15": 14,
+  "examples_10": 9,
+  "information_gain_10": 9,
+  "precision_readability_10": 9,
+  "search_intent_5": 5,
+  "internal_linking_5": 5,
+  "technical_seo_5": 5,
+  "total": 94
+ },
+ "required_disclosures": [
+  "PMAI/Sprintcraft mentioned once with commercial-interest disclosure and course-completion status; no affiliation implied",
+  "Certification facts dated (checked 25 November 2026)",
+  "CSM price range attributed to Scrum Alliance with its October 2023 date",
+  "Self-assessment and CV examples labelled illustrative; readiness decision rule presented as our guidance, not a hiring standard"
+ ],
+ "unverified_claims": [
+  "Scrum.org PSM class '14-day second free attempt' rule (stated on the certification page) could not be confirmed on the PSM I page and is therefore NOT used in this article",
+  "CSM extra test attempt fee (US$25 on the certification page) not shown on the CSM page checked today; NOT used in this article",
+  "Career paths and background routes are editorial guidance, not sourced statistics"
+ ],
+ "unresolved_issues": [
+  "Similarity 0.745 to /project-management/agile/scrum-master-role/: shared entity vocabulary; this page links there for the accountability and focuses on the career route",
+  "For the reviewer/site owner: /project-management/scrum/scrum-certification-and-training/ states the PSM class 14-day second attempt and the US$25 CSM retake fee; neither appeared on the issuer pages fetched on 25 Nov 2026 (they may sit elsewhere on the issuers' sites), so they should be rechecked. That page also mentions Sprintcraft without a commercial-interest disclosure. Not edited (outside this task's files)."
+ ]
+}

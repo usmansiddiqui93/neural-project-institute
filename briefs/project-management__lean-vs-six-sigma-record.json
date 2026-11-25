@@ -1,0 +1,338 @@
+{
+ "url": "/project-management/lean-vs-six-sigma/",
+ "proposed_status": "PUBLISH",
+ "article_type": "comparison guide (update of existing page)",
+ "language": "en-GB",
+ "learning_level": "beginner",
+ "primary_keyword": "lean vs six sigma",
+ "secondary_keywords": [
+  "difference between lean and six sigma",
+  "lean six sigma",
+  "lean six sigma vs six sigma",
+  "what is lean six sigma",
+  "lean or six sigma which is better",
+  "lean tools",
+  "six sigma tools",
+  "DMAIC",
+  "waste vs variation",
+  "process cycle efficiency",
+  "DPMO",
+  "sigma level",
+  "Little's Law lead time",
+  "lean six sigma belts",
+  "when to use lean vs six sigma",
+  "lean six sigma in project management",
+  "kaizen event vs DMAIC project"
+ ],
+ "search_intent": "comparison (secondary: definition, decision-making)",
+ "h1": "Lean vs Six Sigma: Key Differences and When to Use Each",
+ "seo_title": "Lean vs Six Sigma: Key Differences and When to Use Each",
+ "meta_description": "Lean vs Six Sigma compared: waste vs variation, tools, metrics and Lean Six Sigma, with a worked claims example and a simple rule for choosing.",
+ "excerpt": "Lean removes waste and waiting; Six Sigma reduces variation and defects. A side-by-side comparison, a mean-or-spread rule for choosing, and one claims process analysed with both lenses.",
+ "parent_topic_cluster": "Quality and process improvement (Lean / Six Sigma)",
+ "prerequisite_guides": [
+  "/project-management/six-sigma/",
+  "/project-management/kanban/lean-manufacturing/",
+  "/project-management/project-quality-management/"
+ ],
+ "related_articles": [
+  "/project-management/lean-project-management/",
+  "/project-management/scrum/scrum-vs-lean/",
+  "/project-management/kanban/value-stream-mapping/",
+  "/project-management/kanban/theory-of-constraints/",
+  "/project-management/kanban/lean-kanban/"
+ ],
+ "learning_objectives": [
+  "Explain the difference between Lean and Six Sigma in terms of the problem each targets",
+  "Choose a starting approach using the mean-or-spread rule against a customer requirement",
+  "Calculate lead time with Little's Law, process cycle efficiency, DPMO, sigma level and first-pass yield for one process",
+  "Describe how Lean tools sit inside the DMAIC phases of Lean Six Sigma",
+  "Recognise when each approach is unsuitable and what to use instead"
+ ],
+ "internal_links": [
+  "/project-management/kanban/flow-efficiency/",
+  "/project-management/kanban/wip-limits/",
+  "/project-management/kanban/lean-manufacturing/",
+  "/project-management/lean-project-management/",
+  "/project-management/six-sigma/",
+  "/project-management/kanban/theory-of-constraints/",
+  "/templates/problem-statement-template/",
+  "/templates/root-cause-analysis-template/",
+  "/project-management/fishbone-diagram/",
+  "/project-management/project-management-methodologies/",
+  "/project-management/project-charter/",
+  "/project-management/project-quality-management/",
+  "/project-management/kanban/lean-kanban/",
+  "/project-management/scrum/scrum-vs-lean/",
+  "/project-management/industries/manufacturing-project-management/",
+  "/project-management/industries/healthcare-project-management/",
+  "/project-management/project-management-certification/",
+  "/project-management/kanban/value-stream-mapping/"
+ ],
+ "relevant_templates": [
+  "/templates/problem-statement-template/",
+  "/templates/root-cause-analysis-template/"
+ ],
+ "related_npi_course": "Riskline: Risk and Quality Management (page PMAI box only; not mentioned in body)",
+ "external_references": [
+  {
+   "title": "US EPA, Environmental Professional's Guide to Lean and Six Sigma, Chapter 3 (What is Six Sigma?)",
+   "url": "https://www.epa.gov/sustainability/environmental-professionals-guide-lean-and-six-sigma-chapter-3",
+   "inspected": true,
+   "what_it_supports": "Six Sigma projects several months up to a year or more vs week-long kaizen events; Lean methods (5S, mistake-proofing, TPM) identified as Improve-phase solutions; DMAIC"
+  },
+  {
+   "title": "US EPA, Environmental Professional's Guide to Lean and Six Sigma, Chapter 2 (What is Lean?)",
+   "url": "https://www.epa.gov/sustainability/environmental-professionals-guide-lean-and-six-sigma-chapter-2",
+   "inspected": true,
+   "what_it_supports": "Kaizen events 2-5 days; VSM events 2-5 days; Lean as principles and methods to remove waste"
+  },
+  {
+   "title": "ASQ, What is Six Sigma? (quality resources)",
+   "url": "https://asq.org/quality-resources/six-sigma",
+   "inspected": true,
+   "what_it_supports": "Line between Six Sigma and lean has blurred; lean targets waste, Six Sigma variation; implementations often start with lean, then Six Sigma tools if problems remain"
+  },
+  {
+   "title": "ASQ, Certified Six Sigma Green Belt Body of Knowledge 2022 (PDF)",
+   "url": "https://asq.org/cert/resource/pdf/certification/2022-SSGB-BoK.pdf",
+   "inspected": true,
+   "what_it_supports": "Lean concepts, VSM, pull, kanban, 5S, standard work, poka-yoke, SMED, kaizen, TPM, visual factory inside a Six Sigma certification BoK"
+  },
+  {
+   "title": "Lean Enterprise Institute, What is Lean?",
+   "url": "https://www.lean.org/explore-lean/what-is-lean/",
+   "inspected": true,
+   "what_it_supports": "Definition of lean (creating needed value with fewer resources and less waste); continuous experimentation; respect for people"
+  },
+  {
+   "title": "ISO 13053-1:2011 Quantitative methods in process improvement - Six Sigma - Part 1: DMAIC methodology",
+   "url": "https://www.iso.org/standard/52901.html",
+   "inspected": true,
+   "what_it_supports": "Standard title, 2011 edition, confirmed 2022"
+  },
+  {
+   "title": "ISO 13053-2:2011 Part 2: Tools and techniques (search listing)",
+   "url": "https://www.iso.org/standard/52902.html",
+   "inspected": false,
+   "what_it_supports": "Title of Part 2 confirmed from search results (ISO, BSI, AFNOR listings); page not opened"
+  },
+  {
+   "title": "BSI Standards Development: revision of ISO 18404:2015",
+   "url": "https://standardsdevelopment.bsigroup.com/projects/9022-07725",
+   "inspected": true,
+   "what_it_supports": "ISO 18404:2015 title (competencies for Six Sigma and Lean implementation); under revision as a preliminary work item"
+  },
+  {
+   "title": "Michael George, Lean Six Sigma: Combining Six Sigma Quality with Lean Speed (McGraw-Hill, 2002), O'Reilly listing",
+   "url": "https://oreilly.com/library/view/lean-six-sigma/9780071385213",
+   "inspected": true,
+   "what_it_supports": "Author, publisher, May 2002 date, argument that speed and quality are complementary"
+  },
+  {
+   "title": "PeopleCert, IASSC Certified Green Belt (ICGB)",
+   "url": "https://www.peoplecert.org/Organizations/browse-certifications/Lean-Six-Sigma/IASSC-Lean-Six-Sigma-43/peoplecert-lean-six-sigma-iassc-certified-green-belt-icgb-3117",
+   "inspected": true,
+   "what_it_supports": "No formal prerequisites; 100 MCQs, 180 minutes, 70% pass mark; sold and administered by PeopleCert"
+  },
+  {
+   "title": "SMU Global blog: The Difference Between Lean and Six Sigma",
+   "url": "https://blog.smu.edu/global/?p=830",
+   "inspected": true,
+   "what_it_supports": "SERP coverage and gap analysis only"
+  },
+  {
+   "title": "Capterra: Lean vs Six Sigma (Jul 2023)",
+   "url": "https://www.capterra.com/resources/lean-methodology-vs-six-sigma-methodology/",
+   "inspected": true,
+   "what_it_supports": "SERP coverage and gap analysis only"
+  }
+ ],
+ "formulas": [
+  {
+   "formula": "Lead time = touch time + total waiting time",
+   "variables": "times in working days; 8-hour (480-minute) working day",
+   "verified_by": "python",
+   "inputs": "0.25 + (1.0+3.0+4.0+2.5+1.25)",
+   "result": "12.0 working days"
+  },
+  {
+   "formula": "Little's Law: WIP = throughput x lead time (equivalently lead time = WIP / throughput)",
+   "variables": "WIP in claims; throughput in claims per working day; lead time in working days; stable process assumed",
+   "verified_by": "python",
+   "inputs": "40 x 12.0; 40 x 5.5; 40 x 11.24; 40 x 4.74",
+   "result": "480; 220; 449.6 (about 450); 189.6 (about 190)"
+  },
+  {
+   "formula": "PCE = value-adding time / lead time",
+   "variables": "both in working days; result as %",
+   "verified_by": "python",
+   "inputs": "0.25 / 12.0",
+   "result": "2.08% (shown as 2.1%)"
+  },
+  {
+   "formula": "DPMO = defects / (units x opportunities) x 1,000,000",
+   "variables": "defects (count), units (claims), opportunities per claim",
+   "verified_by": "python",
+   "inputs": "210/(1000x4); 115/(1000x4)",
+   "result": "52,500; 28,750"
+  },
+  {
+   "formula": "Sigma level = NORM.S.INV(1 - DPMO/1,000,000) + 1.5",
+   "variables": "DPMO; 1.5 sigma shift convention (consistent with /project-management/six-sigma/)",
+   "verified_by": "python (statistics.NormalDist)",
+   "inputs": "52,500; 28,750",
+   "result": "3.121 (about 3.1); 3.399 (about 3.4)"
+  },
+  {
+   "formula": "First-pass yield = (units - defective units) / units",
+   "variables": "claims",
+   "verified_by": "python",
+   "inputs": "(1000-150)/1000; (1000-55)/1000",
+   "result": "85%; 94.5% (latter not shown in article)"
+  },
+  {
+   "formula": "Average evidence wait = share complete x 2 days + share second request x 10 days",
+   "variables": "days",
+   "verified_by": "python",
+   "inputs": "0.875x2+0.125x10; 0.97x2+0.03x10",
+   "result": "3.0; 2.24 days"
+  },
+  {
+   "formula": "Rework minutes per day = throughput x share defective x 45 min",
+   "variables": "claims/day, %, minutes",
+   "verified_by": "python",
+   "inputs": "40x0.15x45; 40x0.055x45",
+   "result": "270; 99; saving 171 min/day = 0.356 of a 480-minute day"
+  },
+  {
+   "formula": "Pareto shares",
+   "variables": "counts",
+   "verified_by": "python",
+   "inputs": "125,45,24,16 of 210",
+   "result": "59.5%, 21.4%, 11.4%, 7.6%; cumulative 59.5, 81.0, 92.4, 100"
+  }
+ ],
+ "formula_verification_output": "touch days 0.25 LT0 12.0 WIP0 480.0 PCE0 0.020833333333333332\navg evidence base 3.0\nbase good/bad LT 11.0 19.0\nD0 210 DPMO0 52500.0 sigma0 3.121\nmissing 125 59.5 59.5\namount 45 21.4 81.0\npayment 24 11.4 92.4\ncover 16 7.6 100.0\nFPY0 0.85\nrework min/day base 270.0 0.5625 FTE\nLT1 5.5 WIP1 220.0 PCE1 0.045454545454545456\nlean good/bad 4.5 12.5\n6s only good 11.0 bad 19.0\navg evidence after 2.2399999999999998\nLT both 4.74 WIP 189.60000000000002 PCE 0.05274261603375527\nD2 115 DPMO2 28750.0 sigma2 3.399\nFPY2 0.945\nrework after 99.00000000000001 171.0 0.35625\n6s only avg LT 11.24\n",
+ "worked_examples": [
+  {
+   "title": "Home-insurance claims process analysed with Lean and Six Sigma lenses, three options compared",
+   "illustrative": true
+  }
+ ],
+ "statistical_text_measurements": {
+  "url": "/project-management/lean-vs-six-sigma/",
+  "word_count": 4626,
+  "unique_words": 1110,
+  "type_token_ratio": 0.2399,
+  "mattr_100": 0.7231,
+  "shannon_word_entropy_bits": 8.62,
+  "normalised_entropy": 0.8521,
+  "sentences": 167,
+  "avg_sentence_length": 20.04,
+  "sentence_length_sd": 11.01,
+  "sentence_length_cv": 0.55,
+  "paragraph_length_mean": 45.2,
+  "paragraph_length_sd": 25.7,
+  "bigram_repetition_rate": 0.373,
+  "trigram_repetition_rate": 0.1406,
+  "top_repeated_4grams": [
+   [
+    "lean and six sigma",
+    12
+   ],
+   [
+    "lean or six sigma",
+    4
+   ],
+   [
+    "claims needing a second",
+    4
+   ],
+   [
+    "needing a second request",
+    4
+   ],
+   [
+    "so that work flows",
+    3
+   ],
+   [
+    "of claims needing a",
+    3
+   ],
+   [
+    "is lean six sigma",
+    3
+   ],
+   [
+    "such as lead time",
+    3
+   ]
+  ],
+  "most_common_sentence_openers": [
+   [
+    "six sigma",
+    11
+   ],
+   [
+    "lean six",
+    4
+   ]
+  ],
+  "formulaic_phrases_found": [],
+  "watch_phrases_counts": {},
+  "most_similar_existing_guides": [
+   [
+    0.74,
+    "/project-management/six-sigma/"
+   ],
+   [
+    0.425,
+    "/project-management/scrum/scrum-vs-lean/"
+   ],
+   [
+    0.399,
+    "/project-management/kanban/lean-manufacturing/"
+   ],
+   [
+    0.262,
+    "/project-management/kanban/lean-kanban/"
+   ],
+   [
+    0.241,
+    "/project-management/kanban/value-stream-mapping/"
+   ]
+  ],
+  "note": "Descriptive editorial diagnostics only. No AI-detection probability is calculated."
+ },
+ "self_assessment": {
+  "technical_accuracy_25": 23,
+  "sources_15": 13,
+  "educational_usefulness_15": 14,
+  "examples_10": 9,
+  "information_gain_10": 9,
+  "precision_readability_10": 9,
+  "search_intent_5": 5,
+  "internal_linking_5": 5,
+  "technical_seo_5": 4,
+  "total": 91
+ },
+ "required_disclosures": [
+  "Worked example labelled illustrative/invented",
+  "Certification exam details dated November 2026 with advice to check with the certifying body",
+  "No PMAI course mentioned in body (page PMAI box only)"
+ ],
+ "unverified_claims": [
+  "Six Sigma at Motorola 1986, GE from 1995, Krafcik coined 'lean' in 1988, TPS mainly from late 1940s: taken from the site's reviewed /six-sigma/ and /kanban/lean-manufacturing/ pages for consistency, not re-verified against primary sources in this session",
+  "ISO 13053-2:2011 title confirmed from search listings only (page not opened)",
+  "ASQ Black Belt requirement for completed projects: carried over from the reviewed /six-sigma/ page, not re-checked on asq.org in this session",
+  "Statement that the Lean method is described mainly by practitioner bodies (no ISO standard defining Lean method) is based on absence of such a standard in research, not a primary source",
+  "Michael George's book 'popularised' the combined name: the book and date are verified; the popularising role is a widely repeated characterisation, not a sourced measurement"
+ ],
+ "unresolved_issues": [
+  "Word count about 4,600 including tables and FAQ, above the usual 2,500-4,000 range; the worked example and comparison tables account for most of it",
+  "TF-IDF similarity to /project-management/six-sigma/ is 0.74, driven by shared vocabulary (Six Sigma, DMAIC, DPMO, belts). Intent differs (comparison vs method guide), the worked example differs (claims vs invoices) and DPMO/DMAIC are not re-derived; reviewer should confirm this is acceptable",
+  "Live page's PMAI box names Riskline: Risk & Quality Management; no change proposed"
+ ]
+}

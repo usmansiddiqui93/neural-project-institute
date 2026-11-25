@@ -1,0 +1,315 @@
+{
+ "url": "/project-management/agile/agile-software-development/",
+ "proposed_status": "PUBLISH",
+ "article_type": "methodology / how-to guide with worked calculation",
+ "language": "en-GB",
+ "learning_level": "beginner",
+ "primary_keyword": "agile software development",
+ "secondary_keywords": [
+  "agile software development practices",
+  "agile engineering practices",
+  "extreme programming practices",
+  "test-driven development",
+  "continuous integration",
+  "trunk-based development",
+  "test automation pyramid",
+  "pair programming",
+  "code review",
+  "refactoring",
+  "continuous delivery",
+  "feature flags",
+  "definition of done software",
+  "technical debt",
+  "DORA metrics",
+  "agile vs devops",
+  "agile software development process",
+  "agile software development example",
+  "AI coding assistants agile"
+ ],
+ "search_intent": "Methodology/how-to: how Agile software development works day to day, with definition intent secondary",
+ "h1": "Agile Software Development: Practices, Process and Examples",
+ "seo_title": "Agile Software Development: Practices, Process and Examples",
+ "meta_description": "How Agile software development works: the flow from story to production, XP practices, a test pyramid and CI worked example, DORA metrics and pitfalls.",
+ "excerpt": "How Agile software development works in practice: the flow of a change from backlog to production, the XP engineering practices and how they depend on each other, what Scrum, XP and Kanban each require, a worked calculation of test-suite shape versus CI feedback time, a sample Definition of Done, the five current DORA metrics, AI assistants and when Agile software development is harder.",
+ "parent_topic_cluster": "/project-management/agile/",
+ "prerequisite_guides": [
+  "/project-management/agile/agile-manifesto-values-and-principles/",
+  "/project-management/scrum/what-is-scrum/",
+  "/project-management/agile/user-stories/"
+ ],
+ "related_articles": [
+  "/project-management/agile/agile-development-life-cycle/",
+  "/project-management/kanban/continuous-delivery/",
+  "/project-management/kanban/devops/",
+  "/project-management/agile/types-of-agile-methodologies/",
+  "/project-management/scrum/scrum-technical-debt/",
+  "/project-management/agile/agile-metrics-and-kpis/",
+  "/project-management/industries/software-project-management/"
+ ],
+ "learning_objectives": [
+  "Define Agile software development and relate it to the Agile Manifesto principles on working software and technical excellence",
+  "Trace how a backlog item becomes a released change and which practice applies at each step",
+  "Explain TDD, CI, trunk-based development, pairing/review, refactoring, the test pyramid, continuous delivery and feature flags, with when each pays off and its pitfalls",
+  "Distinguish what Scrum, XP and Kanban each require",
+  "Calculate test-suite run time and daily pipeline load and decide how to restructure a slow suite",
+  "Measure delivery with the five current DORA metrics plus flow and outcome measures"
+ ],
+ "internal_links": [
+  "/project-management/agile/agile-development-life-cycle/",
+  "/project-management/agile/agile-manifesto-values-and-principles/",
+  "/project-management/agile/agile-metrics-and-kpis/",
+  "/project-management/agile/agile-operations-it/",
+  "/project-management/agile/agile-project-manager/",
+  "/project-management/agile/agile-release-planning/",
+  "/project-management/agile/agile-swarming/",
+  "/project-management/agile/agile-vs-waterfall/",
+  "/project-management/agile/definition-of-done/",
+  "/project-management/agile/types-of-agile-methodologies/",
+  "/project-management/agile/user-stories/",
+  "/project-management/industries/software-project-management/",
+  "/project-management/kanban/continuous-delivery/",
+  "/project-management/kanban/cycle-time/",
+  "/project-management/kanban/devops/",
+  "/project-management/kanban/kanban-vs-scrum/",
+  "/project-management/scrum/scrum-technical-debt/",
+  "/project-management/scrum/sprint-review/",
+  "/templates/sprint-planning-template/",
+  "/templates/user-story-template/"
+ ],
+ "relevant_templates": [
+  "/templates/user-story-template/",
+  "/templates/sprint-planning-template/"
+ ],
+ "related_npi_course": null,
+ "external_references": [
+  {
+   "title": "Principles behind the Agile Manifesto",
+   "url": "https://agilemanifesto.org/principles.html",
+   "inspected": true,
+   "what_it_supports": "Quoted principles 3, 7 and 9"
+  },
+  {
+   "title": "The 2020 Scrum Guide",
+   "url": "https://scrumguides.org/scrum-guide.html",
+   "inspected": true,
+   "what_it_supports": "Multiple Increments per Sprint; Sprint Review not a release gate; Definition of Done wording; 'various processes, techniques and methods'; Sprints one month or less"
+  },
+  {
+   "title": "DORA metrics guide (last updated 5 Jan 2026)",
+   "url": "https://dora.dev/guides/dora-metrics/",
+   "inspected": true,
+   "what_it_supports": "Five metrics, definitions, throughput/instability grouping"
+  },
+  {
+   "title": "DORA metrics history (2 Jan 2026)",
+   "url": "https://dora.dev/guides/dora-metrics/history/",
+   "inspected": true,
+   "what_it_supports": "2023 rename of MTTR to failed deployment recovery time; 2024 addition of deployment rework rate and regrouping"
+  },
+  {
+   "title": "DORA capability: trunk-based development",
+   "url": "https://dora.dev/capabilities/trunk-based-development/",
+   "inspected": true,
+   "what_it_supports": "Three or fewer active branches, branches lasting hours, merge at least daily, no code freezes, review pitfalls"
+  },
+  {
+   "title": "DORA capability: test automation",
+   "url": "https://dora.dev/capabilities/test-automation/",
+   "inspected": true,
+   "what_it_supports": "Feedback in under ten minutes locally and in CI; no flaky tests; reference to Cohn's pyramid"
+  },
+  {
+   "title": "Martin Fowler, Continuous Integration (18 Jan 2024)",
+   "url": "https://martinfowler.com/articles/continuousIntegration.html",
+   "inspected": true,
+   "what_it_supports": "CI definition, at-least-daily integration, Beck/XP origin, CI vs feature branching, fix broken builds first"
+  },
+  {
+   "title": "Martin Fowler, TestPyramid (bliki, 2012)",
+   "url": "https://martinfowler.com/bliki/TestPyramid.html",
+   "inspected": true,
+   "what_it_supports": "Cohn, Succeeding with Agile (2009); UI tests brittle, expensive, slow; ice-cream cone"
+  },
+  {
+   "title": "Ham Vocke, The Practical Test Pyramid (26 Feb 2018)",
+   "url": "https://martinfowler.com/articles/practical-test-pyramid.html",
+   "inspected": true,
+   "what_it_supports": "Two rules of the pyramid"
+  },
+  {
+   "title": "Pete Hodgson, Feature Toggles (aka Feature Flags) (2017)",
+   "url": "https://martinfowler.com/articles/feature-toggles.html",
+   "inspected": true,
+   "what_it_supports": "Release toggles a week or two; carrying cost"
+  },
+  {
+   "title": "Beck, Extreme Programming Explained, 1st ed. (O'Reilly listing, Oct 1999) and 2nd ed. with Andres (Pearson, 2004)",
+   "url": "https://pearson.com/us/higher-education/program/Beck-Extreme-Programming-Explained-Embrace-Change-2nd-Edition/PGM155384.html",
+   "inspected": true,
+   "what_it_supports": "Edition years and authors (publisher pages only; books not read)"
+  },
+  {
+   "title": "DORA 2025 State of AI-assisted Software Development (abstract)",
+   "url": "https://research.google/pubs/dora-2025-state-of-ai-assisted-software-development-report/",
+   "inspected": true,
+   "what_it_supports": "Nearly 5,000 respondents; AI as amplifier"
+  },
+  {
+   "title": "Atlassian, Agile software development; Microsoft Learn, What is Agile development? (SERP review)",
+   "url": "https://www.atlassian.com/agile/software-development",
+   "inspected": true,
+   "what_it_supports": "SERP coverage and gaps only; nothing cited"
+  }
+ ],
+ "formulas": [
+  {
+   "formula": "Suite run time (s) = Σ (tests at level × average seconds per test)",
+   "variables": "tests: count; average seconds per test: s (assumed 0.02 unit, 1.5 integration, 40 end-to-end)",
+   "verified_by": "python",
+   "inputs": "Cone 300/150/250; pyramid 2,400/200/25",
+   "result": "Cone 10,231 s = 170.5 min = 2.84 h (E2E 97.7%); pyramid 1,348 s = 22.5 min"
+  },
+  {
+   "formula": "Commit stage = unit + integration time; acceptance stage = E2E time ÷ parallel runners",
+   "variables": "seconds; runners = 4",
+   "verified_by": "python",
+   "inputs": "Pyramid suite",
+   "result": "Commit 348 s = 5.8 min; acceptance 250 s = 4.2 min; full 598 s; cone with 4 runners 2,731 s = 45.5 min"
+  },
+  {
+   "formula": "Daily pipeline time = merges per day × run time per merge",
+   "variables": "merges/day = 5 developers × 2 = 10; run time in h or min",
+   "verified_by": "python",
+   "inputs": "Cone serial 2.84 h; pyramid commit 5.8 min",
+   "result": "28.4 h vs 58 min per day"
+  }
+ ],
+ "worked_examples": [
+  {
+   "title": "Test-suite shape and CI feedback time for a customer self-service portal (story US-01)",
+   "illustrative": true
+  },
+  {
+   "title": "Sample Definition of Done for the same team",
+   "illustrative": true
+  }
+ ],
+ "calculation_script_output": "cone {'unit': 6.0, 'int': 225.0, 'e2e': 10000} total s 10231.0 min 170.5 h 2.84 tests 700 share e2e time % 97.7 | pyramid {'unit': 48.0, 'int': 300.0, 'e2e': 1000} total s 1348.0 min 22.5 h 0.37 tests 2625 share e2e time % 74.2 | commit stage s 348.0 min 5.8 | acceptance serial min 16.7 parallel4 s 250.0 min 4.2 | pyramid total with parallel min 10.0 | daily serial pipeline h cone 28.4 pyramid commit min 58.0 | cone parallel4: 6+225+2500 = 2731 s = 45.5 min",
+ "statistical_text_measurements": {
+  "url": "/project-management/agile/agile-software-development/",
+  "word_count": 4388,
+  "unique_words": 1155,
+  "type_token_ratio": 0.2632,
+  "mattr_100": 0.7536,
+  "shannon_word_entropy_bits": 8.784,
+  "normalised_entropy": 0.8634,
+  "sentences": 185,
+  "avg_sentence_length": 18.84,
+  "sentence_length_sd": 10.76,
+  "sentence_length_cv": 0.571,
+  "paragraph_length_mean": 39.2,
+  "paragraph_length_sd": 22.2,
+  "bigram_repetition_rate": 0.3116,
+  "trigram_repetition_rate": 0.0955,
+  "top_repeated_4grams": [
+   [
+    "the 2020 scrum guide",
+    4
+   ],
+   [
+    "agile software development is",
+    3
+   ],
+   [
+    "failed deployment recovery time",
+    3
+   ],
+   [
+    "is agile software development",
+    3
+   ],
+   [
+    "main branch at least",
+    3
+   ],
+   [
+    "the definition of done",
+    3
+   ],
+   [
+    "in an agile team",
+    3
+   ],
+   [
+    "building software in small",
+    2
+   ]
+  ],
+  "most_common_sentence_openers": [
+   [
+    "agile software",
+    4
+   ],
+   [
+    "for the",
+    4
+   ],
+   [
+    "the 2020",
+    3
+   ]
+  ],
+  "formulaic_phrases_found": [],
+  "watch_phrases_counts": {},
+  "most_similar_existing_guides": [
+   [
+    0.597,
+    "/project-management/kanban/continuous-delivery/"
+   ],
+   [
+    0.487,
+    "/project-management/industries/software-project-management/"
+   ],
+   [
+    0.444,
+    "/project-management/kanban/devops/"
+   ],
+   [
+    0.418,
+    "/project-management/agile/agile-methodology/"
+   ],
+   [
+    0.399,
+    "/project-management/agile/agile-glossary/"
+   ]
+  ],
+  "note": "Descriptive editorial diagnostics only. No AI-detection probability is calculated."
+ },
+ "self_assessment": {
+  "technical_accuracy_25": 23,
+  "sources_15": 14,
+  "educational_usefulness_15": 14,
+  "examples_10": 9,
+  "information_gain_10": 9,
+  "precision_readability_10": 9,
+  "search_intent_5": 5,
+  "internal_linking_5": 5,
+  "technical_seo_5": 5,
+  "total": 93
+ },
+ "required_disclosures": [
+  "Worked example and Definition of Done labelled illustrative/hypothetical; test durations stated as assumptions",
+  "No PMAI course mentioned in the body (page keeps its own PMAI box)"
+ ],
+ "unverified_claims": [
+  "Agile Manifesto written in 2001 by a group of software practitioners: well established and consistent with /project-management/agile/history-of-agile/, but the agilemanifesto.org history page was not opened this session",
+  "Cohn's Succeeding with Agile (2009) known via Fowler's bliki, book not inspected",
+  "Extreme Programming Explained contents not read; only publisher listings for edition years",
+  "DORA 2025 report: respondent count and amplifier finding from the research.google abstract; full PDF not read",
+  "The practitioner guidance on where TDD is harder (UI layout, throwaway prototypes, wrappers around external systems) and on regulated/embedded adaptations is general practice, not sourced to a single primary document"
+ ],
+ "unresolved_issues": [
+  "TF-IDF similarity 0.59 with /project-management/kanban/continuous-delivery/ (shared CI/CD vocabulary). Intent differs (this page: overall Agile engineering practice; that page: CD pipeline), the CD page's flow-efficiency example is not reused, and CD details are linked rather than repeated",
+  "Live page's old DORA four-metric list is replaced; FOLLOWUPS.md entry for this URL can be closed once published (not edited by the writer)"
+ ]
+}

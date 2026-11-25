@@ -1,0 +1,273 @@
+{
+ "url": "/project-management/scrum/advantages-of-scrum/",
+ "proposed_status": "PUBLISH",
+ "article_type": "explanatory guide (benefits and limitations) with worked calculation and evidence review",
+ "language": "en-GB",
+ "learning_level": "beginner",
+ "primary_keyword": "advantages of scrum",
+ "secondary_keywords": [
+  "benefits of scrum",
+  "scrum advantages and disadvantages",
+  "disadvantages of scrum",
+  "limitations of scrum",
+  "scrum pros and cons",
+  "why use scrum",
+  "does scrum reduce risk",
+  "scrum research evidence",
+  "scrum team effectiveness",
+  "when to use scrum",
+  "time spent in scrum events",
+  "scrum vs waterfall advantages",
+  "scrum benefits for stakeholders",
+  "scrum predictability",
+  "scrum quality definition of done",
+  "zombie scrum"
+ ],
+ "search_intent": "Explanation of benefits and limitations with decision support (is Scrum worth it for this work?)",
+ "h1": "Advantages of Scrum: Benefits, Limitations and Evidence",
+ "seo_title": "Advantages of Scrum: Benefits, Limitations and Evidence",
+ "meta_description": "The advantages of Scrum explained: how each benefit arises from the Scrum Guide, the conditions it depends on, what research shows and the limitations.",
+ "excerpt": "Where each advantage of Scrum comes from, the condition it depends on, what a 1,978-team study found, an illustrative calculation of spend at risk between inspections versus the time cost of the events, and where Scrum fits poorly.",
+ "parent_topic_cluster": "/project-management/scrum/ (Scrum basics)",
+ "prerequisite_guides": [
+  "/project-management/scrum/what-is-scrum/",
+  "/project-management/scrum/empiricism-in-scrum/"
+ ],
+ "related_articles": [
+  "/project-management/scrum/scrum-vs-waterfall/",
+  "/project-management/kanban/kanban-vs-scrum/",
+  "/project-management/scrum/scrum-metrics-and-kpis/",
+  "/project-management/scrum/scrum-principles-and-values/",
+  "/project-management/agile/what-is-agile-project-management/"
+ ],
+ "learning_objectives": [
+  "Explain how each advantage of Scrum arises from a specific element of the 2020 Scrum Guide",
+  "Identify the precondition each advantage depends on and the warning sign that it is missing",
+  "Calculate maximum spend between inspections and the time cost of Scrum events for a team",
+  "Summarise what the Verwijs and Russo (2023) study found and its limitations",
+  "Decide whether Scrum's advantages outweigh its costs for a given piece of work"
+ ],
+ "internal_links": [
+  "/project-management/agile/agile-project-manager/",
+  "/project-management/agile/definition-of-done/",
+  "/project-management/agile/scrum-master-role/",
+  "/project-management/agile/what-is-agile-project-management/",
+  "/project-management/kanban/cycle-time/",
+  "/project-management/kanban/kanban-vs-scrum/",
+  "/project-management/kanban/what-is-kanban/",
+  "/project-management/scrum/empiricism-in-scrum/",
+  "/project-management/scrum/increment-in-scrum/",
+  "/project-management/scrum/product-backlog/",
+  "/project-management/scrum/scrum-boards/",
+  "/project-management/scrum/scrum-metrics-and-kpis/",
+  "/project-management/scrum/scrum-of-scrums/",
+  "/project-management/scrum/scrum-principles-and-values/",
+  "/project-management/scrum/scrum-product-owner/",
+  "/project-management/scrum/scrum-techniques/",
+  "/project-management/scrum/scrum-velocity/",
+  "/project-management/scrum/scrum-vs-waterfall/",
+  "/project-management/scrum/sprint-retrospective/",
+  "/project-management/scrum/sprint-review/",
+  "/project-management/scrum/what-is-scrum/"
+ ],
+ "relevant_templates": [],
+ "related_npi_course": null,
+ "external_references": [
+  {
+   "title": "The 2020 Scrum Guide (November 2020), Schwaber and Sutherland",
+   "url": "https://scrumguides.org/scrum-guide.html",
+   "inspected": true,
+   "what_it_supports": "Definition of Scrum; Sprints of one month or less; predictability; shorter Sprints limit risk of cost and effort; quality does not decrease; team typically 10 or fewer; purposefully incomplete; makes visible efficacy of management; immutability end note; multiple Increments per Sprint; Sprint Review not a release gate"
+  },
+  {
+   "title": "The 2017 Scrum Guide (PDF)",
+   "url": "https://scrumguides.org/docs/scrumguide/v2017/2017-Scrum-Guide-US.pdf",
+   "inspected": true,
+   "what_it_supports": "Historical guideline that refinement usually consumes no more than 10% of Development Team capacity"
+  },
+  {
+   "title": "Verwijs, C. and Russo, D. (2023) A Theory of Scrum Team Effectiveness. ACM TOSEM 32(3), Article 74. doi:10.1145/3571849",
+   "url": "https://vbn.aau.dk/ws/portalfiles/portal/766875248/3571849.pdf",
+   "inspected": true,
+   "what_it_supports": "4,940 respondents, 1,978 teams; effectiveness = stakeholder satisfaction + team morale; five factors; stakeholder concern beta .513 and responsiveness beta .402 direct effects; management support indirect only; stated limitations (cross-sectional, self-report, voluntary sample, software teams)"
+  },
+  {
+   "title": "arXiv preprint 2105.12439 and ICSE 2023 journal-first listing",
+   "url": "https://arxiv.org/abs/2105.12439v3",
+   "inspected": true,
+   "what_it_supports": "Confirmation of authors, study design and DOI"
+  },
+  {
+   "title": "Mountain Goat Software: 7 advantages of Scrum (plus 1 hidden disadvantage)",
+   "url": "https://mountaingoatsoftware.com/blog/7-advantages-of-scrum-plus-1-hidden-disadvantage",
+   "inspected": true,
+   "what_it_supports": "SERP gap analysis only; not cited"
+  },
+  {
+   "title": "TechTarget: 10 Scrum benefits and how to realize them",
+   "url": "https://www.techtarget.com/it-infrastructure/tip/10-Scrum-benefits-and-how-to-realize-them",
+   "inspected": true,
+   "what_it_supports": "SERP gap analysis only; not cited"
+  }
+ ],
+ "formulas": [
+  {
+   "formula": "C = people x cost per person per week; B = C x weeks",
+   "variables": "C weekly team cost (GBP/week); B budget (GBP)",
+   "verified_by": "python",
+   "inputs": "7 people, GBP 4,000/person/week, 24 weeks",
+   "result": "C = 28,000; B = 672,000"
+  },
+  {
+   "formula": "E = C x I; share = E / B x 100%",
+   "variables": "E maximum spend between inspections (GBP); I interval between stakeholder inspections (weeks)",
+   "verified_by": "python",
+   "inputs": "I = 1, 2, 4, 20",
+   "result": "28,000 (4.2%), 56,000 (8.3%), 112,000 (16.7%), 560,000 (83.3%)"
+  },
+  {
+   "formula": "Event share = event hours / (hours per week x Sprint weeks) x 100%",
+   "variables": "event hours per person per Sprint (h); 37.5 h/week; 2-week Sprint",
+   "verified_by": "python",
+   "inputs": "4 + 2 + 1.5 + 10 x 0.25 = 10 h; 75 h",
+   "result": "13.3%"
+  },
+  {
+   "formula": "Event cost = event hours x people x (cost per week / hours per week)",
+   "variables": "GBP per Sprint",
+   "verified_by": "python",
+   "inputs": "10 h x 7 x 106.67",
+   "result": "GBP 7,467 per Sprint; GBP 89,600 over 12 Sprints (13.3% of budget)"
+  },
+  {
+   "formula": "Sprint Goal success rate = Sprints with goal met / Sprints completed x 100%",
+   "variables": "count / count",
+   "verified_by": "python",
+   "inputs": "9 / 12",
+   "result": "75%"
+  }
+ ],
+ "formula_verification_output": "team cost/week 28000 budget 672000\n1-week Sprints max spend between inspections 28000 share of budget 4.2%\n2-week Sprints max spend between inspections 56000 share of budget 8.3%\n4-week Sprints max spend between inspections 112000 share of budget 16.7%\nsingle release, first user feedback at week 20 max spend between inspections 560000 share of budget 83.3%\ndaily total 2.5 event hours 10.0 of 75.0 = 13.3%\nhourly rate 106.67 team event hours 70.0 event cost per sprint 7467\nevent cost over 12 sprints 89600 share of budget 13.3%\nrefinement 10% hours per person per sprint 7.5\nSG success 9/12 = 75%\n",
+ "worked_examples": [
+  {
+   "title": "Spend at risk between feedback points vs the time cost of Scrum events (7-person portal team, 24 weeks)",
+   "illustrative": true
+  },
+  {
+   "title": "Sprint Goal success rate 9 of 12",
+   "illustrative": true
+  }
+ ],
+ "statistical_text_measurements": {
+  "url": "/project-management/scrum/advantages-of-scrum/",
+  "word_count": 3945,
+  "unique_words": 953,
+  "type_token_ratio": 0.2416,
+  "mattr_100": 0.7441,
+  "shannon_word_entropy_bits": 8.515,
+  "normalised_entropy": 0.8604,
+  "sentences": 160,
+  "avg_sentence_length": 17.3,
+  "sentence_length_sd": 9.51,
+  "sentence_length_cv": 0.55,
+  "paragraph_length_mean": 41.9,
+  "paragraph_length_sd": 19.9,
+  "bigram_repetition_rate": 0.3641,
+  "trigram_repetition_rate": 0.1342,
+  "top_repeated_4grams": [
+   [
+    "the definition of done",
+    8
+   ],
+   [
+    "meet the definition of",
+    4
+   ],
+   [
+    "the main advantages of",
+    3
+   ],
+   [
+    "main advantages of scrum",
+    3
+   ],
+   [
+    "one month or less",
+    3
+   ],
+   [
+    "the 2020 scrum guide",
+    3
+   ],
+   [
+    "an empowered product owner",
+    3
+   ],
+   [
+    "a definition of done",
+    3
+   ]
+  ],
+  "most_common_sentence_openers": [
+   [
+    "the scrum",
+    4
+   ],
+   [
+    "a team",
+    3
+   ]
+  ],
+  "formulaic_phrases_found": [],
+  "watch_phrases_counts": {},
+  "most_similar_existing_guides": [
+   [
+    0.678,
+    "/project-management/scrum/what-is-scrum/"
+   ],
+   [
+    0.624,
+    "/project-management/agile/agile-vs-scrum/"
+   ],
+   [
+    0.62,
+    "/project-management/scrum/"
+   ],
+   [
+    0.615,
+    "/project-management/scrum/scrum-glossary/"
+   ],
+   [
+    0.607,
+    "/project-management/scrum/scrum-process-and-phases/"
+   ]
+  ],
+  "note": "Descriptive editorial diagnostics only. No AI-detection probability is calculated."
+ },
+ "self_assessment": {
+  "technical_accuracy_25": 23,
+  "sources_15": 14,
+  "educational_usefulness_15": 14,
+  "examples_10": 9,
+  "information_gain_10": 9,
+  "precision_readability_10": 9,
+  "search_intent_5": 5,
+  "internal_linking_5": 5,
+  "technical_seo_5": 5,
+  "total": 93
+ },
+ "required_disclosures": [
+  "Worked example labelled illustrative with invented figures",
+  "Event timeboxes for a two-week Sprint stated as common practice, not a Scrum Guide rule",
+  "2017 refinement 10% figure labelled historical (removed in 2020 Guide)",
+  "Research limitations stated (cross-sectional, self-report, software teams, no comparison with other approaches)"
+ ],
+ "unverified_claims": [
+  "'Zombie Scrum' presented only as an informal term ('sometimes called'); no source cited",
+  "'Many teams report higher ownership' is a general observation, not a cited statistic"
+ ],
+ "unresolved_issues": [
+  "Similarity 0.678 to /project-management/scrum/what-is-scrum/ reflects shared Scrum vocabulary; that page's short benefits table links here as Read next, so intent is complementary",
+  "No NPI template is directly relevant; none linked"
+ ]
+}

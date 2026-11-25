@@ -1,0 +1,310 @@
+{
+ "url": "/project-management/project-baseline/",
+ "proposed_status": "PUBLISH",
+ "article_type": "definition guide with how-to and worked example",
+ "language": "en-GB",
+ "learning_level": "intermediate",
+ "primary_keyword": "project baseline",
+ "secondary_keywords": [
+  "what is a project baseline",
+  "baseline in project management",
+  "scope baseline",
+  "schedule baseline",
+  "cost baseline",
+  "performance measurement baseline",
+  "re-baselining",
+  "replanning vs re-baselining",
+  "baseline vs forecast",
+  "management reserve cost baseline",
+  "contingency reserve",
+  "baseline execution index",
+  "over target baseline",
+  "baseline change log",
+  "baseline in Agile",
+  "Microsoft Project baselines"
+ ],
+ "search_intent": "Definition (what is a project baseline), with how-to (set and change a baseline) and worked-example sub-intents",
+ "h1": "What Is a Project Baseline? Scope, Schedule and Cost",
+ "seo_title": "What Is a Project Baseline? Scope, Schedule and Cost",
+ "meta_description": "What a project baseline is, the scope, schedule and cost baselines, how reserves fit, how to set and re-baseline, with a worked example and BEI check.",
+ "excerpt": "A project baseline is the approved scope, schedule or cost plan you measure performance against. This guide covers the three baselines and the PMB, reserves, how to set a baseline, legitimate re-baselining, a calculated worked example with BEI, and Agile and PRINCE2 equivalents.",
+ "parent_topic_cluster": "Project planning and control (/project-management/project-management-plan/, /project-management/project-integration-management/)",
+ "prerequisite_guides": [
+  "/project-management/project-management-plan/",
+  "/project-management/work-breakdown-structure/",
+  "/project-management/project-scheduling/",
+  "/project-management/project-budget/"
+ ],
+ "related_articles": [
+  "/project-management/change-control/",
+  "/project-management/configuration-management/",
+  "/project-management/earned-value-management/",
+  "/project-management/cost-control/",
+  "/project-management/schedule-variance/",
+  "/project-management/cost-management-plan/"
+ ],
+ "learning_objectives": [
+  "Define a project baseline and distinguish it from the current plan, forecast and target",
+  "Describe the scope, schedule and cost baselines and the performance measurement baseline",
+  "Explain how contingency and management reserve relate to the cost baseline and project budget",
+  "Set a baseline using clear entry criteria",
+  "Calculate SV, CV, SPI, CPI and BEI against a baseline and interpret them",
+  "Distinguish legitimate baseline changes from performance events and keep a versioned baseline log"
+ ],
+ "internal_links": [
+  "/project-management/agile/agile-release-planning/",
+  "/project-management/change-control/",
+  "/project-management/configuration-management/",
+  "/project-management/cost-control/",
+  "/project-management/cost-estimation/",
+  "/project-management/cost-management-plan/",
+  "/project-management/cost-variance/",
+  "/project-management/critical-path-method/",
+  "/project-management/earned-value-management/",
+  "/project-management/estimate-at-completion/",
+  "/project-management/gantt-chart-software/",
+  "/project-management/gantt-chart/",
+  "/project-management/prince2/",
+  "/project-management/project-budget/",
+  "/project-management/project-forecasting/",
+  "/project-management/project-management-plan/",
+  "/project-management/project-scheduling/",
+  "/project-management/risk-register/",
+  "/project-management/schedule-variance/",
+  "/project-management/scope-creep/",
+  "/project-management/work-breakdown-structure/",
+  "/templates/change-request-template/",
+  "/templates/project-cost-estimate-template/",
+  "/templates/project-schedule-template/"
+ ],
+ "relevant_templates": [
+  "/templates/change-request-template/",
+  "/templates/project-schedule-template/",
+  "/templates/project-cost-estimate-template/"
+ ],
+ "related_npi_course": "Baseline: Scope, Schedule and Cost Control (named in the page's existing PMAI box only; not mentioned in the body)",
+ "external_references": [
+  {
+   "title": "PMI Lexicon of Project Management Terms, Version 4.0 (PMI, 2024), copy hosted by Colorado College",
+   "url": "https://www.coloradocollege.edu/offices/its/pmi-lexicon-pm-terms-compressed.pdf",
+   "inspected": true,
+   "what_it_supports": "Definitions quoted: baseline, scope baseline, cost baseline, performance measurement baseline, contingency reserve, management reserve"
+  },
+  {
+   "title": "US DoD (OUSD A&S) EVM definitions",
+   "url": "https://www.acq.osd.mil/asda/dpc/api/ipm/evm-definitions.html",
+   "inspected": true,
+   "what_it_supports": "PMB (distributed budget + UB, MR outside), internal replanning, formal reprogramming, OTB quote, OTS, BEI formula and exclusions"
+  },
+  {
+   "title": "GAO Cost Estimating and Assessment Guide: Overtarget Baselines and Schedules",
+   "url": "https://gaoinnovations.gov/cost-guide/overtarget-baselines-and-schedules.html",
+   "inspected": true,
+   "what_it_supports": "Quotes 'should rarely be necessary' and 'normally eliminates historical variances'; repeated OTB requests indicate management problems"
+  },
+  {
+   "title": "Microsoft Support: Set and save a baseline",
+   "url": "https://support.microsoft.com/en-US/project/set-and-save-a-baseline",
+   "inspected": true,
+   "what_it_supports": "Up to 11 baseline data sets including the unnumbered Baseline (page is for Project Online and Project Server)"
+  },
+  {
+   "title": "Elecosoft Powerproject help: Baseline execution index quality metric",
+   "url": "https://help.elecosoft.com/powerproject/english/help/Content/HTML_Topics/Conceptual/Quality_check/Baseline_execution_index_metric.htm",
+   "inspected": true,
+   "what_it_supports": "Suggested BEI boundaries 1.00 pass / 0.95 fail"
+  },
+  {
+   "title": "Knowledge Train: PRINCE2 glossary (7th edition)",
+   "url": "https://www.knowledgetrain.co.uk/project-management/prince2/prince2-glossary",
+   "inspected": true,
+   "what_it_supports": "PRINCE2 7 definitions of baseline and baseline management product (secondary source)"
+  },
+  {
+   "title": "Knowledge Train: PRINCE2 management products",
+   "url": "https://www.knowledgetrain.co.uk/project-management/prince2-management-products",
+   "inspected": true,
+   "what_it_supports": "16 baseline management products incl. issue management approach (secondary source)"
+  },
+  {
+   "title": "The 2020 Scrum Guide",
+   "url": "https://scrumguides.org/scrum-guide.html",
+   "inspected": true,
+   "what_it_supports": "The Scrum Guide does not use the word 'baseline'"
+  },
+  {
+   "title": "Atlassian: Understanding the project baseline",
+   "url": "https://www.atlassian.com/agile/project-management/project-baseline",
+   "inspected": true,
+   "what_it_supports": "SERP gap analysis only; not cited"
+  }
+ ],
+ "formulas": [
+  {
+   "formula": "EMV = P × I; contingency = sum of EMVs",
+   "variables": "P probability (0–1); I cost impact (£k)",
+   "verified_by": "python",
+   "inputs": "0.40×50; 0.25×40",
+   "result": "20 + 10 = £30k"
+  },
+  {
+   "formula": "Cost baseline = work package budgets + contingency; project budget = cost baseline + management reserve",
+   "variables": "all £k",
+   "verified_by": "python",
+   "inputs": "290 + 30; MR = 0.05 × 320",
+   "result": "£320k; MR £16k; budget £336k"
+  },
+  {
+   "formula": "SV = EV − PV; CV = EV − AC; SPI = EV/PV; CPI = EV/AC; SV% = SV/PV×100; CV% = CV/EV×100",
+   "variables": "PV, EV, AC in £k; indices unitless",
+   "verified_by": "python",
+   "inputs": "PV 115, EV 106, AC 121",
+   "result": "SV −9; CV −15; SPI 0.9217; CPI 0.8760; SV% −7.83; CV% −14.15"
+  },
+  {
+   "formula": "BEI = baseline tasks with actual finish ÷ baseline tasks scheduled to finish by status date",
+   "variables": "task counts; ratio",
+   "verified_by": "python",
+   "inputs": "21 / 24",
+   "result": "0.875"
+  },
+  {
+   "formula": "Baseline log totals",
+   "variables": "£k",
+   "verified_by": "python",
+   "inputs": "320+24; 344+8; 16−8; 352+8",
+   "result": "344; 352; 8; 360"
+  }
+ ],
+ "worked_examples": [
+  {
+   "title": "Baselining a housing association repairs system replacement (cost build-up, schedule baseline, month-3 EV, BEI, quiet re-baseline, baseline log)",
+   "illustrative": true
+  }
+ ],
+ "statistical_text_measurements": {
+  "url": "/project-management/project-baseline/",
+  "word_count": 3951,
+  "unique_words": 959,
+  "type_token_ratio": 0.2427,
+  "mattr_100": 0.7036,
+  "shannon_word_entropy_bits": 8.357,
+  "normalised_entropy": 0.8437,
+  "sentences": 181,
+  "avg_sentence_length": 17.4,
+  "sentence_length_sd": 10.54,
+  "sentence_length_cv": 0.606,
+  "paragraph_length_mean": 36.6,
+  "paragraph_length_sd": 19.6,
+  "bigram_repetition_rate": 0.3942,
+  "trigram_repetition_rate": 0.1454,
+  "top_repeated_4grams": [
+   [
+    "scope schedule and cost",
+    7
+   ],
+   [
+    "the approved version of",
+    5
+   ],
+   [
+    "the performance measurement baseline",
+    5
+   ],
+   [
+    "baseline is the approved",
+    4
+   ],
+   [
+    "approved version of a",
+    4
+   ],
+   [
+    "schedule and cost baselines",
+    4
+   ],
+   [
+    "number of baseline tasks",
+    4
+   ],
+   [
+    "is the approved version",
+    3
+   ]
+  ],
+  "most_common_sentence_openers": [
+   [
+    "the baseline",
+    4
+   ],
+   [
+    "a schedule",
+    4
+   ],
+   [
+    "the project",
+    4
+   ],
+   [
+    "a project",
+    3
+   ],
+   [
+    "the pmi",
+    3
+   ]
+  ],
+  "formulaic_phrases_found": [],
+  "watch_phrases_counts": {},
+  "most_similar_existing_guides": [
+   [
+    0.467,
+    "/project-management/project-budget/"
+   ],
+   [
+    0.456,
+    "/project-management/cost-management-plan/"
+   ],
+   [
+    0.451,
+    "/project-management/project-management-plan/"
+   ],
+   [
+    0.428,
+    "/project-management/project-cost-management/"
+   ],
+   [
+    0.38,
+    "/project-management/project-time-management/"
+   ]
+  ],
+  "note": "Descriptive editorial diagnostics only. No AI-detection probability is calculated."
+ },
+ "self_assessment": {
+  "technical_accuracy_25": 23,
+  "sources_15": 13,
+  "educational_usefulness_15": 14,
+  "examples_10": 10,
+  "information_gain_10": 9,
+  "precision_readability_10": 9,
+  "search_intent_5": 5,
+  "internal_linking_5": 5,
+  "technical_seo_5": 5,
+  "total": 93
+ },
+ "required_disclosures": [
+  "Worked example labelled illustrative and hypothetical",
+  "PRINCE2 7 wording attributed to a training provider's summary, with a note to check the official manual",
+  "No PMAI course promotion in the body, so no commercial-interest disclosure needed in the body"
+ ],
+ "unverified_claims": [
+  "Scope baseline components (scope statement, WBS, WBS dictionary) attributed to PMBOK Guide 6th edition from general knowledge and consistency with existing site pages; the PMBOK text itself was not opened",
+  "PRINCE2 7 definitions taken from Knowledge Train's summary; the official PeopleCert/Axelos manual was not accessed",
+  "Microsoft's '11 baselines' statement comes from a support page scoped to Project Online and Project Server; desktop behaviour is described elsewhere by Microsoft but that page was not opened",
+  "Tool baseline support (Wrike Team plan, ClickUp paid plans, Planner Plan 3, monday.com feature page, none in Basecamp/Trello/Notion) is taken from the site's own review pages, not re-checked on vendor sites today"
+ ],
+ "unresolved_issues": [
+  "No dedicated baseline template exists on the site; page links to change request, schedule and cost estimate templates instead",
+  "Contingency time-phasing convention is presented as an organisational choice; PMI and EVMS treatments differ and readers using formal EVMS should follow their contract's system description"
+ ]
+}
