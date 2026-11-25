@@ -6674,57 +6674,151 @@ What is project management? A clear definition, the 5 phases, the triple constra
 
 URL: https://neuralprojectinstitute.com/project-management/fast-tracking-vs-crashing/
 Section: Project management guides
-Summary: The difference between fast tracking and crashing a schedule, crash cost slope formula, a worked example, risks, and how to choose between them.
+Summary: Fast tracking vs crashing compared: definitions, crash cost slope, a worked example with risk-adjusted cost, break-even rework probability and how to choose.
 
 
 ## Fast Tracking vs Crashing: Differences and Worked Example
-Fast tracking and crashing are the two main [schedule compression](https://neuralprojectinstitute.com/project-management/schedule-compression/) techniques. Fast tracking overlaps activities that would normally run one after another, which adds risk. Crashing adds resources to critical activities to finish them sooner, which adds cost.
+Fast tracking and crashing are the two standard schedule compression techniques. Fast tracking shortens the schedule by overlapping activities that would normally run in sequence, at the price of possible rework; crashing shortens critical activities by adding resources, at the price of extra direct cost. This guide compares them side by side and works through an example that puts the risk of fast tracking and the cost of crashing on the same scale.
 - Published 26 September 2026
-- 3 min read
+- Last updated 25 November 2026
+- 16 min read
 
 ### Key takeaways
-- Fast tracking overlaps work and adds risk; crashing adds resources and cost.
-- Use crash cost slope to choose the cheapest days to buy.
-- Only compress critical activities and recheck the path after each step.
-- Record the extra risk and cost through change control.
+- Fast tracking overlaps sequential activities; crashing adds people, overtime, equipment or faster supply to critical activities. Neither reduces scope.
+- Both techniques only shorten the project when applied to the critical path, and both use up float and can create new critical paths.
+- Crashing has a visible, fairly predictable cost per day saved: the crash cost slope. Fast tracking has little direct cost but an uncertain cost of rework.
+- Compare the two on risk-adjusted cost: the certain cost of crashing against the probability-weighted cost of rework and the delay it would cause.
+- A blend of a small amount of crashing and a short overlap often beats either technique used alone, but the answer depends on the probabilities and on how much risk the sponsor will accept.
+
+### Fast tracking vs crashing: the difference
+**Fast tracking** is a schedule compression technique in which activities or phases normally done in sequence are performed in parallel for at least part of their duration. **Crashing** shortens the schedule for the least incremental cost by adding resources to critical activities. Fast tracking trades time for risk of rework; crashing trades time for money.
+The definitions above follow the *PMI Lexicon of Project Management Terms* (version 4.0, 2024), which defines schedule compression itself as a technique "used to shorten the schedule duration without reducing the project scope". That last condition matters: dropping deliverables, accepting a later date or moving work to a later phase are legitimate responses to a deadline problem, but they are not compression.
+Both techniques work only on the [critical path](https://neuralprojectinstitute.com/project-management/critical-path-method/). Overlapping or speeding up an activity with float makes it finish earlier but does not move the project end date. See our guide to [schedule compression](https://neuralprojectinstitute.com/project-management/schedule-compression/) for the full compression method, including indirect costs and the least-cost duration.
 
 ### Side-by-side comparison
 |  | Fast tracking | Crashing |
 | --- | --- | --- |
-| How | Run activities in parallel or overlap them | Add people, overtime, equipment or faster suppliers |
-| Main cost | Risk of rework | Extra money |
-| Works on | Discretionary dependencies | Activities that respond to more resources |
-| Typical example | Start building before design is fully finished | Add a second installation crew |
-| Effect on budget | Little direct effect unless rework occurs | Increases cost |
-| Best when | Dependencies are soft and requirements are stable | Money is available and work can be divided |
+| How it saves time | Overlaps activities or phases that were planned in sequence | Adds people, overtime, shifts, equipment or premium supply to critical activities |
+| Schedule change | Changes the logic: finish-to-start link gets a lead, or becomes start-to-start | Changes durations; the logic stays the same |
+| Direct cost | Little or none at first | Increases, usually by a known amount per day saved |
+| Main risk | Rework if the earlier activity's output changes | Lower productivity, fatigue and quality problems; extra resources not available in time |
+| Predictability of the saving | Lower: the saving can be lost to rework | Higher, within the activity's crash limit |
+| Works on | Discretionary (soft) dependencies | Work that can be divided or speeded up with more resources |
+| Does not work on | Mandatory dependencies, such as curing, legal approvals or test-before-release rules | Work limited by physics or a few experts' knowledge |
+| Effect on resources | More activities run at once, so resource demand peaks | More resources on fewer activities |
+| Can be reversed? | Hard: once later work starts on early inputs, it is committed | Usually: extra crew or overtime can be stopped |
+| Effect on float | Uses up float on parallel paths; may create new critical paths | Same |
+The last row is why both techniques make a schedule more fragile. Once the critical path is shorter, other paths that had float become critical or near-critical, so a small delay anywhere can move the finish date.
 
-### Crash cost slope
-Crash cost slope = (crash cost - normal cost) / (normal duration - crash duration). It is the extra cost of each day saved and lets you compare activities fairly.
-| Activity | Normal | Crash | Max days saved | Slope per day |
-| --- | --- | --- | --- | --- |
-| A Plan move | 3 days, $6,000 | 2 days, $9,000 | 1 | $3,000 |
-| B Order furniture | 4 days, $8,000 | 3 days, $10,000 | 1 | $2,000 |
-| D Install furniture | 5 days, $10,000 | 3 days, $13,000 | 2 | $1,500 |
-| F Move and unpack | 2 days, $4,000 | Cannot crash | 0 | - |
-
-### Worked crashing example
-The critical path A-B-D-F is 14 days; the other path A-C-E-F is 10 days.
-1. Target 13 days: crash the cheapest critical activity, D, by 1 day. Cost $1,500.
-2. Target 12 days: crash D by another day (now at its 3-day limit). Total $3,000. Paths: 12 and 10.
-3. Target 11 days: next cheapest is B at $2,000. Total $5,000. Paths: 11 and 10.
-4. Target 10 days: crash A by 1 day for $3,000, which shortens both paths because A is on both. Total $8,000. Paths: 10 and 9.
-5. No further crashing is possible on A-B-D-F, so the minimum is 10 days for $8,000 extra.
-
-### Worked fast-tracking example
-Instead of waiting for all furniture to arrive, the team starts installing as the first deliveries come in: B to D becomes FS-2 days (a [lead](https://neuralprojectinstitute.com/project-management/leads-and-lags/)). D now starts on day 5 instead of day 7, and the project finishes on day 12 with no direct cost. The risk is that installers may need to return if late deliveries do not fit the layout.
-
-### How to choose
-- Fast track first when dependencies are discretionary and the risk of rework is low.
-- Crash when money is available and adding people genuinely speeds up the work.
-- Combine both on long projects, but recheck the critical path after each change.
-- Record the extra risks in the [risk register](https://neuralprojectinstitute.com/project-management/risk-register/) and the extra cost in the [budget](https://neuralprojectinstitute.com/project-management/project-budget/).
+### How fast tracking works
+In a schedule network, fast tracking changes the relationship between two activities. A finish-to-start (FS) link becomes FS with a lead, written FS-3d for a 3-day lead, or is replaced by a start-to-start (SS) link with a lag. Our guide to [leads and lags](https://neuralprojectinstitute.com/project-management/leads-and-lags/) explains the notation and date arithmetic. At project level, fast tracking can also overlap whole phases, for example starting construction on early design packages while later packages are still being designed.
+Only **discretionary** dependencies can be overlapped. These are sequences chosen as good practice or preference, such as "finish the full design before ordering anything". **Mandatory** dependencies, such as "concrete must cure before loading" or "the safety certificate must be issued before the building opens", cannot be overlapped without breaking a physical, legal or contractual rule. Our guide to [task dependencies](https://neuralprojectinstitute.com/project-management/task-dependencies/) explains the four dependency attributes.
+Two practical questions decide whether an overlap is safe:
+- **How likely is the earlier activity's output to change after the later activity starts?** Approved, stable inputs (a signed-off module design, a frozen floor plan) carry little risk; inputs still under discussion carry a lot.
+- **How much later work would a change undo?** If a change means moving a few desks, the overlap is cheap to get wrong. If it means re-pouring foundations or rewriting interfaces, it is expensive.
+Research on product development supports this caution. Krishnan, Eppinger and Whitney (*Management Science*, 1997) note that overlapping interrelated activities can speed development, but without careful management can increase effort and cost and reduce quality; their framework sets out the conditions under which different kinds of overlap are appropriate rather than recommending maximum overlap.
 Tip
-Some work cannot be sped up by adding people: one person can paint a small room, but four people in the same room just get in each other's way.
+Overlap by deliverable, not by calendar. "Start installation in zones where cabling has been tested" gives the later team a stable input; "start installation three days early" does not.
+
+### How crashing works
+Crashing shortens an activity by applying more resources to it. To compare crashing options fairly, calculate the **crash cost slope**, the extra cost of each time unit saved:
+**Crash cost slope = (crash cost − normal cost) ÷ (normal duration − crash duration)**
+- **Normal cost** and **crash cost** are the activity's direct costs, in currency, at its normal and fully crashed durations.
+- **Normal duration** and **crash duration** are in the same time unit, here working days. The crash duration is the **crash point**: the shortest duration the activity can reach however many resources are added.
+- The result is in currency per time unit, for example dollars per day saved.
+The formula assumes that cost rises in a straight line between the normal and crash points. In practice the first day saved is often cheap (some overtime) and the last is expensive (a second crew, premium delivery), so ask for quotes for each step where the amounts are large.
+Crashing suits work that can be divided among more people or speeded up with better equipment: installation, data entry, testing that can run in parallel, manufacturing with spare capacity. It suits poorly work that depends on a few people's knowledge or on a fixed physical process. New people need onboarding and coordination, which is the point of Fred Brooks's observation in *The Mythical Man-Month* (1975) that "adding manpower to a late software project makes it later". Crash the cheapest critical activity first, one step at a time, and recalculate the critical path after each step.
+
+### Worked example: refurbishing an ICT suite before term starts
+This example is **illustrative**: the school, costs and probabilities are hypothetical. A school is refurbishing its ICT suite during the summer break. The contractor's schedule is 14 working days, but the pupils return in 11 working days. Each working day the suite is not ready, the school must hire a temporary mobile ICT classroom at **$2,500 per day**. The project manager needs to recover 3 days.
+| ID | Activity | Predecessors | Normal days | Normal cost | Crash days | Crash cost | Crash cost slope |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| A | Strip out and survey | - | 3 | $6,000 | 2 | $9,000 | $3,000/day |
+| B | Install and test data cabling | A | 4 | $8,000 | 3 | $10,000 | $2,000/day |
+| C | Image and configure PCs off site | A | 3 | $4,500 | 2 | $5,500 | $1,000/day |
+| D | Install furniture and PCs | B | 5 | $10,000 | 3 | $13,000 | $1,500/day |
+| E | Deliver configured PCs | C | 2 | $2,000 | 2 | - | Cannot crash |
+| F | Test and hand over | D, E | 2 | $4,000 | 2 | - | Cannot crash |
+Two paths run through the network: **A-B-D-F = 3 + 4 + 5 + 2 = 14 days** (critical) and **A-C-E-F = 3 + 3 + 2 + 2 = 10 days** (4 days of total float). C has the cheapest crash cost slope, but it is not critical, so crashing it would buy nothing. Doing nothing costs 3 days × $2,500 = **$7,500** in classroom hire.
+
+#### Option 1: crash only
+| Step | Action | Cost of step | Paths (A-B-D-F / A-C-E-F) | Cumulative cost |
+| --- | --- | --- | --- | --- |
+| 0 | Normal schedule | - | 14 / 10 | $0 |
+| 1 | Crash D by 1 day (cheapest critical activity) | $1,500 | 13 / 10 | $1,500 |
+| 2 | Crash D by 1 more day (D now at its crash point) | $1,500 | 12 / 10 | $3,000 |
+| 3 | Crash B by 1 day (next cheapest) | $2,000 | 11 / 10 | $5,000 |
+The target is met for **$5,000** of extra direct cost, with fairly little uncertainty. The other path now has only 1 day of float. A fourth day could be bought by crashing A for $3,000, which shortens both paths because A is on both, but it is not needed.
+
+#### Option 2: fast track only
+Normally installation (D) starts on day 8, after all cabling is installed and tested at the end of day 7. If D starts in zones where cabling is already finished, the B→D link becomes FS with a 3-day lead (FS-3d): installation starts on **day 5**, D finishes at the end of day 9 and handover finishes at the end of **day 11**. No direct cost is added.
+The risk is that cabling tests in later zones fail or the cable routes change, so desks and PCs already installed must be moved. With three days of overlap, cabling in most of the room is still unfinished when installation starts. The project manager and the contractor estimate a **40% probability** of rework costing **$4,000** and adding **2 days**.
+
+#### Option 3: crash a little, fast track a little
+Crash D by 1 day with a second installation crew ($1,500), and overlap B and D by only 2 days (FS-2d), installing only in zones whose cabling has passed testing. D starts on day 6, takes 4 days and finishes at the end of day 9; handover finishes at the end of day 11. Because less of the room is unfinished when installation starts, the estimated rework risk falls to a **15% probability** of **$2,000** and **1 day** of delay.
+
+### Comparing the options on risk-adjusted cost
+Fast tracking looks free and crashing looks expensive until the risk is costed. **Expected monetary value (EMV)** puts both on the same scale:
+**EMV of rework = P × (rework cost + delay days × daily late cost)**
+- **P** is the probability that rework is needed, as a decimal (0.40 for 40%).
+- **Rework cost** is the direct cost of redoing work, in dollars.
+- **Delay days** is the extra working days the rework adds beyond the target; **daily late cost** is $2,500 per day here.
+- **Expected total cost** = direct compression cost + EMV of rework. **Worst case** = direct cost + full rework impact.
+Substituting the figures:
+- **Crash only:** EMV of rework = $0 (no overlap). Expected total = **$5,000**; worst case $5,000.
+- **Fast track only:** impact = $4,000 + 2 × $2,500 = $9,000; EMV = 0.40 × $9,000 = $3,600. Expected total = $0 + $3,600 = **$3,600**; worst case $9,000.
+- **Crash and fast track:** impact = $2,000 + 1 × $2,500 = $4,500; EMV = 0.15 × $4,500 = $675. Expected total = $1,500 + $675 = **$2,175**; worst case $1,500 + $4,500 = $6,000.
+| Option | Planned finish | Direct cost | EMV of rework | Expected total | Worst case | Expected saving vs doing nothing ($7,500) |
+| --- | --- | --- | --- | --- | --- | --- |
+| Crash only | Day 11 | $5,000 | $0 | $5,000 | $5,000 | $2,500 |
+| Fast track only | Day 11 | $0 | $3,600 | $3,600 | $9,000 | $3,900 |
+| Crash and fast track | Day 11 | $1,500 | $675 | $2,175 | $6,000 | $5,325 |
+
+#### Break-even rework probability
+Because the probabilities are judgements, test how wrong they can be before the decision changes. Overlap without crashing has the lower expected cost only while P × $9,000 < $5,000, so the **break-even probability** is $5,000 ÷ $9,000 = **0.56 (56%)**. For the blended option, $1,500 + P × $4,500 < $5,000 gives P < $3,500 ÷ $4,500 = **0.78 (78%)**.
+
+#### Interpreting the result
+The blended option has the lowest expected cost, and its worst case ($6,000) is still cheaper than doing nothing. On expected cost alone, fast tracking beats crashing, but in the 40% case it costs $9,000 and the suite opens two days late: $1,500 more than doing nothing ($7,500), although one day sooner. Crashing alone is the most expensive in expectation but the only option with a certain outcome.
+What the project manager should do: recommend option 3 to the sponsor, with option 1 as the alternative if the school cannot accept any chance of a late start. Make the overlap conditional on a clear rule ("install only in zones with passed cable tests"), record the rework risk with an owner in the [risk register](https://neuralprojectinstitute.com/project-management/risk-register/), and monitor the A-C-E-F path, which has only 1 day of float in all three options.
+**Limitations.** EMV is a long-run average; on a single project you get either the full rework impact or none of it, so a sponsor with low risk tolerance may rightly prefer the certain option. The probabilities and impacts are estimates, which is why the break-even check matters. The comparison also leaves out non-monetary effects, such as pupils losing ICT lessons, and treats the crash cost as certain, although crews may be unavailable or quotes may overrun. For schedules with many uncertain activities, a [Monte Carlo simulation](https://neuralprojectinstitute.com/project-management/monte-carlo-simulation/) gives a fuller picture than single-point EMV.
+
+### How to choose between fast tracking and crashing
+The two questions from the fast-tracking section, how likely the earlier output is to change and how much later work a change would undo, map directly onto the two parts of the EMV calculation: probability and impact. Crossing them gives a quick screen before any detailed costing:
+|  | Rework would be cheap and quick | Rework would be expensive or long |
+| --- | --- | --- |
+| Earlier output approved and stable (low probability of change) | **Fast track.** Little direct cost and little exposure | **Fast track with a short, conditional overlap**, or blend with some crashing; cost the worst case |
+| Earlier output still changing (high probability of change) | **Blend.** Crash a little so the overlap can be shorter, or overlap only the parts that are already stable | **Crash, or do not compress.** Overlap is a poor bet; if crashing is too costly, negotiate the date or scope through change control |
+Crashing still has to pass its own test: the work must be divisible or genuinely faster with more resources, and the people, crews or equipment must be available on the dates needed. If neither technique passes, the gap has to be closed in another way.
+Three decision rules follow from the example:
+1. Cost the risk before choosing. A fast-tracking option with no direct cost is not free if rework is likely and expensive.
+2. Look for the blend. A little crashing often lets you overlap less, which reduces both the probability and the impact of rework.
+3. Match the option to the sponsor's risk tolerance, not only to the lowest expected cost, and show the worst case alongside the expected value.
+The common rule of thumb "fast track first, because it is cheaper" holds only when the overlap is on stable inputs. Many recovery plans start with cheaper options than either technique, such as shortening approval cycles or removing waiting time; the [schedule compression](https://neuralprojectinstitute.com/project-management/schedule-compression/) guide lists them.
+
+### Effects both techniques share
+- **Float disappears.** Every day taken off the critical path reduces the float on other paths. In the example, A-C-E-F goes from 4 days of float to 1. Recalculate with a [forward and backward pass](https://neuralprojectinstitute.com/project-management/forward-and-backward-pass/) after each change and watch near-critical paths, not just the critical one.
+- **More paths converge on the finish.** When several paths are close to critical, the chance that at least one of them slips rises. Monte Carlo simulation shows this effect, known as merge bias; a deterministic critical path does not.
+- **Resource peaks appear.** Overlapping activities need their resources at the same time, and crashing concentrates resources on fewer activities. Check the resource histogram; if the compressed plan over-allocates people, [resource levelling](https://neuralprojectinstitute.com/project-management/resource-leveling/) may push dates back out.
+- **Coordination load rises.** More parallel work means more handoffs and interfaces. Toste-Karayan's PMI Global Congress paper on managing crashed and fast-tracked projects (2005) stresses frequent, detailed communication, securing handoffs and resources in advance, and protecting time for quality testing.
+
+### Recording and approving the decision
+Compression changes cost, risk and the schedule, so it is a decision for the sponsor, supported by the project manager's analysis. Present each option with its finish date, direct cost, expected and worst-case cost, main risks and the cost of doing nothing, as in the comparison table above.
+1. Update the schedule with the approved leads and crashed durations in your [critical path template](https://neuralprojectinstitute.com/templates/critical-path-template/) or scheduling tool, and check the new critical path.
+2. Record the new risks, such as rework from overlap or crew availability for crashing, with owners and responses in the [risk register template](https://neuralprojectinstitute.com/templates/risk-register-template/).
+3. Raise a [change request](https://neuralprojectinstitute.com/templates/change-request-template/) for the extra cost and revised dates, and approve it through [change control](https://neuralprojectinstitute.com/project-management/change-control/).
+4. Update the [project baseline](https://neuralprojectinstitute.com/project-management/project-baseline/) once approved, so that later variance is measured against the compressed plan.
+Read our guide to [float and slack](https://neuralprojectinstitute.com/project-management/float-and-slack/) to understand how much flexibility remains on each path after compression.
+
+### Common mistakes when fast tracking or crashing
+The general compression errors, such as shortening non-critical activities or forgetting to recalculate the critical path, are covered in the schedule compression guide. These are specific to choosing between the two techniques:
+- **Treating fast tracking as free.** The rework cost appears later, often in a different budget line, so nobody connects it to the decision.
+- **Leaving the risk out of the comparison**, so the sponsor chooses between a priced option and an apparently free one.
+- **Overlapping by calendar rather than by deliverable.** "Start three days early" gives the later team no stable input; "start in zones that have passed testing" does.
+- **Overlapping mandatory dependencies**, such as testing before code is written or occupying a building before certification.
+- **Crashing with people who cannot start productive work at once.** Onboarding and coordination absorb part or all of the saving.
+- **Using a straight-line crash cost slope for large steps** without checking real quotes.
+- **Ignoring the resource effect of overlap.** Two activities that now run together may need the same crew or the same room at the same time.
+Agile teams working in fixed time-boxes rarely use either technique in its classic form; our [schedule compression](https://neuralprojectinstitute.com/project-management/schedule-compression/) guide explains the closest equivalents, such as [swarming](https://neuralprojectinstitute.com/project-management/agile/agile-swarming/) on the highest-priority item.
 
 ### Free templates for this topic
 Project Schedule Template
@@ -6741,34 +6835,28 @@ Beginner · Advanced · Expert
 ### Frequently asked questions
 
 **Q: What is the difference between fast tracking and crashing?**
-Fast tracking overlaps activities and increases risk; crashing adds resources and increases cost.
+Fast tracking overlaps activities that were planned in sequence; its main cost is the risk of rework. Crashing adds resources to critical activities to shorten them; its main cost is money. Both shorten the schedule without reducing scope.
 
 **Q: Which is better, crashing or fast tracking?**
-Neither is always better. Fast tracking is cheaper but riskier; crashing is more predictable but costs more.
-
-**Q: What is an example of fast tracking?**
-Starting construction on the foundations while the upper floors are still being designed.
-
-**Q: What is an example of crashing?**
-Paying for overtime or adding a second team to finish a critical activity sooner.
-
-**Q: How do you calculate the cost per day of crashing?**
-(Crash cost - normal cost) / (normal duration - crash duration).
+Neither in general. Compare them on risk-adjusted cost: the certain cost of crashing against the probability of rework multiplied by its cost and delay. Stable inputs and cheap rework favour fast tracking; unstable inputs, expensive rework or a sponsor who needs certainty favour crashing.
 
 **Q: Does fast tracking increase cost?**
-Not directly, but rework caused by overlapping work can add cost later.
+Not directly, but rework caused by building on inputs that later change can add cost and delay. It can also add coordination effort and create resource peaks when activities run at the same time.
 
-**Q: Is crashing a non-critical activity worthwhile?**
-It is possible, but it will not shorten the project, so it wastes money.
+**Q: How do you calculate crash cost per day?**
+Crash cost slope = (crash cost − normal cost) ÷ (normal duration − crash duration). For example, an activity crashed from 5 to 3 days with its cost rising from $10,000 to $13,000 costs $3,000 ÷ 2 = $1,500 per day saved.
 
-**Q: What is the crash point when crashing a schedule?**
-The shortest duration an activity can reach no matter how many resources are added.
+**Q: Can you use fast tracking and crashing together?**
+Yes, and it is often the best option. A small amount of crashing can let you overlap less, which lowers both the probability and the impact of rework.
 
-**Q: Which dependencies are suitable for fast tracking?**
-Discretionary (soft) dependencies. Mandatory dependencies, such as physical constraints, usually cannot.
+**Q: Which dependencies can be fast tracked?**
+Only discretionary (soft) dependencies, which reflect preference or good practice. Mandatory dependencies based on physical, legal or contractual rules cannot be overlapped.
 
-**Q: Are fast tracking and crashing on the PMP exam?**
-Schedule compression techniques are a standard topic in PMP study materials; see [PMP certification](https://neuralprojectinstitute.com/project-management/pmp-certification/).
+**Q: Why should you only crash or fast track critical activities?**
+Only the critical path determines the finish date. Shortening an activity with float adds to its float and leaves the finish date unchanged.
+
+**Q: Is reducing scope a form of fast tracking or crashing?**
+No. Both techniques keep scope the same. Reducing scope changes the deliverables and needs approval through change control.
 
 ### Related guides
 Schedule Compression: Techniques, Steps and Worked Example
@@ -10780,7 +10868,7 @@ Task dependencies explained: the four types (FS, SS, FF, SF), mandatory vs discr
 Predecessors and Successors in Project Management
 Predecessors and successors in project management explained: definitions, the four link types, a worked example, MS Project notation and common mistakes.
 Fast Tracking vs Crashing: Differences and Worked Example
-The difference between fast tracking and crashing a schedule, crash cost slope formula, a worked example, risks, and how to choose between them.
+Fast tracking vs crashing compared: definitions, crash cost slope, a worked example with risk-adjusted cost, break-even rework probability and how to choose.
 Critical Path Method (CPM): Steps, Example and Formulas
 Learn the critical path method step by step: key formulas, a fully worked example with forward and backward pass, float, CPM vs PERT and tips.
 
@@ -27374,7 +27462,7 @@ Agile teams usually hold the date and adjust scope through the product backlog. 
 
 ### Related guides
 Fast Tracking vs Crashing: Differences and Worked Example
-The difference between fast tracking and crashing a schedule, crash cost slope formula, a worked example, risks, and how to choose between them.
+Fast tracking vs crashing compared: definitions, crash cost slope, a worked example with risk-adjusted cost, break-even rework probability and how to choose.
 Critical Path Method (CPM): Steps, Example and Formulas
 Learn the critical path method step by step: key formulas, a fully worked example with forward and backward pass, float, CPM vs PERT and tips.
 Float and Slack in Project Management: Types and Formulas
@@ -30247,8 +30335,8 @@ Project Manager Roles and Responsibilities: A Complete Guide
 Project manager roles and responsibilities explained: duties by phase, a typical week, authority, a worked example and how the role compares with others.
 Project Management Skills: Hard, Soft and How to Build Them
 Project management skills explained: the hard and soft skills PMs need, proficiency levels, a self-assessment, a 90-day plan and CV examples.
-How Agile Software Development Works: Practices and Best Practices
-How Agile software development works day to day: user stories, CI/CD, testing, code review and DevOps, plus best practices for high-performing teams.
+Agile Software Development: Practices, Process and Examples
+How Agile software development works: the flow from story to production, XP practices, a test pyramid and CI worked example, DORA metrics and pitfalls.
 
 
 ---
@@ -32665,8 +32753,8 @@ Agile vs Waterfall: Differences and How to Choose
 Agile vs Waterfall compared: key differences, pros and cons, a suitability check, hybrid models and worked examples to help you choose an approach.
 What Is a Sprint in Agile? Length, Events and Examples
 What is a sprint in Agile? How sprints work, how long they last, the Scrum events inside them, Sprint Goals, a two-week example and mistakes to avoid.
-How Agile Software Development Works: Practices and Best Practices
-How Agile software development works day to day: user stories, CI/CD, testing, code review and DevOps, plus best practices for high-performing teams.
+Agile Software Development: Practices, Process and Examples
+How Agile software development works: the flow from story to production, XP practices, a test pyramid and CI worked example, DORA metrics and pitfalls.
 
 
 ---
@@ -36483,8 +36571,8 @@ What Is Kanban? Definition, Principles and Examples
 What is Kanban? Learn the Kanban method's meaning, principles, practices, board, WIP limits and flow metrics, with worked examples and step-by-step setup.
 WIP Limits in Kanban: How to Set Them, With Examples
 WIP limits explained: what they are, why they work (Little's Law), how to set your first limits step by step, worked board examples and common mistakes.
-How Agile Software Development Works: Practices and Best Practices
-How Agile software development works day to day: user stories, CI/CD, testing, code review and DevOps, plus best practices for high-performing teams.
+Agile Software Development: Practices, Process and Examples
+How Agile software development works: the flow from story to production, XP practices, a test pyramid and CI worked example, DORA metrics and pitfalls.
 
 
 ---
@@ -38530,54 +38618,186 @@ Agile epics explained: what an epic is, how to write one with a template, worked
 
 ---
 
-# How Agile Software Development Works: Practices and Best Practices
+# Agile Software Development: Practices, Process and Examples
 
 URL: https://neuralprojectinstitute.com/project-management/agile/agile-software-development/
 Section: Agile guides
-Summary: How Agile software development works day to day: user stories, CI/CD, testing, code review and DevOps, plus best practices for high-performing teams.
+Summary: How Agile software development works: the flow from story to production, XP practices, a test pyramid and CI worked example, DORA metrics and pitfalls.
 
 
-## How Agile Software Development Works: Practices and Best Practices
-Agile software development is where Agile began. Teams deliver working software in short iterations, supported by engineering practices that keep quality high while requirements change.
+## Agile Software Development: Practices, Process and Examples
+Agile software development is a way of building software in small, working increments, with frequent feedback from users and the engineering practices that keep code safe to change. Frameworks such as Scrum and Kanban organise the work; practices from Extreme Programming (XP), such as test-driven development and continuous integration, make it possible to release small changes often without breaking what already works.
 - Published 25 September 2026
-- 3 min read
+- Last updated 25 November 2026
+- 20 min read
 
 ### Key takeaways
-- Agile software teams deliver working software in short iterations.
-- TDD, CI/CD, code review and refactoring keep quality high under change.
-- DevOps extends Agile into release and operations.
+- Agile software development rests on the 2001 Agile Manifesto, whose principles name working software as "the primary measure of progress" and call for "continuous attention to technical excellence".
+- Scrum does not prescribe engineering practices and Kanban does not either; XP does. Most software teams combine a framework for organising work with XP-style practices for building it.
+- Continuous integration only works when the automated tests are fast. A test suite shaped like a pyramid (many unit tests, few end-to-end tests) can give feedback in minutes; an inverted suite can take hours.
+- Under the 2020 Scrum Guide a team may release several times within a Sprint: the Sprint Review is not a release gate.
+- DORA measures software delivery with five metrics: change lead time, deployment frequency, failed deployment recovery time, change fail rate and deployment rework rate.
 
-### The development cycle
-1. The Product Owner orders a backlog of user stories.
-2. In [Sprint Planning](https://neuralprojectinstitute.com/project-management/agile/agile-meetings-and-ceremonies/), developers pick stories and break them into tasks.
-3. Developers write code and automated tests together.
-4. Code is reviewed and merged frequently into a shared main branch.
-5. Continuous integration builds and tests every change automatically.
-6. Finished stories are demonstrated at the Sprint Review and released, sometimes many times a day.
-See the [Agile development life cycle](https://neuralprojectinstitute.com/project-management/agile/agile-development-life-cycle/) for the wider process.
+### What is Agile software development?
+**Agile software development** is an iterative approach to building software in which a small, cross-functional team delivers working increments in short cycles, gets feedback from users and stakeholders, and adapts the plan. It relies on automated testing, frequent integration and continuous refactoring so that the code stays easy and safe to change as requirements evolve.
+The term comes from the [Agile Manifesto](https://neuralprojectinstitute.com/project-management/agile/agile-manifesto-values-and-principles/), written in 2001 by a group of software practitioners. Three of its twelve principles describe software delivery directly:
+- "Deliver working software frequently, from a couple of weeks to a couple of months, with a preference to the shorter timescale."
+- "Working software is the primary measure of progress." Documents, designs and percentage-complete estimates are not.
+- "Continuous attention to technical excellence and good design enhances agility." Teams that let code quality slide lose the ability to change direction cheaply.
+Agile is a set of values and principles, not a single method. It does not mean working without plans or documentation: Agile teams plan at several levels (product, release, iteration and day) and keep the documentation their users and future maintainers need, such as API references, decision records and readable automated tests. What changes is that plans are revised as the team learns, rather than fixed at the start.
+This guide covers the day-to-day engineering side. For the phases a product goes through from concept to retirement, see the [Agile development life cycle](https://neuralprojectinstitute.com/project-management/agile/agile-development-life-cycle/).
+
+### How a change flows from backlog to production
+The sequence below is typical for a Scrum team using XP practices. A Kanban team follows the same technical flow without Sprints.
+1. **The Product Owner orders the Product Backlog.** Items are usually written as [user stories](https://neuralprojectinstitute.com/project-management/agile/user-stories/) with acceptance criteria, and refined until they are small enough to finish in a few days.
+2. **The Developers plan the Sprint.** They select items towards a Sprint Goal and break them into tasks. Scrum leaves the choice of technique to them.
+3. **Acceptance criteria become tests.** A criterion such as "Given I request a reset, when I open the link within 1 hour, then I can set a new password" is turned into an automated acceptance test before or while the code is written.
+4. **Code is written test-first in small steps**, often in pairs, and refactored as it goes.
+5. **Each change is merged into the shared main branch at least daily.** A continuous integration (CI) server builds the code and runs the automated tests on every merge.
+6. **The deployment pipeline promotes the build** through further automated checks to a production-like environment, so the software is always in a releasable state.
+7. **The change is released when the business decides.** Unfinished features can be deployed switched off behind a feature flag and switched on later, which separates deployment (a technical event) from release (a business decision).
+8. **The team inspects the result**: with stakeholders at the [Sprint Review](https://neuralprojectinstitute.com/project-management/scrum/sprint-review/), through usage data in production, and in the Sprint Retrospective.
+Step 7 corrects a common misreading of Scrum. The 2020 Scrum Guide states that "multiple Increments may be created within a Sprint" and that "the Sprint Review should never be considered a gate to releasing value". A team can deploy every day and still hold a Sprint Review to inspect progress towards the Product Goal.
+| Step | Practice | Evidence that it happened |
+| --- | --- | --- |
+| Story ready | Backlog refinement, acceptance criteria | Story meets the team's readiness agreement |
+| Build | Test-driven development, pairing or review | New tests exist and pass; review recorded |
+| Integrate | Continuous integration, trunk-based development | Merged to main within a day; build green |
+| Release-ready | Deployment pipeline, continuous delivery | Build passed every pipeline stage |
+| Released | Feature flags, monitoring | Flag on for users; error rates and usage visible |
 
 ### Core engineering practices
-| Practice | What it is | Why it matters |
+Several of these practices (test-first programming, pair programming, continuous integration, refactoring and collective ownership) were brought together by Kent Beck in *Extreme Programming Explained* (first edition 1999; second edition with Cynthia Andres, 2004); continuous delivery and the DORA guidance on trunk-based development came later, from the continuous delivery and DevOps movements. The practices depend on one another: refactoring is risky without tests, and continuous integration is impractical when the tests take hours.
+| Practice | What it is | Pays off when | Watch out for |
+| --- | --- | --- | --- |
+| Test-driven development (TDD) | Write a failing test, write the simplest code to pass it, then refactor | Logic is complex or will change often | Tests that mirror the code's structure and break on every refactor |
+| Continuous integration (CI) | Every developer merges to the shared main branch at least daily; each merge is built and tested automatically | Several people change the same codebase | Running CI on long-lived branches and calling it CI |
+| Trunk-based development | Work in very short-lived branches (hours) or directly on main | Releases should be frequent and low-risk | Unfinished work leaking to users without feature flags |
+| Pair programming | Two developers work on the same code at the same time, swapping roles | Work is complex, risky or needs knowledge spreading | Pairing on routine tasks where review would suffice |
+| Code review | Another developer checks each change before or soon after merging | Shared ownership and defect detection matter | Multi-day review queues that force large batches |
+| Refactoring | Improving the structure of code without changing its behaviour | The codebase must keep changing for years | Large "refactoring Sprints" instead of small, continuous steps |
+| Continuous delivery (CD) | Keeping software releasable at all times through an automated deployment pipeline | The business wants to release on demand | Automating deployment before automating tests |
+| Collective code ownership | Any developer may improve any part of the code | Bottlenecks form around individual experts | No shared coding standards, so changes conflict |
+
+#### Test-driven development
+TDD works in a short loop often described as red, green, refactor: write a test that fails because the behaviour does not exist yet, write just enough code to make it pass, then tidy the design while the tests stay green. The tests are a by-product; the main purpose is to drive the design in small, verifiable steps and to leave behind a safety net for later changes.
+TDD suits business rules, calculations and code that will change. It is harder to apply to user-interface layout, exploratory prototypes that will be thrown away, and code that wraps external systems, where teams often write tests after a short spike instead. Treat claims that TDD always reduces defects with caution: the benefit depends on the team's skill and on whether the tests check behaviour rather than implementation details.
+
+#### Continuous integration and trunk-based development
+Martin Fowler's article on the practice (updated in January 2024) defines continuous integration as each team member merging their changes into a shared codebase at least daily, with every integration verified by an automated build that includes tests. He notes that Kent Beck developed the practice as part of XP in the 1990s, and that running a CI server against a long-lived feature branch is not continuous integration, because the branch is not merged with everyone else's work.
+DORA's guidance on trunk-based development gives measurable thresholds: three or fewer active branches in the repository, branches that last no more than a few hours, merges to trunk at least once a day, and no code freezes or integration phases. Two supporting rules follow. When the main build breaks, fixing it comes before any new work, reverting the faulty commit if it cannot be fixed within a few minutes. And reviews must be quick: DORA recommends reviewing synchronously and tracking how long approvals take, because a review that waits days pushes developers to batch changes, which makes reviews larger and slower still.
+
+#### Code review and pair programming
+Both practices put a second pair of eyes on every change and spread knowledge of the codebase. Pairing does it continuously, while the code is written; review does it afterwards. Many teams pair on risky or unfamiliar work and use lightweight review for the rest. When more than two people work together on one item, the practice is usually called mob or ensemble programming; our guide to [Agile swarming](https://neuralprojectinstitute.com/project-management/agile/agile-swarming/) explains when concentrating effort on one item helps and when it does not.
+
+#### Refactoring and simple design
+Refactoring changes the internal structure of code without changing what it does, in steps small enough that the tests confirm nothing broke. Combined with XP's preference for the simplest design that meets today's needs, it lets architecture evolve with the product instead of being fixed up front. Where shortcuts are taken deliberately, record them: our guide to [technical debt in Scrum](https://neuralprojectinstitute.com/project-management/scrum/scrum-technical-debt/) explains how to make that debt visible and decide when to pay it down.
+
+#### Test automation and the test pyramid
+Mike Cohn described the test automation pyramid in *Succeeding with Agile* (2009). Its two rules, as summarised by Ham Vocke on martinfowler.com, are to write tests at different levels of granularity and to have fewer tests the higher the level. Unit tests at the base are fast and precise; service or integration tests in the middle check that components work together; a small number of end-to-end tests at the top check complete user journeys through the interface. Fowler describes end-to-end tests as brittle, expensive to write and slow to run, and calls a suite dominated by them an "ice-cream cone".
+DORA's test automation guidance sets the practical target: developers should get feedback from automated tests in less than ten minutes, both locally and from the CI system, and flaky tests should not be tolerated because a failure must indicate a real defect. The worked example below shows why the shape of the suite decides whether that target is reachable.
+
+#### Continuous delivery and feature flags
+Continuous delivery extends CI: every change that passes the pipeline is releasable, and releasing is a routine, automated action. Feature flags (also called feature toggles) let a team merge and deploy unfinished work while keeping it switched off. Pete Hodgson's article on martinfowler.com advises that release toggles "should generally not stick around much longer than a week or two", because every flag adds conditional logic and test combinations; old flags become a form of technical debt.
+See our guide to [continuous delivery](https://neuralprojectinstitute.com/project-management/kanban/continuous-delivery/) for how a deployment pipeline is built and how CI, continuous delivery and continuous deployment differ.
+
+### Scrum, XP and Kanban in software teams
+Agile software teams rarely use one method in pure form. The frameworks answer different questions, which is why they combine well.
+|  | Scrum | Extreme Programming (XP) | Kanban |
+| --- | --- | --- | --- |
+| What it organises | Roles, events and artifacts for delivering value in Sprints | Engineering and team practices for building software | Flow of work through a visualised, WIP-limited system |
+| Cadence | Sprints of one month or less | Short iterations and small releases | Continuous; cadences optional |
+| Engineering practices required? | No: "various processes, techniques and methods can be employed" | Yes: TDD, pairing, CI, refactoring and others | No |
+| Quality commitment | A Definition of Done every Increment must meet | Built into the practices | Explicit policies for each workflow stage |
+| Typical software use | Product teams with a stable backlog | Added to Scrum or Kanban to improve code quality | Support, maintenance, platform and operations teams |
+The practical consequence: adopting Scrum alone does not give a team the ability to release working software every Sprint. If the Increment cannot meet the [Definition of Done](https://neuralprojectinstitute.com/project-management/agile/definition-of-done/) without a manual test phase, the bottleneck is technical, and the fix is in the engineering practices rather than in the Scrum events.
+Read our comparison of [Agile methodologies](https://neuralprojectinstitute.com/project-management/agile/types-of-agile-methodologies/) for Lean, Crystal, DSDM and FDD, and [Kanban vs Scrum](https://neuralprojectinstitute.com/project-management/kanban/kanban-vs-scrum/) for choosing between the two main frameworks.
+
+### Worked example: test-suite shape and CI feedback time
+This example is **illustrative**. The team, product and test durations are hypothetical assumptions chosen to show the arithmetic; measure your own suite before drawing conclusions.
+A team of five developers maintains a customer self-service web portal. Its next story is US-01 from our [user story template](https://neuralprojectinstitute.com/templates/user-story-template/): "As a customer, I want to reset my password by email so that I can log in without calling support". Each developer merges to main about twice a day, so the CI pipeline runs about **10 times per working day**.
+**Assumed average run time per test:** unit test 0.02 seconds; integration test 1.5 seconds; end-to-end browser test 40 seconds.
+
+#### Step 1: total run time of each suite
+**Suite run time (s) = Σ (number of tests at a level × average seconds per test at that level)**, where the sum runs over the unit, integration and end-to-end levels.
+| Level | Ice-cream cone suite | Pyramid suite |
 | --- | --- | --- |
-| Test-driven development (TDD) | Write a failing test, then the code to pass it, then refactor | Fewer defects, better design |
-| Continuous integration (CI) | Merge and test code at least daily | Integration problems found early |
-| Continuous delivery (CD) | Keep software always releasable; automate deployment | Fast, low-risk releases |
-| Pair programming | Two developers share one task | Quality and knowledge sharing |
-| Code review | Another developer checks each change | Quality and shared ownership |
-| Refactoring | Improve code structure without changing behaviour | Keeps code easy to change |
-| Trunk-based development | Short-lived branches merged quickly | Avoids painful merges |
+| Unit (0.02 s each) | 300 tests = 6 s | 2,400 tests = 48 s |
+| Integration (1.5 s each) | 150 tests = 225 s | 200 tests = 300 s |
+| End-to-end (40 s each) | 250 tests = 10,000 s | 25 tests = 1,000 s |
+| Total, run one after another | 700 tests = 10,231 s (170.5 min, 2.84 h) | 2,625 tests = 1,348 s (22.5 min) |
+The pyramid suite has almost four times as many tests yet runs more than seven times faster. In the cone, end-to-end tests account for 97.7% of the run time.
+
+#### Step 2: split the pipeline into stages
+The pyramid team runs unit and integration tests in a **commit stage**: 48 + 300 = 348 seconds, or **5.8 minutes**, inside DORA's ten-minute target. The 25 end-to-end tests run in a following **acceptance stage** spread across 4 parallel test runners: 1,000 ÷ 4 = 250 seconds (4.2 minutes). The full pipeline takes 348 + 250 = 598 seconds, just under 10 minutes.
+The cone team can also parallelise, but even with 4 runners its end-to-end tests take 10,000 ÷ 4 = 2,500 seconds, so the full run is 6 + 225 + 2,500 = 2,731 seconds (45.5 minutes).
+
+#### Step 3: daily load on the pipeline
+**Daily pipeline time = merges per day × run time per merge.** For the cone suite run serially: 10 × 2.84 h = **28.4 hours of pipeline time per 8-hour working day**. The builds cannot keep up, so in practice the team merges less often, batches changes and stops doing continuous integration. For the pyramid team: 10 × 5.8 minutes = **58 minutes** of commit-stage time per day, or about 100 minutes (10 × 598 seconds) including the acceptance stage.
+
+#### Interpreting the result
+The shape of the suite, not its size, decides whether developers can integrate several times a day. For US-01, the pyramid team would cover the token-expiry rule ("within 1 hour") with fast unit tests at the boundaries (59 minutes, 60 minutes, 61 minutes), the email service with an integration test, and the whole journey with one end-to-end test. The cone team would test each boundary through the browser.
+What to do with this: if your commit stage takes more than ten minutes, measure time per test level before buying more build capacity. Move checks of business rules down to unit level, delete end-to-end tests that duplicate lower-level ones, and fix or quarantine flaky tests. Plan this work as backlog items with visible capacity, the same way as other technical debt.
+**Limitations.** Real test durations vary widely by technology and environment. Parallel runners cost money and need isolated test data. Fewer end-to-end tests also means some integration faults surface later, so teams usually add monitoring and fast rollback in production. A pyramid is a heuristic, not a rule: some systems, such as thin user interfaces over third-party services, legitimately need a larger middle layer.
+
+### A Definition of Done for a software team
+The 2020 Scrum Guide defines the Definition of Done as "a formal description of the state of the Increment when it meets the quality measures required for the product". It does not say what those measures are; each team or organisation decides. An illustrative Definition of Done for the portal team above might be:
+- Code merged to main, with the CI build passing.
+- Automated tests added at the lowest useful level; acceptance criteria covered by passing tests.
+- Code reviewed or written in a pair.
+- Static analysis and dependency security scans show no new high-severity findings.
+- Deployed to the staging environment by the pipeline, not by hand.
+- Feature flag in place if the feature is not yet released to users, with a removal date recorded.
+- User-facing help or API documentation updated.
+Notice what is absent: "tested by QA in the next Sprint" and "ready for the release candidate". Either would mean the Increment is not actually done. If the team cannot yet meet a full Definition of Done, make the gap explicit and plan work to close it rather than quietly lowering the bar.
+
+### Measuring Agile software delivery
+Velocity says how much the team estimated it finished; it says nothing about whether software reached users or how reliably. Software teams therefore add delivery, flow, quality and outcome measures.
+For delivery, the most widely used set comes from DORA (DevOps Research and Assessment). Its metrics guide, last updated in January 2026, defines five software delivery metrics in two groups:
+| Metric | Group | DORA definition (paraphrased) |
+| --- | --- | --- |
+| Change lead time | Throughput | Time for a change to go from committed to version control to deployed in production |
+| Deployment frequency | Throughput | Number of deployments over a period, or time between deployments |
+| Failed deployment recovery time | Throughput | Time to recover from a deployment that fails and needs immediate intervention |
+| Change fail rate | Instability | Share of deployments that need immediate intervention after deployment |
+| Deployment rework rate | Instability | Share of deployments that are unplanned and happen because of an incident in production |
+Lists that show four metrics and include "time to restore service" or "mean time to recover" are out of date: DORA renamed and narrowed that measure in 2023 and added deployment rework rate in 2024. Read the throughput and instability groups together, compare a service with its own history rather than with other teams, and do not turn any single metric into a target.
+DORA's metrics start at the commit. Customers experience the whole journey from request to release, so add Kanban flow measures such as [cycle time](https://neuralprojectinstitute.com/project-management/kanban/cycle-time/) and work item age, quality measures such as escaped defects, and outcome measures such as adoption of the feature.
+See our guide to [DevOps](https://neuralprojectinstitute.com/project-management/kanban/devops/) for a worked calculation of all five DORA metrics from a deployment log, and [Agile metrics and KPIs](https://neuralprojectinstitute.com/project-management/agile/agile-metrics-and-kpis/) for the wider measurement set.
 
 ### Agile and DevOps
-DevOps extends Agile beyond development into operations: teams own their software in production, automate infrastructure, monitor real usage and recover quickly from failures. Widely used DevOps measures include deployment frequency, lead time for changes, change failure rate and time to restore service.
+Agile software development changed how teams plan and build software; DevOps carries the same collaboration, automation and fast feedback into deployment and operations. In an Agile team without DevOps, developers may finish an Increment every two weeks while a separate operations group deploys it quarterly, so users see little of the benefit. DevOps closes that gap with shared ownership of the service in production, infrastructure defined as code, monitoring, and blameless reviews after incidents.
+The two overlap heavily: continuous integration and test automation are core practices in both. A useful distinction for project managers is scope. Agile practices govern the work from idea to a releasable Increment; DevOps practices govern the path from commit to a running, observed service, and back again as feedback. Teams that also handle incidents and requests alongside planned work will find practical policies in our guide to [Agile IT operations](https://neuralprojectinstitute.com/project-management/agile/agile-operations-it/).
 
-### Best practices
-- Keep stories small enough to finish in a few days.
-- Make the [Definition of Done](https://neuralprojectinstitute.com/project-management/agile/definition-of-done/) include automated tests.
-- Pay down technical debt continuously; reserve capacity each sprint.
-- Automate builds, tests and deployments.
-- Release small changes often, using feature flags to separate deployment from release.
-- Involve users early and measure real usage after release.
-- Hold blameless reviews after incidents.
+### AI coding assistants in an Agile team
+AI coding assistants generate code, tests and explanations from natural-language prompts and the surrounding code. In an Agile team they are most useful for drafting unit tests from acceptance criteria, explaining unfamiliar legacy code before refactoring, and producing boilerplate. They do not know the product's goals, can produce plausible but wrong code, and may reproduce insecure patterns.
+DORA's 2025 report, *State of AI-assisted Software Development*, based on responses from nearly 5,000 technology professionals, concluded that AI acts mainly as an amplifier: it magnifies the strengths of high-performing organisations and the dysfunctions of struggling ones. In practice that points back to the practices above. Generated code still goes through tests, review and the pipeline; large AI-generated changes should be split into small batches that a reviewer can actually check; and the team, not the tool, remains accountable for what reaches production. Agree which assistants may see proprietary code and customer data before anyone uses them.
+
+### When Agile software development is harder
+The practices apply widely, but some contexts need adaptation rather than direct adoption.
+- **Regulated or safety-critical software** (medical devices, avionics, payments) may require formal verification and traceability before release. Teams can still integrate continuously and keep the software releasable, while production releases follow the approval regime. Automated tests and pipeline logs often make the required evidence easier to produce, not harder.
+- **Legacy systems without tests** cannot be refactored safely at first. Start by adding characterisation tests around the code you need to change, and grow coverage where change happens rather than across the whole system.
+- **Embedded software tied to hardware** has slower feedback because hardware arrives late or in small quantities. Simulators, hardware-in-the-loop rigs and a clear split between hardware-independent and hardware-specific code restore some of the speed.
+- **Fixed-price, fixed-scope contracts** conflict with welcoming changing requirements. Options include fixing time and budget while flexing scope, or contracting in phases. Our comparison of [Agile vs Waterfall](https://neuralprojectinstitute.com/project-management/agile/agile-vs-waterfall/) explains how to judge which approach a project needs.
+- **Many teams on one product** need integration across teams, not only within them. Shared trunk, contract tests between services and a common Definition of Done matter more than a scaling framework's ceremonies.
+
+### Common mistakes in Agile software development
+- **Adopting the events without the engineering.** Two-week Sprints with a manual, month-long test phase produce mini-waterfalls. The Increment never meets the Definition of Done in the Sprint.
+- **Calling long-lived feature branches CI.** A green build on a branch that has not been merged for a week says little about whether the product works.
+- **An ice-cream cone test suite.** Slow, brittle end-to-end tests make developers wait, re-run failures and eventually ignore red builds.
+- **Treating refactoring as a separate project.** Debt grows while the "clean-up Sprint" waits for approval. Refactor in small steps as part of each story.
+- **Using velocity as a productivity target.** Teams inflate estimates; nothing about delivery improves. Use velocity only for the team's own forecasting.
+- **Quoting outdated DORA metrics or ranking teams by them.** Use the current five, read them together and compare a service with its own history.
+- **Leaving feature flags in place for months.** Each forgotten flag adds code paths that nobody tests.
+
+### What the project manager does in an Agile software team
+Scrum has no project manager accountability, and many Agile software teams work without one. Where a project manager is involved, typically across several teams or with external suppliers and governance, the role shifts from assigning tasks to creating the conditions for the practices above to work:
+- **Protect capacity for technical work.** Test automation, pipeline improvement and debt reduction compete with features; make them visible in the backlog and in [Sprint planning](https://neuralprojectinstitute.com/templates/sprint-planning-template/) so trade-offs are explicit.
+- **Plan releases around flow, not dates alone.** Forecast with the team's own throughput or velocity and update the forecast every Sprint; see [Agile release planning](https://neuralprojectinstitute.com/project-management/agile/agile-release-planning/).
+- **Replace document gates with automated evidence.** Pipeline results, test reports and peer review records can satisfy many governance and audit needs.
+- **Report with delivery and outcome measures**, not percentage complete: DORA metrics, cycle time and feature adoption tell stakeholders more.
+- **Remove cross-team and supplier blockers**, such as environment access, slow security approvals or late hardware.
+For the wider project view (estimating, contracts, risk and the SDLC), our guide to [software project management](https://neuralprojectinstitute.com/project-management/industries/software-project-management/) complements this page. Read more about the role itself in our guide to the [Agile project manager](https://neuralprojectinstitute.com/project-management/agile/agile-project-manager/).
 
 ### Free templates for this topic
 User Story Template
@@ -38593,38 +38813,29 @@ Beginner · Advanced · Expert
 
 ### Frequently asked questions
 
-**Q: What is the difference between Agile software development and DevOps?**
-Agile focuses on how teams plan and build software iteratively; DevOps extends that collaboration and automation into releasing and running the software.
+**Q: What is Agile software development in simple terms?**
+Building software in small, working pieces that are tested, integrated and shown to users often, so the team can learn and change direction cheaply. It is based on the values and principles of the 2001 Agile Manifesto.
+
+**Q: Is Agile software development the same as Scrum?**
+No. Agile is a set of values and principles; Scrum is one framework that applies them. Scrum does not prescribe engineering practices, so software teams usually add practices from Extreme Programming such as test-driven development and continuous integration.
+
+**Q: What are the most important Agile engineering practices?**
+Automated testing (often test-first), continuous integration into a shared main branch, refactoring, code review or pair programming, and a deployment pipeline that keeps the software releasable. They support one another, so adopting one without the others gives limited benefit.
+
+**Q: How often should code be integrated in Agile?**
+At least daily. Martin Fowler's definition of continuous integration and DORA's trunk-based development guidance both call for merging to the main branch at least once a day, with branches that live for hours rather than weeks.
+
+**Q: Can a Scrum team release before the Sprint Review?**
+Yes. The 2020 Scrum Guide says multiple Increments may be created within a Sprint and that the Sprint Review should never be considered a gate to releasing value.
+
+**Q: What are the DORA metrics for Agile software teams?**
+Five software delivery metrics: change lead time, deployment frequency and failed deployment recovery time (throughput), plus change fail rate and deployment rework rate (instability). Older lists with four metrics and "time to restore service" are out of date.
 
 **Q: Does Agile software development still need documentation?**
-Yes: enough to help users and future developers, such as clear code, automated tests, API docs and short decision records.
-
-**Q: What is Agile software development?**
-Building software in short iterations by small cross-functional teams, with frequent integration, testing and release, and regular feedback from users.
-
-**Q: What is test-driven development in Agile software development?**
-Writing a failing automated test first, then the code to pass it, then refactoring. It leads to fewer defects and better design.
-
-**Q: What is continuous integration in Agile software development?**
-Merging and testing code changes at least daily, with automated builds and tests, so integration problems are found early.
-
-**Q: In Agile software development, what is the difference between continuous integration and continuous delivery?**
-Continuous integration merges and tests changes frequently; continuous delivery keeps the software always releasable, with automated deployment.
-
-**Q: What is pair programming in Agile software development?**
-Two developers working on one task at one screen, improving quality and spreading knowledge.
-
-**Q: What is trunk-based development in Agile software development?**
-A practice in which developers use short-lived branches and merge into the main branch frequently, avoiding painful merges.
-
-**Q: What is refactoring in Agile software development?**
-Improving the structure of code without changing its behaviour, so it stays easy to change.
-
-**Q: What is technical debt in Agile software development?**
-The future cost of shortcuts in code or design. Left unmanaged, it slows teams down and can show up as falling velocity.
+Yes, enough for users and future developers: clear code, automated tests that describe behaviour, API documentation, decision records and operating instructions. The Manifesto values working software more than comprehensive documentation, not instead of it.
 
 **Q: How big should a user story be in Agile software development?**
-Small enough to finish in a few days, so it can be built, tested and integrated within a sprint. See [user stories](https://neuralprojectinstitute.com/project-management/agile/user-stories/).
+Small enough to be built, tested and integrated in a few days, so several stories finish within a Sprint. Large stories delay feedback and encourage long-lived branches.
 
 ### Related guides
 Definition of Done in Agile: Meaning, Examples and Checklist
@@ -40928,8 +41139,8 @@ What Is a Sprint in Agile? Length, Events and Examples
 What is a sprint in Agile? How sprints work, how long they last, the Scrum events inside them, Sprint Goals, a two-week example and mistakes to avoid.
 Agile Estimation: Story Points and the Fibonacci Scale
 How Agile teams estimate with story points, why the Fibonacci scale works, how to run planning poker, and common estimation mistakes to avoid.
-How Agile Software Development Works: Practices and Best Practices
-How Agile software development works day to day: user stories, CI/CD, testing, code review and DevOps, plus best practices for high-performing teams.
+Agile Software Development: Practices, Process and Examples
+How Agile software development works: the flow from story to production, XP practices, a test pyramid and CI worked example, DORA metrics and pitfalls.
 Agile Epics: What They Are, How to Write Them, Examples
 Agile epics explained: what an epic is, how to write one with a template, worked examples, sizing and forecasting, tracking progress and SAFe epics.
 
@@ -51799,8 +52010,8 @@ Increment in Scrum: Definition, Rules and Examples
 What an Increment is in Scrum: the 2020 Scrum Guide rules, the Definition of Done, Increment vs release, examples, a worked undone-work example and mistakes.
 Scrum Metrics and KPIs: What to Track and How
 Scrum metrics and KPIs explained: Sprint Goal success, velocity, burndown, flow, quality and value measures, with formulas, examples and pitfalls.
-How Agile Software Development Works: Practices and Best Practices
-How Agile software development works day to day: user stories, CI/CD, testing, code review and DevOps, plus best practices for high-performing teams.
+Agile Software Development: Practices, Process and Examples
+How Agile software development works: the flow from story to production, XP practices, a test pyramid and CI worked example, DORA metrics and pitfalls.
 Scrum Artifacts: The 3 Artifacts, Commitments and Examples
 Scrum artifacts explained: the Product Backlog, Sprint Backlog and Increment, their commitments, who owns each, a worked example and common mistakes.
 
@@ -55351,8 +55562,8 @@ Yes. Many regulated organisations practise it by building approvals, audit trail
 ### Related guides
 What Is DevOps? Principles, Practices and DORA Metrics
 DevOps explained: what it is, where it came from, CALMS and the Three Ways, core practices, the five DORA metrics with a worked example, and what PMs do.
-How Agile Software Development Works: Practices and Best Practices
-How Agile software development works day to day: user stories, CI/CD, testing, code review and DevOps, plus best practices for high-performing teams.
+Agile Software Development: Practices, Process and Examples
+How Agile software development works: the flow from story to production, XP practices, a test pyramid and CI worked example, DORA metrics and pitfalls.
 Value Stream Mapping: Steps, Metrics, Symbols and Examples
 Value stream mapping explained: how to map the current and future state step by step, key metrics and symbols, worked examples and common mistakes.
 Lean Kanban: How Lean Thinking Shapes the Kanban Method
@@ -66389,8 +66600,8 @@ Software Project Management: Process, Methods and KPIs
 Software project management explained: the SDLC, a step-by-step process, Agile methods, roles, estimation with worked examples, DORA metrics and tools.
 Creative Project Management: Process, Roles and Tools
 Creative project management explained: a 7-stage workflow, roles, revision control, a worked example, KPIs, templates and software for creative teams.
-How Agile Software Development Works: Practices and Best Practices
-How Agile software development works day to day: user stories, CI/CD, testing, code review and DevOps, plus best practices for high-performing teams.
+Agile Software Development: Practices, Process and Examples
+How Agile software development works: the flow from story to production, XP practices, a test pyramid and CI worked example, DORA metrics and pitfalls.
 Kanban Board: What It Is, Examples and How to Build One
 What is a Kanban board? Learn its parts, see examples for software, marketing and IT, and build your own step by step with WIP limits and policies.
 
@@ -71362,8 +71573,8 @@ A working knowledge of the development process, Agile practices, forecasting wit
 The PMP for experienced project managers, the CAPM for beginners, Scrum certifications such as CSM or PSM for Agile teams, and the PMI-ACP for experienced Agile practitioners.
 
 ### Related guides
-How Agile Software Development Works: Practices and Best Practices
-How Agile software development works day to day: user stories, CI/CD, testing, code review and DevOps, plus best practices for high-performing teams.
+Agile Software Development: Practices, Process and Examples
+How Agile software development works: the flow from story to production, XP practices, a test pyramid and CI worked example, DORA metrics and pitfalls.
 IT Project Management: Phases, Roles, Methods and Tools
 IT project management explained: phases from initiation to hypercare, roles, Agile, Waterfall and ITIL, key documents, KPIs, challenges and software.
 Technical Project Manager: Role, Skills and Career Path
