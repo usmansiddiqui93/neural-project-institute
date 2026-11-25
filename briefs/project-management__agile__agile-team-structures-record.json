@@ -161,20 +161,20 @@
  ],
  "statistical_text_measurements": {
   "url": "/project-management/agile/agile-team-structures/",
-  "word_count": 4417,
-  "unique_words": 1052,
-  "type_token_ratio": 0.2382,
-  "mattr_100": 0.7328,
-  "shannon_word_entropy_bits": 8.6,
-  "normalised_entropy": 0.8567,
+  "word_count": 4430,
+  "unique_words": 1053,
+  "type_token_ratio": 0.2377,
+  "mattr_100": 0.7333,
+  "shannon_word_entropy_bits": 8.604,
+  "normalised_entropy": 0.8569,
   "sentences": 153,
-  "avg_sentence_length": 18.08,
-  "sentence_length_sd": 10.34,
-  "sentence_length_cv": 0.572,
-  "paragraph_length_mean": 43.2,
-  "paragraph_length_sd": 22.8,
-  "bigram_repetition_rate": 0.334,
-  "trigram_repetition_rate": 0.0988,
+  "avg_sentence_length": 18.16,
+  "sentence_length_sd": 10.37,
+  "sentence_length_cv": 0.571,
+  "paragraph_length_mean": 43.4,
+  "paragraph_length_sd": 23.1,
+  "bigram_repetition_rate": 0.3342,
+  "trigram_repetition_rate": 0.0985,
   "top_repeated_4grams": [
    [
     "an agile team structure",
@@ -227,19 +227,19 @@
     "/project-management/agile/what-is-an-agile-team/"
    ],
    [
-    0.471,
+    0.472,
     "/project-management/agile/large-scale-scrum-less/"
    ],
    [
-    0.441,
+    0.442,
     "/project-management/agile/how-to-manage-agile-teams/"
    ],
    [
-    0.407,
+    0.408,
     "/project-management/agile/agile-methodology/"
    ],
    [
-    0.401,
+    0.402,
     "/project-management/agile/how-to-implement-agile/"
    ]
   ],

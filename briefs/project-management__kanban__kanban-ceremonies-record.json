@@ -272,7 +272,6 @@
  "unverified_claims": [
   "Typical frequencies for risk review (monthly), operations review (monthly), strategy review (quarterly) and delivery planning (per delivery) could not be read from Kanban University's own diagram; they come from a secondary vendor source (Businessmap) and match the site's kanban-planning page",
   "Descriptions of operations, risk and strategy review purposes rely partly on the Businessmap secondary source",
-  "Statement that Delivery Planning was covered in Anderson's 2010 book is not made; only that Kanban University keeps it separate (Anderson 2015 says it is taught separately)",
   "Jira capabilities limited to what the site's Jira review states (WIP limits, cumulative flow diagrams, control charts)"
  ],
  "unresolved_issues": [
