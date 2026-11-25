@@ -37810,7 +37810,7 @@ Summary: What is an Agile Release Train? Learn ART roles, events, SAFe 6.0 terms
 ## Agile Release Train (ART): Roles, Events and Example
 An Agile Release Train (ART) is a long-lived team of Agile teams, typically 50 to 125 people, that plans, commits and delivers together on a shared cadence in the Scaled Agile Framework (SAFe). This guide explains how an ART is structured, who does what, which events it runs each Planning Interval and how to launch one step by step. It finishes with an illustrative worked example, a comparison with other team structures and the mistakes that most often derail a train.
 - Published 22 September 2026
-- Last updated 4 November 2026
+- Last updated 25 November 2026
 - 19 min read
 
 ### Key takeaways
@@ -37827,7 +37827,7 @@ The ART is the central delivery structure of the [Scaled Agile Framework (SAFe)]
 You need a train when a solution is too large for one team. A single [Agile team](https://neuralprojectinstitute.com/project-management/agile/what-is-an-agile-team/) of ten or fewer people can manage its own backlog. Once eight teams work on the same product, someone has to align their priorities, dates, dependencies and integration. The ART gives them one backlog, one calendar, one set of events and shared leadership roles, while each team still works internally with SAFe Scrum or SAFe Kanban.
 
 ### SAFe 6.0 terminology: Planning Interval and other changes
-SAFe 6.0, released by Scaled Agile in 2023, renamed several terms you will meet on any train. Scaled Agile has added articles and competencies since then, but 6.0 remains the current numbered version. Many organisations, job adverts and tools still use the older names, so it helps to know both.
+SAFe 6.0, released by Scaled Agile in 2023, renamed several terms you will meet on any train. It remains the basis of Core SAFe, whose Big Picture posters are still labelled 6.0. Scaled Agile unveiled a second operating model, AI-Native SAFe, on 16 June 2026 (its press release followed on 23 June) and presented the full model at the SAFe Summit in San Diego in September 2026. Scaled Agile says AI-Native SAFe does not replace Core SAFe; among other changes it replaces two-day PI planning with a one-day PI Outcome Planning event. This guide describes the ART as Core SAFe defines it; our [SAFe guide](https://neuralprojectinstitute.com/project-management/agile/scaled-agile-framework-safe/) explains what AI-Native SAFe changes. Many organisations, job adverts and tools still use the older names, so it helps to know both.
 | Older term | Current SAFe 6.0 term | What it means |
 | --- | --- | --- |
 | Program Increment (PI) | Planning Interval (PI) | The fixed timebox, usually 8 to 12 weeks, in which the train plans and delivers |
@@ -41554,7 +41554,7 @@ The table summarises the most widely recognised Agile certifications. Formats an
 | Certified ScrumMaster (CSM) | Scrum Alliance | Entry | 16-hour course with a Certified Scrum Trainer | Online test after the course; 74% to pass | Every two years: 20 SEUs and a US$100 fee |
 | PSPO I / CSPO | Scrum.org / Scrum Alliance | Entry (Product Owner) | PSPO: none; CSPO: course | PSPO: online assessment; CSPO: course-based | As for PSM / CSM |
 | PMI Agile Certified Practitioner (PMI-ACP) | PMI | Intermediate | Agile experience (see below) and 21 hours of Agile training | Exam: 120 questions, 180 minutes | 30 PDUs every three years |
-| SAFe Agilist (SA) | Scaled Agile, Inc. | Entry to intermediate (scaled) | Leading SAFe course | Exam: 45 questions, 90 minutes, 35 correct to pass | Annual fee (check Scaled Agile for the current amount) |
+| SAFe Agilist (SA) | Scaled Agile, Inc. | Entry to intermediate (scaled) | Leading SAFe course | Exam: 45 questions, 90 minutes, 80% (36 correct) to pass | Annual fee (check Scaled Agile for the current amount) |
 | PRINCE2 Agile Foundation | PeopleCert | Entry | None | Exam: 40 questions, 60 minutes, 60% to pass | Check PeopleCert's current rules |
 | PRINCE2 Agile Practitioner | PeopleCert | Intermediate | PRINCE2 Agile Foundation | Exam: 50 questions, 150 minutes, open book, 60% to pass | Check PeopleCert's current rules |
 | ICAgile Certified Professional (ICP) | ICAgile | Entry | Accredited course | Course-based; no central exam, the trainer assesses learning | Check ICAgile's current rules |
@@ -48318,7 +48318,7 @@ Summary: Scrum certification compared: PSM, CSM, PSPO, CSPO and SAFe exam facts,
 ## Scrum Certification: Options, Costs and Training Guide
 A Scrum certification is a credential from an organisation such as Scrum.org or Scrum Alliance showing that you understand Scrum, earned by passing an assessment, completing a course or both. The most common starting points are Professional Scrum Master I (PSM I) and Certified ScrumMaster (CSM) for Scrum Masters, and PSPO I or CSPO for Product Owners. This guide compares the main options, their fees and renewal rules (checked on the issuers' websites on 4 November 2026), and shows you how to choose the right certification and training.
 - Published 20 September 2026
-- Last updated 4 November 2026
+- Last updated 25 November 2026
 - 18 min read
 
 ### Key takeaways
@@ -48346,9 +48346,9 @@ The table covers the entry-level certifications most people consider first. Fees
 | Professional Scrum Product Owner I (PSPO I) | Scrum.org | Product Owners | No (recommended) | Online assessment: 80 questions, 60 minutes, 85% | $200 per attempt | None: lifetime |
 | Certified Scrum Product Owner (CSPO) | Scrum Alliance | Product Owners | Yes: 16 hours | Course completion (no test) | Course fee | Every 2 years: 20 SEUs + $100 |
 | Professional Scrum Developer (PSD) | Scrum.org | Developers | No (recommended) | Online assessment: 80 questions, 60 minutes, 85% | $200 per attempt | None: lifetime |
-| SAFe Scrum Master | Scaled Agile, Inc. | Scrum Masters in SAFe organisations | No (course or proctored exam) | Exam: 45 questions, 90 minutes, 80% | Course fee, or $495 proctored exam | Annual: $195 + 24 CEUs every two years |
+| SAFe Scrum Master | Scaled Agile, Inc. | Scrum Masters in SAFe organisations | No (course or proctored exam) | Exam: 45 questions, 90 minutes, 80% | Course fee, or $495 proctored exam | Annual: $195 (Foundational tier) + 12 CEUs |
 Tip
-Fees, exam formats and renewal rules change. Every figure in this guide was checked on the issuer's own website on 4 November 2026; check again before you book.
+Fees, exam formats and renewal rules change. Every figure in this guide was checked on the issuer's own website on 4 November 2026 (SAFe figures rechecked on 25 November 2026); check again before you book.
 
 ### Scrum.org certifications
 Scrum.org was founded by Scrum co-creator Ken Schwaber and Alex Armstrong, and runs the Professional Scrum certifications. All of them are online assessments with a high pass mark, none requires a course, and none expires. Scrum.org's own count, last updated on 1 November 2026, lists 778,506 PSM I holders, 279,802 PSPO I holders and over 1.2 million Professional Scrum certifications in total.
@@ -48415,10 +48415,10 @@ If you hold several, you pay for the highest level only; renewing it also renews
 ### SAFe Scrum Master and other options
 
 #### SAFe Scrum Master
-Scaled Agile, Inc. offers the SAFe Scrum Master certification, now taught through its AI-Empowered SAFe Scrum Master course. It covers the Scrum Master's role inside a [Scaled Agile Framework (SAFe)](https://neuralprojectinstitute.com/project-management/agile/scaled-agile-framework-safe/) organisation: working on an Agile Release Train, PI Planning and coordinating with other teams.
+Scaled Agile, Inc. offers the SAFe Scrum Master (SSM) certification, now taught through its AI-Empowered SAFe Scrum Master course. It covers the Scrum Master's role inside a [Scaled Agile Framework (SAFe)](https://neuralprojectinstitute.com/project-management/agile/scaled-agile-framework-safe/) organisation: working on an Agile Release Train, PI Planning and coordinating with other teams.
 - **Exam:** 45 multiple-choice questions in 90 minutes; pass mark 80%.
 - **Routes:** attend the course (two exam attempts included if taken within 60 days), or buy a proctored exam without the course for $495 plus tax, which also includes two attempts within 60 days.
-- **Renewal:** annual, at the SAFe Foundational rate of $195 a year plus tax, with 24 continuing education units over each two-year cycle.
+- **Renewal:** annual, at the SAFe Foundational tier rate of $195 a year plus tax, which renews all your Foundational SAFe certifications. Scaled Agile's continuing education programme sets 12 CEUs (one-hour learning, community or professional-application activities) for Foundational certifications such as SAFe Scrum Master; extra CEUs can be carried forward to the following year, and holders may be selected for a CEU audit.
 Choose it if you work, or want to work, in a SAFe organisation; for lighter ways to scale Scrum, compare [Scrum@Scale](https://neuralprojectinstitute.com/project-management/scrum/scrum-at-scale/). Outside SAFe, PSM I or CSM are more widely recognised as Scrum credentials.
 
 #### PMI Agile Certified Practitioner (PMI-ACP)
