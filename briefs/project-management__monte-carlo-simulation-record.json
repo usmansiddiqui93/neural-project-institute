@@ -1,0 +1,357 @@
+{
+ "url": "/project-management/monte-carlo-simulation/",
+ "proposed_status": "PUBLISH",
+ "article_type": "Technique guide: methodology, worked example and formula",
+ "language": "en-GB",
+ "learning_level": "intermediate",
+ "primary_keyword": "monte carlo simulation project management",
+ "secondary_keywords": [
+  "monte carlo simulation in project management",
+  "monte carlo analysis project management",
+  "monte carlo schedule risk analysis",
+  "quantitative risk analysis monte carlo",
+  "P50 P80 P90",
+  "P80 estimate",
+  "schedule contingency",
+  "cost contingency",
+  "monte carlo simulation excel",
+  "triangular distribution",
+  "beta-PERT distribution",
+  "criticality index",
+  "tornado chart",
+  "merge bias",
+  "joint confidence level",
+  "monte carlo iterations",
+  "monte carlo vs PERT"
+ ],
+ "search_intent": "Methodology / worked example, with secondary formula (Excel sampling), interpretation (P-values) and comparison intents",
+ "h1": "Monte Carlo Simulation in Project Management: Worked Example",
+ "seo_title": "Monte Carlo Simulation in Project Management: Worked Example",
+ "meta_description": "Monte Carlo simulation explained: turn three-point estimates and risks into P50 and P80 dates and costs, with a worked example, Excel formulas and limits.",
+ "excerpt": "How Monte Carlo simulation turns three-point estimates, risk events and correlation into P50 and P80 dates and costs, with a fully verified worked example, a mitigation decision, joint confidence and Excel formulas.",
+ "parent_topic_cluster": "Project risk management (quantitative risk analysis); also project forecasting",
+ "prerequisite_guides": [
+  "/project-management/critical-path-method/",
+  "/project-management/pert-chart/",
+  "/project-management/project-risk-management/",
+  "/project-management/risk-register/"
+ ],
+ "related_articles": [
+  "/project-management/sensitivity-analysis/",
+  "/project-management/project-forecasting/",
+  "/project-management/contingency-plan/",
+  "/project-management/kanban/kanban-planning/",
+  "/project-management/kanban/throughput/",
+  "/project-management/critical-chain-project-management/"
+ ],
+ "learning_objectives": [
+  "Define Monte Carlo simulation and distinguish deterministic from probabilistic schedules",
+  "Explain why most-likely plans are optimistic (skew, merge bias, risk events, correlation)",
+  "Specify model inputs: logic, ranges, distributions, risk events and correlations",
+  "Interpret P-values, S-curves, criticality index and rank-correlation sensitivity",
+  "Size schedule and cost contingency at a chosen confidence level and test a risk response",
+  "Explain joint cost-and-schedule confidence",
+  "Build a simple simulation in Excel with the inverse triangular formula",
+  "Choose between Monte Carlo, PERT, EMV and sensitivity analysis"
+ ],
+ "internal_links": [
+  "/project-management/contingency-plan/",
+  "/project-management/cost-estimation/",
+  "/project-management/critical-chain-project-management/",
+  "/project-management/critical-path-method/",
+  "/project-management/earned-value-management/",
+  "/project-management/effort-estimation/",
+  "/project-management/expert-judgment/",
+  "/project-management/float-and-slack/",
+  "/project-management/kanban/kanban-planning/",
+  "/project-management/kanban/throughput/",
+  "/project-management/pert-chart/",
+  "/project-management/project-baseline/",
+  "/project-management/project-budget/",
+  "/project-management/project-forecasting/",
+  "/project-management/project-network-diagram/",
+  "/project-management/project-risk-management/",
+  "/project-management/project-risk/",
+  "/project-management/risk-register/",
+  "/project-management/s-curve/",
+  "/project-management/schedule-compression/",
+  "/project-management/sensitivity-analysis/",
+  "/project-management/task-dependencies/",
+  "/templates/critical-path-template/",
+  "/templates/project-cost-estimate-template/",
+  "/templates/risk-register-template/"
+ ],
+ "relevant_templates": [
+  "/templates/risk-register-template/",
+  "/templates/project-cost-estimate-template/",
+  "/templates/critical-path-template/"
+ ],
+ "related_npi_course": "Riskline: Risk and Quality Management (already named in the page's existing PMAI box; not mentioned in the body)",
+ "external_references": [
+  {
+   "title": "GAO Schedule Assessment Guide: Conducting a Schedule Risk Analysis (gaoinnovations.gov web edition; GAO-16-89G product page dated 22 Dec 2015)",
+   "url": "https://gaoinnovations.gov/schedule-guide/conducting-a-schedule-risk-analysis.html",
+   "inspected": true,
+   "what_it_supports": "Schedule must have complete and correct logic and minimal constraints before SRA; summary schedules acceptable if they keep hand-offs; S-curve output; example of adopting a 70% probability completion date; merging paths as a source of risk"
+  },
+  {
+   "title": "GAO-16-89G product page",
+   "url": "https://www.gao.gov/products/gao-16-89g",
+   "inspected": true,
+   "what_it_supports": "Title and date of the GAO Schedule Assessment Guide"
+  },
+  {
+   "title": "NASA Joint Confidence Level (JCL) FAQ, 12 Oct 2009",
+   "url": "https://www.nasa.gov/pdf/394931main_JCL_FAQ_10_12_09.pdf",
+   "inspected": true,
+   "what_it_supports": "JCL definition; projects budgeted at 70% JCL unless decision authority approves otherwise; funded at no less than 50%; policy in NPD 1000.5"
+  },
+  {
+   "title": "Barreras, A. J. (2011) Risk management: Monte Carlo simulation in cost estimating. PMI Global Congress 2011, North America",
+   "url": "https://www.pmi.org/learning/library/monte-carlo-simulation-cost-estimating-6195",
+   "inspected": true,
+   "what_it_supports": "Correlation matrix agreed with functional leads; P80 common for total project cost, P90 when management reserve is included; distribution guidance; garbage-in-garbage-out limitation"
+  },
+  {
+   "title": "Kandaswamy, S. (2001) The basics of Monte Carlo simulation: a tutorial. PMI Annual Seminars & Symposium",
+   "url": "https://www.pmi.org/learning/library/monte-carlo-simulation-risk-identification-7856",
+   "inspected": true,
+   "what_it_supports": "Path convergence (merge bias) and criticality index concepts; background only, not cited in body"
+  },
+  {
+   "title": "Los Alamos National Laboratory, Hitting the jackpot: the birth of the Monte Carlo method",
+   "url": "https://www.lanl.gov/media/publications/actinide-research-quarterly/1123-hitting-the-jackpot-the-birth-of-the-monte-carlo-method",
+   "inspected": true,
+   "what_it_supports": "Ulam conceived the method in 1946; von Neumann, Richtmyer and Metropolis developed it; Metropolis named it"
+  },
+  {
+   "title": "Competitor coverage: monday.com and Minitab Monte Carlo articles",
+   "url": "https://monday.com/blog/project-management/monte-carlo-simulation/",
+   "inspected": true,
+   "what_it_supports": "SERP gap analysis only (no wording reused); Minitab article also inspected: https://blog.minitab.com/en/how-to-use-monte-carlo-simulation-as-a-project-management-tool"
+  }
+ ],
+ "formulas": [
+  {
+   "formula": "Triangular inverse CDF: if U < (m-a)/(b-a): x = a + sqrt(U(b-a)(m-a)); else x = b - sqrt((1-U)(b-a)(b-m))",
+   "variables": "a optimistic, m most likely, b pessimistic (working days or £); U uniform random number in [0,1)",
+   "verified_by": "python",
+   "inputs": "a=16, m=20, b=30; U=0.5 and U=0.2",
+   "result": "switch point 0.286; x=21.63 days (U=0.5); x=19.35 days (U=0.2); sampled mean of A (8/10/16) = 11.333 vs theoretical 11.333"
+  },
+  {
+   "formula": "Deterministic finish = A + max(B, C) + D + E; deterministic cost = sum of most-likely direct costs + £2k x duration",
+   "variables": "durations in working days; cost in £k",
+   "verified_by": "python",
+   "inputs": "10+20+8+4; 345 + 2x42",
+   "result": "42 days; £429k (path A-C-D-E 37 days, C float 5 days)"
+  },
+  {
+   "formula": "Monte Carlo (100,000 iterations, seed 1, triangular, independent)",
+   "variables": "finish (days), total cost (£k)",
+   "verified_by": "python",
+   "inputs": "Activity/cost/risk table in article; R1 25% +5/10/15 days on B; R2 15% +5/8/15 days on C and £18k",
+   "result": "Finish mean 50.32, P10 43.5, P50 49.5, P80 55.3, P90 58.5, min 34.8, max 75.6, P(<=42)=4.7%; cost mean 460.7, P10 439.8, P50 459.0, P80 475.5, P90 484.2, P(<=429)=1.4%; criticality B path 87.1%, C path 12.9%; Spearman with finish: R1 0.66, B base 0.45, A 0.29, D 0.29, R2 0.21, E 0.15, C base 0.05; finish-cost rank corr 0.75; joint at P80/P80 72.0%; joint at P88/P88 82.1% (57.8 days, £482.1k)"
+  },
+  {
+   "formula": "Contingency = percentile value - deterministic value",
+   "variables": "days or £k",
+   "verified_by": "python",
+   "inputs": "P80 55.3 vs 42; P80 £475.5k vs £429k; P50 £459.0k",
+   "result": "13.3 days; £46.5k (10.8%); £30.0k at P50"
+  },
+  {
+   "formula": "Mean decomposition: sum of triangular means (a+m+b)/3 on A-B-D-E; no-risk simulation; full simulation",
+   "variables": "days",
+   "verified_by": "python",
+   "inputs": "11.33+22.00+9.33+4.67",
+   "result": "47.33 (+5.33 skew); 47.40 (+0.07 merge); 50.32 (+2.92 risks); R1 EMV 0.25x10=2.5 days"
+  },
+  {
+   "formula": "Mitigation run: R1 probability 5%, +£6k",
+   "variables": "days, £k",
+   "verified_by": "python",
+   "inputs": "as base model",
+   "result": "mean 48.47, P50 48.1, P80 52.1, P90 54.4; cost mean 463.0, P80 475.8"
+  },
+  {
+   "formula": "Beta-PERT variant (alpha=1+4(m-a)/(b-a), beta=1+4(b-m)/(b-a))",
+   "variables": "days, £k",
+   "verified_by": "python",
+   "inputs": "same inputs, beta-PERT durations",
+   "result": "mean 47.66, P50 46.7, P80 52.4, P90 55.7, P(<=42)=13.9%; cost P50 453.5, P80 469.9"
+  },
+  {
+   "formula": "Gaussian copula, pairwise rho=0.5 on all five durations (separate run)",
+   "variables": "days",
+   "verified_by": "python",
+   "inputs": "rho 0.0 vs 0.5",
+   "result": "rho0: mean 50.32, SD 5.78, P10 43.4, P80 55.2, P90 58.5; rho0.5: mean 50.30, SD 7.21, P10 41.3, P80 56.4, P90 60.0"
+  },
+  {
+   "formula": "Iteration convergence: SD of P80 across 20 seeds",
+   "variables": "days",
+   "verified_by": "python",
+   "inputs": "n=100, 1,000, 10,000, 100,000",
+   "result": "100: 54.06-56.85, SD 0.910; 1,000: 54.77-55.85, SD 0.394; 10,000: 55.11-55.47, SD 0.084; 100,000: 55.25-55.38, SD 0.034"
+  },
+  {
+   "formula": "Sampling error of a proportion = sqrt(p(1-p)/n)",
+   "variables": "p probability, n iterations",
+   "verified_by": "python",
+   "inputs": "p=0.8; n=1,000 and 10,000",
+   "result": "0.0126 and 0.0040 (1.3 and 0.4 percentage points)"
+  },
+  {
+   "formula": "Classic PERT: TE=(O+4M+P)/6, var=((P-O)/6)^2, z=(T-TE)/SD",
+   "variables": "days",
+   "verified_by": "python",
+   "inputs": "path A-B-D-E, T=42",
+   "result": "TE 44.67, variance 9.444, SD 3.073, z -0.87, P=19.3%"
+  },
+  {
+   "formula": "Percentiles do not add",
+   "variables": "days",
+   "verified_by": "python",
+   "inputs": "A,B,D,E without risks",
+   "result": "sum of P80s 53.97; P80 of sum 50.67"
+  }
+ ],
+ "worked_examples": [
+  {
+   "title": "Refurbishing a training centre: schedule and cost Monte Carlo with two risk events",
+   "illustrative": true
+  },
+  {
+   "title": "Three traced iterations",
+   "illustrative": true
+  },
+  {
+   "title": "Reserved factory slot risk response tested in the model",
+   "illustrative": true
+  },
+  {
+   "title": "Distribution, correlation and iteration-count sensitivity",
+   "illustrative": true
+  },
+  {
+   "title": "Excel inverse triangular sampling for activity B",
+   "illustrative": true
+  },
+  {
+   "title": "Classic PERT comparison on the same network",
+   "illustrative": true
+  }
+ ],
+ "statistical_text_measurements": {
+  "url": "/project-management/monte-carlo-simulation/",
+  "word_count": 5124,
+  "unique_words": 1092,
+  "type_token_ratio": 0.2131,
+  "mattr_100": 0.7286,
+  "shannon_word_entropy_bits": 8.628,
+  "normalised_entropy": 0.8549,
+  "sentences": 212,
+  "avg_sentence_length": 17.37,
+  "sentence_length_sd": 9.89,
+  "sentence_length_cv": 0.569,
+  "paragraph_length_mean": 38.4,
+  "paragraph_length_sd": 21.9,
+  "bigram_repetition_rate": 0.3578,
+  "trigram_repetition_rate": 0.1144,
+  "top_repeated_4grams": [
+   [
+    "a monte carlo simulation",
+    6
+   ],
+   [
+    "monte carlo simulation in",
+    5
+   ],
+   [
+    "the most likely value",
+    4
+   ],
+   [
+    "on the critical path",
+    4
+   ],
+   [
+    "carlo simulation in project",
+    3
+   ],
+   [
+    "simulation in project management",
+    3
+   ],
+   [
+    "schedule or cost model",
+    3
+   ],
+   [
+    "a date or budget",
+    3
+   ]
+  ],
+  "most_common_sentence_openers": [
+   [
+    "monte carlo",
+    3
+   ]
+  ],
+  "formulaic_phrases_found": [],
+  "watch_phrases_counts": {},
+  "most_similar_existing_guides": [
+   [
+    0.375,
+    "/project-management/pert-chart/"
+   ],
+   [
+    0.348,
+    "/project-management/project-forecasting/"
+   ],
+   [
+    0.332,
+    "/project-management/sensitivity-analysis/"
+   ],
+   [
+    0.325,
+    "/project-management/project-time-management/"
+   ],
+   [
+    0.302,
+    "/project-management/project-risk-management/"
+   ]
+  ],
+  "note": "Descriptive editorial diagnostics only. No AI-detection probability is calculated."
+ },
+ "self_assessment": {
+  "technical_accuracy_25": 23,
+  "sources_15": 12,
+  "educational_usefulness_15": 14,
+  "examples_10": 10,
+  "information_gain_10": 9,
+  "precision_readability_10": 9,
+  "search_intent_5": 5,
+  "internal_linking_5": 5,
+  "technical_seo_5": 4,
+  "total": 91
+ },
+ "required_disclosures": [
+  "All worked examples are labelled illustrative and computed with Python (100,000 iterations, fixed seed); readers' runs will differ slightly",
+  "No PMAI course mention in body, so no commercial disclosure needed in body; the page's existing PMAI box names Riskline"
+ ],
+ "unverified_claims": [
+  "Not inspected: PMBOK Guide (any edition) or PMI's Standard for Risk Management text on simulation; the article avoids attributing requirements to them",
+  "Not inspected: AACE recommended practices (e.g. 57R-09) and Metropolis & Ulam (1949, JASA); not cited",
+  "The gaoinnovations.gov schedule guide page may be a later web edition of GAO-16-89G; the article cites 'GAO's Schedule Assessment Guide' without an edition number for that reason",
+  "Statement that Monaco resort naming was 'a nod to the method's reliance on chance' paraphrases LANL (probabilistic nature plus Ulam's uncle)",
+  "Common-practice statements (P50 for internal targets/portfolio totals; baseline at deterministic or P50 with contingency to the chosen percentile) are described as common arrangements, not standards"
+ ],
+ "unresolved_issues": [
+  "Length ~5,100 words (checker count incl. tables), above the usual 2,500-4,000 range; prose is dense and tables carry much of the count, but a reviewer may wish to trim 'When to use' or 'Further learning'",
+  "Internal links at the 25 maximum",
+  "No site template runs a simulation; the article says so explicitly",
+  "Highest TF-IDF similarity 0.375 with /project-management/pert-chart/; merge-bias example there was not repeated (different network and scenario)"
+ ]
+}

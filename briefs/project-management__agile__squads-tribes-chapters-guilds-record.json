@@ -1,0 +1,274 @@
+{
+ "url": "/project-management/agile/squads-tribes-chapters-guilds/",
+ "proposed_status": "PUBLISH",
+ "article_type": "methodology explainer with worked example",
+ "language": "en-GB",
+ "learning_level": "intermediate",
+ "primary_keyword": "spotify model",
+ "secondary_keywords": [
+  "squads tribes chapters guilds",
+  "spotify squad model",
+  "what is a squad in agile",
+  "what is a tribe in agile",
+  "tribe lead",
+  "chapter vs guild",
+  "chapter lead",
+  "spotify agile model",
+  "spotify model example",
+  "spotify model criticism",
+  "does spotify still use the spotify model",
+  "spotify model vs SAFe",
+  "spotify model pros and cons",
+  "squad size",
+  "tribe size dunbar",
+  "trio and alliance spotify",
+  "system owner chief architect",
+  "matrix organisation agile"
+ ],
+ "search_intent": "Definition/methodology, with a secondary 'should we copy it and how' implementation intent",
+ "h1": "Spotify Model: Squads, Tribes, Chapters and Guilds Explained",
+ "seo_title": "Spotify Model: Squads, Tribes, Chapters and Guilds Explained",
+ "meta_description": "The Spotify model explained: squads, tribes, chapters and guilds, who decides what, a worked reorganisation example, the criticism, and how to adapt it.",
+ "excerpt": "Squads, tribes, chapters and guilds explained: what each unit is, who decides what, a worked reorganisation with chapter-lead load calculations, the criticism from Spotify insiders, and how the model compares with SAFe, LeSS and Scrum@Scale.",
+ "parent_topic_cluster": "/project-management/agile/ (Scaling Agile)",
+ "prerequisite_guides": [
+  "/project-management/agile/what-is-an-agile-team/",
+  "/project-management/agile/agile-team-structures/",
+  "/project-management/scrum/scrum-team-roles/"
+ ],
+ "related_articles": [
+  "/project-management/agile/scaled-agile-framework-safe/",
+  "/project-management/agile/large-scale-scrum-less/",
+  "/project-management/scrum/scrum-at-scale/",
+  "/project-management/scrum/scrum-of-scrums/",
+  "/project-management/agile/agile-transformation/",
+  "/project-management/agile/agile-portfolio-management/"
+ ],
+ "learning_objectives": [
+  "Define squads, tribes, chapters and guilds and distinguish chapter from guild and squad from tribe",
+  "Explain the delivery-weighted matrix and who decides what",
+  "Distinguish what the 2012 paper says from later additions (trio, alliance) and from criticism",
+  "Design squads and chapters for an organisation and estimate a chapter lead's management load",
+  "Decide whether the Spotify model, SAFe, LeSS or Scrum@Scale fits a given situation"
+ ],
+ "internal_links": [
+  "/project-management-tools/jira/",
+  "/project-management-tools/wrike/",
+  "/project-management/agile/agile-pmo/",
+  "/project-management/agile/agile-portfolio-management/",
+  "/project-management/agile/agile-team-structures/",
+  "/project-management/agile/agile-transformation/",
+  "/project-management/agile/how-to-manage-agile-teams/",
+  "/project-management/agile/large-scale-scrum-less/",
+  "/project-management/agile/scaled-agile-framework-safe/",
+  "/project-management/agile/scrum-master-role/",
+  "/project-management/agile/what-is-an-agile-team/",
+  "/project-management/capacity-planning/",
+  "/project-management/kanban/what-is-kanban/",
+  "/project-management/raci-matrix/",
+  "/project-management/scrum/scrum-at-scale/",
+  "/project-management/scrum/scrum-of-scrums/",
+  "/project-management/scrum/scrum-team-roles/",
+  "/project-management/scrum/servant-leadership-in-scrum/",
+  "/project-management/scrum/what-is-scrum/",
+  "/templates/okr-template/",
+  "/templates/raci-matrix-template/",
+  "/templates/skills-matrix-template/"
+ ],
+ "relevant_templates": [
+  "/templates/raci-matrix-template/",
+  "/templates/skills-matrix-template/",
+  "/templates/okr-template/"
+ ],
+ "related_npi_course": "Wayfinder: Leadership and Stakeholder Communication (named only in the page's existing PMAI box; not mentioned in the body)",
+ "external_references": [
+  {
+   "title": "Kniberg & Ivarsson, Scaling Agile @ Spotify with Tribes, Squads, Chapters & Guilds (October 2012), holub.com mirror",
+   "url": "https://holub.com/goodies/SpotifyScaling.pdf",
+   "inspected": true,
+   "what_it_supports": "Definitions of all four units; mini-startup; sit together; PO and agile coach; no formal squad leader; tribe as incubator under ~100 (Dunbar); chapter lead as line manager working in a squad; guild coordinator; matrix weighted towards delivery; professor and entrepreneur; system owner (<1/10 of time) and chief architect; dependency reports; Scrum of Scrums on demand; ~10% hack time; growth 30 to 250; 30+ teams in 3 cities; introduced gradually over the past year; journey in progress"
+  },
+  {
+   "title": "Kniberg, Spotify engineering culture (part 1), Spotify Engineering blog, 27 March 2014",
+   "url": "https://engineering.atspotify.com/spotify-engineering-culture-part-1/",
+   "inspected": true,
+   "what_it_supports": "Existence and date of the 2014 video series on Spotify's engineering blog (video content itself not transcribed or quoted)"
+  },
+  {
+   "title": "Kniberg, No, I didn't invent the Spotify model (6 June 2015), Goodreads mirror of author blog",
+   "url": "https://www.goodreads.com/author_blog_posts/8501556-no-i-didn-t-invent-the-spotify-model?tab=author",
+   "inspected": true,
+   "what_it_supports": "'wasn't actually intended to be a generic framework'; 'just the messenger'; companies adapting it not worse off, some improved"
+  },
+  {
+   "title": "Linders, InfoQ: No Spotify model (6 October 2016)",
+   "url": "https://www.infoq.com/news/2016/10/no-spotify-model",
+   "inspected": true,
+   "what_it_supports": "Marcin Floryan (Spotify chapter lead) talk at Spark the Change London 2016: model a simplified description, not to be copied"
+  },
+  {
+   "title": "Jeremiah Lee, Spotify's Failed #SquadGoals (19 April 2020)",
+   "url": "https://jeremiahlee.com/posts/failed-squad-goals/",
+   "inspected": true,
+   "what_it_supports": "'only ever aspirational'; never fully implemented; matrix friction; autonomy without alignment; citing Joakim Sundén that alignment/accountability parts were never completed"
+  },
+  {
+   "title": "Atlassian, Discover the Spotify model",
+   "url": "https://www.atlassian.com/agile/agile-at-scale/spotify",
+   "inspected": true,
+   "what_it_supports": "Squad 6–12, tribe 40–150, trio and alliance as later additions"
+  },
+  {
+   "title": "The Scrum Guide (November 2020)",
+   "url": "https://www.scrumguides.org/scrum-guide.html",
+   "inspected": true,
+   "what_it_supports": "Scrum Team typically 10 or fewer; cross-functional and self-managing ('who does what, when, and how')"
+  }
+ ],
+ "formulas": [
+  {
+   "formula": "H = (R × m ÷ 60 ÷ f) + s + d",
+   "variables": "H weekly management hours; R direct reports (people); m one-to-one length (minutes); f weeks between one-to-ones; s weekly chapter meeting (hours); d other people-management work (hours/week)",
+   "verified_by": "python",
+   "inputs": "R=12, m=45, f=2, s=1, d=3, 37.5-hour week; split case R=6 and R=5",
+   "result": "R=12: 4.5 h one-to-ones, H=8.5 h (22.7%), 29 h left (77.3%); R=6: H=6.25 h (16.7%); R=5: H=5.875 h (15.7%); saving ~2.25 h per lead"
+  },
+  {
+   "formula": "Communication paths = n(n − 1) ÷ 2",
+   "variables": "n number of people",
+   "verified_by": "python",
+   "inputs": "n=61; n=8",
+   "result": "1,830; 28"
+  },
+  {
+   "formula": "Headcount = squad members + tribe leads + agile coaches",
+   "variables": "people",
+   "verified_by": "python",
+   "inputs": "29 + 27 squad members, 2 tribe leads, 3 coaches",
+   "result": "61; chapter counts A: backend 8, frontend/mobile 10, QA 4, design 3; B: backend 13 (split 7 + 6), data 7, QA 3"
+  }
+ ],
+ "formula_verification_script": "# Illustrative roster: squads -> roles\nA = {\"Search and discovery\": dict(PO=1, backend=3, frontend=2, QA=1, UX=1),\n     \"Booking and checkout\": dict(PO=1, backend=3, frontend=2, QA=1, UX=1),\n     \"Mobile app\":           dict(PO=1, frontend=4, QA=1, UX=1),\n     \"Customer accounts\":    dict(PO=1, backend=2, frontend=2, QA=1)}\nB = {\"Partner integrations\":   dict(PO=1, backend=4, QA=1, data=1),\n     \"Pricing and availability\": dict(PO=1, backend=3, data=2, QA=1),\n     \"Payments and fraud\":     dict(PO=1, backend=4, QA=1, data=1),\n     \"Data platform\":          dict(PO=1, backend=2, data=3)}\ndef summ(T,name):\n    sizes={k:sum(v.values()) for k,v in T.items()}\n    chap={}\n    for v in T.values():\n        for r,n in v.items(): chap[r]=chap.get(r,0)+n\n    print(name, sizes, \"squad total\", sum(sizes.values()), \"by skill\", chap)\n    return sum(sizes.values())\na=summ(A,\"Tribe A\"); b=summ(B,\"Tribe B\")\ncoaches, leads = 3, 2\ntotal=a+b+coaches+leads\nprint(\"total people\", total)\npaths=lambda n:n*(n-1)//2\nfor n in [7,8,a+1,b+1,total,100,150]: print(\"paths\",n,paths(n))\n# chapter lead load\ndef load(members, oneone_min=45, every_weeks=2, sync_h=1, other_h=3, week=37.5):\n    reports=members-1\n    o=reports*oneone_min/60/every_weeks\n    tot=o+sync_h+other_h\n    print(f\"chapter {members}: reports {reports}, 1:1 h/wk {o:.2f}, total {tot:.2f} h/wk, {tot/week*100:.1f}% of {week}h, left for squad {week-tot:.2f}h ({(week-tot)/week*100:.1f}%)\")\nfor m in [3,4,7,8,10,13,6]: load(m)\n",
+ "formula_verification_output": "Tribe A squad total 29 {PO 4, backend 8, frontend 10, QA 4, UX 3}; Tribe B squad total 27 {PO 4, backend 13, QA 3, data 7}; total people 61; paths 8->28, 61->1830; chapter 13: 1:1 4.50 h/wk, total 8.50 h/wk, 22.7%, 29.00 h left (77.3%); chapter 7: 6.25 h, 16.7%; chapter 6: 5.88 h, 15.7%",
+ "worked_examples": [
+  {
+   "title": "Reorganising a 61-person online travel-booking product organisation into two tribes, eight squads, seven chapters and emergent guilds",
+   "illustrative": true
+  }
+ ],
+ "statistical_text_measurements": {
+  "url": "/project-management/agile/squads-tribes-chapters-guilds/",
+  "word_count": 5026,
+  "unique_words": 1140,
+  "type_token_ratio": 0.2268,
+  "mattr_100": 0.7294,
+  "shannon_word_entropy_bits": 8.637,
+  "normalised_entropy": 0.8506,
+  "sentences": 214,
+  "avg_sentence_length": 18.16,
+  "sentence_length_sd": 11.13,
+  "sentence_length_cv": 0.613,
+  "paragraph_length_mean": 37.7,
+  "paragraph_length_sd": 22.1,
+  "bigram_repetition_rate": 0.3614,
+  "trigram_repetition_rate": 0.1274,
+  "top_repeated_4grams": [
+   [
+    "under about 100 people",
+    5
+   ],
+   [
+    "people with the same",
+    3
+   ],
+   [
+    "with the same skill",
+    3
+   ],
+   [
+    "henrik kniberg and anders",
+    3
+   ],
+   [
+    "kniberg and anders ivarsson",
+    3
+   ],
+   [
+    "part of the product",
+    3
+   ],
+   [
+    "a tribe is a",
+    3
+   ],
+   [
+    "a guild is an",
+    3
+   ]
+  ],
+  "most_common_sentence_openers": [
+   [
+    "a squad",
+    3
+   ],
+   [
+    "a chapter",
+    3
+   ]
+  ],
+  "formulaic_phrases_found": [],
+  "watch_phrases_counts": {},
+  "most_similar_existing_guides": [
+   [
+    0.239,
+    "/project-management/agile/agile-team-structures/"
+   ],
+   [
+    0.216,
+    "/project-management/agile/what-is-an-agile-team/"
+   ],
+   [
+    0.189,
+    "/project-management/agile/agile-transformation/"
+   ],
+   [
+    0.163,
+    "/project-management/agile/how-to-implement-agile/"
+   ],
+   [
+    0.161,
+    "/project-management/agile/large-scale-scrum-less/"
+   ]
+  ],
+  "note": "Descriptive editorial diagnostics only. No AI-detection probability is calculated."
+ },
+ "self_assessment": {
+  "technical_accuracy_25": 23,
+  "sources_15": 14,
+  "educational_usefulness_15": 14,
+  "examples_10": 9,
+  "information_gain_10": 9,
+  "precision_readability_10": 8,
+  "search_intent_5": 5,
+  "internal_linking_5": 5,
+  "technical_seo_5": 5,
+  "total": 92
+ },
+ "required_disclosures": [
+  "Worked example labelled illustrative/hypothetical",
+  "Trio and alliance attributed to later descriptions (Atlassian), not the 2012 paper",
+  "Chapter-lead load inputs stated as assumptions",
+  "Cross-tribe quality chapter flagged as a deliberate deviation from the paper"
+ ],
+ "unverified_claims": [
+  "Date of Kniberg's part 2 engineering-culture video (September 2014) not inspected; article says only 'in 2014' for the series",
+  "Joakim Sundén's role and remarks are reported second-hand via Jeremiah Lee's essay; the original talk was not inspected",
+  "Dunbar's number cited only as the 2012 paper and Atlassian cite it; Dunbar's original research not inspected",
+  "Comparison-table facts on SAFe, LeSS and Scrum@Scale are taken from existing NPI guides (consistent with the site) rather than re-inspected primary framework sites in this session",
+  "Mersino (Medium) and Agile Pain Relief critiques surfaced in search but were not opened or cited"
+ ],
+ "unresolved_issues": [
+  "Length is about 5,000 words (above the usual 2,500–4,000 range); justified by the definition + implementation + criticism + comparison scope, but a reviewer may trim the tools or managers sections",
+  "'under about 100 people' repeats five times (technical fact from the source; left as is)"
+ ]
+}
